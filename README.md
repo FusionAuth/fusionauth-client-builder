@@ -7,19 +7,18 @@
 
 Linux or macOS
 
-```bash
-$ mkdir ~/savant
-$ cd ~/savant
-$ wget http://savant.inversoft.org/org/savantbuild/savant-core/1.0.0/savant-1.0.0.tar.gz
-$ tar xvfz savant-1.0.0.tar.gz
-$ ln -s ./savant-1.0.0 current
-$ export PATH=$PATH:~/savant/current/bin/
+```
+> mkdir ~/savant
+> cd ~/savant
+> wget http://savant.inversoft.org/org/savantbuild/savant-core/1.0.0/savant-1.0.0.tar.gz
+> tar xvfz savant-1.0.0.tar.gz
+> ln -s ./savant-1.0.0 current
+> export PATH=$PATH:~/savant/current/bin/
 ```
 
-You may optionally want to add `~/savant/current/bin` to your PATH that is set in your profile. You'll also need to ensure that you have Java installed and the environment variable  `JAVA_HOME` is set. 
+You may optionally want to add `~/savant/current/bin` to your PATH that is set in your profile so that this change persists. You'll also need to ensure that you have Java >= 8 installed and the environment variable  `JAVA_HOME` is set. 
 
 ### Building 
-
 
 Listing each client library build targets
 
