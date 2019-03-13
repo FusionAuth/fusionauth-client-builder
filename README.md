@@ -8,12 +8,12 @@
 Linux or macOS
 
 ```
-> mkdir ~/savant
-> cd ~/savant
-> wget http://savant.inversoft.org/org/savantbuild/savant-core/1.0.0/savant-1.0.0.tar.gz
-> tar xvfz savant-1.0.0.tar.gz
-> ln -s ./savant-1.0.0 current
-> export PATH=$PATH:~/savant/current/bin/
+mkdir ~/savant
+cd ~/savant
+wget http://savant.inversoft.org/org/savantbuild/savant-core/1.0.0/savant-1.0.0.tar.gz
+tar xvfz savant-1.0.0.tar.gz
+ln -s ./savant-1.0.0 current
+export PATH=$PATH:~/savant/current/bin/
 ```
 
 You may optionally want to add `~/savant/current/bin` to your PATH that is set in your profile so that this change persists. You'll also need to ensure that you have Java >= 8 installed and the environment variable  `JAVA_HOME` is set. 
@@ -23,7 +23,7 @@ You may optionally want to add `~/savant/current/bin` to your PATH that is set i
 Listing each client library build targets
 
 ```
-> sb --listTargets
+sb --listTargets
 ```
 
 Building a single library
@@ -33,23 +33,29 @@ To build a single client library, you'll want to have the corresponding repo che
 For example, your directory structure should look something like the following:
 
 ```
--- fusionauth
-   | 
-  fusionauth-client-builder
-   |
-  fusionauth-java-client
+fusionauth
+├── fusionauth-client-builder
+├── fusionauth-csharp-client
+├── fusionauth-java-client
+├── fusionauth-javascript-client
+├── fusionauth-node-client
+├── fusionauth-php-client
+├── fusionauth-python-client
+├── fusionauth-ruby-client
+├── fusionauth-swift-client
+└── fusionauth-typescript-client
 ```
 
 The client builder will assume the project is in the same parent directory.
 
 ```
-> sb build-java
+sb build-java
 ```
 
 Building all clients
 
 ```
-> sb build-all
+sb build-all
 ```
 
 
