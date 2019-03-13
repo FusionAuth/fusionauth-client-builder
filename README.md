@@ -1,13 +1,6 @@
 ## FusionAuth Client Builder ![semver 2.0.0 compliant](http://img.shields.io/badge/semver-2.0.0-brightgreen.svg?style=flat-square)
 
 
-Then, perform an integration build of the project by running:
-```bash
-$ sb int
-```
-
-For more information, checkout [savantbuild.org](http://savantbuild.org/).
-
 ## Build a client library
 
 ### Setup Savant
@@ -22,6 +15,7 @@ $ tar xvfz savant-1.0.0.tar.gz
 $ ln -s ./savant-1.0.0 current
 $ export PATH=$PATH:~/savant/current/bin/
 ```
+
 
 You may optionally want to add `~/savant/current/bin` to your PATH that is set in your profile. You'll also need to ensure that you have Java installed and the environment variable  `JAVA_HOME` is set. 
 
@@ -43,9 +37,9 @@ For example, your directory structure should look something like the following:
 
 ```
 -- fusionauth
-  | 
+   | 
   fusionauth-client-builder
-  |
+   |
   fusionauth-java-client
 ```
 
@@ -60,3 +54,6 @@ Building all clients
 ```
 > sb build-all
 ```
+
+
+For more information on the Savant build tool, checkout [savantbuild.org](http://savantbuild.org/).
