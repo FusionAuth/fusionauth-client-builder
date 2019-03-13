@@ -1,0 +1,90 @@
+/*
+ * Copyright (c) 2019, FusionAuth, All Rights Reserved
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific
+ * language governing permissions and limitations under the License.
+ */
+
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.0.0", licenses: ["ApacheV2_0"]) {
+  workflow {
+    standard()
+  }
+
+  publishWorkflow {
+    subversion(repository: "http://svn.inversoft.org/savant")
+  }
+
+  dependencies {
+  }
+
+  publications {
+    standard()
+  }
+}
+
+// Plugins
+clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.2.2")
+
+// Plugin settings
+clientLibrary.settings.debug = false
+
+target(name: "build-java", description: "Updates the client libraries using the JSON files") {
+  clientLibrary.buildClient(template: "src/main/client/java.client.ftl", outputFile: "../fusionauth-java-client/src/main/java/io/fusionauth/client/FusionAuthClient.java")
+}
+
+target(name: "build-php", description: "Updates the client libraries using the JSON files") {
+  clientLibrary.buildClient(template: "src/main/client/php.client.ftl", outputFile: "../fusionauth-php-client/src/FusionAuth/FusionAuthClient.php")
+}
+
+target(name: "build-csharp", description: "Updates the client libraries using the JSON files") {
+  clientLibrary.buildClient(template: "src/main/client/csharp.client.ftl", outputFile: "../fusionauth-csharp-client/src/main/csharp/FusionAuthClient.cs")
+}
+
+target(name: "build-node", description: "Updates the client libraries using the JSON files") {
+  clientLibrary.buildClient(template: "src/main/client/node.client.ftl", outputFile: "../fusionauth-node-client/lib/FusionAuthClient.js")
+}
+
+target(name: "build-typescript", description: "Updates the client libraries using the JSON files") {
+  clientLibrary.buildClient(template: "src/main/client/typescript.client.ftl", outputFile: "../fusionauth-typescript-client/src/FusionAuthClient.ts")
+}
+
+target(name: "build-javascript", description: "Updates the client libraries using the JSON files") {
+  clientLibrary.buildClient(template: "src/main/client/javascript.client.ftl", outputFile: "../fusionauth-javascript-client/lib/FusionAuthClient.js")
+}
+
+target(name: "build-python", description: "Updates the client libraries using the JSON files") {
+  clientLibrary.buildClient(template: "src/main/client/python.client.ftl", outputFile: "../fusionauth-python-client/src/main/python/fusionauth/fusionauth_client.py")
+}
+
+target(name: "build-ruby", description: "Updates the client libraries using the JSON files") {
+  clientLibrary.buildClient(template: "src/main/client/ruby.client.ftl", outputFile: "../fusionauth-ruby-client/lib/fusionauth/fusionauth_client.rb")
+}
+
+target(name: "build-swift", description: "Updates the client libraries using the JSON files") {
+  clientLibrary.buildClient(template: "src/main/client/swift.client.ftl", outputFile: "../fusionauth-swift-client/fusionauth/FusionAuthClient.swift")
+}
+
+target(name: "build-go", description: "Updates the client libraries using the JSON files") {
+  clientLibrary.buildClient(template: "src/main/client/go.client.ftl", outputFile: "../fusionauth-go-client/fusionauth/FusionAuthClient.go")
+}
+
+
+
+target(name: "build-all", description: "Updates the client libraries using the JSON files", dependsOn: ["build-java",
+                                                                                                        "build-php",
+                                                                                                        "build-csharp",
+                                                                                                        "build-node",
+                                                                                                        "build-typescript",
+                                                                                                        "build-javascript",
+                                                                                                        "build-python",
+                                                                                                        "build-ruby"]) {
+}
