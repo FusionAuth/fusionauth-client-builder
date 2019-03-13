@@ -16,14 +16,12 @@ $ ln -s ./savant-1.0.0 current
 $ export PATH=$PATH:~/savant/current/bin/
 ```
 
-
 You may optionally want to add `~/savant/current/bin` to your PATH that is set in your profile. You'll also need to ensure that you have Java installed and the environment variable  `JAVA_HOME` is set. 
 
 ### Building 
 
 
-
-Listing build targets
+Listing each client library build targets
 
 ```
 > sb --listTargets
