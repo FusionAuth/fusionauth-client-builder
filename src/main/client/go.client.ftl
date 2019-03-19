@@ -35,30 +35,30 @@ type FusionAuthClient struct {
 [#-- @formatter:off --]
 [#list apis as api]
   [#list api.comments as comment]
-   // ${comment}
+// ${api.methodName?cap_first} ${comment}
   [/#list]
   [#list api.params![] as param]
     [#if !param.constant??]
-   //   ${global.optional(param, "go")}${global.convertType(param.javaType, "go")} ${param.name} ${param.comments?join("\n   *    ")}
+//   ${global.optional(param, "go")}${global.convertType(param.javaType, "go")} ${param.name} ${param.comments?join("\n//   ")}
     [/#if]
   [/#list]
   [#assign parameters = global.methodParameters(api, "go")/]
-func (c *FusionAuthClient) ${api.methodName}(${parameters})) (interface{}, error) {
+func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (interface{}, error) {
     var body interface{}
-    uri := ${api.uri}
+    uri := "${api.uri}"
     method := http.Method${api.method?capitalize}
   [#list api.params![] as param]
     [#if param.type == "urlSegment"]
-    uri = uriWithSegment(uri, ${(param.constant?? && param.constant)?then(param.value, param.name)})
+    uri = URIWithSegment(uri, ${(param.constant?? && param.constant)?then(param.value, param.name)})
     [#elseif param.type == "body"]
     body = ${param.name}
     [/#if]
   [/#list]
-  req, err := c.newRequest(method, uri, body)
+    req, err := c.NewRequest(method, uri, body)
+    q := req.URL.Query()
   [#list api.params![] as param]
     [#if param.type == "urlParameter"]
-    q := req.URL.Query()
-    q.add("${param.parameterName}","${(param.constant?? && param.constant)?then(param.value, param.name)}")
+    q.Add("${param.parameterName}", string(${(param.constant?? && param.constant)?then(param.value, param.name)}))
     [#elseif param.type == "body"]
     req.Header.Set("Content-Type", "application/json")
     [/#if]
@@ -69,7 +69,10 @@ func (c *FusionAuthClient) ${api.methodName}(${parameters})) (interface{}, error
   [#if api.authorization??]
     req.Header.Set("Authorization", c.APIKey)
   [/#if]
-  }
+    var resp interface{} 
+    _, err = c.Do(req, &resp)
+    return resp, err
+}
 
 [/#list]
 [#-- @formatter:on --]
