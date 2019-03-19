@@ -40,6 +40,9 @@ clientLibrary.settings.debug = false
 target(name: "clean", description: "No-op") {
 }
 
+target(name: "idea", description: "No-op") {
+}
+
 target(name: "int", description: "No-op") {
 }
 
