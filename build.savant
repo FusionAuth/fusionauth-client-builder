@@ -33,6 +33,7 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.5
 
 // Plugins
 clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.2.2")
+release = loadPlugin(id: "org.savantbuild.plugin:release-git:1.0.0")
 
 // Plugin settings
 clientLibrary.settings.debug = false
@@ -47,6 +48,10 @@ target(name: "idea", description: "No-op") {
 }
 
 target(name: "int", description: "No-op") {
+}
+
+target(name: "release", description: "Release") {
+  release.release()
 }
 
 target(name: "build-java", description: "Build the Java Client Library") {
