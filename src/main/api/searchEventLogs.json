@@ -1,0 +1,20 @@
+{
+  "uri": "/api/system/event-log/search",
+  "comments": [
+    "Searches the event logs with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchEventLogs",
+  "successResponse": "EventLogSearchResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "EventLogSearchRequest"
+    }
+  ]
+}

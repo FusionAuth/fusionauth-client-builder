@@ -1,0 +1,10 @@
+{
+  "uri": "/api/lambda",
+  "comments": [
+    "Retrieves all of the lambdas."
+  ],
+  "method": "get",
+  "methodName": "retrieveLambdas",
+  "successResponse": "LambdaResponse",
+  "errorResponse": "Void"
+}

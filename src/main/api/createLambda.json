@@ -1,0 +1,28 @@
+{
+  "uri": "/api/lambda",
+  "comments": [
+    "Creates a Lambda. You can optionally specify an Id for the lambda, if not provided one will be generated."
+  ],
+  "method": "post",
+  "methodName": "createLambda",
+  "successResponse": "LambdaResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "lambdaId",
+      "comments": [
+        "(Optional) The Id for the lambda. If not provided a secure random UUID will be generated."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to create the lambda."
+      ],
+      "type": "body",
+      "javaType": "LambdaRequest"
+    }
+  ]
+}

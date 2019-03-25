@@ -1,0 +1,20 @@
+{
+  "uri": "/api/lambda",
+  "comments": [
+    "Deletes the lambda for the given Id."
+  ],
+  "method": "delete",
+  "methodName": "deleteLambda",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "lambdaId",
+      "comments": [
+        "The Id of the lambda to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

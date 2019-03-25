@@ -11,7 +11,7 @@
   [/#if]
 [/#function]
 <?php
-namespace fusionauth;
+namespace FusionAuth;
 
 /*
  * Copyright (c) 2018-2019, FusionAuth, All Rights Reserved
@@ -82,6 +82,7 @@ class FusionAuthClient
   [/#list]
    *
    * @return ClientResponse The ClientResponse.
+   * @throws \Exception
    */
   public function ${api.methodName}(${global.methodParameters(api, "php")})
   {

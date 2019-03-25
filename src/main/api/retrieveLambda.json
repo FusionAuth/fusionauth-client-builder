@@ -1,0 +1,20 @@
+{
+  "uri": "/api/lambda",
+  "comments": [
+    "Retrieves the lambda for the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveLambda",
+  "successResponse": "LambdaResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "lambdaId",
+      "comments": [
+        "The Id of the lambda."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

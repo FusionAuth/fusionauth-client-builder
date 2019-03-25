@@ -37,6 +37,9 @@ clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.2.2
 // Plugin settings
 clientLibrary.settings.debug = false
 
+target(name: "idea", description: "No-op") {
+}
+
 target(name: "clean", description: "No-op") {
 }
 
