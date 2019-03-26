@@ -23,31 +23,40 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.5
     subversion(repository: "http://svn.inversoft.org/savant")
   }
 
-  dependencies {
-  }
-
   publications {
-    standard()
+    main {
+      publication(name: project.name, type: "zip", file: "build/zips/fusionauth-client-builder.zip")
+    }
   }
 }
 
 // Plugins
 clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.2.2")
+dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:1.0.2")
+file = loadPlugin(id: "org.savantbuild.plugin:file:1.0.2")
+idea = loadPlugin(id: "org.savantbuild.plugin:idea:1.0.1")
 release = loadPlugin(id: "org.savantbuild.plugin:release-git:1.0.0")
 
 // Plugin settings
 clientLibrary.settings.debug = false
 
-target(name: "idea", description: "No-op") {
+target(name: "idea", description: "Updates the IntelliJ IDEA module file") {
+  idea.iml()
 }
 
 target(name: "clean", description: "No-op") {
+  file.prune(dir: "build/zips")
 }
 
 target(name: "idea", description: "No-op") {
 }
 
-target(name: "int", description: "No-op") {
+target(name: "int", description: "Releases a local integration build of the project") {
+  file.zip(file: "build/zips/fusionauth-client-builder.zip") {
+    fileSet(dir: "src/main")
+  }
+
+  dependency.integrate()
 }
 
 target(name: "release", description: "Release") {
