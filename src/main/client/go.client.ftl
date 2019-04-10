@@ -18,9 +18,6 @@
 package client
 
 import (
-	"bytes"
-	"encoding/json"
-	"io"
 	"net/http"
 	"net/url"
 )
@@ -29,13 +26,14 @@ import (
 type FusionAuthClient struct {
 	BaseURL    *url.URL
 	APIKey     string
-	httpClient *http.Client
+	HTTPClient *http.Client
 }
 
 [#-- @formatter:off --]
 [#list apis as api]
+// ${api.methodName?cap_first}
   [#list api.comments as comment]
-// ${api.methodName?cap_first} ${comment}
+// ${comment}
   [/#list]
   [#list api.params![] as param]
     [#if !param.constant??]
@@ -49,16 +47,39 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (interface
     method := http.Method${api.method?capitalize}
   [#list api.params![] as param]
     [#if param.type == "urlSegment"]
+      [#if !param.constant?? && param.javaType == "Integer"]
+    uri = URIWithSegment(uri, string(${(param.constant?? && param.constant)?then(param.value, param.name)}))
+      [#else]
     uri = URIWithSegment(uri, ${(param.constant?? && param.constant)?then(param.value, param.name)})
+      [/#if]
     [#elseif param.type == "body"]
     body = ${param.name}
     [/#if]
   [/#list]
     req, err := c.NewRequest(method, uri, body)
-    q := req.URL.Query()
   [#list api.params![] as param]
     [#if param.type == "urlParameter"]
+    q := req.URL.Query()
+      [#break]
+    [/#if]
+  [/#list]
+  [#list api.params![] as param]
+    [#if param.type == "urlParameter"]
+      [#if param.value?? && param.value == "true"]
+    q.Add("${param.parameterName}", strconv.FormatBool(true))
+      [#elseif param.value?? && param.value == "false"]
+    q.Add("${param.parameterName}", strconv.FormatBool(false))
+      [#elseif !param.constant?? && param.javaType == "boolean"]
+    q.Add("${param.parameterName}", strconv.FormatBool(${(param.constant?? && param.constant)?then(param.value, param.name)}))
+      [#elseif !param.constant?? && global.convertType(param.javaType, "go") == "[]string"] 
+    for _, ${param.parameterName} := range ${(param.constant?? && param.constant)?then(param.value, param.name)} {
+ 		  q.Add("${param.parameterName}", ${param.parameterName})
+ 	  }
+      [#elseif !param.constant?? && global.convertType(param.javaType, "go") == "interface{}"]
+    q.Add("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, param.name)}.(string)) 
+      [#else]
     q.Add("${param.parameterName}", string(${(param.constant?? && param.constant)?then(param.value, param.name)}))
+      [/#if]
     [#elseif param.type == "body"]
     req.Header.Set("Content-Type", "application/json")
     [/#if]
@@ -67,7 +88,7 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (interface
     req.Header.Set("Content-Type", "text/plain")
   [/#if]
   [#if api.authorization??]
-    req.Header.Set("Authorization", c.APIKey)
+    req.Header.Set("Authorization", ${api.authorization})
   [/#if]
     var resp interface{} 
     _, err = c.Do(req, &resp)
