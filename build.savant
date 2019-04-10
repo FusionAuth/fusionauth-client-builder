@@ -88,7 +88,7 @@ target(name: "build-swift", description: "Build the Swift Client Library") {
 }
 
 target(name: "build-go", description: "Build the Go Client Library") {
-  clientLibrary.buildClient(template: "src/main/client/go.client.ftl", outputFile: "/Users/medhirbhargava/code/go/src/github.com/medhir/fusionauth-go-client/FusionAuthClient.go")
+  clientLibrary.buildClient(template: "src/main/client/go.client.ftl", outputFile: "../fusionauth-go-client/fusionauth/FusionAuthClient.go")
 }
 
 
