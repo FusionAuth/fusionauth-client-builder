@@ -16,9 +16,9 @@ ln -s ./savant-1.0.0 current
 export PATH=$PATH:~/savant/current/bin/
 ```
 
-You may optionally want to add `~/savant/current/bin` to your PATH that is set in your profile so that this change persists. You'll also need to ensure that you have Java >= 8 installed and the environment variable  `JAVA_HOME` is set. 
+You may optionally want to add `~/savant/current/bin` to your PATH that is set in your profile so that this change persists. You'll also need to ensure that you have Java >= 8 installed and the environment variable  `JAVA_HOME` is set.
 
-### Building 
+### Building
 
 Listing each client library build targets
 
@@ -36,6 +36,7 @@ For example, your directory structure should look something like the following:
 fusionauth
 ├── fusionauth-client-builder
 ├── fusionauth-csharp-client
+├── fusionauth-go-client
 ├── fusionauth-java-client
 ├── fusionauth-javascript-client
 ├── fusionauth-node-client
