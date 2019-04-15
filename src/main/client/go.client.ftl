@@ -22,14 +22,14 @@ import (
   "encoding/json"
   "fmt"
   "io"
-	"net/http"
+  "net/http"
   "net/http/httputil"
   "net/url"
 )
 
 // URIWithSegment returns a string with a "/" delimiter between the uri and segment
 func URIWithSegment(uri, segment string) string {
-	return uri + "/" + segment
+  return uri + "/" + segment
 }
 
 // NewRequest creates a new request for the FusionAuth API call
@@ -114,12 +114,12 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (interface
     q.Add("${param.parameterName}", strconv.FormatBool(false))
       [#elseif !param.constant?? && param.javaType == "boolean"]
     q.Add("${param.parameterName}", strconv.FormatBool(${(param.constant?? && param.constant)?then(param.value, param.name)}))
-      [#elseif !param.constant?? && global.convertType(param.javaType, "go") == "[]string"] 
+      [#elseif !param.constant?? && global.convertType(param.javaType, "go") == "[]string"]
     for _, ${param.parameterName} := range ${(param.constant?? && param.constant)?then(param.value, param.name)} {
  		  q.Add("${param.parameterName}", ${param.parameterName})
  	  }
       [#elseif !param.constant?? && global.convertType(param.javaType, "go") == "interface{}"]
-    q.Add("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, param.name)}.(string)) 
+    q.Add("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, param.name)}.(string))
       [#else]
     q.Add("${param.parameterName}", string(${(param.constant?? && param.constant)?then(param.value, param.name)}))
       [/#if]
@@ -133,7 +133,7 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (interface
   [#if api.authorization??]
     req.Header.Set("Authorization", ${api.authorization})
   [/#if]
-    var resp interface{} 
+    var resp interface{}
     _, err = c.Do(req, &resp)
     return resp, err
 }
