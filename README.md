@@ -35,6 +35,7 @@ For example, your directory structure should look something like the following:
 ```
 fusionauth
 ├── fusionauth-client-builder
+├── fusionauth-android-client
 ├── fusionauth-csharp-client
 ├── fusionauth-go-client
 ├── fusionauth-java-client
