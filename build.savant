@@ -108,10 +108,14 @@ target(name: "build-go", description: "Build the Go Client Library") {
   clientLibrary.buildClient(template: "src/main/client/go.client.ftl", outputFile: "../fusionauth-go-client/pkg/fusionauth/FusionAuthClient.go")
 }
 
+target(name: "build-android", description: "Build the Android Client Library") {
+  clientLibrary.buildClient(template: "src/main/client/android.client.ftl",
+                            outputFile: "../fusionauth-android-client/src/main/java/io/fusionauth/client/FusionAuthClient.java")}
 
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
                                                                                   "build-php",
                                                                                   "build-csharp",
+                                                                                  "build-go",
                                                                                   "build-node",
                                                                                   "build-typescript",
                                                                                   "build-javascript",
