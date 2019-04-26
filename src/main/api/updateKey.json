@@ -1,0 +1,28 @@
+{
+  "uri": "/api/key",
+  "comments": [
+    "Updates the key with the given Id."
+  ],
+  "method": "put",
+  "methodName": "updateKey",
+  "successResponse": "KeyResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "keyId",
+      "comments": [
+        "The Id of the key to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains all of the new key information."
+      ],
+      "type": "body",
+      "javaType": "KeyRequest"
+    }
+  ]
+}

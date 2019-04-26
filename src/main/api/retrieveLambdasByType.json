@@ -1,0 +1,21 @@
+{
+  "uri": "/api/lambda",
+  "comments": [
+    "Retrieves all of the lambdas for the provided type."
+  ],
+  "method": "get",
+  "methodName": "retrieveLambdasByType",
+  "successResponse": "LambdaResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "type",
+      "comments": [
+        "The type of the lambda to return."
+      ],
+      "type": "urlParameter",
+      "parameterName": "type",
+      "javaType": "LambdaType"
+    }
+  ]
+}

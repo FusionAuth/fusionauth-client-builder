@@ -1,0 +1,10 @@
+{
+  "uri": "/api/key",
+  "comments": [
+    "Retrieves all of the keys."
+  ],
+  "method": "get",
+  "methodName": "retrieveKeys",
+  "successResponse": "KeyResponse",
+  "errorResponse": "Void"
+}

@@ -1,0 +1,28 @@
+{
+  "uri": "/api/key/generate",
+  "comments": [
+    "Generate a new RSA or EC key pair or an HMAC secret."
+  ],
+  "method": "post",
+  "methodName": "generateKey",
+  "successResponse": "KeyResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "keyId",
+      "comments": [
+        "(Optional) The Id for the key. If not provided a secure random UUID will be generated."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to create the key."
+      ],
+      "type": "body",
+      "javaType": "KeyRequest"
+    }
+  ]
+}

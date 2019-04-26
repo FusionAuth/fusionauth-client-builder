@@ -1,0 +1,20 @@
+{
+  "uri": "/api/key",
+  "comments": [
+    "Retrieves the key for the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveKey",
+  "successResponse": "KeyResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "keyId",
+      "comments": [
+        "The Id of the key."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

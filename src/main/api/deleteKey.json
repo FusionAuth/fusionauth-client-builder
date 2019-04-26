@@ -1,0 +1,20 @@
+{
+  "uri": "/api/key",
+  "comments": [
+    "Deletes the key for the given Id."
+  ],
+  "method": "delete",
+  "methodName": "deleteKey",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "keyOd",
+      "comments": [
+        "The Id of the key to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

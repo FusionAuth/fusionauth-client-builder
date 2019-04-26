@@ -1,0 +1,20 @@
+{
+  "uri": "/api/system/event-log",
+  "comments": [
+    "Retrieves a single event log for the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveEventLog",
+  "successResponse": "EventLogResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "eventLogId",
+      "comments": [
+        "The Id of the event log to retrieve."
+      ],
+      "type": "urlSegment",
+      "javaType": "Integer"
+    }
+  ]
+}
