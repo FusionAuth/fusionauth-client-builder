@@ -44,7 +44,7 @@ target(name: "idea", description: "Updates the IntelliJ IDEA module file") {
   idea.iml()
 }
 
-target(name: "clean", description: "No-op") {
+target(name: "clean", description: "Clean") {
   file.prune(dir: "build/zips")
 }
 
@@ -56,7 +56,7 @@ target(name: "int", description: "Releases a local integration build of the proj
   dependency.integrate()
 }
 
-target(name: "release", description: "Release") {
+target(name: "release", description: "Release", dependsOn: ["clean", "int"]) {
   release.release()
 }
 
