@@ -14,7 +14,7 @@
  * language governing permissions and limitations under the License.
  */
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.6.0", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.6.1", licenses: ["ApacheV2_0"]) {
   workflow {
     standard()
   }
