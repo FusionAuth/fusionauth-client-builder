@@ -1,0 +1,14 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "HTTPHeaders",
+  "description" : "/**\n * Type for webhook headers.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "HashMap",
+    "typeArguments" : [ {
+      "type" : "String"
+    }, {
+      "type" : "String"
+    } ]
+  } ],
+  "fields" : { }
+}

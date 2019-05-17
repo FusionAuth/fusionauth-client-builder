@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api.report",
+  "type" : "RegistrationReportResponse",
+  "description" : "/**\n * Response for the registration report.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "hourlyCounts" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Count"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

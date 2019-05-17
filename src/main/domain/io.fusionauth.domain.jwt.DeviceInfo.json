@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.jwt",
+  "type" : "DeviceInfo",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "DeviceInfo"
+    } ]
+  } ],
+  "fields" : {
+    "description" : {
+      "type" : "String"
+    },
+    "lastAccessedAddress" : {
+      "type" : "String"
+    },
+    "lastAccessedInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "type" : {
+      "type" : "DeviceType"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SecureIdentity",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "encryptionScheme" : {
+      "type" : "String"
+    },
+    "factor" : {
+      "type" : "int"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "password" : {
+      "type" : "String"
+    },
+    "passwordChangeRequired" : {
+      "type" : "boolean"
+    },
+    "passwordLastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "salt" : {
+      "type" : "String"
+    },
+    "verified" : {
+      "type" : "boolean"
+    }
+  }
+}

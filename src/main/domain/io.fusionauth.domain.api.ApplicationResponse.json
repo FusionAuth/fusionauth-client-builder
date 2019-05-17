@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ApplicationResponse",
+  "description" : "/**\n * The Application API response.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "application" : {
+      "type" : "Application"
+    },
+    "applications" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Application"
+      } ]
+    },
+    "role" : {
+      "type" : "ApplicationRole"
+    }
+  }
+}

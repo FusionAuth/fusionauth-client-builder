@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserDeleteRequest",
+  "description" : "/**\n * User API delete request object.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "hardDelete" : {
+      "type" : "boolean"
+    },
+    "userIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    }
+  }
+}

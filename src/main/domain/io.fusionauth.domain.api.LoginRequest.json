@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LoginRequest",
+  "description" : "/**\n * Login API request object.\n *\n * @author Seth Musselman\n */\n",
+  "extends" : [ {
+    "type" : "BaseLoginRequest"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "LoginRequest"
+    } ]
+  } ],
+  "fields" : {
+    "loginId" : {
+      "type" : "String"
+    },
+    "oneTimePassword" : {
+      "type" : "String"
+    },
+    "password" : {
+      "type" : "String"
+    },
+    "twoFactorTrustId" : {
+      "type" : "String"
+    }
+  }
+}

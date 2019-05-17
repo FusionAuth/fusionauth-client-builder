@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "EventLogSearchCriteria",
+  "description" : "/**\n * Search criteria for the event log.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "fields" : {
+    "end" : {
+      "type" : "ZonedDateTime"
+    },
+    "message" : {
+      "type" : "String"
+    },
+    "start" : {
+      "type" : "ZonedDateTime"
+    },
+    "type" : {
+      "type" : "EventLogType"
+    }
+  }
+}

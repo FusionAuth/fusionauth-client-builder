@@ -1,0 +1,36 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SAMLv2Configuration",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "SAMLv2Configuration"
+    } ]
+  } ],
+  "fields" : {
+    "audience" : {
+      "type" : "String"
+    },
+    "callbackURL" : {
+      "type" : "URI"
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "issuer" : {
+      "type" : "String"
+    },
+    "keyId" : {
+      "type" : "UUID"
+    },
+    "logoutURL" : {
+      "type" : "URI"
+    },
+    "xmlSignatureC14nMethod" : {
+      "type" : "CanonicalizationMethod"
+    }
+  }
+}

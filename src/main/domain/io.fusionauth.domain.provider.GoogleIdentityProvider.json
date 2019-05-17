@@ -1,0 +1,34 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "GoogleIdentityProvider",
+  "description" : "/**\n * Google social login provider.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "type" : "GoogleApplicationConfiguration"
+    } ]
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "GoogleIdentityProvider"
+    } ]
+  } ],
+  "fields" : {
+    "buttonText" : {
+      "type" : "String"
+    },
+    "client_id" : {
+      "type" : "String"
+    },
+    "client_secret" : {
+      "type" : "String"
+    },
+    "scope" : {
+      "type" : "String"
+    },
+    "type" : {
+      "type" : "IdentityProviderType"
+    }
+  }
+}

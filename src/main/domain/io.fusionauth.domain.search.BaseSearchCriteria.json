@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "BaseSearchCriteria",
+  "description" : "/**\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Serializable"
+  } ],
+  "fields" : {
+    "numberOfResults" : {
+      "type" : "int"
+    },
+    "orderBy" : {
+      "type" : "String"
+    },
+    "startRow" : {
+      "type" : "int"
+    }
+  }
+}

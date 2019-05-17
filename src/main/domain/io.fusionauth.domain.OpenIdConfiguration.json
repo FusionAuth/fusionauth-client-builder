@@ -1,0 +1,76 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "OpenIdConfiguration",
+  "description" : "/**\n * OpenID Configuration as described by the <a href=\"https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata\">OpenID\n * Provider Metadata</a>.\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "OpenIdConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "authorization_endpoint" : {
+      "type" : "String"
+    },
+    "claims_supported" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "grant_types_supported" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "id_token_signing_alg_values_supported" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "issuer" : {
+      "type" : "String"
+    },
+    "jwks_uri" : {
+      "type" : "String"
+    },
+    "response_types_supported" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "scopes_supported" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "subject_types_supported" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "token_endpoint" : {
+      "type" : "String"
+    },
+    "token_endpoint_auth_methods_supported" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "userinfo_endpoint" : {
+      "type" : "String"
+    },
+    "userinfo_signing_alg_values_supported" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    }
+  }
+}

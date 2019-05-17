@@ -1,0 +1,33 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CleanSpeakConfiguration",
+  "description" : "/**\n * CleanSpeak configuration at the system and application level.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "CleanSpeakConfiguration"
+    } ]
+  }, {
+    "type" : "Integration"
+  } ],
+  "fields" : {
+    "apiKey" : {
+      "type" : "String"
+    },
+    "applicationIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
+    "url" : {
+      "type" : "URI"
+    },
+    "usernameModeration" : {
+      "type" : "UsernameModeration"
+    }
+  }
+}

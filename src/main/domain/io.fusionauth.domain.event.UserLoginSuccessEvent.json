@@ -1,0 +1,34 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserLoginSuccessEvent",
+  "description" : "/**\n * Models the User Login Success Event.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserLoginSuccessEvent"
+    } ]
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "authenticationType" : {
+      "type" : "String"
+    },
+    "identityProviderId" : {
+      "type" : "UUID"
+    },
+    "identityProviderName" : {
+      "type" : "String"
+    },
+    "user" : {
+      "type" : "User"
+    },
+    "type" : {
+      "type" : "EventType"
+    }
+  }
+}

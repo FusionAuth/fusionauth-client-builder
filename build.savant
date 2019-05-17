@@ -14,6 +14,9 @@
  * language governing permissions and limitations under the License.
  */
 
+import java.nio.file.Files
+import java.nio.file.Paths
+
 project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.6.1", licenses: ["ApacheV2_0"]) {
   workflow {
     standard()
@@ -31,7 +34,7 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.6
 }
 
 // Plugins
-clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.2.2")
+clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.3.0")
 dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:1.0.2")
 file = loadPlugin(id: "org.savantbuild.plugin:file:1.0.2")
 idea = loadPlugin(id: "org.savantbuild.plugin:idea:1.0.1")
@@ -39,6 +42,26 @@ release = loadPlugin(id: "org.savantbuild.plugin:release-git:1.0.0")
 
 // Plugin settings
 clientLibrary.settings.debug = false
+
+target(name: "generateDomain", description: "Generates all of the json files for the domain") {
+  clientLibrary.generateDomainJson(srcDir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain", outDir: "src/main/domain")
+  clientLibrary.generateDomainJson(srcDir: "../../libraries/java-error/src/main/java", outDir: "src/main/domain")
+  clientLibrary.generateDomainJson(srcDir: "../fusionauth-jwt/src/main/java/io/fusionauth/jwt/domain/", outDir: "src/main/domain")
+
+  ["io.fusionauth.domain.Buildable.json",
+   "io.fusionauth.domain.Integration.json",
+   "io.fusionauth.domain.internal._InternalJSONColumn.json",
+   "io.fusionauth.domain.internal.annotation.InternalJSONColumn.json",
+   "io.fusionauth.domain.internal.DatabaseObjectMapperHolder.json",
+   "io.fusionauth.domain.internal.ReflectionTools.json",
+   "io.fusionauth.jwt.domain.Buildable.json",
+   "io.fusionauth.jwt.domain.Header.json",
+   "io.fusionauth.jwt.domain.JWT.json",
+   "io.fusionauth.jwt.domain.KeyPair.json",
+   "io.fusionauth.jwt.domain.KeyType.json",
+   "io.fusionauth.jwt.domain.Type.json"]
+      .forEach({ Files.deleteIfExists(Paths.get("src/main/domain").resolve(it))})
+}
 
 target(name: "idea", description: "Updates the IntelliJ IDEA module file") {
   idea.iml()
@@ -73,6 +96,14 @@ target(name: "build-php", description: "Build the PHP Client Library") {
 target(name: "build-csharp", description: "Build the C# Client Library") {
   clientLibrary.buildClient(template: "src/main/client/csharp.client.ftl",
                             outputFile: "../fusionauth-csharp-client/src/main/csharp/FusionAuthClient.cs")
+}
+
+target(name: "build-netcore", description: "Build the C# .netCore Client Library") {
+  clientLibrary.buildClient(template: "src/main/client/netcore.client.ftl",
+                            outputFile: "../fusionauth-netcore-client/fusionauth-netcore-client/src/io/fusionauth/FusionAuthClient.cs")
+  clientLibrary.buildDomain(template: "src/main/client/netcore.domain.ftl",
+                            outputDir: "../fusionauth-netcore-client/fusionauth-netcore-client/domain",
+                            extension: "cs")
 }
 
 target(name: "build-node", description: "Build the Node.js Client Library") {

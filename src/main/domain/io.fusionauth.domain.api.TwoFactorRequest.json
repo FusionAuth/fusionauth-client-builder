@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TwoFactorRequest",
+  "description" : "/**\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TwoFactorRequest"
+    } ]
+  } ],
+  "fields" : {
+    "code" : {
+      "type" : "String"
+    },
+    "delivery" : {
+      "type" : "TwoFactorDelivery"
+    },
+    "secret" : {
+      "type" : "String"
+    }
+  }
+}

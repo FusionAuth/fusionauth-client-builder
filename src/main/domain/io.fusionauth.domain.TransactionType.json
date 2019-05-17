@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TransactionType",
+  "description" : "/**\n * The transaction types for Webhooks and other event systems within FusionAuth.\n *\n * @author Brian Pontarelli\n */\n",
+  "enum" : [ "None", "Any", "SimpleMajority", "SuperMajority", "AbsoluteMajority" ]
+}

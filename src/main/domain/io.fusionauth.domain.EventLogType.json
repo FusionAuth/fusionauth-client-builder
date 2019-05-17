@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EventLogType",
+  "description" : "/**\n * Event Log Type\n *\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "Information", "Debug", "Error" ]
+}

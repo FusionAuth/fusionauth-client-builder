@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "SearchResults",
+  "description" : "/**\n * Search results.\n *\n * @author Brian Pontarelli\n */\n",
+  "typeArguments" : [ {
+    "name" : "T"
+  } ],
+  "fields" : {
+    "results" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "T"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "VerifyEmailResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "verificationId" : {
+      "type" : "String"
+    }
+  }
+}

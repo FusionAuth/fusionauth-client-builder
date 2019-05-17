@@ -1,0 +1,69 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "LoginTheme",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "LoginTheme"
+    } ]
+  } ],
+  "fields" : {
+    "emailComplete" : {
+      "type" : "String"
+    },
+    "emailSend" : {
+      "type" : "String"
+    },
+    "emailVerify" : {
+      "type" : "String"
+    },
+    "helpers" : {
+      "type" : "String"
+    },
+    "lastModified" : {
+      "type" : "ZonedDateTime"
+    },
+    "oauth2Authorize" : {
+      "type" : "String"
+    },
+    "oauth2CompleteRegistration" : {
+      "type" : "String"
+    },
+    "oauth2Error" : {
+      "type" : "String"
+    },
+    "oauth2Register" : {
+      "type" : "String"
+    },
+    "oauth2TwoFactor" : {
+      "type" : "String"
+    },
+    "passwordChange" : {
+      "type" : "String"
+    },
+    "passwordComplete" : {
+      "type" : "String"
+    },
+    "passwordForgot" : {
+      "type" : "String"
+    },
+    "passwordSent" : {
+      "type" : "String"
+    },
+    "registrationComplete" : {
+      "type" : "String"
+    },
+    "registrationSend" : {
+      "type" : "String"
+    },
+    "registrationVerify" : {
+      "type" : "String"
+    },
+    "stylesheet" : {
+      "type" : "String"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EventLogSearchRequest",
+  "description" : "/**\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "search" : {
+      "type" : "EventLogSearchCriteria"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "packageName" : "io.fusionauth.domain.api.report",
+  "type" : "TotalsReportResponse",
+  "description" : "/**\n * The response from the total report. This report stores the total numbers for each application.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "applicationTotals" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      }, {
+        "type" : "Totals"
+      } ]
+    },
+    "globalRegistrations" : {
+      "type" : "long"
+    },
+    "totalGlobalRegistrations" : {
+      "type" : "long"
+    }
+  }
+}

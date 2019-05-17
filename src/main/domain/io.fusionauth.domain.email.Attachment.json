@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.email",
+  "type" : "Attachment",
+  "description" : "/**\n * This class is a simple attachment with a byte array, name and MIME type.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "attachment" : {
+      "type" : "Array",
+      "typeArguments" : [ {
+        "type" : "byte"
+      } ]
+    },
+    "mime" : {
+      "type" : "String"
+    },
+    "name" : {
+      "type" : "String"
+    }
+  }
+}

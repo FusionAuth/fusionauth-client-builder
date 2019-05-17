@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "GrantType",
+  "description" : "/**\n * Authorization Grant types as defined by the <a href=\"https://tools.ietf.org/html/rfc6749\">The OAuth 2.0 Authorization\n * Framework - RFC 6749</a>.\n * <p>\n * Specific names as defined by <a href=\"https://tools.ietf.org/html/rfc7591#section-4.1\">\n * OAuth 2.0 Dynamic Client Registration Protocol - RFC 7591 Section 4.1</a>\n *\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "authorization_code", "implicit", "password", "client_credentials", "refresh_token", "unknown" ]
+}

@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "GroupRequest",
+  "description" : "/**\n * Group API request object.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "group" : {
+      "type" : "Group"
+    },
+    "roleIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    }
+  }
+}

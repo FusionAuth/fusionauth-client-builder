@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "LambdaType",
+  "description" : "/**\n * The types of lambdas that indicate how they are invoked by FusionAuth.\n *\n * @author Brian Pontarelli\n */\n",
+  "enum" : [ "JWTPopulate", "OpenIDReconcile", "SAMLv2Reconcile", "SAMLv2Populate" ]
+}

@@ -1,0 +1,113 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "User",
+  "description" : "/**\n * The global view of a User. This object contains all global information about the user including birth date, registration information\n * preferred languages, global attributes, etc.\n *\n * @author Seth Musselman\n */\n",
+  "extends" : [ {
+    "type" : "SecureIdentity"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "User"
+    } ]
+  }, {
+    "type" : "_InternalJSONColumn"
+  } ],
+  "fields" : {
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "preferredLanguages" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Locale"
+      } ]
+    },
+    "active" : {
+      "type" : "boolean"
+    },
+    "birthDate" : {
+      "type" : "LocalDate"
+    },
+    "cleanSpeakId" : {
+      "type" : "UUID"
+    },
+    "email" : {
+      "type" : "String"
+    },
+    "expiry" : {
+      "type" : "ZonedDateTime"
+    },
+    "firstName" : {
+      "type" : "String"
+    },
+    "fullName" : {
+      "type" : "String"
+    },
+    "imageUrl" : {
+      "type" : "URI"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastLoginInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastName" : {
+      "type" : "String"
+    },
+    "middleName" : {
+      "type" : "String"
+    },
+    "mobilePhone" : {
+      "type" : "String"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    },
+    "timezone" : {
+      "type" : "String"
+    },
+    "twoFactorDelivery" : {
+      "type" : "TwoFactorDelivery"
+    },
+    "twoFactorEnabled" : {
+      "type" : "boolean"
+    },
+    "twoFactorSecret" : {
+      "type" : "String"
+    },
+    "username" : {
+      "type" : "String"
+    },
+    "usernameStatus" : {
+      "type" : "ContentStatus"
+    },
+    "age" : {
+      "type" : "int"
+    },
+    "login" : {
+      "type" : "String"
+    },
+    "memberships" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "GroupMember"
+      } ]
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "registrations" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UserRegistration"
+      } ]
+    }
+  }
+}

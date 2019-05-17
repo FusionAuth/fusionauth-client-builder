@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "ValidateResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "jwt" : {
+      "type" : "JWT"
+    }
+  }
+}

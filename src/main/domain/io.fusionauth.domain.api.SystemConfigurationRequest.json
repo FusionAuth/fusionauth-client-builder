@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "SystemConfigurationRequest",
+  "description" : "/**\n * Request for the system configuration API.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "systemConfiguration" : {
+      "type" : "SystemConfiguration"
+    }
+  }
+}

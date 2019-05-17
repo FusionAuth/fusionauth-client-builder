@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "IntegrationRequest",
+  "description" : "/**\n * The Integration Request\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "integrations" : {
+      "type" : "Integrations"
+    }
+  }
+}

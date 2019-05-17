@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "PreviewResponse",
+  "description" : "/**\n * @author Seth Musselman\n */\n",
+  "fields" : {
+    "email" : {
+      "type" : "Email"
+    },
+    "errors" : {
+      "type" : "Errors"
+    }
+  }
+}

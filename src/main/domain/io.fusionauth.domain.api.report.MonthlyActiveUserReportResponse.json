@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api.report",
+  "type" : "MonthlyActiveUserReportResponse",
+  "description" : "/**\n * Response for the daily active user report.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "monthlyActiveUsers" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Count"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

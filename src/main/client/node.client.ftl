@@ -1,3 +1,4 @@
+[#--noinspection ALL--]
 [#import "_macros.ftl" as global/]
 /*
  * Copyright (c) 2018-2019, FusionAuth, All Rights Reserved
@@ -18,7 +19,7 @@
 'use strict';
 
 const RESTClient = require('./RESTClient.js');
-require('promise');
+var Promise = require('promise');
 
 const FusionAuthClient = function(apiKey, host) {
   this.apiKey = apiKey;
@@ -46,7 +47,7 @@ FusionAuthClient.prototype = {
    * @param {${global.optional(param, "js")}${global.convertType(param.javaType, "js")}} ${param.name} ${param.comments?join("\n   *    ")}
     [/#if]
   [/#list]
-   * @return {Promise} A Promise for the FusionAuth call.
+   * @return {Promise<ClientResponse<${global.convertType(api.successResponse, "js")}>>} A Promise for the FusionAuth call.
    */
   ${api.methodName}: function(${global.methodParameters(api, "js")}) {
     return new Promise((resolve, reject) => {
@@ -89,8 +90,8 @@ FusionAuthClient.prototype = {
   /**
    * Returns a function to handle the promises for each call.
    *
-   * @param resolve The promise's resolve function.
-   * @param reject The promise's reject function.
+   * @param {Function} resolve The promise's resolve function.
+   * @param {Function} reject The promise's reject function.
    * @returns {Function} The function that will call either the resolve or reject functions based on the ClientResponse.
    * @private
    */
@@ -120,5 +121,61 @@ FusionAuthClient.prototype = {
     return client;
   }
 };
+
+[#macro printType type]
+  [#if type.type??]
+    ${global.convertType(type.type, "js")}[#if type.typeArguments?has_content]<[#list type.typeArguments as typeArgument][@printType typeArgument/][#sep], [/#sep][/#list]>[/#if][#t]
+  [#else]
+    ${type.name}[#t]
+  [/#if]
+[/#macro]
+
+[#-- @formatter:off --]
+[#list domain?sort_by("type") as d]
+[#if d.fields??]
+[#-- Use interface here because classes require the correct order for declaration if it extends something --]
+[#-- Interfaces are also only for type checking so they can result in smaller compiled code --]
+/**
+  [#if d.description?has_content]
+    ${global.innerComment(d.description)}[#lt]
+ *
+  [/#if]
+ * @typedef {Object} ${global.convertType(d.type, "js")}
+  [#if d.typeArguments?has_content]
+ * @template {[#list d.typeArguments as typeArgument][@printType typeArgument/][#sep], [/#sep][/#list]}
+  [/#if]
+  [#if d.extends??]
+    [#list d.extends as extends]
+ * @extends [@printType extends/]
+    [/#list]
+  [/#if]
+ *
+  [#list d.fields?keys?sort as fieldName]
+    [#assign field = d.fields[fieldName]/]
+  [#if field.description??]
+ * ${field.description}
+  [/#if]
+ * @property {[@printType field/]} [${fieldName}]
+  [/#list]
+ */
+
+[#else]
+/**
+  [#if d.description?has_content]
+    ${global.innerComment(d.description)}[#lt]
+ *
+  [/#if]
+ * @readonly
+ * @enum
+ */
+var ${d.type} = {
+  [#list d.enum as value]
+  ${value}: "${value}"[#sep],[/#sep]
+  [/#list]
+};
+[/#if]
+
+[/#list]
+[#-- @formatter:on --]
 
 module.exports = FusionAuthClient;

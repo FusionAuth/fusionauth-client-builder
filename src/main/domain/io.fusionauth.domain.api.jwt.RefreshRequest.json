@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "RefreshRequest",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "refreshToken" : {
+      "type" : "String"
+    }
+  }
+}

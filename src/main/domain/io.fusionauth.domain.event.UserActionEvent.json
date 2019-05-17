@@ -1,0 +1,78 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserActionEvent",
+  "description" : "/**\n * Models the user action event (and can be converted to JSON).\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserActionEvent"
+    } ]
+  }, {
+    "type" : "ApplicationEvent"
+  } ],
+  "fields" : {
+    "applicationIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
+    "action" : {
+      "type" : "String"
+    },
+    "actionId" : {
+      "type" : "UUID"
+    },
+    "actioneeUserId" : {
+      "type" : "UUID"
+    },
+    "actionerUserId" : {
+      "type" : "UUID"
+    },
+    "comment" : {
+      "type" : "String"
+    },
+    "email" : {
+      "type" : "Email"
+    },
+    "emailedUser" : {
+      "type" : "boolean"
+    },
+    "expiry" : {
+      "type" : "ZonedDateTime"
+    },
+    "localizedAction" : {
+      "type" : "String"
+    },
+    "localizedDuration" : {
+      "type" : "String"
+    },
+    "localizedOption" : {
+      "type" : "String"
+    },
+    "localizedReason" : {
+      "type" : "String"
+    },
+    "notifyUser" : {
+      "type" : "boolean"
+    },
+    "option" : {
+      "type" : "String"
+    },
+    "phase" : {
+      "type" : "UserActionPhase"
+    },
+    "reason" : {
+      "type" : "String"
+    },
+    "reasonCode" : {
+      "type" : "String"
+    },
+    "type" : {
+      "type" : "EventType"
+    }
+  }
+}

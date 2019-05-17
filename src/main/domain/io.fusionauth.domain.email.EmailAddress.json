@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.email",
+  "type" : "EmailAddress",
+  "description" : "/**\n * An email address.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "address" : {
+      "type" : "String"
+    },
+    "display" : {
+      "type" : "String"
+    }
+  }
+}

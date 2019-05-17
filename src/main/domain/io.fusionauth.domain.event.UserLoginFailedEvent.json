@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserLoginFailedEvent",
+  "description" : "/**\n * Models the User Login Failed Event.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserLoginFailedEvent"
+    } ]
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "authenticationType" : {
+      "type" : "String"
+    },
+    "user" : {
+      "type" : "User"
+    },
+    "type" : {
+      "type" : "EventType"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "KeyRequest",
+  "description" : "/**\n * Key API request object.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "key" : {
+      "type" : "Key"
+    }
+  }
+}

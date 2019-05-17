@@ -1,0 +1,51 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EmailConfiguration",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EmailConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "forgotPasswordEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "host" : {
+      "type" : "String"
+    },
+    "password" : {
+      "type" : "String"
+    },
+    "passwordlessEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "port" : {
+      "type" : "int"
+    },
+    "properties" : {
+      "type" : "String"
+    },
+    "security" : {
+      "type" : "EmailSecurityType"
+    },
+    "setPasswordEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "username" : {
+      "type" : "String"
+    },
+    "verificationEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "verifyEmail" : {
+      "type" : "boolean"
+    },
+    "verifyEmailWhenChanged" : {
+      "type" : "boolean"
+    }
+  }
+}

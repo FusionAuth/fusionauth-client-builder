@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebhookRequest",
+  "description" : "/**\n * Webhook API request object.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "webhook" : {
+      "type" : "Webhook"
+    }
+  }
+}

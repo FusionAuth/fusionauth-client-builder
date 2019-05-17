@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api.report",
+  "type" : "Count",
+  "description" : "/**\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "count" : {
+      "type" : "int"
+    },
+    "interval" : {
+      "type" : "int"
+    }
+  }
+}

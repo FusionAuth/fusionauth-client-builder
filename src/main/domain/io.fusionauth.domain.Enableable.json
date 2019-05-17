@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Enableable",
+  "description" : "/**\n * Something that can be enabled and thus also disabled.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "enabled" : {
+      "type" : "boolean"
+    }
+  }
+}

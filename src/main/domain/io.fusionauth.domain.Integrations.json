@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Integrations",
+  "description" : "/**\n * Available Integrations\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "Integrations"
+    } ]
+  } ],
+  "fields" : {
+    "cleanspeak" : {
+      "type" : "CleanSpeakConfiguration"
+    },
+    "kafka" : {
+      "type" : "KafkaConfiguration"
+    },
+    "twilio" : {
+      "type" : "TwilioConfiguration"
+    }
+  }
+}

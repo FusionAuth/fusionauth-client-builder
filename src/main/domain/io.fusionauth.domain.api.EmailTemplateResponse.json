@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EmailTemplateResponse",
+  "description" : "/**\n * Email template response.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "emailTemplate" : {
+      "type" : "EmailTemplate"
+    },
+    "emailTemplates" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "EmailTemplate"
+      } ]
+    }
+  }
+}

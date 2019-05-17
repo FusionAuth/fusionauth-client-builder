@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "TestEvent",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TestEvent"
+    } ]
+  } ],
+  "fields" : {
+    "message" : {
+      "type" : "String"
+    },
+    "type" : {
+      "type" : "EventType"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserActionReason",
+  "description" : "/**\n * Models action reasons.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Comparable",
+    "typeArguments" : [ {
+      "type" : "UserActionReason"
+    } ]
+  } ],
+  "fields" : {
+    "code" : {
+      "type" : "String"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "localizedTexts" : {
+      "type" : "LocalizedStrings"
+    },
+    "text" : {
+      "type" : "String"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CertificateInformation",
+  "fields" : {
+    "issuer" : {
+      "type" : "String"
+    },
+    "md5Fingerprint" : {
+      "type" : "String"
+    },
+    "serialNumber" : {
+      "type" : "String"
+    },
+    "sha1Fingerprint" : {
+      "type" : "String"
+    },
+    "sha1Thumbprint" : {
+      "type" : "String"
+    },
+    "sha256Fingerprint" : {
+      "type" : "String"
+    },
+    "sha256Thumbprint" : {
+      "type" : "String"
+    },
+    "subject" : {
+      "type" : "String"
+    },
+    "validFrom" : {
+      "type" : "ZonedDateTime"
+    },
+    "validTo" : {
+      "type" : "ZonedDateTime"
+    }
+  }
+}

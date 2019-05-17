@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.util",
+  "type" : "Normalizer",
+  "description" : "/**\n * Helper methods for normalizing values.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : { }
+}

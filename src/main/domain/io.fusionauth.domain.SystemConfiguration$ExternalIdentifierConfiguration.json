@@ -1,0 +1,39 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ExternalIdentifierConfiguration",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ExternalIdentifierConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "authorizationGrantIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "changePasswordIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "emailVerificationIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "oneTimePasswordTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "passwordlessLoginTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "registrationVerificationIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "setupPasswordIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "twoFactorIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "twoFactorTrustIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    }
+  }
+}

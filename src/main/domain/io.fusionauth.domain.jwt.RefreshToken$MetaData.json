@@ -1,0 +1,21 @@
+{
+  "packageName" : "io.fusionauth.domain.jwt",
+  "type" : "MetaData",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "MetaData"
+    } ]
+  } ],
+  "fields" : {
+    "device" : {
+      "type" : "DeviceInfo"
+    },
+    "scopes" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    }
+  }
+}

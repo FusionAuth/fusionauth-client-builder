@@ -1,0 +1,43 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LoginPreventedResponse",
+  "description" : "/**\n * The summary of the action that is preventing login to be returned on the login response.\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "LoginPreventedResponse"
+    } ]
+  } ],
+  "fields" : {
+    "actionId" : {
+      "type" : "UUID"
+    },
+    "actionerUserId" : {
+      "type" : "UUID"
+    },
+    "expiry" : {
+      "type" : "ZonedDateTime"
+    },
+    "localizedName" : {
+      "type" : "String"
+    },
+    "localizedOption" : {
+      "type" : "String"
+    },
+    "localizedReason" : {
+      "type" : "String"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "option" : {
+      "type" : "String"
+    },
+    "reason" : {
+      "type" : "String"
+    },
+    "reasonCode" : {
+      "type" : "String"
+    }
+  }
+}

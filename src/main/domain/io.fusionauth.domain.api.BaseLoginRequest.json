@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "BaseLoginRequest",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "ipAddress" : {
+      "type" : "String"
+    },
+    "metaData" : {
+      "type" : "MetaData"
+    },
+    "noJWT" : {
+      "type" : "boolean"
+    }
+  }
+}

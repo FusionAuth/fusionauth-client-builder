@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain.api.email",
+  "type" : "SendResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "results" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      }, {
+        "type" : "EmailTemplateErrors"
+      } ]
+    }
+  }
+}

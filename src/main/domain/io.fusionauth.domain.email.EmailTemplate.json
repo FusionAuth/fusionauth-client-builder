@@ -1,0 +1,52 @@
+{
+  "packageName" : "io.fusionauth.domain.email",
+  "type" : "EmailTemplate",
+  "description" : "/**\n * Stores an email template used to send emails to users.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EmailTemplate"
+    } ]
+  } ],
+  "fields" : {
+    "defaultFromName" : {
+      "type" : "String"
+    },
+    "defaultHtmlTemplate" : {
+      "type" : "String"
+    },
+    "defaultSubject" : {
+      "type" : "String"
+    },
+    "defaultTextTemplate" : {
+      "type" : "String"
+    },
+    "fromEmail" : {
+      "type" : "String"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "localizedFromNames" : {
+      "type" : "LocalizedStrings"
+    },
+    "localizedHtmlTemplates" : {
+      "type" : "LocalizedStrings"
+    },
+    "localizedSubjects" : {
+      "type" : "LocalizedStrings"
+    },
+    "localizedTextTemplates" : {
+      "type" : "LocalizedStrings"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "localizations" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "Locale"
+      } ]
+    }
+  }
+}

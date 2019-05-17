@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "OAuthConfigurationResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "httpSessionMaxInactiveInterval" : {
+      "type" : "int"
+    },
+    "logoutURL" : {
+      "type" : "URI"
+    },
+    "oauthConfiguration" : {
+      "type" : "OAuth2Configuration"
+    }
+  }
+}

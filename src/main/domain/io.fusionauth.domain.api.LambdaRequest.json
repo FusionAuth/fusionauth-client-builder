@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LambdaRequest",
+  "description" : "/**\n * Lambda API request object.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "lambda" : {
+      "type" : "Lambda"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderOauth2Configuration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "IdentityProviderOauth2Configuration"
+    } ]
+  } ],
+  "fields" : {
+    "authorization_endpoint" : {
+      "type" : "URI"
+    },
+    "client_id" : {
+      "type" : "String"
+    },
+    "client_secret" : {
+      "type" : "String"
+    },
+    "issuer" : {
+      "type" : "URI"
+    },
+    "scope" : {
+      "type" : "String"
+    },
+    "token_endpoint" : {
+      "type" : "URI"
+    },
+    "userinfo_endpoint" : {
+      "type" : "URI"
+    }
+  }
+}

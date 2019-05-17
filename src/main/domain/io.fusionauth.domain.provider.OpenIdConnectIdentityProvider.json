@@ -1,0 +1,42 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "OpenIdConnectIdentityProvider",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "type" : "OpenIdConnectApplicationConfiguration"
+    } ]
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "OpenIdConnectIdentityProvider"
+    } ]
+  }, {
+    "type" : "DomainBasedIdentityProvider"
+  } ],
+  "fields" : {
+    "domains" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "buttonImageURL" : {
+      "type" : "URI"
+    },
+    "buttonText" : {
+      "type" : "String"
+    },
+    "lambdaConfiguration" : {
+      "type" : "LambdaConfiguration"
+    },
+    "oauth2" : {
+      "type" : "IdentityProviderOauth2Configuration"
+    },
+    "type" : {
+      "type" : "IdentityProviderType"
+    }
+  }
+}

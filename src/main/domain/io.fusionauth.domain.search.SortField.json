@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "SortField",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "missing" : {
+      "type" : "String"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "order" : {
+      "type" : "Sort"
+    }
+  }
+}

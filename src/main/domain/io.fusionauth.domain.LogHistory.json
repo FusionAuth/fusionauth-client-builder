@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "LogHistory",
+  "description" : "/**\n * A historical state of a user log event. Since events can be modified, this stores the historical state.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "historyItems" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "HistoryItem"
+      } ]
+    }
+  }
+}

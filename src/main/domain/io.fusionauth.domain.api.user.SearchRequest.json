@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "SearchRequest",
+  "description" : "/**\n * Search API request.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "search" : {
+      "type" : "UserSearchCriteria"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SAMLv2IdentityProvider",
+  "description" : "/**\n * SAML v2 identity provider configuration.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "type" : "SAMLv2ApplicationConfiguration"
+    } ]
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "SAMLv2IdentityProvider"
+    } ]
+  }, {
+    "type" : "DomainBasedIdentityProvider"
+  } ],
+  "fields" : {
+    "domains" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "buttonImageURL" : {
+      "type" : "URI"
+    },
+    "buttonText" : {
+      "type" : "String"
+    },
+    "emailClaim" : {
+      "type" : "String"
+    },
+    "idpEndpoint" : {
+      "type" : "URI"
+    },
+    "issuer" : {
+      "type" : "String"
+    },
+    "keyId" : {
+      "type" : "UUID"
+    },
+    "lambdaConfiguration" : {
+      "type" : "LambdaConfiguration"
+    },
+    "useNameIdForEmail" : {
+      "type" : "boolean"
+    },
+    "type" : {
+      "type" : "IdentityProviderType"
+    }
+  }
+}

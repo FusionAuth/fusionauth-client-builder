@@ -1,0 +1,18 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "MemberRequest",
+  "description" : "/**\n * Group Member Request\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "members" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      }, {
+        "type" : "List",
+        "typeArguments" : [ {
+          "type" : "GroupMember"
+        } ]
+      } ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "TwitterIdentityProvider",
+  "description" : "/**\n * Twitter social login provider.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "type" : "TwitterApplicationConfiguration"
+    } ]
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TwitterIdentityProvider"
+    } ]
+  } ],
+  "fields" : {
+    "buttonText" : {
+      "type" : "String"
+    },
+    "consumerKey" : {
+      "type" : "String"
+    },
+    "consumerSecret" : {
+      "type" : "String"
+    },
+    "type" : {
+      "type" : "IdentityProviderType"
+    }
+  }
+}

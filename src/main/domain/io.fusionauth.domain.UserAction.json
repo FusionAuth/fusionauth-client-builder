@@ -1,0 +1,69 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserAction",
+  "description" : "/**\n * An action that can be executed on a user (discipline or reward potentially).\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Comparable",
+    "typeArguments" : [ {
+      "type" : "UserAction"
+    } ]
+  }, {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserAction"
+    } ]
+  } ],
+  "fields" : {
+    "active" : {
+      "type" : "boolean"
+    },
+    "cancelEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "endEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "includeEmailInEventJSON" : {
+      "type" : "boolean"
+    },
+    "localizedNames" : {
+      "type" : "LocalizedStrings"
+    },
+    "modifyEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "options" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UserActionOption"
+      } ]
+    },
+    "preventLogin" : {
+      "type" : "boolean"
+    },
+    "sendEndEvent" : {
+      "type" : "boolean"
+    },
+    "startEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "temporal" : {
+      "type" : "boolean"
+    },
+    "transactionType" : {
+      "type" : "TransactionType"
+    },
+    "userEmailingEnabled" : {
+      "type" : "boolean"
+    },
+    "userNotificationsEnabled" : {
+      "type" : "boolean"
+    }
+  }
+}

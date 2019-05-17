@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ContentStatus",
+  "description" : "/**\n * Status for content like usernames, profile attributes, etc.\n *\n * @author Brian Pontarelli\n */\n",
+  "enum" : [ "ACTIVE", "PENDING", "REJECTED" ]
+}

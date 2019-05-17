@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserRegistrationCreateEvent",
+  "description" : "/**\n * Models the User Create Registration Event (and can be converted to JSON).\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserRegistrationCreateEvent"
+    } ]
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "registration" : {
+      "type" : "UserRegistration"
+    },
+    "user" : {
+      "type" : "User"
+    },
+    "type" : {
+      "type" : "EventType"
+    }
+  }
+}

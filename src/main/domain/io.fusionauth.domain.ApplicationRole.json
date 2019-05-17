@@ -1,0 +1,39 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationRole",
+  "description" : "/**\n * A role given to a user for a specific application.\n *\n * @author Seth Musselman\n */\n",
+  "implements" : [ {
+    "type" : "Comparable",
+    "typeArguments" : [ {
+      "type" : "ApplicationRole"
+    } ]
+  }, {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ApplicationRole"
+    } ]
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "description" : {
+      "type" : "String"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "isDefault" : {
+      "type" : "boolean"
+    },
+    "isSuperRole" : {
+      "type" : "boolean"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "display" : {
+      "type" : "String"
+    }
+  }
+}

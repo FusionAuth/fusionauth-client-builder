@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserBulkCreateEvent",
+  "description" : "/**\n * Models the User Bulk Create Event (and can be converted to JSON).\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserBulkCreateEvent"
+    } ]
+  } ],
+  "fields" : {
+    "users" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "User"
+      } ]
+    },
+    "type" : {
+      "type" : "EventType"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "RecentLoginResponse",
+  "description" : "/**\n * Response for the user login report.\n *\n * @author Seth Musselman\n */\n",
+  "fields" : {
+    "logins" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "DisplayableRawLogin"
+      } ]
+    }
+  }
+}

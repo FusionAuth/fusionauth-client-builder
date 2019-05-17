@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : { }
+}

@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "JWTConfiguration",
+  "description" : "/**\n * JWT Configuration. A JWT Configuration for an Application may not be active if it is using the global configuration, the configuration\n * may be <code>enabled = false</code>.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "JWTConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "accessTokenKeyId" : {
+      "type" : "UUID"
+    },
+    "idTokenKeyId" : {
+      "type" : "UUID"
+    },
+    "refreshTokenTimeToLiveInMinutes" : {
+      "type" : "int"
+    },
+    "timeToLiveInSeconds" : {
+      "type" : "int"
+    }
+  }
+}

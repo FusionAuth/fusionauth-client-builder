@@ -1,0 +1,31 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "FacebookApplicationConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProviderApplicationConfiguration"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "FacebookApplicationConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "appId" : {
+      "type" : "String"
+    },
+    "buttonText" : {
+      "type" : "String"
+    },
+    "client_secret" : {
+      "type" : "String"
+    },
+    "fields" : {
+      "type" : "String"
+    },
+    "permissions" : {
+      "type" : "String"
+    }
+  }
+}

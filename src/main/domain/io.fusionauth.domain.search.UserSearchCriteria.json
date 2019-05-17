@@ -1,0 +1,43 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "UserSearchCriteria",
+  "description" : "/**\n * This class is the user query. It provides a build pattern as well as public fields for use on forms and in actions.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserSearchCriteria"
+    } ]
+  } ],
+  "fields" : {
+    "email" : {
+      "type" : "String"
+    },
+    "fullName" : {
+      "type" : "String"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "ids" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
+    "queryString" : {
+      "type" : "String"
+    },
+    "sortFields" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "SortField"
+      } ]
+    },
+    "username" : {
+      "type" : "String"
+    }
+  }
+}

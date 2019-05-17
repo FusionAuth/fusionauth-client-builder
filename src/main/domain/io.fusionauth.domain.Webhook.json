@@ -1,0 +1,52 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Webhook",
+  "description" : "/**\n * A server where events are sent. This includes user action events and any other events sent by FusionAuth.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "Webhook"
+    } ]
+  } ],
+  "fields" : {
+    "applicationIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
+    "connectTimeout" : {
+      "type" : "int"
+    },
+    "data" : {
+      "type" : "WebhookData"
+    },
+    "description" : {
+      "type" : "String"
+    },
+    "global" : {
+      "type" : "boolean"
+    },
+    "headers" : {
+      "type" : "HTTPHeaders"
+    },
+    "httpAuthenticationPassword" : {
+      "type" : "String"
+    },
+    "httpAuthenticationUsername" : {
+      "type" : "String"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "readTimeout" : {
+      "type" : "int"
+    },
+    "sslCertificate" : {
+      "type" : "String"
+    },
+    "url" : {
+      "type" : "URI"
+    }
+  }
+}

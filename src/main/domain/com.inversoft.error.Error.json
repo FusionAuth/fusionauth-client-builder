@@ -1,0 +1,19 @@
+{
+  "packageName" : "com.inversoft.error",
+  "type" : "Error",
+  "description" : "/**\n * Defines an error.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "code" : {
+      "type" : "String"
+    },
+    "message" : {
+      "type" : "String"
+    },
+    "values" : {
+      "type" : "Array",
+      "typeArguments" : [ {
+        "type" : "Object"
+      } ]
+    }
+  }
+}

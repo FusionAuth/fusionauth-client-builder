@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "MemberDeleteRequest",
+  "description" : "/**\n * Group Member Delete Request\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "memberIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
+    "members" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      }, {
+        "type" : "List",
+        "typeArguments" : [ {
+          "type" : "UUID"
+        } ]
+      } ]
+    }
+  }
+}

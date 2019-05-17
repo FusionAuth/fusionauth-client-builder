@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.api.twoFactor",
+  "type" : "TwoFactorSendRequest",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TwoFactorSendRequest"
+    } ]
+  } ],
+  "fields" : {
+    "mobilePhone" : {
+      "type" : "String"
+    },
+    "secret" : {
+      "type" : "String"
+    },
+    "userId" : {
+      "type" : "UUID"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "JWKSResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "JWKSResponse"
+    } ]
+  } ],
+  "fields" : {
+    "keys" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "JSONWebKey"
+      } ]
+    }
+  }
+}

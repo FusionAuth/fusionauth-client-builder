@@ -1,0 +1,14 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookData",
+  "fields" : {
+    "eventsEnabled" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "EventType"
+      }, {
+        "type" : "boolean"
+      } ]
+    }
+  }
+}

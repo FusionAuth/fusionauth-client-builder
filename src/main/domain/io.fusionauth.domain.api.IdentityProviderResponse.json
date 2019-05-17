@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "IdentityProviderResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "identityProvider" : {
+      "type" : "BaseIdentityProvider",
+      "typeArguments" : [ {
+        "type" : "*"
+      } ]
+    },
+    "identityProviders" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "BaseIdentityProvider",
+        "typeArguments" : [ {
+          "type" : "*"
+        } ]
+      } ]
+    }
+  }
+}

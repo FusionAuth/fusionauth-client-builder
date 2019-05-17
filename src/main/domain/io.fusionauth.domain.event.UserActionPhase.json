@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserActionPhase",
+  "description" : "/**\n * The phases of a time-based user action.\n *\n * @author Brian Pontarelli\n */\n",
+  "enum" : [ "start", "modify", "cancel", "end" ]
+}

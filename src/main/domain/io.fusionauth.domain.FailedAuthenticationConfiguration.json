@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "FailedAuthenticationConfiguration",
+  "description" : "/**\n * Configuration for the behavior of failed login attempts. This helps us protect against brute force password attacks.\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "FailedAuthenticationConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "actionDuration" : {
+      "type" : "long"
+    },
+    "actionDurationUnit" : {
+      "type" : "ExpiryUnit"
+    },
+    "resetCountInSeconds" : {
+      "type" : "int"
+    },
+    "tooManyAttempts" : {
+      "type" : "int"
+    },
+    "userActionId" : {
+      "type" : "UUID"
+    }
+  }
+}

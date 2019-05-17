@@ -1,0 +1,8 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "AuthenticationTokenConfiguration",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "fields" : { }
+}

@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.api.email",
+  "type" : "EmailTemplateErrors",
+  "fields" : {
+    "parseErrors" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "String"
+      } ]
+    },
+    "renderErrors" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "String"
+      } ]
+    }
+  }
+}

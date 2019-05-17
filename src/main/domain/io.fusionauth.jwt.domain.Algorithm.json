@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.jwt.domain",
+  "type" : "Algorithm",
+  "description" : "/**\n * Available JSON Web Algorithms (JWA) as described in RFC 7518 available for this JWT implementation.\n *\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "RS256", "RS384", "RS512", "none" ]
+}

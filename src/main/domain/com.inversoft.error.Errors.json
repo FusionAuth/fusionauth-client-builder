@@ -1,0 +1,24 @@
+{
+  "packageName" : "com.inversoft.error",
+  "type" : "Errors",
+  "description" : "/**\n * Standard error domain object that can also be used as the response from an API call.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "fieldErrors" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "List",
+        "typeArguments" : [ {
+          "type" : "Error"
+        } ]
+      } ]
+    },
+    "generalErrors" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Error"
+      } ]
+    }
+  }
+}

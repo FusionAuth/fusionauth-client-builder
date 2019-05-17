@@ -1,0 +1,37 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "FacebookIdentityProvider",
+  "description" : "/**\n * Facebook social login provider.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "type" : "FacebookApplicationConfiguration"
+    } ]
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "FacebookIdentityProvider"
+    } ]
+  } ],
+  "fields" : {
+    "appId" : {
+      "type" : "String"
+    },
+    "buttonText" : {
+      "type" : "String"
+    },
+    "client_secret" : {
+      "type" : "String"
+    },
+    "fields" : {
+      "type" : "String"
+    },
+    "permissions" : {
+      "type" : "String"
+    },
+    "type" : {
+      "type" : "IdentityProviderType"
+    }
+  }
+}

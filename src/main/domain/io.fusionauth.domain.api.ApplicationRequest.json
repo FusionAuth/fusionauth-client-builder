@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ApplicationRequest",
+  "description" : "/**\n * The Application API request object.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "application" : {
+      "type" : "Application"
+    },
+    "role" : {
+      "type" : "ApplicationRole"
+    },
+    "webhookIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RegistrationConfiguration",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "RegistrationConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "birthDate" : {
+      "type" : "Requirable"
+    },
+    "confirmPassword" : {
+      "type" : "boolean"
+    },
+    "firstName" : {
+      "type" : "Requirable"
+    },
+    "fullName" : {
+      "type" : "Requirable"
+    },
+    "lastName" : {
+      "type" : "Requirable"
+    },
+    "loginIdType" : {
+      "type" : "LoginIdType"
+    },
+    "middleName" : {
+      "type" : "Requirable"
+    },
+    "mobilePhone" : {
+      "type" : "Requirable"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "ImportRequest",
+  "description" : "/**\n * Import request.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "encryptionScheme" : {
+      "type" : "String"
+    },
+    "factor" : {
+      "type" : "int"
+    },
+    "users" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "User"
+      } ]
+    },
+    "validateDbConstraints" : {
+      "type" : "boolean"
+    }
+  }
+}

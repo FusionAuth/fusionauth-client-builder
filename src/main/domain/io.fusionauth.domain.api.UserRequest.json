@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserRequest",
+  "description" : "/**\n * User API request object.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "sendSetPasswordEmail" : {
+      "type" : "boolean"
+    },
+    "skipVerification" : {
+      "type" : "boolean"
+    },
+    "user" : {
+      "type" : "User"
+    }
+  }
+}

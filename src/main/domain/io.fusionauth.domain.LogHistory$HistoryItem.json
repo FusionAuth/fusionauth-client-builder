@@ -1,0 +1,18 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "HistoryItem",
+  "fields" : {
+    "actionerUserId" : {
+      "type" : "UUID"
+    },
+    "comment" : {
+      "type" : "String"
+    },
+    "createInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "expiry" : {
+      "type" : "ZonedDateTime"
+    }
+  }
+}

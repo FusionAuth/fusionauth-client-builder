@@ -1,0 +1,5 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderType",
+  "enum" : [ "ExternalJWT", "OpenIDConnect", "Facebook", "Google", "Twitter", "SAMLv2" ]
+}

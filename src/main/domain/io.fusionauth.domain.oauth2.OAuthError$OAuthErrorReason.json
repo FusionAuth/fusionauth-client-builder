@@ -1,0 +1,5 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthErrorReason",
+  "enum" : [ "auth_code_not_found", "access_token_malformed", "access_token_expired", "access_token_unavailable_for_processing", "access_token_failed_processing", "refresh_token_not_found", "invalid_client_id", "invalid_user_credentials", "invalid_grant_type", "invalid_origin", "invalid_redirect_uri", "invalid_response_type", "grant_type_disabled", "missing_client_id", "missing_code", "missing_grant_type", "missing_redirect_uri", "missing_refresh_token", "missing_response_type", "missing_token", "login_prevented", "user_expired", "user_not_found", "client_authentication_missing", "invalid_client_authentication_scheme", "invalid_client_authentication", "client_id_mismatch", "unknown" ]
+}

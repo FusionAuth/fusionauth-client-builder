@@ -1,0 +1,18 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "PublicKeyResponse",
+  "description" : "/**\n * JWT Public Key Response Object\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "publicKey" : {
+      "type" : "String"
+    },
+    "publicKeys" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "String"
+      } ]
+    }
+  }
+}

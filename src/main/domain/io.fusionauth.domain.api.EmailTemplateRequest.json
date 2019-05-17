@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EmailTemplateRequest",
+  "description" : "/**\n * Email template request.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "emailTemplate" : {
+      "type" : "EmailTemplate"
+    }
+  }
+}

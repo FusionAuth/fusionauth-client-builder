@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "PreviewRequest",
+  "description" : "/**\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "emailTemplate" : {
+      "type" : "EmailTemplate"
+    },
+    "locale" : {
+      "type" : "Locale"
+    }
+  }
+}

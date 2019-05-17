@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "KeyResponse",
+  "description" : "/**\n * Key API response object.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "key" : {
+      "type" : "Key"
+    },
+    "keys" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Key"
+      } ]
+    }
+  }
+}

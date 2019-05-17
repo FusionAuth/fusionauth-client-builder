@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "TwitterApplicationConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProviderApplicationConfiguration"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TwitterApplicationConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "buttonText" : {
+      "type" : "String"
+    },
+    "consumerKey" : {
+      "type" : "String"
+    },
+    "consumerSecret" : {
+      "type" : "String"
+    }
+  }
+}

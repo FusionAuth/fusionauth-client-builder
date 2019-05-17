@@ -1,0 +1,46 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuth2Configuration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "OAuth2Configuration"
+    } ]
+  } ],
+  "fields" : {
+    "authorizedOriginURLs" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "URI"
+      } ]
+    },
+    "authorizedRedirectURLs" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "URI"
+      } ]
+    },
+    "clientId" : {
+      "type" : "String"
+    },
+    "clientSecret" : {
+      "type" : "String"
+    },
+    "enabledGrants" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "GrantType"
+      } ]
+    },
+    "generateRefreshTokens" : {
+      "type" : "boolean"
+    },
+    "logoutURL" : {
+      "type" : "URI"
+    },
+    "requireClientAuthentication" : {
+      "type" : "boolean"
+    }
+  }
+}

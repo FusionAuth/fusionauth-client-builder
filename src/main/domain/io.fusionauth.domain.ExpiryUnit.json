@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ExpiryUnit",
+  "description" : "/**\n * @author Brian Pontarelli\n */\n",
+  "enum" : [ "MINUTES", "HOURS", "DAYS", "WEEKS", "MONTHS", "YEARS" ]
+}

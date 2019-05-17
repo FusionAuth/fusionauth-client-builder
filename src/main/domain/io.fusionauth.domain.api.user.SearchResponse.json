@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "SearchResponse",
+  "description" : "/**\n * Search API response.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "total" : {
+      "type" : "long"
+    },
+    "users" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "User"
+      } ]
+    }
+  }
+}

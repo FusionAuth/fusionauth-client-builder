@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "EventRequest",
+  "description" : "/**\n * Container for the event information. This is the JSON that is sent from FusionAuth to webhooks.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "event" : {
+      "type" : "BaseEvent"
+    }
+  }
+}

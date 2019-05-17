@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "IssueResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "refreshToken" : {
+      "type" : "String"
+    },
+    "token" : {
+      "type" : "String"
+    }
+  }
+}

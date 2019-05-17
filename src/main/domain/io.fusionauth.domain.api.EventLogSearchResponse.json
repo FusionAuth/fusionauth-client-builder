@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EventLogSearchResponse",
+  "description" : "/**\n * Event log response.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "eventLogs" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "EventLog"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

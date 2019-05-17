@@ -1,0 +1,14 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "UserinfoResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "LinkedHashMap",
+    "typeArguments" : [ {
+      "type" : "String"
+    }, {
+      "type" : "Object"
+    } ]
+  } ],
+  "fields" : { }
+}

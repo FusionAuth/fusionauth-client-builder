@@ -1,0 +1,52 @@
+{
+  "packageName" : "io.fusionauth.domain.email",
+  "type" : "Email",
+  "description" : "/**\n * This class is an abstraction of a simple email message.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "Email"
+    } ]
+  } ],
+  "fields" : {
+    "attachments" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Attachment"
+      } ]
+    },
+    "bcc" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "EmailAddress"
+      } ]
+    },
+    "cc" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "EmailAddress"
+      } ]
+    },
+    "from" : {
+      "type" : "EmailAddress"
+    },
+    "html" : {
+      "type" : "String"
+    },
+    "replyTo" : {
+      "type" : "EmailAddress"
+    },
+    "subject" : {
+      "type" : "String"
+    },
+    "text" : {
+      "type" : "String"
+    },
+    "to" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "EmailAddress"
+      } ]
+    }
+  }
+}

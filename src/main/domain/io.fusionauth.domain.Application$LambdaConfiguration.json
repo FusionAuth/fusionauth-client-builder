@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "LambdaConfiguration",
+  "fields" : {
+    "accessTokenPopulateId" : {
+      "type" : "UUID"
+    },
+    "idTokenPopulateId" : {
+      "type" : "UUID"
+    },
+    "samlv2PopulateId" : {
+      "type" : "UUID"
+    }
+  }
+}

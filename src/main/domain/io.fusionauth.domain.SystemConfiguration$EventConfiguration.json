@@ -1,0 +1,20 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EventConfiguration",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EventConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "events" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "EventType"
+      }, {
+        "type" : "EventConfigurationData"
+      } ]
+    }
+  }
+}

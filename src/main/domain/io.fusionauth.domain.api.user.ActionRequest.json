@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "ActionRequest",
+  "description" : "/**\n * The user action request object.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "action" : {
+      "type" : "ActionData"
+    },
+    "broadcast" : {
+      "type" : "boolean"
+    }
+  }
+}

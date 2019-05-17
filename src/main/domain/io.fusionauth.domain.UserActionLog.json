@@ -1,0 +1,73 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserActionLog",
+  "description" : "/**\n * A log for an action that was taken on a User.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserActionLog"
+    } ]
+  } ],
+  "fields" : {
+    "actioneeUserId" : {
+      "type" : "UUID"
+    },
+    "actionerUserId" : {
+      "type" : "UUID"
+    },
+    "applicationIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
+    "comment" : {
+      "type" : "String"
+    },
+    "createInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "emailUserOnEnd" : {
+      "type" : "boolean"
+    },
+    "endEventSent" : {
+      "type" : "boolean"
+    },
+    "expiry" : {
+      "type" : "ZonedDateTime"
+    },
+    "history" : {
+      "type" : "LogHistory"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "localizedName" : {
+      "type" : "String"
+    },
+    "localizedOption" : {
+      "type" : "String"
+    },
+    "localizedReason" : {
+      "type" : "String"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "notifyUserOnEnd" : {
+      "type" : "boolean"
+    },
+    "option" : {
+      "type" : "String"
+    },
+    "reason" : {
+      "type" : "String"
+    },
+    "reasonCode" : {
+      "type" : "String"
+    },
+    "userActionId" : {
+      "type" : "UUID"
+    }
+  }
+}

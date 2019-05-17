@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain.api.report",
+  "type" : "Totals",
+  "fields" : {
+    "logins" : {
+      "type" : "long"
+    },
+    "registrations" : {
+      "type" : "long"
+    },
+    "totalRegistrations" : {
+      "type" : "long"
+    }
+  }
+}

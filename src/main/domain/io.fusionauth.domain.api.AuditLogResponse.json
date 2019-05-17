@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "AuditLogResponse",
+  "description" : "/**\n * Audit log response.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "auditLog" : {
+      "type" : "AuditLog"
+    }
+  }
+}

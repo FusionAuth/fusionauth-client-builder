@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "IntervalCount",
+  "description" : "/**\n * Counts for a period.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "count" : {
+      "type" : "int"
+    },
+    "decrementedCount" : {
+      "type" : "int"
+    },
+    "period" : {
+      "type" : "int"
+    }
+  }
+}

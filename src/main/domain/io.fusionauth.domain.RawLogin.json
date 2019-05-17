@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RawLogin",
+  "description" : "/**\n * Raw login information for each time a user logs into an application.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "instant" : {
+      "type" : "ZonedDateTime"
+    },
+    "ipAddress" : {
+      "type" : "String"
+    },
+    "userId" : {
+      "type" : "UUID"
+    }
+  }
+}

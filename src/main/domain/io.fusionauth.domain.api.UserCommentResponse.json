@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserCommentResponse",
+  "description" : "/**\n * User Comment Response\n *\n * @author Seth Musselman\n */\n",
+  "fields" : {
+    "userComment" : {
+      "type" : "UserComment"
+    },
+    "userComments" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UserComment"
+      } ]
+    }
+  }
+}

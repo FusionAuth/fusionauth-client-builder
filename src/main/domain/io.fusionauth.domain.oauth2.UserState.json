@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "UserState",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "Authenticated", "AuthenticatedNotRegistered" ]
+}

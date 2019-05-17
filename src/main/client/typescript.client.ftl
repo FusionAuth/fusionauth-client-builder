@@ -1,3 +1,4 @@
+[#--noinspection ALL--]
 [#import "_macros.ftl" as global/]
 /*
 * Copyright (c) 2019, FusionAuth, All Rights Reserved
@@ -15,8 +16,10 @@
 * language governing permissions and limitations under the License.
 */
 
-import {ClientResponse, IRESTClient, IRESTClientBuilder} from "./IRESTClient"
-import {DefaultRESTClientBuilder} from "./DefaultRESTClientBuilder";
+import IRESTClient from "./IRESTClient"
+import DefaultRESTClientBuilder from "./DefaultRESTClientBuilder";
+import IRESTClientBuilder from "./IRESTClientBuilder";
+import ClientResponse from "./ClientResponse";
 
 export class FusionAuthClient {
 
@@ -37,9 +40,10 @@ export class FusionAuthClient {
    * @param {${global.optional(param, "ts")}${global.convertType(param.javaType, "ts")}} ${param.name} ${param.comments?join("\n   *    ")}
     [/#if]
   [/#list]
+   * @returns {Promise<ClientResponse<${global.convertType(api.successResponse, "ts")}>>}
    */
   [#assign parameters = global.methodParameters(api, "ts")/]
-  ${api.methodName}(${parameters}): Promise<ClientResponse> {
+  ${api.methodName}(${parameters}): Promise<ClientResponse<${global.convertType(api.successResponse, "ts")}>> {
     return this.start()
   [#if api.method == "post" && !global.hasBodyParam(api.params![])]
         .withHeader('Content-Type', 'text/plain')
@@ -58,7 +62,7 @@ export class FusionAuthClient {
     [/#if]
   [/#list]
         .withMethod("${api.method?upper_case}")
-        .go();
+        .go<${global.convertType(api.successResponse, "ts")}>();
   }
 
 [/#list]
@@ -74,7 +78,39 @@ export class FusionAuthClient {
    * @returns {IRestClient} The RESTClient that will be used to call.
    * @private
    */
-  private start() {
+  private start(): IRESTClient {
     return this.clientBuilder.build(this.host).withAuthorization(this.apiKey);
   }
 }
+
+[#macro printType type]
+  [#if type.type??]
+    ${global.convertType(type.type, "ts")}[#if type.typeArguments?has_content]<[#list type.typeArguments as typeArgument][@printType typeArgument/][#sep], [/#sep][/#list]>[/#if][#if type.extends??] extends [#list type.extends as extends][@printType extends/][#sep], [/#sep][/#list][/#if][#t]
+  [#else]
+    ${type.name}[#if type.extends??] extends [#list type.extends as extends][@printType extends/][#sep], [/#sep][/#list][/#if][#t]
+  [/#if]
+[/#macro]
+
+[#-- @formatter:off --]
+[#list domain?sort_by("type") as d]
+[#if d.description??]${d.description}[/#if][#t]
+[#if d.fields??]
+[#-- Use interface here because classes require the correct order for declaration if it extends something --]
+[#-- Interfaces are also only for type checking so they can result in smaller compiled code --]
+export interface [@printType d/] {
+  [#list d.fields?keys?sort as fieldName]
+  [#assign field = d.fields[fieldName]/]
+  [#if field.description??]${field.description}[/#if][#t]
+  ${fieldName}?: [@printType field/];
+  [/#list]
+}
+[#else]
+export enum ${d.type} {
+  [#list d.enum as value]
+  ${value}[#sep],[/#sep]
+  [/#list]
+}
+[/#if]
+
+[/#list]
+[#-- @formatter:on --]

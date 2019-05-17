@@ -1,0 +1,33 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TwilioConfiguration",
+  "description" : "/**\n * Twilio Service Configuration.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TwilioConfiguration"
+    } ]
+  }, {
+    "type" : "Integration"
+  } ],
+  "fields" : {
+    "accountSID" : {
+      "type" : "String"
+    },
+    "authToken" : {
+      "type" : "String"
+    },
+    "fromPhoneNumber" : {
+      "type" : "String"
+    },
+    "messagingServiceSid" : {
+      "type" : "String"
+    },
+    "url" : {
+      "type" : "URI"
+    }
+  }
+}

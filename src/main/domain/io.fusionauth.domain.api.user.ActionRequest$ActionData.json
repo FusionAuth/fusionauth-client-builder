@@ -1,0 +1,60 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "ActionData",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ActionData"
+    } ]
+  } ],
+  "fields" : {
+    "action" : {
+      "type" : "UserAction"
+    },
+    "actionee" : {
+      "type" : "User"
+    },
+    "actioneeUserId" : {
+      "type" : "UUID"
+    },
+    "actioner" : {
+      "type" : "User"
+    },
+    "actionerUserId" : {
+      "type" : "UUID"
+    },
+    "applicationIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
+    "comment" : {
+      "type" : "String"
+    },
+    "emailUser" : {
+      "type" : "boolean"
+    },
+    "expiry" : {
+      "type" : "ZonedDateTime"
+    },
+    "log" : {
+      "type" : "UserActionLog"
+    },
+    "notifyUser" : {
+      "type" : "boolean"
+    },
+    "option" : {
+      "type" : "String"
+    },
+    "reason" : {
+      "type" : "UserActionReason"
+    },
+    "reasonId" : {
+      "type" : "UUID"
+    },
+    "userActionId" : {
+      "type" : "UUID"
+    }
+  }
+}

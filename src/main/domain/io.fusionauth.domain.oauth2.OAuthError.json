@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthError",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "OAuthResponse"
+  } ],
+  "fields" : {
+    "change_password_id" : {
+      "type" : "String"
+    },
+    "error_description" : {
+      "type" : "String"
+    },
+    "error" : {
+      "type" : "OAuthErrorType"
+    },
+    "error_uri" : {
+      "type" : "String"
+    },
+    "error_reason" : {
+      "type" : "OAuthErrorReason"
+    },
+    "two_factor_id" : {
+      "type" : "String"
+    }
+  }
+}

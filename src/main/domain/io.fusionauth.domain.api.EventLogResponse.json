@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EventLogResponse",
+  "description" : "/**\n * Event log response.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "eventLog" : {
+      "type" : "EventLog"
+    }
+  }
+}

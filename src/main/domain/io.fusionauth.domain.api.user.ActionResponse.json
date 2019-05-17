@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "ActionResponse",
+  "description" : "/**\n * The user action response object.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "action" : {
+      "type" : "UserActionLog"
+    },
+    "actions" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UserActionLog"
+      } ]
+    }
+  }
+}

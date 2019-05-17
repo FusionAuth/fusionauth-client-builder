@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api.cache",
+  "type" : "ReloadRequest",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "names" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    }
+  }
+}

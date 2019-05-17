@@ -1,0 +1,31 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserRegistrationUpdateEvent",
+  "description" : "/**\n * Models the User Update Registration Event (and can be converted to JSON).\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserRegistrationUpdateEvent"
+    } ]
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "original" : {
+      "type" : "UserRegistration"
+    },
+    "registration" : {
+      "type" : "UserRegistration"
+    },
+    "user" : {
+      "type" : "User"
+    },
+    "type" : {
+      "type" : "EventType"
+    }
+  }
+}

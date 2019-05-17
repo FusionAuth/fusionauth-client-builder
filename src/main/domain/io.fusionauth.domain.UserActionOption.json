@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserActionOption",
+  "description" : "/**\n * Models content user action options.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Comparable",
+    "typeArguments" : [ {
+      "type" : "UserActionOption"
+    } ]
+  } ],
+  "fields" : {
+    "localizedNames" : {
+      "type" : "LocalizedStrings"
+    },
+    "name" : {
+      "type" : "String"
+    }
+  }
+}

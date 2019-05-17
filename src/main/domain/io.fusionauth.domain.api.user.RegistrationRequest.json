@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "RegistrationRequest",
+  "description" : "/**\n * Registration API request object.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "generateAuthenticationToken" : {
+      "type" : "boolean"
+    },
+    "registration" : {
+      "type" : "UserRegistration"
+    },
+    "sendSetPasswordEmail" : {
+      "type" : "boolean"
+    },
+    "skipRegistrationVerification" : {
+      "type" : "boolean"
+    },
+    "skipVerification" : {
+      "type" : "boolean"
+    },
+    "user" : {
+      "type" : "User"
+    }
+  }
+}

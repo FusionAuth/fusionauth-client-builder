@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserActionReasonResponse",
+  "description" : "/**\n * User Action Reason API response object.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "userActionReason" : {
+      "type" : "UserActionReason"
+    },
+    "userActionReasons" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UserActionReason"
+      } ]
+    }
+  }
+}

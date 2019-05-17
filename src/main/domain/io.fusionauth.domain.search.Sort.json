@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "Sort",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "asc", "desc" ]
+}

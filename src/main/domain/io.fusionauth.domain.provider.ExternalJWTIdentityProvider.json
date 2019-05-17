@@ -1,0 +1,55 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "ExternalJWTIdentityProvider",
+  "description" : "/**\n * External JWT-only identity provider.\n *\n * @author Daniel DeGroff and Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "type" : "ExternalJWTApplicationConfiguration"
+    } ]
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ExternalJWTIdentityProvider"
+    } ]
+  }, {
+    "type" : "DomainBasedIdentityProvider"
+  } ],
+  "fields" : {
+    "claimMap" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "String"
+      } ]
+    },
+    "domains" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "keys" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "String"
+      } ]
+    },
+    "headerKeyParameter" : {
+      "type" : "String"
+    },
+    "oauth2" : {
+      "type" : "IdentityProviderOauth2Configuration"
+    },
+    "uniqueIdentityClaim" : {
+      "type" : "String"
+    },
+    "type" : {
+      "type" : "IdentityProviderType"
+    }
+  }
+}

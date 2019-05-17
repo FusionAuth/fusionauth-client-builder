@@ -1,0 +1,9 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "LambdaConfiguration",
+  "fields" : {
+    "reconcileId" : {
+      "type" : "UUID"
+    }
+  }
+}

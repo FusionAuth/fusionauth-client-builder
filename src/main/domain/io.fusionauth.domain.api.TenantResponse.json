@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TenantResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "tenant" : {
+      "type" : "Tenant"
+    },
+    "tenants" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Tenant"
+      } ]
+    }
+  }
+}

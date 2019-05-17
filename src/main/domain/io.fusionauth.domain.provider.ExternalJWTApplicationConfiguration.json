@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "ExternalJWTApplicationConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProviderApplicationConfiguration"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ExternalJWTApplicationConfiguration"
+    } ]
+  } ],
+  "fields" : { }
+}

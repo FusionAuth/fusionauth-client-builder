@@ -1,0 +1,21 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "LoginConfiguration",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "LoginConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "allowTokenRefresh" : {
+      "type" : "boolean"
+    },
+    "generateRefreshTokens" : {
+      "type" : "boolean"
+    },
+    "requireAuthentication" : {
+      "type" : "boolean"
+    }
+  }
+}
