@@ -83,6 +83,11 @@ target(name: "release", description: "Release", dependsOn: ["clean", "int"]) {
   release.release()
 }
 
+target(name: "build-angular", description: "Build the Angular Client Library") {
+  clientLibrary.
+      buildClient(template: "src/main/client/angular.client.ftl", outputFile: "../fusionauth-angular-client/src/FusionAuthClient.ts")
+}
+
 target(name: "build-java", description: "Build the Java Client Library") {
   clientLibrary.buildClient(template: "src/main/client/java.client.ftl",
                             outputFile: "../fusionauth-java-client/src/main/java/io/fusionauth/client/FusionAuthClient.java")
@@ -145,6 +150,7 @@ target(name: "build-android", description: "Build the Android Client Library") {
 
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
                                                                                   "build-php",
+//                                                                                  "build-angular",
                                                                                   "build-csharp",
                                                                                   "build-go",
                                                                                   "build-node",
