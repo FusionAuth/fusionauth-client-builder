@@ -1,0 +1,21 @@
+{
+  "uri": "/api/user/family/request",
+  "comments": [
+    "Sends out an email to a parent that they need to register and create a family or need to log in and add a child to their existing family."
+  ],
+  "method": "post",
+  "methodName": "sendFamilyRequestEmail",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "underscoreName": "request",
+      "comments": [
+        "The request object that contains the parent email."
+      ],
+      "type": "body",
+      "javaType": "FamilyEmailRequest"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "uri": "/api/consent",
+  "comments": [
+    "Retrieves all of the consent."
+  ],
+  "method": "get",
+  "methodName": "retrieveConsents",
+  "successResponse": "ConsentResponse",
+  "errorResponse": "Void"
+}

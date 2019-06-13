@@ -1,0 +1,28 @@
+{
+  "uri": "/api/user/family",
+  "comments": [
+    "Removes a user from the family with the given id."
+  ],
+  "method": "delete",
+  "methodName": "removeUserFromFamily",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "familyId",
+      "comments": [
+        "The id of the family to remove the user from."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "userId",
+      "comments": [
+        "The id of the user to remove from the family."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

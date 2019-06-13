@@ -1,0 +1,29 @@
+{
+  "uri": "/api/user/family",
+  "comments": [
+    "Creates a family with the user id in the request as the owner and sole member of the family. You can optionally specify an id for the",
+    "family, if not provided one will be generated."
+  ],
+  "method": "post",
+  "methodName": "createFamily",
+  "successResponse": "FamilyResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "familyId",
+      "comments": [
+        "(Optional) The id for the family. If not provided a secure random UUID will be generated."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to create the family."
+      ],
+      "type": "body",
+      "javaType": "FamilyRequest"
+    }
+  ]
+}

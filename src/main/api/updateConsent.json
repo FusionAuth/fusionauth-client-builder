@@ -1,0 +1,28 @@
+{
+  "uri": "/api/consent",
+  "comments": [
+    "Updates the consent with the given Id."
+  ],
+  "method": "put",
+  "methodName": "updateConsent",
+  "successResponse": "ConsentResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "consentId",
+      "comments": [
+        "The Id of the consent to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains all of the new consent information."
+      ],
+      "type": "body",
+      "javaType": "ConsentRequest"
+    }
+  ]
+}

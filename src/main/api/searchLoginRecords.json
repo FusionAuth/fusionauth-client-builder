@@ -1,0 +1,20 @@
+{
+  "uri": "/api/system/login-record/search",
+  "comments": [
+    "Searches the login records with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchLoginRecords",
+  "successResponse": "LoginRecordSearchResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "LoginRecordSearchRequest"
+    }
+  ]
+}

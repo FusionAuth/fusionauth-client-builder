@@ -1,0 +1,21 @@
+{
+  "uri": "/api/user/family/pending",
+  "comments": [
+    "Retrieves all of the children for the given parent email address."
+  ],
+  "method": "get",
+  "methodName": "retrievePendingChildren",
+  "successResponse": "PendingResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "parentEmail",
+      "comments": [
+        "The email of the parent."
+      ],
+      "type": "urlParameter",
+      "parameterName": "parentEmail",
+      "javaType": "String"
+    }
+  ]
+}

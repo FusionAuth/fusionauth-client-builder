@@ -17,8 +17,8 @@
 package io.fusionauth.client;
 
 import java.util.Collection;
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -40,11 +40,16 @@ import io.fusionauth.domain.api.AuditLogRequest;
 import io.fusionauth.domain.api.AuditLogResponse;
 import io.fusionauth.domain.api.AuditLogSearchRequest;
 import io.fusionauth.domain.api.AuditLogSearchResponse;
+import io.fusionauth.domain.api.ConsentRequest;
+import io.fusionauth.domain.api.ConsentResponse;
 import io.fusionauth.domain.api.EmailTemplateRequest;
 import io.fusionauth.domain.api.EmailTemplateResponse;
 import io.fusionauth.domain.api.EventLogResponse;
 import io.fusionauth.domain.api.EventLogSearchRequest;
 import io.fusionauth.domain.api.EventLogSearchResponse;
+import io.fusionauth.domain.api.FamilyEmailRequest;
+import io.fusionauth.domain.api.FamilyRequest;
+import io.fusionauth.domain.api.FamilyResponse;
 import io.fusionauth.domain.api.GroupRequest;
 import io.fusionauth.domain.api.GroupResponse;
 import io.fusionauth.domain.api.IdentityProviderRequest;
@@ -55,6 +60,8 @@ import io.fusionauth.domain.api.KeyRequest;
 import io.fusionauth.domain.api.KeyResponse;
 import io.fusionauth.domain.api.LambdaRequest;
 import io.fusionauth.domain.api.LambdaResponse;
+import io.fusionauth.domain.api.LoginRecordSearchRequest;
+import io.fusionauth.domain.api.LoginRecordSearchResponse;
 import io.fusionauth.domain.api.LoginRequest;
 import io.fusionauth.domain.api.LoginResponse;
 import io.fusionauth.domain.api.MemberDeleteRequest;
@@ -62,6 +69,7 @@ import io.fusionauth.domain.api.MemberRequest;
 import io.fusionauth.domain.api.MemberResponse;
 import io.fusionauth.domain.api.OAuthConfigurationResponse;
 import io.fusionauth.domain.api.PasswordValidationRulesResponse;
+import io.fusionauth.domain.api.PendingResponse;
 import io.fusionauth.domain.api.PreviewRequest;
 import io.fusionauth.domain.api.PreviewResponse;
 import io.fusionauth.domain.api.PublicKeyResponse;
@@ -76,6 +84,8 @@ import io.fusionauth.domain.api.UserActionRequest;
 import io.fusionauth.domain.api.UserActionResponse;
 import io.fusionauth.domain.api.UserCommentRequest;
 import io.fusionauth.domain.api.UserCommentResponse;
+import io.fusionauth.domain.api.UserConsentRequest;
+import io.fusionauth.domain.api.UserConsentResponse;
 import io.fusionauth.domain.api.UserDeleteRequest;
 import io.fusionauth.domain.api.UserRequest;
 import io.fusionauth.domain.api.UserResponse;
@@ -207,21 +217,22 @@ public class FusionAuthClient {
   @Deprecated
 [/#if]
   public ClientResponse<${api.successResponse}, ${api.errorResponse}> ${api.methodName}(${global.methodParameters(api, "java")}) {
-    return start(${api.successResponse}.${(api.successResponse == 'Void')?then('TYPE', 'class')}, ${api.errorResponse}.${(api.errorResponse == 'Void')?then('TYPE', 'class')}).uri("${api.uri}")
-                        [#if api.authorization??]
-                            .authorization(${api.authorization})
-                        [/#if]
-                        [#list api.params![] as param]
-                          [#if param.type == "urlSegment"]
-                            .urlSegment(${(param.constant?? && param.constant)?then(param.value, param.name)})
-                          [#elseif param.type == "urlParameter"]
-                            .urlParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, param.name)})
-                          [#elseif param.type == "body"]
-                            .bodyHandler(new JSONBodyHandler(${param.name}, objectMapper))
-                          [/#if]
-                        [/#list]
-                            .${api.method}()
-                            .go();
+    return start(${api.successResponse}.${(api.successResponse == 'Void')?then('TYPE', 'class')}, ${api.errorResponse}.${(api.errorResponse == 'Void')?then('TYPE', 'class')})
+        .uri("${api.uri}")
+    [#if api.authorization??]
+        .authorization(${api.authorization})
+    [/#if]
+    [#list api.params![] as param]
+      [#if param.type == "urlSegment"]
+        .urlSegment(${(param.constant?? && param.constant)?then(param.value, param.name)})
+      [#elseif param.type == "urlParameter"]
+        .urlParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, param.name)})
+      [#elseif param.type == "body"]
+        .bodyHandler(new JSONBodyHandler(${param.name}, objectMapper))
+      [/#if]
+    [/#list]
+        .${api.method}()
+        .go();
   }
 
 [/#list]

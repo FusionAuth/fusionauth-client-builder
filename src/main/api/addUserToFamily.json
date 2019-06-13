@@ -1,0 +1,28 @@
+{
+  "uri": "/api/user/family",
+  "comments": [
+    "Adds a user to an existing family. The family id must be specified."
+  ],
+  "method": "put",
+  "methodName": "addUserToFamily",
+  "successResponse": "FamilyResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "familyId",
+      "comments": [
+        "The id of the family."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to determine which user to add to the family."
+      ],
+      "type": "body",
+      "javaType": "FamilyRequest"
+    }
+  ]
+}

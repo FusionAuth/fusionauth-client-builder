@@ -1,0 +1,21 @@
+{
+  "uri": "/api/user/consent",
+  "comments": [
+    "Retrieves all of the consents for a User."
+  ],
+  "method": "get",
+  "methodName": "retrieveUserConsents",
+  "successResponse": "UserConsentResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "userId",
+      "comments": [
+        "The User's Id"
+      ],
+      "parameterName": "userId",
+      "type": "urlParameter",
+      "javaType": "UUID"
+    }
+  ]
+}
