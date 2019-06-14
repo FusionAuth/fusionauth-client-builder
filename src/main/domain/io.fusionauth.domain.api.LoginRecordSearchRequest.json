@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LoginRecordSearchRequest",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "retrieveTotal" : {
+      "type" : "boolean"
+    },
+    "search" : {
+      "type" : "LoginRecordSearchCriteria"
+    }
+  }
+}

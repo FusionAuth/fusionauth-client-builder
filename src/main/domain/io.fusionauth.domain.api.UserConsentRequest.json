@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserConsentRequest",
+  "description" : "/**\n * API response for User consent.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "userConsent" : {
+      "type" : "UserConsent"
+    }
+  }
+}

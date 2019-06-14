@@ -153,6 +153,7 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
 //                                                                                  "build-angular",
                                                                                   "build-csharp",
                                                                                   "build-go",
+                                                                                  "build-netcore",
                                                                                   "build-node",
                                                                                   "build-typescript",
                                                                                   "build-javascript",

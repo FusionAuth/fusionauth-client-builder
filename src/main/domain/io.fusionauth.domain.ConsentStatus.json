@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ConsentStatus",
+  "description" : "/**\n * Models a consent.\n *\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "Active", "Revoked" ]
+}

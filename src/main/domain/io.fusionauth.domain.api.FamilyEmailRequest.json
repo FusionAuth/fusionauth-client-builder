@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "FamilyEmailRequest",
+  "description" : "/**\n * API request for sending out family requests to parent's.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "parentEmail" : {
+      "type" : "String"
+    }
+  }
+}

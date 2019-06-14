@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "FamilyResponse",
+  "description" : "/**\n * API response for managing families and members.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "families" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Family"
+      } ]
+    },
+    "family" : {
+      "type" : "Family"
+    }
+  }
+}

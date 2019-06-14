@@ -61,7 +61,7 @@
       } ]
     },
     "timezone" : {
-      "type" : "String"
+      "type" : "ZoneId"
     },
     "userId" : {
       "type" : "UUID"

@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Family",
+  "description" : "/**\n * Models a family grouping of users.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "Family"
+    } ]
+  }, {
+    "type" : "_InternalJSONColumn"
+  } ],
+  "fields" : {
+    "members" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "FamilyMember"
+      } ]
+    },
+    "id" : {
+      "type" : "UUID"
+    }
+  }
+}

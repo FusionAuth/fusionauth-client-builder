@@ -1,0 +1,53 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserConsent",
+  "description" : "/**\n * Models a User consent.\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserConsent"
+    } ]
+  }, {
+    "type" : "_InternalJSONColumn"
+  } ],
+  "fields" : {
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "consent" : {
+      "type" : "Consent"
+    },
+    "consentId" : {
+      "type" : "UUID"
+    },
+    "giverUserId" : {
+      "type" : "UUID"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "status" : {
+      "type" : "ConsentStatus"
+    },
+    "userId" : {
+      "type" : "UUID"
+    },
+    "values" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    }
+  }
+}

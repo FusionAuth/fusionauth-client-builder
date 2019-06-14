@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "AuditLogExportRequest",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseExportRequest"
+  } ],
+  "fields" : {
+    "criteria" : {
+      "type" : "AuditLogSearchCriteria"
+    }
+  }
+}

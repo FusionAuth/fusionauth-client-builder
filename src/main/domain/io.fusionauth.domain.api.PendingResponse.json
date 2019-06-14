@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "PendingResponse",
+  "description" : "/**\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "users" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "User"
+      } ]
+    }
+  }
+}

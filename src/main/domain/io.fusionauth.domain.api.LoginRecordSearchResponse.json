@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LoginRecordSearchResponse",
+  "description" : "/**\n * A raw login record response\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "logins" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "DisplayableRawLogin"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

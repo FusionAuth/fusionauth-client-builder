@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "FamilyRequest",
+  "description" : "/**\n * API request for managing families and members.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "familyMember" : {
+      "type" : "FamilyMember"
+    }
+  }
+}

@@ -1,11 +1,11 @@
 {
   "packageName" : "io.fusionauth.domain",
-  "type" : "Tenant",
-  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "type" : "FamilyMember",
+  "description" : "/**\n * Models a single family member.\n *\n * @author Brian Pontarelli\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
-      "type" : "Tenant"
+      "type" : "FamilyMember"
     } ]
   }, {
     "type" : "_InternalJSONColumn"
@@ -19,17 +19,17 @@
         "type" : "Object"
       } ]
     },
-    "emailConfiguration" : {
-      "type" : "TenantEmailConfiguration"
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
     },
-    "familyConfiguration" : {
-      "type" : "FamilyConfiguration"
+    "owner" : {
+      "type" : "boolean"
     },
-    "id" : {
+    "role" : {
+      "type" : "FamilyRole"
+    },
+    "userId" : {
       "type" : "UUID"
-    },
-    "name" : {
-      "type" : "String"
     }
   }
 }

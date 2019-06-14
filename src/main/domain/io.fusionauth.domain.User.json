@@ -14,14 +14,6 @@
     "type" : "_InternalJSONColumn"
   } ],
   "fields" : {
-    "data" : {
-      "type" : "Map",
-      "typeArguments" : [ {
-        "type" : "String"
-      }, {
-        "type" : "Object"
-      } ]
-    },
     "preferredLanguages" : {
       "type" : "List",
       "typeArguments" : [ {
@@ -36,6 +28,14 @@
     },
     "cleanSpeakId" : {
       "type" : "UUID"
+    },
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
     },
     "email" : {
       "type" : "String"
@@ -67,11 +67,14 @@
     "mobilePhone" : {
       "type" : "String"
     },
+    "parentEmail" : {
+      "type" : "String"
+    },
     "tenantId" : {
       "type" : "UUID"
     },
     "timezone" : {
-      "type" : "String"
+      "type" : "ZoneId"
     },
     "twoFactorDelivery" : {
       "type" : "TwoFactorDelivery"

@@ -1,0 +1,50 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Consent",
+  "description" : "/**\n * Models a consent.\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "Consent"
+    } ]
+  }, {
+    "type" : "_InternalJSONColumn"
+  } ],
+  "fields" : {
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "consentEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "countryMinimumAgeForSelfConsent" : {
+      "type" : "LocalizedIntegers"
+    },
+    "defaultMinimumAgeForSelfConsent" : {
+      "type" : "int"
+    },
+    "emailPlus" : {
+      "type" : "EmailPlus"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "multipleValuesAllowed" : {
+      "type" : "boolean"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "values" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "LocalizedIntegers",
+  "description" : "/**\n * Models a set of localized Integers that can be stored as JSON.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "TreeMap",
+    "typeArguments" : [ {
+      "type" : "Locale"
+    }, {
+      "type" : "int"
+    } ]
+  } ],
+  "fields" : { }
+}

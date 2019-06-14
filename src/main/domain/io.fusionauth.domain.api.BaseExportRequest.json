@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "BaseExportRequest",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "dateTimeSecondsFormat" : {
+      "type" : "String"
+    },
+    "zoneId" : {
+      "type" : "ZoneId"
+    }
+  }
+}

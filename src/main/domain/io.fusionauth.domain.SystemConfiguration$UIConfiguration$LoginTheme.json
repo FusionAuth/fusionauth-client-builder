@@ -29,6 +29,12 @@
     "oauth2Authorize" : {
       "type" : "String"
     },
+    "oauth2ChildRegistrationNotAllowed" : {
+      "type" : "String"
+    },
+    "oauth2ChildRegistrationNotAllowedComplete" : {
+      "type" : "String"
+    },
     "oauth2CompleteRegistration" : {
       "type" : "String"
     },

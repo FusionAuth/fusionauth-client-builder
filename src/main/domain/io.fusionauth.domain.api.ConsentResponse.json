@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ConsentResponse",
+  "description" : "/**\n * API response for consent.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "consent" : {
+      "type" : "Consent"
+    },
+    "consents" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Consent"
+      } ]
+    }
+  }
+}

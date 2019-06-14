@@ -1,28 +1,28 @@
 {
   "packageName" : "io.fusionauth.domain.search",
-  "type" : "AuditLogSearchCriteria",
-  "description" : "/**\n * @author Brian Pontarelli\n */\n",
+  "type" : "LoginRecordSearchCriteria",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
     "type" : "BaseSearchCriteria"
   } ],
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
-      "type" : "AuditLogSearchCriteria"
+      "type" : "LoginRecordSearchCriteria"
     } ]
   } ],
   "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
     "end" : {
       "type" : "ZonedDateTime"
-    },
-    "message" : {
-      "type" : "String"
     },
     "start" : {
       "type" : "ZonedDateTime"
     },
-    "user" : {
-      "type" : "String"
+    "userId" : {
+      "type" : "UUID"
     }
   }
 }

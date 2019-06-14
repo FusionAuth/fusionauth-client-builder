@@ -11,6 +11,9 @@
     "type" : "_InternalJSONColumn"
   } ],
   "fields" : {
+    "auditLogConfiguration" : {
+      "type" : "AuditLogConfiguration"
+    },
     "cookieEncryptionIV" : {
       "type" : "String"
     },
@@ -48,6 +51,9 @@
     },
     "jwtConfiguration" : {
       "type" : "JWTConfiguration"
+    },
+    "loginRecordConfiguration" : {
+      "type" : "LoginRecordConfiguration"
     },
     "logoutURL" : {
       "type" : "URI"

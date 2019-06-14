@@ -17,6 +17,9 @@
     },
     "secret" : {
       "type" : "String"
+    },
+    "secretBase32Encoded" : {
+      "type" : "String"
     }
   }
 }

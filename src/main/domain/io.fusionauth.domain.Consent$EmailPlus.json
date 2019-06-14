@@ -1,0 +1,18 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EmailPlus",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "fields" : {
+    "emailTemplateId" : {
+      "type" : "UUID"
+    },
+    "maximumTimeToSendEmailInHours" : {
+      "type" : "int"
+    },
+    "minimumTimeToSendEmailInHours" : {
+      "type" : "int"
+    }
+  }
+}
