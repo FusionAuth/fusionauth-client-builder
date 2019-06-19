@@ -17,7 +17,7 @@
 import java.nio.file.Files
 import java.nio.file.Paths
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.7.1", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.7.2", licenses: ["ApacheV2_0"]) {
   workflow {
     standard()
   }
