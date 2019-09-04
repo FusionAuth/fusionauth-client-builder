@@ -109,7 +109,7 @@
       [#case "*"]
       [#case "Object"][#return "any"/]
       [#case "JSONWebKey"]
-      [#case "JWT"][#return "Map<string, any>"/]
+        [#case "JWT"][#return "object"/]
       [#case "Void"][#return "void"/]
       [#default]
         [#if type?starts_with("Collection")]
