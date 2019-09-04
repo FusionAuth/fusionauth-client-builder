@@ -31,6 +31,9 @@
         "type" : "D"
       } ]
     },
+    "debug" : {
+      "type" : "boolean"
+    },
     "id" : {
       "type" : "UUID"
     },
