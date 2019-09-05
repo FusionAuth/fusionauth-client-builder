@@ -1,0 +1,28 @@
+{
+  "uri": "/api/theme",
+  "comments": [
+    "Updates the theme with the given Id."
+  ],
+  "method": "put",
+  "methodName": "updateTheme",
+  "successResponse": "ThemeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "themeId",
+      "comments": [
+        "The Id of the theme to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains all of the new theme information."
+      ],
+      "type": "body",
+      "javaType": "ThemeRequest"
+    }
+  ]
+}

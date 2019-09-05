@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ThemeResponse",
+  "description" : "/**\n * Theme API response object.\n *\n * @author Trevor Smith\n */\n",
+  "fields" : {
+    "theme" : {
+      "type" : "Theme"
+    },
+    "themes" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Theme"
+      } ]
+    }
+  }
+}

@@ -6,7 +6,7 @@
   "method": "post",
   "methodName": "verifyEmail",
   "successResponse": "Void",
-  "errorResponse": "Void",
+  "errorResponse": "Errors",
   "params": [
     {
       "name": "verificationId",

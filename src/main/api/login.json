@@ -1,7 +1,9 @@
 {
   "uri": "/api/login",
   "comments": [
-    "Logs a user in."
+    "Authenticates a user to FusionAuth. ",
+    "",
+    "This API optionally requires an API key. See <code>Application.loginConfiguration.requireAuthentication</code>."
   ],
   "method": "post",
   "methodName": "login",

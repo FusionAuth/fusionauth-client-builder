@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ThemeRequest",
+  "description" : "/**\n * Theme API request object.\n *\n * @author Trevor Smith\n */\n",
+  "fields" : {
+    "sourceThemeId" : {
+      "type" : "UUID"
+    },
+    "theme" : {
+      "type" : "Theme"
+    }
+  }
+}

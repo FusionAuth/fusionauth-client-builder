@@ -11,9 +11,6 @@
     "headerColor" : {
       "type" : "String"
     },
-    "loginTheme" : {
-      "type" : "LoginTheme"
-    },
     "logoURL" : {
       "type" : "String"
     },

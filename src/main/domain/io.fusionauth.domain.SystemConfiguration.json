@@ -20,6 +20,9 @@
     "cookieEncryptionKey" : {
       "type" : "String"
     },
+    "corsConfiguration" : {
+      "type" : "CORSConfiguration"
+    },
     "data" : {
       "type" : "Map",
       "typeArguments" : [ {
@@ -28,47 +31,11 @@
         "type" : "Object"
       } ]
     },
-    "emailConfiguration" : {
-      "type" : "EmailConfiguration"
-    },
-    "eventConfiguration" : {
-      "type" : "EventConfiguration"
-    },
     "eventLogConfiguration" : {
       "type" : "EventLogConfiguration"
     },
-    "externalIdentifierConfiguration" : {
-      "type" : "ExternalIdentifierConfiguration"
-    },
-    "failedAuthenticationConfiguration" : {
-      "type" : "FailedAuthenticationConfiguration"
-    },
-    "httpSessionMaxInactiveInterval" : {
-      "type" : "int"
-    },
-    "issuer" : {
-      "type" : "String"
-    },
-    "jwtConfiguration" : {
-      "type" : "JWTConfiguration"
-    },
     "loginRecordConfiguration" : {
       "type" : "LoginRecordConfiguration"
-    },
-    "logoutURL" : {
-      "type" : "URI"
-    },
-    "maximumPasswordAge" : {
-      "type" : "MaximumPasswordAge"
-    },
-    "minimumPasswordAge" : {
-      "type" : "MinimumPasswordAge"
-    },
-    "passwordEncryptionConfiguration" : {
-      "type" : "PasswordEncryptionConfiguration"
-    },
-    "passwordValidationRules" : {
-      "type" : "PasswordValidationRules"
     },
     "reportTimezone" : {
       "type" : "ZoneId"

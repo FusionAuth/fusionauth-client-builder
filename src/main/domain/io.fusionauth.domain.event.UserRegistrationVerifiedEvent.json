@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserRegistrationVerifiedEvent",
+  "description" : "/**\n * Models the User Registration Verified Event (and can be converted to JSON).\n *\n * @author Trevor Smith\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserRegistrationVerifiedEvent"
+    } ]
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "registration" : {
+      "type" : "UserRegistration"
+    },
+    "user" : {
+      "type" : "User"
+    },
+    "type" : {
+      "type" : "EventType"
+    }
+  }
+}

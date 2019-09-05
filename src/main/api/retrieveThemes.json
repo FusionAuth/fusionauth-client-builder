@@ -1,0 +1,10 @@
+{
+  "uri": "/api/theme",
+  "comments": [
+    "Retrieves all of the themes."
+  ],
+  "method": "get",
+  "methodName": "retrieveThemes",
+  "successResponse": "ThemeResponse",
+  "errorResponse": "Void"
+}

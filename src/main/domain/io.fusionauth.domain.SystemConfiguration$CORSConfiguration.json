@@ -1,0 +1,45 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CORSConfiguration",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "CORSConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "allowCredentials" : {
+      "type" : "boolean"
+    },
+    "allowedHeaders" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "allowedMethods" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "HTTPMethod"
+      } ]
+    },
+    "allowedOrigins" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "URI"
+      } ]
+    },
+    "exposedHeaders" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "preflightMaxAgeInSeconds" : {
+      "type" : "int"
+    }
+  }
+}

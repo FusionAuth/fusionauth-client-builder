@@ -25,6 +25,9 @@
         "type" : "int"
       } ]
     },
+    "user" : {
+      "type" : "User"
+    },
     "userId" : {
       "type" : "UUID"
     },

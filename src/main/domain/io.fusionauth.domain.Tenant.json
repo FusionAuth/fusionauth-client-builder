@@ -19,17 +19,56 @@
         "type" : "Object"
       } ]
     },
+    "configured" : {
+      "type" : "boolean"
+    },
     "emailConfiguration" : {
-      "type" : "TenantEmailConfiguration"
+      "type" : "EmailConfiguration"
+    },
+    "eventConfiguration" : {
+      "type" : "EventConfiguration"
+    },
+    "externalIdentifierConfiguration" : {
+      "type" : "ExternalIdentifierConfiguration"
+    },
+    "failedAuthenticationConfiguration" : {
+      "type" : "FailedAuthenticationConfiguration"
     },
     "familyConfiguration" : {
       "type" : "FamilyConfiguration"
     },
+    "httpSessionMaxInactiveInterval" : {
+      "type" : "int"
+    },
     "id" : {
       "type" : "UUID"
     },
+    "issuer" : {
+      "type" : "String"
+    },
+    "jwtConfiguration" : {
+      "type" : "JWTConfiguration"
+    },
+    "logoutURL" : {
+      "type" : "URI"
+    },
+    "maximumPasswordAge" : {
+      "type" : "MaximumPasswordAge"
+    },
+    "minimumPasswordAge" : {
+      "type" : "MinimumPasswordAge"
+    },
     "name" : {
       "type" : "String"
+    },
+    "passwordEncryptionConfiguration" : {
+      "type" : "PasswordEncryptionConfiguration"
+    },
+    "passwordValidationRules" : {
+      "type" : "PasswordValidationRules"
+    },
+    "themeId" : {
+      "type" : "UUID"
     }
   }
 }

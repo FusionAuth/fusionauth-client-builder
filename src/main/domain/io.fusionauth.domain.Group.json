@@ -7,6 +7,8 @@
     "typeArguments" : [ {
       "type" : "Group"
     } ]
+  }, {
+    "type" : "Tenantable"
   } ],
   "fields" : {
     "data" : {

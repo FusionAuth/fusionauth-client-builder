@@ -9,6 +9,9 @@
     "id" : {
       "type" : "UUID"
     },
+    "tenantId" : {
+      "type" : "UUID"
+    },
     "type" : {
       "type" : "EventType"
     }

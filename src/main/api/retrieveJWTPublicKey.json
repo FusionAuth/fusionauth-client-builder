@@ -1,9 +1,7 @@
 {
   "uri": "/api/jwt/public-key",
   "comments": [
-    "Retrieves the Public Key configured for verifying JSON Web Tokens (JWT) by the key Id. If the key Id is provided a",
-    "single public key will be returned if one is found by that id. If the optional parameter key Id is not provided all",
-    "public keys will be returned."
+    "Retrieves the Public Key configured for verifying JSON Web Tokens (JWT) by the key Id (kid)."
   ],
   "method": "get",
   "methodName": "retrieveJWTPublicKey",
@@ -13,9 +11,10 @@
     {
       "name": "keyId",
       "comments": [
-        "(Optional) The Id of the public key."
+        "The Id of the public key (kid)."
       ],
-      "type": "urlSegment",
+      "type": "urlParameter",
+      "parameterName": "kid",
       "javaType": "String"
     }
   ]

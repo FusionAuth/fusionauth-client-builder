@@ -1,6 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "ExternalIdentifierConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
@@ -11,8 +12,14 @@
     "authorizationGrantIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "changePasswordIdGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
     "changePasswordIdTimeToLiveInSeconds" : {
       "type" : "int"
+    },
+    "emailVerificationIdGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
     },
     "emailVerificationIdTimeToLiveInSeconds" : {
       "type" : "int"
@@ -20,11 +27,20 @@
     "oneTimePasswordTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "passwordlessLoginGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
     "passwordlessLoginTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "registrationVerificationIdGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
     "registrationVerificationIdTimeToLiveInSeconds" : {
       "type" : "int"
+    },
+    "setupPasswordIdGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
     },
     "setupPasswordIdTimeToLiveInSeconds" : {
       "type" : "int"

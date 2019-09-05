@@ -1,0 +1,28 @@
+{
+  "uri": "/api/theme",
+  "comments": [
+    "Creates a Theme. You can optionally specify an Id for the theme, if not provided one will be generated."
+  ],
+  "method": "post",
+  "methodName": "createTheme",
+  "successResponse": "ThemeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "themeId",
+      "comments": [
+        "(Optional) The Id for the theme. If not provided a secure random UUID will be generated."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to create the theme."
+      ],
+      "type": "body",
+      "javaType": "ThemeRequest"
+    }
+  ]
+}

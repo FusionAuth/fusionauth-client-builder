@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserEmailVerifiedEvent",
+  "description" : "/**\n * Models the User Email Verify Event (and can be converted to JSON).\n *\n * @author Trevor Smith\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserEmailVerifiedEvent"
+    } ]
+  } ],
+  "fields" : {
+    "user" : {
+      "type" : "User"
+    },
+    "type" : {
+      "type" : "EventType"
+    }
+  }
+}

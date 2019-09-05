@@ -9,6 +9,8 @@
     } ]
   }, {
     "type" : "_InternalJSONColumn"
+  }, {
+    "type" : "Tenantable"
   } ],
   "fields" : {
     "active" : {

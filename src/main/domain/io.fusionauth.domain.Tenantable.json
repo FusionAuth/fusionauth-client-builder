@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Tenantable",
+  "description" : "/**\n * @author Brian Pontarelli\n */\n",
+  "fields" : { }
+}

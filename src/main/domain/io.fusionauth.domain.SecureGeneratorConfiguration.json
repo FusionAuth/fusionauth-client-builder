@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SecureGeneratorConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "length" : {
+      "type" : "int"
+    },
+    "type" : {
+      "type" : "SecureGeneratorType"
+    }
+  }
+}

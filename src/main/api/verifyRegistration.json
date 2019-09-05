@@ -6,7 +6,7 @@
   "method": "post",
   "methodName": "verifyRegistration",
   "successResponse": "Void",
-  "errorResponse": "Void",
+  "errorResponse": "Errors",
   "params": [
     {
       "name": "verificationId",

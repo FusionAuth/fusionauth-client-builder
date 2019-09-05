@@ -1,0 +1,43 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "FamilyConfiguration",
+  "description" : "/**\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "FamilyConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "allowChildRegistrations" : {
+      "type" : "boolean"
+    },
+    "confirmChildEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "deleteOrphanedAccounts" : {
+      "type" : "boolean"
+    },
+    "deleteOrphanedAccountsDays" : {
+      "type" : "int"
+    },
+    "familyRequestEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "maximumChildAge" : {
+      "type" : "int"
+    },
+    "minimumOwnerAge" : {
+      "type" : "int"
+    },
+    "parentEmailRequired" : {
+      "type" : "boolean"
+    },
+    "parentRegistrationEmailTemplateId" : {
+      "type" : "UUID"
+    }
+  }
+}

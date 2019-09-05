@@ -6,7 +6,7 @@
   "method": "put",
   "methodName": "resendRegistrationVerification",
   "successResponse": "VerifyRegistrationResponse",
-  "errorResponse": "Void",
+  "errorResponse": "Errors",
   "params": [
     {
       "name": "email",

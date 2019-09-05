@@ -2,5 +2,5 @@
   "packageName" : "io.fusionauth.domain.event",
   "type" : "EventType",
   "description" : "/**\n * Models the event types that FusionAuth produces.\n *\n * @author Brian Pontarelli\n */\n",
-  "enum" : [ "UserDelete", "UserCreate", "UserUpdate", "UserDeactivate", "UserBulkCreate", "UserReactivate", "UserAction", "JWTRefreshTokenRevoke", "JWTPublicKeyUpdate", "UserLoginSuccess", "UserLoginFailed", "UserRegistrationCreate", "UserRegistrationUpdate", "UserRegistrationDelete", "Test" ]
+  "enum" : [ "UserDelete", "UserCreate", "UserUpdate", "UserDeactivate", "UserBulkCreate", "UserReactivate", "UserAction", "JWTRefreshTokenRevoke", "JWTPublicKeyUpdate", "UserLoginSuccess", "UserLoginFailed", "UserRegistrationCreate", "UserRegistrationUpdate", "UserRegistrationDelete", "UserRegistrationVerified", "UserEmailVerified", "Test" ]
 }

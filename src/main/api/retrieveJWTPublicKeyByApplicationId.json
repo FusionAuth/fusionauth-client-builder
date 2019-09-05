@@ -1,0 +1,21 @@
+{
+  "uri": "/api/jwt/public-key",
+  "comments": [
+    "Retrieves the Public Key configured for verifying the JSON Web Tokens (JWT) issued by the Login API by the Application Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveJWTPublicKeyByApplicationId",
+  "successResponse": "PublicKeyResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "applicationId",
+      "comments": [
+        "The Id of the Application for which this key is used."
+      ],
+      "type": "urlParameter",
+      "parameterName": "applicationId",
+      "javaType": "String"
+    }
+  ]
+}

@@ -20,9 +20,9 @@
     },
     {
       "constant": true,
-      "name": "sendVerifyPasswordEmail",
+      "name": "sendVerifyEmail",
       "type": "urlParameter",
-      "parameterName": "sendVerifyPasswordEmail",
+      "parameterName": "sendVerifyEmail",
       "value": "false"
     }
   ]
