@@ -80,7 +80,8 @@ target(name: "int", description: "Releases a local integration build of the proj
   dependency.integrate()
 }
 
-target(name: "release", description: "Release", dependsOn: ["clean", "int"]) {
+// Intentionally not depending on 'int' - this should be run as a build step only.
+target(name: "release", description: "Release") {
   release.release()
 }
 
