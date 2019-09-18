@@ -45,7 +45,7 @@ class FusionAuthClient:
         """
         return self.start().uri('${api.uri}') \
           [#if api.authorization??]
-            .authorization(${api.authorization?replace("encodedJWT", "encoded_jwt")})
+            .authorization(${api.authorization?replace("encodedJWT", "encoded_jwt")}) \
           [/#if]
           [#list api.params![] as param]
             [#if param.type == "urlSegment"]
