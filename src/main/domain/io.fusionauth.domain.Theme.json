@@ -19,6 +19,9 @@
         "type" : "Object"
       } ]
     },
+    "defaultMessages" : {
+      "type" : "String"
+    },
     "id" : {
       "type" : "UUID"
     },
@@ -27,6 +30,9 @@
     },
     "lastUpdateInstant" : {
       "type" : "ZonedDateTime"
+    },
+    "localizedMessages" : {
+      "type" : "LocalizedStrings"
     },
     "name" : {
       "type" : "String"
