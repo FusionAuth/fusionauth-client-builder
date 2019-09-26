@@ -12,11 +12,20 @@
     "authorization_endpoint" : {
       "type" : "String"
     },
+    "backchannel_logout_supported" : {
+      "type" : "boolean"
+    },
     "claims_supported" : {
       "type" : "List",
       "typeArguments" : [ {
         "type" : "String"
       } ]
+    },
+    "end_session_endpoint" : {
+      "type" : "String"
+    },
+    "frontchannel_logout_supported" : {
+      "type" : "boolean"
     },
     "grant_types_supported" : {
       "type" : "List",

@@ -35,6 +35,9 @@
     "oauth2Error" : {
       "type" : "String"
     },
+    "oauth2Logout" : {
+      "type" : "String"
+    },
     "oauth2Passwordless" : {
       "type" : "String"
     },
