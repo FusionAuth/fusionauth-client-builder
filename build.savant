@@ -34,7 +34,7 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.1
 }
 
 // Plugins
-clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.3.0")
+clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.3.1-{integration}")
 dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:1.0.2")
 file = loadPlugin(id: "org.savantbuild.plugin:file:1.0.2")
 idea = loadPlugin(id: "org.savantbuild.plugin:idea:1.0.1")
@@ -43,7 +43,7 @@ release = loadPlugin(id: "org.savantbuild.plugin:release-git:1.0.0")
 // Plugin settings
 clientLibrary.settings.debug = false
 
-target(name: "generateDomain", description: "Generates all of the json files for the domain") {
+target(name: "generateDomain", description: "Generates all of the json files for the domain", dependsOn: ["clean"]) {
   clientLibrary.generateDomainJson(srcDir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "../../libraries/java-error/src/main/java", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "../fusionauth-jwt/src/main/java/io/fusionauth/jwt/domain/", outDir: "src/main/domain")
@@ -72,6 +72,9 @@ target(name: "build", description: "A full build with domain for every client", 
 }
 
 target(name: "clean", description: "Clean") {
+  file.delete {
+    fileSet(dir: "src/main/domain")
+  }
   file.prune(dir: "build/zips")
 }
 
@@ -110,6 +113,9 @@ target(name: "build-csharp", description: "Build the C# Client Library") {
 target(name: "build-netcore", description: "Build the C# .netCore Client Library") {
   clientLibrary.buildClient(template: "src/main/client/netcore.client.ftl",
                             outputFile: "../fusionauth-netcore-client/fusionauth-netcore-client/src/io/fusionauth/FusionAuthClient.cs")
+  file.delete {
+    fileSet(dir: "../fusionauth-netcore-client/fusionauth-netcore-client/domain")
+  }
   clientLibrary.buildDomain(template: "src/main/client/netcore.domain.ftl",
                             outputDir: "../fusionauth-netcore-client/fusionauth-netcore-client/domain",
                             extension: "cs")

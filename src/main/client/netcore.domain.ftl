@@ -22,6 +22,18 @@
   [#return value?replace("\\b(?=implicit)|\\b(?=event)", "@", "ir")]
 [/#function]
 
+[#function needsConverter domain_item]
+    [#if domain_item.type == "IdentityProviderType"]
+        [#return false]
+    [/#if]
+    [#list domain_item.enum as enum]
+        [#if enum?is_hash && enum.args?? && enum.args?size > 0]
+            [#return true]
+        [/#if]
+    [/#list]
+    [#return false]
+[/#function]
+
 [#macro printType type isDeclaration=false isTypeArgument=false]
   [#if type.type??]
     [#local convertedType = global.convertType(type.type, "csharp")/]
@@ -53,6 +65,10 @@
 using ${replaceKeywords(package)};
   [/#if]
 [/#list]
+[#if domain_item.enum?? && needsConverter(domain_item)]
+[#--using Newtonsoft.Json;--]
+  using System.Runtime.Serialization;
+[/#if]
 [#if types_in_use?contains("BaseIdentityProvider")]
 using io.fusionauth.converters.helpers;
 [/#if]
@@ -60,8 +76,8 @@ using System.Collections.Generic;
 using System;
 
 namespace ${replaceKeywords(domain_item.packageName)} {
-  [#if domain_item.description??]
 
+  [#if domain_item.description??]
   ${domain_item.description?replace("\n(?!$)", "\n  ", "r")}[#rt]
   [/#if]
   [#if domain_item.fields??]
@@ -95,9 +111,18 @@ namespace ${replaceKeywords(domain_item.packageName)} {
     [/#if]
   }
   [#else]
+      [#assign useCustomNames = needsConverter(domain_item)]
   public enum ${domain_item.type} {
     [#list domain_item.enum as value]
-    ${replaceKeywords(value)}[#sep], [/#sep]
+        [#if value?is_string]
+            ${replaceKeywords(value)}[#rt/]
+        [#else]
+            [#if useCustomNames]
+              [EnumMember(Value = "${(value.args![])[0]!'FAIL'}")]
+            [/#if]
+            ${replaceKeywords(value.name)}[#rt/]
+        [/#if]
+        [#lt][#sep], [/#sep]
     [/#list]
   }
   [/#if]

@@ -46,9 +46,6 @@
     },
     "useNameIdForEmail" : {
       "type" : "boolean"
-    },
-    "type" : {
-      "type" : "IdentityProviderType"
     }
   }
 }

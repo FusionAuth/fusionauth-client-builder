@@ -14,9 +14,6 @@
   "fields" : {
     "user" : {
       "type" : "User"
-    },
-    "type" : {
-      "type" : "EventType"
     }
   }
 }

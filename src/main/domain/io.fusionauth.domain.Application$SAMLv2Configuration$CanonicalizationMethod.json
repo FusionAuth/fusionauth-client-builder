@@ -1,5 +1,17 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "CanonicalizationMethod",
-  "enum" : [ "exclusive", "exclusive_with_comments", "inclusive", "inclusive_with_comments" ]
+  "enum" : [ {
+    "name" : "exclusive",
+    "args" : [ ]
+  }, {
+    "name" : "exclusive_with_comments",
+    "args" : [ ]
+  }, {
+    "name" : "inclusive",
+    "args" : [ ]
+  }, {
+    "name" : "inclusive_with_comments",
+    "args" : [ ]
+  } ]
 }

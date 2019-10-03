@@ -14,9 +14,6 @@
   "fields" : {
     "message" : {
       "type" : "String"
-    },
-    "type" : {
-      "type" : "EventType"
     }
   }
 }

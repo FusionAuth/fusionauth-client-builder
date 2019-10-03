@@ -29,9 +29,6 @@
     },
     "permissions" : {
       "type" : "String"
-    },
-    "type" : {
-      "type" : "IdentityProviderType"
     }
   }
 }

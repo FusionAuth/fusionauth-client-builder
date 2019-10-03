@@ -30,9 +30,6 @@
     },
     "userId" : {
       "type" : "UUID"
-    },
-    "type" : {
-      "type" : "EventType"
     }
   }
 }

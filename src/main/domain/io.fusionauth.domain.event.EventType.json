@@ -2,5 +2,56 @@
   "packageName" : "io.fusionauth.domain.event",
   "type" : "EventType",
   "description" : "/**\n * Models the event types that FusionAuth produces.\n *\n * @author Brian Pontarelli\n */\n",
-  "enum" : [ "UserDelete", "UserCreate", "UserUpdate", "UserDeactivate", "UserBulkCreate", "UserReactivate", "UserAction", "JWTRefreshTokenRevoke", "JWTPublicKeyUpdate", "UserLoginSuccess", "UserLoginFailed", "UserRegistrationCreate", "UserRegistrationUpdate", "UserRegistrationDelete", "UserRegistrationVerified", "UserEmailVerified", "Test" ]
+  "enum" : [ {
+    "name" : "UserDelete",
+    "args" : [ "user.delete" ]
+  }, {
+    "name" : "UserCreate",
+    "args" : [ "user.create" ]
+  }, {
+    "name" : "UserUpdate",
+    "args" : [ "user.update" ]
+  }, {
+    "name" : "UserDeactivate",
+    "args" : [ "user.deactivate" ]
+  }, {
+    "name" : "UserBulkCreate",
+    "args" : [ "user.bulk.create" ]
+  }, {
+    "name" : "UserReactivate",
+    "args" : [ "user.reactivate" ]
+  }, {
+    "name" : "UserAction",
+    "args" : [ "user.action" ]
+  }, {
+    "name" : "JWTRefreshTokenRevoke",
+    "args" : [ "jwt.refresh-token.revoke" ]
+  }, {
+    "name" : "JWTPublicKeyUpdate",
+    "args" : [ "jwt.public-key.update" ]
+  }, {
+    "name" : "UserLoginSuccess",
+    "args" : [ "user.login.success" ]
+  }, {
+    "name" : "UserLoginFailed",
+    "args" : [ "user.login.failed" ]
+  }, {
+    "name" : "UserRegistrationCreate",
+    "args" : [ "user.registration.create" ]
+  }, {
+    "name" : "UserRegistrationUpdate",
+    "args" : [ "user.registration.update" ]
+  }, {
+    "name" : "UserRegistrationDelete",
+    "args" : [ "user.registration.delete" ]
+  }, {
+    "name" : "UserRegistrationVerified",
+    "args" : [ "user.registration.verified" ]
+  }, {
+    "name" : "UserEmailVerified",
+    "args" : [ "user.email.verified" ]
+  }, {
+    "name" : "Test",
+    "args" : [ "test" ]
+  } ]
 }

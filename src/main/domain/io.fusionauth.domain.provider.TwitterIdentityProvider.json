@@ -23,9 +23,6 @@
     },
     "consumerSecret" : {
       "type" : "String"
-    },
-    "type" : {
-      "type" : "IdentityProviderType"
     }
   }
 }

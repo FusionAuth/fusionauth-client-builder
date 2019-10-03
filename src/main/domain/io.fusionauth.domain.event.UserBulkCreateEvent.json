@@ -17,9 +17,6 @@
       "typeArguments" : [ {
         "type" : "User"
       } ]
-    },
-    "type" : {
-      "type" : "EventType"
     }
   }
 }

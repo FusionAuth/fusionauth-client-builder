@@ -1,5 +1,32 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "KeyAlgorithm",
-  "enum" : [ "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "RS256", "RS384", "RS512" ]
+  "enum" : [ {
+    "name" : "ES256",
+    "args" : [ "SHA256withECDSA" ]
+  }, {
+    "name" : "ES384",
+    "args" : [ "SHA384withECDSA" ]
+  }, {
+    "name" : "ES512",
+    "args" : [ "SHA512withECDSA" ]
+  }, {
+    "name" : "HS256",
+    "args" : [ "HmacSHA256" ]
+  }, {
+    "name" : "HS384",
+    "args" : [ "HmacSHA384" ]
+  }, {
+    "name" : "HS512",
+    "args" : [ "HmacSHA512" ]
+  }, {
+    "name" : "RS256",
+    "args" : [ "SHA256withRSA" ]
+  }, {
+    "name" : "RS384",
+    "args" : [ "SHA384withRSA" ]
+  }, {
+    "name" : "RS512",
+    "args" : [ "SHA512withRSA" ]
+  } ]
 }

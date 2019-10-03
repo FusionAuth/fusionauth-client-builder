@@ -26,9 +26,6 @@
     },
     "scope" : {
       "type" : "String"
-    },
-    "type" : {
-      "type" : "IdentityProviderType"
     }
   }
 }

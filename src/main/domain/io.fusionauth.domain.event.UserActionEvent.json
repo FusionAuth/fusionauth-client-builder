@@ -70,9 +70,6 @@
     },
     "reasonCode" : {
       "type" : "String"
-    },
-    "type" : {
-      "type" : "EventType"
     }
   }
 }

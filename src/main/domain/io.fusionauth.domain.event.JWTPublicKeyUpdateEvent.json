@@ -19,9 +19,6 @@
       "typeArguments" : [ {
         "type" : "UUID"
       } ]
-    },
-    "type" : {
-      "type" : "EventType"
     }
   }
 }

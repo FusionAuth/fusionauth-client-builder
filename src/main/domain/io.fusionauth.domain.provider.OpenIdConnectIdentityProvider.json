@@ -34,9 +34,6 @@
     },
     "oauth2" : {
       "type" : "IdentityProviderOauth2Configuration"
-    },
-    "type" : {
-      "type" : "IdentityProviderType"
     }
   }
 }

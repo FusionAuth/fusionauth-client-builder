@@ -47,9 +47,6 @@
     },
     "uniqueIdentityClaim" : {
       "type" : "String"
-    },
-    "type" : {
-      "type" : "IdentityProviderType"
     }
   }
 }
