@@ -2,7 +2,10 @@
 
 
 ## Credits
-* Thanks to [@tjpeden](https://github.com/tjpeden) for your excellent contributions!
+Thanks to the following folks for your most excellent contributions!
+* [@medhir](https://github.com/medhir) 
+* [@tjpeden](https://github.com/tjpeden) 
+
 
 ## Build a client library
 
