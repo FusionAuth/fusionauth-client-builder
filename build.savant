@@ -43,7 +43,11 @@ release = loadPlugin(id: "org.savantbuild.plugin:release-git:1.0.0")
 // Plugin settings
 clientLibrary.settings.debug = false
 
-target(name: "generateDomain", description: "Generates all of the json files for the domain", dependsOn: ["clean"]) {
+target(name: "generateDomain", description: "Generates all of the json files for the domain") {
+  file.delete {
+    fileSet(dir: "src/main/domain")
+  }
+
   clientLibrary.generateDomainJson(srcDir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "../../libraries/java-error/src/main/java", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "../fusionauth-jwt/src/main/java/io/fusionauth/jwt/domain/", outDir: "src/main/domain")
@@ -72,9 +76,6 @@ target(name: "build", description: "A full build with domain for every client", 
 }
 
 target(name: "clean", description: "Clean") {
-  file.delete {
-    fileSet(dir: "src/main/domain")
-  }
   file.prune(dir: "build/zips")
 }
 
