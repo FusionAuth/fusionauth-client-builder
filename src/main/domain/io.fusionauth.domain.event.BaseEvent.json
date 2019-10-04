@@ -11,9 +11,6 @@
     },
     "tenantId" : {
       "type" : "UUID"
-    },
-    "type" : {
-      "type" : "EventType"
     }
   }
 }

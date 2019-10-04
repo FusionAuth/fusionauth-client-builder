@@ -41,12 +41,6 @@
     },
     "name" : {
       "type" : "String"
-    },
-    "localizations" : {
-      "type" : "Set",
-      "typeArguments" : [ {
-        "type" : "Locale"
-      } ]
     }
   }
 }

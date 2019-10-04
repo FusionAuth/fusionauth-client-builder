@@ -14,9 +14,6 @@
     } ]
   } ],
   "fields" : {
-    "applicationId" : {
-      "type" : "UUID"
-    },
     "description" : {
       "type" : "String"
     },
@@ -30,9 +27,6 @@
       "type" : "boolean"
     },
     "name" : {
-      "type" : "String"
-    },
-    "display" : {
       "type" : "String"
     }
   }

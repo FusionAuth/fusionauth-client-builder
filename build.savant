@@ -34,7 +34,7 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.1
 }
 
 // Plugins
-clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.3.1-{integration}")
+clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.3.1")
 dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:1.0.2")
 file = loadPlugin(id: "org.savantbuild.plugin:file:1.0.2")
 idea = loadPlugin(id: "org.savantbuild.plugin:idea:1.0.1")
@@ -61,7 +61,6 @@ target(name: "generateDomain", description: "Generates all of the json files for
    "io.fusionauth.domain.internal.ReflectionTools.json",
    "io.fusionauth.jwt.domain.Buildable.json",
    "io.fusionauth.jwt.domain.Header.json",
-   "io.fusionauth.jwt.domain.JWT.json",
    "io.fusionauth.jwt.domain.KeyPair.json",
    "io.fusionauth.jwt.domain.KeyType.json",
    "io.fusionauth.jwt.domain.Type.json"]

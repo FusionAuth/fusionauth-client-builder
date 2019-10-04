@@ -54,8 +54,9 @@ using ${replaceKeywords(package)};
   [/#if]
 [/#list]
 [#if domain_item.enum?? && global.needsConverter(domain_item)]
-[#--using Newtonsoft.Json;--]
-  using System.Runtime.Serialization;
+using System.Runtime.Serialization;
+[#elseif global.hasAnySetter(domain_item)]
+using Newtonsoft.Json;
 [/#if]
 [#if types_in_use?contains("BaseIdentityProvider")]
 using io.fusionauth.converters.helpers;
@@ -71,6 +72,7 @@ namespace ${replaceKeywords(domain_item.packageName)} {
   [#if domain_item.fields??]
   public class [@printType domain_item true/] {
     [#list domain_item.fields?keys as fieldName]
+
       [#assign field = domain_item.fields[fieldName]]
       [#if field.description??]
     ${field.description}[#rt]
@@ -88,7 +90,17 @@ namespace ${replaceKeywords(domain_item.packageName)} {
     public List<IdentityProvider> ${replaceKeywords(fieldName)};
         [#continue/]
       [/#if]
+      [#if field.anySetter?? && field.anySetter]
+    public object this[string claim] {
+      get => ${replaceKeywords(fieldName)}[claim];
+      set => ${replaceKeywords(fieldName)}[claim] = value;
+    }
+
+    [JsonExtensionData]
+    private readonly [@printType field/] ${replaceKeywords(fieldName)} = new [@printType field/]();
+      [#else]
     public [@printType field/] ${replaceKeywords(fieldName)};
+      [/#if]
     [/#list]
     [#if domain_item.type != "BaseIdentityProvider"]
 

@@ -8,12 +8,6 @@
     },
     "message" : {
       "type" : "String"
-    },
-    "values" : {
-      "type" : "Array",
-      "typeArguments" : [ {
-        "type" : "Object"
-      } ]
     }
   }
 }

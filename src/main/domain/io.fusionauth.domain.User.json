@@ -93,20 +93,11 @@
     "usernameStatus" : {
       "type" : "ContentStatus"
     },
-    "age" : {
-      "type" : "int"
-    },
-    "login" : {
-      "type" : "String"
-    },
     "memberships" : {
       "type" : "List",
       "typeArguments" : [ {
         "type" : "GroupMember"
       } ]
-    },
-    "name" : {
-      "type" : "String"
     },
     "registrations" : {
       "type" : "List",

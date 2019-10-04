@@ -9,9 +9,6 @@
     } ]
   } ],
   "fields" : {
-    "application" : {
-      "type" : "Application"
-    },
     "applicationId" : {
       "type" : "UUID"
     },

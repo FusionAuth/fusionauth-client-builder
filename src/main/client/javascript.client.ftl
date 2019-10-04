@@ -112,7 +112,9 @@ FusionAuthClient.prototype = {
   [#if field.description??]
  * ${field.description}
   [/#if]
+  [#if !field.anySetter?? || !field.anySetter]
  * @property {[@printType field/]} [${fieldName}]
+  [/#if]
   [/#list]
  */
 

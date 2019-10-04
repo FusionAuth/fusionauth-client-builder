@@ -1,0 +1,37 @@
+{
+  "packageName" : "io.fusionauth.jwt.domain",
+  "type" : "JWT",
+  "description" : "/**\n * JSON Web Token (JWT) as defined by RFC 7519.\n * <pre>\n * From RFC 7519 Section 1. Introduction:\n *    The suggested pronunciation of JWT is the same as the English word \"jot\".\n * </pre>\n * The JWT is not Thread-Safe and should not be re-used.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "aud" : {
+      "type" : "Object"
+    },
+    "exp" : {
+      "type" : "ZonedDateTime"
+    },
+    "iat" : {
+      "type" : "ZonedDateTime"
+    },
+    "iss" : {
+      "type" : "String"
+    },
+    "nbf" : {
+      "type" : "ZonedDateTime"
+    },
+    "otherClaims" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ],
+      "anySetter" : true
+    },
+    "sub" : {
+      "type" : "String"
+    },
+    "jti" : {
+      "type" : "String"
+    }
+  }
+}

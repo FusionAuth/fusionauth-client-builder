@@ -136,7 +136,11 @@ export interface [@printType d/] {
   [#list d.fields?keys?sort as fieldName]
   [#assign field = d.fields[fieldName]/]
   [#if field.description??]${field.description}[/#if][#t]
+  [#if field.anySetter?? && field.anySetter]
+  [${fieldName}: string]: any; // Any other fields
+  [#else]
   ${fieldName}?: [@printType field/];
+  [/#if]
   [/#list]
 }
 [#else]

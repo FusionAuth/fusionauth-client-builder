@@ -11,17 +11,11 @@
     } ]
   } ],
   "fields" : {
-    "clientId" : {
-      "type" : "String"
-    },
     "expires_in" : {
       "type" : "int"
     },
     "id_token" : {
       "type" : "String"
-    },
-    "redirectURI" : {
-      "type" : "URI"
     },
     "refresh_token" : {
       "type" : "String"

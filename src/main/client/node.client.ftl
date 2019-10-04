@@ -152,10 +152,12 @@ FusionAuthClient.prototype = {
  *
   [#list d.fields?keys?sort as fieldName]
     [#assign field = d.fields[fieldName]/]
-  [#if field.description??]
+    [#if field.description??]
  * ${field.description}
-  [/#if]
+    [/#if]
+    [#if !field.anySetter?? || !field.anySetter]
  * @property {[@printType field/]} [${fieldName}]
+    [/#if]
   [/#list]
  */
 

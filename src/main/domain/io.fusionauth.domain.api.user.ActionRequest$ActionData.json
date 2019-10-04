@@ -8,17 +8,8 @@
     } ]
   } ],
   "fields" : {
-    "action" : {
-      "type" : "UserAction"
-    },
-    "actionee" : {
-      "type" : "User"
-    },
     "actioneeUserId" : {
       "type" : "UUID"
-    },
-    "actioner" : {
-      "type" : "User"
     },
     "actionerUserId" : {
       "type" : "UUID"
@@ -38,17 +29,11 @@
     "expiry" : {
       "type" : "ZonedDateTime"
     },
-    "log" : {
-      "type" : "UserActionLog"
-    },
     "notifyUser" : {
       "type" : "boolean"
     },
     "option" : {
       "type" : "String"
-    },
-    "reason" : {
-      "type" : "UserActionReason"
     },
     "reasonId" : {
       "type" : "UUID"
