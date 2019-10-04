@@ -80,7 +80,7 @@ FusionAuthClient.prototype = {
 
 [#macro printType type]
   [#if type.type??]
-    ${global.convertType(type.type, "js")}[#if type.typeArguments?has_content]
+      ${global.convertType(type.type, "js")}[#t][#if type.typeArguments?has_content]
   <[#list type.typeArguments as typeArgument][@printType typeArgument/][#sep], [/#sep][/#list]>[/#if][#t]
   [#else]
     ${type.name}[#t]
@@ -127,7 +127,11 @@ FusionAuthClient.prototype = {
  */
 var ${d.type} = {
   [#list d.enum as value]
-  ${value}: "${value}"[#sep],[/#sep]
+    [#if global.needsConverter(d)]
+  ${value.name}: "${(value.args![])[0]!value.name}"[#sep],[/#sep]
+    [#else]
+  ${value.name!value}: "${value.name!value}"[#sep],[/#sep]
+    [/#if]
   [/#list]
 };
 [/#if]

@@ -142,7 +142,11 @@ export interface [@printType d/] {
 [#else]
 export enum ${d.type} {
   [#list d.enum as value]
-  ${value}[#sep],[/#sep]
+    [#if global.needsConverter(d)]
+  ${value.name} = "${(value.args![])[0]!value.name}"[#sep],[/#sep]
+    [#else]
+  ${value.name!value}[#sep],[/#sep]
+    [/#if]
   [/#list]
 }
 [/#if]
