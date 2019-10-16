@@ -103,6 +103,7 @@ import io.fusionauth.domain.api.jwt.RefreshResponse;
 import io.fusionauth.domain.api.jwt.ValidateResponse;
 import io.fusionauth.domain.api.passwordless.PasswordlessLoginRequest;
 import io.fusionauth.domain.api.passwordless.PasswordlessSendRequest;
+import io.fusionauth.domain.api.passwordless.PasswordlessStartRequest;
 import io.fusionauth.domain.api.report.DailyActiveUserReportResponse;
 import io.fusionauth.domain.api.report.LoginReportResponse;
 import io.fusionauth.domain.api.report.MonthlyActiveUserReportResponse;
