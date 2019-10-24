@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "LogoutBehavior",
+  "description" : "/**\n * @author Matthew Altman\n */\n",
+  "enum" : [ "RedirectOnly", "AllApplications" ]
+}

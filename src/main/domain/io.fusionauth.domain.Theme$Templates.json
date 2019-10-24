@@ -32,6 +32,9 @@
     "oauth2CompleteRegistration" : {
       "type" : "String"
     },
+    "oauth2Device" : {
+      "type" : "String"
+    },
     "oauth2Error" : {
       "type" : "String"
     },

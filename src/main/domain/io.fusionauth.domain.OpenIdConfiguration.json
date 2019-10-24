@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "OpenIdConfiguration",
-  "description" : "/**\n * OpenID Configuration as described by the <a href=\"https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata\">OpenID\n * Provider Metadata</a>.\n *\n * @author Daniel DeGroff\n */\n",
+  "description" : "/**\n * OpenID Connect Configuration as described by the <a href=\"https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata\">OpenID\n * Provider Metadata</a>.\n *\n * @author Daniel DeGroff\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
@@ -20,6 +20,9 @@
       "typeArguments" : [ {
         "type" : "String"
       } ]
+    },
+    "device_authorization_endpoint" : {
+      "type" : "String"
     },
     "end_session_endpoint" : {
       "type" : "String"
@@ -44,6 +47,12 @@
     },
     "jwks_uri" : {
       "type" : "String"
+    },
+    "response_modes_supported" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
     },
     "response_types_supported" : {
       "type" : "List",

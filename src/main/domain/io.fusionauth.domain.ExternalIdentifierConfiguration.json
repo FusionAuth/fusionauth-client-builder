@@ -18,6 +18,12 @@
     "changePasswordIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "deviceCodeTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "deviceUserCodeIdGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
     "emailVerificationIdGenerator" : {
       "type" : "SecureGeneratorConfiguration"
     },

@@ -27,6 +27,9 @@
     "clientSecret" : {
       "type" : "String"
     },
+    "deviceVerificationURL" : {
+      "type" : "URI"
+    },
     "enabledGrants" : {
       "type" : "Set",
       "typeArguments" : [ {
@@ -35,6 +38,9 @@
     },
     "generateRefreshTokens" : {
       "type" : "boolean"
+    },
+    "logoutBehavior" : {
+      "type" : "LogoutBehavior"
     },
     "logoutURL" : {
       "type" : "URI"

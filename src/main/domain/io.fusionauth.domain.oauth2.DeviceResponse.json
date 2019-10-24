@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "DeviceResponse",
+  "description" : "/**\n * @author Trevor Smith\n */\n",
+  "implements" : [ {
+    "type" : "OAuthResponse"
+  } ],
+  "fields" : {
+    "device_code" : {
+      "type" : "String"
+    },
+    "expires_in" : {
+      "type" : "int"
+    },
+    "interval" : {
+      "type" : "int"
+    },
+    "user_code" : {
+      "type" : "String"
+    },
+    "verification_uri" : {
+      "type" : "URI"
+    },
+    "verification_uri_complete" : {
+      "type" : "URI"
+    }
+  }
+}

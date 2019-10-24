@@ -2,5 +2,5 @@
   "packageName" : "io.fusionauth.domain",
   "type" : "SecureGeneratorType",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
-  "enum" : [ "randomDigits", "randomBytes" ]
+  "enum" : [ "randomDigits", "randomBytes", "randomAlpha", "randomAlphaNumeric" ]
 }
