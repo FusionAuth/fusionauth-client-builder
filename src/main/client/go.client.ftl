@@ -31,7 +31,11 @@ import (
 )
 
 // URIWithSegment returns a string with a "/" delimiter between the uri and segment
+// If segment is not set (""), just the uri is returned
 func URIWithSegment(uri, segment string) string {
+  if segment == "" {
+    return uri
+  }
   return uri + "/" + segment
 }
 
@@ -51,6 +55,10 @@ func (c *FusionAuthClient) NewRequest(method, endpoint string, body interface{})
 	if err != nil {
 		return nil, err
 	}
+  if c.APIKey != "" {
+    // Send the API Key, but only if it is set
+		req.Header.Set("Authorization", c.APIKey)
+	}
 	req.Header.Set("Accept", "application/json")
 	return req, nil
 }
@@ -65,6 +73,11 @@ func (c *FusionAuthClient) Do(req *http.Request, v interface{}) (*http.Response,
 	responseDump, _ := httputil.DumpResponse(resp, true)
 	fmt.Println(string(responseDump))
 	err = json.NewDecoder(resp.Body).Decode(v)
+  if err == nil && (resp.StatusCode < 200 || resp.StatusCode > 299) {
+    // If everything went well but the API responded with something other than HTTP 2xx, we raise an error
+    // That way, consumers can check for ErrRequestUnsuccessful
+		return resp, ErrRequestUnsuccessful
+	}
 	return resp, err
 }
 
