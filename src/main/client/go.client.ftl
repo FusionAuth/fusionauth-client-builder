@@ -21,6 +21,7 @@ import (
   "bytes"
   "encoding/base64"
   "encoding/json"
+  "errors"
   "fmt"
   "io"
   "net/http"
@@ -29,6 +30,8 @@ import (
   "strconv"
   "strings"
 )
+
+var ErrRequestUnsuccessful = errors.New("Response from FusionAuth API was not successful")
 
 // URIWithSegment returns a string with a "/" delimiter between the uri and segment
 // If segment is not set (""), just the uri is returned
