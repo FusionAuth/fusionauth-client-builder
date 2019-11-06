@@ -107,6 +107,7 @@ type FusionAuthClient struct {
 }
 
 [#-- @formatter:off --]
+[#-- Ignoring these few following APIs due to currently being unable to convert the json response into the actual IdentityProvider type. Need a conversion utility. --]
 [#assign ignoredAPIs = ["CreateIdentityProvider","RetrieveIdentityProvider","RetrieveIdentityProviders","UpdateIdentityProvider"]/]
 [#list apis as api]
   [#if !(ignoredAPIs?seq_contains(api.methodName?cap_first))]
