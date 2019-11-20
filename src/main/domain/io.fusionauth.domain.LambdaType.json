@@ -4,15 +4,15 @@
   "description" : "/**\n * The types of lambdas that indicate how they are invoked by FusionAuth.\n *\n * @author Brian Pontarelli\n */\n",
   "enum" : [ {
     "name" : "JWTPopulate",
-    "args" : [ "populate" ]
+    "args" : [ "jwtpopulate" ]
   }, {
     "name" : "OpenIDReconcile",
-    "args" : [ "reconcile" ]
+    "args" : [ "openidreconcile" ]
   }, {
     "name" : "SAMLv2Reconcile",
-    "args" : [ "reconcile" ]
+    "args" : [ "samlv2reconcile" ]
   }, {
     "name" : "SAMLv2Populate",
-    "args" : [ "populate" ]
+    "args" : [ "samlv2populate" ]
   } ]
 }
