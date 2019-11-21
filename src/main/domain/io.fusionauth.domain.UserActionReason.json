@@ -3,6 +3,11 @@
   "type" : "UserActionReason",
   "description" : "/**\n * Models action reasons.\n *\n * @author Brian Pontarelli\n */\n",
   "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserActionReason"
+    } ]
+  }, {
     "type" : "Comparable",
     "typeArguments" : [ {
       "type" : "UserActionReason"
