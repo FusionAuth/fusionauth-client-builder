@@ -4,10 +4,7 @@
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "fields" : {
     "identityProvider" : {
-      "type" : "BaseIdentityProvider",
-      "typeArguments" : [ {
-        "type" : "*"
-      } ]
+      "type" : "IdentityProviderDetails"
     }
   }
 }
