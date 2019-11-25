@@ -72,6 +72,36 @@ FusionAuthClient.prototype = {
 
 [/#list]
   /* ===================================================================================================================
+   * OAuth helper methods
+   * ===================================================================================================================*/
+
+  /**
+   * Exchanges an OAuth authorization code for an access token.
+   *
+   * @param {string} code The OAuth authorization code.
+   * @param {string} clientId The OAuth client_id.
+   * @param {string} clientSecret (Optional) The OAuth client _secret used for Basic Auth.
+   * @param {string} redirectURI The OAuth redirect_uri.
+   * @return {Promise<ClientResponse<AccessToken, Errors>>} A Promise for the FusionAuth call.
+   */
+  exchangeOAuthCodeForAccessToken: function(code, clientId, clientSecret, redirectURI) {
+    return new Promise((resolve, reject) => {
+      this._start()
+          .uri('/oauth2/token')
+          .basicAuthorization(clientId, clientSecret)
+          .setFormBody({
+            'client_id': clientId,
+            'client_secret': clientSecret,
+            'code': code,
+            'grant_type': 'authorization_code',
+            'redirect_uri': redirectURI
+          })
+          .post()
+          .go(this._responseHandler(resolve, reject));
+    });
+  },
+
+  /* ===================================================================================================================
    * Private methods
    * ===================================================================================================================*/
 
@@ -173,9 +203,9 @@ FusionAuthClient.prototype = {
 var ${d.type} = {
   [#list d.enum as value]
     [#if global.needsConverter(d)]
-  ${value.name}: "${(value.args![])[0]!value.name}"[#sep],[/#sep]
+  ${value.name}: '${(value.args![])[0]!value.name}'[#sep],[/#sep]
     [#else]
-  ${value.name!value}: "${value.name!value}"[#sep],[/#sep]
+  ${value.name!value}: '${value.name!value}'[#sep],[/#sep]
     [/#if]
   [/#list]
 };
