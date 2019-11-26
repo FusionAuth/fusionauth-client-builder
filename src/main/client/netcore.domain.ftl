@@ -97,9 +97,9 @@ namespace ${replaceKeywords(domain_item.packageName)} {
     }
 
     [JsonExtensionData]
-    private readonly [@printType field/] ${replaceKeywords(fieldName)} = new [@printType field/]();
+    private readonly [@printType field/] ${global.scrubName(replaceKeywords(fieldName))} = new [@printType field/]();
       [#else]
-    public [@printType field/] ${replaceKeywords(fieldName)};
+    public [@printType field/] ${global.scrubName(replaceKeywords(fieldName))};
       [/#if]
     [/#list]
     [#if domain_item.type != "BaseIdentityProvider"]

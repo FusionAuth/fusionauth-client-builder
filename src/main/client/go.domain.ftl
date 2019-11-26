@@ -50,7 +50,13 @@
     [#return newName/]
 [/#function]
 
+[#assign responseObjects = ["AccessToken","OpenIdConfiguration","OAuthValidationResult"]/]
+
 package client
+
+type StatusAble interface {
+  SetStatus(status int)
+}
 
 /**
 * Base Response which contains the HTTP status code
@@ -61,14 +67,18 @@ type BaseHTTPResponse struct {
   StatusCode int `json:"statusCode,omitempty"`
 }
 
-[#assign ignoredTypes = ["HTTPHeaders","IntrospectResponse","JWKSResponse","LocalizedIntegers","LocalizedStrings","UserinfoResponse","ApplicationEvent"]/]
+func (b *BaseHTTPResponse) SetStatus(status int) {
+  b.StatusCode = status
+}
+
+[#assign ignoredTypes = ["HTTPHeaders","IntrospectResponse","LocalizedIntegers","LocalizedStrings","UserinfoResponse","ApplicationEvent"]/]
 [#list domain?sort_by("type") as d]
   [#if !(ignoredTypes?seq_contains(d.type))]
     [#assign subPackage = getSubPackage(d.packageName)/]
     [#if d.description??]${d.description}[/#if][#t]
     [#if d.fields??]
 type ${hackCollisions(d d.type)?cap_first} struct {
-      [#if d.type?ends_with("Response")]
+      [#if d.type?ends_with("Response") || responseObjects?seq_contains(d.type)]
   BaseHTTPResponse
       [/#if]
       [#if d.extends??]
@@ -78,15 +88,20 @@ type ${hackCollisions(d d.type)?cap_first} struct {
       [/#if]
       [#list d.fields?keys?sort as fieldName]
         [#assign field = d.fields[fieldName]/]
-  ${global.toCamelCase(fieldName)?right_pad(25)} ${printType(field, d)?right_pad(25)} `json:"${fieldName},omitempty"`
+  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(25)} ${printType(field, d)?right_pad(25)} `json:"${fieldName},omitempty"`
       [/#list]
 }
+      [#if d.type?ends_with("Response") || responseObjects?seq_contains(d.type)]
+func (b *${hackCollisions(d d.type)?cap_first}) SetStatus(status int) {
+  b.StatusCode = status
+}
+      [/#if]
 
     [#elseif d.enum??]
 type ${d.type} string
 const (
       [#list d.enum as value]
-  ${d.type}_${global.toCamelCase(value.name!value)?right_pad(20)} ${d.type?right_pad(20)} = "${value.name!value}"
+  ${d.type}_${global.toCamelCase(value.name!value)?cap_first?right_pad(20)} ${d.type?right_pad(20)} = "${value.name!value}"
       [/#list]
 )
 

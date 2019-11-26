@@ -8,6 +8,7 @@
   "methodName": "identityProviderLogin",
   "successResponse": "LoginResponse",
   "errorResponse": "Errors",
+  "anonymous": true,
   "params": [
     {
       "name": "request",

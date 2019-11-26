@@ -1,0 +1,11 @@
+{
+  "uri": "/.well-known/openid-configuration",
+  "comments": [
+    "Returns the well known OpenID Configuration JSON document"
+  ],
+  "method": "get",
+  "methodName": "retrieveOpenIdConfiguration",
+  "successResponse": "OpenIdConfiguration",
+  "errorResponse": "Void",
+  "anonymous": true
+}

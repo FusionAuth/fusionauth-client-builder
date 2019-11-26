@@ -96,7 +96,20 @@ class FusionAuthClient
    */
   public function ${api.methodName}(${global.methodParameters(api, "php")})
   {
-    return $this->start()->uri("${api.uri}")
+    [#assign formPost = false/]
+    [#list api.params![] as param]
+      [#if param.type == "form"][#assign formPost = true/][/#if]
+    [/#list]
+    [#if formPost]
+    $post_data = array(
+      [#list api.params![] as param]
+        [#if param.type == "form"]
+      '${param.name}' => ${(param.constant?? && param.constant)?then("'"+param.value+"'", "$"+param.name)}[#if param?has_next],[/#if]
+        [/#if]
+      [/#list]
+    );
+    [/#if]
+    return $this->start[#if api.anonymous??]Anonymous[/#if]()->uri("${api.uri}")
     [#if api.authorization??]
         ->authorization(${api.authorization?replace("+ ", ". $")})
     [/#if]
@@ -109,45 +122,27 @@ class FusionAuthClient
         ->bodyHandler(new JSONBodyHandler($${param.name}))
       [/#if]
     [/#list]
+    [#if formPost]
+        ->bodyHandler(new FormDataBodyHandler($post_data))
+    [/#if]
         ->${api.method}()
         ->go();
   }
 
 [/#list]
 
-  /**
-   * Exchanges an OAuth authorization code for an access token.
-   *
-   * @param string $code          The OAuth authorization code.
-   * @param string $client_id     The OAuth client_id.
-   * @param string $client_secret (Optional) The OAuth client _secret used for Basic Auth.
-   * @param string $redirect_uri   The OAuth redirect_uri.
-   * @return ClientResponse that contains the access token if the request was successful.
-   * @throws \Exception
-   */
-  public function exchangeOAuthCodeForAccessToken($code, $client_id, $client_secret, $redirect_uri)
+  private function start()
   {
-    $post_data = array(
-      'code' => $code,
-      'grant_type' => 'authorization_code',
-      'client_id' => $client_id,
-      'redirect_uri' => $redirect_uri
-    );
-    return $this->start()->uri("/oauth2/token")
-      ->basicAuthorization($client_id, $client_secret)
-      ->bodyHandler(new FormDataBodyHandler($post_data))
-      ->post()
-      ->go();
+    return $this->startAnonymous()->authorization($this->apiKey);
   }
 
-  private function start()
+  private function startAnonymous()
   {
     $rest = new RESTClient();
     if (isset($this->tenantId)) {
       $rest->header("X-FusionAuth-TenantId", $this->tenantId);
     }
-    return $rest->authorization($this->apiKey)
-        ->url($this->baseURL)
+    return $rest->url($this->baseURL)
         ->connectTimeout($this->connectTimeout)
         ->readTimeout($this->readTimeout)
         ->successResponseHandler(new JSONResponseHandler())

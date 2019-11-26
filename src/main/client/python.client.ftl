@@ -15,7 +15,7 @@
 # language governing permissions and limitations under the License.
 #
 
-from fusionauth.rest_client import RESTClient, JSONBodyHandler
+from fusionauth.rest_client import RESTClient, JSONBodyHandler, FormDataBodyHandler
 
 
 class FusionAuthClient:
@@ -30,6 +30,11 @@ class FusionAuthClient:
         """
         self.api_key = api_key
         self.base_url = base_url
+        self.tenant_id = None
+
+    def set_tenant_id(self, tenant_id):
+      """Sets the tenant_id on the client"""
+      self.tenant_id = tenant_id
 
 [#list apis as api]
     def ${camel_to_underscores(api.methodName)}(${global.methodParameters(api, "python")}):
@@ -43,7 +48,20 @@ class FusionAuthClient:
           [/#if]
         [/#list]
         """
-        return self.start().uri('${api.uri}') \
+        [#assign formPost = false/]
+        [#list api.params![] as param]
+          [#if param.type == "form"][#assign formPost = true/][/#if]
+        [/#list]
+        [#if formPost]
+        body = {
+          [#list api.params![] as param]
+            [#if param.type == "form"]
+            "${param.name}": ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)},
+            [/#if]
+          [/#list]
+        }
+        [/#if]
+        return self.start[#if api.anonymous??]_anonymous[/#if]().uri('${api.uri}') \
           [#if api.authorization??]
             .authorization(${api.authorization?replace("encodedJWT", "encoded_jwt")}) \
           [/#if]
@@ -56,9 +74,19 @@ class FusionAuthClient:
             .body_handler(JSONBodyHandler(${camel_to_underscores(param.name)})) \
             [/#if]
           [/#list]
+          [#if formPost]
+            .body_handler(FormDataBodyHandler(body)) \
+          [/#if]
             .${api.method}() \
             .go()
 
 [/#list]
     def start(self):
-        return RESTClient().authorization(self.api_key).url(self.base_url)
+        return self.start_anonymous().authorization(self.api_key)
+
+    def start_anonymous(self):
+        client = RESTClient().url(self.base_url)
+        if self.tenant_id is not None:
+            client.header("X-FusionAuth-TenantId", self.tenant_id)
+
+        return client

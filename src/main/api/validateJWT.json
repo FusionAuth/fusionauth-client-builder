@@ -11,6 +11,7 @@
   "successResponse": "ValidateResponse",
   "errorResponse": "Void",
   "authorization": "\"JWT \" + encodedJWT",
+  "anonymous": true,
   "params": [
     {
       "name": "encodedJWT",

@@ -1,0 +1,11 @@
+{
+  "uri": "/.well-known/jwks.json",
+  "comments": [
+    "Returns public keys used by FusionAuth to cryptographically verify JWTs using the JSON Web Key format."
+  ],
+  "method": "get",
+  "methodName": "retrieveJsonWebKeySet",
+  "successResponse": "JWKSResponse",
+  "errorResponse": "Void",
+  "anonymous": true
+}

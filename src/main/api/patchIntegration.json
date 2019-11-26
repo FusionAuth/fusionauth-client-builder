@@ -1,0 +1,20 @@
+{
+  "uri": "/api/integration",
+  "comments": [
+    "Updates, via PATCH, the available integrations."
+  ],
+  "method": "patch",
+  "methodName": "patchIntegrations",
+  "successResponse": "IntegrationResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new integration information."
+      ],
+      "type": "body",
+      "javaType": "IntegrationRequest"
+    }
+  ]
+}

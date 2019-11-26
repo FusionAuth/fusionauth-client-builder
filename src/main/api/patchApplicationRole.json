@@ -1,0 +1,42 @@
+{
+  "uri": "/api/application",
+  "comments": [
+    "Updates, via PATCH, the application role with the given id for the application."
+  ],
+  "method": "patch",
+  "methodName": "patchApplicationRole",
+  "successResponse": "ApplicationResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "applicationId",
+      "comments": [
+        "The Id of the application that the role belongs to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "role",
+      "constant": true,
+      "type": "urlSegment",
+      "value": "\"role\""
+    },
+    {
+      "name": "roleId",
+      "comments": [
+        "The Id of the role to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new role information."
+      ],
+      "type": "body",
+      "javaType": "ApplicationRequest"
+    }
+  ]
+}

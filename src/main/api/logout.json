@@ -9,6 +9,7 @@
   "methodName": "logout",
   "successResponse": "Void",
   "errorResponse": "Void",
+  "anonymous": true,
   "params": [
     {
       "name": "global",

@@ -7,6 +7,7 @@
   "methodName": "verifyRegistration",
   "successResponse": "Void",
   "errorResponse": "Errors",
+  "anonymous": true,
   "params": [
     {
       "name": "verificationId",

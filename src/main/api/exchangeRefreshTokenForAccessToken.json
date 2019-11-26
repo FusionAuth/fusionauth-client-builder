@@ -1,0 +1,64 @@
+{
+  "uri": "/oauth2/token",
+  "comments": [
+    "Exchange a Refresh Token for an Access Token.",
+    "If you will be using the Refresh Token Grant, you will make a request to the Token endpoint to exchange the user’s refresh token for an access token."
+  ],
+  "method": "post",
+  "methodName": "exchangeRefreshTokenForAccessToken",
+  "successResponse": "AccessToken",
+  "errorResponse": "OAuthError",
+  "anonymous": true,
+  "params": [
+    {
+      "name": "refresh_token",
+      "comments": [
+        "The refresh token that you would like to use to exchange for an access token."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "client_id",
+      "comments": [
+        "(Optional) The unique client identifier. The client Id is the Id of the FusionAuth Application in which you you are attempting to authenticate. This parameter is optional when the Authorization header is provided."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "client_secret",
+      "comments": [
+        "(Optional) The client secret. This value may optionally be provided in the request body instead of the Authorization header."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "grant_type",
+      "comments": [
+        "The grant type to be used. This value must be set to refresh_token"
+      ],
+      "type": "form",
+      "javaType": "String",
+      "constant": true,
+      "value": "refresh_token"
+    },
+    {
+      "name": "scope",
+      "comments": [
+        "(Optional) This parameter is optional and if omitted, the same scope requested during the authorization request will be used. If provided the scopes must match those requested during the initial authorization request."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "user_code",
+      "comments": [
+        "(Optional) The end-user verification code. This code is required if using this endpoint to approve the Device Authorization."
+      ],
+      "type": "form",
+      "javaType": "String"
+    }
+  ]
+}

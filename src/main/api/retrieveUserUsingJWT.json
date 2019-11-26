@@ -8,6 +8,7 @@
   "successResponse": "UserResponse",
   "errorResponse": "Errors",
   "authorization": "\"JWT \" + encodedJWT",
+  "anonymous": true,
   "params": [
     {
       "name": "encodedJWT",

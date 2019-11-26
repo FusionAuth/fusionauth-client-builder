@@ -20,6 +20,7 @@
 
 const RESTClient = require('./RESTClient.js');
 var Promise = require('promise');
+var querystring = require('querystring');
 
 const FusionAuthClient = function(apiKey, host) {
   this.apiKey = apiKey;
@@ -50,8 +51,21 @@ FusionAuthClient.prototype = {
    * @return {Promise<ClientResponse<${global.convertType(api.successResponse, "js")}>>} A Promise for the FusionAuth call.
    */
   ${api.methodName}: function(${global.methodParameters(api, "js")}) {
+    [#assign formPost = false/]
+    [#list api.params![] as param]
+      [#if param.type == "form"][#assign formPost = true/][/#if]
+    [/#list]
+    [#if formPost]
+    var body = {
+      [#list api.params![] as param]
+        [#if param.type == "form"]
+      ${param.name}: ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)}[#if param?has_next],[/#if]
+        [/#if]
+      [/#list]
+    };
+    [/#if]
     return new Promise((resolve, reject) => {
-      this._start()
+      this._start[#if api.anonymous??]Anonymous[/#if]()
           .uri('${api.uri}')
       [#if api.authorization??]
           .authorization(${api.authorization?replace('\"', '\'')})
@@ -65,42 +79,15 @@ FusionAuthClient.prototype = {
           .setJSONBody(${param.name})
         [/#if]
       [/#list]
+      [#if formPost]
+          .setFormBody(body)
+      [/#if]
           .${api.method}()
           .go(this._responseHandler(resolve, reject));
     });
   },
 
 [/#list]
-  /* ===================================================================================================================
-   * OAuth helper methods
-   * ===================================================================================================================*/
-
-  /**
-   * Exchanges an OAuth authorization code for an access token.
-   *
-   * @param {string} code The OAuth authorization code.
-   * @param {string} clientId The OAuth client_id.
-   * @param {string} clientSecret (Optional) The OAuth client _secret used for Basic Auth.
-   * @param {string} redirectURI The OAuth redirect_uri.
-   * @return {Promise<ClientResponse<AccessToken, Errors>>} A Promise for the FusionAuth call.
-   */
-  exchangeOAuthCodeForAccessToken: function(code, clientId, clientSecret, redirectURI) {
-    return new Promise((resolve, reject) => {
-      this._start()
-          .uri('/oauth2/token')
-          .basicAuthorization(clientId, clientSecret)
-          .setFormBody({
-            'client_id': clientId,
-            'client_secret': clientSecret,
-            'code': code,
-            'grant_type': 'authorization_code',
-            'redirect_uri': redirectURI
-          })
-          .post()
-          .go(this._responseHandler(resolve, reject));
-    });
-  },
-
   /* ===================================================================================================================
    * Private methods
    * ===================================================================================================================*/
@@ -142,7 +129,11 @@ FusionAuthClient.prototype = {
    * @private
    */
   _start: function() {
-    const client = new RESTClient().authorization(this.apiKey).setUrl(this.host);
+    return this_startAnonymous.authorization(this.apiKey);
+  },
+
+  _startAnonymous: function() {
+    const client = new RESTClient().setUrl(this.host);
 
     if (this.tenantId !== null && typeof(this.tenantId) !== 'undefined') {
       client.header('X-FusionAuth-TenantId', this.tenantId);

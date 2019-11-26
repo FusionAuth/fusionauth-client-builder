@@ -102,7 +102,19 @@ namespace FusionAuth
      */
     public ClientResponse<${global.convertType(api.successResponse, "csharp")}, ${global.convertType(api.errorResponse, "csharp")}> ${api.methodName?cap_first}(${global.methodParameters(api, "csharp")})
     {
-        return Start<${global.convertType(api.successResponse, "csharp")}, ${global.convertType(api.errorResponse, "csharp")}>().Uri("${api.uri}")
+    [#assign formPost = false/]
+    [#list api.params![] as param]
+      [#if param.type == "form"][#assign formPost = true/][/#if]
+    [/#list]
+    [#if formPost]
+        Dictionary<string, string> body = new Dictionary<string, string>();
+      [#list api.params![] as param]
+        [#if param.type == "form"]
+        body.Add("${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)});
+        [/#if]
+      [/#list]
+    [/#if]
+        return Start[#if api.anonymous??]Anonymous[/#if]<${global.convertType(api.successResponse, "csharp")}, ${global.convertType(api.errorResponse, "csharp")}>().Uri("${api.uri}")
                                       [#if api.authorization??]
                                           .Authorization(${api.authorization})
                                       [/#if]
@@ -115,6 +127,9 @@ namespace FusionAuth
                                           .BodyHandler(new JSONBodyHandler(${param.name}, serializer))
                                         [/#if]
                                       [/#list]
+                                      [#if formPost]
+                                          .BodyHandler(new FormDataBodyHandler(body)
+                                      [/#if]
                                           .${api.method?cap_first}()
                                           .Go();
     }
@@ -123,20 +138,24 @@ namespace FusionAuth
     // Start initializes and returns RESTClient
     private RESTClient<T, U> Start<T, U>()
     {
-        var client = new RESTClient<T, U>().Authorization(apiKey)
-                                   .SuccessResponseHandler(typeof(T) == typeof(RESTVoid) ? null : new JSONResponseHandler<T>(serializer))
-                                   .ErrorResponseHandler(typeof(U) == typeof(RESTVoid) ? null : new JSONResponseHandler<U>(serializer))
-                                   .Url(baseUrl)
-                                   .Timeout(timeout)
-                                   .ReadWriteTimeout(readWriteTimeout)
-                                   .Proxy(webProxy);
-
-
-        if (tenantId != null) {
-          client.Header(TENANT_ID_HEADER, tenantId);
-        }
-
-        return client;
+        return StartAnonymous<T, U>().Authorization(apiKey);
     }
+  }
+
+  private RESTClient<T, U> StartAnonymous<T, U>()
+  {
+      var client = new RESTClient<T, U>().SuccessResponseHandler(typeof(T) == typeof(RESTVoid) ? null : new JSONResponseHandler<T>(serializer))
+                                .ErrorResponseHandler(typeof(U) == typeof(RESTVoid) ? null : new JSONResponseHandler<U>(serializer))
+                                .Url(baseUrl)
+                                .Timeout(timeout)
+                                .ReadWriteTimeout(readWriteTimeout)
+                                .Proxy(webProxy);
+
+
+      if (tenantId != null) {
+          client.Header(TENANT_ID_HEADER, tenantId);
+      }
+
+      return client;
   }
 }

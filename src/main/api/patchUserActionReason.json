@@ -1,0 +1,28 @@
+{
+  "uri": "/api/user-action-reason",
+  "comments": [
+    "Updates, via PATCH, the user action reason with the given Id."
+  ],
+  "method": "patch",
+  "methodName": "patchUserActionReason",
+  "successResponse": "UserActionReasonResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "userActionReasonId",
+      "comments": [
+        "The Id of the user action reason to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new user action reason information."
+      ],
+      "type": "body",
+      "javaType": "UserActionReasonRequest"
+    }
+  ]
+}

@@ -7,6 +7,7 @@
   "methodName": "reconcileJWT",
   "successResponse": "LoginResponse",
   "errorResponse": "Errors",
+  "anonymous": true,
   "params": [
     {
       "name": "request",

@@ -7,6 +7,7 @@
   "methodName": "exchangeRefreshTokenForJWT",
   "successResponse": "RefreshResponse",
   "errorResponse": "Errors",
+  "anonymous": true,
   "params": [
     {
       "name": "request",

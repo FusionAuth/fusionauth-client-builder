@@ -1,0 +1,28 @@
+{
+  "uri": "/api/identity-provider",
+  "comments": [
+    "Updates, via PATCH, the identity provider with the given Id."
+  ],
+  "method": "patch",
+  "methodName": "patchIdentityProvider",
+  "successResponse": "IdentityProviderResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "identityProviderId",
+      "comments": [
+        "The Id of the identity provider to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains just the updated identity provider information."
+      ],
+      "type": "body",
+      "javaType": "IdentityProviderRequest"
+    }
+  ]
+}

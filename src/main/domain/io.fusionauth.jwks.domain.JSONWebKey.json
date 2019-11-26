@@ -1,0 +1,79 @@
+{
+  "packageName" : "io.fusionauth.jwks.domain",
+  "type" : "JSONWebKey",
+  "description" : "/**\n * A JSON Web Key as defined by <a href=\"https://tools.ietf.org/html/rfc7517#section-4\">RFC 7517 JSON Web Key (JWK)\n * Section 4</a> and <a href=\"https://tools.ietf.org/html/rfc7518\">RFC 7518 JSON Web Algorithms (JWA)</a>.\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "JSONWebKey"
+    } ]
+  } ],
+  "fields" : {
+    "alg" : {
+      "type" : "Algorithm"
+    },
+    "crv" : {
+      "type" : "String"
+    },
+    "d" : {
+      "type" : "String"
+    },
+    "dp" : {
+      "type" : "String"
+    },
+    "dq" : {
+      "type" : "String"
+    },
+    "e" : {
+      "type" : "String"
+    },
+    "kid" : {
+      "type" : "String"
+    },
+    "kty" : {
+      "type" : "KeyType"
+    },
+    "n" : {
+      "type" : "String"
+    },
+    "other" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ],
+      "anySetter" : true
+    },
+    "p" : {
+      "type" : "String"
+    },
+    "q" : {
+      "type" : "String"
+    },
+    "qi" : {
+      "type" : "String"
+    },
+    "use" : {
+      "type" : "String"
+    },
+    "x" : {
+      "type" : "String"
+    },
+    "x5c" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "x5t" : {
+      "type" : "String"
+    },
+    "x5t#S256" : {
+      "type" : "String"
+    },
+    "y" : {
+      "type" : "String"
+    }
+  }
+}

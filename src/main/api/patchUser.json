@@ -1,0 +1,28 @@
+{
+  "uri": "/api/user",
+  "comments": [
+    "Updates, via PATCH, the user with the given Id."
+  ],
+  "method": "patch",
+  "methodName": "patchUser",
+  "successResponse": "UserResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "userId",
+      "comments": [
+        "The Id of the user to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new user information."
+      ],
+      "type": "body",
+      "javaType": "UserRequest"
+    }
+  ]
+}

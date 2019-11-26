@@ -1,0 +1,20 @@
+{
+  "uri": "/api/system-configuration",
+  "comments": [
+    "Updates, via PATCH, the system configuration."
+  ],
+  "method": "patch",
+  "methodName": "patchSystemConfiguration",
+  "successResponse": "SystemConfigurationResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new system configuration information."
+      ],
+      "type": "body",
+      "javaType": "SystemConfigurationRequest"
+    }
+  ]
+}

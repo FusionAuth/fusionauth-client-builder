@@ -19,7 +19,6 @@ package client
 
 import (
   "bytes"
-  "encoding/base64"
   "encoding/json"
   "fmt"
   "io"
@@ -44,58 +43,9 @@ func NewFusionAuthClient(httpClient *http.Client, baseURL *url.URL, apiKey strin
   return c
 }
 
-// URIWithSegment returns a string with a "/" delimiter between the uri and segment
-// If segment is not set (""), just the uri is returned
-func URIWithSegment(uri, segment string) string {
-	if segment == "" {
-		return uri
-	}
-	return uri + "/" + segment
-}
-
-// NewRequest creates a new request for the FusionAuth API call
-func (c *FusionAuthClient) NewRequest(method, endpoint string, body interface{}) (*http.Request, error) {
-	rel := &url.URL{Path: endpoint}
-	u := c.BaseURL.ResolveReference(rel)
-	var buf io.ReadWriter
-	if body != nil {
-		buf = new(bytes.Buffer)
-		err := json.NewEncoder(buf).Encode(body)
-		if err != nil {
-			return nil, err
-		}
-	}
-	req, err := http.NewRequest(method, u.String(), buf)
-	if err != nil {
-		return nil, err
-	}
-	if c.APIKey != "" {
-		// Send the API Key, but only if it is set
-		req.Header.Set("Authorization", c.APIKey)
-	}
-	req.Header.Set("Accept", "application/json")
-	return req, nil
-}
-
-// Do makes the request to the FusionAuth API endpoint and decodes the response
-func (c *FusionAuthClient) Do(req *http.Request, v interface{}, e interface{}) (*http.Response, error) {
-  resp, err := c.HTTPClient.Do(req)
-  if err != nil {
-    return nil, err
-  }
-  defer resp.Body.Close()
-  if c.Debug {
-    responseDump, _ := httputil.DumpResponse(resp, true)
-    fmt.Println(string(responseDump))
-  }
-  if resp.StatusCode < 200 || resp.StatusCode > 299 {
-    if e != nil {
-      err = json.NewDecoder(resp.Body).Decode(e)
-    }
-  } else {
-    err = json.NewDecoder(resp.Body).Decode(v)
-  }
-  return resp, err
+// SetTenantId sets the tenantId on the client
+func (c *FusionAuthClient) SetTenantId(tenantId string)  {
+  c.TenantId = tenantId
 }
 
 // FusionAuthClient describes the Go Client for interacting with FusionAuth's RESTful API
@@ -104,6 +54,123 @@ type FusionAuthClient struct {
   BaseURL    *url.URL
   APIKey     string
   Debug      bool
+  TenantId   string
+}
+
+type restClient struct {
+  Body        io.Reader
+  Debug       bool
+  ErrorRef    interface{}
+  Headers     map[string]string
+  HTTPClient  *http.Client
+  Method      string
+  ResponseRef interface{}
+  Uri         *url.URL
+}
+
+func (c *FusionAuthClient) Start(responseRef interface{}, errorRef interface{}) *restClient {
+  return c.StartAnonymous(responseRef, errorRef).WithAuthorization(c.APIKey)
+}
+
+func (c *FusionAuthClient) StartAnonymous(responseRef interface{}, errorRef interface{}) *restClient {
+  rc := &restClient{
+    Debug:       c.Debug,
+    ErrorRef:    errorRef,
+    Headers:     make(map[string]string),
+    HTTPClient:  c.HTTPClient,
+    ResponseRef: responseRef,
+  }
+  rc.Uri, _ = url.Parse(c.BaseURL.String())
+  if c.TenantId != "" {
+    rc.WithHeader("X-FusionAuth-TenantId", c.TenantId)
+  }
+  rc.WithHeader("Content-Type", "text/plain")
+  rc.WithHeader("Accept", "application/json")
+  return rc
+}
+
+func (rc *restClient) Do() error {
+  req, err := http.NewRequest(rc.Method, rc.Uri.String(), rc.Body)
+  if err != nil {
+    return err
+  }
+  for key, val := range rc.Headers {
+    req.Header.Set(key, val)
+  }
+  resp, err := rc.HTTPClient.Do(req)
+  if err != nil {
+    return err
+  }
+  defer resp.Body.Close()
+  if rc.Debug {
+    responseDump, _ := httputil.DumpResponse(resp, true)
+    fmt.Println(string(responseDump))
+  }
+  if resp.StatusCode < 200 || resp.StatusCode > 299 {
+    if rc.ErrorRef != nil {
+      err = json.NewDecoder(resp.Body).Decode(rc.ErrorRef)
+    }
+  } else {
+    err = json.NewDecoder(resp.Body).Decode(rc.ResponseRef)
+  }
+  rc.ResponseRef.(StatusAble).SetStatus(resp.StatusCode)
+  return err
+}
+
+func (rc *restClient) WithAuthorization(key string) *restClient {
+  if key != "" {
+    rc.WithHeader("Authorization", key)
+  }
+  return rc
+}
+
+func (rc *restClient) WithFormData(formBody url.Values) *restClient {
+  rc.WithHeader("Content-Type", "application/x-www-form-urlencoded")
+  rc.Body = strings.NewReader(formBody.Encode())
+  return rc
+}
+
+func (rc *restClient) WithHeader(key string, value string) *restClient {
+  rc.Headers[key] = value
+  return rc
+}
+
+func (rc *restClient) WithJSONBody(body interface{}) *restClient {
+  rc.WithHeader("Content-Type", "application/json'")
+  buf := new(bytes.Buffer)
+  json.NewEncoder(buf).Encode(body)
+  rc.Body = buf
+  return rc
+}
+
+func (rc *restClient) WithMethod(method string) *restClient {
+  rc.Method = method
+  return rc
+}
+
+func (rc *restClient) WithParameter(key string, value interface{}) *restClient {
+  q := rc.Uri.Query()
+  if x, ok := value.([]string); ok {
+    for _, i := range x {
+      q.Add(key, i)
+    }
+  } else {
+    q.Add(key, fmt.Sprintf("%v", value))
+  }
+  rc.Uri.RawQuery = q.Encode()
+  return rc
+}
+
+func (rc *restClient) WithUri(uri string) *restClient {
+  rc.Uri.Path = path.Join(rc.Uri.Path, uri)
+  return rc
+}
+
+func (rc *restClient) WithUriSegment(segment string) *restClient {
+  if segment != "" {
+    rc.Uri.Path = path.Join(rc.Uri.Path, "/"+segment)
+  }
+  return rc
 }
 
 [#-- @formatter:off --]
@@ -117,123 +184,74 @@ type FusionAuthClient struct {
   [/#list]
   [#list api.params![] as param]
     [#if !param.constant??]
-//   ${global.optional(param, "go")}${global.convertType(param.javaType, "go")} ${param.name} ${param.comments?join("\n//   ")}
+//   ${global.optional(param, "go")}${global.convertType(param.javaType, "go")} ${global.convertValue(param.name, "go")} ${param.comments?join("\n//   ")}
     [/#if]
   [/#list]
   [#assign parameters = global.methodParameters(api, "go")/]
 func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (*[#if api.successResponse == "Void"]BaseHTTPResponse[#else]${global.convertType(api.successResponse, "go")}[/#if][#if api.errorResponse != "Void"], *${global.convertType(api.errorResponse, "go")}[/#if], error) {
-    method := http.Method${api.method?capitalize}
-    uri := "${api.uri}"
-    var body interface{}
+    var resp [#if api.successResponse == "Void"]BaseHTTPResponse[#else]${global.convertType(api.successResponse, "go")}[/#if]
+  [#if api.errorResponse != "Void"]
+    var errors ${global.convertType(api.errorResponse, "go")}
+  [/#if]
+  [#assign formPost = false/]
+  [#list api.params![] as param]
+    [#if param.type == "form"][#assign formPost = true/][/#if]
+  [/#list]
+  [#if formPost]
+    formBody := url.Values{}
+    [#list api.params![] as param]
+      [#if param.type == "form"]
+    formBody.Set("${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", global.convertValue(param.name, "go"))})
+      [/#if]
+    [/#list]
+  [/#if]
+
+    err := c.Start[#if api.anonymous??]Anonymous[/#if](&resp[#if api.errorResponse != "Void"], &errors[#else], nil[/#if]).
+             WithUri("${api.uri}").
+  [#if api.authorization??]
+             WithAuthorization(${api.authorization}).
+  [/#if]
   [#list api.params![] as param]
     [#if param.type == "urlSegment"]
       [#if !param.constant?? && param.javaType == "Integer"]
-    uri = URIWithSegment(uri, string(${(param.constant?? && param.constant)?then(param.value, param.name)}))
+             WithUriSegment(string(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
       [#else]
-    uri = URIWithSegment(uri, ${(param.constant?? && param.constant)?then(param.value, param.name)})
+             WithUriSegment(${(param.constant?? && param.constant)?then(param.value,  global.convertValue(param.name, "go"))}).
       [/#if]
-    [#elseif param.type == "body"]
-    body = ${param.name}
-    [/#if]
-  [/#list]
-    req, err := c.NewRequest(method, uri, body)
-    if err != nil {
-      return nil, [#if api.errorResponse != "Void"]nil, [/#if]err
-    }
-  [#list api.params![] as param]
-    [#if param.type == "urlParameter"]
-    q := req.URL.Query()
-      [#break]
-    [/#if]
-  [/#list]
-  [#list api.params![] as param]
-    [#if param.type == "urlParameter"]
+    [#elseif param.type == "urlParameter"]
       [#if param.javaType??][#assign goType = global.convertType(param.javaType, "go")/][/#if]
       [#if param.value?? && param.value == "true"]
-    q.Add("${param.parameterName}", strconv.FormatBool(true))
+             WithParameter("${param.parameterName}", strconv.FormatBool(true)).
       [#elseif param.value?? && param.value == "false"]
-    q.Add("${param.parameterName}", strconv.FormatBool(false))
+             WithParameter("${param.parameterName}", strconv.FormatBool(false)).
       [#elseif !param.constant?? && goType == "bool"]
-    q.Add("${param.parameterName}", strconv.FormatBool(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))}))
+             WithParameter("${param.parameterName}", strconv.FormatBool(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
       [#elseif !param.constant?? && goType == "[]string"]
-    for _, ${global.convertValue(param.parameterName, "go")} := range ${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))} {
- 		  q.Add("${param.parameterName}", ${global.convertValue(param.parameterName, "go")})
- 	  }
+             WithParameter("${param.parameterName}", ${global.convertValue(param.name, "go")}).
       [#elseif !param.constant?? && goType == "interface{}"]
-    q.Add("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))}.(string))
+             WithParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))}.(string)).
       [#elseif !param.constant?? && goType == "int"]
-    q.Add("${param.parameterName}", strconv.Itoa(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))}))
+             WithParameter("${param.parameterName}", strconv.Itoa(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
       [#elseif !param.constant?? && goType == "int64"]
-    q.Add("${param.parameterName}", strconv.FormatInt(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))}, 10))
+             WithParameter("${param.parameterName}", strconv.FormatInt(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))}, 10)).
+      [#elseif !param.constant?? && goType == "string"]
+             WithParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", global.convertValue(param.name, "go"))}).
       [#else]
-    q.Add("${param.parameterName}", string(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))}))
+             WithParameter("${param.parameterName}", string(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
       [/#if]
     [#elseif param.type == "body"]
-    req.Header.Set("Content-Type", "application/json")
+             WithJSONBody(${global.convertValue(param.name, "go")}).
     [/#if]
   [/#list]
-  [#if api.method == "post" && !global.hasBodyParam(api.params![])]
-    req.Header.Set("Content-Type", "text/plain")
+  [#if formPost]
+             WithFormData(formBody).
   [/#if]
-  [#if api.authorization??]
-    req.Header.Set("Authorization", ${api.authorization})
-  [/#if]
-    var resp [#if api.successResponse == "Void"]interface{}[#else]${global.convertType(api.successResponse, "go")}[/#if]
-    [#if api.errorResponse != "Void"]
-    var errors ${global.convertType(api.errorResponse, "go")}
-    [/#if]
-    httpResponse, err := c.Do(req, &resp[#if api.errorResponse != "Void"], &errors[#else], nil[/#if])
-  [#if api.successResponse != "Void"]
-    if httpResponse != nil {
-      resp.StatusCode = httpResponse.StatusCode
-      [#if api.errorResponse != "Void"]
-      if resp.StatusCode >= 200 && resp.StatusCode <= 299 {
-        return [#if api.successResponse != "Void"]&resp,[#else]&baseResponse,[/#if] nil, err
-      }
-      [/#if]
-    }
-  [#else]
-    baseResponse := BaseHTTPResponse{StatusCode: httpResponse.StatusCode}
-    if httpResponse != nil {
-      baseResponse.StatusCode = httpResponse.StatusCode
-    }
-  [/#if]
-    return [#if api.successResponse != "Void"]&resp,[#else]&baseResponse,[/#if][#if api.errorResponse != "Void"] &errors,[/#if] err
+             WithMethod(http.Method${api.method?capitalize}).
+             Do()
+
+    return &resp,[#if api.errorResponse != "Void"] &errors,[/#if] err
 }
 
   [/#if]
 [/#list]
 [#-- @formatter:on --]
-
-// ExchangeOAuthCodeForAccessToken
-// Exchanges an OAuth authorization code for an access token.
-//   string code The OAuth authorization code.
-//   string clientID The OAuth client_id.
-//   string clientSecret (Optional: use "" to disregard this parameter) The OAuth client_secret used for Basic Auth.
-//   string redirectURI The OAuth redirect_uri.
-func (c *FusionAuthClient) ExchangeOAuthCodeForAccessToken(code string, clientID string, clientSecret string, redirectURI string) (interface{}, *Errors, error) {
-  // URL
-  rel := &url.URL{Path: "/oauth2/token"}
-  u := c.BaseURL.ResolveReference(rel)
-  // Body
-  body := url.Values{}
-  body.Set("code", code)
-  body.Set("grant_type", "authorization_code")
-  body.Set("client_id", clientID)
-  body.Set("redirect_uri", redirectURI)
-  encodedBody := strings.NewReader(body.Encode())
-  // Request
-  method := http.MethodPost
-  req, err := http.NewRequest(method, u.String(), encodedBody)
-  req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
-  // Basic Auth (optional)
-  if clientSecret != "" {
-    credentials := clientID + ":" + clientSecret
-    encoded := base64.StdEncoding.EncodeToString([]byte(credentials))
-    req.Header.Set("Authorization", "Basic " + encoded)
-  }
-  var resp interface{}
-  var errors Errors
-  _, err = c.Do(req, &resp, &errors)
-  return resp, &errors, err
-}

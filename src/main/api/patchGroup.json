@@ -1,0 +1,28 @@
+{
+  "uri": "/api/group",
+  "comments": [
+    "Updates, via PATCH, the group with the given Id."
+  ],
+  "method": "patch",
+  "methodName": "patchGroup",
+  "successResponse": "GroupResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "groupId",
+      "comments": [
+        "The Id of the group to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new group information."
+      ],
+      "type": "body",
+      "javaType": "GroupRequest"
+    }
+  ]
+}

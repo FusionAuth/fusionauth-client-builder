@@ -1,0 +1,28 @@
+{
+  "uri": "/api/user/consent",
+  "comments": [
+    "Updates, via PATCH, a single User consent by Id."
+  ],
+  "method": "patch",
+  "methodName": "patchUserConsent",
+  "successResponse": "UserConsentResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "userConsentId",
+      "comments": [
+        "The User Consent Id"
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new user consent information."
+      ],
+      "type": "body",
+      "javaType": "UserConsentRequest"
+    }
+  ]
+}

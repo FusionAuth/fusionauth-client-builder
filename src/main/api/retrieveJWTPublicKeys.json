@@ -6,5 +6,6 @@
   "method": "get",
   "methodName": "retrieveJWTPublicKeys",
   "successResponse": "PublicKeyResponse",
-  "errorResponse": "Void"
+  "errorResponse": "Void",
+  "anonymous": true
 }

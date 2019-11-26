@@ -69,8 +69,20 @@ export class FusionAuthClient {
    */
   [#assign parameters = global.methodParameters(api, "ts")/]
   ${api.methodName}(${parameters}): Promise<ClientResponse<${global.convertType(api.successResponse, "ts")}>> {
-    return this.start()
-  [#if api.method == "post" && !global.hasBodyParam(api.params![])]
+  [#assign formPost = false/]
+  [#list api.params![] as param]
+    [#if param.type == "form"][#assign formPost = true/][/#if]
+  [/#list]
+  [#if formPost]
+    let body = new FormData();
+    [#list api.params![] as param]
+      [#if param.type == "form"]
+    body.append('${param.name}', ${(param.constant?? && param.constant)?then("'"+param.value+"'", param.name)});
+      [/#if]
+    [/#list]
+  [/#if]
+    return this.start[#if api.anonymous??]Anonymous[/#if]()
+  [#if api.method == "post" && !formPost && !global.hasBodyParam(api.params![])]
         .withHeader('Content-Type', 'text/plain')
   [/#if]
         .withUri('${api.uri}')
@@ -86,6 +98,9 @@ export class FusionAuthClient {
         .withJSONBody(${param.name})
     [/#if]
   [/#list]
+  [#if formPost]
+        .withFormData(body)
+  [/#if]
         .withMethod("${api.method?upper_case}")
         .go<${global.convertType(api.successResponse, "ts")}>();
   }
@@ -104,7 +119,11 @@ export class FusionAuthClient {
    * @private
    */
   private start(): IRESTClient {
-    let client = this.clientBuilder.build(this.host).withAuthorization(this.apiKey);
+    return this.startAnonymous().withAuthorization(this.apiKey);
+  }
+
+  private startAnonymous(): IRESTClient {
+    let client = this.clientBuilder.build(this.host);
 
     if (this.tenantId != null) {
       client.withHeader('X-FusionAuth-TenantId', this.tenantId);
@@ -137,9 +156,9 @@ export interface [@printType d/] {
   [#assign field = d.fields[fieldName]/]
   [#if field.description??]${field.description}[/#if][#t]
   [#if field.anySetter?? && field.anySetter]
-  [${fieldName}: string]: any; // Any other fields
+  [${global.scrubName(fieldName)}: string]: any; // Any other fields
   [#else]
-  ${fieldName}?: [@printType field/];
+  ${global.scrubName(fieldName)}?: [@printType field/];
   [/#if]
   [/#list]
 }

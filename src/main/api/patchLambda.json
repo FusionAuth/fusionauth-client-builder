@@ -1,0 +1,28 @@
+{
+  "uri": "/api/lambda",
+  "comments": [
+    "Updates, via PATCH, the lambda with the given Id."
+  ],
+  "method": "patch",
+  "methodName": "patchLambda",
+  "successResponse": "LambdaResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "lambdaId",
+      "comments": [
+        "The Id of the lambda to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new lambda information."
+      ],
+      "type": "body",
+      "javaType": "LambdaRequest"
+    }
+  ]
+}

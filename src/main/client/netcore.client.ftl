@@ -17,6 +17,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using io.fusionauth.domain;
 using io.fusionauth.domain.api;
 using io.fusionauth.domain.api.email;
@@ -46,8 +47,11 @@ namespace io.fusionauth {
     }
 
     public IRESTClient buildClient() {
-      var client = clientBuilder.build(host)
-                                .withAuthorization(apiKey);
+      return buildAnonymousClient().withAuthorization(apiKey);
+    }
+
+    public IRESTClient buildAnonymousClient() {
+      var client = clientBuilder.build(host);
 
       if (tenantId != null) {
         client.withHeader("X-FusionAuth-TenantId", tenantId);
@@ -74,7 +78,20 @@ namespace io.fusionauth {
      /// contacted because it is down or experiencing a failure, the response will contain an Exception, which could be an
      /// IOException.</returns>
     public ClientResponse<${global.convertType(api.successResponse, "csharp")}> ${api.methodName?cap_first}(${global.methodParameters(api, "csharp")}) {
-      return buildClient()
+      [#assign formPost = false/]
+      [#list api.params![] as param]
+        [#if param.type == "form"][#assign formPost = true/][/#if]
+      [/#list]
+      [#if formPost]
+      List<KeyValuePair<string, string>> body = new List<KeyValuePair<string, string>> {
+        [#list api.params![] as param]
+          [#if param.type == "form"]
+          { new KeyValuePair<string, string>("${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)}) },
+          [/#if]
+        [/#list]
+      };
+      [/#if]
+      return build[#if api.anonymous??]Anonymous[/#if]Client()
           .withUri("${api.uri}")
       [#if api.authorization??]
           .withAuthorization(${api.authorization})
@@ -88,6 +105,9 @@ namespace io.fusionauth {
           .withJSONBody(${param.name})
         [/#if]
       [/#list]
+      [#if formPost]
+          .withFormData(new FormUrlEncodedContent(body))
+      [/#if]
           .withMethod("${api.method?cap_first}")
           .go<${global.convertType(api.successResponse, "csharp")}>();
     }

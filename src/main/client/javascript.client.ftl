@@ -20,11 +20,22 @@
 var FusionAuthClient = function(apiKey, host) {
   this.apiKey = apiKey;
   this.host = host;
+  this.tenantId = null;
 };
 
 FusionAuthClient.constructor = FusionAuthClient;
 //noinspection JSUnusedGlobalSymbols
 FusionAuthClient.prototype = {
+
+  /**
+   * Sets the tenantId on the client.
+   *
+   * @param tenantId
+   */
+  setTenantId: function(tenantId) {
+    this.tenantId = tenantId;
+    return this;
+  },
 
 [#list apis as api]
   /**
@@ -41,8 +52,20 @@ FusionAuthClient.prototype = {
    */
   [#assign parameters = global.methodParameters(api, "js")/]
   ${api.methodName}: function(${parameters}${parameters?has_content?then(', callBack', 'callBack')}) {
-      return this._start()
-      [#if api.method == "post" && !global.hasBodyParam(api.params![])]
+    [#assign formPost = false/]
+    [#list api.params![] as param]
+      [#if param.type == "form"][#assign formPost = true/][/#if]
+    [/#list]
+    [#if formPost]
+      var body = new FormData();
+      [#list api.params![] as param]
+        [#if param.type == "form"]
+      body.append('${param.name}', ${(param.constant?? && param.constant)?then("'"+param.value+"'", param.name)});
+        [/#if]
+      [/#list]
+    [/#if]
+      return this._start[#if api.anonymous??]Anonymous[/#if]()
+      [#if api.method == "post" && !formPost && !global.hasBodyParam(api.params![])]
           .header('Content-Type', 'text/plain')
       [/#if]
           .uri('${api.uri}')
@@ -58,6 +81,9 @@ FusionAuthClient.prototype = {
           .setJSONBody(${param.name})
         [/#if]
       [/#list]
+      [#if formPost]
+          .setFormData(body)
+      [/#if]
           .${api.method}()
           .go(callBack);
   },
@@ -74,7 +100,15 @@ FusionAuthClient.prototype = {
    * @private
    */
   _start: function() {
-    return new RESTClient().authorization(this.apiKey).setUrl(this.host);
+    return this._startAnonymous().authorization(this.apiKey);
+  }
+
+  _startAnonymous: function() {
+    let client = new RESTClient().setUrl(this.host);
+    if (this.tenantId != null) {
+      client.header('X-FusionAuth-TenantId', this.tenantId);
+    }
+    return client;
   }
 };
 

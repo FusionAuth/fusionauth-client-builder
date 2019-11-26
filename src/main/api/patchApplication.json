@@ -1,0 +1,28 @@
+{
+  "uri": "/api/application",
+  "comments": [
+    "Updates, via PATCH, the application with the given Id."
+  ],
+  "method": "patch",
+  "methodName": "patchApplication",
+  "successResponse": "ApplicationResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "applicationId",
+      "comments": [
+        "The Id of the application to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new application information."
+      ],
+      "type": "body",
+      "javaType": "ApplicationRequest"
+    }
+  ]
+}

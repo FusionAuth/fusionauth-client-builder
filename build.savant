@@ -57,6 +57,7 @@ target(name: "generateDomain", description: "Generates all of the json files for
   clientLibrary.generateDomainJson(srcDir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "../../libraries/java-error/src/main/java", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "../fusionauth-jwt/src/main/java/io/fusionauth/jwt/domain/", outDir: "src/main/domain")
+  clientLibrary.generateDomainJson(srcDir: "../fusionauth-jwt/src/main/java/io/fusionauth/jwks/domain/", outDir: "src/main/domain")
 
   ["io.fusionauth.domain.Buildable.json",
    "io.fusionauth.domain.Integration.json",

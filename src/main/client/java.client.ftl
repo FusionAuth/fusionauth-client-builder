@@ -34,6 +34,7 @@ import com.inversoft.rest.JSONBodyHandler;
 import com.inversoft.rest.JSONResponseHandler;
 import com.inversoft.rest.RESTClient;
 import io.fusionauth.domain.LambdaType;
+import io.fusionauth.domain.OpenIdConfiguration;
 import io.fusionauth.domain.api.ApplicationRequest;
 import io.fusionauth.domain.api.ApplicationResponse;
 import io.fusionauth.domain.api.AuditLogRequest;
@@ -128,6 +129,7 @@ import io.fusionauth.domain.api.user.VerifyEmailResponse;
 import io.fusionauth.domain.api.user.VerifyRegistrationResponse;
 import io.fusionauth.domain.oauth2.AccessToken;
 import io.fusionauth.domain.oauth2.OAuthError;
+import io.fusionauth.domain.oauth2.JWKSResponse;
 
 /**
  * Client that connects to a FusionAuth server and provides access to the full set of FusionAuth APIs.
@@ -220,7 +222,19 @@ public class FusionAuthClient {
   @Deprecated
 [/#if]
   public ClientResponse<${api.successResponse}, ${api.errorResponse}> ${api.methodName}(${global.methodParameters(api, "java")}) {
-    return start(${api.successResponse}.${(api.successResponse == 'Void')?then('TYPE', 'class')}, ${api.errorResponse}.${(api.errorResponse == 'Void')?then('TYPE', 'class')})
+  [#assign formPost = false/]
+  [#list api.params![] as param]
+    [#if param.type == "form"][#assign formPost = true/][/#if]
+  [/#list]
+  [#if formPost]
+    Map<String, String> parameters = new HashMap<>();
+    [#list api.params![] as param]
+      [#if param.type == "form"]
+    parameters.put("${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)});
+      [/#if]
+    [/#list]
+  [/#if]
+    return start[#if api.anonymous??]Anonymous[/#if](${api.successResponse}.${(api.successResponse == 'Void')?then('TYPE', 'class')}, ${api.errorResponse}.${(api.errorResponse == 'Void')?then('TYPE', 'class')})
         .uri("${api.uri}")
     [#if api.authorization??]
         .authorization(${api.authorization})
@@ -234,39 +248,21 @@ public class FusionAuthClient {
         .bodyHandler(new JSONBodyHandler(${param.name}, objectMapper))
       [/#if]
     [/#list]
+    [#if formPost]
+        .bodyHandler(new FormDataBodyHandler(parameters))
+    [/#if]
         .${api.method}()
         .go();
   }
 
 [/#list]
 
-  /**
-   * Exchanges an OAuth authorization code for an access token.
-   *
-   * @param code          The OAuth authorization code.
-   * @param client_id     The OAuth client_id.
-   * @param client_secret (Optional) The OAuth client _secret used for Basic Auth.
-   * @param redirect_uri   The OAuth redirect_uri.
-   * @return The ClientResponse that contains the access token if the request was successful.
-   */
-  public ClientResponse<AccessToken, OAuthError> exchangeOAuthCodeForAccessToken(String code, String client_id, String client_secret,
-                                                                                 String redirect_uri) {
-    Map<String, String> parameters = new HashMap<>();
-    parameters.put("code", code);
-    parameters.put("grant_type", "authorization_code");
-    parameters.put("client_id", client_id);
-    parameters.put("redirect_uri", redirect_uri);
-    return start(AccessToken.class, OAuthError.class)
-        .uri("/oauth2/token")
-        .basicAuthorization(client_id, client_secret)
-        .bodyHandler(new FormDataBodyHandler(parameters))
-        .post()
-        .go();
+  protected <T, U> RESTClient<T, U> start(Class<T> type, Class<U> errorType) {
+    return startAnonymous(type, errorType).authorization(apiKey);
   }
 
-  protected <T, U> RESTClient<T, U> start(Class<T> type, Class<U> errorType) {
+  protected <T, U> RESTClient<T, U> startAnonymous(Class<T> type, Class<U> errorType) {
     RESTClient<T, U> client = new RESTClient<>(type, errorType)
-        .authorization(apiKey)
         .successResponseHandler(type != Void.TYPE ? new JSONResponseHandler<>(type, objectMapper) : null)
         .errorResponseHandler(errorType != Void.TYPE ? new JSONResponseHandler<>(errorType, objectMapper) : null)
         .url(baseURL)
