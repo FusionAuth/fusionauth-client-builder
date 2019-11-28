@@ -19,5 +19,8 @@
   }, {
     "name" : "SAMLv2",
     "args" : [ "null" ]
+  }, {
+    "name" : "HYPR",
+    "args" : [ ]
   } ]
 }

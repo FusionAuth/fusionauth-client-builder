@@ -97,6 +97,8 @@ import io.fusionauth.domain.api.WebhookResponse;
 import io.fusionauth.domain.api.email.SendRequest;
 import io.fusionauth.domain.api.email.SendResponse;
 import io.fusionauth.domain.api.identityProvider.IdentityProviderLoginRequest;
+import io.fusionauth.domain.api.identityProvider.IdentityProviderStartLoginRequest;
+import io.fusionauth.domain.api.identityProvider.IdentityProviderStartLoginResponse;
 import io.fusionauth.domain.api.identityProvider.LookupResponse;
 import io.fusionauth.domain.api.jwt.IssueResponse;
 import io.fusionauth.domain.api.jwt.RefreshRequest;

@@ -30,6 +30,9 @@
     "emailVerificationIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "externalAuthenticationIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "oneTimePasswordTimeToLiveInSeconds" : {
       "type" : "int"
     },

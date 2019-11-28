@@ -1,0 +1,33 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "HYPRIdentityProvider",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "type" : "HYPRApplicationConfiguration"
+    } ]
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "HYPRIdentityProvider"
+    } ]
+  }, {
+    "type" : "PasswordlessIdentityProvider"
+  } ],
+  "fields" : {
+    "licensingEnabled" : {
+      "type" : "boolean"
+    },
+    "licensingURL" : {
+      "type" : "URI"
+    },
+    "relyingPartyApplicationId" : {
+      "type" : "String"
+    },
+    "relyingPartyURL" : {
+      "type" : "URI"
+    }
+  }
+}

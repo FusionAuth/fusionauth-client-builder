@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api.identityProvider",
+  "type" : "IdentityProviderStartLoginResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "IdentityProviderStartLoginResponse"
+    } ]
+  } ],
+  "fields" : {
+    "code" : {
+      "type" : "String"
+    }
+  }
+}

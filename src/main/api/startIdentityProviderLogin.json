@@ -1,0 +1,21 @@
+{
+  "uri": "/api/identity-provider/start",
+  "comments": [
+    "Begins a login request for a 3rd party login that requires user interaction such as HYPR."
+  ],
+  "method": "post",
+  "methodName": "startIdentityProviderLogin",
+  "successResponse": "IdentityProviderStartLoginResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The third-party login request that contains information from the third-party login",
+        "providers that FusionAuth uses to reconcile the user's account."
+      ],
+      "type": "body",
+      "javaType": "IdentityProviderStartLoginRequest"
+    }
+  ]
+}
