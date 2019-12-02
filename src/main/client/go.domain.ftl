@@ -52,7 +52,7 @@
 
 [#assign responseObjects = ["AccessToken","OpenIdConfiguration","OAuthValidationResult"]/]
 
-package client
+package fusionauth
 
 type StatusAble interface {
   SetStatus(status int)

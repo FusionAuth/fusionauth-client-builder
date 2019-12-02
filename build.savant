@@ -163,9 +163,9 @@ target(name: "build-swift", description: "Build the Swift Client Library") {
 
 target(name: "build-go", description: "Build the Go Client Library") {
   clientLibrary.buildClient(template: "src/main/client/go.client.ftl",
-                            outputFile: "../fusionauth-go-client/pkg/fusionauth/Client.go")
+                            outputFile: "../go-client/pkg/fusionauth/Client.go")
   clientLibrary.buildClient(template: "src/main/client/go.domain.ftl",
-                            outputFile: "../fusionauth-go-client/pkg/fusionauth/Domain.go")
+                            outputFile: "../go-client/pkg/fusionauth/Domain.go")
 }
 
 target(name: "build-android", description: "Build the Android Client Library") {
