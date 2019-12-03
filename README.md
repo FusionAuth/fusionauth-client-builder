@@ -43,7 +43,6 @@ fusionauth
 ├── fusionauth-client-builder
 ├── fusionauth-android-client
 ├── fusionauth-csharp-client
-├── fusionauth-go-client
 ├── fusionauth-java-client
 ├── fusionauth-javascript-client
 ├── fusionauth-node-client
@@ -51,7 +50,8 @@ fusionauth
 ├── fusionauth-python-client
 ├── fusionauth-ruby-client
 ├── fusionauth-swift-client
-└── fusionauth-typescript-client
+├── fusionauth-typescript-client
+└── go-client
 ```
 
 The client builder will assume the project is in the same parent directory.
