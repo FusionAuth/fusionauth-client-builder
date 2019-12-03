@@ -112,7 +112,10 @@ func (rc *restClient) Do() error {
       err = json.NewDecoder(resp.Body).Decode(rc.ErrorRef)
     }
   } else {
-    err = json.NewDecoder(resp.Body).Decode(rc.ResponseRef)
+    rc.ErrorRef = nil
+    if _, ok := rc.ResponseRef.(*BaseHTTPResponse); !ok {
+      err = json.NewDecoder(resp.Body).Decode(rc.ResponseRef)
+    }
   }
   rc.ResponseRef.(StatusAble).SetStatus(resp.StatusCode)
   return err
@@ -207,8 +210,13 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (*[#if api
     [/#list]
   [/#if]
 
-    err := c.Start[#if api.anonymous??]Anonymous[/#if](&resp[#if api.errorResponse != "Void"], &errors[#else], nil[/#if]).
+  [#if api.errorResponse != "Void"]
+    restClient := c.Start[#if api.anonymous??]Anonymous[/#if](&resp, &errors)
+    err := restClient.WithUri("${api.uri}").
+  [#else]
+    err := c.Start[#if api.anonymous??]Anonymous[/#if](&resp, nil).
              WithUri("${api.uri}").
+  [/#if]
   [#if api.authorization??]
              WithAuthorization(${api.authorization}).
   [/#if]
@@ -249,8 +257,14 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (*[#if api
   [/#if]
              WithMethod(http.Method${api.method?capitalize}).
              Do()
-
-    return &resp,[#if api.errorResponse != "Void"] &errors,[/#if] err
+  [#if api.errorResponse != "Void"]
+    if restClient.ErrorRef == nil {
+      return &resp, nil, err
+    }
+    return &resp, &errors, err
+  [#else]
+    return &resp, err
+  [/#if]
 }
 
   [/#if]
