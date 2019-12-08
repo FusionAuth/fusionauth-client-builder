@@ -35,6 +35,9 @@
     "oauth2Device" : {
       "type" : "String"
     },
+    "oauth2DeviceComplete" : {
+      "type" : "String"
+    },
     "oauth2Error" : {
       "type" : "String"
     },
