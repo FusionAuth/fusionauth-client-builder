@@ -1,28 +1,30 @@
 {
   "uri": "/api/user/bulk",
   "comments": [
-    "Deactivates the users with the given ids."
+    "Deactivates the users found with the given search query string."
   ],
   "method": "delete",
-  "methodName": "deactivateUsers",
+  "methodName": "deactivateUsersByQuery",
   "successResponse": "UserDeleteResponse",
   "errorResponse": "Errors",
   "params": [
     {
-      "name": "userIds",
+      "name": "queryString",
       "comments": [
-        "The ids of the users to deactivate."
+        "The search query string."
       ],
       "type": "urlParameter",
-      "parameterName": "userId",
-      "javaType": "Collection<UUID>"
+      "parameterName": "queryString",
+      "javaType": "String"
     },
     {
-      "constant": true,
       "name": "dryRun",
+      "comments": [
+        "Whether to preview or deactivate the users found by the queryString"
+      ],
       "type": "urlParameter",
       "parameterName": "dryRun",
-      "value": "false"
+      "javaType": "boolean"
     },
     {
       "constant": true,

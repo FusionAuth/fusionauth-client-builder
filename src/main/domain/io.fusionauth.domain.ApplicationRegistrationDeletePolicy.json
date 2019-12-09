@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationRegistrationDeletePolicy",
+  "description" : "/**\n * A Application-level policy for deleting Users.\n *\n * @author Trevor Smith\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ApplicationRegistrationDeletePolicy"
+    } ]
+  } ],
+  "fields" : {
+    "unverified" : {
+      "type" : "TimeBasedDeletePolicy"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TimeBasedDeletePolicy",
+  "description" : "/**\n * A policy for deleting Users.\n *\n * @author Trevor Smith\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TimeBasedDeletePolicy"
+    } ]
+  } ],
+  "fields" : {
+    "numberOfDaysToRetain" : {
+      "type" : "int"
+    }
+  }
+}

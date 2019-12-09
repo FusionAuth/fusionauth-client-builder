@@ -1,17 +1,19 @@
 {
   "uri": "/api/user/bulk",
   "comments": [
-    "Deletes the users with the given ids."
+    "Deletes the users with the given ids, or users matching the provided queryString.",
+    "If you provide both userIds and queryString, the userIds will be honored.  This can be used to deactivate or hard-delete ",
+    "a user based on the hardDelete request body parameter."
   ],
   "method": "delete",
   "methodName": "deleteUsers",
-  "successResponse": "Void",
+  "successResponse": "UserDeleteResponse",
   "errorResponse": "Errors",
   "params": [
     {
       "name": "request",
       "comments": [
-        "The ids of the users to delete."
+        "The UserDeleteRequest."
       ],
       "type": "body",
       "javaType": "UserDeleteRequest"

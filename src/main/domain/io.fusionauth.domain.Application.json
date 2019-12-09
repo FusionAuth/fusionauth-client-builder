@@ -54,6 +54,9 @@
     "registrationConfiguration" : {
       "type" : "RegistrationConfiguration"
     },
+    "registrationDeletePolicy" : {
+      "type" : "ApplicationRegistrationDeletePolicy"
+    },
     "roles" : {
       "type" : "List",
       "typeArguments" : [ {

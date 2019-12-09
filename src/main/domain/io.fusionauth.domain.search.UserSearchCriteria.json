@@ -27,6 +27,9 @@
         "type" : "UUID"
       } ]
     },
+    "query" : {
+      "type" : "String"
+    },
     "queryString" : {
       "type" : "String"
     },
