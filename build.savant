@@ -174,7 +174,7 @@ target(name: "build-android", description: "Build the Android Client Library") {
 
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
                                                                                   "build-php",
-                                                                                  "build-angular",
+//                                                                                  "build-angular",
                                                                                   "build-csharp",
                                                                                   "build-go",
                                                                                   "build-netcore",
