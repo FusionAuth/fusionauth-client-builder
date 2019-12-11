@@ -7,7 +7,6 @@
   "methodName": "resendRegistrationVerification",
   "successResponse": "VerifyRegistrationResponse",
   "errorResponse": "Errors",
-  "anonymous": true,
   "params": [
     {
       "name": "email",
