@@ -7,7 +7,6 @@
   "methodName": "resendEmailVerification",
   "successResponse": "VerifyEmailResponse",
   "errorResponse": "Errors",
-  "anonymous": true,
   "params": [
     {
       "name": "email",
