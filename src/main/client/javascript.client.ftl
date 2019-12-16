@@ -112,6 +112,12 @@ FusionAuthClient.prototype = {
   }
 };
 
+/**
+ * A 128 bit UUID in string format "8-4-4-4-12", for example "58D5E212-165B-4CA0-909B-C86B9CEE0111".
+ *
+ * @typedef {string} UUIDString
+ */
+
 [#macro printType type]
   [#if type.type??]
       ${global.convertType(type.type, "js")}[#t][#if type.typeArguments?has_content]
