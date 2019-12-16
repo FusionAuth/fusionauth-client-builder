@@ -1,5 +1,6 @@
 {
   "packageName" : "io.fusionauth.domain.util",
   "type" : "HTTPMethod",
-  "enum" : [ "GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS" ]
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS", "PATCH" ]
 }
