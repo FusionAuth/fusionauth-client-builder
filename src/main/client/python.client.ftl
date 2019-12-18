@@ -37,6 +37,9 @@ class FusionAuthClient:
       self.tenant_id = tenant_id
 
 [#list apis as api]
+[#if api.deprecated??]
+    @deprecated(reason="${api.deprecated?replace("{{renamedMethod}}", camel_to_underscores(api.renamedMethod!''))}")
+[/#if]
     def ${camel_to_underscores(api.methodName)}(${global.methodParameters(api, "python")}):
         """
         ${api.comments?join("\n        ")}

@@ -1,10 +1,14 @@
 {
   "uri": "/api/user/bulk",
   "comments": [
-    "Deletes the users with the given ids, or users matching the provided queryString.",
-    "If you provide both userIds and queryString, the userIds will be honored.  This can be used to deactivate or hard-delete ",
-    "a user based on the hardDelete request body parameter."
+    "Deletes the users with the given ids, or users matching the provided JSON query or queryString.",
+    "The order of preference is ids, query and then queryString, it is recommended to only provide one of the three for the request.",
+    "",
+    "This method can be used to deactivate or permanently delete (hard-delete) users based upon the hardDelete boolean in the request body.",
+    "Using the dryRun parameter you may also request the result of the action without actually deleting or deactivating any users."
   ],
+  "deprecated": "This method has been renamed to {{renamedMethod}}, use this method instead.",
+  "renamedMethod": "deleteUsersByQuery",
   "method": "delete",
   "methodName": "deleteUsers",
   "successResponse": "UserDeleteResponse",

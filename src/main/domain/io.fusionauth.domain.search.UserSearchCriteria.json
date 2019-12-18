@@ -12,15 +12,6 @@
     } ]
   } ],
   "fields" : {
-    "email" : {
-      "type" : "String"
-    },
-    "fullName" : {
-      "type" : "String"
-    },
-    "id" : {
-      "type" : "UUID"
-    },
     "ids" : {
       "type" : "List",
       "typeArguments" : [ {
@@ -38,9 +29,6 @@
       "typeArguments" : [ {
         "type" : "SortField"
       } ]
-    },
-    "username" : {
-      "type" : "String"
     }
   }
 }

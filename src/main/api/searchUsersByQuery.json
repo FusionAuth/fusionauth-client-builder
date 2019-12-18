@@ -3,18 +3,16 @@
   "comments": [
     "Retrieves the users for the given search criteria and pagination."
   ],
-  "deprecated": "This method has been renamed to {{renamedMethod}}, use this method instead.",
-  "renamedMethod": "searchUsersByQuery",
   "method": "post",
-  "methodName": "searchUsersByQueryString",
+  "methodName": "searchUsersByQuery",
   "successResponse": "SearchResponse",
   "errorResponse": "Errors",
   "params": [
     {
       "name": "request",
       "comments": [
-          "The search criteria and pagination constraints. Fields used: ids, query, queryString, numberOfResults, orderBy, startRow,",
-          "and sortFields."
+        "The search criteria and pagination constraints. Fields used: ids, query, queryString, numberOfResults, orderBy, startRow,",
+        "and sortFields."
       ],
       "type": "body",
       "javaType": "SearchRequest"

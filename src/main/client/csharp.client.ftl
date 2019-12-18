@@ -100,6 +100,9 @@ namespace FusionAuth
      * contacted because it is down or experiencing a failure, the response will contain an Exception, which could be an
      * IOException.
      */
+   [#if api.deprecated??]
+    [Obsolete("${api.deprecated?replace("{{renamedMethod}}", (api.renamedMethod!'')?cap_first)}")]
+   [/#if]
     public ClientResponse<${global.convertType(api.successResponse, "csharp")}, ${global.convertType(api.errorResponse, "csharp")}> ${api.methodName?cap_first}(${global.methodParameters(api, "csharp")})
     {
     [#assign formPost = false/]

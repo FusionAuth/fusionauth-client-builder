@@ -56,6 +56,11 @@ export class FusionAuthClient {
   [/#list]
    * @returns {Observable<ClientResponse<${global.convertType(api.successResponse, "ts")}>>}
    */
+[#if api.deprecated??]
+   *
+   * @deprecated ${api.deprecated?replace("{{renamedMethod}}", api.renamedMethod!'')}
+[/#if]
+   */
   [#assign parameters = global.methodParameters(api, "ts")/]
   ${api.methodName}(${parameters}): Observable<ClientResponse<${global.convertType(api.successResponse, "ts")}>> {
   [#assign formPost = false/]

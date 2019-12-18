@@ -3,10 +3,8 @@
   "comments": [
     "Retrieves the users for the given ids. If any id is invalid, it is ignored."
   ],
-  "deprecated": "This method has been renamed to {{renamedMethod}}, use this method instead.",
-  "renamedMethod": "searchUsersByIds",
   "method": "get",
-  "methodName": "searchUsers",
+  "methodName": "searchUsersByIds",
   "successResponse": "SearchResponse",
   "errorResponse": "Errors",
   "params": [

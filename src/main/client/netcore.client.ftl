@@ -77,6 +77,9 @@ namespace io.fusionauth {
      /// other type of error, this will return the Errors object in the response. Additionally, if FusionAuth could not be
      /// contacted because it is down or experiencing a failure, the response will contain an Exception, which could be an
      /// IOException.</returns>
+     [#if api.deprecated??]
+    [Obsolete("${api.deprecated?replace("{{renamedMethod}}", (api.renamedMethod!'')?cap_first)}")]
+     [/#if]
     public ClientResponse<${global.convertType(api.successResponse, "csharp")}> ${api.methodName?cap_first}(${global.methodParameters(api, "csharp")}) {
       [#assign formPost = false/]
       [#list api.params![] as param]

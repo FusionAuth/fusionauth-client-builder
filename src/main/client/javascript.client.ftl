@@ -49,6 +49,10 @@ FusionAuthClient.prototype = {
     [/#if]
   [/#list]
    * @param {Function} callBack The response handler call back. This function will be passed the ClientResponse object.
+[#if api.deprecated??]
+   *
+   * @deprecated ${api.deprecated?replace("{{renamedMethod}}", api.renamedMethod!'')}
+[/#if]
    */
   [#assign parameters = global.methodParameters(api, "js")/]
   ${api.methodName}: function(${parameters}${parameters?has_content?then(', callBack', 'callBack')}) {

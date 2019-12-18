@@ -192,6 +192,10 @@ func (rc *restClient) WithUriSegment(segment string) *restClient {
     [/#if]
   [/#list]
   [#assign parameters = global.methodParameters(api, "go")/]
+  [#if api.deprecated??]
+//
+// Deprecated: ${api.deprecated?replace("{{renamedMethod}}", (api.renamedMethod!'')?cap_first)}
+  [/#if]
 func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (*[#if api.successResponse == "Void"]BaseHTTPResponse[#else]${global.convertType(api.successResponse, "go")}[/#if][#if api.errorResponse != "Void"], *${global.convertType(api.errorResponse, "go")}[/#if], error) {
     var resp [#if api.successResponse == "Void"]BaseHTTPResponse[#else]${global.convertType(api.successResponse, "go")}[/#if]
   [#if api.errorResponse != "Void"]

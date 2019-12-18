@@ -54,7 +54,9 @@ module FusionAuth
     [/#if]
   [/#list]
     # @return [FusionAuth::ClientResponse] The ClientResponse object.
-    #
+[#if api.deprecated??]
+    # @deprecated ${api.deprecated?replace("{{renamedMethod}}", camel_to_underscores(api.renamedMethod!''))}
+[/#if]
     def ${camel_to_underscores(api.methodName)}(${global.methodParameters(api, "ruby")})
       [#assign formPost = false/]
       [#list api.params![] as param]

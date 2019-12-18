@@ -3,6 +3,8 @@
   "comments": [
     "Deactivates the users with the given ids."
   ],
+  "deprecated": "This method has been renamed to {{renamedMethod}}, use this method instead.",
+  "renamedMethod": "deactivateUsersByIds",
   "method": "delete",
   "methodName": "deactivateUsers",
   "successResponse": "UserDeleteResponse",

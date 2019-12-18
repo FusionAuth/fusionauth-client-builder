@@ -49,6 +49,10 @@ FusionAuthClient.prototype = {
     [/#if]
   [/#list]
    * @return {Promise<ClientResponse<${global.convertType(api.successResponse, "js")}>>} A Promise for the FusionAuth call.
+[#if api.deprecated??]
+   *
+   * @deprecated ${api.deprecated?replace("{{renamedMethod}}", api.renamedMethod!'')}
+[/#if]
    */
   ${api.methodName}: function(${global.methodParameters(api, "js")}) {
     [#assign formPost = false/]

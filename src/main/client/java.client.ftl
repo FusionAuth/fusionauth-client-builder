@@ -219,7 +219,7 @@ public class FusionAuthClient {
   [/#list]
    * @return The ClientResponse object.
 [#if api.deprecated??]
-   * @deprecated ${api.deprecated}
+   * @deprecated ${api.deprecated?replace("{{renamedMethod}}", api.renamedMethod!'')}
 [/#if]
    */
 [#if api.deprecated??]

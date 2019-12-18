@@ -93,6 +93,9 @@ class FusionAuthClient
    *
    * @return ClientResponse The ClientResponse.
    * @throws \Exception
+[#if api.deprecated??]
+   * @deprecated ${api.deprecated?replace("{{renamedMethod}}", api.renamedMethod!'')}
+[/#if]
    */
   public function ${api.methodName}(${global.methodParameters(api, "php")})
   {
