@@ -3,7 +3,7 @@
   "comments": [
     "Retrieves the users for the given search criteria and pagination."
   ],
-  "deprecated": "This method has been renamed to {{renamedMethod}}, use this method instead.",
+  "deprecated": "This method has been renamed to {{renamedMethod}}, use that method instead.",
   "renamedMethod": "searchUsersByQuery",
   "method": "post",
   "methodName": "searchUsersByQueryString",

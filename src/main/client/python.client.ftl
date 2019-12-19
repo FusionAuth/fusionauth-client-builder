@@ -15,6 +15,7 @@
 # language governing permissions and limitations under the License.
 #
 
+from deprecated import deprecated
 from fusionauth.rest_client import RESTClient, JSONBodyHandler, FormDataBodyHandler
 
 
@@ -38,7 +39,7 @@ class FusionAuthClient:
 
 [#list apis as api]
 [#if api.deprecated??]
-    @deprecated(reason="${api.deprecated?replace("{{renamedMethod}}", camel_to_underscores(api.renamedMethod!''))}")
+    @deprecated("${api.deprecated?replace("{{renamedMethod}}", camel_to_underscores(api.renamedMethod!''))}")
 [/#if]
     def ${camel_to_underscores(api.methodName)}(${global.methodParameters(api, "python")}):
         """
