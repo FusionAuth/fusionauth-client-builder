@@ -105,7 +105,7 @@ FusionAuthClient.prototype = {
    */
   _start: function() {
     return this._startAnonymous().authorization(this.apiKey);
-  }
+  },
 
   _startAnonymous: function() {
     let client = new RESTClient().setUrl(this.host);
