@@ -66,10 +66,10 @@ export class FusionAuthClient {
     [/#if]
   [/#list]
    * @returns {Promise<ClientResponse<${global.convertType(api.successResponse, "ts")}>>}
-[#if api.deprecated??]
+  [#if api.deprecated??]
    *
    * @deprecated ${api.deprecated?replace("{{renamedMethod}}", api.renamedMethod!'')}
-[/#if]
+  [/#if]
    */
   [#assign parameters = global.methodParameters(api, "ts")/]
   ${api.methodName}(${parameters}): Promise<ClientResponse<${global.convertType(api.successResponse, "ts")}>> {
@@ -85,7 +85,7 @@ export class FusionAuthClient {
       [/#if]
     [/#list]
   [/#if]
-    return this.start[#if api.anonymous??]Anonymous[/#if]()
+    return this.start[#if api.anonymous??]Anonymous[/#if]<${global.convertType(api.successResponse, "ts")}, ${global.convertType(api.errorResponse, "ts")}>()
   [#if api.method == "post" && !formPost && !global.hasBodyParam(api.params![])]
         .withHeader('Content-Type', 'text/plain')
   [/#if]
@@ -106,7 +106,10 @@ export class FusionAuthClient {
         .withFormData(body)
   [/#if]
         .withMethod("${api.method?upper_case}")
-        .go<${global.convertType(api.successResponse, "ts")}>();
+        [#if api.successResponse != "Void"]
+        .withResponseHandler(JSONResponseHandler)
+        [/#if]
+        .go();
   }
 
 [/#list]
@@ -122,12 +125,17 @@ export class FusionAuthClient {
    * @returns {IRestClient} The RESTClient that will be used to call.
    * @private
    */
-  private start(): IRESTClient {
-    return this.startAnonymous().withAuthorization(this.apiKey);
+  private start<RT, ERT>(): IRESTClient<RT, ERT> {
+    return this.startAnonymous<RT, ERT>()
+               .withAuthorization(this.apiKey);
   }
 
-  private startAnonymous(): IRESTClient {
-    let client = this.clientBuilder.build(this.host);
+  private startAnonymous<RT, ERT>(): IRESTClient<RT, ERT> {
+    let client = this.clientBuilder.build<RT, ERT>(this.host);
+
+    // Due to the lack of reflection this is declared per api
+    // client.withResponseHandler(JSONResponseHandler);
+    client.withErrorResponseHandler(ErrorJSONResponseHandler);
 
     if (this.tenantId != null) {
       client.withHeader('X-FusionAuth-TenantId', this.tenantId);
@@ -142,10 +150,41 @@ export class FusionAuthClient {
 }
 
 /**
+* A function that returns the JSON form of the response text.
+*
+* @param response
+* @constructor
+*/
+async function JSONResponseHandler<RT>(response: Response): Promise<ClientResponse<RT>> {
+  let clientResponse = new ClientResponse<RT>();
+
+  clientResponse.statusCode = response.status;
+  clientResponse.response = await response.json();
+
+  return clientResponse;
+}
+
+/**
+* A function that returns the JSON form of the response text.
+*
+* @param response
+* @constructor
+*/
+async function ErrorJSONResponseHandler<ERT>(response: Response): Promise<ClientResponse<ERT>> {
+  let clientResponse = new ClientResponse<ERT>();
+
+  clientResponse.statusCode = response.status;
+  clientResponse.exception = await response.json();
+
+  return clientResponse;
+}
+
+/**
  * A 128 bit UUID in string format "8-4-4-4-12", for example "58D5E212-165B-4CA0-909B-C86B9CEE0111".
  */
 type UUID = string;
 
+[#-- @formatter:off --]
 [#macro printType type]
   [#if type.type??]
     ${global.convertType(type.type, "ts")}[#if type.typeArguments?has_content]<[#list type.typeArguments as typeArgument][@printType typeArgument/][#sep], [/#sep][/#list]>[/#if][#if type.extends??] extends [#list type.extends as extends][@printType extends/][#sep], [/#sep][/#list][/#if][#t]
@@ -154,7 +193,6 @@ type UUID = string;
   [/#if]
 [/#macro]
 
-[#-- @formatter:off --]
 [#list domain?sort_by("type") as d]
 [#if d.description??]${d.description}[/#if][#t]
 [#if d.fields??]
