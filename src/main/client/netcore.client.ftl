@@ -1,6 +1,6 @@
 [#import "_macros.ftl" as global/]
 /*
- * Copyright (c) 2018-2019, FusionAuth, All Rights Reserved
+ * Copyright (c) 2018-2020, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,6 +27,7 @@ using io.fusionauth.domain.api.passwordless;
 using io.fusionauth.domain.api.report;
 using io.fusionauth.domain.api.twoFactor;
 using io.fusionauth.domain.api.user;
+using io.fusionauth.domain.oauth2;
 
 namespace io.fusionauth {
   public class FusionAuthClient {

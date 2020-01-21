@@ -3,6 +3,9 @@
   "type" : "TenantRequest",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "fields" : {
+    "sourceTenantId" : {
+      "type" : "UUID"
+    },
     "tenant" : {
       "type" : "Tenant"
     }
