@@ -18,6 +18,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Threading.Tasks;
 using io.fusionauth.domain;
 using io.fusionauth.domain.api;
 using io.fusionauth.domain.api.email;
@@ -64,10 +65,10 @@ namespace io.fusionauth {
     [#list apis as api]
 
     /// <summary>
-	/// Asynchronous method.
       [#list api.comments as comment]
     /// ${comment}
       [/#list]
+	/// This is an asynchronous method.
     /// </summary>
       [#list api.params![] as param]
         [#if !param.constant??]
@@ -134,7 +135,7 @@ namespace io.fusionauth {
     [Obsolete("${api.deprecated?replace("{{renamedMethod}}", (api.renamedMethod!'')?cap_first)}")]
      [/#if]
     public ClientResponse<${global.convertType(api.successResponse, "csharp")}> ${api.methodName?cap_first}(${global.methodParameters(api, "csharp")}) {
-      return ${api.methodName?cap_first}Async(${api.params![]?join(", ")}).GetAwaiter().GetResult();
+      return ${api.methodName?cap_first}Async(${api.params.name![]?join(", ")}).GetAwaiter().GetResult();
     }
 	
     [/#list]
