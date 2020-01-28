@@ -15,6 +15,16 @@
  * language governing permissions and limitations under the License.
  */
 
+[#function paramNames api]
+  [#local result = []]
+  [#list api.params![] as param]
+    [#if !param.constant??]
+      [#local result = result + [param.name]/]
+    [/#if]
+  [/#list]
+  [#return result?join(", ")/]
+[/#function]
+
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -61,18 +71,17 @@ namespace io.fusionauth {
 
       return client;
     }
-
     [#list apis as api]
 
     /// <summary>
       [#list api.comments as comment]
     /// ${comment}
       [/#list]
-	/// This is an asynchronous method.
+    /// This is an asynchronous method.
     /// </summary>
       [#list api.params![] as param]
         [#if !param.constant??]
-    /// <param name="${param.name}"> ${param.comments?join("\n     /// ")}</param>
+    /// <param name="${param.name}"> ${param.comments?join("\n    /// ")}</param>
         [/#if]
       [/#list]
     /// <returns>When successful, the response will contain the log of the action. If there was a validation error or any
@@ -117,7 +126,7 @@ namespace io.fusionauth {
           .goAsync<${global.convertType(api.successResponse, "csharp")}>();
     }
 		
-	/// <summary>
+    /// <summary>
       [#list api.comments as comment]
     /// ${comment}
       [/#list]
@@ -135,11 +144,9 @@ namespace io.fusionauth {
     [Obsolete("${api.deprecated?replace("{{renamedMethod}}", (api.renamedMethod!'')?cap_first)}")]
      [/#if]
     public ClientResponse<${global.convertType(api.successResponse, "csharp")}> ${api.methodName?cap_first}(${global.methodParameters(api, "csharp")}) {
-      return ${api.methodName?cap_first}Async(${api.params.name![]?join(", ")}).GetAwaiter().GetResult();
+      return ${api.methodName?cap_first}Async(${paramNames(api)}).GetAwaiter().GetResult();
     }
-	
     [/#list]
-
   }
 
   internal class DefaultRESTClientBuilder : IRESTClientBuilder {
