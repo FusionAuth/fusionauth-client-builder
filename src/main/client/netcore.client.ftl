@@ -15,9 +15,20 @@
  * language governing permissions and limitations under the License.
  */
 
+[#function paramNames api]
+  [#local result = []]
+  [#list api.params![] as param]
+    [#if !param.constant??]
+      [#local result = result + [param.name]/]
+    [/#if]
+  [/#list]
+  [#return result?join(", ")/]
+[/#function]
+
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Threading.Tasks;
 using io.fusionauth.domain;
 using io.fusionauth.domain.api;
 using io.fusionauth.domain.api.email;
@@ -37,7 +48,7 @@ namespace io.fusionauth {
 
     public readonly string tenantId;
 
-    public IRESTClientBuilder clientBuilder;
+    public readonly IRESTClientBuilder clientBuilder;
 
     public FusionAuthClient(string apiKey, string host, string tenantId = null) {
       this.apiKey = apiKey;
@@ -60,37 +71,36 @@ namespace io.fusionauth {
 
       return client;
     }
-
     [#list apis as api]
 
-     /// <summary>
+    /// <summary>
       [#list api.comments as comment]
-     /// ${comment}
+    /// ${comment}
       [/#list]
-     /// </summary>
-     ///
+    /// This is an asynchronous method.
+    /// </summary>
       [#list api.params![] as param]
         [#if !param.constant??]
-     /// <param name="${param.name}"> ${param.comments?join("\n     /// ")}</param>
+    /// <param name="${param.name}"> ${param.comments?join("\n    /// ")}</param>
         [/#if]
       [/#list]
-     /// <returns>When successful, the response will contain the log of the action. If there was a validation error or any
-     /// other type of error, this will return the Errors object in the response. Additionally, if FusionAuth could not be
-     /// contacted because it is down or experiencing a failure, the response will contain an Exception, which could be an
-     /// IOException.</returns>
+    /// <returns>When successful, the response will contain the log of the action. If there was a validation error or any
+    /// other type of error, this will return the Errors object in the response. Additionally, if FusionAuth could not be
+    /// contacted because it is down or experiencing a failure, the response will contain an Exception, which could be an
+    /// IOException.</returns>
      [#if api.deprecated??]
-    [Obsolete("${api.deprecated?replace("{{renamedMethod}}", (api.renamedMethod!'')?cap_first)}")]
+    [Obsolete("${api.deprecated?replace("{{renamedMethod}}",(api.renamedMethod!'')?cap_first + "Async")}")]
      [/#if]
-    public ClientResponse<${global.convertType(api.successResponse, "csharp")}> ${api.methodName?cap_first}(${global.methodParameters(api, "csharp")}) {
+    public Task<ClientResponse<${global.convertType(api.successResponse, "csharp")}>> ${api.methodName?cap_first}Async(${global.methodParameters(api, "csharp")}) {
       [#assign formPost = false/]
       [#list api.params![] as param]
         [#if param.type == "form"][#assign formPost = true/][/#if]
       [/#list]
       [#if formPost]
-      List<KeyValuePair<string, string>> body = new List<KeyValuePair<string, string>> {
+      var body = new Dictionary<string, string> {
         [#list api.params![] as param]
           [#if param.type == "form"]
-          { new KeyValuePair<string, string>("${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)}) },
+          { "${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)} },
           [/#if]
         [/#list]
       };
@@ -113,10 +123,30 @@ namespace io.fusionauth {
           .withFormData(new FormUrlEncodedContent(body))
       [/#if]
           .withMethod("${api.method?cap_first}")
-          .go<${global.convertType(api.successResponse, "csharp")}>();
+          .goAsync<${global.convertType(api.successResponse, "csharp")}>();
+    }
+		
+    /// <summary>
+      [#list api.comments as comment]
+    /// ${comment}
+      [/#list]
+    /// </summary>
+      [#list api.params![] as param]
+        [#if !param.constant??]
+    /// <param name="${param.name}"> ${param.comments?join("\n     /// ")}</param>
+        [/#if]
+      [/#list]
+    /// <returns>When successful, the response will contain the log of the action. If there was a validation error or any
+    /// other type of error, this will return the Errors object in the response. Additionally, if FusionAuth could not be
+    /// contacted because it is down or experiencing a failure, the response will contain an Exception, which could be an
+    /// IOException.</returns>
+     [#if api.deprecated??]
+    [Obsolete("${api.deprecated?replace("{{renamedMethod}}", (api.renamedMethod!'')?cap_first)}")]
+     [/#if]
+    public ClientResponse<${global.convertType(api.successResponse, "csharp")}> ${api.methodName?cap_first}(${global.methodParameters(api, "csharp")}) {
+      return ${api.methodName?cap_first}Async(${paramNames(api)}).GetAwaiter().GetResult();
     }
     [/#list]
-
   }
 
   internal class DefaultRESTClientBuilder : IRESTClientBuilder {
