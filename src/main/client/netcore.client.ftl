@@ -15,16 +15,6 @@
  * language governing permissions and limitations under the License.
  */
 
-[#function paramNames api]
-  [#local result = []]
-  [#list api.params![] as param]
-    [#if !param.constant??]
-      [#local result = result + [param.name]/]
-    [/#if]
-  [/#list]
-  [#return result?join(", ")/]
-[/#function]
-
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -41,7 +31,7 @@ using io.fusionauth.domain.api.user;
 using io.fusionauth.domain.oauth2;
 
 namespace io.fusionauth {
-  public class FusionAuthClient {
+  public class FusionAuthClient : IFusionAuthClient {
     public readonly string apiKey;
 
     public readonly string host;
@@ -73,21 +63,7 @@ namespace io.fusionauth {
     }
     [#list apis as api]
 
-    /// <summary>
-      [#list api.comments as comment]
-    /// ${comment}
-      [/#list]
-    /// This is an asynchronous method.
-    /// </summary>
-      [#list api.params![] as param]
-        [#if !param.constant??]
-    /// <param name="${param.name}"> ${param.comments?join("\n    /// ")}</param>
-        [/#if]
-      [/#list]
-    /// <returns>When successful, the response will contain the log of the action. If there was a validation error or any
-    /// other type of error, this will return the Errors object in the response. Additionally, if FusionAuth could not be
-    /// contacted because it is down or experiencing a failure, the response will contain an Exception, which could be an
-    /// IOException.</returns>
+    /// <inheritdoc/>
      [#if api.deprecated??]
     [Obsolete("${api.deprecated?replace("{{renamedMethod}}",(api.renamedMethod!'')?cap_first + "Async")}")]
      [/#if]
@@ -124,27 +100,6 @@ namespace io.fusionauth {
       [/#if]
           .withMethod("${api.method?cap_first}")
           .goAsync<${global.convertType(api.successResponse, "csharp")}>();
-    }
-		
-    /// <summary>
-      [#list api.comments as comment]
-    /// ${comment}
-      [/#list]
-    /// </summary>
-      [#list api.params![] as param]
-        [#if !param.constant??]
-    /// <param name="${param.name}"> ${param.comments?join("\n     /// ")}</param>
-        [/#if]
-      [/#list]
-    /// <returns>When successful, the response will contain the log of the action. If there was a validation error or any
-    /// other type of error, this will return the Errors object in the response. Additionally, if FusionAuth could not be
-    /// contacted because it is down or experiencing a failure, the response will contain an Exception, which could be an
-    /// IOException.</returns>
-     [#if api.deprecated??]
-    [Obsolete("${api.deprecated?replace("{{renamedMethod}}", (api.renamedMethod!'')?cap_first)}")]
-     [/#if]
-    public ClientResponse<${global.convertType(api.successResponse, "csharp")}> ${api.methodName?cap_first}(${global.methodParameters(api, "csharp")}) {
-      return ${api.methodName?cap_first}Async(${paramNames(api)}).GetAwaiter().GetResult();
     }
     [/#list]
   }
