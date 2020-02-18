@@ -3,6 +3,12 @@
   "type" : "SecureIdentity",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "fields" : {
+    "breachedPasswordLastCheckedInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "breachedPasswordStatus" : {
+      "type" : "BreachedPasswordStatus"
+    },
     "encryptionScheme" : {
       "type" : "String"
     },
@@ -14,6 +20,9 @@
     },
     "password" : {
       "type" : "String"
+    },
+    "passwordChangeReason" : {
+      "type" : "ChangePasswordReason"
     },
     "passwordChangeRequired" : {
       "type" : "boolean"

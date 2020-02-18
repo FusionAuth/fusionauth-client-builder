@@ -51,6 +51,9 @@
     "name" : "UserEmailVerified",
     "args" : [ "user.email.verified" ]
   }, {
+    "name" : "UserPasswordBreach",
+    "args" : [ "user.password.breach" ]
+  }, {
     "name" : "Test",
     "args" : [ "test" ]
   } ]

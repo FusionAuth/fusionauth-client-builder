@@ -18,6 +18,9 @@
     "changePasswordId" : {
       "type" : "String"
     },
+    "changePasswordReason" : {
+      "type" : "ChangePasswordReason"
+    },
     "refreshToken" : {
       "type" : "String"
     },
