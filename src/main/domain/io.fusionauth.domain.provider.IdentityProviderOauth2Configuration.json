@@ -12,6 +12,9 @@
     "authorization_endpoint" : {
       "type" : "URI"
     },
+    "clientAuthenticationMethod" : {
+      "type" : "ClientAuthenticationMethod"
+    },
     "client_id" : {
       "type" : "String"
     },
