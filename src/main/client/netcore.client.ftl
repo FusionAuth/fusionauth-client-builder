@@ -31,7 +31,7 @@ using io.fusionauth.domain.api.user;
 using io.fusionauth.domain.oauth2;
 
 namespace io.fusionauth {
-  public class FusionAuthClient : IFusionAuthClient {
+  public class FusionAuthClient : IFusionAuthAsyncClient {
     public readonly string apiKey;
 
     public readonly string host;

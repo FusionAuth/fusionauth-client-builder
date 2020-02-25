@@ -16,7 +16,7 @@
   [#return result?join(", ")/]
 [/#function]
 /*
- * Copyright (c) 2018-2020, FusionAuth, All Rights Reserved
+ * Copyright (c) 2020, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,29 +45,20 @@ using io.fusionauth.domain.api.user;
 using io.fusionauth.domain.oauth2;
 
 namespace io.fusionauth {
-  public static class FusionAuthClientExtensions {
-    [#list apis as api]
-		[#assign params = removeConstantParams(api.params![])]
+  public class FusionAuthSyncClient : IFusionAuthSyncClient {
+    public readonly FusionAuthClient client;
 
-    /// <summary>
-      [#list api.comments as comment]
-    /// ${comment}
-      [/#list]
-    /// </summary>
-    /// <param name="client">The <see cref="IFusionAuthClient"> to extend.</param>
-      [#list params as param]
-    /// <param name="${param.name}"> ${param.comments?join("\n     /// ")}</param>
-      [/#list]
-    /// <returns>
-    /// When successful, the response will contain the log of the action. If there was a validation error or any
-    /// other type of error, this will return the Errors object in the response. Additionally, if FusionAuth could not be
-    /// contacted because it is down or experiencing a failure, the response will contain an Exception, which could be an
-    /// IOException.
-    /// </returns>
-     [#if api.deprecated??]
+    public FusionAuthSyncClient(string apiKey, string host, string tenantId = null) {
+      client = new FusionAuthClient(apiKey, host, tenantId);
+    }
+    [#list apis as api]
+
+		[#assign params = removeConstantParams(api.params![])]
+    /// <inheritdoc/>
+    [#if api.deprecated??]
     [Obsolete("${api.deprecated?replace("{{renamedMethod}}", (api.renamedMethod!'')?cap_first)}")]
-     [/#if]
-    public static ClientResponse<${global.convertType(api.successResponse, "csharp")}> ${api.methodName?cap_first}(this IFusionAuthClient client[#if params?size > 0], [/#if]${global.methodParameters(api, "csharp")}) {
+    [/#if]
+    public ClientResponse<${global.convertType(api.successResponse, "csharp")}> ${api.methodName?cap_first}(${global.methodParameters(api, "csharp")}) {
       return client.${api.methodName?cap_first}Async(${getParamNames(params)}).GetAwaiter().GetResult();
     }
     [/#list]
