@@ -122,6 +122,10 @@ target(name: "build-csharp", description: "Build the C# Client Library") {
 }
 
 target(name: "build-netcore", description: "Build the C# .netCore Client Library") {
+  clientLibrary.buildClient(template: "src/main/client/netcore.client.interface.ftl",
+                            outputFile: "../fusionauth-netcore-client/fusionauth-netcore-client/src/io/fusionauth/IFusionAuthClient.cs")
+  clientLibrary.buildClient(template: "src/main/client/netcore.client.extensions.ftl",
+                            outputFile: "../fusionauth-netcore-client/fusionauth-netcore-client/src/io/fusionauth/FusionAuthClientExtensions.cs")
   clientLibrary.buildClient(template: "src/main/client/netcore.client.ftl",
                             outputFile: "../fusionauth-netcore-client/fusionauth-netcore-client/src/io/fusionauth/FusionAuthClient.cs")
   file.delete {
