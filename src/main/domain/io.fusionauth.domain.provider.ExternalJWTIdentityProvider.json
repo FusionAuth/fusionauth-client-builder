@@ -31,13 +31,14 @@
         "type" : "String"
       } ]
     },
-    "keys" : {
-      "type" : "Map",
+    "keyIds" : {
+      "type" : "Set",
       "typeArguments" : [ {
-        "type" : "String"
-      }, {
-        "type" : "String"
+        "type" : "UUID"
       } ]
+    },
+    "defaultKeyId" : {
+      "type" : "UUID"
     },
     "headerKeyParameter" : {
       "type" : "String"
