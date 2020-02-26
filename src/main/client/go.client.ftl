@@ -34,12 +34,15 @@ import (
 // if httpClient is nil then a DefaultClient is used
 func NewClient(httpClient *http.Client, baseURL *url.URL, apiKey string) *FusionAuthClient {
   if httpClient == nil {
-    httpClient = http.DefaultClient
+    httpClient = &http.Client{
+      Timeout: 5 * time.Minute,
+    }
   }
   c := &FusionAuthClient{
     HTTPClient: httpClient,
     BaseURL:    baseURL,
-    APIKey:     apiKey}
+    APIKey:     apiKey,
+  }
 
   return c
 }
