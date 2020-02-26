@@ -38,7 +38,8 @@
         "tokens enabled in order to receive a refresh token in the response.</p>"
       ],
       "type": "urlParameter",
-      "javaType": "String"
+      "javaType": "String",
+      "parameterName": "refreshToken"
     }
   ]
 }
