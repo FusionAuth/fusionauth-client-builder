@@ -1,0 +1,5 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "ClientAuthenticationMethod",
+  "enum" : [ "client_secret_basic", "client_secret_post" ]
+}
