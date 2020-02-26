@@ -31,12 +31,6 @@
         "type" : "String"
       } ]
     },
-    "keyIds" : {
-      "type" : "Set",
-      "typeArguments" : [ {
-        "type" : "UUID"
-      } ]
-    },
     "defaultKeyId" : {
       "type" : "UUID"
     },
