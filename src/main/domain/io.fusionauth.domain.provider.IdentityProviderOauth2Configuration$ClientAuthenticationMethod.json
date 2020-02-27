@@ -1,14 +1,5 @@
 {
   "packageName" : "io.fusionauth.domain.provider",
   "type" : "ClientAuthenticationMethod",
-  "enum" : [ {
-    "name" : "none",
-    "args" : [ "None (none)" ]
-  }, {
-    "name" : "client_secret_basic",
-    "args" : [ "HTTP Basic authentication (client_secret_basic)" ]
-  }, {
-    "name" : "client_secret_post",
-    "args" : [ "Client credentials in the request body (client_secret_post)" ]
-  } ]
+  "enum" : [ "none", "client_secret_basic", "client_secret_post" ]
 }
