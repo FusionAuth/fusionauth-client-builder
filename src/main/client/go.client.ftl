@@ -28,6 +28,7 @@ import (
   "path"
   "strconv"
   "strings"
+  "time"
 )
 
 // NewClient creates a new FusionAuthClient
