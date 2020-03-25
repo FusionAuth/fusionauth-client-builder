@@ -91,13 +91,13 @@ namespace ${replaceKeywords(domain_item.packageName)} {
         [#continue/]
       [/#if]
       [#if field.anySetter?? && field.anySetter]
-    public object this[string claim] {
+    public dynamic this[string claim] {
       get => ${replaceKeywords(fieldName)}[claim];
       set => ${replaceKeywords(fieldName)}[claim] = value;
     }
 
     [JsonExtensionData]
-    private readonly [@printType field/] ${global.scrubName(replaceKeywords(fieldName))} = new [@printType field/]();
+    private readonly Dictionary<string, dynamic> ${global.scrubName(replaceKeywords(fieldName))} = new Dictionary<string, dynamic>();
       [#else]
     public [@printType field/] ${global.scrubName(replaceKeywords(fieldName))};
       [/#if]
