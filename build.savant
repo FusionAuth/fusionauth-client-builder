@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019, FusionAuth, All Rights Reserved
+ * Copyright (c) 2020, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -71,7 +71,7 @@ target(name: "generateDomain", description: "Generates all of the json files for
    "io.fusionauth.jwt.domain.KeyPair.json",
    "io.fusionauth.jwt.domain.KeyType.json",
    "io.fusionauth.jwt.domain.Type.json"]
-      .forEach({ Files.deleteIfExists(Paths.get("src/main/domain").resolve(it))})
+      .forEach({ Files.deleteIfExists(Paths.get("src/main/domain").resolve(it)) })
 }
 
 target(name: "idea", description: "Updates the IntelliJ IDEA module file") {
@@ -174,7 +174,15 @@ target(name: "build-go", description: "Build the Go Client Library") {
 
 target(name: "build-android", description: "Build the Android Client Library") {
   clientLibrary.buildClient(template: "src/main/client/android.client.ftl",
-                            outputFile: "../fusionauth-android-client/src/main/java/io/fusionauth/client/FusionAuthClient.java")}
+                            outputFile: "../fusionauth-android-client/src/main/java/io/fusionauth/client/FusionAuthClient.java")
+}
+
+target(name: "build-dart", description: "Build the Dart Client Library") {
+  clientLibrary.buildClient(template: "src/main/client/dart.client.ftl",
+                            outputFile: "../fusionauth-dart-client/lib/src/FusionAuthClient.dart")
+  clientLibrary.buildClient(template: "src/main/client/dart.domain.ftl",
+                            outputFile: "../fusionauth-dart-client/lib/src/FusionAuthDomain.dart")
+}
 
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
                                                                                   "build-php",
@@ -185,5 +193,6 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
                                                                                   "build-typescript",
                                                                                   "build-javascript",
                                                                                   "build-python",
-                                                                                  "build-ruby"]) {
+                                                                                  "build-ruby",
+                                                                                  "build-dart"]) {
 }

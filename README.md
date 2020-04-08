@@ -51,6 +51,7 @@ fusionauth
 ├── fusionauth-ruby-client
 ├── fusionauth-swift-client
 ├── fusionauth-typescript-client
+├── fusionauth-dart-client
 └── go-client
 ```
 
