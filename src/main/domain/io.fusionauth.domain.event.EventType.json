@@ -27,6 +27,9 @@
     "name" : "JWTRefreshTokenRevoke",
     "args" : [ "jwt.refresh-token.revoke" ]
   }, {
+    "name" : "JWTRefresh",
+    "args" : [ "jwt.refresh" ]
+  }, {
     "name" : "JWTPublicKeyUpdate",
     "args" : [ "jwt.public-key.update" ]
   }, {

@@ -5,6 +5,9 @@
   "fields" : {
     "refreshToken" : {
       "type" : "String"
+    },
+    "token" : {
+      "type" : "String"
     }
   }
 }

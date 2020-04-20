@@ -5,6 +5,9 @@
   "fields" : {
     "user" : {
       "type" : "User"
+    },
+    "token" : {
+      "type" : "String"
     }
   }
 }

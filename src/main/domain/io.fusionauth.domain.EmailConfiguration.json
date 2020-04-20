@@ -9,6 +9,12 @@
     } ]
   } ],
   "fields" : {
+    "defaultFromEmail" : {
+      "type" : "String"
+    },
+    "defaultFromName" : {
+      "type" : "String"
+    },
     "forgotPasswordEmailTemplateId" : {
       "type" : "UUID"
     },

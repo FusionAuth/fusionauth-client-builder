@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, FusionAuth, All Rights Reserved
+ * Copyright (c) 2019-2020, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 import java.nio.file.Files
 import java.nio.file.Paths
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.15.8", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.16.0", licenses: ["ApacheV2_0"]) {
   workflow {
     standard()
   }

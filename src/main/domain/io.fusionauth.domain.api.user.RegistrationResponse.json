@@ -6,6 +6,9 @@
     "registration" : {
       "type" : "UserRegistration"
     },
+    "token" : {
+      "type" : "String"
+    },
     "user" : {
       "type" : "User"
     }
