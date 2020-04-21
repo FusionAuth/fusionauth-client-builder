@@ -109,7 +109,7 @@
       [#case "Map"]
       [#case "HashMap"]
       [#case "TreeMap"]
-      [#case "LinkedHashMap"][#return "ObjectMap"/]
+      [#case "LinkedHashMap"][#return "Record"/]
       [#case "*"]
       [#case "Object"][#return "any"/]
       [#case "Void"][#return "void"/]

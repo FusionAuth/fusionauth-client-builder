@@ -21,11 +21,6 @@ import DefaultRESTClientBuilder from "./DefaultRESTClientBuilder";
 import IRESTClientBuilder from "./IRESTClientBuilder";
 import ClientResponse from "./ClientResponse";
 
-export interface ObjectMap<K extends string | number, T> {
-  // @ts-ignore
-  [key: K]: T
-}
-
 export class FusionAuthClient {
   public clientBuilder: IRESTClientBuilder = new DefaultRESTClientBuilder();
   public credentials: RequestCredentials;
