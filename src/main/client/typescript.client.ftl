@@ -106,9 +106,6 @@ export class FusionAuthClient {
         .withFormData(body)
   [/#if]
         .withMethod("${api.method?upper_case}")
-        [#if api.successResponse != "Void"]
-        .withResponseHandler(JSONResponseHandler)
-        [/#if]
         .go();
   }
 
@@ -133,10 +130,6 @@ export class FusionAuthClient {
   private startAnonymous<RT, ERT>(): IRESTClient<RT, ERT> {
     let client = this.clientBuilder.build<RT, ERT>(this.host);
 
-    // Due to the lack of reflection this is declared per api
-    // client.withResponseHandler(JSONResponseHandler);
-    client.withErrorResponseHandler(ErrorJSONResponseHandler);
-
     if (this.tenantId != null) {
       client.withHeader('X-FusionAuth-TenantId', this.tenantId);
     }
@@ -150,36 +143,6 @@ export class FusionAuthClient {
 }
 
 export default FusionAuthClient;
-
-/**
-* A function that returns the JSON form of the response text.
-*
-* @param response
-* @constructor
-*/
-async function JSONResponseHandler<RT>(response: Response): Promise<ClientResponse<RT>> {
-  let clientResponse = new ClientResponse<RT>();
-
-  clientResponse.statusCode = response.status;
-  clientResponse.response = await response.json();
-
-  return clientResponse;
-}
-
-/**
-* A function that returns the JSON form of the response text.
-*
-* @param response
-* @constructor
-*/
-async function ErrorJSONResponseHandler<ERT>(response: Response): Promise<ClientResponse<ERT>> {
-  let clientResponse = new ClientResponse<ERT>();
-
-  clientResponse.statusCode = response.status;
-  clientResponse.exception = await response.json();
-
-  return clientResponse;
-}
 
 /**
  * A 128 bit UUID in string format "8-4-4-4-12", for example "58D5E212-165B-4CA0-909B-C86B9CEE0111".
