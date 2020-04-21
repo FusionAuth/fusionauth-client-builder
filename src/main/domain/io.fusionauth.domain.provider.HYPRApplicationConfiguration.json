@@ -12,15 +12,6 @@
     } ]
   } ],
   "fields" : {
-    "licensingEnabled" : {
-      "type" : "boolean"
-    },
-    "licensingEnabledOverride" : {
-      "type" : "boolean"
-    },
-    "licensingURL" : {
-      "type" : "URI"
-    },
     "relyingPartyApplicationId" : {
       "type" : "String"
     },

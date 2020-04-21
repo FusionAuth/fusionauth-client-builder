@@ -17,12 +17,6 @@
     "type" : "PasswordlessIdentityProvider"
   } ],
   "fields" : {
-    "licensingEnabled" : {
-      "type" : "boolean"
-    },
-    "licensingURL" : {
-      "type" : "URI"
-    },
     "relyingPartyApplicationId" : {
       "type" : "String"
     },
