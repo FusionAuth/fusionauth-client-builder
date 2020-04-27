@@ -21,7 +21,7 @@ import DefaultRESTClientBuilder from "./DefaultRESTClientBuilder";
 import IRESTClientBuilder from "./IRESTClientBuilder";
 import ClientResponse from "./ClientResponse";
 import {RequestCredentials} from "node-fetch";
-import FormData = require("form-data");
+import * as FormData from "form-data";
 
 export class FusionAuthClient {
   public clientBuilder: IRESTClientBuilder = new DefaultRESTClientBuilder();
