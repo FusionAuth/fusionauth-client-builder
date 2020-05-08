@@ -2,8 +2,17 @@
   "packageName" : "io.fusionauth.domain.api.identityProvider",
   "type" : "IdentityProviderDetails",
   "fields" : {
+    "applicationIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
     "id" : {
       "type" : "UUID"
+    },
+    "idpEndpoint" : {
+      "type" : "URI"
     },
     "name" : {
       "type" : "String"
