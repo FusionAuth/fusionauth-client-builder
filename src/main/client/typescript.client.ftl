@@ -21,7 +21,7 @@ import DefaultRESTClientBuilder from "./DefaultRESTClientBuilder";
 import IRESTClientBuilder from "./IRESTClientBuilder";
 import ClientResponse from "./ClientResponse";
 import {RequestCredentials} from "node-fetch";
-import * as FormData from "form-data";
+import {URLSearchParams} from "url";
 
 export class FusionAuthClient {
   public clientBuilder: IRESTClientBuilder = new DefaultRESTClientBuilder();
@@ -80,7 +80,8 @@ export class FusionAuthClient {
     [#if param.type == "form"][#assign formPost = true/][/#if]
   [/#list]
   [#if formPost]
-    let body = new FormData();
+    let body = new URLSearchParams();
+
     [#list api.params![] as param]
       [#if param.type == "form"]
     body.append('${param.name}', ${(param.constant?? && param.constant)?then("'"+param.value+"'", param.name)});
