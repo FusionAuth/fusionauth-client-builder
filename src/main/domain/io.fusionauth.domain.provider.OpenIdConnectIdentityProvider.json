@@ -29,9 +29,6 @@
     "buttonText" : {
       "type" : "String"
     },
-    "lambdaConfiguration" : {
-      "type" : "LambdaConfiguration"
-    },
     "oauth2" : {
       "type" : "IdentityProviderOauth2Configuration"
     }

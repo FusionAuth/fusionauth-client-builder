@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RefreshTokenUsagePolicy",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "Reusable", "OneTimeUse" ]
+}

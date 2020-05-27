@@ -1,6 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "CORSConfiguration",
+  "description" : "/**\n * @author Trevor Smith\n */\n",
   "extends" : [ {
     "type" : "Enableable"
   } ],

@@ -1,0 +1,31 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "AppleApplicationConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProviderApplicationConfiguration"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "AppleApplicationConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "buttonText" : {
+      "type" : "String"
+    },
+    "keyId" : {
+      "type" : "UUID"
+    },
+    "scope" : {
+      "type" : "String"
+    },
+    "servicesId" : {
+      "type" : "String"
+    },
+    "teamId" : {
+      "type" : "String"
+    }
+  }
+}

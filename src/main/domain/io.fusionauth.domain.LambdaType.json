@@ -14,5 +14,8 @@
   }, {
     "name" : "SAMLv2Populate",
     "args" : [ "populate" ]
+  }, {
+    "name" : "GenericIdpReconcile",
+    "args" : [ "reconcile" ]
   } ]
 }

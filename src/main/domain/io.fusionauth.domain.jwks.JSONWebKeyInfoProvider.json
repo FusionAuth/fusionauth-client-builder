@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.jwks",
+  "type" : "JSONWebKeyInfoProvider",
+  "description" : "/**\n * Interface for any object that can provide JSON Web key Information.\n */\n",
+  "fields" : { }
+}

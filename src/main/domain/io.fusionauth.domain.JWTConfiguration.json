@@ -18,8 +18,17 @@
     "idTokenKeyId" : {
       "type" : "UUID"
     },
+    "refreshTokenExpirationPolicy" : {
+      "type" : "RefreshTokenExpirationPolicy"
+    },
+    "refreshTokenRevocationPolicy" : {
+      "type" : "RefreshTokenRevocationPolicy"
+    },
     "refreshTokenTimeToLiveInMinutes" : {
       "type" : "int"
+    },
+    "refreshTokenUsagePolicy" : {
+      "type" : "RefreshTokenUsagePolicy"
     },
     "timeToLiveInSeconds" : {
       "type" : "int"

@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RefreshTokenRevocationPolicy",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "onLoginPrevented" : {
+      "type" : "boolean"
+    },
+    "onPasswordChanged" : {
+      "type" : "boolean"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RequiresCORSConfiguration",
+  "description" : "/**\n * Interface describing the need for CORS configuration.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : { }
+}

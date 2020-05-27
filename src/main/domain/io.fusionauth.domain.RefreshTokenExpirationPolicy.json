@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RefreshTokenExpirationPolicy",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "Fixed", "SlidingWindow" ]
+}

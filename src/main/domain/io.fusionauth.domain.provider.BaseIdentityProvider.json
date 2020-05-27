@@ -37,6 +37,9 @@
     "id" : {
       "type" : "UUID"
     },
+    "lambdaConfiguration" : {
+      "type" : "LambdaConfiguration"
+    },
     "name" : {
       "type" : "String"
     },

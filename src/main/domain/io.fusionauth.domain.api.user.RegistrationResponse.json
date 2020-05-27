@@ -3,6 +3,9 @@
   "type" : "RegistrationResponse",
   "description" : "/**\n * Registration API request object.\n *\n * @author Brian Pontarelli\n */\n",
   "fields" : {
+    "refreshToken" : {
+      "type" : "String"
+    },
     "registration" : {
       "type" : "UserRegistration"
     },

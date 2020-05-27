@@ -22,5 +22,8 @@
   }, {
     "name" : "HYPR",
     "args" : [ ]
+  }, {
+    "name" : "Apple",
+    "args" : [ ]
   } ]
 }
