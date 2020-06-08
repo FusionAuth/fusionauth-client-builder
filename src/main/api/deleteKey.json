@@ -9,7 +9,7 @@
   "errorResponse": "Errors",
   "params": [
     {
-      "name": "keyOd",
+      "name": "keyId",
       "comments": [
         "The Id of the key to delete."
       ],
