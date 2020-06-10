@@ -55,7 +55,7 @@
     {
       "name": "code_verifier",
       "comments": [
-        "(Optional) The random string you generated previously if you are using PKCE. Will be compared with the code_challenge you sent previously, which allows your OAuth provider to authenticate your app."
+        "The random string you generated previously if you are using PKCE. Will be compared with the code_challenge you sent previously, which allows the OAuth provider to authenticate your app."
       ],
       "type": "form",
       "javaType": "String"
