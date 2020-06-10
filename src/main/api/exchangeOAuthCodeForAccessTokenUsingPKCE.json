@@ -1,0 +1,64 @@
+{
+  "uri": "/oauth2/token",
+  "comments": [
+    "Exchanges an OAuth authorization code for an access token.",
+    "If you will be using the Authorization Code grant, you will make a request to the Token endpoint to exchange the authorization code returned from the Authorize endpoint for an access token."
+  ],
+  "method": "post",
+  "methodName": "exchangeOAuthCodeForAccessToken",
+  "successResponse": "AccessToken",
+  "errorResponse": "OAuthError",
+  "anonymous": true,
+  "params": [
+    {
+      "name": "code",
+      "comments": [
+        "The authorization code returned on the /oauth2/authorize response."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "client_id",
+      "comments": [
+        "(Optional) The unique client identifier. The client Id is the Id of the FusionAuth Application in which you you are attempting to authenticate. This parameter is optional when the Authorization header is provided."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "client_secret",
+      "comments": [
+        "(Optional) The client secret. This value may optionally be provided in the request body instead of the Authorization header."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "grant_type",
+      "comments": [
+        "The grant type to be used. This value must be set to authorization_code"
+      ],
+      "type": "form",
+      "javaType": "String",
+      "constant": true,
+      "value": "authorization_code"
+    },
+    {
+      "name": "redirect_uri",
+      "comments": [
+        "The URI to redirect to upon a successful request."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "code_verifier",
+      "comments": [
+        "(Optional) The random string you generated previously if you are using PKCE. Will be compared with the code_challenge you sent previously, which allows your OAuth provider to authenticate your app."
+      ],
+      "type": "form",
+      "javaType": "String"
+    }
+  ]
+}
