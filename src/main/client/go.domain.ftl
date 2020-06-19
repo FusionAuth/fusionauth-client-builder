@@ -88,7 +88,12 @@ type ${hackCollisions(d d.type)?cap_first} struct {
       [/#if]
       [#list d.fields?keys?sort as fieldName]
         [#assign field = d.fields[fieldName]/]
-  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(25)} ${printType(field, d)?right_pad(25)} `json:"${fieldName},omitempty"`
+        [#assign fieldType = printType(field, d)/]
+        [#if fieldType == "bool"]
+  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(25)} ${fieldType?right_pad(25)} `json:"${fieldName}"`
+        [#else]
+  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(25)} ${fieldType?right_pad(25)} `json:"${fieldName},omitempty"`
+        [/#if]
       [/#list]
 }
       [#if d.type?ends_with("Response") || responseObjects?seq_contains(d.type)]
