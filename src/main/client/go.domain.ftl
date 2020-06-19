@@ -90,9 +90,9 @@ type ${hackCollisions(d d.type)?cap_first} struct {
         [#assign field = d.fields[fieldName]/]
         [#assign fieldType = printType(field, d)/]
         [#if fieldType == "bool"]
-  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(25)} ${fieldType?right_pad(25)} `json:"${fieldName}"`
+  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(26)} ${fieldType?right_pad(26)} `json:"${fieldName}"`
         [#else]
-  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(25)} ${fieldType?right_pad(25)} `json:"${fieldName},omitempty"`
+  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(26)} ${fieldType?right_pad(26)} `json:"${fieldName},omitempty"`
         [/#if]
       [/#list]
 }
