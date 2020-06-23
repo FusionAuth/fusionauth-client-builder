@@ -21,6 +21,9 @@
     "client_secret" : {
       "type" : "String"
     },
+    "emailClaim" : {
+      "type" : "String"
+    },
     "issuer" : {
       "type" : "URI"
     },
