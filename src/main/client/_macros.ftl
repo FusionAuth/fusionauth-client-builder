@@ -313,7 +313,9 @@
 
 [#function needsConverter domain_item]
     [#switch domain_item.type]
+      [#case "Algorithm"]
       [#case "IdentityProviderType"]
+      [#case "KeyAlgorithm"]
       [#case "LambdaType"]
         [#return false]
       [#default]
