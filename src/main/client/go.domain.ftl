@@ -106,7 +106,11 @@ func (b *${hackCollisions(d d.type)?cap_first}) SetStatus(status int) {
 type ${d.type} string
 const (
       [#list d.enum as value]
+        [#if d.type == "EventType" || d.type == "GrantType"]
+  ${d.type}_${global.toCamelCase(value.name!value)?cap_first?right_pad(20)} ${d.type?right_pad(20)} = "${(value.args[0]?string)!value}"
+        [#else]
   ${d.type}_${global.toCamelCase(value.name!value)?cap_first?right_pad(20)} ${d.type?right_pad(20)} = "${value.name!value}"
+        [/#if]
       [/#list]
 )
 
