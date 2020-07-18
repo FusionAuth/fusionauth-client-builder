@@ -1,0 +1,20 @@
+{
+  "uri": "/api/form",
+  "comments": [
+    "Deletes the form for the given Id."
+  ],
+  "method": "delete",
+  "methodName": "deleteForm",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "formId",
+      "comments": [
+        "The Id of the form to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

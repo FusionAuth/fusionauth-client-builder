@@ -1,0 +1,18 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CustomRegistration",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "CustomRegistration"
+    } ]
+  } ],
+  "fields" : {
+    "formId" : {
+      "type" : "UUID"
+    }
+  }
+}

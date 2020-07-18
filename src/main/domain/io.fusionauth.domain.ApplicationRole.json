@@ -20,11 +20,17 @@
     "id" : {
       "type" : "UUID"
     },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
     "isDefault" : {
       "type" : "boolean"
     },
     "isSuperRole" : {
       "type" : "boolean"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
     },
     "name" : {
       "type" : "String"

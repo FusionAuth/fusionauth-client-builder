@@ -1,0 +1,20 @@
+{
+  "uri": "/api/connector",
+  "comments": [
+    "Retrieves the connector with the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveConnector",
+  "successResponse": "ConnectorResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "connectorId",
+      "comments": [
+        "The Id of the connector."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

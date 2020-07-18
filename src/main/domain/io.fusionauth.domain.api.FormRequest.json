@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "FormRequest",
+  "description" : "/**\n * Form response.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "form" : {
+      "type" : "Form"
+    }
+  }
+}

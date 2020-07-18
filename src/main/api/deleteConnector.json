@@ -1,0 +1,20 @@
+{
+  "uri": "/api/connector",
+  "comments": [
+    "Deletes the connector for the given Id."
+  ],
+  "method": "delete",
+  "methodName": "deleteConnector",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "connectorId",
+      "comments": [
+        "The Id of the connector to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

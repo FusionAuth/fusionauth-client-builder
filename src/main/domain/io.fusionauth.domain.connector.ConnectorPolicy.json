@@ -1,0 +1,35 @@
+{
+  "packageName" : "io.fusionauth.domain.connector",
+  "type" : "ConnectorPolicy",
+  "description" : "/**\n * @author Trevor Smith\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ConnectorPolicy"
+    } ]
+  }, {
+    "type" : "_InternalJSONColumn"
+  } ],
+  "fields" : {
+    "connectorId" : {
+      "type" : "UUID"
+    },
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "domains" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "migrate" : {
+      "type" : "boolean"
+    }
+  }
+}

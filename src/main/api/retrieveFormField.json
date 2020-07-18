@@ -1,0 +1,20 @@
+{
+  "uri": "/api/form/field",
+  "comments": [
+    "Retrieves the form field with the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveFormField",
+  "successResponse": "FormFieldResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "fieldId",
+      "comments": [
+        "The Id of the form field."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

@@ -29,6 +29,12 @@
     "includeEmailInEventJSON" : {
       "type" : "boolean"
     },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
     "localizedNames" : {
       "type" : "LocalizedStrings"
     },

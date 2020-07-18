@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "FormFieldRequest",
+  "description" : "/**\n * The FormField API request object.\n *\n * @author Brett Guy\n */\n",
+  "fields" : {
+    "field" : {
+      "type" : "FormField"
+    },
+    "fields" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "FormField"
+      } ]
+    }
+  }
+}

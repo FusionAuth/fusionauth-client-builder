@@ -328,6 +328,15 @@
     [/#switch]
 [/#function]
 
+[#function needsConverterNoArgs domain_item]
+    [#switch domain_item.type]
+      [#case "FormDataType"]
+        [#return true]
+      [#default]
+        [#return false]
+    [/#switch]
+[/#function]
+
 [#function hasAnySetter domain_item]
   [#list domain_item.fields!{} as name, field]
     [#if field.anySetter?? && field.anySetter]

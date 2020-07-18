@@ -34,6 +34,12 @@
     "eventLogConfiguration" : {
       "type" : "EventLogConfiguration"
     },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
     "loginRecordConfiguration" : {
       "type" : "LoginRecordConfiguration"
     },

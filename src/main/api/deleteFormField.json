@@ -1,0 +1,20 @@
+{
+  "uri": "/api/form/field",
+  "comments": [
+    "Deletes the form field for the given Id."
+  ],
+  "method": "delete",
+  "methodName": "deleteFormField",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "fieldId",
+      "comments": [
+        "The Id of the form field to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

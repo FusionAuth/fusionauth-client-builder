@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain.connector",
+  "type" : "FusionAuthConnectorConfiguration",
+  "description" : "/**\n * Models the FusionAuth connector.\n *\n * @author Trevor Smith\n */\n",
+  "extends" : [ {
+    "type" : "BaseConnectorConfiguration"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "FusionAuthConnectorConfiguration"
+    } ]
+  } ],
+  "fields" : { }
+}

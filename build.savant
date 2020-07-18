@@ -17,13 +17,23 @@
 import java.nio.file.Files
 import java.nio.file.Paths
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.17.5", licenses: ["ApacheV2_0"]) {
+javaErrorVersion = "2.2.2"
+fusionauthJWTVersion = "3.4.1"
+
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.18.0", licenses: ["ApacheV2_0"]) {
   workflow {
     standard()
   }
 
   publishWorkflow {
     subversion(repository: "http://svn.inversoft.org/savant")
+  }
+
+  dependencies {
+    group(name: "source-jars") {
+      dependency(id: "com.inversoft:java-error:${javaErrorVersion}", fetchSource: true)
+      dependency(id: "io.fusionauth:fusionauth-jwt:${fusionauthJWTVersion}", fetchSource: true)
+    }
   }
 
   publications {
@@ -35,7 +45,7 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.1
 
 // Plugins
 clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.3.1")
-dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:1.0.2")
+dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:1.1.0")
 file = loadPlugin(id: "org.savantbuild.plugin:file:1.0.2")
 idea = loadPlugin(id: "org.savantbuild.plugin:idea:1.0.1")
 release = loadPlugin(id: "org.savantbuild.plugin:release-git:1.0.0")
@@ -43,7 +53,24 @@ release = loadPlugin(id: "org.savantbuild.plugin:release-git:1.0.0")
 // Plugin settings
 clientLibrary.settings.debug = false
 
-target(name: "generateDomain", description: "Generates all of the json files for the domain") {
+target(name: "extract-source-jars") {
+  // Download the source JARs
+  dependency.resolve() {
+    dependencies(group: "source-jars", transitive: true, fetchSource: true)
+  }
+
+  // clear out the expanded jars
+  file.prune(dir: "build/src/")
+
+  // Tried using dependency copy, but could not figure out how to get it to get the src jar, this is a hack, maybe there is a better way.
+  def javaError = dependency.path(id: "com.inversoft:java-error:${javaErrorVersion}", group: "source-jars").toString()
+  def fusionAuthJWT = dependency.path(id: "io.fusionauth:fusionauth-jwt:${fusionauthJWTVersion}", group: "source-jars").toString()
+
+  file.unzip(file: javaError.replace("${javaErrorVersion}.jar", "${javaErrorVersion}-src.jar"), to: "build/src/java-error/")
+  file.unzip(file: fusionAuthJWT.replace("${fusionauthJWTVersion}.jar", "${fusionauthJWTVersion}-src.jar"), to: "build/src/fusionauth-jwt/")
+}
+
+target(name: "generateDomain", description: "Generates all of the json files for the domain", dependsOn:['extract-source-jars']) {
   // Bail during a release
   if (System.getProperty("fusionauth.release") != null) {
     println "skip generating domain during release"
@@ -55,9 +82,9 @@ target(name: "generateDomain", description: "Generates all of the json files for
   }
 
   clientLibrary.generateDomainJson(srcDir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain", outDir: "src/main/domain")
-  clientLibrary.generateDomainJson(srcDir: "../../libraries/java-error/src/main/java", outDir: "src/main/domain")
-  clientLibrary.generateDomainJson(srcDir: "../fusionauth-jwt/src/main/java/io/fusionauth/jwt/domain/", outDir: "src/main/domain")
-  clientLibrary.generateDomainJson(srcDir: "../fusionauth-jwt/src/main/java/io/fusionauth/jwks/domain/", outDir: "src/main/domain")
+  clientLibrary.generateDomainJson(srcDir: "build/src/java-error/com/inversoft/error", outDir: "src/main/domain")
+  clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwt/domain/", outDir: "src/main/domain")
+  clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwks/domain/", outDir: "src/main/domain")
 
   ["io.fusionauth.domain.Buildable.json",
    "io.fusionauth.domain.Integration.json",

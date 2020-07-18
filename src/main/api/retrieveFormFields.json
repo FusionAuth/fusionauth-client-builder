@@ -1,0 +1,10 @@
+{
+  "uri": "/api/form/field",
+  "comments": [
+    "Retrieves all of the forms fields"
+  ],
+  "method": "get",
+  "methodName": "retrieveFormFields",
+  "successResponse": "FormFieldResponse",
+  "errorResponse": "Void"
+}

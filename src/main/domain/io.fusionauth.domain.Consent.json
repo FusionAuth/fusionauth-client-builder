@@ -34,6 +34,12 @@
     "id" : {
       "type" : "UUID"
     },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
     "multipleValuesAllowed" : {
       "type" : "boolean"
     },

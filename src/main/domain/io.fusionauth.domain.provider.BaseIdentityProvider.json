@@ -37,8 +37,14 @@
     "id" : {
       "type" : "UUID"
     },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
     "lambdaConfiguration" : {
       "type" : "LambdaConfiguration"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
     },
     "name" : {
       "type" : "String"
