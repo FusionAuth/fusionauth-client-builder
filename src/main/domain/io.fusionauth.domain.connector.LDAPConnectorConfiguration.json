@@ -21,14 +21,14 @@
     "connectTimeout" : {
       "type" : "int"
     },
-    "loginIdAttribute" : {
-      "type" : "String"
-    },
     "identifyingAttribute" : {
       "type" : "String"
     },
     "lambdaConfiguration" : {
       "type" : "LambdaConfiguration"
+    },
+    "loginIdAttribute" : {
+      "type" : "String"
     },
     "readTimeout" : {
       "type" : "int"
