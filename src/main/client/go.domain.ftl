@@ -92,9 +92,9 @@ type ${hackCollisions(d d.type)?cap_first} struct {
         [#assign field = d.fields[fieldName]/]
         [#assign fieldType = printType(field, d)/]
         [#if fieldType == "bool"]
-  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(26)} ${fieldType?right_pad(26)} `json:"${fieldName}"`
+  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(32)} ${fieldType?right_pad(34)} `json:"${fieldName}"`
         [#else]
-  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(26)} ${fieldType?right_pad(26)} `json:"${fieldName},omitempty"`
+  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(32)} ${fieldType?right_pad(34)} `json:"${fieldName},omitempty"`
         [/#if]
       [/#list]
 }
@@ -109,9 +109,9 @@ type ${d.type} string
 const (
       [#list d.enum as value]
         [#if d.type == "EventType" || d.type == "GrantType"]
-  ${d.type}_${global.toCamelCase(value.name!value)?cap_first?right_pad(26)} ${d.type?right_pad(26)} = "${(value.args[0]?string)!value}"
+  ${d.type}_${global.toCamelCase(value.name!value)?cap_first?right_pad(32)} ${d.type?right_pad(34)} = "${(value.args[0]?string)!value}"
         [#else]
-  ${d.type}_${global.toCamelCase(value.name!value)?cap_first?right_pad(26)} ${d.type?right_pad(26)} = "${value.name!value}"
+  ${d.type}_${global.toCamelCase(value.name!value)?cap_first?right_pad(32)} ${d.type?right_pad(34)} = "${value.name!value}"
         [/#if]
       [/#list]
 )
