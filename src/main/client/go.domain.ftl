@@ -45,6 +45,8 @@
   [#if name == "LambdaConfiguration"]
     [#if type.packageName?ends_with(".provider")]
       [#local newName = "Provider" + name/]
+    [#elseif type.packageName?ends_with(".connector")]
+      [#local newName = "Connector" + name/]
     [/#if]
   [/#if]
     [#return newName/]
