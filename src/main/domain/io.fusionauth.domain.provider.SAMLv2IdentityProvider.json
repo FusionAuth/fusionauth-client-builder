@@ -25,6 +25,9 @@
         "type" : "String"
       } ]
     },
+    "allowResponseReplay" : {
+      "type" : "boolean"
+    },
     "buttonImageURL" : {
       "type" : "URI"
     },
