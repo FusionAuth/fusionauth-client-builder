@@ -231,7 +231,7 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (*[#if api
   [#list api.params![] as param]
     [#if param.type == "urlSegment"]
       [#if !param.constant?? && param.javaType == "Integer"]
-             WithUriSegment(string(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
+             WithUriSegment(strconv.Itoa(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
       [#else]
              WithUriSegment(${(param.constant?? && param.constant)?then(param.value,  global.convertValue(param.name, "go"))}).
       [/#if]
