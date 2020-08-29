@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "RefreshTokenImportRequest",
+  "description" : "/**\n * Refresh Token Import request.\n *\n * @author Brett Guy\n */\n",
+  "fields" : {
+    "refreshTokens" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "RefreshToken"
+      } ]
+    },
+    "validateDbConstraints" : {
+      "type" : "boolean"
+    }
+  }
+}

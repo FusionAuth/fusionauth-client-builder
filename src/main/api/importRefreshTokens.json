@@ -1,0 +1,27 @@
+{
+  "uri": "/api/user/refresh-token/import",
+  "comments": [
+    "Bulk imports refresh tokens. This request performs minimal validation and runs batch inserts of refresh tokens with the",
+    "expectation that each token represents a user that already exists and is registered for the corresponding FusionAuth",
+    "Application. This is done to increases the insert performance.",
+    "",
+    "Therefore, if you encounter an error due to a database key violation, the response will likely offer a generic",
+    "explanation. If you encounter an error, you may optionally enable additional validation to receive a JSON response",
+    "body with specific validation errors. This will slow the request down but will allow you to identify the cause of",
+    "the failure. See the validateDbConstraints request parameter."
+  ],
+  "method": "post",
+  "methodName": "importRefreshTokens",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains all of the information about all of the refresh tokens to import."
+      ],
+      "type": "body",
+      "javaType": "RefreshTokenImportRequest"
+    }
+  ]
+}

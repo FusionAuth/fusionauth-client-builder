@@ -14,9 +14,6 @@
     "auditLogConfiguration" : {
       "type" : "AuditLogConfiguration"
     },
-    "cookieEncryptionIV" : {
-      "type" : "String"
-    },
     "cookieEncryptionKey" : {
       "type" : "String"
     },

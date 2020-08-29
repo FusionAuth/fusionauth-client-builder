@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationEmailConfiguration",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ApplicationEmailConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "emailVerificationEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "forgotPasswordEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "passwordlessEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "setPasswordEmailTemplateId" : {
+      "type" : "UUID"
+    }
+  }
+}
