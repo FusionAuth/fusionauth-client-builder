@@ -48,6 +48,9 @@
     "registrationVerificationIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "samlv2AuthNRequestIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "setupPasswordIdGenerator" : {
       "type" : "SecureGeneratorConfiguration"
     },
