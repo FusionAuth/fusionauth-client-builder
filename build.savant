@@ -44,7 +44,7 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.1
 }
 
 // Plugins
-clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.3.1")
+clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.3.2")
 dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:1.1.0")
 file = loadPlugin(id: "org.savantbuild.plugin:file:1.0.2")
 idea = loadPlugin(id: "org.savantbuild.plugin:idea:1.0.1")
@@ -89,6 +89,7 @@ target(name: "generateDomain", description: "Generates all of the json files for
   ["io.fusionauth.domain.Buildable.json",
    "io.fusionauth.domain.Integration.json",
    "io.fusionauth.domain.internal._InternalJSONColumn.json",
+   "io.fusionauth.domain.internal.annotation.InternalUse.json",
    "io.fusionauth.domain.internal.annotation.InternalJSONColumn.json",
    "io.fusionauth.domain.internal.annotation.ExcludeFromDatabaseDataColumn.json",
    "io.fusionauth.domain.internal.DatabaseObjectMapperHolder.json",

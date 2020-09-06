@@ -14,9 +14,6 @@
     "auditLogConfiguration" : {
       "type" : "AuditLogConfiguration"
     },
-    "cookieEncryptionKey" : {
-      "type" : "String"
-    },
     "corsConfiguration" : {
       "type" : "CORSConfiguration"
     },
