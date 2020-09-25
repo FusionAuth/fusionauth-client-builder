@@ -4,7 +4,7 @@
     "Inspect an access token issued by FusionAuth."
   ],
   "method": "post",
-  "methodName": "oauth2Introspect",
+  "methodName": "introspectAccessToken",
   "successResponse": "IntrospectResponse",
   "errorResponse": "OAuthError",
   "anonymous": true,
