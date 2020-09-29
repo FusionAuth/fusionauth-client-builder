@@ -3,8 +3,8 @@
   "comments": [
     "Call the UserInfo endpoint to retrieve User Claims from the access token issued by FusionAuth."
   ],
-  "method": "post",
-  "methodName": "userInfo",
+  "method": "get",
+  "methodName": "retrieveUserInfoFromAccessToken",
   "successResponse": "UserResponse",
   "errorResponse": "OAuthError",
   "anonymous": true,
