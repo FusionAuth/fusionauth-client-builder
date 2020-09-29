@@ -114,6 +114,9 @@ func (rc *restClient) Do() error {
   if resp.StatusCode < 200 || resp.StatusCode > 299 {
     if rc.ErrorRef != nil {
       err = json.NewDecoder(resp.Body).Decode(rc.ErrorRef)
+      if err == io.EOF {
+	      err = fmt.Errorf("A non-successful status code was returned. Status: %d %s", resp.StatusCode, http.StatusText(resp.StatusCode))
+      }
     }
   } else {
     rc.ErrorRef = nil
