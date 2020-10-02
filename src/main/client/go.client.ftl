@@ -112,15 +112,13 @@ func (rc *restClient) Do() error {
     fmt.Println(string(responseDump))
   }
   if resp.StatusCode < 200 || resp.StatusCode > 299 {
-    if rc.ErrorRef != nil {
-      err = json.NewDecoder(resp.Body).Decode(rc.ErrorRef)
+    if err = json.NewDecoder(resp.Body).Decode(rc.ErrorRef); err == io.EOF {
+      err = nil
     }
   } else {
     rc.ErrorRef = nil
     if _, ok := rc.ResponseRef.(*BaseHTTPResponse); !ok {
-      if err = json.NewDecoder(resp.Body).Decode(rc.ErrorRef); err == io.EOF {
-        err = nil
-      }
+      err = json.NewDecoder(resp.Body).Decode(rc.ResponseRef)
     }
   }
   rc.ResponseRef.(StatusAble).SetStatus(resp.StatusCode)
