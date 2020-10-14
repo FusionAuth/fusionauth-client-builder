@@ -15,6 +15,8 @@
     } ]
   }, {
     "type" : "DomainBasedIdentityProvider"
+  }, {
+    "type" : "SupportsPostBindings"
   } ],
   "fields" : {
     "domains" : {
@@ -31,6 +33,9 @@
     },
     "oauth2" : {
       "type" : "IdentityProviderOauth2Configuration"
+    },
+    "postRequest" : {
+      "type" : "boolean"
     }
   }
 }

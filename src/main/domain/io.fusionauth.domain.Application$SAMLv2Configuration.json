@@ -14,11 +14,17 @@
     "audience" : {
       "type" : "String"
     },
-    "callbackURL" : {
-      "type" : "URI"
+    "authorizedRedirectURLs" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "URI"
+      } ]
     },
     "debug" : {
       "type" : "boolean"
+    },
+    "defaultVerificationKeyId" : {
+      "type" : "UUID"
     },
     "issuer" : {
       "type" : "String"
@@ -29,8 +35,14 @@
     "logoutURL" : {
       "type" : "URI"
     },
+    "requireSignedRequests" : {
+      "type" : "boolean"
+    },
     "xmlSignatureC14nMethod" : {
       "type" : "CanonicalizationMethod"
+    },
+    "callbackURL" : {
+      "type" : "URI"
     }
   }
 }

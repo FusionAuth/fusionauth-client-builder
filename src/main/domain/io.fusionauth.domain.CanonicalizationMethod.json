@@ -1,6 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "CanonicalizationMethod",
+  "description" : "/**\n * XML canonicalization method enumeration. This is used for the IdP and SP side of FusionAuth SAML.\n *\n * @author Brian Pontarelli\n */\n",
   "enum" : [ {
     "name" : "exclusive",
     "args" : [ ]
