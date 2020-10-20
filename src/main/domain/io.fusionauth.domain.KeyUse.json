@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "KeyUse",
+  "description" : "/**\n * The use type of a key.\n *\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "SignOnly", "SignAndVerify", "VerifyOnly" ]
+}
