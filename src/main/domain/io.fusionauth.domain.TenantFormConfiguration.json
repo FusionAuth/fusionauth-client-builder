@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantFormConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantFormConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "adminUserFormId" : {
+      "type" : "UUID"
+    }
+  }
+}

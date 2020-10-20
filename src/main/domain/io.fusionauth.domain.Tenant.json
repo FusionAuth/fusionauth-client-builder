@@ -43,6 +43,9 @@
     "familyConfiguration" : {
       "type" : "FamilyConfiguration"
     },
+    "formConfiguration" : {
+      "type" : "TenantFormConfiguration"
+    },
     "httpSessionMaxInactiveInterval" : {
       "type" : "int"
     },
