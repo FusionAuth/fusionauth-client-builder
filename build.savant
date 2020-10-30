@@ -70,7 +70,7 @@ target(name: "extract-source-jars") {
   file.unzip(file: fusionAuthJWT.replace("${fusionauthJWTVersion}.jar", "${fusionauthJWTVersion}-src.jar"), to: "build/src/fusionauth-jwt/")
 }
 
-target(name: "generateDomain", description: "Generates all of the json files for the domain", dependsOn:['extract-source-jars']) {
+target(name: "generateDomain", description: "Generates all of the json files for the domain", dependsOn: ['extract-source-jars']) {
   // Bail during a release
   if (System.getProperty("fusionauth.release") != null) {
     println "skip generating domain during release"
@@ -223,4 +223,20 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
                                                                                   "build-python",
                                                                                   "build-ruby",
                                                                                   "build-dart"]) {
+}
+
+// Still testing this to see if it will work with stdout and prompts, etc which are required for dart, and python. Perhaps we can configure all of this to
+// skip all requests for input or confirmations.
+target(name: "publish-all", description: "Publish all client libraries") {
+  ["dart", "java", "netcore", "node", "php", "python", "ruby", "typescript"].each { client ->
+    ProcessBuilder pb = new ProcessBuilder(
+        "sb", "publish")
+        .inheritIO()
+        .directory(new File("../fusionauth-${client}-client"))
+
+    def process = pb.start()
+    process.consumeProcessOutput(System.out, System.err)
+    process.waitFor()
+    return process.exitValue() == 0
+  }
 }
