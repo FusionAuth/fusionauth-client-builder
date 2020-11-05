@@ -1,8 +1,8 @@
 {
   "uri": "/oauth2/token",
   "comments": [
-    "Exchanges an OAuth authorization code for an access token.",
-    "If using the Authorization Code grant, you will make a request to the Token endpoint to exchange the authorization code returned from the Authorize endpoint and a code_verifier for an access token."
+    "Exchanges an OAuth authorization code and code_verifier for an access token.",
+    "Makes a request to the Token endpoint to exchange the authorization code returned from the Authorize endpoint and a code_verifier for an access token."
   ],
   "method": "post",
   "methodName": "exchangeOAuthCodeForAccessTokenUsingPKCE",
