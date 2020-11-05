@@ -2,10 +2,10 @@
   "uri": "/oauth2/token",
   "comments": [
     "Exchanges an OAuth authorization code for an access token.",
-    "If you will be using the Authorization Code grant, you will make a request to the Token endpoint to exchange the authorization code returned from the Authorize endpoint for an access token."
+    "If using the Authorization Code grant, you will make a request to the Token endpoint to exchange the authorization code returned from the Authorize endpoint and a code_verifier for an access token."
   ],
   "method": "post",
-  "methodName": "exchangeOAuthCodeForAccessToken",
+  "methodName": "exchangeOAuthCodeForAccessTokenUsingPKCE",
   "successResponse": "AccessToken",
   "errorResponse": "OAuthError",
   "anonymous": true,
@@ -55,7 +55,7 @@
     {
       "name": "code_verifier",
       "comments": [
-        "The random string you generated previously if you are using PKCE. Will be compared with the code_challenge you sent previously, which allows the OAuth provider to authenticate your app."
+        "The random string generated previously. Will be compared with the code_challenge sent previously, which allows the OAuth provider to authenticate your app."
       ],
       "type": "form",
       "javaType": "String"
