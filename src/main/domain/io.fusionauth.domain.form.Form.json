@@ -1,0 +1,44 @@
+{
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "Form",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "Form"
+    } ]
+  }, {
+    "type" : "_InternalJSONColumn"
+  } ],
+  "fields" : {
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "steps" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "FormStep"
+      } ]
+    },
+    "type" : {
+      "type" : "FormType"
+    }
+  }
+}

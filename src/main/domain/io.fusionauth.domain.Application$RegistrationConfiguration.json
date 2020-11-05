@@ -20,6 +20,9 @@
     "firstName" : {
       "type" : "Requirable"
     },
+    "formId" : {
+      "type" : "UUID"
+    },
     "fullName" : {
       "type" : "Requirable"
     },
@@ -34,6 +37,9 @@
     },
     "mobilePhone" : {
       "type" : "Requirable"
+    },
+    "type" : {
+      "type" : "RegistrationType"
     }
   }
 }

@@ -15,11 +15,11 @@
     "commenterId" : {
       "type" : "UUID"
     },
-    "createInstant" : {
-      "type" : "ZonedDateTime"
-    },
     "id" : {
       "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
     },
     "userId" : {
       "type" : "UUID"

@@ -7,8 +7,8 @@
   "methodName": "retrieveUserUsingJWT",
   "successResponse": "UserResponse",
   "errorResponse": "Errors",
-  "authorization": "\"JWT \" + encodedJWT",
   "anonymous": true,
+  "authorization": "\"Bearer \" + encodedJWT",
   "params": [
     {
       "name": "encodedJWT",

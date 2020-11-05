@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "FormType",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "registration", "adminRegistration", "adminUser" ]
+}

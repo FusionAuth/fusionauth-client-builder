@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.connector",
+  "type" : "ConnectorType",
+  "description" : "/**\n * The types of connectors. This enum is stored as an ordinal on the <code>identities</code> table, order must be maintained.\n *\n * @author Trevor Smith\n */\n",
+  "enum" : [ "FusionAuth", "Generic", "LDAP" ]
+}

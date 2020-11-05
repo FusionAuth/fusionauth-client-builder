@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SupportsPostBindings",
+  "description" : "/**\n * Helper interface that indicates an identity provider can be federated to using the HTTP POST method.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : { }
+}

@@ -53,7 +53,7 @@
 using ${replaceKeywords(package)};
   [/#if]
 [/#list]
-[#if domain_item.enum?? && global.needsConverter(domain_item)]
+[#if domain_item.enum?? && (global.needsConverter(domain_item) || global.needsConverterNoArgs(domain_item))]
 using System.Runtime.Serialization;
 [#elseif global.hasAnySetter(domain_item)]
 using Newtonsoft.Json;
@@ -112,9 +112,13 @@ namespace ${replaceKeywords(domain_item.packageName)} {
   }
   [#else]
       [#assign useCustomNames = global.needsConverter(domain_item)]
+      [#assign useStringName = global.needsConverterNoArgs(domain_item)]
   public enum ${domain_item.type} {
     [#list domain_item.enum as value]
-      [#if value?is_string]
+      [#if useStringName]
+        [EnumMember(Value = "${value}")]
+         ${value?string?cap_first}[#rt/]
+      [#elseif value?is_string]
         ${replaceKeywords(value)}[#rt/]
       [#else]
         [#if useCustomNames]

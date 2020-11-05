@@ -30,14 +30,26 @@
         "type" : "Object"
       } ]
     },
+    "emailConfiguration" : {
+      "type" : "ApplicationEmailConfiguration"
+    },
+    "formConfiguration" : {
+      "type" : "ApplicationFormConfiguration"
+    },
     "id" : {
       "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
     },
     "jwtConfiguration" : {
       "type" : "JWTConfiguration"
     },
     "lambdaConfiguration" : {
       "type" : "LambdaConfiguration"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
     },
     "loginConfiguration" : {
       "type" : "LoginConfiguration"

@@ -20,6 +20,12 @@
     "id" : {
       "type" : "UUID"
     },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
     "localizedTexts" : {
       "type" : "LocalizedStrings"
     },

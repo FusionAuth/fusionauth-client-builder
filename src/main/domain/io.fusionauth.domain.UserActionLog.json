@@ -24,9 +24,6 @@
     "comment" : {
       "type" : "String"
     },
-    "createInstant" : {
-      "type" : "ZonedDateTime"
-    },
     "emailUserOnEnd" : {
       "type" : "boolean"
     },
@@ -41,6 +38,9 @@
     },
     "id" : {
       "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
     },
     "localizedName" : {
       "type" : "String"

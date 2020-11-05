@@ -14,12 +14,6 @@
     "auditLogConfiguration" : {
       "type" : "AuditLogConfiguration"
     },
-    "cookieEncryptionIV" : {
-      "type" : "String"
-    },
-    "cookieEncryptionKey" : {
-      "type" : "String"
-    },
     "corsConfiguration" : {
       "type" : "CORSConfiguration"
     },
@@ -33,6 +27,12 @@
     },
     "eventLogConfiguration" : {
       "type" : "EventLogConfiguration"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
     },
     "loginRecordConfiguration" : {
       "type" : "LoginRecordConfiguration"

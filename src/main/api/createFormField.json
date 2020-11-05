@@ -1,0 +1,28 @@
+{
+  "uri": "/api/form/field",
+  "comments": [
+    "Creates a form field.  You can optionally specify an Id for the form, if not provided one will be generated."
+  ],
+  "method": "post",
+  "methodName": "createFormField",
+  "successResponse": "FormFieldResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "fieldId",
+      "comments": [
+        "(Optional) The Id for the form field. If not provided a secure random UUID will be generated."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to create the form field."
+      ],
+      "type": "body",
+      "javaType": "FormFieldRequest"
+    }
+  ]
+}

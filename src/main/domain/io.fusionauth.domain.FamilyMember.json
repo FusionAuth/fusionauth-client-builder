@@ -22,6 +22,9 @@
     "insertInstant" : {
       "type" : "ZonedDateTime"
     },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
     "owner" : {
       "type" : "boolean"
     },

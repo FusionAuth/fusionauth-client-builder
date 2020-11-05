@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationFormConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ApplicationFormConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "adminRegistrationFormId" : {
+      "type" : "UUID"
+    }
+  }
+}

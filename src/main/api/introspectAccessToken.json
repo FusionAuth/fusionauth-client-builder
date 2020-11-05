@@ -1,0 +1,29 @@
+{
+  "uri": "/oauth2/introspect",
+  "comments": [
+    "Inspect an access token issued by FusionAuth."
+  ],
+  "method": "post",
+  "methodName": "introspectAccessToken",
+  "successResponse": "IntrospectResponse",
+  "errorResponse": "OAuthError",
+  "anonymous": true,
+  "params": [
+    {
+      "name": "client_id",
+      "comments": [
+        "The unique client identifier. The client Id is the Id of the FusionAuth Application for which this token was generated."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "token",
+      "comments": [
+        "The access token returned by this OAuth provider as the result of a successful authentication."
+      ],
+      "type": "form",
+      "javaType": "String"
+    }
+  ]
+}

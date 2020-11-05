@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ConnectorResponse",
+  "description" : "/**\n * @author Trevor Smith\n */\n",
+  "fields" : {
+    "connector" : {
+      "type" : "BaseConnectorConfiguration"
+    },
+    "connectors" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "BaseConnectorConfiguration"
+      } ]
+    }
+  }
+}

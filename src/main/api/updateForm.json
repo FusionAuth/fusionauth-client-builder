@@ -1,0 +1,28 @@
+{
+  "uri": "/api/form",
+  "comments": [
+    "Updates the form with the given Id."
+  ],
+  "method": "put",
+  "methodName": "updateForm",
+  "successResponse": "FormResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "formId",
+      "comments": [
+        "The Id of the form to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the new form information."
+      ],
+      "type": "body",
+      "javaType": "FormRequest"
+    }
+  ]
+}

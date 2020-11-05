@@ -18,6 +18,9 @@
     "authenticationType" : {
       "type" : "String"
     },
+    "connectorId" : {
+      "type" : "UUID"
+    },
     "identityProviderId" : {
       "type" : "UUID"
     },

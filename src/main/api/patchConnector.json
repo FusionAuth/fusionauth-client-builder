@@ -1,0 +1,28 @@
+{
+  "uri": "/api/connector",
+  "comments": [
+    "Updates, via PATCH, the connector with the given Id."
+  ],
+  "method": "patch",
+  "methodName": "patchConnector",
+  "successResponse": "ConnectorResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "connectorId",
+      "comments": [
+        "The Id of the connector to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new connector information."
+      ],
+      "type": "body",
+      "javaType": "ConnectorRequest"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "FormFieldAdminPolicy",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "Edit", "View" ]
+}

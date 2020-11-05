@@ -1,0 +1,28 @@
+{
+  "uri": "/api/form",
+  "comments": [
+    "Creates a form.  You can optionally specify an Id for the form, if not provided one will be generated."
+  ],
+  "method": "post",
+  "methodName": "createForm",
+  "successResponse": "FormResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "formId",
+      "comments": [
+        "(Optional) The Id for the form. If not provided a secure random UUID will be generated."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to create the form."
+      ],
+      "type": "body",
+      "javaType": "FormRequest"
+    }
+  ]
+}

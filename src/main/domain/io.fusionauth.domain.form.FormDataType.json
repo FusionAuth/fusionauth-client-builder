@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "FormDataType",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "bool", "consent", "date", "email", "number", "string" ]
+}

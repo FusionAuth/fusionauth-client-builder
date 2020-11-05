@@ -10,8 +10,8 @@
   "methodName": "validateJWT",
   "successResponse": "ValidateResponse",
   "errorResponse": "Void",
-  "authorization": "\"JWT \" + encodedJWT",
   "anonymous": true,
+  "authorization": "\"Bearer \" + encodedJWT",
   "params": [
     {
       "name": "encodedJWT",

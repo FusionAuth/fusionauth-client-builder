@@ -51,6 +51,9 @@
     "lastLoginInstant" : {
       "type" : "ZonedDateTime"
     },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
     "roles" : {
       "type" : "SortedSet",
       "typeArguments" : [ {

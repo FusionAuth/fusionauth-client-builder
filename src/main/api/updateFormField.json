@@ -1,0 +1,28 @@
+{
+  "uri": "/api/form/field",
+  "comments": [
+    "Updates the form field with the given Id."
+  ],
+  "method": "put",
+  "methodName": "updateFormField",
+  "successResponse": "FormFieldResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "fieldId",
+      "comments": [
+        "The Id of the form field to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the new form field information."
+      ],
+      "type": "body",
+      "javaType": "FormFieldRequest"
+    }
+  ]
+}

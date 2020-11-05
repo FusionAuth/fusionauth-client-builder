@@ -9,6 +9,9 @@
     "breachedPasswordStatus" : {
       "type" : "BreachedPasswordStatus"
     },
+    "connectorId" : {
+      "type" : "UUID"
+    },
     "encryptionScheme" : {
       "type" : "String"
     },
@@ -17,6 +20,9 @@
     },
     "id" : {
       "type" : "UUID"
+    },
+    "lastLoginInstant" : {
+      "type" : "ZonedDateTime"
     },
     "password" : {
       "type" : "String"
@@ -32,6 +38,21 @@
     },
     "salt" : {
       "type" : "String"
+    },
+    "twoFactorDelivery" : {
+      "type" : "TwoFactorDelivery"
+    },
+    "twoFactorEnabled" : {
+      "type" : "boolean"
+    },
+    "twoFactorSecret" : {
+      "type" : "String"
+    },
+    "username" : {
+      "type" : "String"
+    },
+    "usernameStatus" : {
+      "type" : "ContentStatus"
     },
     "verified" : {
       "type" : "boolean"

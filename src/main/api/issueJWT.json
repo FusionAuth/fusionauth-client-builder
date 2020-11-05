@@ -11,7 +11,8 @@
   "methodName": "issueJWT",
   "successResponse": "IssueResponse",
   "errorResponse": "Errors",
-  "authorization": "\"JWT \" + encodedJWT",
+  "anonymous": true,
+  "authorization": "\"Bearer \" + encodedJWT",
   "params": [
     {
       "name": "applicationId",
@@ -34,7 +35,7 @@
       "name": "refreshToken",
       "comments": [
         "(Optional) An existing refresh token used to request a refresh token in addition to a JWT in the response.",
-        "<p>The target application represented by the applicationid request parameter must have refresh ",
+        "<p>The target application represented by the applicationId request parameter must have refresh",
         "tokens enabled in order to receive a refresh token in the response.</p>"
       ],
       "type": "urlParameter",

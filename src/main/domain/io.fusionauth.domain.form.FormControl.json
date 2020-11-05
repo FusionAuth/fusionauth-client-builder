@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "FormControl",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "checkbox", "number", "password", "radio", "select", "textarea", "text" ]
+}

@@ -17,6 +17,8 @@
     "type" : "DomainBasedIdentityProvider"
   }, {
     "type" : "RequiresCORSConfiguration"
+  }, {
+    "type" : "SupportsPostBindings"
   } ],
   "fields" : {
     "domains" : {
@@ -43,8 +45,20 @@
     "keyId" : {
       "type" : "UUID"
     },
+    "postRequest" : {
+      "type" : "boolean"
+    },
+    "requestSigningKeyId" : {
+      "type" : "UUID"
+    },
+    "signRequest" : {
+      "type" : "boolean"
+    },
     "useNameIdForEmail" : {
       "type" : "boolean"
+    },
+    "xmlSignatureC14nMethod" : {
+      "type" : "CanonicalizationMethod"
     }
   }
 }

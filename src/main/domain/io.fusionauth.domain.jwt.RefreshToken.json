@@ -7,9 +7,22 @@
     "typeArguments" : [ {
       "type" : "RefreshToken"
     } ]
+  }, {
+    "type" : "_InternalJSONColumn"
   } ],
   "fields" : {
     "applicationId" : {
+      "type" : "UUID"
+    },
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "id" : {
       "type" : "UUID"
     },
     "insertInstant" : {

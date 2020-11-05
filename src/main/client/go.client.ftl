@@ -112,8 +112,8 @@ func (rc *restClient) Do() error {
     fmt.Println(string(responseDump))
   }
   if resp.StatusCode < 200 || resp.StatusCode > 299 {
-    if rc.ErrorRef != nil {
-      err = json.NewDecoder(resp.Body).Decode(rc.ErrorRef)
+    if err = json.NewDecoder(resp.Body).Decode(rc.ErrorRef); err == io.EOF {
+      err = nil
     }
   } else {
     rc.ErrorRef = nil
@@ -183,12 +183,12 @@ func (rc *restClient) WithUriSegment(segment string) *restClient {
 
 [#-- @formatter:off --]
 [#-- Ignoring these few following APIs due to currently being unable to convert the json response into the actual IdentityProvider type. Need a conversion utility. --]
-[#assign ignoredAPIs = ["CreateIdentityProvider","RetrieveIdentityProvider","RetrieveIdentityProviders","UpdateIdentityProvider"]/]
+[#assign ignoredAPIs = ["CreateIdentityProvider","IntrospectAccessToken","RetrieveIdentityProvider","RetrieveIdentityProviders","UpdateIdentityProvider"]/]
 [#list apis as api]
   [#if !(ignoredAPIs?seq_contains(api.methodName?cap_first))]
 // ${api.methodName?cap_first}
   [#list api.comments as comment]
-// ${comment}
+//${(comment == "")?then('', ' ' +comment)}
   [/#list]
   [#list api.params![] as param]
     [#if !param.constant??]
@@ -231,40 +231,40 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (*[#if api
   [#list api.params![] as param]
     [#if param.type == "urlSegment"]
       [#if !param.constant?? && param.javaType == "Integer"]
-             WithUriSegment(string(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
+        WithUriSegment(strconv.Itoa(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
       [#else]
-             WithUriSegment(${(param.constant?? && param.constant)?then(param.value,  global.convertValue(param.name, "go"))}).
+       WithUriSegment(${(param.constant?? && param.constant)?then(param.value,  global.convertValue(param.name, "go"))}).
       [/#if]
     [#elseif param.type == "urlParameter"]
       [#if param.javaType??][#assign goType = global.convertType(param.javaType, "go")/][/#if]
       [#if param.value?? && param.value == "true"]
-             WithParameter("${param.parameterName}", strconv.FormatBool(true)).
+        WithParameter("${param.parameterName}", strconv.FormatBool(true)).
       [#elseif param.value?? && param.value == "false"]
-             WithParameter("${param.parameterName}", strconv.FormatBool(false)).
+        WithParameter("${param.parameterName}", strconv.FormatBool(false)).
       [#elseif !param.constant?? && goType == "bool"]
-             WithParameter("${param.parameterName}", strconv.FormatBool(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
+        WithParameter("${param.parameterName}", strconv.FormatBool(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
       [#elseif !param.constant?? && goType == "[]string"]
-             WithParameter("${param.parameterName}", ${global.convertValue(param.name, "go")}).
+        WithParameter("${param.parameterName}", ${global.convertValue(param.name, "go")}).
       [#elseif !param.constant?? && goType == "interface{}"]
-             WithParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))}.(string)).
+        WithParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))}.(string)).
       [#elseif !param.constant?? && goType == "int"]
-             WithParameter("${param.parameterName}", strconv.Itoa(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
+        WithParameter("${param.parameterName}", strconv.Itoa(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
       [#elseif !param.constant?? && goType == "int64"]
-             WithParameter("${param.parameterName}", strconv.FormatInt(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))}, 10)).
+        WithParameter("${param.parameterName}", strconv.FormatInt(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))}, 10)).
       [#elseif !param.constant?? && goType == "string"]
-             WithParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", global.convertValue(param.name, "go"))}).
+        WithParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", global.convertValue(param.name, "go"))}).
       [#else]
-             WithParameter("${param.parameterName}", string(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
+        WithParameter("${param.parameterName}", string(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
       [/#if]
     [#elseif param.type == "body"]
-             WithJSONBody(${global.convertValue(param.name, "go")}).
+      WithJSONBody(${global.convertValue(param.name, "go")}).
     [/#if]
   [/#list]
   [#if formPost]
-             WithFormData(formBody).
+    WithFormData(formBody).
   [/#if]
-             WithMethod(http.Method${api.method?capitalize}).
-             Do()
+    WithMethod(http.Method${api.method?capitalize}).
+    Do()
   [#if api.errorResponse != "Void"]
     if restClient.ErrorRef == nil {
       return &resp, nil, err

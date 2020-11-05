@@ -1,0 +1,20 @@
+{
+  "uri": "/api/form",
+  "comments": [
+    "Retrieves the form with the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveForm",
+  "successResponse": "FormResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "formId",
+      "comments": [
+        "The Id of the form."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

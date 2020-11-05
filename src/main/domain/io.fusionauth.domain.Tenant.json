@@ -22,6 +22,12 @@
     "configured" : {
       "type" : "boolean"
     },
+    "connectorPolicies" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "ConnectorPolicy"
+      } ]
+    },
     "emailConfiguration" : {
       "type" : "EmailConfiguration"
     },
@@ -37,17 +43,26 @@
     "familyConfiguration" : {
       "type" : "FamilyConfiguration"
     },
+    "formConfiguration" : {
+      "type" : "TenantFormConfiguration"
+    },
     "httpSessionMaxInactiveInterval" : {
       "type" : "int"
     },
     "id" : {
       "type" : "UUID"
     },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
     "issuer" : {
       "type" : "String"
     },
     "jwtConfiguration" : {
       "type" : "JWTConfiguration"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
     },
     "logoutURL" : {
       "type" : "URI"

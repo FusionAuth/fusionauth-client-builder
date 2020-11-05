@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "FormFieldValidator",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "FormFieldValidator"
+    } ]
+  } ],
+  "fields" : {
+    "expression" : {
+      "type" : "String"
+    }
+  }
+}

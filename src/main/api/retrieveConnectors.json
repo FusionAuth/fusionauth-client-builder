@@ -1,0 +1,10 @@
+{
+  "uri": "/api/connector",
+  "comments": [
+    "Retrieves all of the connectors."
+  ],
+  "method": "get",
+  "methodName": "retrieveConnectors",
+  "successResponse": "ConnectorResponse",
+  "errorResponse": "Void"
+}

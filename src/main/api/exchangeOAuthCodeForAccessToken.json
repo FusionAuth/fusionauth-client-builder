@@ -21,7 +21,7 @@
     {
       "name": "client_id",
       "comments": [
-        "(Optional) The unique client identifier. The client Id is the Id of the FusionAuth Application in which you you are attempting to authenticate. This parameter is optional when the Authorization header is provided."
+        "The unique client identifier. The client Id is the Id of the FusionAuth Application in which you you are attempting to authenticate."
       ],
       "type": "form",
       "javaType": "String"
@@ -29,7 +29,7 @@
     {
       "name": "client_secret",
       "comments": [
-        "(Optional) The client secret. This value may optionally be provided in the request body instead of the Authorization header."
+        "(Optional) The client secret. This value will be required if client authentication is enabled."
       ],
       "type": "form",
       "javaType": "String"

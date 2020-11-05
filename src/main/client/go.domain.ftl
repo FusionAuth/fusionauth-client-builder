@@ -45,6 +45,8 @@
   [#if name == "LambdaConfiguration"]
     [#if type.packageName?ends_with(".provider")]
       [#local newName = "Provider" + name/]
+    [#elseif type.packageName?ends_with(".connector")]
+      [#local newName = "Connector" + name/]
     [/#if]
   [/#if]
     [#return newName/]
@@ -88,7 +90,12 @@ type ${hackCollisions(d d.type)?cap_first} struct {
       [/#if]
       [#list d.fields?keys?sort as fieldName]
         [#assign field = d.fields[fieldName]/]
-  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(25)} ${printType(field, d)?right_pad(25)} `json:"${fieldName},omitempty"`
+        [#assign fieldType = printType(field, d)/]
+        [#if fieldType == "bool"]
+  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(32)} ${fieldType?right_pad(34)} `json:"${fieldName}"`
+        [#else]
+  ${global.scrubName(global.toCamelCase(fieldName))?cap_first?right_pad(32)} ${fieldType?right_pad(34)} `json:"${fieldName},omitempty"`
+        [/#if]
       [/#list]
 }
       [#if d.type?ends_with("Response") || responseObjects?seq_contains(d.type)]
@@ -101,7 +108,11 @@ func (b *${hackCollisions(d d.type)?cap_first}) SetStatus(status int) {
 type ${d.type} string
 const (
       [#list d.enum as value]
-  ${d.type}_${global.toCamelCase(value.name!value)?cap_first?right_pad(20)} ${d.type?right_pad(20)} = "${value.name!value}"
+        [#if d.type == "EventType" || d.type == "GrantType"]
+  ${d.type}_${global.toCamelCase(value.name!value)?cap_first?right_pad(32)} ${d.type?right_pad(34)} = "${(value.args[0]?string)!value}"
+        [#else]
+  ${d.type}_${global.toCamelCase(value.name!value)?cap_first?right_pad(32)} ${d.type?right_pad(34)} = "${value.name!value}"
+        [/#if]
       [/#list]
 )
 

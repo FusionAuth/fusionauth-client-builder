@@ -1,0 +1,22 @@
+{
+  "uri": "/oauth2/userinfo",
+  "comments": [
+    "Call the UserInfo endpoint to retrieve User Claims from the access token issued by FusionAuth."
+  ],
+  "method": "get",
+  "methodName": "retrieveUserInfoFromAccessToken",
+  "successResponse": "UserResponse",
+  "errorResponse": "OAuthError",
+  "anonymous": true,
+  "authorization": "\"Bearer \" + encodedJWT",
+  "params": [
+    {
+      "name": "encodedJWT",
+      "comments": [
+        "The encoded JWT (access token)."
+      ],
+      "type": "notUsed",
+      "javaType": "String"
+    }
+  ]
+}

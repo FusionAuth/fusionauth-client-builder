@@ -32,5 +32,8 @@
   }, {
     "name" : "TwitterReconcile",
     "args" : [ "reconcile" ]
+  }, {
+    "name" : "LDAPConnectorReconcile",
+    "args" : [ "reconcile" ]
   } ]
 }

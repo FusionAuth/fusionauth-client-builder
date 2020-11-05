@@ -1,0 +1,36 @@
+{
+  "packageName" : "io.fusionauth.domain.connector",
+  "type" : "BaseConnectorConfiguration",
+  "description" : "// Do not require a setter for 'type', it is defined by the concrete class and is not mutable\n",
+  "implements" : [ {
+    "type" : "_InternalJSONColumn"
+  } ],
+  "fields" : {
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "type" : {
+      "type" : "ConnectorType"
+    }
+  }
+}
