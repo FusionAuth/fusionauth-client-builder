@@ -41,6 +41,9 @@
     "xmlSignatureC14nMethod" : {
       "type" : "CanonicalizationMethod"
     },
+    "xmlSignatureLocation" : {
+      "type" : "XMLSignatureLocation"
+    },
     "callbackURL" : {
       "type" : "URI"
     }
