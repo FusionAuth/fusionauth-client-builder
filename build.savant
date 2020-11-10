@@ -228,6 +228,10 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
 
 // Still testing this to see if it will work with stdout and prompts, etc which are required for dart, and python. Perhaps we can configure all of this to
 // skip all requests for input or confirmations.
+//
+// Daniel: This is working, python requires interactive login, need to configure this credential, and then we should be able
+//        to call this target from CI during a release.
+//
 target(name: "publish-all", description: "Publish all client libraries") {
   ["dart", "java", "netcore", "node", "php", "python", "ruby", "typescript"].each { client ->
     ProcessBuilder pb = new ProcessBuilder(
