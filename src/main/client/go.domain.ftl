@@ -40,6 +40,30 @@
   [#return subPackage/]
 [/#function]
 
+[#macro addFunctions struct]
+  [#if struct == "Errors" ]
+func (e Errors) Present() bool {
+	return len(e.FieldErrors) != 0 || len(e.GeneralErrors) != 0
+}
+
+func (e Errors) Error() string {
+	var messages []string
+	for _, generalError := range e.GeneralErrors {
+		messages = append(messages, generalError.Message)
+	}
+	for fieldName, fieldErrors := range e.FieldErrors {
+		var fieldMessages []string
+		for _, fieldError := range fieldErrors {
+			fieldMessages = append(fieldMessages, fieldError.Message)
+		}
+		messages = append(messages, fmt.Sprintf("%s: %s", fieldName, strings.Join(fieldMessages, ",")))
+	}
+	return strings.Join(messages, " ")
+}
+
+  [/#if]
+[/#macro]
+
 [#function hackCollisions type name]
   [#local newName = name/]
   [#if name == "LambdaConfiguration"]
@@ -55,6 +79,11 @@
 [#assign responseObjects = ["AccessToken","OpenIdConfiguration","OAuthValidationResult"]/]
 
 package fusionauth
+
+import(
+  "fmt"
+  "strings"
+)
 
 type StatusAble interface {
   SetStatus(status int)
@@ -104,6 +133,7 @@ func (b *${hackCollisions(d d.type)?cap_first}) SetStatus(status int) {
 }
       [/#if]
 
+[@addFunctions d.type/]
     [#elseif d.enum??]
 type ${d.type} string
 const (
