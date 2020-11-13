@@ -1,0 +1,31 @@
+{
+  "packageName" : "io.fusionauth.domain.message",
+  "type" : "MessageTemplate",
+  "description" : "/**\n * Stores an message template used to distribute messages;\n *\n * @author Michael Sleevi\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "MessageTemplate"
+    } ]
+  } ],
+  "fields" : {
+    "defaultTemplate" : {
+      "type" : "String"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "localizedTemplates" : {
+      "type" : "LocalizedStrings"
+    },
+    "name" : {
+      "type" : "String"
+    }
+  }
+}

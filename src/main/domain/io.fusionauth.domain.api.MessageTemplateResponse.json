@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "MessageTemplateResponse",
+  "fields" : {
+    "messageTemplate" : {
+      "type" : "MessageTemplate"
+    },
+    "messageTemplates" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "MessageTemplate"
+      } ]
+    }
+  }
+}
