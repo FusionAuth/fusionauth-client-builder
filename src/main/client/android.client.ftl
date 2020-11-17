@@ -53,6 +53,8 @@ import io.fusionauth.domain.api.LoginResponse;
 import io.fusionauth.domain.api.MemberDeleteRequest;
 import io.fusionauth.domain.api.MemberRequest;
 import io.fusionauth.domain.api.MemberResponse;
+import io.fusionauth.domain.api.MessageTemplateRequest;
+import io.fusionauth.domain.api.MessageTemplateResponse;
 import io.fusionauth.domain.api.OAuthConfigurationResponse;
 import io.fusionauth.domain.api.PasswordValidationRulesResponse;
 import io.fusionauth.domain.api.PreviewRequest;
