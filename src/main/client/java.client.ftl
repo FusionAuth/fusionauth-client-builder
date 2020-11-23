@@ -80,6 +80,8 @@ import io.fusionauth.domain.api.MessageTemplateResponse;
 import io.fusionauth.domain.api.OAuthConfigurationResponse;
 import io.fusionauth.domain.api.PasswordValidationRulesResponse;
 import io.fusionauth.domain.api.PendingResponse;
+import io.fusionauth.domain.api.PreviewMessageTemplateRequest;
+import io.fusionauth.domain.api.PreviewMessageTemplateResponse;
 import io.fusionauth.domain.api.PreviewRequest;
 import io.fusionauth.domain.api.PreviewResponse;
 import io.fusionauth.domain.api.PublicKeyResponse;
