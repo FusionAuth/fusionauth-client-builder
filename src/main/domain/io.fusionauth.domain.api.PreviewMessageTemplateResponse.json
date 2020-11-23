@@ -1,0 +1,12 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "PreviewMessageTemplateResponse",
+  "fields" : {
+    "message" : {
+      "type" : "Message"
+    },
+    "errors" : {
+      "type" : "Errors"
+    }
+  }
+}

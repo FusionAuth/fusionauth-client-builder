@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.message",
+  "type" : "Message",
+  "description" : "/**\n * An incredible simplified view of a message\n *\n * @author Michael Sleevi\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "Message"
+    } ]
+  } ],
+  "fields" : {
+    "text" : {
+      "type" : "String"
+    }
+  }
+}

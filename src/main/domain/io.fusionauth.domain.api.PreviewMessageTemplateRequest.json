@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "PreviewMessageTemplateRequest",
+  "description" : "/**\n * @author Michael Sleevi\n */\n",
+  "fields" : {
+    "messageTemplate" : {
+      "type" : "MessageTemplate"
+    },
+    "locale" : {
+      "type" : "Locale"
+    }
+  }
+}

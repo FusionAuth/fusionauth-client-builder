@@ -1,0 +1,20 @@
+{
+  "uri": "/api/message/template/preview",
+  "comments": [
+    "Creates a preview of the message template provided in the request, normalized to a given locale."
+  ],
+  "method": "post",
+  "methodName": "retrieveMessageTemplatePreview",
+  "successResponse": "PreviewMessageTemplateResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains the email template and optionally a locale to render it in."
+      ],
+      "type": "body",
+      "javaType": "PreviewMessageTemplateRequest"
+    }
+  ]
+}
