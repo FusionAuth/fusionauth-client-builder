@@ -3,10 +3,12 @@
 need to handle auth
 params.constant
 
-openapi: "3.0.0"
+openapi: "3.0.3"
 info:
-  title: Simple API overview
-  version: 1.0.0
+  title: FusionAuth API
+  version: 1.21.0
+servers:
+  url: https://local.fusionauth.io
 paths: 
 [#list apis as api]
   ${api.uri}:
@@ -65,4 +67,32 @@ paths:
                 $ref: '#/components/schemas/${api.errorResponse}'
 
 [/#list]
+components:
+  schemas:
+    TODO, pull from domain objects
+  responses:
+  parameters:
+  examples:
+  requestBodies:
+  headers: 
+    - X-FusionAuth-TenantId
+      schema:
+        type: string
+        format: uuid
+  securitySchemes: 
+    ApiKeyAuth:
+      type: apiKey
+      description: Your FusionAuth API key
+      in: header
+      name: Authorization
+    JwtBearer:
+      type: http
+      description: A valid JWT
+      schema: bearer
+security:
+  - ApiKeyAuth: []
+  - JwtBearer: []
+externalDocs:
+  description: FusionAuth documentation
+  url: https://fusionauth.io/docs/v1/tech/
 
