@@ -1,4 +1,4 @@
 *.iws
 **/.DS_Store
 build
-.swp
+*.swp
