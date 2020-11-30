@@ -82,6 +82,9 @@
     "passwordValidationRules" : {
       "type" : "PasswordValidationRules"
     },
+    "state" : {
+      "type" : "ObjectState"
+    },
     "themeId" : {
       "type" : "UUID"
     },
