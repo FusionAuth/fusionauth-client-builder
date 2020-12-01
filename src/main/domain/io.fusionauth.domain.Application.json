@@ -78,6 +78,9 @@
     "samlv2Configuration" : {
       "type" : "SAMLv2Configuration"
     },
+    "state" : {
+      "type" : "ObjectState"
+    },
     "tenantId" : {
       "type" : "UUID"
     },
