@@ -191,7 +191,7 @@ target(name: "build-ruby", description: "Build the Ruby Client Library") {
 
 target(name: "build-openapi", description: "Build the OpenAPI spec") {
   clientLibrary.
-      buildClient(template: "src/main/client/openapi.client.ftl", outputFile: "./openapi.json")
+      buildClient(template: "src/main/client/openapi.client.ftl", outputFile: "./openapi.yaml")
       // buildClient(template: "src/main/client/openapi.client.ftl", outputFile: "../fusionauth-openapi-client/openapi.json")
 }
 
