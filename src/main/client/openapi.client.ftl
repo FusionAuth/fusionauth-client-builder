@@ -1,7 +1,28 @@
 [#import "_macros.ftl" as global/]
 
-need to handle auth
-params.constant
+[#function paramsToUrl params]
+  [#local path = []]
+  [#list params![] as param]  
+    [#if param.type == "urlSegment"] 
+      [#if param.constant?? && param.constant]
+        [#local path = path+[ param.value?replace("\"","") ] /]
+      [#else]
+        [#local path = path+["{"+param.name+"}"] /] 
+      [/#if]
+    [/#if]
+  [/#list]
+  [#return path?join("/")]
+[/#function]
+
+[#function hasBodyParam params]
+  [#list params as param]
+    [#if param.type == "body"]
+      [#return true]
+    [/#if]
+  [/#list]
+  [#return false]
+[/#function]
+
 
 openapi: "3.0.3"
 info:
@@ -11,7 +32,9 @@ servers:
   url: https://local.fusionauth.io
 paths: 
 [#list apis as api]
-  ${api.uri}:
+[#if api.methodName == "createUserAction" || api.methodName == "createApplicationRole"]
+  
+  ${api.uri}/${paramsToUrl(api.params)}:
     ${api.method}:
       operationId: ${api.methodName}
       [#if api.deprecated??]
@@ -23,7 +46,7 @@ paths:
         [#list api.params![] as param]
         [#if param.type != "body"]
         - name: ${param.name}
-          [#if param.type == "urlSegment"] TODO need to tie this back to the paths object
+          [#if param.type == "urlSegment"] 
           in: path
           required: true
           [/#if]
@@ -34,7 +57,10 @@ paths:
             [#list api.comments as comment] ${comment} [/#list]
           schema:
             [#if !param.constant??]
-              type: ${global.convertType(param.javaType, "openapi")}
+              type: ${global.convertType(param.javaType, "openapi")["type"]}
+              [#if global.convertType(param.javaType, "openapi")["format"]??]
+              format: ${global.convertType(param.javaType, "openapi")["format"]}
+              [/#if]
             [#else]
               type: string
             [/#if]
@@ -42,13 +68,15 @@ paths:
         [/#list]
       [#if api.method != "get"]
       requestBody: 
-        description:
-        required: 
-        content:
         [#list api.params![] as param]
         [#if param.type == "body"] 
-          TODO
-          - name: ${param.name}
+        description: |-
+          [#list param.comments as comment] ${comment} [/#list]
+        required: true
+        content:
+          application/json:
+            schema:
+              ref: '#/components/schemas/${param.javaType}'
         [/#if]
         [/#list]
       [/#if]
@@ -66,10 +94,29 @@ paths:
               schema:
                 $ref: '#/components/schemas/${api.errorResponse}'
 
+[/#if]
 [/#list]
 components:
   schemas:
-    TODO, pull from domain objects
+[#list domain as dom]
+[#if dom.type == "UserActionResponse" || dom.type == "UserActionRequest" 
+     || dom.type == "UserAction" 
+]
+    ${dom.type}:
+      type: object
+      required: 
+      properties:
+        TODO handle enum
+[#list dom.fields!{} as fieldname, object]
+        ${fieldname}:
+          type: ${global.convertType(object.type, "openapi")["type"]}
+          [#if global.convertType(object.type, "openapi")["format"]??]
+          format: ${global.convertType(object.type, "openapi")["format"]}
+          [/#if]
+[/#list]
+        
+[/#if]
+[/#list]
   responses:
   parameters:
   examples:
@@ -96,3 +143,5 @@ externalDocs:
   description: FusionAuth documentation
   url: https://fusionauth.io/docs/v1/tech/
 
+
+TODO discriminator for polymorphic response
