@@ -29,10 +29,11 @@ info:
   title: FusionAuth API
   version: 1.21.0
 servers:
-  url: https://local.fusionauth.io
+  - url: https://local.fusionauth.io
 paths: 
 [#list apis as api]
-[#if api.methodName == "createUserAction" || api.methodName == "createApplicationRole"]
+[#if api.methodName == "createUserAction"]
+[#-- || api.methodName == "createApplicationRole" --]
   
   ${api.uri}/${paramsToUrl(api.params)}:
     ${api.method}:
@@ -86,43 +87,56 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/${api.successResponse}'
+                $ref: ${global.convertType(api.successResponse, "openapi")["type"]} 
         default:
           description: 
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/${api.errorResponse}'
+                $ref: ${global.convertType(api.errorResponse, "openapi")["type"]} 
 
 [/#if]
 [/#list]
+[#-- || dom.type == "LocalizedStrings" --]
 components:
   schemas:
 [#list domain as dom]
 [#if dom.type == "UserActionResponse" || dom.type == "UserActionRequest" 
-     || dom.type == "UserAction" 
+     || dom.type == "UserAction"  
+     || dom.type == "Error" 
+     || dom.type == "Errors" 
+     || dom.type == "TransactionType"
+     || dom.type == "UserActionOption"
 ]
     ${dom.type}:
       type: object
-      required: 
+[#if (dom.enum![])?has_content  ]
+      enum:
+[#list dom.enum![] as enum]
+        - ${enum}
+[/#list]
+[/#if]
+
+[#if (dom.fields!{})?has_content  ]
       properties:
-        TODO handle enum
 [#list dom.fields!{} as fieldname, object]
         ${fieldname}:
           type: ${global.convertType(object.type, "openapi")["type"]}
           [#if global.convertType(object.type, "openapi")["format"]??]
           format: ${global.convertType(object.type, "openapi")["format"]}
           [/#if]
+          [#if global.convertType(object.type, "openapi")["type"] == "array"]
+          items: 
+            schema:
+              $ref: ${global.convertType(object.typeArguments[0]["type"], "openapi")["type"]}
+          [/#if]
 [/#list]
+[/#if]
         
 [/#if]
 [/#list]
-  responses:
-  parameters:
-  examples:
-  requestBodies:
   headers: 
-    - X-FusionAuth-TenantId
+    X-FusionAuth-TenantId:
       schema:
         type: string
         format: uuid
@@ -135,13 +149,10 @@ components:
     JwtBearer:
       type: http
       description: A valid JWT
-      schema: bearer
+      scheme: bearer
 security:
   - ApiKeyAuth: []
   - JwtBearer: []
 externalDocs:
   description: FusionAuth documentation
   url: https://fusionauth.io/docs/v1/tech/
-
-
-TODO discriminator for polymorphic response
