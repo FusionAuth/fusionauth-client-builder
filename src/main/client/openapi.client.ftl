@@ -109,26 +109,29 @@ components:
      || dom.type == "UserActionOption"
 ]
     ${dom.type}:
-      type: object
 [#if (dom.enum![])?has_content  ]
+      type: string
       enum:
 [#list dom.enum![] as enum]
         - ${enum}
 [/#list]
 [/#if]
-
 [#if (dom.fields!{})?has_content  ]
+      type: object
       properties:
 [#list dom.fields!{} as fieldname, object]
         ${fieldname}:
+          [#if global.convertType(object.type, "openapi")["ref"]??]
+          $ref: ${global.convertType(object.type, "openapi")["type"]}
+          [#else]
           type: ${global.convertType(object.type, "openapi")["type"]}
+          [/#if]
           [#if global.convertType(object.type, "openapi")["format"]??]
           format: ${global.convertType(object.type, "openapi")["format"]}
           [/#if]
           [#if global.convertType(object.type, "openapi")["type"] == "array"]
           items: 
-            schema:
-              $ref: ${global.convertType(object.typeArguments[0]["type"], "openapi")["type"]}
+            $ref: ${global.convertType(object.typeArguments[0]["type"], "openapi")["type"]}
           [/#if]
 [/#list]
 [/#if]
