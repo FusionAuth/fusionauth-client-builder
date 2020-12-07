@@ -77,19 +77,19 @@ paths:
         content:
           application/json:
             schema:
-              ref: '#/components/schemas/${param.javaType}'
+              $ref: '#/components/schemas/${param.javaType}'
         [/#if]
         [/#list]
       [/#if]
       responses: 
         '200': 
-          description: 
+          description: Success
           content:
             application/json:
               schema:
                 $ref: ${global.convertType(api.successResponse, "openapi")["type"]} 
         default:
-          description: 
+          description: Error
           content:
             application/json:
               schema:
