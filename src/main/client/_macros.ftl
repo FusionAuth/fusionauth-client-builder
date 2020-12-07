@@ -145,7 +145,7 @@
     [#elseif type == "UUID"]
       [#return {"type":"string", "format":"uuid"}/]
     [#elseif type == "ZonedDateTime"]
-      [#return {"type":"string", "format":"date-time"}/]
+      [#return {"type":"integer", "format":"int64"}/]
     [#elseif type == "boolean"]
       [#return {"type":"boolean"}/]
     [#elseif type == "int" || type == "Integer"]
