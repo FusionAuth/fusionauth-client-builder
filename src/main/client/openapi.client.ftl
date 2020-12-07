@@ -83,13 +83,13 @@ paths:
       [/#if]
       responses: 
         '200': 
-          description: Success
+          description: Returns the ${api.successResponse}
           content:
             application/json:
               schema:
                 $ref: ${global.convertType(api.successResponse, "openapi")["type"]} 
         default:
-          description: Error
+          description: Returns the ${api.errorResponse}
           content:
             application/json:
               schema:
@@ -119,6 +119,7 @@ components:
 [#if (dom.fields!{})?has_content  ]
       type: object
       properties:
+#        required: ["name"]
 [#list dom.fields!{} as fieldname, object]
         ${fieldname}:
           [#if global.convertType(object.type, "openapi")["ref"]??]
