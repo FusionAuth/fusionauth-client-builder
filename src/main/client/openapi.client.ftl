@@ -79,17 +79,6 @@
 
 [/#macro]
 
-[#list endpoints_w_optional_path_params!{} as uri, methods]
- ${uri}
-  [#list methods as method, api]
-    ${api.methodName}
-    ${api.methodName}
-        [#list api.params![] as param]
-           ${param.name}
-        [/#list]
-  [/#list]
-[/#list]
-
 openapi: "3.0.3"
 info:
   title: FusionAuth API
@@ -106,7 +95,6 @@ paths:
   [/#list]
   [/#if]
 [/#list]
-
 components:
   schemas:
 [#list domain as dom]
