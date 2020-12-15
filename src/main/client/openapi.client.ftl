@@ -1,48 +1,21 @@
 [#import "_macros.ftl" as global/]
 
-[#function paramsToUrl params]
-  [#local path = []]
-  [#list params![] as param]  
-    [#if param.type == "urlSegment"] 
-      [#if param.constant?? && param.constant]
-        [#local path = path+[ param.value?replace("\"","") ] /]
-      [#else]
-        [#local path = path+["{"+param.name+"}"] /] 
-      [/#if]
-    [/#if]
-  [/#list]
-  [#return path?join("/")]
+[#function hasRequestBody(obj)]
+  [#return (obj!{}).type == "body"]
 [/#function]
 
-[#function hasBodyParam params]
-  [#list params as param]
-    [#if param.type == "body"]
-      [#return true]
-    [/#if]
-  [/#list]
-  [#return false]
+[#function hasAnyOtherParamTypeThanRequestBody(obj)]
+  [#return (obj!{}).type != "body"]
 [/#function]
 
-
-openapi: "3.0.3"
-info:
-  title: FusionAuth API
-  version: 1.21.0
-servers:
-  - url: https://local.fusionauth.io
-paths: 
-[#list apis as api]
-[#if api.methodName == "createUserAction"]
-[#-- || api.methodName == "createApplicationRole" --]
-  
-  ${api.uri}/${paramsToUrl(api.params)}:
-    ${api.method}:
+[#macro buildEndpoint api]
       operationId: ${api.methodName}
       [#if api.deprecated??]
       deprecated: true
       [/#if]
       summary: |-
         [#list api.comments as comment] ${comment} [/#list]
+      [#if (api.params![])?size > 0 && ((api.params?filter(hasAnyOtherParamTypeThanRequestBody))?size == 1)]
       parameters: 
         [#list api.params![] as param]
         [#if param.type != "body"]
@@ -55,7 +28,7 @@ paths:
           in: query
           [/#if]
           description: |-
-            [#list api.comments as comment] ${comment} [/#list]
+            [#list (param.comments)![] as comment] ${comment} [/#list]
           schema:
             [#if !param.constant??]
               type: ${global.convertType(param.javaType, "openapi")["type"]}
@@ -67,7 +40,8 @@ paths:
             [/#if]
         [/#if]
         [/#list]
-      [#if api.method != "get"]
+      [/#if]
+      [#if (api.params![])?size > 0 && ((api.params?filter(hasRequestBody))?size == 1)]
       requestBody: 
         [#list api.params![] as param]
         [#if param.type == "body"] 
@@ -83,21 +57,56 @@ paths:
       [/#if]
       responses: 
         '200': 
+          [#if api.successResponse != "Void"]
           description: Returns the ${api.successResponse}
           content:
             application/json:
               schema:
                 $ref: ${global.convertType(api.successResponse, "openapi")["type"]} 
+          [#else]
+          description: This API does not return a JSON response body. 
+          [/#if]
         default:
+          [#if api.errorResponse != "Void"]
           description: Returns the ${api.errorResponse}
           content:
             application/json:
               schema:
                 $ref: ${global.convertType(api.errorResponse, "openapi")["type"]} 
+          [#else]
+          description: This API does not return a JSON response body when errors occur. 
+          [/#if]
 
-[/#if]
+[/#macro]
+
+[#list endpoints_w_optional_path_params!{} as uri, methods]
+ ${uri}
+  [#list methods as method, api]
+    ${api.methodName}
+    ${api.methodName}
+        [#list api.params![] as param]
+           ${param.name}
+        [/#list]
+  [/#list]
 [/#list]
-[#-- || dom.type == "LocalizedStrings" --]
+
+openapi: "3.0.3"
+info:
+  title: FusionAuth API
+  version: 1.21.0
+servers:
+  - url: https://local.fusionauth.io
+paths: 
+[#list endpoints as uri, methods]
+  [#if uri?contains("user-action") && !uri?contains("reason")]
+  ${uri}:
+  [#list methods as method, api]
+    ${method}:
+    [@buildEndpoint api /]
+  [/#list]
+  [/#if]
+[/#list]
+
 components:
   schemas:
 [#list domain as dom]
