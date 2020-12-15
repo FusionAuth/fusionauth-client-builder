@@ -76,4 +76,13 @@ sb build-openapi
 ```
 
 Which will give you an OpenAPI yaml file in the current directory.
+
+Then you can install https://openapi-generator.tech/ tools
+
+```
+brew install openapi-generator
+openapi-generator generate -i openapi.yaml -g java -o /tmp/test/
+```
+
+
 For more information on the Savant build tool, checkout [savantbuild.org](http://savantbuild.org/).
