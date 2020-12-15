@@ -45,7 +45,7 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.2
 }
 
 // Plugins
-clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.3.2")
+clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.3.3-{integration}")
 dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:1.1.0")
 file = loadPlugin(id: "org.savantbuild.plugin:file:1.0.2")
 idea = loadPlugin(id: "org.savantbuild.plugin:idea:1.0.1")
@@ -192,7 +192,6 @@ target(name: "build-ruby", description: "Build the Ruby Client Library") {
 target(name: "build-openapi", description: "Build the OpenAPI spec") {
   clientLibrary.
       buildClient(template: "src/main/client/openapi.client.ftl", outputFile: "./openapi.yaml")
-      // buildClient(template: "src/main/client/openapi.client.ftl", outputFile: "../fusionauth-openapi-client/openapi.json")
 }
 
 target(name: "build-swift", description: "Build the Swift Client Library") {
