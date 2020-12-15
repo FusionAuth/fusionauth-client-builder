@@ -67,5 +67,13 @@ Building all clients
 sb build-all
 ```
 
+#### OpenAPI
 
+To build the OpenAPI yaml file, run
+
+```
+sb build-openapi
+```
+
+Which will give you an OpenAPI yaml file in the current directory.
 For more information on the Savant build tool, checkout [savantbuild.org](http://savantbuild.org/).
