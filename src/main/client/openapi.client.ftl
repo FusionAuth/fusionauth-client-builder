@@ -15,7 +15,7 @@
       [/#if]
       summary: |-
         [#list api.comments as comment] ${comment} [/#list]
-      [#if (api.params![])?size > 0 && ((api.params?filter(hasAnyOtherParamTypeThanRequestBody))?size == 1)]
+      [#if (api.params![])?size > 0 && ((api.params?filter(hasAnyOtherParamTypeThanRequestBody))?size > 0)]
       parameters: 
         [#list api.params![] as param]
         [#if param.type != "body"]
