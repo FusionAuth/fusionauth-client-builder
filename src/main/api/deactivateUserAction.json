@@ -14,6 +14,7 @@
         "The Id of the user action to deactivate."
       ],
       "type": "urlSegment",
+      "required": true,
       "javaType": "UUID"
     }
   ]

@@ -14,12 +14,14 @@
         "The Id of the user action to reactivate."
       ],
       "type": "urlSegment",
+      "required": true,
       "javaType": "UUID"
     },
     {
       "name": "reactivate",
       "constant": true,
       "type": "urlParameter",
+      "required": true,
       "parameterName": "reactivate",
       "value": "true"
     }

@@ -14,6 +14,7 @@
         "The Id of the user action to update."
       ],
       "type": "urlSegment",
+      "required": true,
       "javaType": "UUID"
     },
     {
@@ -22,6 +23,7 @@
         "The request that contains just the new user action information."
       ],
       "type": "body",
+      "required": true,
       "javaType": "UserActionRequest"
     }
   ]

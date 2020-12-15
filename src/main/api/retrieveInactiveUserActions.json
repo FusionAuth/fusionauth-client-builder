@@ -12,6 +12,7 @@
       "name": "inactive",
       "constant": true,
       "type": "urlParameter",
+      "required": true,
       "parameterName": "inactive",
       "value": "true"
     }

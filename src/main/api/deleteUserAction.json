@@ -15,6 +15,7 @@
         "The Id of the user action to delete."
       ],
       "type": "urlSegment",
+      "required": true,
       "javaType": "UUID"
     },
     {
@@ -22,6 +23,7 @@
       "name": "hardDelete",
       "type": "urlParameter",
       "parameterName": "hardDelete",
+      "required": false,
       "value": "true"
     }
   ]

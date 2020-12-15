@@ -15,7 +15,8 @@
         "(Optional) The Id for the user action. If not provided a secure random UUID will be generated."
       ],
       "type": "urlSegment",
-      "javaType": "UUID"
+      "javaType": "UUID",
+      "required": false
     },
     {
       "name": "request",
@@ -23,6 +24,7 @@
         "The request object that contains all of the information used to create the user action."
       ],
       "type": "body",
+      "required": true,
       "javaType": "UserActionRequest"
     }
   ]

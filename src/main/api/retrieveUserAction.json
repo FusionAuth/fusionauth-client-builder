@@ -15,6 +15,7 @@
         "(Optional) The Id of the user action."
       ],
       "type": "urlSegment",
+      "required": false,
       "javaType": "UUID"
     }
   ]
