@@ -81,8 +81,14 @@ Then you can install https://openapi-generator.tech/ tools
 
 ```
 brew install openapi-generator
-openapi-generator generate -i openapi.yaml -g java -o /tmp/test/
 ```
 
+and then generate the source for the client you want. See the https://openapi-generator.tech/docs/generators/ doc for generator specific options.
+```
+openapi-generator generate -i openapi.yaml -g java -o /tmp/test/
+openapi-generator generate -i openapi.yaml -g java -o /tmp/java --additional-properties=apiPackage=com.fusionauth.client --additional-properties=artifactId=fusionauth-java-client
+cd /tmp/java
+mvn clean install
+```
 
 For more information on the Savant build tool, checkout [savantbuild.org](http://savantbuild.org/).
