@@ -153,7 +153,7 @@ components:
       scheme: bearer
 security:
   - ApiKeyAuth: []
-  - JwtBearer: []
+#  - JwtBearer: [] # only used for some endpoints
 externalDocs:
   description: FusionAuth documentation
   url: https://fusionauth.io/docs/v1/tech/
