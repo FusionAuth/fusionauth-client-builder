@@ -21,7 +21,6 @@
       "name": "reactivate",
       "constant": true,
       "type": "urlParameter",
-      "required": true,
       "parameterName": "reactivate",
       "value": "true"
     }
