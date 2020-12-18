@@ -86,7 +86,7 @@ brew install openapi-generator
 and then generate the source for the client you want. See the https://openapi-generator.tech/docs/generators/ doc for generator specific options.
 ```
 openapi-generator generate -i openapi.yaml -g java -o /tmp/test/
-openapi-generator generate -i openapi.yaml -g java -o /tmp/java --additional-properties=apiPackage=com.fusionauth.client --additional-properties=artifactId=fusionauth-java-client
+openapi-generator generate -i openapi.yaml -g java -o /tmp/java --additional-properties=apiPackage=com.fusionauth.client --additional-properties=artifactId=fusionauth-java-client --additional-properties=library=resteasy
 cd /tmp/java
 mvn clean install
 ```
