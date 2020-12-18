@@ -5,7 +5,7 @@
 [/#function]
 
 [#function hasAnyOtherParamTypeThanRequestBody(obj)]
-  [#return (obj!{}).type != "body"]
+  [#return (obj!{}).type != "body" && !(obj!{}).constant??]
 [/#function]
 
 [#macro buildEndpoint api]
@@ -34,7 +34,7 @@
             [#list (param.comments)![] as comment] ${comment} [/#list]
           [/#if]
           schema:
-            type: ${param.name} ${global.convertType(param.javaType, "openapi")["type"]}
+            type: ${global.convertType(param.javaType, "openapi")["type"]}
             [#if global.convertType(param.javaType, "openapi")["format"]??]
             format: ${global.convertType(param.javaType, "openapi")["format"]}
             [/#if]
