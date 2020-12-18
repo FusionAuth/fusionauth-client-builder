@@ -140,6 +140,8 @@
       [#return {"type":"string"}/]
     [#elseif type == "List"]
       [#return {"type":"array"}/]
+    [#elseif type == "boolean"]
+      [#return {"type":"boolean"}/]
     [#elseif type == "Map"]
       [#return {"type":"object"}/]
     [#elseif type == "UUID"]

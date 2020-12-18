@@ -13,8 +13,10 @@
       [#if api.deprecated??]
       deprecated: true
       [/#if]
+      [#if ((api.comments)![])?size > 0 ]
       summary: |-
         [#list api.comments as comment] ${comment} [/#list]
+      [/#if]
       [#if (api.params![])?size > 0 && ((api.params?filter(hasAnyOtherParamTypeThanRequestBody))?size > 0)]
       parameters: 
         [#list api.params![] as param]
@@ -27,16 +29,14 @@
           [#if param.type == "urlParameter"]
           in: query
           [/#if]
+          [#if ((param.comments)![])?size > 0 ]
           description: |-
             [#list (param.comments)![] as comment] ${comment} [/#list]
+          [/#if]
           schema:
-            [#if !param.constant??]
-              type: ${global.convertType(param.javaType, "openapi")["type"]}
-              [#if global.convertType(param.javaType, "openapi")["format"]??]
-              format: ${global.convertType(param.javaType, "openapi")["format"]}
-              [/#if]
-            [#else]
-              type: string
+            type: ${global.convertType(param.javaType, "openapi")["type"]}
+            [#if global.convertType(param.javaType, "openapi")["format"]??]
+            format: ${global.convertType(param.javaType, "openapi")["format"]}
             [/#if]
         [/#if]
         [/#list]
