@@ -24,7 +24,8 @@
       "type": "urlParameter",
       "parameterName": "hardDelete",
       "required": false,
-      "value": "true"
+      "value": "true",
+      "javaType": "boolean"
     }
   ]
 }
