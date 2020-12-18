@@ -20,7 +20,7 @@
       [#if (api.params![])?size > 0 && ((api.params?filter(hasAnyOtherParamTypeThanRequestBody))?size > 0)]
       parameters: 
         [#list api.params![] as param]
-        [#if param.type != "body"]
+        [#if param.type != "body" && !(param.constant??)]
         - name: ${param.name}
           [#if param.type == "urlSegment"] 
           in: path
@@ -34,7 +34,7 @@
             [#list (param.comments)![] as comment] ${comment} [/#list]
           [/#if]
           schema:
-            type: ${global.convertType(param.javaType, "openapi")["type"]}
+            type: ${param.name} ${global.convertType(param.javaType, "openapi")["type"]}
             [#if global.convertType(param.javaType, "openapi")["format"]??]
             format: ${global.convertType(param.javaType, "openapi")["format"]}
             [/#if]
