@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ObjectState",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "Active", "Inactive", "PendingDelete" ]
+}
