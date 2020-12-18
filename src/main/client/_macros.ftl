@@ -148,8 +148,6 @@
       [#return {"type":"string", "format":"uuid"}/]
     [#elseif type == "ZonedDateTime"]
       [#return {"type":"integer", "format":"int64"}/]
-    [#elseif type == "boolean"]
-      [#return {"type":"boolean"}/]
     [#elseif type == "int" || type == "Integer"]
       [#return {"type":"integer","format":"int32"}/]
     [#elseif type == "LocalizedIntegers" || type == "LocalizedStrings"]
