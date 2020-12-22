@@ -21,7 +21,7 @@ javaErrorVersion = "2.2.2"
 /* Keep this at 3.4.0 for now to preserve the algorithms enum */
 fusionauthJWTVersion = "3.4.0"
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.22.3", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.22.4", licenses: ["ApacheV2_0"]) {
   workflow {
     standard()
   }
