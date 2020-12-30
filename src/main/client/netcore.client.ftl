@@ -48,6 +48,24 @@ namespace io.fusionauth {
       clientBuilder = new DefaultRESTClientBuilder();
     }
 
+    /**
+     * Return a new instance of FusionAuthClient using the provided tenantId.
+     * @param tenantId the tenantId to use for this client.
+     */
+    // ReSharper disable once ParameterHidesMember
+    public FusionAuthClient withTenantId(string tenantId) {
+      return tenantId == null ? this : new FusionAuthClient(apiKey, host, tenantId);
+    }
+
+    /**
+     * Return a new instance of FusionAuthClient using the provided tenantId.
+     * @param tenantId the tenantId to use for this client.
+     */
+    // ReSharper disable once ParameterHidesMember
+    public FusionAuthClient withTenantId(Guid? tenantId) {
+      return tenantId == null ? this : new FusionAuthClient(apiKey, host, tenantId.ToString());
+    }
+
     public IRESTClient buildClient() {
       return buildAnonymousClient().withAuthorization(apiKey);
     }
