@@ -35,5 +35,8 @@
   }, {
     "name" : "LDAPConnectorReconcile",
     "args" : [ "reconcile" ]
+  }, {
+    "name" : "LinkedInReconcile",
+    "args" : [ "reconcile" ]
   } ]
 }

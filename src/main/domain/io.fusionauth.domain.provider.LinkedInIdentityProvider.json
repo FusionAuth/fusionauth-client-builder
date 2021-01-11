@@ -1,0 +1,31 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "LinkedInIdentityProvider",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "type" : "LinkedInApplicationConfiguration"
+    } ]
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "LinkedInIdentityProvider"
+    } ]
+  } ],
+  "fields" : {
+    "buttonText" : {
+      "type" : "String"
+    },
+    "client_id" : {
+      "type" : "String"
+    },
+    "client_secret" : {
+      "type" : "String"
+    },
+    "scope" : {
+      "type" : "String"
+    }
+  }
+}
