@@ -12,6 +12,9 @@
     } ]
   } ],
   "fields" : {
+    "accurateTotal" : {
+      "type" : "boolean"
+    },
     "ids" : {
       "type" : "List",
       "typeArguments" : [ {
