@@ -1,0 +1,21 @@
+{
+  "uri": "/api/jwt/refresh",
+  "comments": [
+    "Revoke all refresh tokens that belong to an application by applicationId."
+  ],
+  "method": "delete",
+  "methodName": "revokeRefreshTokensByApplicationId",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "applicationId",
+      "parameterName": "applicationId",
+      "comments": [
+        "The unique Id of the application that you want to delete all refresh tokens for."
+      ],
+      "type": "urlParameter",
+      "javaType": "UUID"
+    }
+  ]
+}

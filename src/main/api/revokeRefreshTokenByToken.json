@@ -1,0 +1,21 @@
+{
+  "uri": "/api/jwt/refresh",
+  "comments": [
+    "Revokes a single refresh token by using the actual refresh token value. This refresh token value is sensitive, so  be careful with this API request."
+  ],
+  "method": "delete",
+  "methodName": "revokeRefreshTokenByToken",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+       {
+         "name": "token",
+         "parameterName": "token",
+         "comments": [
+           "The refresh token to delete."
+         ],
+         "type": "urlParameter",
+         "javaType": "String"
+       }
+  ]
+}

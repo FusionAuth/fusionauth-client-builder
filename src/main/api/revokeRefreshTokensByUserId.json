@@ -1,0 +1,21 @@
+{
+  "uri": "/api/jwt/refresh",
+  "comments": [
+    "Revoke all refresh tokens that belong to a user by user Id."
+  ],
+  "method": "delete",
+  "methodName": "revokeRefreshTokensByUserId",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "userId",
+      "parameterName": "userId",
+      "comments": [
+        "The unique Id of the user that you want to delete all refresh tokens for."
+      ],
+      "type": "urlParameter",
+      "javaType": "UUID"
+    }
+  ]
+}

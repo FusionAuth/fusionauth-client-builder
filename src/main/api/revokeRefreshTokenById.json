@@ -1,0 +1,21 @@
+{
+  "uri": "/api/jwt/refresh",
+  "comments": [
+    "Revokes a single refresh token by the unique Id. The unique Id is not sensitive as it cannot be used to obtain another JWT."
+  ],
+  "method": "delete",
+  "methodName": "revokeRefreshTokenById",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "tokenId",
+      "parameterName": "tokenId",
+      "comments": [
+        "The unique Id of the token to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}
