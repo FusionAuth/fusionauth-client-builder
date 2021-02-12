@@ -5,7 +5,7 @@
   ],
   "method": "post",
   "methodName": "exchangeRefreshTokenForJWT",
-  "successResponse": "RefreshResponse",
+  "successResponse": "JWTRefreshResponse",
   "errorResponse": "Errors",
   "anonymous": true,
   "params": [

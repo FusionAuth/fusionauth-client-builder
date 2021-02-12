@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "RefreshTokenResponse",
+  "description" : "/**\n * API response for retrieving Refresh Tokens\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "RefreshResponse"
+  } ],
+  "fields" : {
+    "refreshToken" : {
+      "type" : "RefreshToken"
+    },
+    "refreshTokens" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "RefreshToken"
+      } ]
+    }
+  }
+}

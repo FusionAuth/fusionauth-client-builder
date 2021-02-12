@@ -2,18 +2,5 @@
   "packageName" : "io.fusionauth.domain.api.jwt",
   "type" : "RefreshResponse",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
-  "fields" : {
-    "refreshToken" : {
-      "type" : "String"
-    },
-    "refreshTokens" : {
-      "type" : "List",
-      "typeArguments" : [ {
-        "type" : "RefreshToken"
-      } ]
-    },
-    "token" : {
-      "type" : "String"
-    }
-  }
+  "fields" : { }
 }

@@ -1,10 +1,10 @@
 {
   "uri": "/api/jwt/refresh",
   "comments": [
-    "Retrieves the refresh tokens that belong to the user with the given Id."
+    "Retrieves a single refresh token by unique Id. This is not the same thing as the string value of the refresh token, if you have that, you already have what you need.."
   ],
   "method": "get",
-  "methodName": "retrieveRefreshTokens",
+  "methodName": "retrieveRefreshTokenById",
   "successResponse": "RefreshTokenResponse",
   "errorResponse": "Errors",
   "params": [
@@ -13,8 +13,7 @@
       "comments": [
         "The Id of the user."
       ],
-      "type": "urlParameter",
-      "parameterName": "userId",
+      "type": "urlSegment",
       "javaType": "UUID"
     }
   ]

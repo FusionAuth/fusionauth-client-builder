@@ -108,8 +108,9 @@ import io.fusionauth.domain.api.identityProvider.IdentityProviderStartLoginReque
 import io.fusionauth.domain.api.identityProvider.IdentityProviderStartLoginResponse;
 import io.fusionauth.domain.api.identityProvider.LookupResponse;
 import io.fusionauth.domain.api.jwt.IssueResponse;
+import io.fusionauth.domain.api.jwt.JWTRefreshResponse;
 import io.fusionauth.domain.api.jwt.RefreshRequest;
-import io.fusionauth.domain.api.jwt.RefreshResponse;
+import io.fusionauth.domain.api.jwt.RefreshTokenResponse;
 import io.fusionauth.domain.api.jwt.ValidateResponse;
 import io.fusionauth.domain.api.passwordless.PasswordlessLoginRequest;
 import io.fusionauth.domain.api.passwordless.PasswordlessStartResponse;

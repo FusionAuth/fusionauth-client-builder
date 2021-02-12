@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "JWTRefreshResponse",
+  "description" : "/**\n * API response for refreshing a JWT with a Refresh Token.\n * <p>\n * Using a different response object from RefreshTokenResponse because the retrieve response will return an object for refreshToken, and this is a string.\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "RefreshResponse"
+  } ],
+  "fields" : {
+    "refreshToken" : {
+      "type" : "String"
+    },
+    "token" : {
+      "type" : "String"
+    }
+  }
+}
