@@ -1,0 +1,21 @@
+{
+  "uri": "/api/identity-provider",
+  "comments": [
+    "Retrieves the identity provider for the given identity_type."
+  ],
+  "method": "get",
+  "methodName": "retrieveIdentityProviderByType",
+  "successResponse": "IdentityProviderResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "identityType",
+      "comments": [
+        "The type of the identity provider (type)."
+      ],
+      "type": "urlParameter",
+      "parameterName": "type",
+      "javaType": "IdentityProviderType"
+    }
+  ]
+}
