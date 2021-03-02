@@ -1,17 +1,19 @@
 {
   "uri": "/api/identity-provider",
   "comments": [
-    "Retrieves the identity provider for the given identity_type."
+    "Retrieves one or more identity provider for the given type. For types such as Google, Facebook, Twitter and LinkedIn, only a single ",
+    "identity provider can exist. For types such as OpenID Connect and SAMLv2 more than one identity provider can be configured so this request ",
+    "may return multiple identity providers."
   ],
   "method": "get",
   "methodName": "retrieveIdentityProviderByType",
   "successResponse": "IdentityProviderResponse",
-  "errorResponse": "Void",
+  "errorResponse": "Errors",
   "params": [
     {
-      "name": "identityType",
+      "name": "type",
       "comments": [
-        "The type of the identity provider (type)."
+        "The type of the identity provider."
       ],
       "type": "urlParameter",
       "parameterName": "type",

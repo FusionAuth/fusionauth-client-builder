@@ -6,12 +6,12 @@
   "method": "get",
   "methodName": "retrieveIdentityProvider",
   "successResponse": "IdentityProviderResponse",
-  "errorResponse": "Void",
+  "errorResponse": "Errors",
   "params": [
     {
       "name": "identityProviderId",
       "comments": [
-        "(Optional) The identity provider id."
+        "The identity provider Id."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
