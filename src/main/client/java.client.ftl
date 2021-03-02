@@ -52,6 +52,8 @@ import io.fusionauth.domain.api.ConsentRequest;
 import io.fusionauth.domain.api.ConsentResponse;
 import io.fusionauth.domain.api.EmailTemplateRequest;
 import io.fusionauth.domain.api.EmailTemplateResponse;
+import io.fusionauth.domain.api.EntityTypeRequest;
+import io.fusionauth.domain.api.EntityTypeResponse;
 import io.fusionauth.domain.api.EventLogResponse;
 import io.fusionauth.domain.api.EventLogSearchRequest;
 import io.fusionauth.domain.api.EventLogSearchResponse;
