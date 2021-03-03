@@ -27,6 +27,9 @@
     "clientSecret" : {
       "type" : "String"
     },
+    "debug" : {
+      "type" : "boolean"
+    },
     "deviceVerificationURL" : {
       "type" : "URI"
     },
