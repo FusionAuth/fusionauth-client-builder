@@ -143,6 +143,7 @@ import io.fusionauth.domain.oauth2.AccessToken;
 import io.fusionauth.domain.oauth2.IntrospectResponse;
 import io.fusionauth.domain.oauth2.OAuthError;
 import io.fusionauth.domain.oauth2.JWKSResponse;
+import io.fusionauth.domain.provider.IdentityProviderType;
 
 /**
  * Client that connects to a FusionAuth server and provides access to the full set of FusionAuth APIs.
