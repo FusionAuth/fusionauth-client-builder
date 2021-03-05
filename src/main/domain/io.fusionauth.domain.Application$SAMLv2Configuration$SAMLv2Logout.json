@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SAMLv2Logout",
+  "fields" : {
+    "behavior" : {
+      "type" : "SAMLLogoutBehavior"
+    },
+    "defaultVerificationKeyId" : {
+      "type" : "UUID"
+    },
+    "keyId" : {
+      "type" : "UUID"
+    },
+    "requireSignedRequests" : {
+      "type" : "boolean"
+    },
+    "singleLogout" : {
+      "type" : "SAMLv2SingleLogout"
+    },
+    "xmlSignatureC14nMethod" : {
+      "type" : "CanonicalizationMethod"
+    }
+  }
+}

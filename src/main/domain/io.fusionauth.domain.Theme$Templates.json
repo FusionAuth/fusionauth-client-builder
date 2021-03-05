@@ -76,6 +76,9 @@
     },
     "registrationVerify" : {
       "type" : "String"
+    },
+    "samlv2Logout" : {
+      "type" : "String"
     }
   }
 }

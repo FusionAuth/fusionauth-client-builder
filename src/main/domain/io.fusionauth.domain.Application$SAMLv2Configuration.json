@@ -32,6 +32,9 @@
     "keyId" : {
       "type" : "UUID"
     },
+    "logout" : {
+      "type" : "SAMLv2Logout"
+    },
     "logoutURL" : {
       "type" : "URI"
     },
