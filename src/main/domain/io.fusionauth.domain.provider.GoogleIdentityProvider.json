@@ -26,6 +26,9 @@
     },
     "scope" : {
       "type" : "String"
+    },
+    "login_method" : {
+      "type" : "LoginMethod"
     }
   }
 }
