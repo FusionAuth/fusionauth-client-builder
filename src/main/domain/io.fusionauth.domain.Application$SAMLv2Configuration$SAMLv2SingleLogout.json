@@ -1,0 +1,18 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SAMLv2SingleLogout",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "fields" : {
+    "keyId" : {
+      "type" : "UUID"
+    },
+    "url" : {
+      "type" : "URI"
+    },
+    "xmlSignatureC14nMethod" : {
+      "type" : "CanonicalizationMethod"
+    }
+  }
+}
