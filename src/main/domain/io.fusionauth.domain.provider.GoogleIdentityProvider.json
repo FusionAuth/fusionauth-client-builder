@@ -24,11 +24,11 @@
     "client_secret" : {
       "type" : "String"
     },
-    "scope" : {
-      "type" : "String"
-    },
     "login_method" : {
       "type" : "LoginMethod"
+    },
+    "scope" : {
+      "type" : "String"
     }
   }
 }
