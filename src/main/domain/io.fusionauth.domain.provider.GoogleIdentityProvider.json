@@ -24,7 +24,7 @@
     "client_secret" : {
       "type" : "String"
     },
-    "login_method" : {
+    "loginMethod" : {
       "type" : "LoginMethod"
     },
     "scope" : {
