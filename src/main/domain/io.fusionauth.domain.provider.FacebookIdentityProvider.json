@@ -28,7 +28,6 @@
       "type" : "String"
     },
     "loginMethod" : {
-
       "type" : "LoginMethod"
     },
     "permissions" : {
