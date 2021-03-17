@@ -27,6 +27,10 @@
     "fields" : {
       "type" : "String"
     },
+    "loginMethod" : {
+
+      "type" : "LoginMethod"
+    },
     "permissions" : {
       "type" : "String"
     }
