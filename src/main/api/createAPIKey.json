@@ -1,0 +1,28 @@
+{
+  "uri": "/api/apikey/key/",
+  "comments": [
+    "Creates an authenticatio API key. You can optionally specify an Id for the application, if not provided one will be generated."
+  ],
+  "method": "post",
+  "methodName": "createAPIKey",
+  "successResponse": "APIKeyResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "authenticationKeyId",
+      "comments": [
+        "(Optional) The Id of the authentication key. If not provided a secure random UUID will be generated."
+      ],
+      "type": "urlSegment",
+      "javaType": "String"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to create the APIKey."
+      ],
+      "type": "body",
+      "javaType": "APIKeyRequest"
+    }
+  ]
+}

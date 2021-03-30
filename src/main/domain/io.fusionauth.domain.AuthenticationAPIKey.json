@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "AuthenticationAPIKey",
+  "description" : "/**\n * domain POJO to represent AuthenticationKey\n *\n * @author sanjay\n */\n",
+  "fields" : {
+    "id" : {
+      "type" : "String"
+    },
+    "metaData" : {
+      "type" : "AuthenticationMetaData"
+    },
+    "permissions" : {
+      "type" : "AuthenticationPermissions"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    }
+  }
+}
