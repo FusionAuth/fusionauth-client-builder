@@ -1,11 +1,7 @@
 {
   "uri": "/api/apikey/key",
   "comments": [
-    "Creates an authenticatio API key. You can optionally specify an Id for the application, if not provided one will be generated.",
-    "an API key can only be created with equal or lesser authority. An API key cannot create another API key unless it is granted ",
-    "to that API key.",
-    "",
-    "If an API key is locked to a tenant, it can only create API Keys for that same tenant."
+        "Updates an authentication API key by given id"
   ],
   "method": "post",
   "methodName": "createAPIKey",
@@ -15,7 +11,7 @@
     {
       "name": "authenticationKeyId",
       "comments": [
-        "(Optional) The Id of the authentication key. If not provided a secure random api key will be generated."
+        "The Id of the authentication key. If not provided a secure random api key will be generated."
       ],
       "type": "urlSegment",
       "javaType": "String"

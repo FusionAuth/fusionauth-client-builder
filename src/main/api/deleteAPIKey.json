@@ -1,0 +1,20 @@
+{
+  "uri": "/api/apikey/key",
+  "comments": [
+    "Deletes the API key for the given Id."
+  ],
+  "method": "delete",
+  "methodName": "delete",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "authenticationKeyId",
+      "comments": [
+        "The Id of the authentication API key to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "String"
+    }
+  ]
+}

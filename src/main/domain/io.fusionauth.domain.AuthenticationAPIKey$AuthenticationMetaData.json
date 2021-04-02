@@ -2,6 +2,9 @@
   "packageName" : "io.fusionauth.domain",
   "type" : "AuthenticationMetaData",
   "fields" : {
+    "copyAllowed" : {
+      "type" : "boolean"
+    },
     "attributes" : {
       "type" : "Map",
       "typeArguments" : [ {
