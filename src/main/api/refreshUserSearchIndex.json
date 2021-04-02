@@ -9,5 +9,5 @@
   "method": "put",
   "methodName": "refreshUserSearchIndex",
   "successResponse": "Void",
-  "errorResponse": "Errors"
+  "errorResponse": "Void"
 }

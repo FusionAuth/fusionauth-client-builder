@@ -11,9 +11,5 @@
       "type" : "EntitySearchCriteria"
     } ]
   } ],
-  "fields" : {
-    "tenantId" : {
-      "type" : "UUID"
-    }
-  }
+  "fields" : { }
 }

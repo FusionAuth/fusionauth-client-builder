@@ -9,5 +9,5 @@
   "method": "put",
   "methodName": "refreshEntitySearchIndex",
   "successResponse": "Void",
-  "errorResponse": "Errors"
+  "errorResponse": "Void"
 }
