@@ -1,0 +1,20 @@
+{
+  "uri": "/api/entity/search",
+  "comments": [
+    "Searches entities with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchEntities",
+  "successResponse": "EntitySearchResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "EntitySearchRequest"
+    }
+  ]
+}

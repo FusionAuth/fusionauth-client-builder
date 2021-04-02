@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "EntityTypeSearchCriteria",
+  "description" : "/**\n * Search criteria for entity types.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "fields" : {
+    "name" : {
+      "type" : "String"
+    }
+  }
+}

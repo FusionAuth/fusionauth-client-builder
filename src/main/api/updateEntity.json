@@ -1,0 +1,28 @@
+{
+  "uri": "/api/entity",
+  "comments": [
+    "Updates the Entity with the given Id."
+  ],
+  "method": "put",
+  "methodName": "updateEntity",
+  "successResponse": "EntityResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityId",
+      "comments": [
+        "The Id of the Entity to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains all of the new Entity information."
+      ],
+      "type": "body",
+      "javaType": "EntityRequest"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EntityGrant",
+  "description" : "/**\n * A grant for an entity to a user or another entity.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EntityGrant"
+    } ]
+  }, {
+    "type" : "_InternalJSONColumn"
+  } ],
+  "fields" : {
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "permissions" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "recipientEntityId" : {
+      "type" : "UUID"
+    },
+    "userId" : {
+      "type" : "UUID"
+    }
+  }
+}

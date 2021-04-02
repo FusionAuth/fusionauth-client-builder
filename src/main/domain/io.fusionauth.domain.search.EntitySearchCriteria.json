@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "EntitySearchCriteria",
+  "description" : "/**\n * This class is the entity query. It provides a build pattern as well as public fields for use on forms and in actions.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseElasticSearchCriteria"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EntitySearchCriteria"
+    } ]
+  } ],
+  "fields" : {
+    "tenantId" : {
+      "type" : "UUID"
+    }
+  }
+}

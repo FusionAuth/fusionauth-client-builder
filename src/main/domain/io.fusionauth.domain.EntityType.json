@@ -1,0 +1,44 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EntityType",
+  "description" : "/**\n * Models an entity type that has a specific set of permissions. These are global objects and can be used across tenants.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EntityType"
+    } ]
+  }, {
+    "type" : "_InternalJSONColumn"
+  } ],
+  "fields" : {
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "jwtConfiguration" : {
+      "type" : "JWTConfiguration"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "permissions" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "EntityTypePermission"
+      } ]
+    }
+  }
+}

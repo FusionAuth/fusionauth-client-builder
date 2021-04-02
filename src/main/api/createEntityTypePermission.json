@@ -1,0 +1,43 @@
+{
+  "uri": "/api/entity/type",
+  "comments": [
+    "Creates a new permission for an entity type. You must specify the id of the entity type you are creating the permission for.",
+    "You can optionally specify an Id for the permission inside the EntityTypePermission object itself, if not provided one will be generated."
+  ],
+  "method": "post",
+  "methodName": "createEntityTypePermission",
+  "successResponse": "EntityTypeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityTypeId",
+      "comments": [
+        "The Id of the entity type to create the permission on."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "constant": true,
+      "name": "permission",
+      "type": "urlSegment",
+      "value": "\"permission\""
+    },
+    {
+      "name": "permissionId",
+      "comments": [
+        "(Optional) The Id of the permission. If not provided a secure random UUID will be generated."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to create the permission."
+      ],
+      "type": "body",
+      "javaType": "EntityTypeRequest"
+    }
+  ]
+}

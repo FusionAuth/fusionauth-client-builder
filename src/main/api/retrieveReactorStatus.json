@@ -1,0 +1,10 @@
+{
+  "uri": "/api/reactor",
+  "comments": [
+    "Retrieves the FusionAuth Reactor status."
+  ],
+  "method": "get",
+  "methodName": "retrieveReactorStatus",
+  "successResponse": "ReactorStatus",
+  "errorResponse": "Void"
+}

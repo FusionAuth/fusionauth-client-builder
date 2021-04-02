@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EntityGrantResponse",
+  "description" : "/**\n * Entity grant API response object.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "grants" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "EntityGrant"
+      } ]
+    },
+    "grant" : {
+      "type" : "EntityGrant"
+    }
+  }
+}
