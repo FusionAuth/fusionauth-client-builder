@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EntitySearchResponse",
+  "description" : "/**\n * Search request for entities\n *\n * @author Brett Guy\n */\n",
+  "fields" : {
+    "entities" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Entity"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

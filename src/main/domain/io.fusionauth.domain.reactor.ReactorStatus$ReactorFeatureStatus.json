@@ -1,0 +1,5 @@
+{
+  "packageName" : "io.fusionauth.domain.reactor",
+  "type" : "ReactorFeatureStatus",
+  "enum" : [ "ACTIVE", "DISCONNECTED", "PENDING", "UNKNOWN" ]
+}

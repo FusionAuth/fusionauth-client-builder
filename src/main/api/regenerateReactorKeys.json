@@ -1,0 +1,10 @@
+{
+  "uri": "/api/reactor",
+  "comments": [
+    "Regenerates any keys that are used by the FusionAuth Reactor."
+  ],
+  "method": "put",
+  "methodName": "regenerateReactorKeys",
+  "successResponse": "Void",
+  "errorResponse": "Void"
+}

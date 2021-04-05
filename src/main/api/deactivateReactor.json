@@ -1,0 +1,10 @@
+{
+  "uri": "/api/reactor",
+  "comments": [
+    "Deactivates the FusionAuth Reactor."
+  ],
+  "method": "delete",
+  "methodName": "deactivateReactor",
+  "successResponse": "Void",
+  "errorResponse": "Void"
+}
