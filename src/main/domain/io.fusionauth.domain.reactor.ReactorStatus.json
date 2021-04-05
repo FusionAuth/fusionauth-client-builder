@@ -3,6 +3,9 @@
   "type" : "ReactorStatus",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "fields" : {
+    "advancedIdentityProviders" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "advancedRegistrationForms" : {
       "type" : "ReactorFeatureStatus"
     },
