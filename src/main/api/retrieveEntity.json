@@ -1,0 +1,20 @@
+{
+  "uri": "/api/entity",
+  "comments": [
+    "Retrieves the Entity for the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveEntity",
+  "successResponse": "EntityResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityId",
+      "comments": [
+        "The Id of the Entity."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

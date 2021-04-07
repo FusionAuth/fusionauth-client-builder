@@ -45,13 +45,21 @@ import io.fusionauth.domain.api.FormFieldRequest;
 import io.fusionauth.domain.api.FormFieldResponse;
 import io.fusionauth.domain.api.FormRequest;
 import io.fusionauth.domain.api.FormResponse;
-import io.fusionauth.domain.api.UserDeleteResponse;
 import io.fusionauth.domain.api.ConnectorRequest;
 import io.fusionauth.domain.api.ConnectorResponse;
 import io.fusionauth.domain.api.ConsentRequest;
 import io.fusionauth.domain.api.ConsentResponse;
 import io.fusionauth.domain.api.EmailTemplateRequest;
 import io.fusionauth.domain.api.EmailTemplateResponse;
+import io.fusionauth.domain.api.EntityRequest;
+import io.fusionauth.domain.api.EntityResponse;
+import io.fusionauth.domain.api.EntitySearchRequest;
+import io.fusionauth.domain.api.EntitySearchResponse;
+import io.fusionauth.domain.api.FormFieldRequest;
+import io.fusionauth.domain.api.EntityTypeRequest;
+import io.fusionauth.domain.api.EntityTypeResponse;
+import io.fusionauth.domain.api.EntityTypeSearchRequest;
+import io.fusionauth.domain.api.EntityTypeSearchResponse;
 import io.fusionauth.domain.api.EventLogResponse;
 import io.fusionauth.domain.api.EventLogSearchRequest;
 import io.fusionauth.domain.api.EventLogSearchResponse;
@@ -81,6 +89,7 @@ import io.fusionauth.domain.api.PendingResponse;
 import io.fusionauth.domain.api.PreviewRequest;
 import io.fusionauth.domain.api.PreviewResponse;
 import io.fusionauth.domain.api.PublicKeyResponse;
+import io.fusionauth.domain.api.ReactorRequest;
 import io.fusionauth.domain.api.SystemConfigurationRequest;
 import io.fusionauth.domain.api.SystemConfigurationResponse;
 import io.fusionauth.domain.api.TenantRequest;
@@ -97,6 +106,7 @@ import io.fusionauth.domain.api.UserCommentResponse;
 import io.fusionauth.domain.api.UserConsentRequest;
 import io.fusionauth.domain.api.UserConsentResponse;
 import io.fusionauth.domain.api.UserDeleteRequest;
+import io.fusionauth.domain.api.UserDeleteResponse;
 import io.fusionauth.domain.api.UserRequest;
 import io.fusionauth.domain.api.UserResponse;
 import io.fusionauth.domain.api.WebhookRequest;
@@ -143,6 +153,7 @@ import io.fusionauth.domain.oauth2.AccessToken;
 import io.fusionauth.domain.oauth2.IntrospectResponse;
 import io.fusionauth.domain.oauth2.OAuthError;
 import io.fusionauth.domain.oauth2.JWKSResponse;
+import io.fusionauth.domain.reactor.ReactorStatus;
 import io.fusionauth.domain.provider.IdentityProviderType;
 
 /**
@@ -176,9 +187,9 @@ public class FusionAuthClient {
 
   private final String tenantId;
 
-  public int connectTimeout = 2000;
+  public int connectTimeout;
 
-  public int readTimeout = 2000;
+  public int readTimeout;
 
   public FusionAuthClient(String apiKey, String baseURL) {
     this(apiKey, baseURL, null);

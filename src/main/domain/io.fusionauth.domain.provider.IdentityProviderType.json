@@ -28,5 +28,8 @@
   }, {
     "name" : "LinkedIn",
     "args" : [ ]
+  }, {
+    "name" : "SAMLv2IdPInitiated",
+    "args" : [ "null" ]
   } ]
 }

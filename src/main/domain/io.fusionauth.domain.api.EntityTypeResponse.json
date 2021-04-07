@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EntityTypeResponse",
+  "description" : "/**\n * Entity Type API response object.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "entityType" : {
+      "type" : "EntityType"
+    },
+    "entityTypes" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "EntityType"
+      } ]
+    },
+    "permission" : {
+      "type" : "EntityTypePermission"
+    }
+  }
+}

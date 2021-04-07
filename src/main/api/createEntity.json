@@ -1,0 +1,28 @@
+{
+  "uri": "/api/entity",
+  "comments": [
+    "Creates an Entity. You can optionally specify an Id for the Entity. If not provided one will be generated."
+  ],
+  "method": "post",
+  "methodName": "createEntity",
+  "successResponse": "EntityResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityId",
+      "comments": [
+        "(Optional) The Id for the Entity. If not provided a secure random UUID will be generated."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to create the Entity."
+      ],
+      "type": "body",
+      "javaType": "EntityRequest"
+    }
+  ]
+}

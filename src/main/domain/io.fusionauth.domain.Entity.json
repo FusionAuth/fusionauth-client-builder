@@ -1,0 +1,52 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Entity",
+  "description" : "/**\n * Models an entity that a user can be granted permissions to. Or an entity that can be granted permissions to another entity.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "Entity"
+    } ]
+  }, {
+    "type" : "Tenantable"
+  }, {
+    "type" : "_InternalJSONColumn"
+  } ],
+  "fields" : {
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "clientId" : {
+      "type" : "String"
+    },
+    "clientSecret" : {
+      "type" : "String"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "parentId" : {
+      "type" : "UUID"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    },
+    "type" : {
+      "type" : "EntityType"
+    }
+  }
+}

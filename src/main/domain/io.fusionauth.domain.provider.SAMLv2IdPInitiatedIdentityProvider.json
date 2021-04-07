@@ -1,0 +1,33 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SAMLv2IdPInitiatedIdentityProvider",
+  "description" : "/**\n * SAML v2 IdP Initiated identity provider configuration.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "type" : "SAMLv2IdPInitiatedApplicationConfiguration"
+    } ]
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "SAMLv2IdPInitiatedIdentityProvider"
+    } ]
+  }, {
+    "type" : "RequiresCORSConfiguration"
+  } ],
+  "fields" : {
+    "emailClaim" : {
+      "type" : "String"
+    },
+    "issuer" : {
+      "type" : "URI"
+    },
+    "keyId" : {
+      "type" : "UUID"
+    },
+    "useNameIdForEmail" : {
+      "type" : "boolean"
+    }
+  }
+}

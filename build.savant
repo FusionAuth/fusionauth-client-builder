@@ -13,15 +13,13 @@
  * either express or implied. See the License for the specific
  * language governing permissions and limitations under the License.
  */
-
 import java.nio.file.Files
 import java.nio.file.Paths
 
+fusionauthJWTVersion = "3.4.0" // Keep this at 3.4.0 for now to preserve the algorithms enum
 javaErrorVersion = "2.2.2"
-/* Keep this at 3.4.0 for now to preserve the algorithms enum */
-fusionauthJWTVersion = "3.4.0"
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.25.1", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.26.0", licenses: ["ApacheV2_0"]) {
   workflow {
     standard()
   }
@@ -130,6 +128,20 @@ target(name: "release", description: "Release", dependsOn: ["clean", "pre-releas
   release.release()
 }
 
+/**
+ * Execute `sb format` in the client library directory, relative to this directory
+ */
+void formatClientLibrary(String clientLibrary) {
+  ProcessBuilder pb = new ProcessBuilder("sb", "format")
+  def file = new File("../" + clientLibrary)
+  def process = pb.inheritIO().directory(file).start()
+  process.consumeProcessOutput(System.out, System.err)
+  process.waitFor()
+  if (process.exitValue() != 0) {
+    fail("Unable to run `sb format` for client library [" + clientLibrary + "]")
+  }
+}
+
 target(name: "build-angular", description: "Build the Angular Client Library") {
   clientLibrary.
       buildClient(template: "src/main/client/angular.client.ftl", outputFile: "../fusionauth-angular-client/src/FusionAuthClient.ts")
@@ -199,6 +211,7 @@ target(name: "build-go", description: "Build the Go Client Library") {
                             outputFile: "../go-client/pkg/fusionauth/Client.go")
   clientLibrary.buildClient(template: "src/main/client/go.domain.ftl",
                             outputFile: "../go-client/pkg/fusionauth/Domain.go")
+  formatClientLibrary("go-client")
 }
 
 target(name: "build-android", description: "Build the Android Client Library") {
@@ -211,6 +224,7 @@ target(name: "build-dart", description: "Build the Dart Client Library") {
                             outputFile: "../fusionauth-dart-client/lib/src/FusionAuthClient.dart")
   clientLibrary.buildClient(template: "src/main/client/dart.domain.ftl",
                             outputFile: "../fusionauth-dart-client/lib/src/FusionAuthDomain.dart")
+  formatClientLibrary("fusionauth-dart-client")
 }
 
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
