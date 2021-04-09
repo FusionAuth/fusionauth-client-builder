@@ -50,6 +50,9 @@
     },
     "requireClientAuthentication" : {
       "type" : "boolean"
+    },
+    "requireRegistration" : {
+      "type" : "boolean"
     }
   }
 }
