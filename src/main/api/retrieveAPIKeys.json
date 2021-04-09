@@ -1,0 +1,10 @@
+{
+  "uri": "/api/apikey/key",
+  "comments": [
+    "Retrieves all authentication API keys"
+  ],
+  "method": "get",
+  "methodName": "retrieveAPIKeys",
+  "successResponse": "AuthenticationAPIKey",
+  "errorResponse": "Void"
+}

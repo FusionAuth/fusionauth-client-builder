@@ -8,6 +8,12 @@
     },
     "authenticationKey" : {
       "type" : "AuthenticationAPIKey"
+    },
+    "authenticationKeys" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "AuthenticationAPIKey"
+      } ]
     }
   }
 }

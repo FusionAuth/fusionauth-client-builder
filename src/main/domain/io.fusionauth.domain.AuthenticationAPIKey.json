@@ -2,6 +2,12 @@
   "packageName" : "io.fusionauth.domain",
   "type" : "AuthenticationAPIKey",
   "description" : "/**\n * domain POJO to represent AuthenticationKey\n *\n * @author sanjay\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "AuthenticationAPIKey"
+    } ]
+  } ],
   "fields" : {
     "id" : {
       "type" : "String"

@@ -4,7 +4,7 @@
         "Updates an authentication API key by given id"
   ],
   "method": "post",
-  "methodName": "createAPIKey",
+  "methodName": "patchAPIKey",
   "successResponse": "APIKeyResponse",
   "errorResponse": "Errors",
   "params": [

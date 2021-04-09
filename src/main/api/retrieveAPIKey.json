@@ -1,17 +1,17 @@
 {
   "uri": "/api/apikey/key",
   "comments": [
-    "Deletes the API key for the given Id."
+    "Retrieves an authentication API key for the given id"
   ],
-  "method": "delete",
-  "methodName": "deleteAPIKey",
-  "successResponse": "Void",
+  "method": "get",
+  "methodName": "retrieveAPIKey",
+  "successResponse": "APIKeyResponse",
   "errorResponse": "Errors",
   "params": [
     {
       "name": "authenticationKeyId",
       "comments": [
-        "The Id of the authentication API key to delete."
+        "The Id of the API key to retrieve."
       ],
       "type": "urlSegment",
       "javaType": "String"
