@@ -19,6 +19,9 @@
         "type" : "Object"
       } ]
     },
+    "entity" : {
+      "type" : "Entity"
+    },
     "id" : {
       "type" : "UUID"
     },

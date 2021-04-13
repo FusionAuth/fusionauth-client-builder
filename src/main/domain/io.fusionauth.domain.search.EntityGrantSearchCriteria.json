@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "EntityGrantSearchCriteria",
+  "description" : "/**\n * Search criteria for entity grants.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "fields" : {
+    "entityId" : {
+      "type" : "UUID"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "userId" : {
+      "type" : "UUID"
+    }
+  }
+}
