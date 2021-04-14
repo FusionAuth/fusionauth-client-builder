@@ -20,10 +20,10 @@
     "helpers" : {
       "type" : "String"
     },
-    "oath2AuthorizedNotRegistered" : {
+    "oauth2Authorize" : {
       "type" : "String"
     },
-    "oauth2Authorize" : {
+    "oauth2AuthorizedNotRegistered" : {
       "type" : "String"
     },
     "oauth2ChildRegistrationNotAllowed" : {
