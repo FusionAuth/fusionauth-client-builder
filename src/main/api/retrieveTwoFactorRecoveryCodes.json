@@ -1,0 +1,20 @@
+{
+  "uri": "/api/user/two-factor/recovery-code",
+  "comments": [
+    "Retrieve two-factor recovery codes for a user."
+  ],
+  "method": "get",
+  "methodName": "retrieveTwoFactorRecoveryCodes",
+  "successResponse": "TwoFactorRecoveryCodeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "userId",
+      "comments": [
+        "The Id of the user to retrieve Two Factor recovery codes."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

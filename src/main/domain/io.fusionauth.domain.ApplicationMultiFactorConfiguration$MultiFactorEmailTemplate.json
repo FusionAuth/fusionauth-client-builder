@@ -1,0 +1,9 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "MultiFactorEmailTemplate",
+  "fields" : {
+    "templateId" : {
+      "type" : "UUID"
+    }
+  }
+}

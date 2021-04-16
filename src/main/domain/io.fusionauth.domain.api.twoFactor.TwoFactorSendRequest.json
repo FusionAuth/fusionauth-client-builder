@@ -9,10 +9,16 @@
     } ]
   } ],
   "fields" : {
-    "mobilePhone" : {
+    "email" : {
       "type" : "String"
     },
-    "secret" : {
+    "method" : {
+      "type" : "String"
+    },
+    "methodId" : {
+      "type" : "String"
+    },
+    "mobilePhone" : {
       "type" : "String"
     },
     "userId" : {

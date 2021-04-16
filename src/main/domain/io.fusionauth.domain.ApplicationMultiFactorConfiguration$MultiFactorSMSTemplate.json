@@ -1,0 +1,9 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "MultiFactorSMSTemplate",
+  "fields" : {
+    "templateId" : {
+      "type" : "UUID"
+    }
+  }
+}

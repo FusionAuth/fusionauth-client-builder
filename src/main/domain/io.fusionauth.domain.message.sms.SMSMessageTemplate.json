@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.message.sms",
+  "type" : "SMSMessageTemplate",
+  "description" : "/**\n * @author Michael Sleevi\n */\n",
+  "extends" : [ {
+    "type" : "MessageTemplate"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "SMSMessageTemplate"
+    } ]
+  } ],
+  "fields" : {
+    "defaultTemplate" : {
+      "type" : "String"
+    },
+    "localizedTemplates" : {
+      "type" : "LocalizedStrings"
+    }
+  }
+}

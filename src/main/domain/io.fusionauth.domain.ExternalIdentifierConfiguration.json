@@ -60,6 +60,12 @@
     "twoFactorIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "twoFactorOneTimeCodeIdGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "twoFactorOneTimeCodeIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "twoFactorTrustIdTimeToLiveInSeconds" : {
       "type" : "int"
     }

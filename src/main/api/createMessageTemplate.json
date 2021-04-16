@@ -1,0 +1,28 @@
+{
+  "uri": "/api/message/template",
+  "comments": [
+    "Creates an message template. You can optionally specify an Id for the template, if not provided one will be generated."
+  ],
+  "method": "post",
+  "methodName": "createMessageTemplate",
+  "successResponse": "MessageTemplateResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "messageTemplateId",
+      "comments": [
+        "(Optional) The Id for the template. If not provided a secure random UUID will be generated."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to create the message template."
+      ],
+      "type": "body",
+      "javaType": "MessageTemplateRequest"
+    }
+  ]
+}

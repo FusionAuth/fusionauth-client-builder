@@ -1,0 +1,30 @@
+{
+  "packageName" : "io.fusionauth.domain.api.twoFactor",
+  "type" : "TwoFactorStartRequest",
+  "description" : "/**\n * @author Brett Guy\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TwoFactorStartRequest"
+    } ]
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "code" : {
+      "type" : "String"
+    },
+    "loginId" : {
+      "type" : "String"
+    },
+    "state" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "uri": "/api/messenger",
+  "comments": [
+    "Deletes the messenger for the given Id."
+  ],
+  "method": "delete",
+  "methodName": "deleteMessenger",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "messengerId",
+      "comments": [
+        "The Id of the messenger to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

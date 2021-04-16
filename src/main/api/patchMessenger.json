@@ -1,0 +1,28 @@
+{
+  "uri": "/api/messenger",
+  "comments": [
+    "Updates, via PATCH, the messenger with the given Id."
+  ],
+  "method": "patch",
+  "methodName": "patchMessenger",
+  "successResponse": "MessengerResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "messengerId",
+      "comments": [
+        "The Id of the messenger to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new messenger information."
+      ],
+      "type": "body",
+      "javaType": "MessengerRequest"
+    }
+  ]
+}

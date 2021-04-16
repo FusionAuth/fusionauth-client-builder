@@ -1,0 +1,34 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TwoFactorMethod",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TwoFactorMethod"
+    } ]
+  } ],
+  "fields" : {
+    "authenticator" : {
+      "type" : "AuthenticatorConfiguration"
+    },
+    "email" : {
+      "type" : "String"
+    },
+    "id" : {
+      "type" : "String"
+    },
+    "lastUsed" : {
+      "type" : "boolean"
+    },
+    "method" : {
+      "type" : "String"
+    },
+    "mobilePhone" : {
+      "type" : "String"
+    },
+    "secret" : {
+      "type" : "String"
+    }
+  }
+}

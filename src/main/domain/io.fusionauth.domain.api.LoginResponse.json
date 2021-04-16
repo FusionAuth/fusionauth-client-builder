@@ -21,6 +21,12 @@
     "changePasswordReason" : {
       "type" : "ChangePasswordReason"
     },
+    "methods" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "TwoFactorMethod"
+      } ]
+    },
     "refreshToken" : {
       "type" : "String"
     },

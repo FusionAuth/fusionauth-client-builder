@@ -20,6 +20,9 @@
     },
     "twoFactorId" : {
       "type" : "String"
+    },
+    "userId" : {
+      "type" : "UUID"
     }
   }
 }
