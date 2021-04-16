@@ -1,0 +1,20 @@
+{
+  "uri": "/api/entity/grant/search",
+  "comments": [
+    "Searches Entity Grants with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchEntityGrants",
+  "successResponse": "EntityGrantSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "EntityGrantSearchRequest"
+    }
+  ]
+}
