@@ -12,7 +12,7 @@
     "adminRegistrationFormId" : {
       "type" : "UUID"
     },
-    "selfServiceUserFormId" : {
+    "selfServiceFormId" : {
       "type" : "UUID"
     }
   }
