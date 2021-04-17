@@ -1,5 +1,6 @@
 {
   "packageName" : "io.fusionauth.domain.reactor",
   "type" : "ReactorFeatureStatus",
+  "description" : "/**\n * @author Brian Pontarelli\n */\n",
   "enum" : [ "ACTIVE", "DISCONNECTED", "PENDING", "UNKNOWN" ]
 }

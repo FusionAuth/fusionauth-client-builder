@@ -99,6 +99,7 @@ import io.fusionauth.domain.api.PreviewRequest;
 import io.fusionauth.domain.api.PreviewResponse;
 import io.fusionauth.domain.api.PublicKeyResponse;
 import io.fusionauth.domain.api.ReactorRequest;
+import io.fusionauth.domain.api.ReactorResponse;
 import io.fusionauth.domain.api.SystemConfigurationRequest;
 import io.fusionauth.domain.api.SystemConfigurationResponse;
 import io.fusionauth.domain.api.TenantRequest;
