@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "APIKeyResponse",
+  "description" : "/**\n * Authentication key response object.\n *\n * @author Sanjay\n */\n",
+  "fields" : {
+    "apiKey" : {
+      "type" : "APIKey"
+    }
+  }
+}
