@@ -22,7 +22,7 @@
       "type" : "String"
     },
     "loginMethod" : {
-      "type" : "LoginMethod"
+      "type" : "IdentityProviderLoginMethod"
     },
     "scope" : {
       "type" : "String"

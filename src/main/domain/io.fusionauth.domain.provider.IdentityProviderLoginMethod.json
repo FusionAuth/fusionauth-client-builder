@@ -1,6 +1,6 @@
 {
   "packageName" : "io.fusionauth.domain.provider",
-  "type" : "LoginMethod",
+  "type" : "IdentityProviderLoginMethod",
   "description" : "/**\n * @author Brett Pontarelli\n */\n",
   "enum" : [ "UsePopup", "UseRedirect" ]
 }

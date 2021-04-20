@@ -28,7 +28,7 @@
       "type" : "String"
     },
     "loginMethod" : {
-      "type" : "LoginMethod"
+      "type" : "IdentityProviderLoginMethod"
     },
     "permissions" : {
       "type" : "String"
