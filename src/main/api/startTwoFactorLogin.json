@@ -1,0 +1,25 @@
+{
+  "uri": "/api/two-factor/start",
+  "comments": [
+    "Start a Two-Factor login request by generating a two-factor identifier. This code can then be sent to the Two Factor Send ",
+    "API (/api/two-factor/send)in order to send a one-time use code to a user. You can also use one-time use code returned ",
+    "to send the code out-of-band. The Two-Factor login is completed by making a request to the Two-Factor Login ",
+    "API (/api/two-factor/login). with the two-factor identifier and the one-time use code.",
+    "",
+    "This API is intended to allow you to begin a Two-Factor login outside of a normal login that originated from the Login API (/api/login)."
+  ],
+  "method": "post",
+  "methodName": "startTwoFactorLogin",
+  "successResponse": "TwoFactorStartResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The Two-Factor start request that contains all of the information used to begin the Two-Factor login request."
+      ],
+      "type": "body",
+      "javaType": "TwoFactorStartRequest"
+    }
+  ]
+}

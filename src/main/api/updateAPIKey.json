@@ -1,0 +1,28 @@
+{
+  "uri": "/api/api-key",
+  "comments": [
+    "Updates an API key by given id"
+  ],
+  "method": "put",
+  "methodName": "updateAPIKey",
+  "successResponse": "APIKeyResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "apiKeyId",
+      "comments": [
+        "The Id of the API key to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to create the API Key."
+      ],
+      "type": "body",
+      "javaType": "APIKeyRequest"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "uri": "/api/entity",
+  "comments": [
+    "Creates or updates an Entity Grant. This is when a User/Entity is granted permissions to an Entity."
+  ],
+  "method": "post",
+  "methodName": "upsertEntityGrant",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityId",
+      "comments": [
+        "The Id of the Entity that the User/Entity is being granted access to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "constant": true,
+      "name": "grant",
+      "type": "urlSegment",
+      "value": "\"grant\""
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to create the Entity Grant."
+      ],
+      "type": "body",
+      "javaType": "EntityGrantRequest"
+    }
+  ]
+}

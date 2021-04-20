@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationMultiFactorConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "email" : {
+      "type" : "MultiFactorEmailTemplate"
+    },
+    "sms" : {
+      "type" : "MultiFactorSMSTemplate"
+    }
+  }
+}

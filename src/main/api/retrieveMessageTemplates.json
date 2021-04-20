@@ -1,0 +1,10 @@
+{
+  "uri": "/api/message/template",
+  "comments": [
+    "Retrieves all of the message templates."
+  ],
+  "method": "get",
+  "methodName": "retrieveMessageTemplates",
+  "successResponse": "MessageTemplateResponse",
+  "errorResponse": "Void"
+}

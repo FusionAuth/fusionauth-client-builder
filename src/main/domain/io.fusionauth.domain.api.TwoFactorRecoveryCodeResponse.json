@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TwoFactorRecoveryCodeResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "recoveryCodes" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    }
+  }
+}

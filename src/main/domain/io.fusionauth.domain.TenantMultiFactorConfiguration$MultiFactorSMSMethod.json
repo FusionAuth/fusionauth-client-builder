@@ -1,0 +1,21 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "MultiFactorSMSMethod",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "MultiFactorSMSMethod"
+    } ]
+  } ],
+  "fields" : {
+    "messengerId" : {
+      "type" : "UUID"
+    },
+    "templateId" : {
+      "type" : "UUID"
+    }
+  }
+}

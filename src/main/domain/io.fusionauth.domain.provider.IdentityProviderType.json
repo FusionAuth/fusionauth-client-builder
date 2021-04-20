@@ -1,6 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.provider",
   "type" : "IdentityProviderType",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "enum" : [ {
     "name" : "ExternalJWT",
     "args" : [ "null" ]

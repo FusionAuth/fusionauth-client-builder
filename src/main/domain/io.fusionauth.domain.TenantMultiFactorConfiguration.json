@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantMultiFactorConfiguration",
+  "description" : "/**\n * @author Mikey Sleevi\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantMultiFactorConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "authenticator" : {
+      "type" : "MultiFactorAuthenticatorMethod"
+    },
+    "email" : {
+      "type" : "MultiFactorEmailMethod"
+    },
+    "sms" : {
+      "type" : "MultiFactorSMSMethod"
+    }
+  }
+}

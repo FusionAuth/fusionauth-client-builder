@@ -18,6 +18,15 @@
       "javaType": "UUID"
     },
     {
+      "name": "methodId",
+      "comments": [
+        "The two-factor method identifier you wish to disable"
+      ],
+      "type": "urlParameter",
+      "parameterName": "methodId",
+      "javaType": "String"
+    },
+    {
       "name": "code",
       "comments": [
         "The Two Factor code used verify the the caller knows the Two Factor secret."
