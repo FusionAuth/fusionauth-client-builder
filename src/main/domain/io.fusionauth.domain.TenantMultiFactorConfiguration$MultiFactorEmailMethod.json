@@ -1,0 +1,18 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "MultiFactorEmailMethod",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "MultiFactorEmailMethod"
+    } ]
+  } ],
+  "fields" : {
+    "templateId" : {
+      "type" : "UUID"
+    }
+  }
+}

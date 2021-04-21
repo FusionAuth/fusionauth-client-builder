@@ -64,6 +64,9 @@
     "lastUpdateInstant" : {
       "type" : "ZonedDateTime"
     },
+    "loginConfiguration" : {
+      "type" : "TenantLoginConfiguration"
+    },
     "logoutURL" : {
       "type" : "URI"
     },
@@ -72,6 +75,9 @@
     },
     "minimumPasswordAge" : {
       "type" : "MinimumPasswordAge"
+    },
+    "multiFactorConfiguration" : {
+      "type" : "TenantMultiFactorConfiguration"
     },
     "name" : {
       "type" : "String"

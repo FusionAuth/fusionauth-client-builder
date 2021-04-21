@@ -54,6 +54,9 @@
     "loginConfiguration" : {
       "type" : "LoginConfiguration"
     },
+    "multiFactorConfiguration" : {
+      "type" : "ApplicationMultiFactorConfiguration"
+    },
     "name" : {
       "type" : "String"
     },

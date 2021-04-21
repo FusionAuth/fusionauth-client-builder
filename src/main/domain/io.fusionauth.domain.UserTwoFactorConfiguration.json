@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserTwoFactorConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserTwoFactorConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "methods" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "TwoFactorMethod"
+      } ]
+    },
+    "recoveryCodes" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.message.sms",
+  "type" : "SMSMessage",
+  "description" : "/**\n * @author Michael Sleevi\n */\n",
+  "implements" : [ {
+    "type" : "Message"
+  } ],
+  "fields" : {
+    "phoneNumber" : {
+      "type" : "String"
+    },
+    "textMessage" : {
+      "type" : "String"
+    }
+  }
+}

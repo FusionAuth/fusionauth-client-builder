@@ -1,0 +1,20 @@
+{
+  "uri": "/api/message/template",
+  "comments": [
+    "Retrieves the message template for the given Id. If you don't specify the id, this will return all of the message templates."
+  ],
+  "method": "get",
+  "methodName": "retrieveMessageTemplate",
+  "successResponse": "MessageTemplateResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "messageTemplateId",
+      "comments": [
+        "(Optional) The Id of the message template."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

@@ -6,19 +6,14 @@
     "advancedIdentityProviders" : {
       "type" : "ReactorFeatureStatus"
     },
+    "advancedMultiFactorAuthentication" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "advancedRegistrationForms" : {
       "type" : "ReactorFeatureStatus"
     },
     "breachedPasswordDetection" : {
       "type" : "ReactorFeatureStatus"
-    },
-    "breachedPasswordMetrics" : {
-      "type" : "Map",
-      "typeArguments" : [ {
-        "type" : "UUID"
-      }, {
-        "type" : "BreachedPasswordTenantMetric"
-      } ]
     },
     "connectors" : {
       "type" : "ReactorFeatureStatus"
@@ -28,9 +23,6 @@
     },
     "licensed" : {
       "type" : "boolean"
-    },
-    "multiFactorAuthentication" : {
-      "type" : "ReactorFeatureStatus"
     }
   }
 }

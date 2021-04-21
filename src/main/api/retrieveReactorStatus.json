@@ -5,6 +5,6 @@
   ],
   "method": "get",
   "methodName": "retrieveReactorStatus",
-  "successResponse": "ReactorStatus",
+  "successResponse": "ReactorResponse",
   "errorResponse": "Void"
 }

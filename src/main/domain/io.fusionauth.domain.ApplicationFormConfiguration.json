@@ -11,6 +11,9 @@
   "fields" : {
     "adminRegistrationFormId" : {
       "type" : "UUID"
+    },
+    "selfServiceFormId" : {
+      "type" : "UUID"
     }
   }
 }

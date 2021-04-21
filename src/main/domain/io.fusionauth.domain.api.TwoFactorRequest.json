@@ -9,11 +9,20 @@
     } ]
   } ],
   "fields" : {
+    "authenticatorId" : {
+      "type" : "String"
+    },
     "code" : {
       "type" : "String"
     },
-    "delivery" : {
-      "type" : "TwoFactorDelivery"
+    "email" : {
+      "type" : "String"
+    },
+    "method" : {
+      "type" : "String"
+    },
+    "mobilePhone" : {
+      "type" : "String"
     },
     "secret" : {
       "type" : "String"

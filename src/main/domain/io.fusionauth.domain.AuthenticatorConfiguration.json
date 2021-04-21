@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "AuthenticatorConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "AuthenticatorConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "algorithm" : {
+      "type" : "TOTPAlgorithm"
+    },
+    "codeLength" : {
+      "type" : "int"
+    },
+    "timeStep" : {
+      "type" : "int"
+    }
+  }
+}

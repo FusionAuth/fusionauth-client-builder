@@ -1,0 +1,37 @@
+{
+  "packageName" : "io.fusionauth.domain.messenger",
+  "type" : "GenericMessengerConfiguration",
+  "description" : "/**\n * @author Brett Guy\n */\n",
+  "extends" : [ {
+    "type" : "BaseMessengerConfiguration"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "GenericMessengerConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "connectTimeout" : {
+      "type" : "int"
+    },
+    "headers" : {
+      "type" : "HTTPHeaders"
+    },
+    "httpAuthenticationPassword" : {
+      "type" : "String"
+    },
+    "httpAuthenticationUsername" : {
+      "type" : "String"
+    },
+    "readTimeout" : {
+      "type" : "int"
+    },
+    "sslCertificate" : {
+      "type" : "String"
+    },
+    "url" : {
+      "type" : "URI"
+    }
+  }
+}

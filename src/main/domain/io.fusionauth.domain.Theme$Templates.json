@@ -8,6 +8,21 @@
     } ]
   } ],
   "fields" : {
+    "accountEdit" : {
+      "type" : "String"
+    },
+    "accountIndex" : {
+      "type" : "String"
+    },
+    "accountTwoFactorDisable" : {
+      "type" : "String"
+    },
+    "accountTwoFactorEnable" : {
+      "type" : "String"
+    },
+    "accountTwoFactorIndex" : {
+      "type" : "String"
+    },
     "emailComplete" : {
       "type" : "String"
     },
@@ -18,6 +33,9 @@
       "type" : "String"
     },
     "helpers" : {
+      "type" : "String"
+    },
+    "index" : {
       "type" : "String"
     },
     "oauth2Authorize" : {
@@ -54,6 +72,9 @@
       "type" : "String"
     },
     "oauth2TwoFactor" : {
+      "type" : "String"
+    },
+    "oauth2TwoFactorMethods" : {
       "type" : "String"
     },
     "oauth2Wait" : {

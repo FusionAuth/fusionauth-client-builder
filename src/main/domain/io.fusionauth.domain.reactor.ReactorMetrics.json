@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain.reactor",
+  "type" : "ReactorMetrics",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "breachedPasswordMetrics" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      }, {
+        "type" : "BreachedPasswordTenantMetric"
+      } ]
+    }
+  }
+}

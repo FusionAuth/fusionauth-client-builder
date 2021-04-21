@@ -1,0 +1,37 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "APIKey",
+  "description" : "/**\n * domain POJO to represent AuthenticationKey\n *\n * @author sanjay\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "APIKey"
+    } ]
+  } ],
+  "fields" : {
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "key" : {
+      "type" : "String"
+    },
+    "keyManager" : {
+      "type" : "boolean"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "metaData" : {
+      "type" : "APIKeyMetaData"
+    },
+    "permissions" : {
+      "type" : "APIKeyPermissions"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    }
+  }
+}

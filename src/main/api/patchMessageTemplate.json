@@ -1,0 +1,28 @@
+{
+  "uri": "/api/message/template",
+  "comments": [
+    "Updates, via PATCH, the message template with the given Id."
+  ],
+  "method": "patch",
+  "methodName": "patchMessageTemplate",
+  "successResponse": "MessageTemplateResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "messageTemplateId",
+      "comments": [
+        "The Id of the message template to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new message template information."
+      ],
+      "type": "body",
+      "javaType": "MessageTemplateRequest"
+    }
+  ]
+}

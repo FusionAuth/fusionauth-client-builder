@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TwoFactorEnableDisableSendRequest",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TwoFactorEnableDisableSendRequest"
+    } ]
+  } ],
+  "fields" : {
+    "email" : {
+      "type" : "String"
+    },
+    "method" : {
+      "type" : "String"
+    },
+    "methodId" : {
+      "type" : "String"
+    },
+    "mobilePhone" : {
+      "type" : "String"
+    }
+  }
+}

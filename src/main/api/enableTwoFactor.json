@@ -5,7 +5,7 @@
   ],
   "method": "post",
   "methodName": "enableTwoFactor",
-  "successResponse": "Void",
+  "successResponse": "TwoFactorResponse",
   "errorResponse": "Errors",
   "params": [
     {

@@ -1,6 +1,6 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "TwoFactorDelivery",
-  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "description" : "/**\n * @author Daniel DeGroff\n * @deprecated Use <code>User.twoFactor.methods</code>\n */\n",
   "enum" : [ "None", "TextMessage" ]
 }

@@ -1,17 +1,15 @@
 {
-  "packageName" : "io.fusionauth.domain",
-  "type" : "TwilioConfiguration",
-  "description" : "/**\n * Twilio Service Configuration.\n *\n * @author Daniel DeGroff\n */\n",
+  "packageName" : "io.fusionauth.domain.messenger",
+  "type" : "TwilioMessengerConfiguration",
+  "description" : "/**\n * @author Brett Guy\n */\n",
   "extends" : [ {
-    "type" : "Enableable"
+    "type" : "BaseMessengerConfiguration"
   } ],
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
-      "type" : "TwilioConfiguration"
+      "type" : "TwilioMessengerConfiguration"
     } ]
-  }, {
-    "type" : "Integration"
   } ],
   "fields" : {
     "accountSID" : {
