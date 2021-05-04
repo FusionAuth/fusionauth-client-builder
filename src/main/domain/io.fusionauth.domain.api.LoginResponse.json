@@ -21,6 +21,9 @@
     "changePasswordReason" : {
       "type" : "ChangePasswordReason"
     },
+    "emailVerificationId" : {
+      "type" : "String"
+    },
     "methods" : {
       "type" : "List",
       "typeArguments" : [ {
@@ -28,6 +31,9 @@
       } ]
     },
     "refreshToken" : {
+      "type" : "String"
+    },
+    "registrationVerificationId" : {
       "type" : "String"
     },
     "state" : {

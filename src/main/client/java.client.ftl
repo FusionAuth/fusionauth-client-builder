@@ -123,6 +123,7 @@ import io.fusionauth.domain.api.UserDeleteRequest;
 import io.fusionauth.domain.api.UserDeleteResponse;
 import io.fusionauth.domain.api.UserRequest;
 import io.fusionauth.domain.api.UserResponse;
+import io.fusionauth.domain.api.VersionResponse;
 import io.fusionauth.domain.api.WebhookRequest;
 import io.fusionauth.domain.api.WebhookResponse;
 import io.fusionauth.domain.api.email.SendRequest;
@@ -163,13 +164,14 @@ import io.fusionauth.domain.api.user.RegistrationRequest;
 import io.fusionauth.domain.api.user.RegistrationResponse;
 import io.fusionauth.domain.api.user.SearchRequest;
 import io.fusionauth.domain.api.user.SearchResponse;
+import io.fusionauth.domain.api.user.VerifyEmailRequest;
 import io.fusionauth.domain.api.user.VerifyEmailResponse;
+import io.fusionauth.domain.api.user.VerifyRegistrationRequest;
 import io.fusionauth.domain.api.user.VerifyRegistrationResponse;
 import io.fusionauth.domain.oauth2.AccessToken;
 import io.fusionauth.domain.oauth2.IntrospectResponse;
 import io.fusionauth.domain.oauth2.OAuthError;
 import io.fusionauth.domain.oauth2.JWKSResponse;
-import io.fusionauth.domain.reactor.ReactorStatus;
 import io.fusionauth.domain.provider.IdentityProviderType;
 
 /**

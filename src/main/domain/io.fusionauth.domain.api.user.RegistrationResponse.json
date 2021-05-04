@@ -9,6 +9,9 @@
     "registration" : {
       "type" : "UserRegistration"
     },
+    "registrationVerificationId" : {
+      "type" : "String"
+    },
     "token" : {
       "type" : "String"
     },

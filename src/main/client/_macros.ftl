@@ -101,6 +101,7 @@
       [#case "Integer"]
       [#case "long"]
       [#case "Long"][#return "number"/]
+      [#case "char"]
       [#case "LocalDate"]
       [#case "Locale"]
       [#case "URI"]

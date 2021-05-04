@@ -3,6 +3,8 @@
   "comments": [
     "Confirms a email verification. The Id given is usually from an email sent to the user."
   ],
+  "deprecated": "This method has been renamed to {{renamedMethod}} and changed to take a JSON request body, use that method instead.",
+  "renamedMethod": "verifyEmailAddress",
   "method": "post",
   "methodName": "verifyEmail",
   "successResponse": "Void",

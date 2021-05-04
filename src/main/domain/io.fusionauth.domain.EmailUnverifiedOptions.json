@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EmailUnverifiedOptions",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EmailUnverifiedOptions"
+    } ]
+  } ],
+  "fields" : {
+    "allowEmailChangeWhenGated" : {
+      "type" : "boolean"
+    },
+    "behavior" : {
+      "type" : "UnverifiedBehavior"
+    }
+  }
+}

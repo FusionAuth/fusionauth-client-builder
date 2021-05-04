@@ -39,6 +39,9 @@
     "salt" : {
       "type" : "String"
     },
+    "uniqueUsername" : {
+      "type" : "String"
+    },
     "username" : {
       "type" : "String"
     },
