@@ -44,7 +44,7 @@
       [#return "nil"/]
     [#elseif type?starts_with("Collection")]
       [#return type?replace("Collection", "[]")?replace("UUID", "string")?replace("<", "")?replace(">", "")/]
-    [#elseif type == "String" || type = "UUID" || type == "ZoneId" || type == "URI" || type == "Locale" || type == "LocalDate"]
+    [#elseif type == "String" || type = "UUID" || type == "ZoneId" || type == "URI" || type == "Locale" || type == "LocalDate" || type == "char" ]
       [#return "string"/]
     [#elseif type == "Object" || type == "D" || type == "T"]
       [#return "interface{}"/]
