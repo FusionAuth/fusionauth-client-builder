@@ -13,15 +13,13 @@
     "typeArguments" : [ {
       "type" : "SAMLv2IdPInitiatedIdentityProvider"
     } ]
-  }, {
-    "type" : "RequiresCORSConfiguration"
   } ],
   "fields" : {
     "emailClaim" : {
       "type" : "String"
     },
     "issuer" : {
-      "type" : "URI"
+      "type" : "String"
     },
     "keyId" : {
       "type" : "UUID"
