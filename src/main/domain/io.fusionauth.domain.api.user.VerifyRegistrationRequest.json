@@ -1,6 +1,6 @@
 {
   "packageName" : "io.fusionauth.domain.api.user",
-  "type" : "VerifyEmailResponse",
+  "type" : "VerifyRegistrationRequest",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "fields" : {
     "oneTimeCode" : {

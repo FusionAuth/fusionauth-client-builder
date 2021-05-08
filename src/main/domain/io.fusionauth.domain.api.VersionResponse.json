@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "VersionResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "version" : {
+      "type" : "String"
+    }
+  }
+}

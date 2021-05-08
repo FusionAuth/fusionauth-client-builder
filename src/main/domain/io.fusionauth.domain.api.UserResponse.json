@@ -3,11 +3,22 @@
   "type" : "UserResponse",
   "description" : "/**\n * User API response object.\n *\n * @author Brian Pontarelli\n */\n",
   "fields" : {
-    "user" : {
-      "type" : "User"
+    "emailVerificationId" : {
+      "type" : "String"
+    },
+    "registrationVerificationIds" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      }, {
+        "type" : "String"
+      } ]
     },
     "token" : {
       "type" : "String"
+    },
+    "user" : {
+      "type" : "User"
     }
   }
 }

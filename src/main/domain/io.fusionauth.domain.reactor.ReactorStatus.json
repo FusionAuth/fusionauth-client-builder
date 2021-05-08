@@ -9,7 +9,10 @@
     "advancedMultiFactorAuthentication" : {
       "type" : "ReactorFeatureStatus"
     },
-    "advancedRegistrationForms" : {
+    "advancedRegistration" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "applicationThemes" : {
       "type" : "ReactorFeatureStatus"
     },
     "breachedPasswordDetection" : {

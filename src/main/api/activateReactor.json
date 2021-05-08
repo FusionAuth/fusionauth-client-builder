@@ -9,14 +9,6 @@
   "errorResponse": "Errors",
   "params": [
     {
-      "name": "licenseId",
-      "comments": [
-        "The license id"
-      ],
-      "type": "urlSegment",
-      "javaType": "String"
-    },
-    {
       "name": "request",
       "comments": [
         "An optional request that contains the license text to activate Reactor (useful for air-gap deployments of FusionAuth)."
