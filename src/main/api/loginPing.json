@@ -8,7 +8,7 @@
   ],
   "method": "put",
   "methodName": "loginPing",
-  "successResponse": "Void",
+  "successResponse": "LoginResponse",
   "errorResponse": "Errors",
   "params": [
     {
