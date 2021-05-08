@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UnverifiedBehavior",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "Allow", "Gated" ]
+}

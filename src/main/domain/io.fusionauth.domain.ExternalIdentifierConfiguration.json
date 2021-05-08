@@ -30,6 +30,9 @@
     "emailVerificationIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "emailVerificationOneTimeCodeGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
     "externalAuthenticationIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
@@ -47,6 +50,9 @@
     },
     "registrationVerificationIdTimeToLiveInSeconds" : {
       "type" : "int"
+    },
+    "registrationVerificationOneTimeCodeGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
     },
     "samlv2AuthNRequestIdTimeToLiveInSeconds" : {
       "type" : "int"

@@ -96,6 +96,9 @@
     },
     "userDeletePolicy" : {
       "type" : "TenantUserDeletePolicy"
+    },
+    "usernameConfiguration" : {
+      "type" : "TenantUsernameConfiguration"
     }
   }
 }

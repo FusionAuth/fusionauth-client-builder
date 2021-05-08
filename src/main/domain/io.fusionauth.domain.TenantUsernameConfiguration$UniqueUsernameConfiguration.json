@@ -1,0 +1,21 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UniqueUsernameConfiguration",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UniqueUsernameConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "numberOfDigits" : {
+      "type" : "int"
+    },
+    "separator" : {
+      "type" : "char"
+    }
+  }
+}

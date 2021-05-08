@@ -39,11 +39,17 @@
     "setPasswordEmailTemplateId" : {
       "type" : "UUID"
     },
+    "unverified" : {
+      "type" : "EmailUnverifiedOptions"
+    },
     "username" : {
       "type" : "String"
     },
     "verificationEmailTemplateId" : {
       "type" : "UUID"
+    },
+    "verificationStrategy" : {
+      "type" : "VerificationStrategy"
     },
     "verifyEmail" : {
       "type" : "boolean"
