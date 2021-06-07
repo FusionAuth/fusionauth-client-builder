@@ -1,0 +1,9 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantOAuth2Configuration",
+  "fields" : {
+    "clientCredentialsAccessTokenPopulateLambdaId" : {
+      "type" : "UUID"
+    }
+  }
+}

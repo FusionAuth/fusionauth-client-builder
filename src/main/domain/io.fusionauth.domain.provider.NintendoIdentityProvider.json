@@ -1,38 +1,32 @@
 {
   "packageName" : "io.fusionauth.domain.provider",
-  "type" : "FacebookIdentityProvider",
-  "description" : "/**\n * Facebook social login provider.\n *\n * @author Brian Pontarelli\n */\n",
+  "type" : "NintendoIdentityProvider",
+  "description" : "/**\n * Nintendo gaming login provider.\n *\n * @author Brett Pontarelli\n */\n",
   "extends" : [ {
     "type" : "BaseIdentityProvider",
     "typeArguments" : [ {
-      "type" : "FacebookApplicationConfiguration"
+      "type" : "NintendoApplicationConfiguration"
     } ]
   } ],
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
-      "type" : "FacebookIdentityProvider"
+      "type" : "NintendoIdentityProvider"
     } ]
   }, {
     "type" : "SupportsPostBindings"
   } ],
   "fields" : {
-    "appId" : {
+    "buttonText" : {
       "type" : "String"
     },
-    "buttonText" : {
+    "client_id" : {
       "type" : "String"
     },
     "client_secret" : {
       "type" : "String"
     },
-    "fields" : {
-      "type" : "String"
-    },
-    "loginMethod" : {
-      "type" : "IdentityProviderLoginMethod"
-    },
-    "permissions" : {
+    "scope" : {
       "type" : "String"
     }
   }

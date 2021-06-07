@@ -13,6 +13,8 @@
     "typeArguments" : [ {
       "type" : "LinkedInIdentityProvider"
     } ]
+  }, {
+    "type" : "SupportsPostBindings"
   } ],
   "fields" : {
     "buttonText" : {

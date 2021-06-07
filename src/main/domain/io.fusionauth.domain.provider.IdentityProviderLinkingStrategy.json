@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderLinkingStrategy",
+  "description" : "/**\n * The IdP behavior when no user link has been made yet.\n *\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "CreatePendingLink", "LinkAnonymously", "LinkByEmail", "LinkByEmailForExistingUser", "LinkByUsername", "LinkByUsernameForExistingUser", "Unsupported" ]
+}

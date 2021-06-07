@@ -44,6 +44,9 @@
     "oauth2Authorize" : {
       "type" : "String"
     },
+    "oauth2AuthorizedNotRegistered" : {
+      "type" : "String"
+    },
     "oauth2ChildRegistrationNotAllowed" : {
       "type" : "String"
     },
@@ -69,6 +72,9 @@
       "type" : "String"
     },
     "oauth2Register" : {
+      "type" : "String"
+    },
+    "oauth2StartIdPLink" : {
       "type" : "String"
     },
     "oauth2TwoFactor" : {

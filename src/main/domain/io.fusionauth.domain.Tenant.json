@@ -82,6 +82,9 @@
     "name" : {
       "type" : "String"
     },
+    "oauthConfiguration" : {
+      "type" : "TenantOAuth2Configuration"
+    },
     "passwordEncryptionConfiguration" : {
       "type" : "PasswordEncryptionConfiguration"
     },

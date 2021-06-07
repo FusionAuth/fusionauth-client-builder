@@ -30,6 +30,9 @@
         "type" : "TwoFactorMethod"
       } ]
     },
+    "pendingIdPLinkId" : {
+      "type" : "String"
+    },
     "refreshToken" : {
       "type" : "String"
     },

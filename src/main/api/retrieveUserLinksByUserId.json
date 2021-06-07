@@ -1,0 +1,30 @@
+{
+  "uri": "/api/identity-provider/link",
+  "comments": [
+    "Retrieve all Identity Provider users (links) for the user. Specify the optional identityProviderId to retrieve links for a particular IdP."
+  ],
+  "method": "get",
+  "methodName": "retrieveUserLinksByUserId",
+  "successResponse": "IdentityProviderLinkResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "identityProviderId",
+      "comments": [
+        "(Optional) The unique Id of the identity provider. Specify this value to reduce the links returned to those for a particular IdP."
+      ],
+      "parameterName": "identityProviderId",
+      "type": "urlParameter",
+      "javaType": "UUID"
+    },
+    {
+      "name": "userId",
+      "comments": [
+        "The unique Id of the user."
+      ],
+      "parameterName": "userId",
+      "type": "urlParameter",
+      "javaType": "UUID"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "uri": "/api/identity-provider/link",
+  "comments": [
+    "Link an external user from a 3rd party identity provider to a FusionAuth user."
+  ],
+  "method": "post",
+  "methodName": "createUserLink",
+  "successResponse": "IdentityProviderLinkResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to link the FusionAuth user."
+      ],
+      "type": "body",
+      "javaType": "IdentityProviderLinkRequest"
+    }
+  ]
+}

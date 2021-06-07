@@ -38,5 +38,26 @@
   }, {
     "name" : "LinkedInReconcile",
     "args" : [ "reconcile" ]
+  }, {
+    "name" : "EpicGamesReconcile",
+    "args" : [ "reconcile" ]
+  }, {
+    "name" : "NintendoReconcile",
+    "args" : [ "reconcile" ]
+  }, {
+    "name" : "SonyPSNReconcile",
+    "args" : [ "reconcile" ]
+  }, {
+    "name" : "SteamReconcile",
+    "args" : [ "reconcile" ]
+  }, {
+    "name" : "TwitchReconcile",
+    "args" : [ "reconcile" ]
+  }, {
+    "name" : "XboxReconcile",
+    "args" : [ "reconcile" ]
+  }, {
+    "name" : "ClientCredentialsJWTPopulate",
+    "args" : [ "populate" ]
   } ]
 }

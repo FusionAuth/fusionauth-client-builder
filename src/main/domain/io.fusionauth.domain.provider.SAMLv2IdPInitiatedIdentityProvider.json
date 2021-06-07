@@ -24,8 +24,14 @@
     "keyId" : {
       "type" : "UUID"
     },
+    "uniqueIdClaim" : {
+      "type" : "String"
+    },
     "useNameIdForEmail" : {
       "type" : "boolean"
+    },
+    "usernameClaim" : {
+      "type" : "String"
     }
   }
 }

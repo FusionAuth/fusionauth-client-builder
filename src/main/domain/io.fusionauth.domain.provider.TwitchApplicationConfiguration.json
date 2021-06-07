@@ -1,33 +1,27 @@
 {
   "packageName" : "io.fusionauth.domain.provider",
-  "type" : "FacebookApplicationConfiguration",
-  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "type" : "TwitchApplicationConfiguration",
+  "description" : "/**\n * @author Brett Pontarelli\n */\n",
   "extends" : [ {
     "type" : "BaseIdentityProviderApplicationConfiguration"
   } ],
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
-      "type" : "FacebookApplicationConfiguration"
+      "type" : "TwitchApplicationConfiguration"
     } ]
   } ],
   "fields" : {
-    "appId" : {
+    "buttonText" : {
       "type" : "String"
     },
-    "buttonText" : {
+    "client_id" : {
       "type" : "String"
     },
     "client_secret" : {
       "type" : "String"
     },
-    "fields" : {
-      "type" : "String"
-    },
-    "loginMethod" : {
-      "type" : "IdentityProviderLoginMethod"
-    },
-    "permissions" : {
+    "scope" : {
       "type" : "String"
     }
   }

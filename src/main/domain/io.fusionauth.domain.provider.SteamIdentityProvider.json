@@ -1,38 +1,32 @@
 {
   "packageName" : "io.fusionauth.domain.provider",
-  "type" : "FacebookIdentityProvider",
-  "description" : "/**\n * Facebook social login provider.\n *\n * @author Brian Pontarelli\n */\n",
+  "type" : "SteamIdentityProvider",
+  "description" : "/**\n * Steam gaming login provider.\n *\n * @author Brett Pontarelli\n */\n",
   "extends" : [ {
     "type" : "BaseIdentityProvider",
     "typeArguments" : [ {
-      "type" : "FacebookApplicationConfiguration"
+      "type" : "SteamApplicationConfiguration"
     } ]
   } ],
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
-      "type" : "FacebookIdentityProvider"
+      "type" : "SteamIdentityProvider"
     } ]
   }, {
     "type" : "SupportsPostBindings"
   } ],
   "fields" : {
-    "appId" : {
-      "type" : "String"
-    },
     "buttonText" : {
       "type" : "String"
     },
-    "client_secret" : {
+    "client_id" : {
       "type" : "String"
     },
-    "fields" : {
+    "scope" : {
       "type" : "String"
     },
-    "loginMethod" : {
-      "type" : "IdentityProviderLoginMethod"
-    },
-    "permissions" : {
+    "webAPIKey" : {
       "type" : "String"
     }
   }

@@ -1,33 +1,27 @@
 {
   "packageName" : "io.fusionauth.domain.provider",
-  "type" : "FacebookApplicationConfiguration",
-  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "type" : "SteamApplicationConfiguration",
+  "description" : "/**\n * @author Brett Pontarelli\n */\n",
   "extends" : [ {
     "type" : "BaseIdentityProviderApplicationConfiguration"
   } ],
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
-      "type" : "FacebookApplicationConfiguration"
+      "type" : "SteamApplicationConfiguration"
     } ]
   } ],
   "fields" : {
-    "appId" : {
-      "type" : "String"
-    },
     "buttonText" : {
       "type" : "String"
     },
-    "client_secret" : {
+    "client_id" : {
       "type" : "String"
     },
-    "fields" : {
+    "webAPIKey" : {
       "type" : "String"
     },
-    "loginMethod" : {
-      "type" : "IdentityProviderLoginMethod"
-    },
-    "permissions" : {
+    "scope" : {
       "type" : "String"
     }
   }

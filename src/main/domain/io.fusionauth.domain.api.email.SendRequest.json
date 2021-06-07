@@ -3,6 +3,9 @@
   "type" : "SendRequest",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
     "bccAddresses" : {
       "type" : "List",
       "typeArguments" : [ {
@@ -15,12 +18,24 @@
         "type" : "String"
       } ]
     },
+    "preferredLanguages" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Locale"
+      } ]
+    },
     "requestData" : {
       "type" : "Map",
       "typeArguments" : [ {
         "type" : "String"
       }, {
         "type" : "Object"
+      } ]
+    },
+    "toAddresses" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "EmailAddress"
       } ]
     },
     "userIds" : {

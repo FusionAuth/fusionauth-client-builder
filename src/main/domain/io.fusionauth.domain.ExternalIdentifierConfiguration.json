@@ -45,6 +45,9 @@
     "passwordlessLoginTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "pendingAccountLinkTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "registrationVerificationIdGenerator" : {
       "type" : "SecureGeneratorConfiguration"
     },

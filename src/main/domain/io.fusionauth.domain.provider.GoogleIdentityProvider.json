@@ -13,6 +13,8 @@
     "typeArguments" : [ {
       "type" : "GoogleIdentityProvider"
     } ]
+  }, {
+    "type" : "SupportsPostBindings"
   } ],
   "fields" : {
     "buttonText" : {
@@ -23,6 +25,9 @@
     },
     "client_secret" : {
       "type" : "String"
+    },
+    "loginMethod" : {
+      "type" : "IdentityProviderLoginMethod"
     },
     "scope" : {
       "type" : "String"

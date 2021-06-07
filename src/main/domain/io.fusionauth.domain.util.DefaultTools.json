@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.util",
+  "type" : "DefaultTools",
+  "description" : "/**\n * Helper for dealing with default values.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : { }
+}

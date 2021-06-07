@@ -1,33 +1,36 @@
 {
   "packageName" : "io.fusionauth.domain.provider",
-  "type" : "FacebookApplicationConfiguration",
+  "type" : "PendingIdPLink",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
-  "extends" : [ {
-    "type" : "BaseIdentityProviderApplicationConfiguration"
-  } ],
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
-      "type" : "FacebookApplicationConfiguration"
+      "type" : "PendingIdPLink"
     } ]
   } ],
   "fields" : {
-    "appId" : {
+    "displayName" : {
       "type" : "String"
     },
-    "buttonText" : {
+    "email" : {
       "type" : "String"
     },
-    "client_secret" : {
+    "identityProviderId" : {
+      "type" : "UUID"
+    },
+    "identityProviderName" : {
       "type" : "String"
     },
-    "fields" : {
+    "identityProviderType" : {
       "type" : "String"
     },
-    "loginMethod" : {
-      "type" : "IdentityProviderLoginMethod"
+    "identityProviderUserId" : {
+      "type" : "String"
     },
-    "permissions" : {
+    "user" : {
+      "type" : "User"
+    },
+    "username" : {
       "type" : "String"
     }
   }

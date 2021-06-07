@@ -21,6 +21,9 @@
         "type" : "URI"
       } ]
     },
+    "clientAuthenticationPolicy" : {
+      "type" : "ClientAuthenticationPolicy"
+    },
     "clientId" : {
       "type" : "String"
     },
@@ -48,7 +51,13 @@
     "logoutURL" : {
       "type" : "URI"
     },
+    "proofKeyForCodeExchangePolicy" : {
+      "type" : "ProofKeyForCodeExchangePolicy"
+    },
     "requireClientAuthentication" : {
+      "type" : "boolean"
+    },
+    "requireRegistration" : {
       "type" : "boolean"
     }
   }
