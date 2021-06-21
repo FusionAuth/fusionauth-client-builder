@@ -9,6 +9,9 @@
     } ]
   } ],
   "fields" : {
+    "displayName" : {
+      "type" : "String"
+    },
     "identityProviderId" : {
       "type" : "UUID"
     },
