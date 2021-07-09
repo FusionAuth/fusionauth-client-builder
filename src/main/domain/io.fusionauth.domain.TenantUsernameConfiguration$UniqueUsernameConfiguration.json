@@ -16,6 +16,9 @@
     },
     "separator" : {
       "type" : "char"
+    },
+    "strategy" : {
+      "type" : "UniqueUsernameStrategy"
     }
   }
 }
