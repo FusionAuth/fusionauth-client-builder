@@ -13,7 +13,7 @@
       "comments": [
         "The Id of the User for which you're disabling Two Factor authentication."
       ],
-      "type": "urlParameter",
+      "type": "urlSegment",
       "parameterName": "userId",
       "javaType": "UUID"
     },

@@ -19,7 +19,7 @@ import java.nio.file.Paths
 fusionauthJWTVersion = "3.4.0" // Keep this at 3.4.0 for now to preserve the algorithms enum
 javaErrorVersion = "2.2.2"
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.29.3", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.99.0", licenses: ["ApacheV2_0"]) {
   workflow {
     standard()
   }
@@ -97,7 +97,10 @@ target(name: "generateDomain", description: "Generates all of the json files for
    "io.fusionauth.jwt.domain.Header.json",
    "io.fusionauth.jwt.domain.KeyPair.json",
    "io.fusionauth.jwt.domain.KeyType.json",
-   "io.fusionauth.jwt.domain.Type.json"]
+   "io.fusionauth.jwt.domain.Type.json",
+   "io.fusionauth.domain.util.DefaultTools.json",
+   "io.fusionauth.domain.util.Normalizer.json",
+   "io.fusionauth.domain.util.SQLTools.json"]
       .forEach({ Files.deleteIfExists(Paths.get("src/main/domain").resolve(it)) })
 }
 

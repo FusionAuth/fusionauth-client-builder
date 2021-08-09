@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SystemSSOConfiguration",
+  "description" : "/**\n * @author Brett Pontarelli\n */\n",
+  "fields" : {
+    "deviceTrustTimeToLiveInSeconds" : {
+      "type" : "int"
+    }
+  }
+}

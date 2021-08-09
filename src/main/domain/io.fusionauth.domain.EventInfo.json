@@ -1,0 +1,42 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EventInfo",
+  "description" : "/**\n * Information about a user event (login, register, etc) that helps identify the source of the event (location, device type, OS, etc).\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EventInfo"
+    } ]
+  } ],
+  "fields" : {
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "deviceDescription" : {
+      "type" : "String"
+    },
+    "deviceName" : {
+      "type" : "String"
+    },
+    "deviceType" : {
+      "type" : "String"
+    },
+    "ipAddress" : {
+      "type" : "String"
+    },
+    "location" : {
+      "type" : "Location"
+    },
+    "os" : {
+      "type" : "String"
+    },
+    "userAgent" : {
+      "type" : "String"
+    }
+  }
+}

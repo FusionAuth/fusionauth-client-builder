@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserEmailUpdateEvent",
+  "description" : "/**\n * Models an event where a user's email is updated outside of a forgot / change password workflow.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserEmailUpdateEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "previousEmail" : {
+      "type" : "String"
+    },
+    "user" : {
+      "type" : "User"
+    }
+  }
+}

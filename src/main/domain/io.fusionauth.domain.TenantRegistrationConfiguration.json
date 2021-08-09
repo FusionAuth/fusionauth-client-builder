@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantRegistrationConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantRegistrationConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "blockedDomains" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    }
+  }
+}

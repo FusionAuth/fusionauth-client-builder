@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TenantDeleteRequest",
+  "description" : "/**\n * Request for the Tenant API to delete a tenant rather than using the URL parameters.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantDeleteRequest"
+    } ]
+  } ],
+  "fields" : {
+    "async" : {
+      "type" : "boolean"
+    }
+  }
+}

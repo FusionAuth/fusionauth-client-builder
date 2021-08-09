@@ -1,0 +1,21 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserDeleteCompleteEvent",
+  "description" : "/**\n * Models the User Event (and can be converted to JSON) that is used for all user modifications (create, update,\n * delete).\n * <p>\n * This is different than user.delete because it is sent after the tx is committed, this cannot be transactional.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserDeleteCompleteEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "user" : {
+      "type" : "User"
+    }
+  }
+}

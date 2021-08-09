@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RateLimitedRequestConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "RateLimitedRequestConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "limit" : {
+      "type" : "int"
+    },
+    "timePeriodInSeconds" : {
+      "type" : "int"
+    }
+  }
+}

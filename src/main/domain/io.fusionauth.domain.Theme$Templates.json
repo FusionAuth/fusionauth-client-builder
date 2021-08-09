@@ -113,6 +113,9 @@
     "samlv2Logout" : {
       "type" : "String"
     },
+    "unauthorized" : {
+      "type" : "String"
+    },
     "emailSend" : {
       "type" : "String"
     },

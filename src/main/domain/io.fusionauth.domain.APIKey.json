@@ -15,6 +15,9 @@
     "insertInstant" : {
       "type" : "ZonedDateTime"
     },
+    "ipAccessControlListId" : {
+      "type" : "UUID"
+    },
     "key" : {
       "type" : "String"
     },

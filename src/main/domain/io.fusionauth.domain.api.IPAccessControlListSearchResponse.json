@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "IPAccessControlListSearchResponse",
+  "description" : "/**\n * @author Brett Guy\n */\n",
+  "fields" : {
+    "ipAccessControlLists" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "IPAccessControlList"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

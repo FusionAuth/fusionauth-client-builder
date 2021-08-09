@@ -19,6 +19,12 @@
         "type" : "Object"
       } ]
     },
+    "accessControlConfiguration" : {
+      "type" : "TenantAccessControlConfiguration"
+    },
+    "captchaConfiguration" : {
+      "type" : "TenantCaptchaConfiguration"
+    },
     "configured" : {
       "type" : "boolean"
     },
@@ -90,6 +96,12 @@
     },
     "passwordValidationRules" : {
       "type" : "PasswordValidationRules"
+    },
+    "rateLimitConfiguration" : {
+      "type" : "TenantRateLimitConfiguration"
+    },
+    "registrationConfiguration" : {
+      "type" : "TenantRegistrationConfiguration"
     },
     "state" : {
       "type" : "ObjectState"

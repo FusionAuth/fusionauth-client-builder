@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CaptchaMethod",
+  "description" : "/**\n * @author Brett Pontarelli\n */\n",
+  "enum" : [ "GoogleRecaptchaV2", "GoogleRecaptchaV3", "HCaptcha", "HCaptchaEnterprise" ]
+}

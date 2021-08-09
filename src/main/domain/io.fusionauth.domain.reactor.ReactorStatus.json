@@ -24,6 +24,9 @@
     "entityManagement" : {
       "type" : "ReactorFeatureStatus"
     },
+    "threatDetection" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "licensed" : {
       "type" : "boolean"
     }

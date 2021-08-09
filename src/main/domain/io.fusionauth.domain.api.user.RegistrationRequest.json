@@ -2,7 +2,13 @@
   "packageName" : "io.fusionauth.domain.api.user",
   "type" : "RegistrationRequest",
   "description" : "/**\n * Registration API request object.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
   "fields" : {
+    "disableDomainBlock" : {
+      "type" : "boolean"
+    },
     "generateAuthenticationToken" : {
       "type" : "boolean"
     },

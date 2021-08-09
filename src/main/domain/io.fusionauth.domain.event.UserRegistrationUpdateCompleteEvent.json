@@ -1,0 +1,30 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserRegistrationUpdateCompleteEvent",
+  "description" : "/**\n * Models the User Update Registration Event (and can be converted to JSON).\n * <p>\n * This is different than user.registration.update in that it is sent after this event completes, this cannot be transactional.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserRegistrationUpdateCompleteEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "original" : {
+      "type" : "UserRegistration"
+    },
+    "registration" : {
+      "type" : "UserRegistration"
+    },
+    "user" : {
+      "type" : "User"
+    }
+  }
+}

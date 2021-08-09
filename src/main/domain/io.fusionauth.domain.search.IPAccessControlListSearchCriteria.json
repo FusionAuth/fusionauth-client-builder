@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "IPAccessControlListSearchCriteria",
+  "description" : "/**\n * @author Brett Guy\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "IPAccessControlListSearchCriteria"
+    } ]
+  } ],
+  "fields" : {
+    "name" : {
+      "type" : "String"
+    }
+  }
+}

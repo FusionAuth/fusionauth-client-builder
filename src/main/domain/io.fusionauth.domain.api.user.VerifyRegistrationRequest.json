@@ -2,6 +2,9 @@
   "packageName" : "io.fusionauth.domain.api.user",
   "type" : "VerifyRegistrationRequest",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
   "fields" : {
     "oneTimeCode" : {
       "type" : "String"

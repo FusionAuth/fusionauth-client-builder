@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserUpdateCompleteEvent",
+  "description" : "/**\n * Models the User Update Event once it is completed. This cannot be transactional.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserUpdateCompleteEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "original" : {
+      "type" : "User"
+    },
+    "user" : {
+      "type" : "User"
+    }
+  }
+}

@@ -8,10 +8,25 @@
     } ]
   } ],
   "fields" : {
+    "emailUpdateEmailTemplateId" : {
+      "type" : "UUID"
+    },
     "emailVerificationEmailTemplateId" : {
       "type" : "UUID"
     },
+    "emailVerifiedEmailTemplateId" : {
+      "type" : "UUID"
+    },
     "forgotPasswordEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "loginNewDeviceEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "loginSuspiciousEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "passwordResetSuccessEmailTemplateId" : {
       "type" : "UUID"
     },
     "passwordlessEmailTemplateId" : {
