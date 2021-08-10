@@ -12,6 +12,9 @@
     } ]
   } ],
   "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
     "code" : {
       "type" : "String"
     },

@@ -12,6 +12,9 @@
     } ]
   } ],
   "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
     "authenticatorId" : {
       "type" : "String"
     },

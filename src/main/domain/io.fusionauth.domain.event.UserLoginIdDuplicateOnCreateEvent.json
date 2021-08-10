@@ -14,9 +14,6 @@
     "type" : "NonTransactionalEvent"
   } ],
   "fields" : {
-    "applicationId" : {
-      "type" : "UUID"
-    },
     "duplicateEmail" : {
       "type" : "String"
     },

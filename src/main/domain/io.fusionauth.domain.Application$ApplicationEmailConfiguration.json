@@ -20,6 +20,12 @@
     "forgotPasswordEmailTemplateId" : {
       "type" : "UUID"
     },
+    "loginIdInUseOnCreateEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "loginIdInUseOnUpdateEmailTemplateId" : {
+      "type" : "UUID"
+    },
     "loginNewDeviceEmailTemplateId" : {
       "type" : "UUID"
     },
@@ -29,10 +35,19 @@
     "passwordResetSuccessEmailTemplateId" : {
       "type" : "UUID"
     },
+    "passwordUpdateEmailTemplateId" : {
+      "type" : "UUID"
+    },
     "passwordlessEmailTemplateId" : {
       "type" : "UUID"
     },
     "setPasswordEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "twoFactorMethodAddEmailTemplateId" : {
+      "type" : "UUID"
+    },
+    "twoFactorMethodRemoveEmailTemplateId" : {
       "type" : "UUID"
     }
   }
