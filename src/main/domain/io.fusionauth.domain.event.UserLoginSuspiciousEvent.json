@@ -5,5 +5,12 @@
   "extends" : [ {
     "type" : "UserLoginSuccessEvent"
   } ],
-  "fields" : { }
+  "fields" : {
+    "threatsDetected" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "AuthenticationThreats"
+      } ]
+    }
+  }
 }
