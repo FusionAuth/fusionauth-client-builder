@@ -1,4 +1,4 @@
-{
+  {
   "uri": "/api/user",
   "comments": [
     "Creates a user. You can optionally specify an Id for the user, if not provided one will be generated."

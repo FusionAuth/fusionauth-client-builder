@@ -1,0 +1,29 @@
+{
+  "uri": "/api/tenant",
+  "comments": [
+    "Deletes the tenant based on the given request (sent to the API as JSON). This permanently deletes all information, metrics, reports and data associated",
+    "with the tenant and everything under the tenant (applications, users, etc)."
+  ],
+  "method": "delete",
+  "methodName": "deleteTenantWithRequest",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "tenantId",
+      "comments": [
+        "The Id of the tenant to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all of the information used to delete the user."
+      ],
+      "type": "body",
+      "javaType": "TenantDeleteRequest"
+    }
+  ]
+}

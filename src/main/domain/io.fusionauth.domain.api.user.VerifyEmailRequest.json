@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "VerifyEmailRequest",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
+  "fields" : {
+    "oneTimeCode" : {
+      "type" : "String"
+    },
+    "verificationId" : {
+      "type" : "String"
+    }
+  }
+}

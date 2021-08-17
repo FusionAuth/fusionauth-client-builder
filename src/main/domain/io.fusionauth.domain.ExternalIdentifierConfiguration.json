@@ -30,6 +30,9 @@
     "emailVerificationIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "emailVerificationOneTimeCodeGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
     "externalAuthenticationIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
@@ -42,11 +45,17 @@
     "passwordlessLoginTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "pendingAccountLinkTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "registrationVerificationIdGenerator" : {
       "type" : "SecureGeneratorConfiguration"
     },
     "registrationVerificationIdTimeToLiveInSeconds" : {
       "type" : "int"
+    },
+    "registrationVerificationOneTimeCodeGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
     },
     "samlv2AuthNRequestIdTimeToLiveInSeconds" : {
       "type" : "int"
@@ -58,6 +67,12 @@
       "type" : "int"
     },
     "twoFactorIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "twoFactorOneTimeCodeIdGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "twoFactorOneTimeCodeIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
     "twoFactorTrustIdTimeToLiveInSeconds" : {

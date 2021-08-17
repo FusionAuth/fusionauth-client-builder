@@ -19,6 +19,12 @@
         "type" : "Object"
       } ]
     },
+    "accessControlConfiguration" : {
+      "type" : "TenantAccessControlConfiguration"
+    },
+    "captchaConfiguration" : {
+      "type" : "TenantCaptchaConfiguration"
+    },
     "configured" : {
       "type" : "boolean"
     },
@@ -64,6 +70,9 @@
     "lastUpdateInstant" : {
       "type" : "ZonedDateTime"
     },
+    "loginConfiguration" : {
+      "type" : "TenantLoginConfiguration"
+    },
     "logoutURL" : {
       "type" : "URI"
     },
@@ -73,14 +82,26 @@
     "minimumPasswordAge" : {
       "type" : "MinimumPasswordAge"
     },
+    "multiFactorConfiguration" : {
+      "type" : "TenantMultiFactorConfiguration"
+    },
     "name" : {
       "type" : "String"
+    },
+    "oauthConfiguration" : {
+      "type" : "TenantOAuth2Configuration"
     },
     "passwordEncryptionConfiguration" : {
       "type" : "PasswordEncryptionConfiguration"
     },
     "passwordValidationRules" : {
       "type" : "PasswordValidationRules"
+    },
+    "rateLimitConfiguration" : {
+      "type" : "TenantRateLimitConfiguration"
+    },
+    "registrationConfiguration" : {
+      "type" : "TenantRegistrationConfiguration"
     },
     "state" : {
       "type" : "ObjectState"
@@ -90,6 +111,9 @@
     },
     "userDeletePolicy" : {
       "type" : "TenantUserDeletePolicy"
+    },
+    "usernameConfiguration" : {
+      "type" : "TenantUsernameConfiguration"
     }
   }
 }

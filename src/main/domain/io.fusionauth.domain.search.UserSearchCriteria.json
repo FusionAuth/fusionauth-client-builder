@@ -3,7 +3,7 @@
   "type" : "UserSearchCriteria",
   "description" : "/**\n * This class is the user query. It provides a build pattern as well as public fields for use on forms and in actions.\n *\n * @author Brian Pontarelli\n */\n",
   "extends" : [ {
-    "type" : "BaseSearchCriteria"
+    "type" : "BaseElasticSearchCriteria"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -11,27 +11,5 @@
       "type" : "UserSearchCriteria"
     } ]
   } ],
-  "fields" : {
-    "accurateTotal" : {
-      "type" : "boolean"
-    },
-    "ids" : {
-      "type" : "List",
-      "typeArguments" : [ {
-        "type" : "UUID"
-      } ]
-    },
-    "query" : {
-      "type" : "String"
-    },
-    "queryString" : {
-      "type" : "String"
-    },
-    "sortFields" : {
-      "type" : "List",
-      "typeArguments" : [ {
-        "type" : "SortField"
-      } ]
-    }
-  }
+  "fields" : { }
 }

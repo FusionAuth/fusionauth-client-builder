@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.message",
+  "type" : "MessageType",
+  "description" : "/**\n * @author Mikey Sleevi\n */\n",
+  "enum" : [ "SMS" ]
+}

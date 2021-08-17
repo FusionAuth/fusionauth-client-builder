@@ -15,6 +15,9 @@
     "applicationName" : {
       "type" : "String"
     },
+    "location" : {
+      "type" : "Location"
+    },
     "loginId" : {
       "type" : "String"
     }

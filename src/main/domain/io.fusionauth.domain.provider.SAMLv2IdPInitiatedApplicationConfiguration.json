@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SAMLv2IdPInitiatedApplicationConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProviderApplicationConfiguration"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "SAMLv2IdPInitiatedApplicationConfiguration"
+    } ]
+  } ],
+  "fields" : { }
+}

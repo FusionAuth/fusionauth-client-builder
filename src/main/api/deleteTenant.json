@@ -1,7 +1,8 @@
 {
   "uri": "/api/tenant",
   "comments": [
-    "Deletes the tenant for the given Id."
+    "Deletes the tenant based on the given Id on the URL. This permanently deletes all information, metrics, reports and data associated",
+    "with the tenant and everything under the tenant (applications, users, etc)."
   ],
   "method": "delete",
   "methodName": "deleteTenant",

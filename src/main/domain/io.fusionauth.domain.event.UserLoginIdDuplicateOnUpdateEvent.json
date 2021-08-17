@@ -1,0 +1,9 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserLoginIdDuplicateOnUpdateEvent",
+  "description" : "/**\n * Models an event where a user is being updated and tries to use an \"in-use\" login Id (email or username).\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "UserLoginIdDuplicateOnCreateEvent"
+  } ],
+  "fields" : { }
+}

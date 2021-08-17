@@ -1,0 +1,29 @@
+{
+  "uri": "/api/user/two-factor",
+  "comments": [
+    "Disable Two Factor authentication for a user using a JSON body rather than URL parameters."
+  ],
+  "method": "delete",
+  "methodName": "disableTwoFactorWithRequest",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "userId",
+      "comments": [
+        "The Id of the User for which you're disabling Two Factor authentication."
+      ],
+      "type": "urlSegment",
+      "parameterName": "userId",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request information that contains the code and methodId along with any event information."
+      ],
+      "type": "body",
+      "javaType": "TwoFactorDisableRequest"
+    }
+  ]
+}

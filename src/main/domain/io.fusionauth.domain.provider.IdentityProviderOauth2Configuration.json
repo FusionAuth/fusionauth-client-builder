@@ -33,8 +33,14 @@
     "token_endpoint" : {
       "type" : "URI"
     },
+    "uniqueIdClaim" : {
+      "type" : "String"
+    },
     "userinfo_endpoint" : {
       "type" : "URI"
+    },
+    "usernameClaim" : {
+      "type" : "String"
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ReactorRequest",
+  "description" : "/**\n * Request for managing FusionAuth Reactor and licenses.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "license" : {
+      "type" : "String"
+    },
+    "licenseId" : {
+      "type" : "String"
+    }
+  }
+}

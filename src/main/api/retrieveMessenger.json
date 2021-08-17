@@ -1,0 +1,20 @@
+{
+  "uri": "/api/messenger",
+  "comments": [
+    "Retrieves the messenger with the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveMessenger",
+  "successResponse": "MessengerResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "messengerId",
+      "comments": [
+        "The Id of the messenger."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

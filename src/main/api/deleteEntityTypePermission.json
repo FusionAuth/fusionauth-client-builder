@@ -1,0 +1,35 @@
+{
+  "uri": "/api/entity/type",
+  "comments": [
+    "Hard deletes a permission. This is a dangerous operation and should not be used in most circumstances. This",
+    "permanently removes the given permission from all grants that had it."
+  ],
+  "method": "delete",
+  "methodName": "deleteEntityTypePermission",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityTypeId",
+      "comments": [
+        "The Id of the entityType the the permission belongs to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "constant": true,
+      "name": "permission",
+      "type": "urlSegment",
+      "value": "\"permission\""
+    },
+    {
+      "name": "permissionId",
+      "comments": [
+        "The Id of the permission to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

@@ -13,6 +13,8 @@
     "typeArguments" : [ {
       "type" : "FacebookIdentityProvider"
     } ]
+  }, {
+    "type" : "SupportsPostBindings"
   } ],
   "fields" : {
     "appId" : {
@@ -26,6 +28,9 @@
     },
     "fields" : {
       "type" : "String"
+    },
+    "loginMethod" : {
+      "type" : "IdentityProviderLoginMethod"
     },
     "permissions" : {
       "type" : "String"

@@ -1,0 +1,33 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "TwitchIdentityProvider",
+  "description" : "/**\n * Twitch gaming login provider.\n *\n * @author Brett Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "type" : "TwitchApplicationConfiguration"
+    } ]
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TwitchIdentityProvider"
+    } ]
+  }, {
+    "type" : "SupportsPostBindings"
+  } ],
+  "fields" : {
+    "buttonText" : {
+      "type" : "String"
+    },
+    "client_id" : {
+      "type" : "String"
+    },
+    "client_secret" : {
+      "type" : "String"
+    },
+    "scope" : {
+      "type" : "String"
+    }
+  }
+}

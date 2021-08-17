@@ -1,0 +1,39 @@
+{
+  "uri": "/api/identity-provider/link",
+  "comments": [
+    "Remove an existing link that has been made from a 3rd party identity provider to a FusionAuth user."
+  ],
+  "method": "delete",
+  "methodName": "deleteUserLink",
+  "successResponse": "IdentityProviderLinkResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "identityProviderId",
+      "comments": [
+        "The unique Id of the identity provider."
+      ],
+      "parameterName": "identityProviderId",
+      "type": "urlParameter",
+      "javaType": "UUID"
+    },
+    {
+      "name": "identityProviderUserId",
+      "comments": [
+        "The unique Id of the user in the 3rd party identity provider to unlink."
+      ],
+      "parameterName": "identityProviderUserId",
+      "type": "urlParameter",
+      "javaType": "String"
+    },
+    {
+      "name": "userId",
+      "comments": [
+        "The unique Id of the FusionAuth user to unlink."
+      ],
+      "parameterName": "userId",
+      "type": "urlParameter",
+      "javaType": "UUID"
+    }
+  ]
+}

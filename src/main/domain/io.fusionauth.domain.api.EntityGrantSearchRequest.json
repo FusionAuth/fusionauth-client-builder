@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EntityGrantSearchRequest",
+  "description" : "/**\n * Search request for entity grants.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : {
+    "search" : {
+      "type" : "EntityGrantSearchCriteria"
+    }
+  }
+}

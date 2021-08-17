@@ -1,0 +1,10 @@
+{
+  "uri": "/api/system/version",
+  "comments": [
+    "Retrieves the FusionAuth version string."
+  ],
+  "method": "get",
+  "methodName": "retrieveVersion",
+  "successResponse": "VersionResponse",
+  "errorResponse": "Errors"
+}

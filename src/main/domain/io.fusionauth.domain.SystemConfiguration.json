@@ -40,6 +40,9 @@
     "reportTimezone" : {
       "type" : "ZoneId"
     },
+    "ssoConfiguration" : {
+      "type" : "SystemSSOConfiguration"
+    },
     "uiConfiguration" : {
       "type" : "UIConfiguration"
     }

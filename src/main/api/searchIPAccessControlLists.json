@@ -1,0 +1,20 @@
+{
+  "uri": "/api/ip-acl/search",
+  "comments": [
+    "Searches the IP Access Control Lists with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchIPAccessControlLists",
+  "successResponse": "IPAccessControlListSearchResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "IPAccessControlListSearchRequest"
+    }
+  ]
+}

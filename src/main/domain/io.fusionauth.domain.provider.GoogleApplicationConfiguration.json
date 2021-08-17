@@ -21,6 +21,9 @@
     "client_secret" : {
       "type" : "String"
     },
+    "loginMethod" : {
+      "type" : "IdentityProviderLoginMethod"
+    },
     "scope" : {
       "type" : "String"
     }

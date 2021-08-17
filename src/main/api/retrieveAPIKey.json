@@ -1,0 +1,20 @@
+{
+  "uri": "/api/api-key",
+  "comments": [
+    "Retrieves an authentication API key for the given id"
+  ],
+  "method": "get",
+  "methodName": "retrieveAPIKey",
+  "successResponse": "APIKeyResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "keyId",
+      "comments": [
+        "The Id of the API key to retrieve."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

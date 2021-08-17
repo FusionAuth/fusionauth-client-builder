@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "IPAccessControlEntryAction",
+  "description" : "/**\n * @author Brett Guy\n */\n",
+  "enum" : [ "Allow", "Block" ]
+}

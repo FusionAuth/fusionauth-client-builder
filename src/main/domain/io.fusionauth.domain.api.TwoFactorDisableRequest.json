@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TwoFactorDisableRequest",
+  "description" : "/**\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TwoFactorDisableRequest"
+    } ]
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "code" : {
+      "type" : "String"
+    },
+    "methodId" : {
+      "type" : "String"
+    }
+  }
+}

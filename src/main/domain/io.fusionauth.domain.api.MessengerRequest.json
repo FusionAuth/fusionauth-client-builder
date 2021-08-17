@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "MessengerRequest",
+  "description" : "/**\n * @author Brett Guy\n */\n",
+  "fields" : {
+    "messenger" : {
+      "type" : "BaseMessengerConfiguration"
+    }
+  }
+}

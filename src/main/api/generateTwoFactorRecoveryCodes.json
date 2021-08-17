@@ -1,0 +1,20 @@
+{
+  "uri": "/api/user/two-factor/recovery-code",
+  "comments": [
+    "Generate two-factor recovery codes for a user. Generating two-factor recovery codes will invalidate any existing recovery codes. "
+  ],
+  "method": "post",
+  "methodName": "generateTwoFactorRecoveryCodes",
+  "successResponse": "TwoFactorRecoveryCodeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "userId",
+      "comments": [
+        "The Id of the user to generate new Two Factor recovery codes."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

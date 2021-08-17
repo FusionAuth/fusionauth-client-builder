@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserLoginSuspiciousEvent",
+  "description" : "/**\n * Models the User Login event that is suspicious.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "UserLoginSuccessEvent"
+  } ],
+  "fields" : {
+    "threatsDetected" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "AuthenticationThreats"
+      } ]
+    }
+  }
+}

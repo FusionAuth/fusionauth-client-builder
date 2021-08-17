@@ -78,6 +78,9 @@
     "timezone" : {
       "type" : "ZoneId"
     },
+    "twoFactor" : {
+      "type" : "UserTwoFactorConfiguration"
+    },
     "memberships" : {
       "type" : "List",
       "typeArguments" : [ {

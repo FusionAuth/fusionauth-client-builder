@@ -23,6 +23,9 @@
     "identityProviderId" : {
       "type" : "UUID"
     },
+    "noLink" : {
+      "type" : "boolean"
+    },
     "encodedJWT" : {
       "type" : "String"
     }

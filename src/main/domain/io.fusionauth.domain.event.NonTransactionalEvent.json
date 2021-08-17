@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "NonTransactionalEvent",
+  "description" : "/**\n * A marker interface indicating this event cannot be made transactional.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : { }
+}

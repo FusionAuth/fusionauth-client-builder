@@ -1,0 +1,36 @@
+{
+  "uri": "/api/user/registration",
+  "comments": [
+    "Deletes the user registration for the given user and application along with the given JSON body that contains the event information."
+  ],
+  "method": "delete",
+  "methodName": "deleteRegistrationWithRequest",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "userId",
+      "comments": [
+        "The Id of the user whose registration is being deleted."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "applicationId",
+      "comments": [
+        "The Id of the application to remove the registration for."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request body that contains the event information."
+      ],
+      "type": "body",
+      "javaType": "RegistrationDeleteRequest"
+    }
+  ]
+}

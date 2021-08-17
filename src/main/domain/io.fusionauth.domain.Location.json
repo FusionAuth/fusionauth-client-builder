@@ -1,0 +1,34 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Location",
+  "description" : "/**\n * Location information. Useful for IP addresses and other displayable data objects.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "Location"
+    } ]
+  } ],
+  "fields" : {
+    "city" : {
+      "type" : "String"
+    },
+    "country" : {
+      "type" : "String"
+    },
+    "latitude" : {
+      "type" : "double"
+    },
+    "longitude" : {
+      "type" : "double"
+    },
+    "region" : {
+      "type" : "String"
+    },
+    "zipcode" : {
+      "type" : "String"
+    },
+    "displayString" : {
+      "type" : "String"
+    }
+  }
+}

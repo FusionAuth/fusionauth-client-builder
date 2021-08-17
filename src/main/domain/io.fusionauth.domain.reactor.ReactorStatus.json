@@ -1,0 +1,34 @@
+{
+  "packageName" : "io.fusionauth.domain.reactor",
+  "type" : "ReactorStatus",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "advancedIdentityProviders" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "advancedMultiFactorAuthentication" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "advancedRegistration" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "applicationThemes" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "breachedPasswordDetection" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "connectors" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "entityManagement" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "threatDetection" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "licensed" : {
+      "type" : "boolean"
+    }
+  }
+}

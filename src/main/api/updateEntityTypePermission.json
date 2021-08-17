@@ -1,0 +1,42 @@
+{
+  "uri": "/api/entity/type",
+  "comments": [
+    "Updates the permission with the given id for the entity type."
+  ],
+  "method": "put",
+  "methodName": "updateEntityTypePermission",
+  "successResponse": "EntityTypeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityTypeId",
+      "comments": [
+        "The Id of the entityType that the permission belongs to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "permission",
+      "constant": true,
+      "type": "urlSegment",
+      "value": "\"permission\""
+    },
+    {
+      "name": "permissionId",
+      "comments": [
+        "The Id of the permission to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains all of the new permission information."
+      ],
+      "type": "body",
+      "javaType": "EntityTypeRequest"
+    }
+  ]
+}

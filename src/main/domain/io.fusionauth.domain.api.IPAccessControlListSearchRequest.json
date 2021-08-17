@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "IPAccessControlListSearchRequest",
+  "description" : "/**\n * Search request for IP ACLs .\n *\n * @author Brett Guy\n */\n",
+  "fields" : {
+    "search" : {
+      "type" : "IPAccessControlListSearchCriteria"
+    }
+  }
+}

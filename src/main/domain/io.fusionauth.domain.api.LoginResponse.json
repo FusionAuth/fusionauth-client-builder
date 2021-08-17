@@ -21,7 +21,22 @@
     "changePasswordReason" : {
       "type" : "ChangePasswordReason"
     },
+    "emailVerificationId" : {
+      "type" : "String"
+    },
+    "methods" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "TwoFactorMethod"
+      } ]
+    },
+    "pendingIdPLinkId" : {
+      "type" : "String"
+    },
     "refreshToken" : {
+      "type" : "String"
+    },
+    "registrationVerificationId" : {
       "type" : "String"
     },
     "state" : {
@@ -30,6 +45,12 @@
         "type" : "String"
       }, {
         "type" : "Object"
+      } ]
+    },
+    "threatsDetected" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "AuthenticationThreats"
       } ]
     },
     "token" : {

@@ -1,0 +1,44 @@
+{
+  "uri": "/api/entity",
+  "comments": [
+    "Retrieves an Entity Grant for the given Entity and User/Entity."
+  ],
+  "method": "get",
+  "methodName": "retrieveEntityGrant",
+  "successResponse": "EntityGrantResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityId",
+      "comments": [
+        "The Id of the Entity."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "constant": true,
+      "name": "grant",
+      "type": "urlSegment",
+      "value": "\"grant\""
+    },
+    {
+      "name": "recipientEntityId",
+      "comments": [
+        "(Optional) The Id of the Entity that the Entity Grant is for."
+      ],
+      "parameterName": "recipientEntityId",
+      "type": "urlParameter",
+      "javaType": "UUID"
+    },
+    {
+      "name": "userId",
+      "comments": [
+        "(Optional) The Id of the User that the Entity Grant is for."
+      ],
+      "parameterName": "userId",
+      "type": "urlParameter",
+      "javaType": "UUID"
+    }
+  ]
+}

@@ -2,6 +2,9 @@
   "packageName" : "io.fusionauth.domain.api",
   "type" : "ApplicationRequest",
   "description" : "/**\n * The Application API request object.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
   "fields" : {
     "application" : {
       "type" : "Application"

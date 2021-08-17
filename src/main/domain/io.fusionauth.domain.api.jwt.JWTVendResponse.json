@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "JWTVendResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "token" : {
+      "type" : "String"
+    }
+  }
+}

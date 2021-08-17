@@ -2,6 +2,9 @@
   "packageName" : "io.fusionauth.domain.api",
   "type" : "TenantRequest",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
   "fields" : {
     "sourceTenantId" : {
       "type" : "UUID"

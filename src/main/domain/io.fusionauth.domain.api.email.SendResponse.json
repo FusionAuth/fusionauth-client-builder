@@ -3,6 +3,14 @@
   "type" : "SendResponse",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "fields" : {
+    "anonymousResults" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "EmailTemplateErrors"
+      } ]
+    },
     "results" : {
       "type" : "Map",
       "typeArguments" : [ {

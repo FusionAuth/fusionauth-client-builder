@@ -1,0 +1,33 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "EpicGamesIdentityProvider",
+  "description" : "/**\n * Epic gaming login provider.\n *\n * @author Brett Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "type" : "EpicGamesApplicationConfiguration"
+    } ]
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EpicGamesIdentityProvider"
+    } ]
+  }, {
+    "type" : "SupportsPostBindings"
+  } ],
+  "fields" : {
+    "buttonText" : {
+      "type" : "String"
+    },
+    "client_id" : {
+      "type" : "String"
+    },
+    "client_secret" : {
+      "type" : "String"
+    },
+    "scope" : {
+      "type" : "String"
+    }
+  }
+}

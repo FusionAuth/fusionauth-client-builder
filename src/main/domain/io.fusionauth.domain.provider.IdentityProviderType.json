@@ -1,11 +1,15 @@
 {
   "packageName" : "io.fusionauth.domain.provider",
   "type" : "IdentityProviderType",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "enum" : [ {
-    "name" : "ExternalJWT",
-    "args" : [ "null" ]
+    "name" : "Apple",
+    "args" : [ ]
   }, {
-    "name" : "OpenIDConnect",
+    "name" : "EpicGames",
+    "args" : [ ]
+  }, {
+    "name" : "ExternalJWT",
     "args" : [ "null" ]
   }, {
     "name" : "Facebook",
@@ -14,19 +18,37 @@
     "name" : "Google",
     "args" : [ ]
   }, {
-    "name" : "Twitter",
+    "name" : "HYPR",
     "args" : [ ]
+  }, {
+    "name" : "LinkedIn",
+    "args" : [ ]
+  }, {
+    "name" : "Nintendo",
+    "args" : [ ]
+  }, {
+    "name" : "OpenIDConnect",
+    "args" : [ "null" ]
   }, {
     "name" : "SAMLv2",
     "args" : [ "null" ]
   }, {
-    "name" : "HYPR",
+    "name" : "SAMLv2IdPInitiated",
+    "args" : [ "null" ]
+  }, {
+    "name" : "SonyPSN",
     "args" : [ ]
   }, {
-    "name" : "Apple",
+    "name" : "Steam",
     "args" : [ ]
   }, {
-    "name" : "LinkedIn",
+    "name" : "Twitch",
+    "args" : [ ]
+  }, {
+    "name" : "Twitter",
+    "args" : [ ]
+  }, {
+    "name" : "Xbox",
     "args" : [ ]
   } ]
 }

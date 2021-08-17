@@ -1,0 +1,20 @@
+{
+  "uri": "/api/entity/type",
+  "comments": [
+    "Retrieves the Entity Type for the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveEntityType",
+  "successResponse": "EntityTypeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityTypeId",
+      "comments": [
+        "The Id of the Entity Type."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

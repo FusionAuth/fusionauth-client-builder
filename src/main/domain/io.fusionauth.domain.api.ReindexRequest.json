@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ReindexRequest",
+  "description" : "/**\n * Reindex API request\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "index" : {
+      "type" : "String"
+    }
+  }
+}

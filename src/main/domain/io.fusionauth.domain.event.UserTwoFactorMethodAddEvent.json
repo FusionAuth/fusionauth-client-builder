@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserTwoFactorMethodAddEvent",
+  "description" : "/**\n * Model a user event when a two-factor method has been removed.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserTwoFactorMethodAddEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "method" : {
+      "type" : "TwoFactorMethod"
+    },
+    "user" : {
+      "type" : "User"
+    }
+  }
+}

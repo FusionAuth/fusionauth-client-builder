@@ -5,6 +5,8 @@
   ],
   "method": "post",
   "methodName": "verifyRegistration",
+  "deprecated": "This method has been renamed to {{renamedMethod}} and changed to take a JSON request body, use that method instead.",
+  "renamedMethod": "verifyUserRegistration",
   "successResponse": "Void",
   "errorResponse": "Errors",
   "anonymous": true,

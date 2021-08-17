@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "MessageTemplateRequest",
+  "description" : "/**\n * A Message Template Request to the API\n *\n * @author Michael Sleevi\n */\n",
+  "fields" : {
+    "messageTemplate" : {
+      "type" : "MessageTemplate"
+    }
+  }
+}

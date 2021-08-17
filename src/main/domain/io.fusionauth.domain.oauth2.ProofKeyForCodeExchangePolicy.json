@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "ProofKeyForCodeExchangePolicy",
+  "description" : "/**\n * @author Brett Guy\n */\n",
+  "enum" : [ "Required", "NotRequired", "NotRequiredWhenUsingClientAuthentication" ]
+}

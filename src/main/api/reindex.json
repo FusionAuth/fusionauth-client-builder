@@ -1,0 +1,24 @@
+{
+  "uri": "/api/system/reindex",
+  "comments": [
+    "Requests Elasticsearch to delete and rebuild the index for FusionAuth users or entities. Be very careful when running this request as it will ",
+    "increase the CPU and I/O load on your database until the operation completes. Generally speaking you do not ever need to run this operation unless ",
+    "instructed by FusionAuth support, or if you are migrating a database another system and you are not brining along the Elasticsearch index. ",
+    "",
+    "You have been warned."
+  ],
+  "method": "post",
+  "methodName": "reindex",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains the index name."
+      ],
+      "type": "body",
+      "javaType": "ReindexRequest"
+    }
+  ]
+}

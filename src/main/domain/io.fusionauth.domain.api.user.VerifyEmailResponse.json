@@ -3,6 +3,9 @@
   "type" : "VerifyEmailResponse",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "fields" : {
+    "oneTimeCode" : {
+      "type" : "String"
+    },
     "verificationId" : {
       "type" : "String"
     }

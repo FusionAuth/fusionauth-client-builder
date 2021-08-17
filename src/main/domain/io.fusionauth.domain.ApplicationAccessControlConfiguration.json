@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationAccessControlConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ApplicationAccessControlConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "uiIPAccessControlListId" : {
+      "type" : "UUID"
+    }
+  }
+}

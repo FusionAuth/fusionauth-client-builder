@@ -2,6 +2,9 @@
   "packageName" : "io.fusionauth.domain.api",
   "type" : "TwoFactorRequest",
   "description" : "/**\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
@@ -9,11 +12,23 @@
     } ]
   } ],
   "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "authenticatorId" : {
+      "type" : "String"
+    },
     "code" : {
       "type" : "String"
     },
-    "delivery" : {
-      "type" : "TwoFactorDelivery"
+    "email" : {
+      "type" : "String"
+    },
+    "method" : {
+      "type" : "String"
+    },
+    "mobilePhone" : {
+      "type" : "String"
     },
     "secret" : {
       "type" : "String"

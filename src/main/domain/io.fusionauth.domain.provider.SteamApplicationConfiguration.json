@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SteamApplicationConfiguration",
+  "description" : "/**\n * @author Brett Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseIdentityProviderApplicationConfiguration"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "SteamApplicationConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "buttonText" : {
+      "type" : "String"
+    },
+    "client_id" : {
+      "type" : "String"
+    },
+    "webAPIKey" : {
+      "type" : "String"
+    },
+    "scope" : {
+      "type" : "String"
+    }
+  }
+}

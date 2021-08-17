@@ -1,0 +1,41 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EntityTypePermission",
+  "description" : "/**\n * Models a specific entity type permission. This permission can be granted to users or other entities.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EntityTypePermission"
+    } ]
+  }, {
+    "type" : "_InternalJSONColumn"
+  } ],
+  "fields" : {
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "description" : {
+      "type" : "String"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "isDefault" : {
+      "type" : "boolean"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "type" : "String"
+    }
+  }
+}

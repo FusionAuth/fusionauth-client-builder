@@ -1,0 +1,39 @@
+{
+  "uri": "/api/identity-provider/link",
+  "comments": [
+    "Retrieve a single Identity Provider user (link)."
+  ],
+  "method": "get",
+  "methodName": "retrieveUserLink",
+  "successResponse": "IdentityProviderLinkResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "identityProviderId",
+      "comments": [
+        "The unique Id of the identity provider."
+      ],
+      "parameterName": "identityProviderId",
+      "type": "urlParameter",
+      "javaType": "UUID"
+    },
+    {
+      "name": "identityProviderUserId",
+      "comments": [
+        "The unique Id of the user in the 3rd party identity provider."
+      ],
+      "parameterName": "identityProviderUserId",
+      "type": "urlParameter",
+      "javaType": "String"
+    },
+    {
+      "name": "userId",
+      "comments": [
+        "The unique Id of the FusionAuth user."
+      ],
+      "parameterName": "userId",
+      "type": "urlParameter",
+      "javaType": "UUID"
+    }
+  ]
+}

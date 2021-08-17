@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "AuthenticationThreats",
+  "description" : "/**\n * @author Brett Pontarelli\n */\n",
+  "enum" : [ "ImpossibleTravel" ]
+}

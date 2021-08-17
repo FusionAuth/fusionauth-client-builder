@@ -1,0 +1,20 @@
+{
+  "uri": "/api/entity/type",
+  "comments": [
+    "Deletes the Entity Type for the given Id."
+  ],
+  "method": "delete",
+  "methodName": "deleteEntityType",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityTypeId",
+      "comments": [
+        "The Id of the Entity Type to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

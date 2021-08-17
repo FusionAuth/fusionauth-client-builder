@@ -1,0 +1,9 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserLoginNewDeviceEvent",
+  "description" : "/**\n * Models the User Login event for a new device (un-recognized)\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "UserLoginSuccessEvent"
+  } ],
+  "fields" : { }
+}

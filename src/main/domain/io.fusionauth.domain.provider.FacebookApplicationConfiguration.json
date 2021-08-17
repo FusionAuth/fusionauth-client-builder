@@ -24,6 +24,9 @@
     "fields" : {
       "type" : "String"
     },
+    "loginMethod" : {
+      "type" : "IdentityProviderLoginMethod"
+    },
     "permissions" : {
       "type" : "String"
     }

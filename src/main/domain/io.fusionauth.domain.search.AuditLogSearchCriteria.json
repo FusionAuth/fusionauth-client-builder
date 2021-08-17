@@ -18,6 +18,15 @@
     "message" : {
       "type" : "String"
     },
+    "newValue" : {
+      "type" : "String"
+    },
+    "oldValue" : {
+      "type" : "String"
+    },
+    "reason" : {
+      "type" : "String"
+    },
     "start" : {
       "type" : "ZonedDateTime"
     },

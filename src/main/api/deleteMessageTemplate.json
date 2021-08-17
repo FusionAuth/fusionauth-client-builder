@@ -1,0 +1,20 @@
+{
+  "uri": "/api/message/template",
+  "comments": [
+    "Deletes the message template for the given Id."
+  ],
+  "method": "delete",
+  "methodName": "deleteMessageTemplate",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "messageTemplateId",
+      "comments": [
+        "The Id of the message template to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

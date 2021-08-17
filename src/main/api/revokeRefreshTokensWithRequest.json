@@ -1,0 +1,21 @@
+{
+  "uri": "/api/jwt/refresh",
+  "comments": [
+    "Revokes refresh tokens using the information in the JSON body. The handling for this method is the same as the revokeRefreshToken method",
+    "and is based on the information you provide in the RefreshDeleteRequest object. See that method for additional information."
+  ],
+  "method": "delete",
+  "methodName": "revokeRefreshTokensWithRequest",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The request information used to revoke the refresh tokens."
+      ],
+      "type": "body",
+      "javaType": "RefreshTokenRevokeRequest"
+    }
+  ]
+}

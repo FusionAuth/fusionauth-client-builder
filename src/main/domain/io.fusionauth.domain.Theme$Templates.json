@@ -8,10 +8,28 @@
     } ]
   } ],
   "fields" : {
+    "accountEdit" : {
+      "type" : "String"
+    },
+    "accountIndex" : {
+      "type" : "String"
+    },
+    "accountTwoFactorDisable" : {
+      "type" : "String"
+    },
+    "accountTwoFactorEnable" : {
+      "type" : "String"
+    },
+    "accountTwoFactorIndex" : {
+      "type" : "String"
+    },
     "emailComplete" : {
       "type" : "String"
     },
-    "emailSend" : {
+    "emailSent" : {
+      "type" : "String"
+    },
+    "emailVerificationRequired" : {
       "type" : "String"
     },
     "emailVerify" : {
@@ -20,7 +38,13 @@
     "helpers" : {
       "type" : "String"
     },
+    "index" : {
+      "type" : "String"
+    },
     "oauth2Authorize" : {
+      "type" : "String"
+    },
+    "oauth2AuthorizedNotRegistered" : {
       "type" : "String"
     },
     "oauth2ChildRegistrationNotAllowed" : {
@@ -50,7 +74,13 @@
     "oauth2Register" : {
       "type" : "String"
     },
+    "oauth2StartIdPLink" : {
+      "type" : "String"
+    },
     "oauth2TwoFactor" : {
+      "type" : "String"
+    },
+    "oauth2TwoFactorMethods" : {
       "type" : "String"
     },
     "oauth2Wait" : {
@@ -71,13 +101,25 @@
     "registrationComplete" : {
       "type" : "String"
     },
-    "registrationSend" : {
+    "registrationSent" : {
+      "type" : "String"
+    },
+    "registrationVerificationRequired" : {
       "type" : "String"
     },
     "registrationVerify" : {
       "type" : "String"
     },
     "samlv2Logout" : {
+      "type" : "String"
+    },
+    "unauthorized" : {
+      "type" : "String"
+    },
+    "emailSend" : {
+      "type" : "String"
+    },
+    "registrationSend" : {
       "type" : "String"
     }
   }

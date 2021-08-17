@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.api.identityProvider",
+  "type" : "IdentityProviderLinkResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "IdentityProviderLinkResponse"
+    } ]
+  } ],
+  "fields" : {
+    "identityProviderLink" : {
+      "type" : "IdentityProviderLink"
+    },
+    "identityProviderLinks" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "IdentityProviderLink"
+      } ]
+    }
+  }
+}

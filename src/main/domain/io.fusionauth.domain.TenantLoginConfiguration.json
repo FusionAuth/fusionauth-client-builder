@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantLoginConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantLoginConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "requireAuthentication" : {
+      "type" : "boolean"
+    }
+  }
+}

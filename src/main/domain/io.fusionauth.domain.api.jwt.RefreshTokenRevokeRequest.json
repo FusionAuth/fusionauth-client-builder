@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "RefreshTokenRevokeRequest",
+  "description" : "/**\n * Request for the Refresh Token API to revoke a refresh token rather than using the URL parameters.\n *\n * @author Brian Pontarelli\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "RefreshTokenRevokeRequest"
+    } ]
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "token" : {
+      "type" : "String"
+    },
+    "userId" : {
+      "type" : "UUID"
+    }
+  }
+}

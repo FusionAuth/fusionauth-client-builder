@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ReactorResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "metrics" : {
+      "type" : "ReactorMetrics"
+    },
+    "status" : {
+      "type" : "ReactorStatus"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "packageName" : "io.fusionauth.domain",
-  "type" : "TwoFactorDelivery",
+  "type" : "UnverifiedBehavior",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
-  "enum" : [ "None", "TextMessage" ]
+  "enum" : [ "Allow", "Gated" ]
 }

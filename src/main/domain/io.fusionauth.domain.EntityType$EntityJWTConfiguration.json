@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EntityJWTConfiguration",
+  "description" : "/**\n * JWT Configuration for entities.\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EntityJWTConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "accessTokenKeyId" : {
+      "type" : "UUID"
+    },
+    "timeToLiveInSeconds" : {
+      "type" : "int"
+    }
+  }
+}

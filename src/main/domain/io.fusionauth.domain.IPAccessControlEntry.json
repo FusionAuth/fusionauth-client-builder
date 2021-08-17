@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "IPAccessControlEntry",
+  "description" : "/**\n * @author Brett Guy\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "IPAccessControlEntry"
+    } ]
+  } ],
+  "fields" : {
+    "action" : {
+      "type" : "IPAccessControlEntryAction"
+    },
+    "endIPAddress" : {
+      "type" : "String"
+    },
+    "startIPAddress" : {
+      "type" : "String"
+    }
+  }
+}

@@ -45,6 +45,9 @@
     "keyId" : {
       "type" : "UUID"
     },
+    "nameIdFormat" : {
+      "type" : "String"
+    },
     "postRequest" : {
       "type" : "boolean"
     },
@@ -54,8 +57,14 @@
     "signRequest" : {
       "type" : "boolean"
     },
+    "uniqueIdClaim" : {
+      "type" : "String"
+    },
     "useNameIdForEmail" : {
       "type" : "boolean"
+    },
+    "usernameClaim" : {
+      "type" : "String"
     },
     "xmlSignatureC14nMethod" : {
       "type" : "CanonicalizationMethod"

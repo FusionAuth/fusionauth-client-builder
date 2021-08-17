@@ -1,0 +1,23 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "KickstartSuccessEvent",
+  "description" : "/**\n * Event event to indicate kickstart has been successfully completed.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "KickstartSuccessEvent"
+    } ]
+  }, {
+    "type" : "InstanceEvent"
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "instanceId" : {
+      "type" : "UUID"
+    }
+  }
+}

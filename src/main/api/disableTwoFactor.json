@@ -13,9 +13,18 @@
       "comments": [
         "The Id of the User for which you're disabling Two Factor authentication."
       ],
-      "type": "urlParameter",
+      "type": "urlSegment",
       "parameterName": "userId",
       "javaType": "UUID"
+    },
+    {
+      "name": "methodId",
+      "comments": [
+        "The two-factor method identifier you wish to disable"
+      ],
+      "type": "urlParameter",
+      "parameterName": "methodId",
+      "javaType": "String"
     },
     {
       "name": "code",

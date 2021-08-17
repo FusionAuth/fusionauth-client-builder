@@ -1,0 +1,5 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TOTPAlgorithm",
+  "enum" : [ "HmacSHA1", "HmacSHA256", "HmacSHA512" ]
+}

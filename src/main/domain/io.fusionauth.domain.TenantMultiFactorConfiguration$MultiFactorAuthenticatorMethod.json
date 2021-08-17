@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "MultiFactorAuthenticatorMethod",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "MultiFactorAuthenticatorMethod"
+    } ]
+  } ],
+  "fields" : {
+    "algorithm" : {
+      "type" : "TOTPAlgorithm"
+    },
+    "codeLength" : {
+      "type" : "int"
+    },
+    "timeStep" : {
+      "type" : "int"
+    }
+  }
+}

@@ -5,6 +5,8 @@
   ],
   "method": "post",
   "methodName": "sendTwoFactorCode",
+  "deprecated": "This method has been renamed to {{renamedMethod}}, use that method instead.",
+  "renamedMethod": "sendTwoFactorCodeForEnableDisable",
   "successResponse": "Void",
   "errorResponse": "Errors",
   "params": [

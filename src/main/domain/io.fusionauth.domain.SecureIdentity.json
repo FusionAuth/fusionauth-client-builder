@@ -39,13 +39,7 @@
     "salt" : {
       "type" : "String"
     },
-    "twoFactorDelivery" : {
-      "type" : "TwoFactorDelivery"
-    },
-    "twoFactorEnabled" : {
-      "type" : "boolean"
-    },
-    "twoFactorSecret" : {
+    "uniqueUsername" : {
       "type" : "String"
     },
     "username" : {

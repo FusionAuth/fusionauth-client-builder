@@ -1,0 +1,37 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "PendingIdPLink",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "PendingIdPLink"
+    } ]
+  } ],
+  "fields" : {
+    "displayName" : {
+      "type" : "String"
+    },
+    "email" : {
+      "type" : "String"
+    },
+    "identityProviderId" : {
+      "type" : "UUID"
+    },
+    "identityProviderName" : {
+      "type" : "String"
+    },
+    "identityProviderType" : {
+      "type" : "IdentityProviderType"
+    },
+    "identityProviderUserId" : {
+      "type" : "String"
+    },
+    "user" : {
+      "type" : "User"
+    },
+    "username" : {
+      "type" : "String"
+    }
+  }
+}

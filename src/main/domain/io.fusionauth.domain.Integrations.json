@@ -14,9 +14,6 @@
     },
     "kafka" : {
       "type" : "KafkaConfiguration"
-    },
-    "twilio" : {
-      "type" : "TwilioConfiguration"
     }
   }
 }
