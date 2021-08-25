@@ -64,6 +64,9 @@ using Newtonsoft.Json;
 [#if types_in_use?contains("BaseIdentityProvider")]
 using io.fusionauth.converters.helpers;
 [/#if]
+[#if domain_item.type == "JWT" && domain_item.packageName == "io.fusionauth.jwt.domain"]
+using io.fusionauth.converters;
+[/#if]
 using System.Collections.Generic;
 using System;
 
@@ -102,6 +105,11 @@ namespace ${replaceKeywords(domain_item.packageName)} {
     [JsonExtensionData]
     private readonly Dictionary<string, dynamic> ${global.scrubName(replaceKeywords(fieldName))} = new Dictionary<string, dynamic>();
       [#else]
+    [#if domain_item.type == "JWT" && domain_item.packageName == "io.fusionauth.jwt.domain" && field.type == "ZonedDateTime"]
+    [#-- per https://github.com/FusionAuth/fusionauth-issues/issues/1362 JWT DateTimeOffsets need to be parsed as seconds, as opposed to milliseconds 
+    --]
+    [JsonConverter(typeof(DateTimeOffsetSecondsConverter))]
+    [/#if]
     public [@printType field/] ${global.scrubName(replaceKeywords(fieldName))};
       [/#if]
     [/#list]
