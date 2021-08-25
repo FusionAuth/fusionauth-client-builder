@@ -105,6 +105,7 @@ import io.fusionauth.domain.api.PreviewMessageTemplateResponse;
 import io.fusionauth.domain.api.PreviewRequest;
 import io.fusionauth.domain.api.PreviewResponse;
 import io.fusionauth.domain.api.PublicKeyResponse;
+import io.fusionauth.domain.api.ReactorMetricsResponse;
 import io.fusionauth.domain.api.ReactorRequest;
 import io.fusionauth.domain.api.ReactorResponse;
 import io.fusionauth.domain.api.ReindexRequest;

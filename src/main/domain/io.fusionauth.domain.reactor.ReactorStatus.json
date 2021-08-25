@@ -24,11 +24,11 @@
     "entityManagement" : {
       "type" : "ReactorFeatureStatus"
     },
-    "threatDetection" : {
-      "type" : "ReactorFeatureStatus"
-    },
     "licensed" : {
       "type" : "boolean"
+    },
+    "threatDetection" : {
+      "type" : "ReactorFeatureStatus"
     }
   }
 }

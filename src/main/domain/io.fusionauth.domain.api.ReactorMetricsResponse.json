@@ -1,10 +1,10 @@
 {
   "packageName" : "io.fusionauth.domain.api",
-  "type" : "ReactorResponse",
+  "type" : "ReactorMetricsResponse",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "fields" : {
-    "status" : {
-      "type" : "ReactorStatus"
+    "metrics" : {
+      "type" : "ReactorMetrics"
     }
   }
 }
