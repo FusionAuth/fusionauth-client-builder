@@ -103,6 +103,9 @@
     "registrationConfiguration" : {
       "type" : "TenantRegistrationConfiguration"
     },
+    "ssoConfiguration" : {
+      "type" : "TenantSSOConfiguration"
+    },
     "state" : {
       "type" : "ObjectState"
     },
