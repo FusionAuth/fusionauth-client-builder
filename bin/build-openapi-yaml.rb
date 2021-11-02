@@ -13,7 +13,7 @@ options = {}
 options[:sourcedir] = "../src/"
 
 OptionParser.new do |opts|
-  opts.banner = "Usage: check-apis-against-client-json.rb [options]"
+  opts.banner = "Usage: build-openapi-yaml.rb [options]"
 
   opts.on("-v", "--verbose", "Run verbosely.") do |v|
     options[:verbose] = v
@@ -66,7 +66,7 @@ def make_ref(type)
   return "'#/components/schemas/"+type+"'"
 end
 
-def process_file(fn, schemas, options)
+def process_domain_file(fn, schemas, options)
   if options[:verbose] 
     puts "processing "+fn
   end
@@ -85,6 +85,8 @@ def process_file(fn, schemas, options)
 
   # TODO handle undefined types like UUID
   # TODO What about ENUMS in an existing data model with fields?
+  # TODO authentication schemes
+  # TODO handle extends, jam all fields on super classes onto object
   if json["enum"] 
     openapiobj["type"] = "string"
     openapiobj["enum"] = json["enum"]
@@ -131,50 +133,157 @@ def process_file(fn, schemas, options)
 
 end
 
-files = []
+def process_api_file(fn, paths, options)
+  if options[:verbose] 
+    puts "processing "+fn
+  end
+  f = File.open(fn)
+  fs = f.read
+  json = JSON.parse(fs)
+  f.close
+
+  uri = json["uri"]
+
+  # check to see if the url segments are optional
+  # TODO need to handle all url segments, including constant ones
+  if json["params"]
+    segmentparams = json["params"].select{|p| p["type"] == "urlSegment"}
+    segmentparams.each do |p|
+      optional_param = false
+      if p["comments"] && p["comments"][0].include?("(Optional)") 
+        optional_param = true
+      end
+      if optional_param
+        # builds optional param path, no need to add segments
+        addsegmentparams = false
+        build_path(uri, json, paths, addsegmentparams, options)
+        if options[:verbose] 
+          puts "adding optional path for " + uri
+        end
+      end
+
+      uri = uri + "/{"+p["name"]+"}"
+      addsegmentparams = true
+      build_path(uri, json, paths, addsegmentparams, options)
+      if options[:verbose] 
+        puts "adding path for " + uri
+      end
+    end
+  end
+
+end
+ 
+def build_path(uri, json, paths, addsegmentparams, options)
+
+  method = json["method"]
+  desc = json["comments"].join(" ").delete("\n").strip
+  operationId = json["methodName"]
+  jsonparams = json["params"]
+
+  if not paths[uri] 
+    paths[uri] = {}
+  end
+
+  openapiobj = {}
+  paths[uri][method] = openapiobj
+
+  openapiobj["description"] = desc
+  openapiobj["operationId"] = operationId
+
+  # TODO should we handle type form, notUsed? that is used for oauth token exchange
+  # TODO need to handle body params
+  
+  if jsonparams
+    params = []
+    openapiobj["parameters"] = params
+    segmentparams = jsonparams.select{|p| p["type"] == "urlSegment"}
+    queryparams = jsonparams.select{|p| p["type"] == "urlParameter"}
+    bodyparams = jsonparams.select{|p| p["type"] == "body"}
+  
+    queryparams.each do |p|
+      paramobj = {}
+      paramobj["name"] = p["name"]
+      paramobj["in"] = "query"
+      if p["comments"] && p["comments"][0]
+        paramobj["description"] = p["comments"].join(" ").gsub('(Optional)','').gsub("\n",'').delete("\n").strip
+      end
+      params << paramobj
+    end
+
+    if addsegmentparams
+      segmentparams.each do |p|
+        if p["constant"] == true
+          next
+        end
+        paramobj = {}
+        paramobj["name"] = p["name"]
+        paramobj["in"] = "path"
+        # TODO need to handle case where it is missing
+        paramobj["required"] = true
+        if p["comments"] && p["comments"][0]
+          paramobj["description"] = p["comments"].join(" ").gsub('(Optional)','').gsub("\n",'').delete("\n").strip
+        end
+        params << paramobj
+      end
+    end
+  end
+
+  openapiobj["responses"] = {}
+  openapiobj["responses"]['200'] = {}
+  build_nested_content_response(openapiobj["responses"]['200'], make_ref(json["successResponse"]))
+
+  openapiobj["responses"]['default'] = {}
+  build_nested_content_response(openapiobj["responses"]['default'], make_ref(json["errorResponse"]))
+
+end
+
+def build_nested_content_response(hash, ref)
+  hash["content"] = {}
+  hash["content"]["application/json"] = {}
+  hash["content"]["application/json"]["schema"] = {}
+  hash["content"]["application/json"]["schema"]['$ref'] = ref
+end
+
+domain_files = []
 schemas = {}
 components = {}
+paths = {}
 spec = {}
+spec["paths"] = paths
 spec["components"] = components
 
+domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*")
+
 if options[:file]
-  files = Dir.glob(options[:sourcedir]+"/main/domain/*"+options[:file]+"*")
+  api_files = Dir.glob(options[:sourcedir]+"/main/api/*"+options[:file]+"*")
 else
-  files = Dir.glob(options[:sourcedir]+"/main/domain/*")
+  api_files = Dir.glob(options[:sourcedir]+"/main/api/*")
 end
 
 if options[:verbose] 
-  puts "Checking files: "
-  puts files
+  puts "Processing files: "
+  puts domain_files
+  puts api_files
 end
 
-
-files.each do |fn|
-  process_file(fn, schemas, options)
+domain_files.each do |fn|
+  process_domain_file(fn, schemas, options)
 end
-
 components["schemas"] = schemas
 
+api_files.each do |fn|
+  process_api_file(fn, paths, options)
+end
+
 puts %Q(
-openapi: "3.0.0"
+openapi: "3.1.0"
 info:
   version: 1.0.0
-  title: Swagger Petstore
+  title: FusionAuth API
   license:
-    name: MIT
+    name: Apache2
 servers:
-  - url: http://petstore.swagger.io/v1
-paths:
-  /pets:
-    get:
-      summary: List all pets
-      responses:
-        '200':
-          description: A paged array of pets
-          content:
-            application/json:   
-              schema:
-                $ref: "#/components/schemas/UserAction"
+  - url: http://localhost:9011
 )
 
 # https://stackoverflow.com/questions/21251309/how-to-remove-on-top-of-a-yaml-file
