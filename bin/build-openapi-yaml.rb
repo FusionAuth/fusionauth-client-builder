@@ -38,7 +38,7 @@ OptionParser.new do |opts|
 end.parse!
 
 def is_primitive(type)
-  return type == "boolean" || type == "String" || type == "UUID" || type == "Object"
+  return type == "boolean" || type == "String" || type == "UUID" || type == "Object" || type == "int" || "type" == "integer"
 end
 
 def convert_primitive(type)
@@ -57,13 +57,16 @@ def convert_primitive(type)
     return {"type" => "string"}
   end
 
-  if type == "integer"
+  if type == "integer" || type == "int"
     return {"type" => "integer"}
   end
 end
 
 def make_ref(type)
-  return "'#/components/schemas/"+type+"'"
+  if type == "Void"
+    return nil
+  end
+  return '#/components/schemas/'+type
 end
 
 def process_domain_file(fn, schemas, options)
@@ -103,22 +106,25 @@ def process_domain_file(fn, schemas, options)
           if is_primitive(v2)
             properties[k] = convert_primitive(v2)
           elsif v2 == "List"
-            properties[k][k2] = "array"
-            properties[k]["items"] = {}
             listElementType = json["fields"][k]["typeArguments"][0]["type"]
-            if is_primitive(listElementType)
-              properties[k]["items"] = convert_primitive(listElementType)
-            else
-              properties[k]["items"]['$ref'] = make_ref(listElementType)
-            end
+            addListValue(properties[k],k2,listElementType)
+            
           elsif v2 == "Map"
             properties[k][k2] = "object"
             properties[k]["additionalProperties"] = {}
-            mapElementType = json["fields"][k]["typeArguments"][1]["type"]
-            if is_primitive(mapElementType)
-              properties[k]["additionalProperties"] = convert_primitive(mapElementType)
+            # could make recursive, but how deep do we need to go
+
+            # keytype is always going to be a string? # TODO check on this
+
+            mapKeyType = json["fields"][k]["typeArguments"][0]["type"]
+            mapValueType = json["fields"][k]["typeArguments"][1]["type"]
+            if is_primitive(mapValueType)
+              properties[k]["additionalProperties"] = convert_primitive(mapValueType)
+            elsif mapValueType == "List"
+              listElementType = json["fields"][k]["typeArguments"][1]["typeArguments"][0]["type"]
+              addListValue(properties[k],k2,listElementType)
             else
-              properties[k]["additionalProperties"]['$ref'] = make_ref(mapElementType)
+              properties[k]["additionalProperties"]['$ref'] = make_ref(mapValueType)
             end
           else
             # omit type, put in ref
@@ -133,6 +139,23 @@ def process_domain_file(fn, schemas, options)
 
 end
 
+def addListValue(hash,key,listElementType)
+  hash[key] = "array"
+  hash["items"] = {}
+  if is_primitive(listElementType)
+    hash["items"] = convert_primitive(listElementType)
+  else
+    hash["items"]['$ref'] = make_ref(listElementType)
+  end
+end
+
+def param_optional(comments_arr)
+  if comments_arr && comments_arr[0].include?("(Optional)") 
+    return true
+  end
+  return false
+end
+
 def process_api_file(fn, paths, options)
   if options[:verbose] 
     puts "processing "+fn
@@ -145,35 +168,43 @@ def process_api_file(fn, paths, options)
   uri = json["uri"]
 
   # check to see if the url segments are optional
-  # TODO need to handle all url segments, including constant ones
   if json["params"]
+    uri_without_optional = uri
     segmentparams = json["params"].select{|p| p["type"] == "urlSegment"}
     segmentparams.each do |p|
-      optional_param = false
-      if p["comments"] && p["comments"][0].include?("(Optional)") 
-        optional_param = true
+      if p["constant"] == true
+        uri = uri + "/"+p["value"].delete('"')
+        uri_without_optional = uri_without_optional + "/"+p["value"].delete('"')
+        next
       end
-      if optional_param
-        # builds optional param path, no need to add segments
-        addsegmentparams = false
-        build_path(uri, json, paths, addsegmentparams, options)
-        if options[:verbose] 
-          puts "adding optional path for " + uri
-        end
+      
+      if param_optional(p["comments"]) 
+        uri = uri + "/{"+p["name"]+"}"
+      else
+        uri = uri + "/{"+p["name"]+"}"
+        uri_without_optional = uri_without_optional + "/{"+p["name"]+"}"
       end
 
-      uri = uri + "/{"+p["name"]+"}"
-      addsegmentparams = true
-      build_path(uri, json, paths, addsegmentparams, options)
-      if options[:verbose] 
-        puts "adding path for " + uri
-      end
     end
+
+    if options[:verbose] 
+      puts "adding path for " + uri
+    end
+    # builds for full uri
+    build_path(uri, json, paths, true, options)
+
+    # only support an optional parameter on the last url segment
+    if uri_without_optional != uri
+      if options[:verbose] 
+        puts "adding path for " + uri_without_optional
+      end
+      build_path(uri_without_optional, json, paths, false, options)
+    end 
   end
 
 end
- 
-def build_path(uri, json, paths, addsegmentparams, options)
+
+def build_path(uri, json, paths, include_optional_segement_param, options)
 
   method = json["method"]
   desc = json["comments"].join(" ").delete("\n").strip
@@ -201,50 +232,63 @@ def build_path(uri, json, paths, addsegmentparams, options)
     bodyparams = jsonparams.select{|p| p["type"] == "body"}
   
     queryparams.each do |p|
-      paramobj = {}
-      paramobj["name"] = p["name"]
-      paramobj["in"] = "query"
-      if p["comments"] && p["comments"][0]
-        paramobj["description"] = p["comments"].join(" ").gsub('(Optional)','').gsub("\n",'').delete("\n").strip
-      end
-      params << paramobj
+      params << build_openapi_paramobj(p, "query")
     end
 
-    if addsegmentparams
-      segmentparams.each do |p|
-        if p["constant"] == true
-          next
+    segmentparams.each do |p|
+      if p["constant"] == true
+        next
+      end
+
+      if param_optional(p["comments"])
+        if include_optional_segement_param
+          # we have an optional param but it is in the URI, so we want to add it to the parameters
+          params << build_openapi_paramobj(p, "path")
         end
-        paramobj = {}
-        paramobj["name"] = p["name"]
-        paramobj["in"] = "path"
-        # TODO need to handle case where it is missing
-        paramobj["required"] = true
-        if p["comments"] && p["comments"][0]
-          paramobj["description"] = p["comments"].join(" ").gsub('(Optional)','').gsub("\n",'').delete("\n").strip
-        end
-        params << paramobj
+      else
+        params << build_openapi_paramobj(p, "path")
       end
     end
   end
 
   openapiobj["responses"] = {}
   openapiobj["responses"]['200'] = {}
-  build_nested_content_response(openapiobj["responses"]['200'], make_ref(json["successResponse"]))
+  build_nested_content_response(openapiobj["responses"]['200'], make_ref(json["successResponse"]), "Success")
 
   openapiobj["responses"]['default'] = {}
-  build_nested_content_response(openapiobj["responses"]['default'], make_ref(json["errorResponse"]))
+  build_nested_content_response(openapiobj["responses"]['default'], make_ref(json["errorResponse"]), "Error")
 
 end
 
-def build_nested_content_response(hash, ref)
-  hash["content"] = {}
-  hash["content"]["application/json"] = {}
-  hash["content"]["application/json"]["schema"] = {}
-  hash["content"]["application/json"]["schema"]['$ref'] = ref
+def build_openapi_paramobj(jsonparamobj, paramtype)
+  paramobj = {}
+  paramobj["name"] = jsonparamobj["name"]
+  paramobj["in"] = paramtype
+  paramobj["schema"] = {}
+  paramobj["schema"]["type"] = "string"
+  
+  if paramtype == "path"
+    paramobj["required"] = true
+  end
+  if jsonparamobj["comments"] && jsonparamobj["comments"][0]
+    paramobj["description"] = jsonparamobj["comments"].join(" ").gsub('(Optional)','').gsub("\n",'').delete("\n").strip
+  end
+  return paramobj
+end
+
+def build_nested_content_response(hash, ref, description)
+  hash["description"] = description
+  
+  if ref
+    hash["content"] = {}
+    hash["content"]["application/json"] = {}
+    hash["content"]["application/json"]["schema"] = {}
+    hash["content"]["application/json"]["schema"]['$ref'] = ref
+  end
 end
 
 domain_files = []
+api_files = []
 schemas = {}
 components = {}
 paths = {}
@@ -252,23 +296,31 @@ spec = {}
 spec["paths"] = paths
 spec["components"] = components
 
-domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*")
 
 if options[:file]
   api_files = Dir.glob(options[:sourcedir]+"/main/api/*"+options[:file]+"*")
+  domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*"+options[:file]+".json")
 else
   api_files = Dir.glob(options[:sourcedir]+"/main/api/*")
+  domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*")
 end
 
 if options[:verbose] 
   puts "Processing files: "
-  puts domain_files
   puts api_files
+  puts domain_files
 end
 
 domain_files.each do |fn|
   process_domain_file(fn, schemas, options)
 end
+
+#TODO
+schemas["ZonedDateTime"] = {}
+schemas["ZonedDateTime"]["description"] = "ZonedDateTime"
+schemas["ZonedDateTime"]["type"] = "object"
+
+
 components["schemas"] = schemas
 
 api_files.each do |fn|
@@ -276,7 +328,7 @@ api_files.each do |fn|
 end
 
 puts %Q(
-openapi: "3.1.0"
+openapi: "3.0.3"
 info:
   version: 1.0.0
   title: FusionAuth API
@@ -287,6 +339,9 @@ servers:
 )
 
 # https://stackoverflow.com/questions/21251309/how-to-remove-on-top-of-a-yaml-file
-
 puts spec.to_yaml.gsub(/^---/,'')
 
+# TODO handle security components
+# TODO validate using openapi tool
+# TODO handle {} in component schema
+# TODO handle $ in names
