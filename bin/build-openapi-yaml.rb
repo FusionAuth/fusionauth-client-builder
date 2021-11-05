@@ -38,27 +38,46 @@ OptionParser.new do |opts|
 end.parse!
 
 def is_primitive(type)
-  return type == "boolean" || type == "String" || type == "UUID" || type == "Object" || type == "int" || "type" == "integer"
+  return type == "boolean" || type == "String" || type == "UUID" || type == "Object" || type == "int" || "type" == "integer" ||type == "Set" || type == "URI" || type == "SortedSet" || type == "long" || type == "double" || type == "char" || type == "Array"
 end
 
 def convert_primitive(type)
   if type == "boolean"
     return {"type" => "boolean"}
   end
+
+  if type == "Array"
+    return {"type" => "string", "format" => "binary"}
+  end
+
+  if type == "URI"
+    return {"type" => "string", "format" => "URI"} # TODO not sure if that is correct?
+  end
   if type == "Object"
     return {"type" => "object"}
+  end
+  if type == "Set" || type == "SortedSet"
+    return {"type" => "array", "uniqueItems" => true, "items" => {}}
   end
 
   if type == "UUID"
     return {"type" => "string", "format" => "uuid"}
   end
 
-  if type == "String"
+  if type == "String" || type == "char"
     return {"type" => "string"}
   end
 
   if type == "integer" || type == "int"
     return {"type" => "integer"}
+  end
+
+  if type == "long"
+    return {"type" => "integer", "format" => "int64"}
+  end
+
+  if type == "double"
+    return {"type" => "number", "format" => "double"}
   end
 end
 
@@ -79,6 +98,7 @@ def process_domain_file(fn, schemas, options)
   json = JSON.parse(fs)
   f.close
 
+  objectname = json["type"]
   openapiobj = {}
   if json["description"]
     openapiobj["description"] = json["description"].gsub('/','').gsub(/@au.*/,'').gsub('*','').gsub(/\n/,'').gsub("\n",'').delete("\n").strip
@@ -86,7 +106,6 @@ def process_domain_file(fn, schemas, options)
   openapiobj["type"] = "object"
 
 
-  # TODO handle undefined types like UUID
   # TODO What about ENUMS in an existing data model with fields?
   # TODO authentication schemes
   # TODO handle extends, jam all fields on super classes onto object
@@ -107,7 +126,7 @@ def process_domain_file(fn, schemas, options)
             properties[k] = convert_primitive(v2)
           elsif v2 == "List"
             listElementType = json["fields"][k]["typeArguments"][0]["type"]
-            addListValue(properties[k],k2,listElementType)
+            addListValue(properties[k],k2,listElementType, k, objectname)
             
           elsif v2 == "Map"
             properties[k][k2] = "object"
@@ -123,6 +142,9 @@ def process_domain_file(fn, schemas, options)
             elsif mapValueType == "List"
               listElementType = json["fields"][k]["typeArguments"][1]["typeArguments"][0]["type"]
               addListValue(properties[k],k2,listElementType)
+            elsif mapValueType == "D" && k == "applicationConfiguration" && objectname == "BaseIdentityProvider"
+              # TODO will this work with extends
+              properties[k]["additionalProperties"]['$ref'] = make_ref("BaseIdentityProviderApplicationConfiguration")
             else
               properties[k]["additionalProperties"]['$ref'] = make_ref(mapValueType)
             end
@@ -135,15 +157,18 @@ def process_domain_file(fn, schemas, options)
     end
   end
 
-  schemas[json["type"]] = openapiobj 
+  schemas[objectname] = openapiobj 
 
 end
 
-def addListValue(hash,key,listElementType)
+def addListValue(hash,key,listElementType,rootkey=nil,objectname=nil)
   hash[key] = "array"
   hash["items"] = {}
   if is_primitive(listElementType)
     hash["items"] = convert_primitive(listElementType)
+  elsif listElementType == "T" && rootkey == "results" && objectname == "SearchResults"
+    # TODO not sure this works
+    hash["items"] = {"type" => "object"}
   else
     hash["items"]['$ref'] = make_ref(listElementType)
   end
@@ -316,9 +341,22 @@ domain_files.each do |fn|
 end
 
 #TODO
+
+# https://swagger.io/specification/#parameter-schema can use pattern for strings (like URIs)
 schemas["ZonedDateTime"] = {}
-schemas["ZonedDateTime"]["description"] = "ZonedDateTime"
+schemas["ZonedDateTime"]["description"] = "TODO"
 schemas["ZonedDateTime"]["type"] = "object"
+schemas["Locale"] = {}
+schemas["Locale"]["description"] = "TODO"
+schemas["Locale"]["type"] = "object"
+schemas["LocalDate"] = {}
+schemas["LocalDate"]["description"] = "TODO"
+schemas["LocalDate"]["type"] = "object"
+schemas["ZoneId"] = {}
+schemas["ZoneId"]["description"] = "Timezone Identifier"
+schemas["ZoneId"]["example"] = "America/Denver"
+schemas["ZoneId"]["pattern"] = "^\w+/\w+$"
+schemas["ZoneId"]["type"] = "string"
 
 
 components["schemas"] = schemas
