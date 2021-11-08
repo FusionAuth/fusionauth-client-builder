@@ -42,7 +42,7 @@ OptionParser.new do |opts|
 end.parse!
 
 def is_primitive(type)
-  return type == "boolean" || type == "String" || type == "UUID" || type == "Object" || type == "int" || "type" == "integer" ||type == "Set" || type == "URI" || type == "SortedSet" || type == "long" || type == "double" || type == "char" || type == "Array"
+  ["boolean", "String", "UUID", "Object", "int", "integer", "Set", "URI", "SortedSet", "long", "double", "char", "Array"].include? type
 end
 
 def convert_primitive(type)
