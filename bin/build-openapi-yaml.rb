@@ -6,6 +6,10 @@ require 'uri'
 require 'optparse'
 require 'yaml'
 
+#TODO status codes
+
+
+
 # option handling
 options = {}
 
@@ -114,18 +118,38 @@ def process_domain_file(fn, schemas, options)
     openapiobj["enum"] = json["enum"]
   end
 
+  extends = json["extends"]
+  fields = json["fields"]
 
-  if json["fields"]
+  # if we extend a class, we need to add those fields to our existing fields
+  extends && extends.length > 0 && extends.each do |ex|
+    unless fields && fields.length > 0
+      fields = {}
+    end
+    if ["HashMap", "TreeMap", "LinkedHashMap"].include? ex["type"]
+      # these are java builtins classes TODO unsure if this will cause issues
+      next
+    end
+    # only happens for domain classes
+    files = Dir.glob(options[:sourcedir]+"/main/domain/io.fusionauth.domain.*"+ex["type"]+".json")
+    file = files[0]
+    ef = File.open(file)
+    efs = ef.read
+    ejson = JSON.parse(efs)
+    fields = fields.merge(ejson["fields"])
+  end
+
+  if fields
     properties = {}
     openapiobj["properties"] = properties
-    json["fields"] && json["fields"].each do |k,v|
+    fields.each do |k,v|
       properties[k] = {}
       v.each do |k2,v2|
         if k2 == "type" 
           if is_primitive(v2)
             properties[k] = convert_primitive(v2)
           elsif v2 == "List"
-            listElementType = json["fields"][k]["typeArguments"][0]["type"]
+            listElementType = fields[k]["typeArguments"][0]["type"]
             addListValue(properties[k],k2,listElementType, k, objectname)
             
           elsif v2 == "Map"
@@ -135,16 +159,21 @@ def process_domain_file(fn, schemas, options)
 
             # keytype is always going to be a string? # TODO check on this
 
-            mapKeyType = json["fields"][k]["typeArguments"][0]["type"]
-            mapValueType = json["fields"][k]["typeArguments"][1]["type"]
+            mapKeyType = fields[k]["typeArguments"][0]["type"]
+            mapValueType = fields[k]["typeArguments"][1]["type"]
             if is_primitive(mapValueType)
               properties[k]["additionalProperties"] = convert_primitive(mapValueType)
             elsif mapValueType == "List"
-              listElementType = json["fields"][k]["typeArguments"][1]["typeArguments"][0]["type"]
+              listElementType = fields[k]["typeArguments"][1]["typeArguments"][0]["type"]
               addListValue(properties[k],k2,listElementType)
-            elsif mapValueType == "D" && k == "applicationConfiguration" && objectname == "BaseIdentityProvider"
-              # TODO will this work with extends
-              properties[k]["additionalProperties"]['$ref'] = make_ref("BaseIdentityProviderApplicationConfiguration")
+            elsif mapValueType == "D" && k == "applicationConfiguration" && objectname.match(/IdentityProvider$/) 
+              if objectname.match(/BaseIdentityProvider$/)
+                # remove this one, we don't need to provide anything for the BaseIdentityProvider application config.properties, I think
+                properties.delete(k)
+              else
+                identityproviderconfigrefname = objectname.sub("IdentityProvider","") + "ApplicationConfiguration"
+                properties[k]["additionalProperties"]['$ref'] = make_ref(identityproviderconfigrefname)
+              end
             else
               properties[k]["additionalProperties"]['$ref'] = make_ref(mapValueType)
             end
@@ -340,18 +369,19 @@ domain_files.each do |fn|
   process_domain_file(fn, schemas, options)
 end
 
-#TODO
-
-# https://swagger.io/specification/#parameter-schema can use pattern for strings (like URIs)
 schemas["ZonedDateTime"] = {}
-schemas["ZonedDateTime"]["description"] = "TODO"
-schemas["ZonedDateTime"]["type"] = "object"
+schemas["ZonedDateTime"]["description"] = "A date-time with a time-zone in the ISO-8601 calendar system, such as 2007-12-03T10:15:30+01:00 Europe/Paris."
+schemas["ZonedDateTime"]["example"] = "2007-12-03"
+schemas["ZonedDateTime"]["type"] = "string"
 schemas["Locale"] = {}
-schemas["Locale"]["description"] = "TODO"
-schemas["Locale"]["type"] = "object"
+schemas["Locale"]["description"] = "A Locale object represents a specific geographical, political, or cultural region."
+schemas["Locale"]["example"] = "en_US"
+schemas["Locale"]["type"] = "string"
 schemas["LocalDate"] = {}
-schemas["LocalDate"]["description"] = "TODO"
-schemas["LocalDate"]["type"] = "object"
+schemas["LocalDate"]["description"] = "A date without a time-zone in the ISO-8601 calendar system, such as 2007-12-03."
+schemas["LocalDate"]["example"] = "2007-12-03"
+schemas["LocalDate"]["pattern"] = "^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$"
+schemas["LocalDate"]["type"] = "string"
 schemas["ZoneId"] = {}
 schemas["ZoneId"]["description"] = "Timezone Identifier"
 schemas["ZoneId"]["example"] = "America/Denver"
@@ -383,3 +413,4 @@ puts spec.to_yaml.gsub(/^---/,'')
 # TODO validate using openapi tool
 # TODO handle {} in component schema
 # TODO handle $ in names
+# TODO custom deserializers? IdentityProviderRequestDeserializer
