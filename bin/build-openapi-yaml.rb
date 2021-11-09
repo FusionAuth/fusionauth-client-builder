@@ -112,7 +112,6 @@ def process_domain_file(fn, schemas, options)
 
   # TODO What about ENUMS in an existing data model with fields?
   # TODO authentication schemes
-  # TODO handle extends, jam all fields on super classes onto object
   if json["enum"] 
     openapiobj["type"] = "string"
     openapiobj["enum"] = json["enum"]
@@ -276,7 +275,6 @@ def build_path(uri, json, paths, include_optional_segement_param, options)
   openapiobj["operationId"] = operationId
 
   # TODO should we handle type form, notUsed? that is used for oauth token exchange
-  # TODO need to handle body params
   
   if jsonparams
     params = []
@@ -302,6 +300,14 @@ def build_path(uri, json, paths, include_optional_segement_param, options)
       else
         params << build_openapi_paramobj(p, "path")
       end
+    end
+
+    if bodyparams && bodyparams.length > 0
+      openapiobj["requestBody"] = {}
+      openapiobj["requestBody"]["content"] = {}
+      openapiobj["requestBody"]["content"]["application/json"] = {}
+      openapiobj["requestBody"]["content"]["application/json"]["schema"] = {}
+      openapiobj["requestBody"]["content"]["application/json"]["schema"]["$ref"] = make_ref(bodyparams[0]["javaType"])
     end
   end
 
