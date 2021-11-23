@@ -87,3 +87,33 @@ sb build-all
 ```
 
 For more information on the Savant build tool, checkout [savantbuild.org](http://savantbuild.org/).
+
+
+## OpenAPI support
+
+This is experimental.
+
+To build the YAML file:
+
+`cd bin && ruby ./build-openapi-yaml.rb |tee openapi.yaml`
+
+To validate the YAML:
+
+```
+npm install -g @apidevtools/swagger-cli # one time
+swagger-cli validate openapi.yaml 
+```
+
+To test the YAML
+
+```
+pip3 install schemathesis # one time
+schemathesis run -vvvv --checks not_a_server_error openapi.yaml --base-url http://localhost:9011 -H "Authorization: bf69486b-4733-4470-a592-f1bfce7af580" 
+```
+
+To generate libraries:
+
+```
+cd <dir>
+swagger-codegen generate -i path/to/fusionauth-client-builder/bin/openapi.yaml -l java -o .
+```
