@@ -6,10 +6,6 @@ require 'uri'
 require 'optparse'
 require 'yaml'
 
-#TODO status codes
-
-
-
 # option handling
 options = {}
 
@@ -85,14 +81,27 @@ def convert_primitive(type)
   end
 end
 
-def make_ref(type)
+def make_ref(type,packageName = nil)
   if type == "Void"
     return nil
   end
-  return '#/components/schemas/'+type
+  objectName = modify_type(packageName,type)
+  return '#/components/schemas/'+objectName
 end
 
-def process_domain_file(fn, schemas, options)
+def modify_type(packageName,objectName)
+  # collisions in a few cases
+  if objectName == "LambdaConfiguration"
+    if packageName.match(/connector/)
+      return "Connector"+objectName
+    elsif packageName.match(/provider/)
+      return "Provider"+objectName
+    end
+  end
+  return objectName
+end
+
+def process_domain_file(fn, schemas, options, identity_providers)
   if options[:verbose] 
     puts "processing "+fn
   end
@@ -102,7 +111,8 @@ def process_domain_file(fn, schemas, options)
   json = JSON.parse(fs)
   f.close
 
-  objectname = json["type"]
+  packagename = json["packageName"]
+  objectname = modify_type(packagename,json["type"])
   openapiobj = {}
   if json["description"]
     openapiobj["description"] = json["description"].gsub('/','').gsub(/@au.*/,'').gsub('*','').gsub(/\n/,'').gsub("\n",'').delete("\n").strip
@@ -148,7 +158,7 @@ def process_domain_file(fn, schemas, options)
             properties[k] = convert_primitive(v2)
           elsif v2 == "List"
             listElementType = fields[k]["typeArguments"][0]["type"]
-            addListValue(properties[k],k2,listElementType, k, objectname)
+            addListValue(properties[k],k2,listElementType,identity_providers, k, objectname)
             
           elsif v2 == "Map"
             properties[k][k2] = "object"
@@ -163,7 +173,7 @@ def process_domain_file(fn, schemas, options)
               properties[k]["additionalProperties"] = convert_primitive(mapValueType)
             elsif mapValueType == "List"
               listElementType = fields[k]["typeArguments"][1]["typeArguments"][0]["type"]
-              addListValue(properties[k],k2,listElementType)
+              addListValue(properties[k],k2,listElementType,identity_providers)
             elsif mapValueType == "D" && k == "applicationConfiguration" && objectname.match(/IdentityProvider$/) 
               if objectname.match(/BaseIdentityProvider$/)
                 # remove this one, we don't need to provide anything for the BaseIdentityProvider application config.properties, I think
@@ -176,8 +186,16 @@ def process_domain_file(fn, schemas, options)
               properties[k]["additionalProperties"]['$ref'] = make_ref(mapValueType)
             end
           else
-            # omit type, put in ref
-            properties[k]['$ref'] = make_ref(v2)
+            if v2.match(/BaseIdentityProvider$/)
+               # special handling of this
+               properties[k]["oneOf"] = []
+               identity_providers.each do |idp|
+                 properties[k]["oneOf"] << {"$ref" => make_ref(idp) }
+               end
+            else
+              # put in ref
+              properties[k]['$ref'] = make_ref(v2, packagename)
+            end
           end
         end
       end
@@ -188,14 +206,21 @@ def process_domain_file(fn, schemas, options)
 
 end
 
-def addListValue(hash,key,listElementType,rootkey=nil,objectname=nil)
+def addListValue(hash,key,listElementType,identity_providers,rootkey=nil,objectname=nil)
   hash[key] = "array"
   hash["items"] = {}
   if is_primitive(listElementType)
     hash["items"] = convert_primitive(listElementType)
   elsif listElementType == "T" && rootkey == "results" && objectname == "SearchResults"
-    # TODO not sure this works
+    # TODO not sure this works, test it out
     hash["items"] = {"type" => "object"}
+  elsif listElementType.match(/BaseIdentityProvider$/)
+    # special case
+    hash["items"] = {}
+    hash["items"]["anyOf"] = []
+    identity_providers.each do |idp|
+      hash["items"]["anyOf"] << {"$ref" => make_ref(idp) }
+    end
   else
     hash["items"]['$ref'] = make_ref(listElementType)
   end
@@ -279,9 +304,10 @@ def build_path(uri, json, paths, include_optional_segement_param, options)
 
   # TODO should we handle type form, notUsed? that is used for oauth token exchange
   
+  params = []
+  openapiobj["parameters"] = params
+
   if jsonparams
-    params = []
-    openapiobj["parameters"] = params
     segmentparams = jsonparams.select{|p| p["type"] == "urlSegment"}
     queryparams = jsonparams.select{|p| p["type"] == "urlParameter"}
     bodyparams = jsonparams.select{|p| p["type"] == "body"}
@@ -292,6 +318,7 @@ def build_path(uri, json, paths, include_optional_segement_param, options)
 
     segmentparams.each do |p|
       if p["constant"] == true
+        # ignore this, we build it elsewhere
         next
       end
 
@@ -314,6 +341,8 @@ def build_path(uri, json, paths, include_optional_segement_param, options)
     end
   end
 
+  add_header_params(params,json)
+
   openapiobj["responses"] = {}
   openapiobj["responses"]['200'] = {}
   build_nested_content_response(openapiobj["responses"]['200'], make_ref(json["successResponse"]), "Success")
@@ -321,6 +350,40 @@ def build_path(uri, json, paths, include_optional_segement_param, options)
   openapiobj["responses"]['default'] = {}
   build_nested_content_response(openapiobj["responses"]['default'], make_ref(json["errorResponse"]), "Error")
 
+end
+
+def add_header_params(params, json)
+
+   # TODO this info should be shoved into the JSON at the API call. This is currently absent and only available in the docs or code
+   apis_requiring_tenant_header = ["tenant","user-action","entity","user/family","user","two-factor","user/comment","application","email/template","user/registration","group","consent"]
+
+   apis_with_optional_tenant_header = ["login", "passwordless", "identity-provider/login","jwt"]
+   
+   no_header_needed = true
+   required = false
+   if apis_requiring_tenant_header.include? json["uri"].gsub("/api/","")
+     required = true
+     no_header_needed = false
+   end
+   if apis_with_optional_tenant_header.include? json["uri"].gsub("/api/","")
+     required = false
+     no_header_needed = false
+   end
+
+   if no_header_needed
+     # no tenant header there
+     return
+   end
+   header_param = {}
+   header_param["in"] = "header"
+   header_param["name"] = "X-FusionAuth-TenantId"
+   header_param["description"] = "The unique Id of the tenant used to scope this API request."
+   header_param["required"] = required
+   header_param["schema"] = {}
+   header_param["schema"]["type"] = "string"
+   header_param["schema"]["format"] = "UUID"
+
+   params << header_param
 end
 
 def build_openapi_paramobj(jsonparamobj, paramtype)
@@ -390,8 +453,23 @@ if options[:verbose]
   puts domain_files
 end
 
+# gather all the identity providers
+identity_providers = []
 domain_files.each do |fn|
-  process_domain_file(fn, schemas, options)
+  f = File.open(fn)
+  fs = f.read
+  json = JSON.parse(fs)
+  f.close
+  if json["extends"] && json["extends"][0]["type"] == "BaseIdentityProvider"
+    identity_providers << json["type"]
+  end
+end
+
+domain_files.each do |fn|
+  if fn.match(/io.fusionauth.domain.provider.BaseIdentityProvider.json/)
+    next
+  end
+  process_domain_file(fn, schemas, options,identity_providers)
 end
 
 schemas["ZonedDateTime"] = {}
@@ -438,6 +516,10 @@ security:
 puts spec.to_yaml.gsub(/^---/,'')
 
 # TODO handle {} in component schema
-# TODO handle $ in names
+# TODO handle $ in names only needed where they collide, use modify_type
 # TODO custom deserializers? IdentityProviderRequestDeserializer
-# TODO tenantId request header
+
+# not defined anywhere, we don't support this yet
+# TODO status codes
+# TODO X-Forwarded-For
+# TODO cookies
