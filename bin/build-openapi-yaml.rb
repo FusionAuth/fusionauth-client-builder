@@ -281,11 +281,14 @@ def process_api_file(fn, paths, options)
 
 end
 
-def build_path(uri, json, paths, include_optional_segement_param, options)
+def build_path(uri, json, paths, include_optional_segment_param, options)
 
   method = json["method"]
   desc = json["comments"].join(" ").delete("\n").strip
   operationId = json["methodName"]
+  if include_optional_segment_param
+    operationId += "WithId"
+  end
   jsonparams = json["params"]
 
   if not paths[uri] 
@@ -323,7 +326,7 @@ def build_path(uri, json, paths, include_optional_segement_param, options)
       end
 
       if param_optional(p["comments"])
-        if include_optional_segement_param
+        if include_optional_segment_param
           # we have an optional param but it is in the URI, so we want to add it to the parameters
           params << build_openapi_paramobj(p, "path")
         end
