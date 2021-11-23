@@ -111,7 +111,6 @@ def process_domain_file(fn, schemas, options)
 
 
   # TODO What about ENUMS in an existing data model with fields?
-  # TODO authentication schemes
   if json["enum"] 
     openapiobj["type"] = "string"
     openapiobj["enum"] = json["enum"]
@@ -273,6 +272,10 @@ def build_path(uri, json, paths, include_optional_segement_param, options)
 
   openapiobj["description"] = desc
   openapiobj["operationId"] = operationId
+  if json["anonymous"] == true
+    openapiobj["security"] = []
+  end
+  
 
   # TODO should we handle type form, notUsed? that is used for oauth token exchange
   
@@ -326,7 +329,7 @@ def build_openapi_paramobj(jsonparamobj, paramtype)
   paramobj["in"] = paramtype
   paramobj["schema"] = {}
   paramobj["schema"]["type"] = "string"
-  
+
   if paramtype == "path"
     paramobj["required"] = true
   end
@@ -346,6 +349,22 @@ def build_nested_content_response(hash, ref, description)
     hash["content"]["application/json"]["schema"]['$ref'] = ref
   end
 end
+
+def build_security_schemes
+  security_schemes = {}
+  security_schemes["apikey"] = {}
+  security_schemes["apikey"]["type"] = "apiKey"
+  security_schemes["apikey"]["name"] = "Authorization"
+  security_schemes["apikey"]["in"] = "header"
+  security_schemes["jwt"] = {}
+  security_schemes["jwt"]["type"] = "http"
+  security_schemes["jwt"]["scheme"] = "Bearer"
+
+  return security_schemes
+end
+
+######### processing starts
+
 
 domain_files = []
 api_files = []
@@ -396,6 +415,7 @@ schemas["ZoneId"]["type"] = "string"
 
 
 components["schemas"] = schemas
+components["securitySchemes"] = build_security_schemes
 
 api_files.each do |fn|
   process_api_file(fn, paths, options)
@@ -410,13 +430,14 @@ info:
     name: Apache2
 servers:
   - url: http://localhost:9011
+security:
+  - apikey: []
 )
 
 # https://stackoverflow.com/questions/21251309/how-to-remove-on-top-of-a-yaml-file
 puts spec.to_yaml.gsub(/^---/,'')
 
-# TODO handle security components
-# TODO validate using openapi tool
 # TODO handle {} in component schema
 # TODO handle $ in names
 # TODO custom deserializers? IdentityProviderRequestDeserializer
+# TODO tenantId request header
