@@ -20,7 +20,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all of the information used to create the family."
+        "The request object that contains all the information used to create the family."
       ],
       "type": "body",
       "javaType": "FamilyRequest"

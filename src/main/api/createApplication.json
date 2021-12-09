@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all of the information used to create the application."
+        "The request object that contains all the information used to create the application."
       ],
       "type": "body",
       "javaType": "ApplicationRequest"
