@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EmailHeader",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EmailHeader"
+    } ]
+  } ],
+  "fields" : {
+    "name" : {
+      "type" : "String"
+    },
+    "value" : {
+      "type" : "String"
+    }
+  }
+}

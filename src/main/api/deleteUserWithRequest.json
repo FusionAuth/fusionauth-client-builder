@@ -20,7 +20,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all of the information used to delete the user."
+        "The request object that contains all the information used to delete the user."
       ],
       "type": "body",
       "javaType": "UserDeleteSingleRequest"

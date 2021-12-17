@@ -52,6 +52,14 @@
     "name" : {
       "type" : "String"
     },
+    "tenantConfiguration" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      }, {
+        "type" : "IdentityProviderTenantConfiguration"
+      } ]
+    },
     "type" : {
       "type" : "IdentityProviderType"
     }

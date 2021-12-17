@@ -9,6 +9,12 @@
     } ]
   } ],
   "fields" : {
+    "additionalHeaders" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "EmailHeader"
+      } ]
+    },
     "defaultFromEmail" : {
       "type" : "String"
     },
@@ -26,6 +32,9 @@
     },
     "host" : {
       "type" : "String"
+    },
+    "implicitEmailVerificationAllowed" : {
+      "type" : "boolean"
     },
     "loginIdInUseOnCreateEmailTemplateId" : {
       "type" : "UUID"

@@ -13,7 +13,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all of the information used to logout the user."
+        "The request object that contains all the information used to logout the user."
       ],
       "type": "body",
       "javaType": "LogoutRequest"

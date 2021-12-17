@@ -11,7 +11,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all of the information used to create the group member(s)."
+        "The request object that contains all the information used to create the group member(s)."
       ],
       "type": "body",
       "javaType": "MemberRequest"
