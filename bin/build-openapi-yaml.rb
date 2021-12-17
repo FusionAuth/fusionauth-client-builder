@@ -11,6 +11,7 @@ options = {}
 
 # default options
 options[:sourcedir] = "../src/"
+options[:outfile] = "openapi.yaml"
 
 OptionParser.new do |opts|
   opts.banner = "Usage: build-openapi-yaml.rb [options]"
@@ -27,7 +28,7 @@ OptionParser.new do |opts|
     options[:file] = file
   end
 
-  opts.on("-o", "--out FILE", "Ouput file.") do |outfile|
+  opts.on("-o", "--out FILE", "Output file. Default is openapi.yaml.") do |outfile|
     options[:outfile] = outfile
   end
 
@@ -123,7 +124,12 @@ def process_domain_file(fn, schemas, options, identity_providers)
   # TODO What about ENUMS in an existing data model with fields?
   if json["enum"] 
     openapiobj["type"] = "string"
-    openapiobj["enum"] = json["enum"]
+    # some enums have name attribute, other are just plain strings
+    if json["enum"][0] && json["enum"][0]["name"]
+      openapiobj["enum"] = json["enum"].map {|e| e["name"] }
+    else
+      openapiobj["enum"] = json["enum"]
+    end
   end
 
   extends = json["extends"]
@@ -242,7 +248,13 @@ def process_api_file(fn, paths, options)
   json = JSON.parse(fs)
   f.close
 
+  # for debugging
+  method = json["method"]
   uri = json["uri"]
+  if paths[uri] && paths[uri][method] && options[:verbose] 
+    puts "duplicate " + uri + " " + method
+  end
+  # end debugging
 
   # check to see if the url segments are optional
   if json["params"]
@@ -294,6 +306,7 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
   if not paths[uri] 
     paths[uri] = {}
   end
+
 
   openapiobj = {}
   paths[uri][method] = openapiobj
@@ -444,7 +457,8 @@ spec["components"] = components
 
 if options[:file]
   api_files = Dir.glob(options[:sourcedir]+"/main/api/*"+options[:file]+"*")
-  domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*"+options[:file]+".json")
+  #domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*"+options[:file]+".json")
+  domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*")
 else
   api_files = Dir.glob(options[:sourcedir]+"/main/api/*")
   domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*")
@@ -520,9 +534,11 @@ puts spec.to_yaml.gsub(/^---/,'')
 
 # TODO handle {} in component schema
 # TODO handle $ in names only needed where they collide, use modify_type
-# TODO custom deserializers? IdentityProviderRequestDeserializer
+# TODO custom deserializers? IdentityProviderRequestDeserializer or is that handled by openapi?
 
 # not defined anywhere, we don't support this yet
 # TODO status codes
 # TODO X-Forwarded-For
 # TODO cookies
+# TODO outfile
+# TODO identity provider type (null?
