@@ -191,6 +191,11 @@ def process_domain_file(fn, schemas, options, identity_providers)
             else
               properties[k]["additionalProperties"]['$ref'] = make_ref(mapValueType)
             end
+
+            # no additional properties
+            if properties[k]["additionalProperties"].length == 0
+              properties[k].delete("additionalProperties")
+            end
           else
             if v2.match(/BaseIdentityProvider$/)
                # special handling of this
@@ -541,4 +546,5 @@ puts spec.to_yaml.gsub(/^---/,'')
 # TODO X-Forwarded-For
 # TODO cookies
 # TODO outfile
-# TODO identity provider type (null?
+# TODO error messages swallowed all the time in the java client
+# TODO anyof https://github.com/swagger-api/swagger-codegen/issues/10011 
