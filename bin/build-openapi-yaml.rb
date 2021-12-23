@@ -256,8 +256,15 @@ def process_api_file(fn, paths, options)
   # for debugging
   method = json["method"]
   uri = json["uri"]
-  if paths[uri] && paths[uri][method] && options[:verbose] 
-    puts "duplicate " + uri + " " + method + " fn: "+fn
+  
+  duplicate = false
+  orig_object = nil
+  if paths[uri] && paths[uri][method] 
+    duplicate = true
+    orig_object = paths[uri][method] 
+    if options[:verbose] 
+      puts "duplicate " + uri + " " + method + " fn: "+fn
+    end
   end
   # end debugging
 
@@ -284,8 +291,14 @@ def process_api_file(fn, paths, options)
     if options[:verbose] 
       puts "adding path for " + uri
     end
-    # builds for full uri
+
+    # builds for full uri, including optional path params at end
     build_path(uri, json, paths, true, options)
+
+    # if we've seen this path param before, merge previous object
+    if duplicate
+      merge_operations(paths[uri][method], orig_object)
+    end
 
     # only support an optional parameter on the last url segment
     if uri_without_optional != uri
@@ -295,7 +308,24 @@ def process_api_file(fn, paths, options)
       build_path(uri_without_optional, json, paths, false, options)
     end 
   end
+end
 
+def merge_operations(new_api_object, old_api_object)
+  new_api_object["description"] += " OR " + old_api_object["description"]
+  queryparamstoadd = old_api_object["parameters"].select{|p| p["in"] == "query"}
+  # query params we add
+  # path params are handled in the if uri_without_optional != uri code path
+  # only problem would be if two different operations took different path params in same location but we don't have that
+  oldparamstohandle = old_api_object["parameters"].select{|p| p["in"] != "query" && p["in"] != "path" }
+  newparamstohandle = new_api_object["parameters"].select{|p| p["in"] != "query" && p["in"] != "path"}
+  if oldparamstohandle & newparamstohandle != newparamstohandle 
+    p "Saw some new params that were not query params. Doh! "
+  end
+  new_api_object["parameters"] += queryparamstoadd
+
+  #remove dups
+  new_api_object["parameters"] = new_api_object["parameters"].uniq { |p| p["name"] }
+  return new_api_object
 end
 
 def build_path(uri, json, paths, include_optional_segment_param, options)
