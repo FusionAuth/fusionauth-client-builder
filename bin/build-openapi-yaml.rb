@@ -257,7 +257,7 @@ def process_api_file(fn, paths, options)
   method = json["method"]
   uri = json["uri"]
   if paths[uri] && paths[uri][method] && options[:verbose] 
-    puts "duplicate " + uri + " " + method
+    puts "duplicate " + uri + " " + method + " fn: "+fn
   end
   # end debugging
 
@@ -440,9 +440,11 @@ def build_security_schemes
   security_schemes["apikey"]["type"] = "apiKey"
   security_schemes["apikey"]["name"] = "Authorization"
   security_schemes["apikey"]["in"] = "header"
-  security_schemes["jwt"] = {}
-  security_schemes["jwt"]["type"] = "http"
-  security_schemes["jwt"]["scheme"] = "Bearer"
+
+  # TODO we don't have a way in the json to designate these api calls. need to extend the metadata
+  #security_schemes["jwt"] = {}
+  #security_schemes["jwt"]["type"] = "http"
+  #security_schemes["jwt"]["scheme"] = "Bearer"
 
   return security_schemes
 end
@@ -542,9 +544,10 @@ puts spec.to_yaml.gsub(/^---/,'')
 # TODO custom deserializers? IdentityProviderRequestDeserializer or is that handled by openapi?
 
 # not defined anywhere, we don't support this yet
-# TODO status codes
+# TODO more status codes
+
 # TODO X-Forwarded-For
 # TODO cookies
 # TODO outfile
-# TODO error messages swallowed all the time in the java client
 # TODO anyof https://github.com/swagger-api/swagger-codegen/issues/10011 
+# TODO content -type is sent on GETs https://github.com/swagger-api/swagger-codegen/issues/8310
