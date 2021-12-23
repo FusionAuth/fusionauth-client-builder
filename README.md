@@ -143,8 +143,9 @@ There are some flaws. While the specification is valid, the generated client lib
 In particular:
 
 * polymorphic operations are not well supported by the client library generators. That means that identity provider requests and responses are not functional. I'm not sure if there are workarounds, but it seems like some work is being done. See https://github.com/swagger-api/swagger-codegen/issues/10011 for example.
-* this file is generated from the client-builder JSON files, not from code. This means that there may be gaps when compared to the REST API.
-* there are certain operations, status codes and security mechanisms (JWT auth, cookies for auth) that are not currently supported. 
+* this file is generated from the fusionauth-client-builder JSON files, not from code. This means that there may be gaps when compared to the REST API.
+* there's no information about what parameters are required or not, because that is not part of the API JSON files.
+* there are certain operations, status codes and security mechanisms (JWT auth, cookies for auth) that are not currently supported, again, because they are not included in the API JSON files.
 * oauth specific operations are not currently supported.
 
 Rollout plan:
