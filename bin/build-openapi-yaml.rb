@@ -353,8 +353,6 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
   end
   
 
-  # TODO should we handle type form, notUsed? that is used for oauth token exchange
-  
   params = []
   openapiobj["parameters"] = params
 
@@ -405,7 +403,7 @@ end
 
 def add_header_params(params, json)
 
-   # TODO this info should be shoved into the JSON at the API call. This is currently absent and only available in the docs or code
+   # TODO this info should be shoved into the api definition JSON in client builder. This is currently absent and only available in the docs or code or here
    apis_requiring_tenant_header = ["tenant","user-action","entity","user/family","user","two-factor","user/comment","application","email/template","user/registration","group","consent"]
 
    apis_with_optional_tenant_header = ["login", "passwordless", "identity-provider/login","jwt"]
@@ -481,7 +479,6 @@ end
 
 ######### processing starts
 
-
 domain_files = []
 api_files = []
 schemas = {}
@@ -553,7 +550,10 @@ api_files.each do |fn|
   process_api_file(fn, paths, options)
 end
 
-puts %Q(
+File.open(options[:outfile], "w") do |f|
+
+  # header
+  f.write %Q(
 openapi: "3.0.3"
 info:
   version: 1.0.0
@@ -566,18 +566,19 @@ security:
   - apikey: []
 )
 
-# https://stackoverflow.com/questions/21251309/how-to-remove-on-top-of-a-yaml-file
-puts spec.to_yaml.gsub(/^---/,'')
+  # components and paths
+  # https://stackoverflow.com/questions/21251309/how-to-remove-on-top-of-a-yaml-file
+  f.write spec.to_yaml.gsub(/^---/,'')
+end
 
-# TODO handle {} in component schema
-# TODO handle $ in names only needed where they collide, use modify_type
+# TODO handle {} in component schema ? 
 # TODO custom deserializers? IdentityProviderRequestDeserializer or is that handled by openapi?
 
 # not defined anywhere, we don't support this yet
 # TODO more status codes
 
-# TODO X-Forwarded-For
 # TODO cookies
-# TODO outfile
 # TODO anyof https://github.com/swagger-api/swagger-codegen/issues/10011 
 # TODO content -type is sent on GETs https://github.com/swagger-api/swagger-codegen/issues/8310
+# TODO should we handle type form, notUsed? that is used for oauth token exchange
+  
