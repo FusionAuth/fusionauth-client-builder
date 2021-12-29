@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.internal",
+  "type" : "InternalJSONColumnService",
+  "description" : "/**\n * An SPI that allows the user of the `fusionauth-java-client` library to provide the InternalJSONColumn handling (if needed). The implementation is\n * specified using the {@link #setImplementation(InternalJSONColumnService)} method.\n *\n * @author Brian Pontarelli\n */\n",
+  "fields" : { }
+}
