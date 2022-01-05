@@ -65,6 +65,7 @@ fusionauth
 ├── fusionauth-java-client
 ├── fusionauth-javascript-client
 ├── fusionauth-node-client
+├── fusionauth-openapi
 ├── fusionauth-php-client
 ├── fusionauth-python-client
 ├── fusionauth-ruby-client
@@ -89,73 +90,3 @@ sb build-all
 For more information on the Savant build tool, checkout [savantbuild.org](http://savantbuild.org/).
 
 
-## OpenAPI support
-
-This is experimental.
-
-To build the YAML file:
-
-```
-cd bin && ruby ./build-openapi-yaml.rb
-```
-
-For options:
-
-```
-cd bin && ruby ./build-openapi-yaml.rb -h
-```
-
-To validate the YAML:
-
-```
-npm install -g @apidevtools/swagger-cli # one time
-swagger-cli validate openapi.yaml 
-```
-
-
-### Test the YAML
-
-```
-pip3 install schemathesis # one time
-schemathesis run -vvvv --checks not_a_server_error openapi.yaml --base-url http://localhost:9011 -H "Authorization: bf69486b-4733-4470-a592-f1bfce7af580" 
-```
-
-### Generate libraries
-
-Install either Swagger: https://github.com/swagger-api/swagger-codegen/ or openapi: https://github.com/OpenAPITools/openapi-generator
-
-Java
-
-```
-cd <dir>
-swagger-codegen generate  --group-id io.fusionauth --artifact-id fusionauth-client-library-codegen --artifact-version 1.0.2-SNAPSHOT --api-package io.fusionauth.codegen.api  --invoker-package io.fusionauth.codegen.invoker --model-package io.fusionauth.codegen.model -l java -o . -i ../fusionauth-client-builder/bin/openapi.yaml
-```
-
-Ruby
-```
-npx @openapitools/openapi-generator-cli generate -i ../fusionauth-client-builder/bin/openapi.yaml -g ruby -o . 
-```
-
-### TODO
-
-There are some flaws. While the specification is valid, the generated client libraries haven't been fully exercised.
-
-In particular:
-
-* polymorphic operations are not well supported by the client library generators. That means that identity provider requests and responses are not functional. I'm not sure if there are workarounds, but it seems like some work is being done. See https://github.com/swagger-api/swagger-codegen/issues/10011 for example.
-* this file is generated from the fusionauth-client-builder JSON files, not from code. This means that there may be gaps when compared to the REST API.
-* there's no information about what parameters are required or not, because that is not part of the API JSON files.
-* there are certain operations, status codes and security mechanisms (JWT auth, cookies for auth) that are not currently supported, again, because they are not included in the API JSON files.
-* oauth specific operations are not currently supported.
-
-Rollout plan:
-
-* Review with eng team, determine if current state is shippable to alpha users.
-* Ask folks who commened on https://github.com/FusionAuth/fusionauth-issues/issues/614 or otherwise expressed interest in this to kick the tires.
-* Determine what features need to be added to ship.
-* Fix any outstanding issues/add features.
-* Publish as 'tech preview' in docs. Close bugs for other SDKs.
-* Let it burn in for a few months, fix any issues.
-* Start publishing it as part of the release process. Maybe include it in the build? Maybe just on the download page.
-* Go back and provide specs for previous releases so that folks can use apidiff functionality.
-* Investigate bringing things closer to the code/fusionauth-app so that we don't need to maintain the API JSON files.
