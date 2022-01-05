@@ -214,6 +214,8 @@ target(name: "build-go", description: "Build the Go Client Library") {
                             outputFile: "../go-client/pkg/fusionauth/Client.go")
   clientLibrary.buildClient(template: "src/main/client/go.domain.ftl",
                             outputFile: "../go-client/pkg/fusionauth/Domain.go")
+  clientLibrary.buildClient(template: "src/main/client/go.domain.test.ftl",
+                            outputFile: "../go-client/pkg/fusionauth/Domain_dynamic_test.go")
   formatClientLibrary("go-client")
 }
 
