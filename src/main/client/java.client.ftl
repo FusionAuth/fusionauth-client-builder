@@ -16,10 +16,8 @@
  */
 package io.fusionauth.client;
 
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -289,10 +287,10 @@ public class FusionAuthClient {
     [#if param.type == "form"][#assign formPost = true/][/#if]
   [/#list]
   [#if formPost]
-    Map<String, List<String>> parameters = new HashMap<>();
+    Map<String, String> parameters = new HashMap<>();
     [#list api.params![] as param]
       [#if param.type == "form"]
-    parameters.put("${param.name}", Arrays.asList(${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)}));
+    parameters.put("${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)});
       [/#if]
     [/#list]
   [/#if]
