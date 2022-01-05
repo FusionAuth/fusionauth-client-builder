@@ -20,8 +20,8 @@ OptionParser.new do |opts|
     options[:verbose] = v
   end
 
-  opts.on("-d", "--source-directory", "Source directory.") do |v|
-    options[:sourcedir] = v
+  opts.on("-d", "--source-directory DIR", "Source directory.") do |d|
+    options[:sourcedir] = d
   end
 
   opts.on("-f", "--file FILE", "Run for one file.") do |file|
