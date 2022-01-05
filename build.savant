@@ -237,7 +237,7 @@ target(name: "build-dart", description: "Build the Dart Client Library") {
 }
 
 target(name: "build-openapi", description: "Build the OpenAPI file") {
-  cleanExecute(["ruby", "bin/build-openapi-yaml.rb", "--source-directory", "./src", "--out", "../fusionauth-openapi/openapi.yaml"], false)
+  cleanExecute(["ruby", "bin/build-openapi-yaml.rb", "--source-directory", "./src", "--out", "../fusionauth-openapi/openapi.yaml"])
 }
 
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
@@ -275,3 +275,11 @@ target(name: "publish-all", description: "Publish all client libraries") {
   }
 }
 
+boolean cleanExecute(List<String> args) {
+  ProcessBuilder pb = new ProcessBuilder(args).inheritIO().directory(new File('.'))
+
+  def process = pb.start()
+  process.consumeProcessOutput(System.out, System.err)
+  process.waitFor()
+  return process.exitValue() == 0
+}
