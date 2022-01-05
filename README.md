@@ -88,5 +88,3 @@ sb build-all
 ```
 
 For more information on the Savant build tool, checkout [savantbuild.org](http://savantbuild.org/).
-
-
