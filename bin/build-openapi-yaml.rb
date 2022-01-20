@@ -429,8 +429,8 @@ def add_header_params(params, json)
    header_param = {}
    header_param["in"] = "header"
    header_param["name"] = "X-FusionAuth-TenantId"
-   header_param["description"] = "The unique Id of the tenant used to scope this API request."
-   header_param["required"] = required
+   header_param["description"] = "The unique Id of the tenant used to scope this API request. Only required when there is more than one tenant and the API key is not tenant-scoped."
+   header_param["required"] = false
    header_param["schema"] = {}
    header_param["schema"]["type"] = "string"
    header_param["schema"]["format"] = "UUID"
