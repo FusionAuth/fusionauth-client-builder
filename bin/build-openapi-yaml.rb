@@ -529,7 +529,8 @@ end
 schemas["ZonedDateTime"] = {}
 schemas["ZonedDateTime"]["description"] = "A date-time with a time-zone in the ISO-8601 calendar system, such as 2007-12-03T10:15:30+01:00 Europe/Paris."
 schemas["ZonedDateTime"]["example"] = "2007-12-03"
-schemas["ZonedDateTime"]["type"] = "string"
+schemas["ZonedDateTime"]["type"] = "integer"
+schemas["ZonedDateTime"]["format"] = "int64"
 schemas["Locale"] = {}
 schemas["Locale"]["description"] = "A Locale object represents a specific geographical, political, or cultural region."
 schemas["Locale"]["example"] = "en_US"
