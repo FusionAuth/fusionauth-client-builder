@@ -85,6 +85,14 @@ def convert_primitive(type)
   end
 end
 
+def add_identity_provider_field(schemas, identity_providers)
+  schemas["IdentityProviderField"] = {}
+  schemas["IdentityProviderField"]["oneOf"] = []
+  identity_providers.each do |idp|
+    schemas["IdentityProviderField"]["oneOf"] << {"$ref" => make_ref(idp) }
+  end
+end
+
 def make_ref(type,packageName = nil)
   if type == "Void"
     return nil
@@ -201,11 +209,10 @@ def process_domain_file(fn, schemas, options, identity_providers)
             end
           else
             if v2.match(/BaseIdentityProvider$/)
-               # special handling of this
-               properties[k]["oneOf"] = []
-               identity_providers.each do |idp|
-                 properties[k]["oneOf"] << {"$ref" => make_ref(idp) }
-               end
+               # special handling of this. We create IdentityProviderField elsewhere
+               # see https://github.com/OpenAPITools/openapi-generator/issues/10880#issuecomment-995243186 for why
+               properties[k]["$ref"] = make_ref('IdentityProviderField')
+ 
             else
               # put in ref
               properties[k]['$ref'] = make_ref(v2, packagename)
@@ -229,12 +236,10 @@ def addListValue(hash,key,listElementType,identity_providers,rootkey=nil,objectn
     # TODO not sure this works, test it out
     hash["items"] = {"type" => "object"}
   elsif listElementType.match(/BaseIdentityProvider$/)
-    # special case
+    # special handling of this. We create IdentityProviderField elsewhere
+    # see https://github.com/OpenAPITools/openapi-generator/issues/10880#issuecomment-995243186 for why
     hash["items"] = {}
-    hash["items"]["anyOf"] = []
-    identity_providers.each do |idp|
-      hash["items"]["anyOf"] << {"$ref" => make_ref(idp) }
-    end
+    hash["items"]["$ref"] = make_ref('IdentityProviderField')
   else
     hash["items"]['$ref'] = make_ref(listElementType)
   end
@@ -546,6 +551,7 @@ schemas["ZoneId"]["example"] = "America/Denver"
 schemas["ZoneId"]["pattern"] = "^\w+/\w+$"
 schemas["ZoneId"]["type"] = "string"
 
+add_identity_provider_field(schemas, identity_providers)
 
 components["schemas"] = schemas
 components["securitySchemes"] = build_security_schemes(api_key_auth_name)
