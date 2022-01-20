@@ -13,6 +13,9 @@ options = {}
 options[:sourcedir] = "../src/"
 options[:outfile] = "openapi.yaml"
 
+# openapi component that defines our api key auth
+api_key_auth_name = "ApiKeyAuth"
+
 OptionParser.new do |opts|
   opts.banner = "Usage: build-openapi-yaml.rb [options]"
 
@@ -462,12 +465,12 @@ def build_nested_content_response(hash, ref, description)
   end
 end
 
-def build_security_schemes
+def build_security_schemes(api_key_auth_name)
   security_schemes = {}
-  security_schemes["apikey"] = {}
-  security_schemes["apikey"]["type"] = "apiKey"
-  security_schemes["apikey"]["name"] = "Authorization"
-  security_schemes["apikey"]["in"] = "header"
+  security_schemes[api_key_auth_name] = {}
+  security_schemes[api_key_auth_name]["type"] = "apiKey"
+  security_schemes[api_key_auth_name]["name"] = "Authorization"
+  security_schemes[api_key_auth_name]["in"] = "header"
 
   # TODO we don't have a way in the json to designate these api calls. need to extend the metadata
   #security_schemes["jwt"] = {}
@@ -544,7 +547,7 @@ schemas["ZoneId"]["type"] = "string"
 
 
 components["schemas"] = schemas
-components["securitySchemes"] = build_security_schemes
+components["securitySchemes"] = build_security_schemes(api_key_auth_name)
 
 api_files.each do |fn|
   process_api_file(fn, paths, options)
@@ -563,7 +566,7 @@ info:
 servers:
   - url: http://localhost:9011
 security:
-  - apikey: []
+  - #{api_key_auth_name}: []
 )
 
   # components and paths
