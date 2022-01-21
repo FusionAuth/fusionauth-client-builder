@@ -400,12 +400,6 @@ def merge_operations(new_api_object, old_api_object, uri, method)
 
   # make sure if we have a requestBody, we pass that along in the merge. This will blow up if we have two operations that take request bodies but don't have the same request body
   if old_api_object["requestBody"] && !new_api_object["requestBody"]
-    #puts "abbbb" + uri
-    new_api_object["requestBody"] = old_api_object["requestBody"]
-  end
-
-  if new_api_object["requestBody"] && !old_api_object["requestBody"]
-    #puts "acccc" + uri
     new_api_object["requestBody"] = old_api_object["requestBody"]
   end
 
