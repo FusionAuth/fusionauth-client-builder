@@ -252,6 +252,39 @@ def param_optional(comments_arr)
   return false
 end
 
+def process_rawpaths(rawpaths, options)
+
+  new_paths = {}
+  # take the list of paths at [uri][method] which are duplicates and then merge them
+
+  # walk keys of paths to get uri
+  # then walk keys of paths[uri] to get methods
+  # then walk array of paths[uri][method] to get things to merge
+  rawpaths.each do |uri, methods|
+    new_paths[uri] = {}
+
+    methods.each do |method, pathobjs| 
+
+      if pathobjs.length == 1
+        # no merging needed
+        new_paths[uri][method] = pathobjs[0]
+      else
+        orig_object = pathobjs[0]
+     
+        pathobjs.drop(1).each do |pathobj|
+          if options[:verbose] 
+            puts "merging in " + uri.to_s + " " + method.to_s +  " operationId: " + pathobj["operationId"].to_s
+          end
+          orig_object = merge_operations(pathobj, orig_object, uri, method)
+        end
+        new_paths[uri][method] = orig_object 
+      end
+    end
+  end
+
+  return new_paths
+end
+
 def process_api_file(fn, paths, options)
   if options[:verbose] 
     puts "processing "+fn
@@ -265,17 +298,6 @@ def process_api_file(fn, paths, options)
   method = json["method"]
   uri = json["uri"]
   
-  duplicate = false
-  orig_object = nil
-  if paths[uri] && paths[uri][method] 
-    duplicate = true
-    orig_object = paths[uri][method] 
-    if options[:verbose] 
-      puts "duplicate " + uri + " " + method + " fn: "+fn
-    end
-  end
-  # end debugging
-
   # check to see if the url segments are optional
   if json["params"]
     uri_without_optional = uri
@@ -303,11 +325,6 @@ def process_api_file(fn, paths, options)
     # builds for full uri, including optional path params at end
     build_path(uri, json, paths, true, options)
 
-    # if we've seen this path param before, merge previous object
-    if duplicate
-      merge_operations(paths[uri][method], orig_object)
-    end
-
     # only support an optional parameter on the last url segment
     if uri_without_optional != uri
       if options[:verbose] 
@@ -318,8 +335,39 @@ def process_api_file(fn, paths, options)
   end
 end
 
-def merge_operations(new_api_object, old_api_object)
+# build new operation id for operations that have multiple parameters all going to the same endpoint
+def build_operation_id(new_api_object, old_api_object, uri, method)
+  # builds nice operationId if we have multiple operations.
+
+  prefix = ""
+  if method == "get"
+    prefix = "retrieve"
+  elsif method == "put"
+    prefix = "update"
+  elsif method == "delete"
+    prefix = "delete"
+  elsif method == "patch"
+    prefix = "patch"
+  elsif method == "post"
+    prefix = "create"
+  end
+  suffix = ""
+  if uri[-1] == "}"
+    suffix = "WithId"
+  end
+  uri_array = uri.split("/")
+  operation_name = uri_array[2]
+  operation_name = operation_name.split("-").map{|e| e.capitalize}.join("")
+
+  operation_name[0] = operation_name[0].capitalize # just capitalize first letter
+
+  return prefix + operation_name + suffix
+
+end
+
+def merge_operations(new_api_object, old_api_object, uri, method)
   new_api_object["description"] += " OR " + old_api_object["description"]
+  new_api_object["operationId"] = build_operation_id(new_api_object, old_api_object, uri, method)
   queryparamstoadd = old_api_object["parameters"].select{|p| p["in"] == "query"}
   # query params we add
   # path params are handled in the if uri_without_optional != uri code path
@@ -350,9 +398,13 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
     paths[uri] = {}
   end
 
+  # create an array of paths all with this uri and method. Later we will process them.
+  if not paths[uri][method]
+    paths[uri][method] = []
+  end
 
   openapiobj = {}
-  paths[uri][method] = openapiobj
+  paths[uri][method] << openapiobj
 
   openapiobj["description"] = desc
   openapiobj["operationId"] = operationId
@@ -491,11 +543,12 @@ domain_files = []
 api_files = []
 schemas = {}
 components = {}
-paths = {}
-spec = {}
-spec["paths"] = paths
-spec["components"] = components
 
+# have to do additional processing on paths
+rawpaths = {}
+
+spec = {}
+spec["components"] = components
 
 if options[:file]
   api_files = Dir.glob(options[:sourcedir]+"/main/api/*"+options[:file]+"*")
@@ -557,8 +610,10 @@ components["schemas"] = schemas
 components["securitySchemes"] = build_security_schemes(api_key_auth_name)
 
 api_files.each do |fn|
-  process_api_file(fn, paths, options)
+  process_api_file(fn, rawpaths, options)
 end
+
+spec["paths"] = process_rawpaths(rawpaths, options)
 
 File.open(options[:outfile], "w") do |f|
 
