@@ -239,6 +239,11 @@ target(name: "build-dart", description: "Build the Dart Client Library") {
   formatClientLibrary("fusionauth-dart-client")
 }
 
+target(name: "build-openapi", description: "Build the OpenAPI file") {
+  projVersion = project.version.toString()
+  cleanExecute(["ruby", "bin/build-openapi-yaml.rb", "--source-directory", "./src", "--out", "../fusionauth-openapi/openapi.yaml", "--api-version", projVersion])
+}
+
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
                                                                                   "build-php",
 //                                                                                  "build-angular",
@@ -247,10 +252,12 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
                                                                                   "build-node",
                                                                                   "build-typescript",
                                                                                   "build-javascript",
+                                                                                  "build-openapi",
                                                                                   "build-python",
                                                                                   "build-ruby",
                                                                                   "build-dart"]) {
 }
+
 
 // Still testing this to see if it will work with stdout and prompts, etc which are required for dart, and python. Perhaps we can configure all of this to
 // skip all requests for input or confirmations.
@@ -259,15 +266,24 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
 //        to call this target from CI during a release.
 //
 target(name: "publish-all", description: "Publish all client libraries") {
-  ["dart", "java", "netcore", "node", "php", "python", "ruby", "typescript"].each { client ->
+  ["dart-client", "java-client", "netcore-client", "node-client", "php-client", "python-client", "ruby-client", "typescript-client", "openapi"].each { client ->
     ProcessBuilder pb = new ProcessBuilder(
         "sb", "publish")
         .inheritIO()
-        .directory(new File("../fusionauth-${client}-client"))
+        .directory(new File("../fusionauth-${client}"))
 
     def process = pb.start()
     process.consumeProcessOutput(System.out, System.err)
     process.waitFor()
     return process.exitValue() == 0
   }
+}
+
+boolean cleanExecute(List<String> args) {
+  ProcessBuilder pb = new ProcessBuilder(args).inheritIO().directory(new File('.'))
+
+  def process = pb.start()
+  process.consumeProcessOutput(System.out, System.err)
+  process.waitFor()
+  return process.exitValue() == 0
 }
