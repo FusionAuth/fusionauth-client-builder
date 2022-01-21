@@ -12,6 +12,7 @@ options = {}
 # default options
 options[:sourcedir] = "../src/"
 options[:outfile] = "openapi.yaml"
+options[:apiversion] = "1.0.0"
 
 # openapi component that defines our api key auth
 api_key_auth_name = "ApiKeyAuth"
@@ -21,6 +22,10 @@ OptionParser.new do |opts|
 
   opts.on("-v", "--verbose", "Run verbosely.") do |v|
     options[:verbose] = v
+  end
+
+  opts.on("-a", "--api-version SEMVER", "The api version for this build.") do |av|
+    options[:apiversion] = av
   end
 
   opts.on("-d", "--source-directory DIR", "Source directory.") do |d|
@@ -643,7 +648,7 @@ File.open(options[:outfile], "w") do |f|
   f.write %Q(
 openapi: "3.0.3"
 info:
-  version: 1.0.0
+  version: #{options[:apiversion]}
   title: FusionAuth API
   license:
     name: Apache2
