@@ -237,7 +237,8 @@ target(name: "build-dart", description: "Build the Dart Client Library") {
 }
 
 target(name: "build-openapi", description: "Build the OpenAPI file") {
-  cleanExecute(["ruby", "bin/build-openapi-yaml.rb", "--source-directory", "./src", "--out", "../fusionauth-openapi/openapi.yaml"])
+  projVersion = project.version.toString()
+  cleanExecute(["ruby", "bin/build-openapi-yaml.rb", "--source-directory", "./src", "--out", "../fusionauth-openapi/openapi.yaml", "--api-version", projVersion])
 }
 
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
