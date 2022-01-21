@@ -294,7 +294,13 @@ def process_api_file(fn, paths, options)
   json = JSON.parse(fs)
   f.close
 
-  # for debugging
+  if json["deprecated"]
+    if options[:verbose] 
+      puts "skipping deprecated "+fn
+    end
+    return
+  end
+
   method = json["method"]
   uri = json["uri"]
   
@@ -357,6 +363,16 @@ def build_operation_id(new_api_object, old_api_object, uri, method)
   end
   uri_array = uri.split("/")
   operation_name = uri_array[2]
+
+  # user has sub paths, and isn't a path param in disguise
+  if operation_name == "user" && uri_array[3] && uri_array[3][-1] != "}"
+    if uri_array[3] != "action"
+      operation_name = uri_array[2]+ "-" + uri_array[3]
+    else 
+      # need this because there are both /api/user/action and /api/user-action endpoints, and this code gives them the same name
+      operation_name = uri_array[2]+ "-" + "actioning"
+    end
+  end 
   operation_name = operation_name.split("-").map{|e| e.capitalize}.join("")
 
   operation_name[0] = operation_name[0].capitalize # just capitalize first letter
