@@ -17,6 +17,9 @@
     "token" : {
       "type" : "String"
     },
+    "tokenExpirationInstant" : {
+      "type" : "ZonedDateTime"
+    },
     "user" : {
       "type" : "User"
     }

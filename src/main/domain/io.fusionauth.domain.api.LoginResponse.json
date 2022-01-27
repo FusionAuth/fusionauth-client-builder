@@ -56,6 +56,9 @@
     "token" : {
       "type" : "String"
     },
+    "tokenExpirationInstant" : {
+      "type" : "ZonedDateTime"
+    },
     "twoFactorId" : {
       "type" : "String"
     },
