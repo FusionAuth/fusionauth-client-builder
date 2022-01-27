@@ -25,6 +25,9 @@
       }, {
         "type" : "Object"
       } ]
+    },
+    "userId" : {
+      "type" : "UUID"
     }
   }
 }
