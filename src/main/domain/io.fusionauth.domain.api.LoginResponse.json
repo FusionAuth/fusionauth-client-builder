@@ -59,6 +59,9 @@
     "tokenExpirationInstant" : {
       "type" : "ZonedDateTime"
     },
+    "trustToken" : {
+      "type" : "String"
+    },
     "twoFactorId" : {
       "type" : "String"
     },

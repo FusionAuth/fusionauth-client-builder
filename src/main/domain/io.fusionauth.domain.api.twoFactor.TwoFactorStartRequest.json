@@ -26,6 +26,9 @@
         "type" : "Object"
       } ]
     },
+    "trustChallenge" : {
+      "type" : "String"
+    },
     "userId" : {
       "type" : "UUID"
     }
