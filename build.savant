@@ -19,7 +19,7 @@ import java.nio.file.Paths
 fusionauthJWTVersion = "3.4.0" // Keep this at 3.4.0 for now to preserve the algorithms enum
 javaErrorVersion = "2.2.3"
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.33.1", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.34.0", licenses: ["ApacheV2_0"]) {
   workflow {
     fetch {
       cache()
