@@ -266,7 +266,17 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
 //        to call this target from CI during a release.
 //
 target(name: "publish-all", description: "Publish all client libraries") {
-  ["dart-client", "java-client", "netcore-client", "node-client", "php-client", "python-client", "ruby-client", "typescript-client", "openapi"].each { client ->
+  [
+   "dart-client",
+   "java-client",
+   "netcore-client",
+   "node-client",
+   "php-client",
+   "python-client",
+   "ruby-client",
+   "typescript-client",
+   "openapi"
+  ].each { client ->
     ProcessBuilder pb = new ProcessBuilder(
         "sb", "publish")
         .inheritIO()
