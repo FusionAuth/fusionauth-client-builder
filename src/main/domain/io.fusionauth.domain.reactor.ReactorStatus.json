@@ -6,6 +6,9 @@
     "advancedIdentityProviders" : {
       "type" : "ReactorFeatureStatus"
     },
+    "advancedLambdas" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "advancedMultiFactorAuthentication" : {
       "type" : "ReactorFeatureStatus"
     },
