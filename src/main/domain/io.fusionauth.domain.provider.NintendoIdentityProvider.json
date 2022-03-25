@@ -26,6 +26,9 @@
     "client_secret" : {
       "type" : "String"
     },
+    "oauth2" : {
+      "type" : "IdentityProviderOauth2Configuration"
+    },
     "scope" : {
       "type" : "String"
     }
