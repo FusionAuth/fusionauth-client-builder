@@ -26,10 +26,16 @@
     "client_secret" : {
       "type" : "String"
     },
-    "oauth2" : {
-      "type" : "IdentityProviderOauth2Configuration"
+    "emailClaim" : {
+      "type" : "String"
     },
     "scope" : {
+      "type" : "String"
+    },
+    "uniqueIdClaim" : {
+      "type" : "String"
+    },
+    "usernameClaim" : {
       "type" : "String"
     }
   }
