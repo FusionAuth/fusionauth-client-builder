@@ -1,7 +1,7 @@
 {
   "uri": "/api/group",
   "comments": [
-    "Retrieves all of the groups."
+    "Retrieves all the groups."
   ],
   "method": "get",
   "methodName": "retrieveGroups",

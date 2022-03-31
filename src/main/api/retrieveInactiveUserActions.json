@@ -1,7 +1,7 @@
 {
   "uri": "/api/user-action",
   "comments": [
-    "Retrieves all of the user actions that are currently inactive."
+    "Retrieves all the user actions that are currently inactive."
   ],
   "method": "get",
   "methodName": "retrieveInactiveUserActions",

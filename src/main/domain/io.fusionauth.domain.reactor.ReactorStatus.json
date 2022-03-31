@@ -30,6 +30,9 @@
     "licensed" : {
       "type" : "boolean"
     },
+    "scimServer" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "threatDetection" : {
       "type" : "ReactorFeatureStatus"
     }

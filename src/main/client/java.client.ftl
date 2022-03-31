@@ -71,6 +71,8 @@ import io.fusionauth.domain.api.EventLogSearchResponse;
 import io.fusionauth.domain.api.FamilyEmailRequest;
 import io.fusionauth.domain.api.FamilyRequest;
 import io.fusionauth.domain.api.FamilyResponse;
+import io.fusionauth.domain.api.GroupMemberSearchRequest;
+import io.fusionauth.domain.api.GroupMemberSearchResponse;
 import io.fusionauth.domain.api.GroupRequest;
 import io.fusionauth.domain.api.GroupResponse;
 import io.fusionauth.domain.api.IdentityProviderRequest;

@@ -1,7 +1,7 @@
 {
   "uri": "/api/form",
   "comments": [
-    "Retrieves all of the forms."
+    "Retrieves all the forms."
   ],
   "method": "get",
   "methodName": "retrieveForms",

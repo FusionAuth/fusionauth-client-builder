@@ -1,7 +1,7 @@
 {
   "uri": "/api/lambda",
   "comments": [
-    "Retrieves all of the lambdas for the provided type."
+    "Retrieves all the lambdas for the provided type."
   ],
   "method": "get",
   "methodName": "retrieveLambdasByType",

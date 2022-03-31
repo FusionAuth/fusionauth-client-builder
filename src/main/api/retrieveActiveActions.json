@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/action",
   "comments": [
-    "Retrieves all of the actions for the user with the given Id that are currently active.",
+    "Retrieves all the actions for the user with the given Id that are currently active.",
     "An active action means one that is time based and has not been canceled, and has not ended."
   ],
   "method": "get",

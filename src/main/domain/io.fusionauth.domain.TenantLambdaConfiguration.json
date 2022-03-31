@@ -1,0 +1,31 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantLambdaConfiguration",
+  "description" : "/**\n * @author Rob Davis\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantLambdaConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "scimEnterpriseUserRequestConverterId" : {
+      "type" : "UUID"
+    },
+    "scimEnterpriseUserResponseConverterId" : {
+      "type" : "UUID"
+    },
+    "scimGroupRequestConverterId" : {
+      "type" : "UUID"
+    },
+    "scimGroupResponseConverterId" : {
+      "type" : "UUID"
+    },
+    "scimUserRequestConverterId" : {
+      "type" : "UUID"
+    },
+    "scimUserResponseConverterId" : {
+      "type" : "UUID"
+    }
+  }
+}

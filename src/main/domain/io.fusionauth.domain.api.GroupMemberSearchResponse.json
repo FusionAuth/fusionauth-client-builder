@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "GroupMemberSearchResponse",
+  "description" : "/**\n * Search response for Group Members\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "members" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "GroupMember"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

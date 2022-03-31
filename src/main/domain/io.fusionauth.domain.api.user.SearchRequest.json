@@ -2,6 +2,12 @@
   "packageName" : "io.fusionauth.domain.api.user",
   "type" : "SearchRequest",
   "description" : "/**\n * Search API request.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "SearchRequest"
+    } ]
+  } ],
   "fields" : {
     "search" : {
       "type" : "UserSearchCriteria"

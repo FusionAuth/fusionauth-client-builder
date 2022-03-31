@@ -6,7 +6,7 @@
   "method": "post",
   "methodName": "searchIPAccessControlLists",
   "successResponse": "IPAccessControlListSearchResponse",
-  "errorResponse": "Void",
+  "errorResponse": "Errors",
   "params": [
     {
       "name": "request",

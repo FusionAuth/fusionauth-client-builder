@@ -1,7 +1,7 @@
 {
   "uri": "/api/tenant",
   "comments": [
-    "Retrieves all of the tenants."
+    "Retrieves all the tenants."
   ],
   "method": "get",
   "methodName": "retrieveTenants",

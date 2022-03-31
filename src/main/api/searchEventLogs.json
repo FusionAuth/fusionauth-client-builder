@@ -6,7 +6,7 @@
   "method": "post",
   "methodName": "searchEventLogs",
   "successResponse": "EventLogSearchResponse",
-  "errorResponse": "Void",
+  "errorResponse": "Errors",
   "params": [
     {
       "name": "request",

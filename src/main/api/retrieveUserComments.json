@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/comment",
   "comments": [
-    "Retrieves all of the comments for the user with the given Id."
+    "Retrieves all the comments for the user with the given Id."
   ],
   "method": "get",
   "methodName": "retrieveUserComments",

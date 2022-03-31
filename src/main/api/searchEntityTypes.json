@@ -6,7 +6,7 @@
   "method": "post",
   "methodName": "searchEntityTypes",
   "successResponse": "EntityTypeSearchResponse",
-  "errorResponse": "Void",
+  "errorResponse": "Errors",
   "params": [
     {
       "name": "request",

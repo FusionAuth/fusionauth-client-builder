@@ -6,7 +6,7 @@
   "method": "post",
   "methodName": "searchAuditLogs",
   "successResponse": "AuditLogSearchResponse",
-  "errorResponse": "Void",
+  "errorResponse": "Errors",
   "params": [
     {
       "name": "request",

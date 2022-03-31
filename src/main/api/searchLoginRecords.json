@@ -6,7 +6,7 @@
   "method": "post",
   "methodName": "searchLoginRecords",
   "successResponse": "LoginRecordSearchResponse",
-  "errorResponse": "Void",
+  "errorResponse": "Errors",
   "params": [
     {
       "name": "request",

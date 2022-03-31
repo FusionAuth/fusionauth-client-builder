@@ -2,6 +2,12 @@
   "packageName" : "io.fusionauth.domain.api",
   "type" : "MemberRequest",
   "description" : "/**\n * Group Member Request\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "MemberRequest"
+    } ]
+  } ],
   "fields" : {
     "members" : {
       "type" : "Map",

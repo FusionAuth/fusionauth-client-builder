@@ -1,7 +1,7 @@
 {
   "uri": "/api/application",
   "comments": [
-    "Retrieves all of the applications that are currently inactive."
+    "Retrieves all the applications that are currently inactive."
   ],
   "method": "get",
   "methodName": "retrieveInactiveApplications",
