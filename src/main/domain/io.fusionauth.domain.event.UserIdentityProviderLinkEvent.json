@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserIdentityProviderLinkEvent",
+  "description" : "/**\n * Models the User IdP Link Event.\n *\n * @author Rob Davis\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserIdentityProviderLinkEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "identityProviderName" : {
+      "type" : "String"
+    },
+    "user" : {
+      "type" : "User"
+    }
+  }
+}

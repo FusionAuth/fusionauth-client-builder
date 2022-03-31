@@ -33,6 +33,12 @@
     "name" : "UserCreateComplete",
     "args" : [ "user.create.complete" ]
   }, {
+    "name" : "UserIdentityProviderLink",
+    "args" : [ "user.idp.link" ]
+  }, {
+    "name" : "UserIdentityProviderUnlink",
+    "args" : [ "user.idp.unlink" ]
+  }, {
     "name" : "UserDeactivate",
     "args" : [ "user.deactivate" ]
   }, {
