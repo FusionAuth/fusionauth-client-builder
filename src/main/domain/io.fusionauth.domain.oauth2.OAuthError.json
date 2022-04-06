@@ -18,6 +18,12 @@
     "error_uri" : {
       "type" : "String"
     },
+    "two_factor_methods" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "TwoFactorMethod"
+      } ]
+    },
     "error_reason" : {
       "type" : "OAuthErrorReason"
     },
