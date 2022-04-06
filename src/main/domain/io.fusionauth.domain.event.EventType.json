@@ -33,12 +33,6 @@
     "name" : "UserCreateComplete",
     "args" : [ "user.create.complete" ]
   }, {
-    "name" : "UserIdentityProviderLink",
-    "args" : [ "user.idp.link" ]
-  }, {
-    "name" : "UserIdentityProviderUnlink",
-    "args" : [ "user.idp.unlink" ]
-  }, {
     "name" : "UserDeactivate",
     "args" : [ "user.deactivate" ]
   }, {
@@ -47,6 +41,12 @@
   }, {
     "name" : "UserDeleteComplete",
     "args" : [ "user.delete.complete" ]
+  }, {
+    "name" : "UserIdentityProviderLink",
+    "args" : [ "user.identity-provider.link" ]
+  }, {
+    "name" : "UserIdentityProviderUnlink",
+    "args" : [ "user.identity-provider.unlink" ]
   }, {
     "name" : "UserLoginIdDuplicateOnCreate",
     "args" : [ "user.loginId.duplicate.create" ]

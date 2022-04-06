@@ -14,8 +14,8 @@
     "type" : "NonTransactionalEvent"
   } ],
   "fields" : {
-    "identityProviderName" : {
-      "type" : "String"
+    "identityProviderLink" : {
+      "type" : "IdentityProviderLink"
     },
     "user" : {
       "type" : "User"
