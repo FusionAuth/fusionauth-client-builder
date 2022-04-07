@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserIdentityProviderUnlinkEvent",
+  "description" : "/**\n * Models the User Identity Provider Unlink Event.\n *\n * @author Rob Davis\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserIdentityProviderUnlinkEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "identityProviderLink" : {
+      "type" : "IdentityProviderLink"
+    },
+    "user" : {
+      "type" : "User"
+    }
+  }
+}
