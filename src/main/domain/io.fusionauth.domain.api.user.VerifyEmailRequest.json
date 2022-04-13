@@ -11,6 +11,9 @@
     },
     "verificationId" : {
       "type" : "String"
+    },
+    "userId" :  {
+      "type": "UUID"
     }
   }
 }
