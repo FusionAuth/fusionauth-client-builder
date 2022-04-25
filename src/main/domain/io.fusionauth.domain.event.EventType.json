@@ -18,6 +18,12 @@
     "name" : "EventLogCreate",
     "args" : [ "event-log.create" ]
   }, {
+    "name" : "GroupMembershipAdd",
+    "args" : [ "group.membership.add" ]
+  }, {
+    "name" : "GroupMembershipRemove",
+    "args" : [ "group.membership.remove" ]
+  }, {
     "name" : "KickstartSuccess",
     "args" : [ "kickstart.success" ]
   }, {
