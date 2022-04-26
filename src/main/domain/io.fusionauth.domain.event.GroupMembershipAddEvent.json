@@ -1,0 +1,27 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "GroupMembershipAddEvent",
+  "description" : "/**\n * Model the Group Membership Add event\n *\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "GroupMembershipAddEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "group" : {
+      "type" : "Group"
+    },
+    "groupMembers" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "GroupMember"
+      } ]
+    }
+  }
+}

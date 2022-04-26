@@ -1,0 +1,27 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "GroupMembershipRemoveEvent",
+  "description" : "/**\n * Model the Group Membership Remove event\n *\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "GroupMembershipRemoveEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "group" : {
+      "type" : "Group"
+    },
+    "groupMembers" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "GroupMember"
+      } ]
+    }
+  }
+}
