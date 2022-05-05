@@ -1,0 +1,21 @@
+{
+  "className" : "io.fusionauth.domain.reactor.ReactorMetrics",
+  "extends" : { },
+  "fields" : {
+    "breachedPasswordMetrics" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      }, {
+        "className" : "io.fusionauth.domain.reactor.BreachedPasswordTenantMetric",
+        "type" : "BreachedPasswordTenantMetric"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.reactor",
+  "type" : "ReactorMetrics"
+}

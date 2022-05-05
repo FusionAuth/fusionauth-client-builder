@@ -1,0 +1,44 @@
+{
+  "className" : "io.fusionauth.domain.CleanSpeakConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "apiKey" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "applicationIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    },
+    "url" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "usernameModeration" : {
+      "className" : "io.fusionauth.domain.CleanSpeakConfiguration$UsernameModeration",
+      "type" : "CleanSpeakConfiguration$UsernameModeration"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.CleanSpeakConfiguration",
+      "type" : "CleanSpeakConfiguration"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.Integration",
+    "type" : "Integration"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CleanSpeakConfiguration"
+}

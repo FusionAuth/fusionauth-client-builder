@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.TenantFormConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "adminUserFormId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TenantFormConfiguration",
+      "type" : "TenantFormConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantFormConfiguration"
+}

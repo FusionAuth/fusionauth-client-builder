@@ -1,0 +1,37 @@
+{
+  "className" : "io.fusionauth.domain.search.BaseElasticSearchCriteria",
+  "extends" : { },
+  "fields" : {
+    "accurateTotal" : {
+      "type" : "boolean"
+    },
+    "ids" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    },
+    "query" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "queryString" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "sortFields" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.search.SortField",
+        "type" : "SortField"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "BaseElasticSearchCriteria"
+}

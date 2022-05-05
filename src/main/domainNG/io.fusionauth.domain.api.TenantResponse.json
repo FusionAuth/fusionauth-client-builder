@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.TenantResponse",
+  "extends" : { },
+  "fields" : {
+    "tenant" : {
+      "className" : "io.fusionauth.domain.Tenant",
+      "type" : "Tenant"
+    },
+    "tenants" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Tenant",
+        "type" : "Tenant"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TenantResponse"
+}

@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.api.TwoFactorResponse",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "recoveryCodes" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.TwoFactorResponse",
+      "type" : "TwoFactorResponse"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TwoFactorResponse"
+}

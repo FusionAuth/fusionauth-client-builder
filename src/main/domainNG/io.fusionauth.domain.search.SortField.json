@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.search.SortField",
+  "extends" : { },
+  "fields" : {
+    "missing" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "order" : {
+      "className" : "io.fusionauth.domain.search.Sort",
+      "type" : "Sort"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "SortField"
+}

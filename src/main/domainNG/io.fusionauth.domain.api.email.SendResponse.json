@@ -1,0 +1,32 @@
+{
+  "className" : "io.fusionauth.domain.api.email.SendResponse",
+  "extends" : { },
+  "fields" : {
+    "anonymousResults" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "io.fusionauth.domain.api.email.SendResponse$EmailTemplateErrors",
+        "type" : "SendResponse$EmailTemplateErrors"
+      } ]
+    },
+    "results" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      }, {
+        "className" : "io.fusionauth.domain.api.email.SendResponse$EmailTemplateErrors",
+        "type" : "SendResponse$EmailTemplateErrors"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.email",
+  "type" : "SendResponse"
+}

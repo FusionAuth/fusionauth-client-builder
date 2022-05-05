@@ -1,0 +1,10 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.UserState",
+  "enum" : [ "Authenticated", "AuthenticatedNotRegistered", "AuthenticatedNotVerified", "AuthenticatedRegistrationNotVerified" ],
+  "extends" : { },
+  "fields" : { },
+  "interfaces" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "UserState"
+}

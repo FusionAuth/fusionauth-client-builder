@@ -1,0 +1,102 @@
+{
+  "className" : "io.fusionauth.domain.event.UserActionEvent",
+  "extends" : {
+    "className" : "io.fusionauth.domain.event.BaseEvent",
+    "type" : "BaseEvent",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "Infinite" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "action" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "actionId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "actioneeUserId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "actionerUserId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "applicationIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    },
+    "comment" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "email" : {
+      "className" : "io.fusionauth.domain.email.Email",
+      "type" : "Email"
+    },
+    "emailedUser" : {
+      "type" : "boolean"
+    },
+    "expiry" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "localizedAction" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "localizedDuration" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "localizedOption" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "localizedReason" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "notifyUser" : {
+      "type" : "boolean"
+    },
+    "option" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "phase" : {
+      "className" : "io.fusionauth.domain.event.UserActionPhase",
+      "type" : "UserActionPhase"
+    },
+    "reason" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "reasonCode" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.event.UserActionEvent",
+      "type" : "UserActionEvent"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.event.ApplicationEvent",
+    "type" : "ApplicationEvent"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserActionEvent"
+}

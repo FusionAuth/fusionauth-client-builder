@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.UserCommentRequest",
+  "extends" : { },
+  "fields" : {
+    "userComment" : {
+      "className" : "io.fusionauth.domain.UserComment",
+      "type" : "UserComment"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserCommentRequest"
+}

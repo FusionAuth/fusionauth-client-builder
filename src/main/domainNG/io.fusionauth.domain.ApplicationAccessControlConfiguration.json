@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.ApplicationAccessControlConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "uiIPAccessControlListId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.ApplicationAccessControlConfiguration",
+      "type" : "ApplicationAccessControlConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationAccessControlConfiguration"
+}

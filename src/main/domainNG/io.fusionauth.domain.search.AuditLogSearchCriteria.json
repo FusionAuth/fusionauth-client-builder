@@ -1,0 +1,60 @@
+{
+  "className" : "io.fusionauth.domain.search.AuditLogSearchCriteria",
+  "extends" : {
+    "className" : "io.fusionauth.domain.search.BaseSearchCriteria",
+    "type" : "BaseSearchCriteria",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "SortableFields" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "end" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "message" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "newValue" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oldValue" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "reason" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "start" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "user" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.search.AuditLogSearchCriteria",
+      "type" : "AuditLogSearchCriteria"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "AuditLogSearchCriteria"
+}

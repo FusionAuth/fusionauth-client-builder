@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.api.user.SearchRequest",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "search" : {
+      "className" : "io.fusionauth.domain.search.UserSearchCriteria",
+      "type" : "UserSearchCriteria"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.user.SearchRequest",
+      "type" : "SearchRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "SearchRequest"
+}

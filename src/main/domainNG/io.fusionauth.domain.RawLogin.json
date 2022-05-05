@@ -1,0 +1,26 @@
+{
+  "className" : "io.fusionauth.domain.RawLogin",
+  "extends" : { },
+  "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "instant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "ipAddress" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RawLogin"
+}

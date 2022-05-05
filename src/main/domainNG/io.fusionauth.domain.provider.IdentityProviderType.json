@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.provider.IdentityProviderType",
+  "enum" : [ "Apple", "EpicGames", "ExternalJWT", "Facebook", "Google", "HYPR", "LinkedIn", "Nintendo", "OpenIDConnect", "SAMLv2", "SAMLv2IdPInitiated", "SonyPSN", "Steam", "Twitch", "Twitter", "Xbox" ],
+  "extends" : { },
+  "fields" : {
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderType"
+}

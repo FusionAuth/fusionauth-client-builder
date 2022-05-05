@@ -1,0 +1,32 @@
+{
+  "className" : "io.fusionauth.domain.EventConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "events" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.event.EventType",
+        "type" : "EventType"
+      }, {
+        "className" : "io.fusionauth.domain.EventConfiguration$EventConfigurationData",
+        "type" : "EventConfiguration$EventConfigurationData"
+      } ]
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.EventConfiguration",
+      "type" : "EventConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EventConfiguration"
+}

@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.EmailTemplateRequest",
+  "extends" : { },
+  "fields" : {
+    "emailTemplate" : {
+      "className" : "io.fusionauth.domain.email.EmailTemplate",
+      "type" : "EmailTemplate"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EmailTemplateRequest"
+}

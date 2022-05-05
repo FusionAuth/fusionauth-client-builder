@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.AuditLogSearchRequest",
+  "extends" : { },
+  "fields" : {
+    "search" : {
+      "className" : "io.fusionauth.domain.search.AuditLogSearchCriteria",
+      "type" : "AuditLogSearchCriteria"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "AuditLogSearchRequest"
+}

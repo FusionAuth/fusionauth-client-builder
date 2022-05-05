@@ -1,0 +1,13 @@
+{
+  "className" : "io.fusionauth.domain.TenantSSOConfiguration",
+  "extends" : { },
+  "fields" : {
+    "deviceTrustTimeToLiveInSeconds" : {
+      "type" : "int"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantSSOConfiguration"
+}

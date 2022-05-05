@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.HTTPHeaders",
+  "extends" : {
+    "className" : "java.util.HashMap",
+    "type" : "HashMap",
+    "typeArguments" : [ {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }, {
+      "className" : "java.lang.String",
+      "type" : "String"
+    } ]
+  },
+  "fields" : { },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "HTTPHeaders"
+}

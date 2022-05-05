@@ -1,0 +1,72 @@
+{
+  "className" : "io.fusionauth.domain.SecureIdentity",
+  "extends" : { },
+  "fields" : {
+    "breachedPasswordLastCheckedInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "breachedPasswordStatus" : {
+      "className" : "io.fusionauth.domain.BreachedPasswordStatus",
+      "type" : "BreachedPasswordStatus"
+    },
+    "connectorId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "encryptionScheme" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "factor" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "lastLoginInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "password" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "passwordChangeReason" : {
+      "className" : "io.fusionauth.domain.ChangePasswordReason",
+      "type" : "ChangePasswordReason"
+    },
+    "passwordChangeRequired" : {
+      "type" : "boolean"
+    },
+    "passwordLastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "salt" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "uniqueUsername" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "username" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "usernameStatus" : {
+      "className" : "io.fusionauth.domain.ContentStatus",
+      "type" : "ContentStatus"
+    },
+    "verified" : {
+      "type" : "boolean"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SecureIdentity"
+}

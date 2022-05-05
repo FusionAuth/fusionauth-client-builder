@@ -1,0 +1,47 @@
+{
+  "className" : "io.fusionauth.domain.JWTConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "accessTokenKeyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "idTokenKeyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "refreshTokenExpirationPolicy" : {
+      "className" : "io.fusionauth.domain.RefreshTokenExpirationPolicy",
+      "type" : "RefreshTokenExpirationPolicy"
+    },
+    "refreshTokenRevocationPolicy" : {
+      "className" : "io.fusionauth.domain.RefreshTokenRevocationPolicy",
+      "type" : "RefreshTokenRevocationPolicy"
+    },
+    "refreshTokenTimeToLiveInMinutes" : {
+      "type" : "int"
+    },
+    "refreshTokenUsagePolicy" : {
+      "className" : "io.fusionauth.domain.RefreshTokenUsagePolicy",
+      "type" : "RefreshTokenUsagePolicy"
+    },
+    "timeToLiveInSeconds" : {
+      "type" : "int"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.JWTConfiguration",
+      "type" : "JWTConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "JWTConfiguration"
+}

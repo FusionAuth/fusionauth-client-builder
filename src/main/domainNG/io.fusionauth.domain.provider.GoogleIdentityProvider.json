@@ -1,0 +1,47 @@
+{
+  "className" : "io.fusionauth.domain.provider.GoogleIdentityProvider",
+  "extends" : {
+    "className" : "io.fusionauth.domain.provider.BaseIdentityProvider",
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.GoogleApplicationConfiguration",
+      "type" : "GoogleApplicationConfiguration"
+    } ]
+  },
+  "fields" : {
+    "buttonText" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "client_id" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "client_secret" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "loginMethod" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderLoginMethod",
+      "type" : "IdentityProviderLoginMethod"
+    },
+    "scope" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.GoogleIdentityProvider",
+      "type" : "GoogleIdentityProvider"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.provider.SupportsPostBindings",
+    "type" : "SupportsPostBindings"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "GoogleIdentityProvider"
+}

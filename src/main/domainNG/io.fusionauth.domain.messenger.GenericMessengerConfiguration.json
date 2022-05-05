@@ -1,0 +1,49 @@
+{
+  "className" : "io.fusionauth.domain.messenger.GenericMessengerConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.messenger.BaseMessengerConfiguration",
+    "type" : "BaseMessengerConfiguration",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "connectTimeout" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
+    "headers" : {
+      "className" : "io.fusionauth.domain.HTTPHeaders",
+      "type" : "HTTPHeaders"
+    },
+    "httpAuthenticationPassword" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "httpAuthenticationUsername" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "readTimeout" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
+    "sslCertificate" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "url" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.messenger.GenericMessengerConfiguration",
+      "type" : "GenericMessengerConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.messenger",
+  "type" : "GenericMessengerConfiguration"
+}

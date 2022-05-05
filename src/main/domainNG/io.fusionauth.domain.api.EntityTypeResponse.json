@@ -1,0 +1,26 @@
+{
+  "className" : "io.fusionauth.domain.api.EntityTypeResponse",
+  "extends" : { },
+  "fields" : {
+    "entityType" : {
+      "className" : "io.fusionauth.domain.EntityType",
+      "type" : "EntityType"
+    },
+    "entityTypes" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.EntityType",
+        "type" : "EntityType"
+      } ]
+    },
+    "permission" : {
+      "className" : "io.fusionauth.domain.EntityTypePermission",
+      "type" : "EntityTypePermission"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EntityTypeResponse"
+}

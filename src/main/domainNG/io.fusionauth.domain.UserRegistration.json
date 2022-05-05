@@ -1,0 +1,102 @@
+{
+  "className" : "io.fusionauth.domain.UserRegistration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "authenticationToken" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "cleanSpeakId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastLoginInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "preferredLanguages" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.Locale",
+        "type" : "Locale"
+      } ]
+    },
+    "roles" : {
+      "className" : "java.util.SortedSet",
+      "type" : "SortedSet",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "timezone" : {
+      "className" : "java.time.ZoneId",
+      "type" : "ZoneId"
+    },
+    "tokens" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "username" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "usernameStatus" : {
+      "className" : "io.fusionauth.domain.ContentStatus",
+      "type" : "ContentStatus"
+    },
+    "verified" : {
+      "type" : "boolean"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.UserRegistration",
+      "type" : "UserRegistration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserRegistration"
+}

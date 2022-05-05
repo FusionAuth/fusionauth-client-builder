@@ -1,0 +1,38 @@
+{
+  "className" : "io.fusionauth.domain.FailedAuthenticationConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "actionDuration" : {
+      "type" : "long"
+    },
+    "actionDurationUnit" : {
+      "className" : "io.fusionauth.domain.ExpiryUnit",
+      "type" : "ExpiryUnit"
+    },
+    "resetCountInSeconds" : {
+      "type" : "int"
+    },
+    "tooManyAttempts" : {
+      "type" : "int"
+    },
+    "userActionId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.FailedAuthenticationConfiguration",
+      "type" : "FailedAuthenticationConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "FailedAuthenticationConfiguration"
+}

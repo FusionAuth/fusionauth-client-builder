@@ -1,0 +1,61 @@
+{
+  "className" : "io.fusionauth.domain.provider.AppleIdentityProvider",
+  "extends" : {
+    "className" : "io.fusionauth.domain.provider.BaseIdentityProvider",
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.AppleApplicationConfiguration",
+      "type" : "AppleApplicationConfiguration"
+    } ]
+  },
+  "fields" : {
+    "ISSUER" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "JWKS_URI" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "buttonText" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "keyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "scope" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "servicesId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "teamId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.AppleIdentityProvider",
+      "type" : "AppleIdentityProvider"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.jwks.JSONWebKeyInfoProvider",
+    "type" : "JSONWebKeyInfoProvider"
+  }, {
+    "className" : "io.fusionauth.domain.RequiresCORSConfiguration",
+    "type" : "RequiresCORSConfiguration"
+  }, {
+    "className" : "io.fusionauth.domain.provider.SupportsPostBindings",
+    "type" : "SupportsPostBindings"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "AppleIdentityProvider"
+}

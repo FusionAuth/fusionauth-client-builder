@@ -1,0 +1,24 @@
+{
+  "className" : "io.fusionauth.domain.TenantLoginConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "requireAuthentication" : {
+      "type" : "boolean"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TenantLoginConfiguration",
+      "type" : "TenantLoginConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantLoginConfiguration"
+}

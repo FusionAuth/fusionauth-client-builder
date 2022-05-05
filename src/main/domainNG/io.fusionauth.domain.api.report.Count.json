@@ -1,0 +1,16 @@
+{
+  "className" : "io.fusionauth.domain.api.report.Count",
+  "extends" : { },
+  "fields" : {
+    "count" : {
+      "type" : "int"
+    },
+    "interval" : {
+      "type" : "int"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.report",
+  "type" : "Count"
+}

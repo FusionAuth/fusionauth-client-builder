@@ -1,0 +1,18 @@
+{
+  "className" : "io.fusionauth.domain.api.PreviewMessageTemplateResponse",
+  "extends" : { },
+  "fields" : {
+    "errors" : {
+      "className" : "com.inversoft.error.Errors",
+      "type" : "Errors"
+    },
+    "message" : {
+      "className" : "io.fusionauth.domain.message.sms.SMSMessage",
+      "type" : "SMSMessage"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "PreviewMessageTemplateResponse"
+}

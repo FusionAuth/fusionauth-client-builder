@@ -1,0 +1,68 @@
+{
+  "className" : "io.fusionauth.domain.SystemConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "auditLogConfiguration" : {
+      "className" : "io.fusionauth.domain.SystemConfiguration$AuditLogConfiguration",
+      "type" : "SystemConfiguration$AuditLogConfiguration"
+    },
+    "cookieEncryptionKey" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "corsConfiguration" : {
+      "className" : "io.fusionauth.domain.CORSConfiguration",
+      "type" : "CORSConfiguration"
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "eventLogConfiguration" : {
+      "className" : "io.fusionauth.domain.SystemConfiguration$EventLogConfiguration",
+      "type" : "SystemConfiguration$EventLogConfiguration"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "loginRecordConfiguration" : {
+      "className" : "io.fusionauth.domain.SystemConfiguration$LoginRecordConfiguration",
+      "type" : "SystemConfiguration$LoginRecordConfiguration"
+    },
+    "reportTimezone" : {
+      "className" : "java.time.ZoneId",
+      "type" : "ZoneId"
+    },
+    "uiConfiguration" : {
+      "className" : "io.fusionauth.domain.SystemConfiguration$UIConfiguration",
+      "type" : "SystemConfiguration$UIConfiguration"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.SystemConfiguration",
+      "type" : "SystemConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SystemConfiguration"
+}

@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.ApplicationFormConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "adminRegistrationFormId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "selfServiceFormId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.ApplicationFormConfiguration",
+      "type" : "ApplicationFormConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationFormConfiguration"
+}

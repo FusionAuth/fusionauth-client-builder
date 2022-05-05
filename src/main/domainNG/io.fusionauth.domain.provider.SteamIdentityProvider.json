@@ -1,0 +1,43 @@
+{
+  "className" : "io.fusionauth.domain.provider.SteamIdentityProvider",
+  "extends" : {
+    "className" : "io.fusionauth.domain.provider.BaseIdentityProvider",
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.SteamApplicationConfiguration",
+      "type" : "SteamApplicationConfiguration"
+    } ]
+  },
+  "fields" : {
+    "buttonText" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "client_id" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "scope" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "webAPIKey" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.SteamIdentityProvider",
+      "type" : "SteamIdentityProvider"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.provider.SupportsPostBindings",
+    "type" : "SupportsPostBindings"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SteamIdentityProvider"
+}

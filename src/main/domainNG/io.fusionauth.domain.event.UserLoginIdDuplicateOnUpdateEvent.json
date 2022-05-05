@@ -1,0 +1,9 @@
+{
+  "className" : "io.fusionauth.domain.event.UserLoginIdDuplicateOnUpdateEvent",
+  "extends" : { },
+  "fields" : { },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserLoginIdDuplicateOnUpdateEvent"
+}

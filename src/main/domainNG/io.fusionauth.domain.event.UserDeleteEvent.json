@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.event.UserDeleteEvent",
+  "extends" : {
+    "className" : "io.fusionauth.domain.event.BaseEvent",
+    "type" : "BaseEvent",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "user" : {
+      "className" : "io.fusionauth.domain.User",
+      "type" : "User"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.event.UserDeleteEvent",
+      "type" : "UserDeleteEvent"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserDeleteEvent"
+}

@@ -1,0 +1,57 @@
+{
+  "className" : "io.fusionauth.domain.reactor.ReactorStatus",
+  "extends" : { },
+  "fields" : {
+    "advancedIdentityProviders" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "advancedLambdas" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "advancedMultiFactorAuthentication" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "advancedRegistration" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "applicationThemes" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "breachedPasswordDetection" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "connectors" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "entityManagement" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "expiration" : {
+      "className" : "java.time.LocalDate",
+      "type" : "LocalDate"
+    },
+    "licensed" : {
+      "type" : "boolean"
+    },
+    "scimServer" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "threatDetection" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.reactor",
+  "type" : "ReactorStatus"
+}

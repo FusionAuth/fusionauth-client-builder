@@ -1,0 +1,34 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.DeviceResponse",
+  "extends" : { },
+  "fields" : {
+    "deviceCode" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "expiresIn" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
+    "interval" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
+    "userCode" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "verificationURI" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "verificationURIComplete" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "DeviceResponse"
+}

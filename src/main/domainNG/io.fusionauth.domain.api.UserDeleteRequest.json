@@ -1,0 +1,43 @@
+{
+  "className" : "io.fusionauth.domain.api.UserDeleteRequest",
+  "extends" : {
+    "className" : "io.fusionauth.domain.api.BaseEventRequest",
+    "type" : "BaseEventRequest",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "dryRun" : {
+      "type" : "boolean"
+    },
+    "hardDelete" : {
+      "type" : "boolean"
+    },
+    "query" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "queryString" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.UserDeleteRequest",
+      "type" : "UserDeleteRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserDeleteRequest"
+}

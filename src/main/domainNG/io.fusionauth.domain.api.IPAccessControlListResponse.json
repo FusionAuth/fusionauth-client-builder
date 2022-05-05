@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.IPAccessControlListResponse",
+  "extends" : { },
+  "fields" : {
+    "ipAccessControlList" : {
+      "className" : "io.fusionauth.domain.IPAccessControlList",
+      "type" : "IPAccessControlList"
+    },
+    "ipAccessControlLists" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.IPAccessControlList",
+        "type" : "IPAccessControlList"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "IPAccessControlListResponse"
+}

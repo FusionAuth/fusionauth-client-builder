@@ -1,0 +1,10 @@
+{
+  "className" : "io.fusionauth.domain.messenger.MessengerType",
+  "enum" : [ "Generic", "Kafka", "Twilio" ],
+  "extends" : { },
+  "fields" : { },
+  "interfaces" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.messenger",
+  "type" : "MessengerType"
+}

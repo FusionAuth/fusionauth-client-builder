@@ -1,0 +1,33 @@
+{
+  "className" : "io.fusionauth.domain.api.user.RegistrationRequest",
+  "extends" : { },
+  "fields" : {
+    "disableDomainBlock" : {
+      "type" : "boolean"
+    },
+    "generateAuthenticationToken" : {
+      "type" : "boolean"
+    },
+    "registration" : {
+      "className" : "io.fusionauth.domain.UserRegistration",
+      "type" : "UserRegistration"
+    },
+    "sendSetPasswordEmail" : {
+      "type" : "boolean"
+    },
+    "skipRegistrationVerification" : {
+      "type" : "boolean"
+    },
+    "skipVerification" : {
+      "type" : "boolean"
+    },
+    "user" : {
+      "className" : "io.fusionauth.domain.User",
+      "type" : "User"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "RegistrationRequest"
+}

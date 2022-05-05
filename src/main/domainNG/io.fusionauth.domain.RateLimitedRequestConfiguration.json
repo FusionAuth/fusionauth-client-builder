@@ -1,0 +1,27 @@
+{
+  "className" : "io.fusionauth.domain.RateLimitedRequestConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "limit" : {
+      "type" : "int"
+    },
+    "timePeriodInSeconds" : {
+      "type" : "int"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.RateLimitedRequestConfiguration",
+      "type" : "RateLimitedRequestConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RateLimitedRequestConfiguration"
+}

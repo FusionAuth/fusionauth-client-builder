@@ -1,0 +1,37 @@
+{
+  "className" : "io.fusionauth.domain.api.UserResponse",
+  "extends" : { },
+  "fields" : {
+    "emailVerificationId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "registrationVerificationIds" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "token" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "tokenExpirationInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "user" : {
+      "className" : "io.fusionauth.domain.User",
+      "type" : "User"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserResponse"
+}

@@ -1,0 +1,21 @@
+{
+  "className" : "io.fusionauth.domain.api.LoginRecordSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "logins" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.DisplayableRawLogin",
+        "type" : "DisplayableRawLogin"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LoginRecordSearchResponse"
+}

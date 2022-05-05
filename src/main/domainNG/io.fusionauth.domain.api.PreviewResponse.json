@@ -1,0 +1,18 @@
+{
+  "className" : "io.fusionauth.domain.api.PreviewResponse",
+  "extends" : { },
+  "fields" : {
+    "email" : {
+      "className" : "io.fusionauth.domain.email.Email",
+      "type" : "Email"
+    },
+    "errors" : {
+      "className" : "com.inversoft.error.Errors",
+      "type" : "Errors"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "PreviewResponse"
+}

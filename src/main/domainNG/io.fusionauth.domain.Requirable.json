@@ -1,0 +1,13 @@
+{
+  "className" : "io.fusionauth.domain.Requirable",
+  "extends" : { },
+  "fields" : {
+    "required" : {
+      "type" : "boolean"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Requirable"
+}

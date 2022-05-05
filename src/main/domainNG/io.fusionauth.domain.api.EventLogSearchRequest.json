@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.EventLogSearchRequest",
+  "extends" : { },
+  "fields" : {
+    "search" : {
+      "className" : "io.fusionauth.domain.search.EventLogSearchCriteria",
+      "type" : "EventLogSearchCriteria"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EventLogSearchRequest"
+}

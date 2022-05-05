@@ -1,0 +1,39 @@
+{
+  "className" : "io.fusionauth.domain.provider.TwitterIdentityProvider",
+  "extends" : {
+    "className" : "io.fusionauth.domain.provider.BaseIdentityProvider",
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.TwitterApplicationConfiguration",
+      "type" : "TwitterApplicationConfiguration"
+    } ]
+  },
+  "fields" : {
+    "buttonText" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "consumerKey" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "consumerSecret" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.TwitterIdentityProvider",
+      "type" : "TwitterIdentityProvider"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.provider.SupportsPostBindings",
+    "type" : "SupportsPostBindings"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "TwitterIdentityProvider"
+}

@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.ConnectorResponse",
+  "extends" : { },
+  "fields" : {
+    "connector" : {
+      "className" : "io.fusionauth.domain.connector.BaseConnectorConfiguration",
+      "type" : "BaseConnectorConfiguration"
+    },
+    "connectors" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.connector.BaseConnectorConfiguration",
+        "type" : "BaseConnectorConfiguration"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ConnectorResponse"
+}

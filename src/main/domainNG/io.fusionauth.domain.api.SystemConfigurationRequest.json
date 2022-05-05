@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.SystemConfigurationRequest",
+  "extends" : { },
+  "fields" : {
+    "systemConfiguration" : {
+      "className" : "io.fusionauth.domain.SystemConfiguration",
+      "type" : "SystemConfiguration"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "SystemConfigurationRequest"
+}

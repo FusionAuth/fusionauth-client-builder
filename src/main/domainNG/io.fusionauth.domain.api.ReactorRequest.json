@@ -1,0 +1,18 @@
+{
+  "className" : "io.fusionauth.domain.api.ReactorRequest",
+  "extends" : { },
+  "fields" : {
+    "license" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "licenseId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ReactorRequest"
+}

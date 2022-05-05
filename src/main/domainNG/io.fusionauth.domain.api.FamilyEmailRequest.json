@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.FamilyEmailRequest",
+  "extends" : { },
+  "fields" : {
+    "parentEmail" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "FamilyEmailRequest"
+}

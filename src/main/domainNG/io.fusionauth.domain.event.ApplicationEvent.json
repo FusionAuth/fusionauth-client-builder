@@ -1,0 +1,9 @@
+{
+  "className" : "io.fusionauth.domain.event.ApplicationEvent",
+  "extends" : { },
+  "fields" : { },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "ApplicationEvent"
+}

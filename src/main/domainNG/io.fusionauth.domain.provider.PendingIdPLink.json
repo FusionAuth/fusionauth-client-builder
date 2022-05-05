@@ -1,0 +1,65 @@
+{
+  "className" : "io.fusionauth.domain.provider.PendingIdPLink",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "displayName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "email" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "identityProviderId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "identityProviderLinks" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.IdentityProviderLink",
+        "type" : "IdentityProviderLink"
+      } ]
+    },
+    "identityProviderName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "identityProviderTenantConfiguration" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration",
+      "type" : "IdentityProviderTenantConfiguration"
+    },
+    "identityProviderType" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderType",
+      "type" : "IdentityProviderType"
+    },
+    "identityProviderUserId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "user" : {
+      "className" : "io.fusionauth.domain.User",
+      "type" : "User"
+    },
+    "username" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.PendingIdPLink",
+      "type" : "PendingIdPLink"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "PendingIdPLink"
+}

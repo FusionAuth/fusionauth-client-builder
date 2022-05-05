@@ -1,0 +1,36 @@
+{
+  "className" : "io.fusionauth.domain.api.twoFactor.TwoFactorLoginRequest",
+  "extends" : {
+    "className" : "io.fusionauth.domain.api.BaseLoginRequest",
+    "type" : "BaseLoginRequest",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "code" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "trustComputer" : {
+      "type" : "boolean"
+    },
+    "twoFactorId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.twoFactor.TwoFactorLoginRequest",
+      "type" : "TwoFactorLoginRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.twoFactor",
+  "type" : "TwoFactorLoginRequest"
+}

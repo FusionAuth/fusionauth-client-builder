@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.search.EntitySearchCriteria",
+  "extends" : {
+    "className" : "io.fusionauth.domain.search.BaseElasticSearchCriteria",
+    "type" : "BaseElasticSearchCriteria",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "SortableFields" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.search.EntitySearchCriteria",
+      "type" : "EntitySearchCriteria"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "EntitySearchCriteria"
+}

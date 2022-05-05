@@ -1,0 +1,21 @@
+{
+  "className" : "io.fusionauth.domain.form.ManagedFields",
+  "extends" : { },
+  "fields" : {
+    "Values" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "io.fusionauth.domain.form.FormField",
+        "type" : "FormField"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "ManagedFields"
+}

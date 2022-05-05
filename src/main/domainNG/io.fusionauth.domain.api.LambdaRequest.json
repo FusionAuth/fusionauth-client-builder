@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.LambdaRequest",
+  "extends" : { },
+  "fields" : {
+    "lambda" : {
+      "className" : "io.fusionauth.domain.Lambda",
+      "type" : "Lambda"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LambdaRequest"
+}

@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.ConsentResponse",
+  "extends" : { },
+  "fields" : {
+    "consent" : {
+      "className" : "io.fusionauth.domain.Consent",
+      "type" : "Consent"
+    },
+    "consents" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Consent",
+        "type" : "Consent"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ConsentResponse"
+}

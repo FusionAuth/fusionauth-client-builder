@@ -1,0 +1,28 @@
+{
+  "className" : "io.fusionauth.domain.event.EventLogCreateEvent",
+  "extends" : {
+    "className" : "io.fusionauth.domain.event.BaseEvent",
+    "type" : "BaseEvent",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "eventLog" : {
+      "className" : "io.fusionauth.domain.EventLog",
+      "type" : "EventLog"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.event.EventLogCreateEvent",
+      "type" : "EventLogCreateEvent"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.event.InstanceEvent",
+    "type" : "InstanceEvent"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "EventLogCreateEvent"
+}

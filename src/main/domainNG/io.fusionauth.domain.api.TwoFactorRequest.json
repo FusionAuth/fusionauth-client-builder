@@ -1,0 +1,53 @@
+{
+  "className" : "io.fusionauth.domain.api.TwoFactorRequest",
+  "extends" : {
+    "className" : "io.fusionauth.domain.api.BaseEventRequest",
+    "type" : "BaseEventRequest",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "authenticatorId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "code" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "email" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "method" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "mobilePhone" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "secret" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "secretBase32Encoded" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.TwoFactorRequest",
+      "type" : "TwoFactorRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TwoFactorRequest"
+}

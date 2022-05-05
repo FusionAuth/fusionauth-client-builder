@@ -1,0 +1,9 @@
+{
+  "className" : "io.fusionauth.domain.RequiresCORSConfiguration",
+  "extends" : { },
+  "fields" : { },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RequiresCORSConfiguration"
+}

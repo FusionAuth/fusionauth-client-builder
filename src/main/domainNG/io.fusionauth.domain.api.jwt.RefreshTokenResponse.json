@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.jwt.RefreshTokenResponse",
+  "extends" : { },
+  "fields" : {
+    "refreshToken" : {
+      "className" : "io.fusionauth.domain.jwt.RefreshToken",
+      "type" : "RefreshToken"
+    },
+    "refreshTokens" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.jwt.RefreshToken",
+        "type" : "RefreshToken"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "RefreshTokenResponse"
+}

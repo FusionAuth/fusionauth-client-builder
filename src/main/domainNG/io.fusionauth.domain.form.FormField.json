@@ -1,0 +1,86 @@
+{
+  "className" : "io.fusionauth.domain.form.FormField",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "confirm" : {
+      "type" : "boolean"
+    },
+    "consentId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "control" : {
+      "className" : "io.fusionauth.domain.form.FormControl",
+      "type" : "FormControl"
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "description" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "key" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "options" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "required" : {
+      "type" : "boolean"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.form.FormDataType",
+      "type" : "FormDataType"
+    },
+    "validator" : {
+      "className" : "io.fusionauth.domain.form.FormFieldValidator",
+      "type" : "FormFieldValidator"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.form.FormField",
+      "type" : "FormField"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "FormField"
+}

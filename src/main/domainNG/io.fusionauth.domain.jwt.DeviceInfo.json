@@ -1,0 +1,41 @@
+{
+  "className" : "io.fusionauth.domain.jwt.DeviceInfo",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "description" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "lastAccessedAddress" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "lastAccessedInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.jwt.DeviceInfo$DeviceType",
+      "type" : "DeviceInfo$DeviceType"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.jwt.DeviceInfo",
+      "type" : "DeviceInfo"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.jwt",
+  "type" : "DeviceInfo"
+}

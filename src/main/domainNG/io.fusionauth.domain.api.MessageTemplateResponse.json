@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.MessageTemplateResponse",
+  "extends" : { },
+  "fields" : {
+    "messageTemplate" : {
+      "className" : "io.fusionauth.domain.message.MessageTemplate",
+      "type" : "MessageTemplate"
+    },
+    "messageTemplates" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.message.MessageTemplate",
+        "type" : "MessageTemplate"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "MessageTemplateResponse"
+}

@@ -1,0 +1,37 @@
+{
+  "className" : "io.fusionauth.domain.api.twoFactor.TwoFactorStartResponse",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "code" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "methods" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.TwoFactorMethod",
+        "type" : "TwoFactorMethod"
+      } ]
+    },
+    "twoFactorId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.twoFactor.TwoFactorStartResponse",
+      "type" : "TwoFactorStartResponse"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.twoFactor",
+  "type" : "TwoFactorStartResponse"
+}

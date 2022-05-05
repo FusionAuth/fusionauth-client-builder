@@ -1,0 +1,28 @@
+{
+  "className" : "io.fusionauth.domain.api.BaseLoginRequest",
+  "extends" : { },
+  "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "ipAddress" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "metaData" : {
+      "className" : "io.fusionauth.domain.jwt.RefreshToken$MetaData",
+      "type" : "RefreshToken$MetaData"
+    },
+    "newDevice" : {
+      "type" : "boolean"
+    },
+    "noJWT" : {
+      "type" : "boolean"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "BaseLoginRequest"
+}

@@ -1,0 +1,21 @@
+{
+  "className" : "io.fusionauth.domain.api.OAuthConfigurationResponse",
+  "extends" : { },
+  "fields" : {
+    "httpSessionMaxInactiveInterval" : {
+      "type" : "int"
+    },
+    "logoutURL" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "oauthConfiguration" : {
+      "className" : "io.fusionauth.domain.oauth2.OAuth2Configuration",
+      "type" : "OAuth2Configuration"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "OAuthConfigurationResponse"
+}

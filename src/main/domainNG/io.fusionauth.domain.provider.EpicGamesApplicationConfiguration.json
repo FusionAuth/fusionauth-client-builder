@@ -1,0 +1,37 @@
+{
+  "className" : "io.fusionauth.domain.provider.EpicGamesApplicationConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration",
+    "type" : "BaseIdentityProviderApplicationConfiguration",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "buttonText" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "client_id" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "client_secret" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "scope" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.EpicGamesApplicationConfiguration",
+      "type" : "EpicGamesApplicationConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "EpicGamesApplicationConfiguration"
+}

@@ -1,0 +1,18 @@
+{
+  "className" : "io.fusionauth.domain.api.PendingResponse",
+  "extends" : { },
+  "fields" : {
+    "users" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.User",
+        "type" : "User"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "PendingResponse"
+}

@@ -1,0 +1,10 @@
+{
+  "className" : "io.fusionauth.domain.EventLogType",
+  "enum" : [ "Information", "Debug", "Error" ],
+  "extends" : { },
+  "fields" : { },
+  "interfaces" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EventLogType"
+}

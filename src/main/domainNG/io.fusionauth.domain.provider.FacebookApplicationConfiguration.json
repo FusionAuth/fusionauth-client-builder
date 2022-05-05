@@ -1,0 +1,45 @@
+{
+  "className" : "io.fusionauth.domain.provider.FacebookApplicationConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration",
+    "type" : "BaseIdentityProviderApplicationConfiguration",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "appId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "buttonText" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "client_secret" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "fields" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "loginMethod" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderLoginMethod",
+      "type" : "IdentityProviderLoginMethod"
+    },
+    "permissions" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.FacebookApplicationConfiguration",
+      "type" : "FacebookApplicationConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "FacebookApplicationConfiguration"
+}

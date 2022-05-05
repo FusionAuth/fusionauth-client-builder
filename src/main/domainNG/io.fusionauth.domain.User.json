@@ -1,0 +1,110 @@
+{
+  "className" : "io.fusionauth.domain.User",
+  "extends" : {
+    "className" : "io.fusionauth.domain.SecureIdentity",
+    "type" : "SecureIdentity",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "active" : {
+      "type" : "boolean"
+    },
+    "birthDate" : {
+      "className" : "java.time.LocalDate",
+      "type" : "LocalDate"
+    },
+    "cleanSpeakId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "email" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "expiry" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "firstName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "fullName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "imageUrl" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "middleName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "mobilePhone" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "parentEmail" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "preferredLanguages" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.Locale",
+        "type" : "Locale"
+      } ]
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "timezone" : {
+      "className" : "java.time.ZoneId",
+      "type" : "ZoneId"
+    },
+    "twoFactor" : {
+      "className" : "io.fusionauth.domain.UserTwoFactorConfiguration",
+      "type" : "UserTwoFactorConfiguration"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.User",
+      "type" : "User"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.Tenantable",
+    "type" : "Tenantable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "User"
+}

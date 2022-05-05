@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.AuditLogRequest",
+  "extends" : { },
+  "fields" : {
+    "auditLog" : {
+      "className" : "io.fusionauth.domain.AuditLog",
+      "type" : "AuditLog"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "AuditLogRequest"
+}

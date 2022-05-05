@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.EmailTemplateResponse",
+  "extends" : { },
+  "fields" : {
+    "emailTemplate" : {
+      "className" : "io.fusionauth.domain.email.EmailTemplate",
+      "type" : "EmailTemplate"
+    },
+    "emailTemplates" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.email.EmailTemplate",
+        "type" : "EmailTemplate"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EmailTemplateResponse"
+}

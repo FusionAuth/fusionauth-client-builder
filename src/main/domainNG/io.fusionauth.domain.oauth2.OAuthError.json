@@ -1,0 +1,42 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.OAuthError",
+  "extends" : { },
+  "fields" : {
+    "changePasswordId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "description" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "error" : {
+      "className" : "io.fusionauth.domain.oauth2.OAuthError$OAuthErrorType",
+      "type" : "OAuthError$OAuthErrorType"
+    },
+    "errorURI" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "methods" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.TwoFactorMethod",
+        "type" : "TwoFactorMethod"
+      } ]
+    },
+    "reason" : {
+      "className" : "io.fusionauth.domain.oauth2.OAuthError$OAuthErrorReason",
+      "type" : "OAuthError$OAuthErrorReason"
+    },
+    "twoFactorId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthError"
+}

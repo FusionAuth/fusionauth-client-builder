@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.EntityTypeSearchRequest",
+  "extends" : { },
+  "fields" : {
+    "search" : {
+      "className" : "io.fusionauth.domain.search.EntityTypeSearchCriteria",
+      "type" : "EntityTypeSearchCriteria"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EntityTypeSearchRequest"
+}

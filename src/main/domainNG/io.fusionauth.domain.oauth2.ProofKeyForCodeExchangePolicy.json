@@ -1,0 +1,10 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.ProofKeyForCodeExchangePolicy",
+  "enum" : [ "Required", "NotRequired", "NotRequiredWhenUsingClientAuthentication" ],
+  "extends" : { },
+  "fields" : { },
+  "interfaces" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "ProofKeyForCodeExchangePolicy"
+}

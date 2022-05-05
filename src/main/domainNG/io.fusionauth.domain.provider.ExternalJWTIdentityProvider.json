@@ -1,0 +1,62 @@
+{
+  "className" : "io.fusionauth.domain.provider.ExternalJWTIdentityProvider",
+  "extends" : {
+    "className" : "io.fusionauth.domain.provider.BaseIdentityProvider",
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.ExternalJWTApplicationConfiguration",
+      "type" : "ExternalJWTApplicationConfiguration"
+    } ]
+  },
+  "fields" : {
+    "claimMap" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "defaultKeyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "domains" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "headerKeyParameter" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration",
+      "type" : "IdentityProviderOauth2Configuration"
+    },
+    "uniqueIdentityClaim" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.ExternalJWTIdentityProvider",
+      "type" : "ExternalJWTIdentityProvider"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.provider.DomainBasedIdentityProvider",
+    "type" : "DomainBasedIdentityProvider"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "ExternalJWTIdentityProvider"
+}

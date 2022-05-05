@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.VersionResponse",
+  "extends" : { },
+  "fields" : {
+    "version" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "VersionResponse"
+}

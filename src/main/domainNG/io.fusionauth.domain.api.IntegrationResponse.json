@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.IntegrationResponse",
+  "extends" : { },
+  "fields" : {
+    "integrations" : {
+      "className" : "io.fusionauth.domain.Integrations",
+      "type" : "Integrations"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "IntegrationResponse"
+}

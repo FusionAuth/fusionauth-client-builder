@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.ReindexRequest",
+  "extends" : { },
+  "fields" : {
+    "index" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ReindexRequest"
+}

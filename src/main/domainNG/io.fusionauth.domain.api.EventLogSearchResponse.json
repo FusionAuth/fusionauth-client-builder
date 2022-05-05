@@ -1,0 +1,21 @@
+{
+  "className" : "io.fusionauth.domain.api.EventLogSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "eventLogs" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.EventLog",
+        "type" : "EventLog"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EventLogSearchResponse"
+}

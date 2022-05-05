@@ -1,0 +1,18 @@
+{
+  "className" : "io.fusionauth.domain.api.cache.ReloadRequest",
+  "extends" : { },
+  "fields" : {
+    "names" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.cache",
+  "type" : "ReloadRequest"
+}

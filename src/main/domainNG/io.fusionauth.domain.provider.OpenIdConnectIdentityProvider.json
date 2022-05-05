@@ -1,0 +1,53 @@
+{
+  "className" : "io.fusionauth.domain.provider.OpenIdConnectIdentityProvider",
+  "extends" : {
+    "className" : "io.fusionauth.domain.provider.BaseIdentityProvider",
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.OpenIdConnectApplicationConfiguration",
+      "type" : "OpenIdConnectApplicationConfiguration"
+    } ]
+  },
+  "fields" : {
+    "buttonImageURL" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "buttonText" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "domains" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "oauth2" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration",
+      "type" : "IdentityProviderOauth2Configuration"
+    },
+    "postRequest" : {
+      "type" : "boolean"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.OpenIdConnectIdentityProvider",
+      "type" : "OpenIdConnectIdentityProvider"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.provider.DomainBasedIdentityProvider",
+    "type" : "DomainBasedIdentityProvider"
+  }, {
+    "className" : "io.fusionauth.domain.provider.SupportsPostBindings",
+    "type" : "SupportsPostBindings"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "OpenIdConnectIdentityProvider"
+}

@@ -1,0 +1,47 @@
+{
+  "className" : "io.fusionauth.domain.connector.GenericConnectorConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.connector.BaseConnectorConfiguration",
+    "type" : "BaseConnectorConfiguration",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "authenticationURL" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "connectTimeout" : {
+      "type" : "int"
+    },
+    "headers" : {
+      "className" : "io.fusionauth.domain.HTTPHeaders",
+      "type" : "HTTPHeaders"
+    },
+    "httpAuthenticationPassword" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "httpAuthenticationUsername" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "readTimeout" : {
+      "type" : "int"
+    },
+    "sslCertificateKeyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.connector.GenericConnectorConfiguration",
+      "type" : "GenericConnectorConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.connector",
+  "type" : "GenericConnectorConfiguration"
+}

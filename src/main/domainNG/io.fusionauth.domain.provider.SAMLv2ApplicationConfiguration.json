@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.provider.SAMLv2ApplicationConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration",
+    "type" : "BaseIdentityProviderApplicationConfiguration",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "buttonImageURL" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "buttonText" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.SAMLv2ApplicationConfiguration",
+      "type" : "SAMLv2ApplicationConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SAMLv2ApplicationConfiguration"
+}

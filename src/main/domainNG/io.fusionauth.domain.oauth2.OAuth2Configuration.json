@@ -1,0 +1,85 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.OAuth2Configuration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "authorizedOriginURLs" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.net.URI",
+        "type" : "URI"
+      } ]
+    },
+    "authorizedRedirectURLs" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.net.URI",
+        "type" : "URI"
+      } ]
+    },
+    "clientAuthenticationPolicy" : {
+      "className" : "io.fusionauth.domain.oauth2.ClientAuthenticationPolicy",
+      "type" : "ClientAuthenticationPolicy"
+    },
+    "clientId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "clientSecret" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "deviceVerificationURL" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "enabledGrants" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.oauth2.GrantType",
+        "type" : "GrantType"
+      } ]
+    },
+    "generateRefreshTokens" : {
+      "type" : "boolean"
+    },
+    "logoutBehavior" : {
+      "className" : "io.fusionauth.domain.oauth2.LogoutBehavior",
+      "type" : "LogoutBehavior"
+    },
+    "logoutURL" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "proofKeyForCodeExchangePolicy" : {
+      "className" : "io.fusionauth.domain.oauth2.ProofKeyForCodeExchangePolicy",
+      "type" : "ProofKeyForCodeExchangePolicy"
+    },
+    "requireClientAuthentication" : {
+      "type" : "boolean"
+    },
+    "requireRegistration" : {
+      "type" : "boolean"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.oauth2.OAuth2Configuration",
+      "type" : "OAuth2Configuration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuth2Configuration"
+}

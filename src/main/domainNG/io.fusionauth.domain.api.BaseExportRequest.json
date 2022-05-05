@@ -1,0 +1,18 @@
+{
+  "className" : "io.fusionauth.domain.api.BaseExportRequest",
+  "extends" : { },
+  "fields" : {
+    "dateTimeSecondsFormat" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "zoneId" : {
+      "className" : "java.time.ZoneId",
+      "type" : "ZoneId"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "BaseExportRequest"
+}

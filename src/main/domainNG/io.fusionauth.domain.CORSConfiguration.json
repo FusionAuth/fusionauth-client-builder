@@ -1,0 +1,62 @@
+{
+  "className" : "io.fusionauth.domain.CORSConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "allowCredentials" : {
+      "type" : "boolean"
+    },
+    "allowedHeaders" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "allowedMethods" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.util.HTTPMethod",
+        "type" : "HTTPMethod"
+      } ]
+    },
+    "allowedOrigins" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.net.URI",
+        "type" : "URI"
+      } ]
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "exposedHeaders" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "preflightMaxAgeInSeconds" : {
+      "type" : "int"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.CORSConfiguration",
+      "type" : "CORSConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CORSConfiguration"
+}

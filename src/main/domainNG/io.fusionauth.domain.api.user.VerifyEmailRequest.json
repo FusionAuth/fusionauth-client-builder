@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.user.VerifyEmailRequest",
+  "extends" : { },
+  "fields" : {
+    "oneTimeCode" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "verificationId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "VerifyEmailRequest"
+}

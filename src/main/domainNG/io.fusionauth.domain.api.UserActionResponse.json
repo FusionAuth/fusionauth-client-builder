@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.UserActionResponse",
+  "extends" : { },
+  "fields" : {
+    "userAction" : {
+      "className" : "io.fusionauth.domain.UserAction",
+      "type" : "UserAction"
+    },
+    "userActions" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.UserAction",
+        "type" : "UserAction"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserActionResponse"
+}

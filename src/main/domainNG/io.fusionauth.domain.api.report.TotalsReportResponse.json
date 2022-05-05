@@ -1,0 +1,27 @@
+{
+  "className" : "io.fusionauth.domain.api.report.TotalsReportResponse",
+  "extends" : { },
+  "fields" : {
+    "applicationTotals" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      }, {
+        "className" : "io.fusionauth.domain.api.report.TotalsReportResponse$Totals",
+        "type" : "TotalsReportResponse$Totals"
+      } ]
+    },
+    "globalRegistrations" : {
+      "type" : "long"
+    },
+    "totalGlobalRegistrations" : {
+      "type" : "long"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.report",
+  "type" : "TotalsReportResponse"
+}

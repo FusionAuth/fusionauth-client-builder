@@ -1,0 +1,21 @@
+{
+  "className" : "io.fusionauth.domain.api.user.RefreshTokenImportRequest",
+  "extends" : { },
+  "fields" : {
+    "refreshTokens" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.jwt.RefreshToken",
+        "type" : "RefreshToken"
+      } ]
+    },
+    "validateDbConstraints" : {
+      "type" : "boolean"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "RefreshTokenImportRequest"
+}

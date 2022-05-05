@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.LambdaResponse",
+  "extends" : { },
+  "fields" : {
+    "lambda" : {
+      "className" : "io.fusionauth.domain.Lambda",
+      "type" : "Lambda"
+    },
+    "lambdas" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Lambda",
+        "type" : "Lambda"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LambdaResponse"
+}

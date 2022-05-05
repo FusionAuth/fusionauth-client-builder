@@ -1,0 +1,10 @@
+{
+  "className" : "io.fusionauth.domain.RateLimitedRequestType",
+  "enum" : [ "FailedLogin", "ForgotPassword", "SendEmailVerification", "SendPasswordless", "SendRegistrationVerification", "SendTwoFactor" ],
+  "extends" : { },
+  "fields" : { },
+  "interfaces" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RateLimitedRequestType"
+}

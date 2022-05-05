@@ -1,0 +1,18 @@
+{
+  "className" : "io.fusionauth.domain.ApplicationMultiFactorConfiguration",
+  "extends" : { },
+  "fields" : {
+    "email" : {
+      "className" : "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorEmailTemplate",
+      "type" : "ApplicationMultiFactorConfiguration$MultiFactorEmailTemplate"
+    },
+    "sms" : {
+      "className" : "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorSMSTemplate",
+      "type" : "ApplicationMultiFactorConfiguration$MultiFactorSMSTemplate"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationMultiFactorConfiguration"
+}

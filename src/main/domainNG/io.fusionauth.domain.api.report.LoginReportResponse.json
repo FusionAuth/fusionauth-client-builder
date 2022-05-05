@@ -1,0 +1,21 @@
+{
+  "className" : "io.fusionauth.domain.api.report.LoginReportResponse",
+  "extends" : { },
+  "fields" : {
+    "hourlyCounts" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.api.report.Count",
+        "type" : "Count"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.report",
+  "type" : "LoginReportResponse"
+}

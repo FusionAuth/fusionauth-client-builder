@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.IPAccessControlListRequest",
+  "extends" : { },
+  "fields" : {
+    "ipAccessControlList" : {
+      "className" : "io.fusionauth.domain.IPAccessControlList",
+      "type" : "IPAccessControlList"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "IPAccessControlListRequest"
+}

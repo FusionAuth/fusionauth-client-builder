@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.JWKSResponse",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "keys" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.jwks.domain.JSONWebKey",
+        "type" : "JSONWebKey"
+      } ]
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.oauth2.JWKSResponse",
+      "type" : "JWKSResponse"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "JWKSResponse"
+}

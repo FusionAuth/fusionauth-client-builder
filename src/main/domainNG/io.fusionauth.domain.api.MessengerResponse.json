@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.MessengerResponse",
+  "extends" : { },
+  "fields" : {
+    "messenger" : {
+      "className" : "io.fusionauth.domain.messenger.BaseMessengerConfiguration",
+      "type" : "BaseMessengerConfiguration"
+    },
+    "messengers" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.messenger.BaseMessengerConfiguration",
+        "type" : "BaseMessengerConfiguration"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "MessengerResponse"
+}

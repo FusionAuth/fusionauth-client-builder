@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.UserCommentResponse",
+  "extends" : { },
+  "fields" : {
+    "userComment" : {
+      "className" : "io.fusionauth.domain.UserComment",
+      "type" : "UserComment"
+    },
+    "userComments" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.UserComment",
+        "type" : "UserComment"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserCommentResponse"
+}

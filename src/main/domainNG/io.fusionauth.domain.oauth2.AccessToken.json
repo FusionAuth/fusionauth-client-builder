@@ -1,0 +1,60 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.AccessToken",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "clientId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "expiresIn" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
+    "idToken" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "redirectURI" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "refreshToken" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "scope" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "token" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "tokenType" : {
+      "className" : "io.fusionauth.domain.oauth2.TokenType",
+      "type" : "TokenType"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.oauth2.OAuthResponse",
+    "type" : "OAuthResponse"
+  }, {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.oauth2.AccessToken",
+      "type" : "AccessToken"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "AccessToken"
+}

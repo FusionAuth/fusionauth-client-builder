@@ -1,0 +1,39 @@
+{
+  "className" : "io.fusionauth.domain.KafkaConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "defaultTopic" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "producer" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.KafkaConfiguration",
+      "type" : "KafkaConfiguration"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.Integration",
+    "type" : "Integration"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "KafkaConfiguration"
+}

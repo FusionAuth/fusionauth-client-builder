@@ -1,0 +1,24 @@
+{
+  "className" : "io.fusionauth.domain.provider.IdentityProviderLimitUserLinkingPolicy",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "maximumLinks" : {
+      "type" : "int"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderLimitUserLinkingPolicy",
+      "type" : "IdentityProviderLimitUserLinkingPolicy"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderLimitUserLinkingPolicy"
+}

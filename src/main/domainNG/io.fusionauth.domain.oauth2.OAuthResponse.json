@@ -1,0 +1,9 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.OAuthResponse",
+  "extends" : { },
+  "fields" : { },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthResponse"
+}

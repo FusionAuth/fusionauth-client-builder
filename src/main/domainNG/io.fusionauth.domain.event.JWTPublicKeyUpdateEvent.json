@@ -1,0 +1,32 @@
+{
+  "className" : "io.fusionauth.domain.event.JWTPublicKeyUpdateEvent",
+  "extends" : {
+    "className" : "io.fusionauth.domain.event.BaseEvent",
+    "type" : "BaseEvent",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "applicationIds" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.event.JWTPublicKeyUpdateEvent",
+      "type" : "JWTPublicKeyUpdateEvent"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.event.ApplicationEvent",
+    "type" : "ApplicationEvent"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "JWTPublicKeyUpdateEvent"
+}

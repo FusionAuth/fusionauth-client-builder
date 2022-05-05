@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.RegistrationUnverifiedOptions",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "behavior" : {
+      "className" : "io.fusionauth.domain.UnverifiedBehavior",
+      "type" : "UnverifiedBehavior"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.RegistrationUnverifiedOptions",
+      "type" : "RegistrationUnverifiedOptions"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RegistrationUnverifiedOptions"
+}

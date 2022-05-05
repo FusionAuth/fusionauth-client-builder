@@ -1,0 +1,73 @@
+{
+  "className" : "io.fusionauth.domain.email.Email",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "attachments" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.email.Attachment",
+        "type" : "Attachment"
+      } ]
+    },
+    "bcc" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.email.EmailAddress",
+        "type" : "EmailAddress"
+      } ]
+    },
+    "cc" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.email.EmailAddress",
+        "type" : "EmailAddress"
+      } ]
+    },
+    "from" : {
+      "className" : "io.fusionauth.domain.email.EmailAddress",
+      "type" : "EmailAddress"
+    },
+    "html" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "replyTo" : {
+      "className" : "io.fusionauth.domain.email.EmailAddress",
+      "type" : "EmailAddress"
+    },
+    "subject" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "text" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "to" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.email.EmailAddress",
+        "type" : "EmailAddress"
+      } ]
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.email.Email",
+      "type" : "Email"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.email",
+  "type" : "Email"
+}

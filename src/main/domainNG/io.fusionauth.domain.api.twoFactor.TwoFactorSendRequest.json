@@ -1,0 +1,41 @@
+{
+  "className" : "io.fusionauth.domain.api.twoFactor.TwoFactorSendRequest",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "email" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "method" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "methodId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "mobilePhone" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.twoFactor.TwoFactorSendRequest",
+      "type" : "TwoFactorSendRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.twoFactor",
+  "type" : "TwoFactorSendRequest"
+}

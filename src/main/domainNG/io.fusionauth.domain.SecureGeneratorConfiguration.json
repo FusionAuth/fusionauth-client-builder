@@ -1,0 +1,17 @@
+{
+  "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+  "extends" : { },
+  "fields" : {
+    "length" : {
+      "type" : "int"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorType",
+      "type" : "SecureGeneratorType"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SecureGeneratorConfiguration"
+}

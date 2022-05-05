@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.UserActionReasonResponse",
+  "extends" : { },
+  "fields" : {
+    "userActionReason" : {
+      "className" : "io.fusionauth.domain.UserActionReason",
+      "type" : "UserActionReason"
+    },
+    "userActionReasons" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.UserActionReason",
+        "type" : "UserActionReason"
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserActionReasonResponse"
+}

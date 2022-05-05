@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.ApplicationRegistrationDeletePolicy",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "unverified" : {
+      "className" : "io.fusionauth.domain.TimeBasedDeletePolicy",
+      "type" : "TimeBasedDeletePolicy"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.ApplicationRegistrationDeletePolicy",
+      "type" : "ApplicationRegistrationDeletePolicy"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationRegistrationDeletePolicy"
+}

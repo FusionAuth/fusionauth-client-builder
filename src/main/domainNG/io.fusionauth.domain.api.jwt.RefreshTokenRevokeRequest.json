@@ -1,0 +1,33 @@
+{
+  "className" : "io.fusionauth.domain.api.jwt.RefreshTokenRevokeRequest",
+  "extends" : {
+    "className" : "io.fusionauth.domain.api.BaseEventRequest",
+    "type" : "BaseEventRequest",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "token" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.jwt.RefreshTokenRevokeRequest",
+      "type" : "RefreshTokenRevokeRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "RefreshTokenRevokeRequest"
+}

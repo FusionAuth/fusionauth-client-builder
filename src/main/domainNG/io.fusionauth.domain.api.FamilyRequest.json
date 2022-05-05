@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.FamilyRequest",
+  "extends" : { },
+  "fields" : {
+    "familyMember" : {
+      "className" : "io.fusionauth.domain.FamilyMember",
+      "type" : "FamilyMember"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "FamilyRequest"
+}

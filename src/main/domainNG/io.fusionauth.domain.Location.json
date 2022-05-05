@@ -1,0 +1,43 @@
+{
+  "className" : "io.fusionauth.domain.Location",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "city" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "country" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "latitude" : {
+      "type" : "double"
+    },
+    "longitude" : {
+      "type" : "double"
+    },
+    "region" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "zipcode" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Location",
+      "type" : "Location"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Location"
+}

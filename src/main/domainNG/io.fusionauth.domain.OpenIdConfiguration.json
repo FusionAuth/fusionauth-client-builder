@@ -1,0 +1,127 @@
+{
+  "className" : "io.fusionauth.domain.OpenIdConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "authorization_endpoint" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "backchannel_logout_supported" : {
+      "type" : "boolean"
+    },
+    "claims_supported" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "device_authorization_endpoint" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "end_session_endpoint" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "frontchannel_logout_supported" : {
+      "type" : "boolean"
+    },
+    "grant_types_supported" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "id_token_signing_alg_values_supported" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "issuer" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "jwks_uri" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "response_modes_supported" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "response_types_supported" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "scopes_supported" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "subject_types_supported" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "token_endpoint" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "token_endpoint_auth_methods_supported" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "userinfo_endpoint" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userinfo_signing_alg_values_supported" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.OpenIdConfiguration",
+      "type" : "OpenIdConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "OpenIdConfiguration"
+}

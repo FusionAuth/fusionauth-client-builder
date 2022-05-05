@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.EntityGrantRequest",
+  "extends" : { },
+  "fields" : {
+    "grant" : {
+      "className" : "io.fusionauth.domain.EntityGrant",
+      "type" : "EntityGrant"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EntityGrantRequest"
+}

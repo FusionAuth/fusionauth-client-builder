@@ -1,0 +1,9 @@
+{
+  "className" : "io.fusionauth.domain.provider.SupportsPostBindings",
+  "extends" : { },
+  "fields" : { },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SupportsPostBindings"
+}

@@ -1,0 +1,28 @@
+{
+  "className" : "io.fusionauth.domain.api.LogoutRequest",
+  "extends" : {
+    "className" : "io.fusionauth.domain.api.BaseEventRequest",
+    "type" : "BaseEventRequest",
+    "typeArguments" : [ ]
+  },
+  "fields" : {
+    "global" : {
+      "type" : "boolean"
+    },
+    "refreshToken" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.LogoutRequest",
+      "type" : "LogoutRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LogoutRequest"
+}

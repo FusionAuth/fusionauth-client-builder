@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.event.EventRequest",
+  "extends" : { },
+  "fields" : {
+    "event" : {
+      "className" : "io.fusionauth.domain.event.BaseEvent",
+      "type" : "BaseEvent"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "EventRequest"
+}
