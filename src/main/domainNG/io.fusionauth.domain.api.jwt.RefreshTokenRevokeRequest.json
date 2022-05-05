@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.api.jwt.RefreshTokenRevokeRequest",
   "extends" : {
     "className" : "io.fusionauth.domain.api.BaseEventRequest",
-    "type" : "BaseEventRequest",
-    "typeArguments" : [ ]
+    "type" : "BaseEventRequest"
   },
   "fields" : {
     "applicationId" : {

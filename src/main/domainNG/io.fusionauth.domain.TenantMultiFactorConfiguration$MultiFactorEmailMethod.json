@@ -1,0 +1,24 @@
+{
+  "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorEmailMethod",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "templateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorEmailMethod",
+      "type" : "TenantMultiFactorConfiguration$MultiFactorEmailMethod"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantMultiFactorConfiguration$MultiFactorEmailMethod"
+}

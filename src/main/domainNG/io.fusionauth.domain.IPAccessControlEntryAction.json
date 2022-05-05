@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.IPAccessControlEntryAction",
   "enum" : [ "Allow", "Block" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "IPAccessControlEntryAction"

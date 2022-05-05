@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.ExpiryUnit",
   "enum" : [ "MINUTES", "HOURS", "DAYS", "WEEKS", "MONTHS", "YEARS" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "ExpiryUnit"

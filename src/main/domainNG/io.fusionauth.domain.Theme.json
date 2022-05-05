@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.Theme",
   "extends" : {
     "className" : "java.lang.Object",
-    "type" : "Object",
-    "typeArguments" : [ ]
+    "type" : "Object"
   },
   "fields" : {
     "FUSIONAUTH_THEME_ID" : {

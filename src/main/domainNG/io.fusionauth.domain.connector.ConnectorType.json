@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.connector.ConnectorType",
   "enum" : [ "FusionAuth", "Generic", "LDAP" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.connector",
   "type" : "ConnectorType"

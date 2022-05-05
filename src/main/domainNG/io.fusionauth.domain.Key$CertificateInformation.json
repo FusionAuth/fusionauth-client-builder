@@ -1,0 +1,50 @@
+{
+  "className" : "io.fusionauth.domain.Key$CertificateInformation",
+  "extends" : { },
+  "fields" : {
+    "issuer" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "md5Fingerprint" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "serialNumber" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "sha1Fingerprint" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "sha1Thumbprint" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "sha256Fingerprint" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "sha256Thumbprint" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "subject" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "validFrom" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "validTo" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Key$CertificateInformation"
+}

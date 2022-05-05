@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.oauth2.GrantType",
   "enum" : [ "authorization_code", "implicit", "password", "client_credentials", "refresh_token", "unknown", "device_code" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.oauth2",
   "type" : "GrantType"

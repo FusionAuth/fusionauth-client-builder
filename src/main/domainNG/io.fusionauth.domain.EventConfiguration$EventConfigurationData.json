@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.EventConfiguration$EventConfigurationData",
+  "extends" : { },
+  "fields" : {
+    "transactionType" : {
+      "className" : "io.fusionauth.domain.TransactionType",
+      "type" : "TransactionType"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EventConfiguration$EventConfigurationData"
+}

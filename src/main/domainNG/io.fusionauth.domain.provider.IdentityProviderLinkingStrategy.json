@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.provider.IdentityProviderLinkingStrategy",
   "enum" : [ "CreatePendingLink", "LinkAnonymously", "LinkByEmail", "LinkByEmailForExistingUser", "LinkByUsername", "LinkByUsernameForExistingUser", "Unsupported" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.provider",
   "type" : "IdentityProviderLinkingStrategy"

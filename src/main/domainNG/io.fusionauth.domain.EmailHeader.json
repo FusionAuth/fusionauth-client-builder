@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.EmailHeader",
   "extends" : {
     "className" : "java.lang.Object",
-    "type" : "Object",
-    "typeArguments" : [ ]
+    "type" : "Object"
   },
   "fields" : {
     "name" : {

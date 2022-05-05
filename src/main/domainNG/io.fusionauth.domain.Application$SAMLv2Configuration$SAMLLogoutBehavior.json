@@ -1,0 +1,7 @@
+{
+  "className" : "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLLogoutBehavior",
+  "enum" : [ "AllParticipants", "OnlyOriginator" ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Application$SAMLv2Configuration$SAMLLogoutBehavior"
+}

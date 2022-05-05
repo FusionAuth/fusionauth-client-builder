@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.AuthenticationThreats",
   "enum" : [ "ImpossibleTravel" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "AuthenticationThreats"

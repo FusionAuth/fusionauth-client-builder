@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.message.sms.SMSMessageTemplate",
   "extends" : {
     "className" : "io.fusionauth.domain.message.MessageTemplate",
-    "type" : "MessageTemplate",
-    "typeArguments" : [ ]
+    "type" : "MessageTemplate"
   },
   "fields" : {
     "defaultTemplate" : {

@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.api.identityProvider.IdentityProviderLinkRequest",
   "extends" : {
     "className" : "io.fusionauth.domain.api.BaseEventRequest",
-    "type" : "BaseEventRequest",
-    "typeArguments" : [ ]
+    "type" : "BaseEventRequest"
   },
   "fields" : {
     "displayName" : {

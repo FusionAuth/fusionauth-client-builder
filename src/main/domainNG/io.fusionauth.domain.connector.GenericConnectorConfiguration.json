@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.connector.GenericConnectorConfiguration",
   "extends" : {
     "className" : "io.fusionauth.domain.connector.BaseConnectorConfiguration",
-    "type" : "BaseConnectorConfiguration",
-    "typeArguments" : [ ]
+    "type" : "BaseConnectorConfiguration"
   },
   "fields" : {
     "authenticationURL" : {

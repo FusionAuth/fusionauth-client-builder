@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
   "enum" : [ "ACTIVE", "DISCONNECTED", "PENDING", "DISABLED", "UNKNOWN" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.reactor",
   "type" : "ReactorFeatureStatus"

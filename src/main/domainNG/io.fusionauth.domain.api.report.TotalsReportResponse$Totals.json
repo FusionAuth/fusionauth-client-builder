@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.api.report.TotalsReportResponse$Totals",
+  "extends" : { },
+  "fields" : {
+    "logins" : {
+      "type" : "long"
+    },
+    "registrations" : {
+      "type" : "long"
+    },
+    "totalRegistrations" : {
+      "type" : "long"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.report",
+  "type" : "TotalsReportResponse$Totals"
+}

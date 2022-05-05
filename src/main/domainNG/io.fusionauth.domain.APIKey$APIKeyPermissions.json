@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.APIKey$APIKeyPermissions",
+  "extends" : { },
+  "fields" : {
+    "endpoints" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.util.Set",
+        "type" : "Set",
+        "typeArguments" : [ {
+          "className" : "java.lang.String",
+          "type" : "String"
+        } ]
+      } ]
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "APIKey$APIKeyPermissions"
+}

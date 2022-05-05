@@ -1,0 +1,27 @@
+{
+  "className" : "io.fusionauth.domain.EntityType$EntityJWTConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "accessTokenKeyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "timeToLiveInSeconds" : {
+      "type" : "int"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.EntityType$EntityJWTConfiguration",
+      "type" : "EntityType$EntityJWTConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EntityType$EntityJWTConfiguration"
+}

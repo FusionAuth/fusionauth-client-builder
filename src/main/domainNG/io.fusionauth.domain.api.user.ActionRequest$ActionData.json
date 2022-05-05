@@ -1,0 +1,62 @@
+{
+  "className" : "io.fusionauth.domain.api.user.ActionRequest$ActionData",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "actioneeUserId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "actionerUserId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "applicationIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    },
+    "comment" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "emailUser" : {
+      "type" : "boolean"
+    },
+    "expiry" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "notifyUser" : {
+      "type" : "boolean"
+    },
+    "option" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "reasonId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "userActionId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.user.ActionRequest$ActionData",
+      "type" : "ActionRequest$ActionData"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "ActionRequest$ActionData"
+}

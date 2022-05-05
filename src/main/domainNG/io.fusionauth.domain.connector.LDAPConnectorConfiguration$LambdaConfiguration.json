@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.connector.LDAPConnectorConfiguration$LambdaConfiguration",
+  "extends" : { },
+  "fields" : {
+    "reconcileId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.connector",
+  "type" : "LDAPConnectorConfiguration$LambdaConfiguration"
+}

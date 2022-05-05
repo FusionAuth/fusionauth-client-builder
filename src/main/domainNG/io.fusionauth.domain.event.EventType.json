@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.event.EventType",
   "enum" : [ "JWTPublicKeyUpdate", "JWTRefreshTokenRevoke", "JWTRefresh", "AuditLogCreate", "EventLogCreate", "KickstartSuccess", "UserAction", "UserBulkCreate", "UserCreate", "UserCreateComplete", "UserDeactivate", "UserDelete", "UserDeleteComplete", "UserEmailUpdate", "UserEmailVerified", "UserIdentityProviderLink", "UserIdentityProviderUnlink", "UserLoginIdDuplicateOnCreate", "UserLoginIdDuplicateOnUpdate", "UserLoginFailed", "UserLoginNewDevice", "UserLoginSuccess", "UserLoginSuspicious", "UserPasswordBreach", "UserPasswordResetSend", "UserPasswordResetStart", "UserPasswordResetSuccess", "UserPasswordUpdate", "UserReactivate", "UserRegistrationCreate", "UserRegistrationCreateComplete", "UserRegistrationDelete", "UserRegistrationDeleteComplete", "UserRegistrationUpdate", "UserRegistrationUpdateComplete", "UserRegistrationVerified", "UserTwoFactorMethodAdd", "UserTwoFactorMethodRemove", "UserUpdate", "UserUpdateComplete", "Test" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.event",
   "type" : "EventType"

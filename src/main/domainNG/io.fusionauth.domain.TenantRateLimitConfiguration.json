@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.TenantRateLimitConfiguration",
   "extends" : {
     "className" : "java.lang.Object",
-    "type" : "Object",
-    "typeArguments" : [ ]
+    "type" : "Object"
   },
   "fields" : {
     "failedLogin" : {

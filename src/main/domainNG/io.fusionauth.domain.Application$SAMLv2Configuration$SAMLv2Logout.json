@@ -1,0 +1,33 @@
+{
+  "className" : "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2Logout",
+  "extends" : { },
+  "fields" : {
+    "behavior" : {
+      "className" : "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLLogoutBehavior",
+      "type" : "Application$SAMLv2Configuration$SAMLLogoutBehavior"
+    },
+    "defaultVerificationKeyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "keyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "requireSignedRequests" : {
+      "type" : "boolean"
+    },
+    "singleLogout" : {
+      "className" : "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2SingleLogout",
+      "type" : "Application$SAMLv2Configuration$SAMLv2SingleLogout"
+    },
+    "xmlSignatureC14nMethod" : {
+      "className" : "io.fusionauth.domain.CanonicalizationMethod",
+      "type" : "CanonicalizationMethod"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Application$SAMLv2Configuration$SAMLv2Logout"
+}

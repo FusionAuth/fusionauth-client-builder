@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.oauth2.LogoutBehavior",
   "enum" : [ "RedirectOnly", "AllApplications" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.oauth2",
   "type" : "LogoutBehavior"

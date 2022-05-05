@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.EmailConfiguration",
   "extends" : {
     "className" : "java.lang.Object",
-    "type" : "Object",
-    "typeArguments" : [ ]
+    "type" : "Object"
   },
   "fields" : {
     "EmailTemplateIdFieldNames" : {

@@ -1,0 +1,24 @@
+{
+  "className" : "io.fusionauth.domain.CleanSpeakConfiguration$UsernameModeration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.CleanSpeakConfiguration$UsernameModeration",
+      "type" : "CleanSpeakConfiguration$UsernameModeration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CleanSpeakConfiguration$UsernameModeration"
+}

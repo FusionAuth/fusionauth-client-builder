@@ -1,0 +1,20 @@
+{
+  "className" : "io.fusionauth.domain.Consent$EmailPlus",
+  "extends" : { },
+  "fields" : {
+    "emailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "maximumTimeToSendEmailInHours" : {
+      "type" : "int"
+    },
+    "minimumTimeToSendEmailInHours" : {
+      "type" : "int"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Consent$EmailPlus"
+}

@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.form.FormFieldAdminPolicy",
   "enum" : [ "Edit", "View" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.form",
   "type" : "FormFieldAdminPolicy"

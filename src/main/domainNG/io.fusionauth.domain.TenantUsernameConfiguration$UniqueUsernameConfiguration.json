@@ -1,0 +1,31 @@
+{
+  "className" : "io.fusionauth.domain.TenantUsernameConfiguration$UniqueUsernameConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "numberOfDigits" : {
+      "type" : "int"
+    },
+    "separator" : {
+      "className" : "java.lang.Character",
+      "type" : "Character"
+    },
+    "strategy" : {
+      "className" : "io.fusionauth.domain.TenantUsernameConfiguration$UniqueUsernameStrategy",
+      "type" : "TenantUsernameConfiguration$UniqueUsernameStrategy"
+    }
+  },
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TenantUsernameConfiguration$UniqueUsernameConfiguration",
+      "type" : "TenantUsernameConfiguration$UniqueUsernameConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantUsernameConfiguration$UniqueUsernameConfiguration"
+}

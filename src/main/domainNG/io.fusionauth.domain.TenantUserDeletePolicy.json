@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.TenantUserDeletePolicy",
   "extends" : {
     "className" : "java.lang.Object",
-    "type" : "Object",
-    "typeArguments" : [ ]
+    "type" : "Object"
   },
   "fields" : {
     "unverified" : {

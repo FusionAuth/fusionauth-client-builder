@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.SystemConfiguration$LoginRecordConfiguration",
+  "extends" : { },
+  "fields" : {
+    "delete" : {
+      "className" : "io.fusionauth.domain.SystemConfiguration$DeleteConfiguration",
+      "type" : "SystemConfiguration$DeleteConfiguration"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SystemConfiguration$LoginRecordConfiguration"
+}

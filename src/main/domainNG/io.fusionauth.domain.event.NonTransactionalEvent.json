@@ -1,9 +1,8 @@
 {
   "className" : "io.fusionauth.domain.event.NonTransactionalEvent",
-  "extends" : { },
   "fields" : { },
   "interfaces" : [ ],
-  "objectType" : "Object",
+  "objectType" : "Interface",
   "packageName" : "io.fusionauth.domain.event",
   "type" : "NonTransactionalEvent"
 }

@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.messenger.KafkaMessengerConfiguration",
   "extends" : {
     "className" : "io.fusionauth.domain.messenger.BaseMessengerConfiguration",
-    "type" : "BaseMessengerConfiguration",
-    "typeArguments" : [ ]
+    "type" : "BaseMessengerConfiguration"
   },
   "fields" : {
     "defaultTopic" : {

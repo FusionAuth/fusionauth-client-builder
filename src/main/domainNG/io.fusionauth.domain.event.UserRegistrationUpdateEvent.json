@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.event.UserRegistrationUpdateEvent",
   "extends" : {
     "className" : "io.fusionauth.domain.event.BaseEvent",
-    "type" : "BaseEvent",
-    "typeArguments" : [ ]
+    "type" : "BaseEvent"
   },
   "fields" : {
     "applicationId" : {

@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.User",
   "extends" : {
     "className" : "io.fusionauth.domain.SecureIdentity",
-    "type" : "SecureIdentity",
-    "typeArguments" : [ ]
+    "type" : "SecureIdentity"
   },
   "fields" : {
     "active" : {

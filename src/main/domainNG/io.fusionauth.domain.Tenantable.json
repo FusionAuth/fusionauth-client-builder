@@ -1,9 +1,8 @@
 {
   "className" : "io.fusionauth.domain.Tenantable",
-  "extends" : { },
   "fields" : { },
   "interfaces" : [ ],
-  "objectType" : "Object",
+  "objectType" : "Interface",
   "packageName" : "io.fusionauth.domain",
   "type" : "Tenantable"
 }

@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.KeyUse",
   "enum" : [ "SignOnly", "SignAndVerify", "VerifyOnly" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "KeyUse"

@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.oauth2.AccessToken",
   "extends" : {
     "className" : "java.lang.Object",
-    "type" : "Object",
-    "typeArguments" : [ ]
+    "type" : "Object"
   },
   "fields" : {
     "clientId" : {

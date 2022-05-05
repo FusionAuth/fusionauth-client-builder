@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.api.twoFactor.TwoFactorLoginRequest",
   "extends" : {
     "className" : "io.fusionauth.domain.api.BaseLoginRequest",
-    "type" : "BaseLoginRequest",
-    "typeArguments" : [ ]
+    "type" : "BaseLoginRequest"
   },
   "fields" : {
     "code" : {

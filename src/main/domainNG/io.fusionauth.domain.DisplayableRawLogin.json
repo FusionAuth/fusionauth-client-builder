@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.DisplayableRawLogin",
   "extends" : {
     "className" : "io.fusionauth.domain.RawLogin",
-    "type" : "RawLogin",
-    "typeArguments" : [ ]
+    "type" : "RawLogin"
   },
   "fields" : {
     "applicationName" : {

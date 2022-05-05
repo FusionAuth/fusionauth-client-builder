@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.provider.LinkedInApplicationConfiguration",
   "extends" : {
     "className" : "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration",
-    "type" : "BaseIdentityProviderApplicationConfiguration",
-    "typeArguments" : [ ]
+    "type" : "BaseIdentityProviderApplicationConfiguration"
   },
   "fields" : {
     "buttonText" : {

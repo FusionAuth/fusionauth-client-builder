@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.ContentStatus",
   "enum" : [ "ACTIVE", "PENDING", "REJECTED" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "ContentStatus"

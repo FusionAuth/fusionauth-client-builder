@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration",
   "extends" : {
     "className" : "java.lang.Object",
-    "type" : "Object",
-    "typeArguments" : [ ]
+    "type" : "Object"
   },
   "fields" : {
     "authorization_endpoint" : {

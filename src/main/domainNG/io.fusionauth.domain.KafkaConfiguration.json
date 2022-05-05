@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.KafkaConfiguration",
   "extends" : {
     "className" : "io.fusionauth.domain.Enableable",
-    "type" : "Enableable",
-    "typeArguments" : [ ]
+    "type" : "Enableable"
   },
   "fields" : {
     "defaultTopic" : {

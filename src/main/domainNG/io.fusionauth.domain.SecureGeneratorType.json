@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.SecureGeneratorType",
   "enum" : [ "randomDigits", "randomBytes", "randomAlpha", "randomAlphaNumeric" ],
-  "extends" : { },
-  "fields" : { },
-  "interfaces" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "SecureGeneratorType"

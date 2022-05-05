@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.connector.ConnectorPolicy",
   "extends" : {
     "className" : "java.lang.Object",
-    "type" : "Object",
-    "typeArguments" : [ ]
+    "type" : "Object"
   },
   "fields" : {
     "connectorId" : {

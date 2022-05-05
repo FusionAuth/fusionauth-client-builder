@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.TimeBasedDeletePolicy",
   "extends" : {
     "className" : "io.fusionauth.domain.Enableable",
-    "type" : "Enableable",
-    "typeArguments" : [ ]
+    "type" : "Enableable"
   },
   "fields" : {
     "numberOfDaysToRetain" : {

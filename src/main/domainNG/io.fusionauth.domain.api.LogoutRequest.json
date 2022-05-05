@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.api.LogoutRequest",
   "extends" : {
     "className" : "io.fusionauth.domain.api.BaseEventRequest",
-    "type" : "BaseEventRequest",
-    "typeArguments" : [ ]
+    "type" : "BaseEventRequest"
   },
   "fields" : {
     "global" : {

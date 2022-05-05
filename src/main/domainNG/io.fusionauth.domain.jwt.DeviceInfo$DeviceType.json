@@ -1,0 +1,7 @@
+{
+  "className" : "io.fusionauth.domain.jwt.DeviceInfo$DeviceType",
+  "enum" : [ "BROWSER", "DESKTOP", "LAPTOP", "MOBILE", "OTHER", "SERVER", "TABLET", "TV", "UNKNOWN" ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.jwt",
+  "type" : "DeviceInfo$DeviceType"
+}

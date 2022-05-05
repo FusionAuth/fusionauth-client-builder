@@ -2,8 +2,7 @@
   "className" : "io.fusionauth.domain.search.IPAccessControlListSearchCriteria",
   "extends" : {
     "className" : "io.fusionauth.domain.search.BaseSearchCriteria",
-    "type" : "BaseSearchCriteria",
-    "typeArguments" : [ ]
+    "type" : "BaseSearchCriteria"
   },
   "fields" : {
     "SortableFields" : {

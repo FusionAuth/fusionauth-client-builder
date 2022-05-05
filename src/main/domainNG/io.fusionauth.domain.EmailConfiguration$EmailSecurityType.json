@@ -1,0 +1,7 @@
+{
+  "className" : "io.fusionauth.domain.EmailConfiguration$EmailSecurityType",
+  "enum" : [ "NONE", "SSL", "TLS" ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EmailConfiguration$EmailSecurityType"
+}

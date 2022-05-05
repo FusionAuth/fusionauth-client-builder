@@ -1,9 +1,8 @@
 {
   "className" : "io.fusionauth.domain.message.Message",
-  "extends" : { },
   "fields" : { },
   "interfaces" : [ ],
-  "objectType" : "Object",
+  "objectType" : "Interface",
   "packageName" : "io.fusionauth.domain.message",
   "type" : "Message"
 }

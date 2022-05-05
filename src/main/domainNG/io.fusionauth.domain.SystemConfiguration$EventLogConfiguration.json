@@ -1,0 +1,13 @@
+{
+  "className" : "io.fusionauth.domain.SystemConfiguration$EventLogConfiguration",
+  "extends" : { },
+  "fields" : {
+    "numberToRetain" : {
+      "type" : "int"
+    }
+  },
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SystemConfiguration$EventLogConfiguration"
+}
