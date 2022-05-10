@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2020, FusionAuth, All Rights Reserved
+ * Copyright (c) 2019-2022, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -160,6 +160,8 @@ target(name: "build-angular", description: "Build the Angular Client Library") {
 target(name: "build-java", description: "Build the Java Client Library") {
   clientLibrary.buildClient(template: "src/main/client/java.client.ftl",
                             outputFile: "../fusionauth-java-client/src/main/java/io/fusionauth/client/FusionAuthClient.java")
+  clientLibrary.buildClient(template: "src/main/client/java.client.ftl",
+                            outputFile: "../fusionauth-app/src/main/java/io/fusionauth/client/FusionAuthClient.java")
 }
 
 target(name: "build-php", description: "Build the PHP Client Library") {
@@ -241,7 +243,8 @@ target(name: "build-dart", description: "Build the Dart Client Library") {
 
 target(name: "build-openapi", description: "Build the OpenAPI file") {
   projVersion = project.version.toString()
-  cleanExecute(["ruby", "bin/build-openapi-yaml.rb", "--source-directory", "./src", "--out", "../fusionauth-openapi/openapi.yaml", "--api-version", projVersion])
+  cleanExecute(
+      ["ruby", "bin/build-openapi-yaml.rb", "--source-directory", "./src", "--out", "../fusionauth-openapi/openapi.yaml", "--api-version", projVersion])
 }
 
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
@@ -267,15 +270,15 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
 //
 target(name: "publish-all", description: "Publish all client libraries") {
   [
-   "dart-client",
-   "java-client",
-   "netcore-client",
-   "node-client",
-   "php-client",
-   "python-client",
-   "ruby-client",
-   "typescript-client",
-   "openapi"
+      "dart-client",
+      "java-client",
+      "netcore-client",
+      "node-client",
+      "php-client",
+      "python-client",
+      "ruby-client",
+      "typescript-client",
+      "openapi"
   ].each { client ->
     ProcessBuilder pb = new ProcessBuilder(
         "sb", "publish")
