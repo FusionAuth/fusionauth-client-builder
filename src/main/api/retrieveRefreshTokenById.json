@@ -1,7 +1,7 @@
 {
   "uri": "/api/jwt/refresh",
   "comments": [
-    "Retrieves a single refresh token by unique Id. This is not the same thing as the string value of the refresh token, if you have that, you already have what you need.."
+    "Retrieves a single refresh token by unique Id. This is not the same thing as the string value of the refresh token. If you have that, you already have what you need."
   ],
   "method": "get",
   "methodName": "retrieveRefreshTokenById",
@@ -9,9 +9,9 @@
   "errorResponse": "Errors",
   "params": [
     {
-      "name": "userId",
+      "name": "tokenId",
       "comments": [
-        "The Id of the user."
+        "The Id of the token."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
