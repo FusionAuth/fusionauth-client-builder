@@ -112,6 +112,7 @@
       } ]
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.List" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -10,6 +10,7 @@
       "type" : "EventLog"
     }
   },
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.InstanceEvent", "io.fusionauth.domain.EventLog" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

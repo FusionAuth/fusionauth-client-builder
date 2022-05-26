@@ -15,6 +15,7 @@
       } ]
     }
   },
+  "imports" : [ "io.fusionauth.domain.Theme", "java.util.List" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

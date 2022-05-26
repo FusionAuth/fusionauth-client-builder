@@ -33,6 +33,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.SAMLv2IdPInitiatedApplicationConfiguration", "java.lang.String", "java.util.UUID" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

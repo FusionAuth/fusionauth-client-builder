@@ -14,6 +14,7 @@
       "type" : "EntityTypePermission"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.EntityType", "io.fusionauth.domain.EntityTypePermission" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

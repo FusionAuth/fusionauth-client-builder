@@ -84,6 +84,7 @@
       "type" : "UUID"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID", "java.util.List", "java.lang.String", "java.lang.Boolean", "java.time.ZonedDateTime", "io.fusionauth.domain.LogHistory" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

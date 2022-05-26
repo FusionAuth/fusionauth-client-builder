@@ -18,6 +18,7 @@
       } ]
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.jwt.DeviceInfo", "java.util.Set", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

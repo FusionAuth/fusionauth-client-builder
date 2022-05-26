@@ -15,6 +15,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "java.lang.String", "java.util.UUID" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api.user",

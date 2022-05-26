@@ -1,6 +1,7 @@
 {
   "className" : "io.fusionauth.domain.connector.LDAPConnectorConfiguration$LDAPSecurityMethod",
   "enum" : [ "None", "LDAPS", "StartTLS" ],
+  "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.connector",
   "type" : "LDAPConnectorConfiguration$LDAPSecurityMethod"

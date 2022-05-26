@@ -14,6 +14,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "java.lang.Comparable", "io.fusionauth.domain.LocalizedStrings", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "java.lang.Comparable",
     "type" : "Comparable",

@@ -52,6 +52,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "io.fusionauth.domain.connector.BaseConnectorConfiguration", "io.fusionauth.domain.Buildable", "java.net.URI", "java.lang.String", "io.fusionauth.domain.connector.LDAPConnectorConfiguration$LambdaConfiguration", "java.util.List", "io.fusionauth.domain.connector.LDAPConnectorConfiguration$LDAPSecurityMethod" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

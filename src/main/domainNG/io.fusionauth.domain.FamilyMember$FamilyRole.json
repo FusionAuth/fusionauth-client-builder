@@ -1,6 +1,7 @@
 {
   "className" : "io.fusionauth.domain.FamilyMember$FamilyRole",
   "enum" : [ "Child", "Teen", "Adult" ],
+  "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "FamilyMember$FamilyRole"

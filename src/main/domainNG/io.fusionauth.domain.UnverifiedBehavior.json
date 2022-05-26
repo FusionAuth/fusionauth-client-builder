@@ -1,6 +1,7 @@
 {
   "className" : "io.fusionauth.domain.UnverifiedBehavior",
   "enum" : [ "Allow", "Gated" ],
+  "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "UnverifiedBehavior"

@@ -11,6 +11,7 @@
       } ]
     }
   },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.LogHistory$HistoryItem" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

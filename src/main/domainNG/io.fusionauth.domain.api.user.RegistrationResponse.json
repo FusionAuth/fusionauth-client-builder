@@ -27,6 +27,7 @@
       "type" : "User"
     }
   },
+  "imports" : [ "java.lang.String", "io.fusionauth.domain.UserRegistration", "java.time.ZonedDateTime", "io.fusionauth.domain.User" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api.user",

@@ -87,6 +87,7 @@
       "type" : "int"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.SecureGeneratorConfiguration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

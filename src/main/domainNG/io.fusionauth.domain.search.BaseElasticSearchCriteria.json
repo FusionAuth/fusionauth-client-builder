@@ -30,6 +30,7 @@
       } ]
     }
   },
+  "imports" : [ "java.util.List", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.search.SortField" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.search",

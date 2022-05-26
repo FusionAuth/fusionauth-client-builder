@@ -57,6 +57,7 @@ release = loadPlugin(id: "org.savantbuild.plugin:release-git:1.0.0")
 
 // Plugin settings
 clientLibrary.settings.debug = false
+//clientLibrary.settings.domainDirectory = Paths.get("src/main/domainNG")
 
 target(name: "extract-source-jars") {
   // Download the source JARs
@@ -162,6 +163,14 @@ target(name: "build-java", description: "Build the Java Client Library") {
                             outputFile: "../fusionauth-java-client/src/main/java/io/fusionauth/client/FusionAuthClient.java")
   clientLibrary.buildClient(template: "src/main/client/java.client.ftl",
                             outputFile: "../fusionauth-app/src/main/java/io/fusionauth/client/FusionAuthClient.java")
+
+//  file.delete {
+//    fileSet(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain")
+//    fileSet(dir: "../fusionauth-java-client/src/main/java/com/inversoft/error")
+//  }
+//  clientLibrary.buildDomain(template: "src/main/client/java.domain.ftl",
+//                            outputDir: "../fusionauth-java-client/src/main/java/",
+//                            extension: "java")
 }
 
 target(name: "build-php", description: "Build the PHP Client Library") {

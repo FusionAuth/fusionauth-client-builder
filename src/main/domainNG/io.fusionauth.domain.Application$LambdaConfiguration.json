@@ -15,6 +15,7 @@
       "type" : "UUID"
     }
   },
+  "imports" : [ "java.util.UUID" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

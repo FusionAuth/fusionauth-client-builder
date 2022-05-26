@@ -23,6 +23,7 @@
       "type" : "UUID"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.ExpiryUnit", "java.util.UUID" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

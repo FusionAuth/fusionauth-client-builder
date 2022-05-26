@@ -12,6 +12,7 @@
       "type" : "long"
     }
   },
+  "imports" : [ ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api.report",

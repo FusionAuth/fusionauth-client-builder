@@ -1,6 +1,7 @@
 {
   "className" : "io.fusionauth.domain.ObjectState",
   "enum" : [ "Active", "Inactive", "PendingDelete" ],
+  "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "ObjectState"

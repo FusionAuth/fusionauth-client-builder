@@ -75,6 +75,7 @@
       "type" : "boolean"
     }
   },
+  "imports" : [ "java.lang.Comparable", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.LocalizedStrings", "java.lang.String", "java.util.List", "io.fusionauth.domain.UserActionOption", "io.fusionauth.domain.TransactionType" ],
   "interfaces" : [ {
     "className" : "java.lang.Comparable",
     "type" : "Comparable",

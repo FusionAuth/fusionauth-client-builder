@@ -7,6 +7,7 @@
       "type" : "EntityTypeSearchCriteria"
     }
   },
+  "imports" : [ "io.fusionauth.domain.search.EntityTypeSearchCriteria" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

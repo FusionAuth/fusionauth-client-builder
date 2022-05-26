@@ -11,6 +11,7 @@
       "type" : "Errors"
     }
   },
+  "imports" : [ "io.fusionauth.domain.email.Email", "com.inversoft.error.Errors" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

@@ -7,6 +7,7 @@
       "type" : "ReactorStatus"
     }
   },
+  "imports" : [ "io.fusionauth.domain.reactor.ReactorStatus" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

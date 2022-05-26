@@ -18,6 +18,7 @@
       "type" : "RegistrationUnverifiedOptions"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.UnverifiedBehavior", "io.fusionauth.domain.VerificationStrategy", "io.fusionauth.domain.RegistrationUnverifiedOptions" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

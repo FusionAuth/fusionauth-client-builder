@@ -7,6 +7,7 @@
       "type" : "SystemConfiguration$DeleteConfiguration"
     }
   },
+  "imports" : [ "io.fusionauth.domain.SystemConfiguration$DeleteConfiguration" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

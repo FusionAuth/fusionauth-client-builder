@@ -11,6 +11,7 @@
       "type" : "ZoneId"
     }
   },
+  "imports" : [ "java.lang.String", "java.time.ZoneId" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

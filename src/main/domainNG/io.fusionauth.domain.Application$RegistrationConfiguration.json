@@ -45,6 +45,7 @@
       "type" : "Application$RegistrationConfiguration$RegistrationType"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Requirable", "java.util.UUID", "io.fusionauth.domain.Application$RegistrationConfiguration$LoginIdType", "io.fusionauth.domain.Application$RegistrationConfiguration$RegistrationType" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -50,6 +50,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.UUID", "java.util.List", "io.fusionauth.domain.IdentityProviderLink", "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration", "io.fusionauth.domain.provider.IdentityProviderType", "io.fusionauth.domain.User" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -32,6 +32,7 @@
       "type" : "UUID"
     }
   },
+  "imports" : [ "io.fusionauth.domain.connector.BaseConnectorConfiguration", "io.fusionauth.domain.Buildable", "java.net.URI", "io.fusionauth.domain.HTTPHeaders", "java.lang.String", "java.util.UUID" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

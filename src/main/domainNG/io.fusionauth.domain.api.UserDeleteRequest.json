@@ -28,6 +28,7 @@
       } ]
     }
   },
+  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.List", "java.util.UUID" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

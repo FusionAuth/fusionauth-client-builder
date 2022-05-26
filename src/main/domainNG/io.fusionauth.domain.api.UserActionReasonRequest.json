@@ -7,6 +7,7 @@
       "type" : "UserActionReason"
     }
   },
+  "imports" : [ "io.fusionauth.domain.UserActionReason" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

@@ -1,6 +1,7 @@
 {
   "className" : "io.fusionauth.domain.VerificationStrategy",
   "enum" : [ "ClickableLink", "FormField" ],
+  "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "VerificationStrategy"

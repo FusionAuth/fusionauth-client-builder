@@ -10,6 +10,7 @@
       "type" : "LoginRecordSearchCriteria"
     }
   },
+  "imports" : [ "io.fusionauth.domain.search.LoginRecordSearchCriteria" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

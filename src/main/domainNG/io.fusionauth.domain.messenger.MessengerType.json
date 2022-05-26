@@ -1,6 +1,7 @@
 {
   "className" : "io.fusionauth.domain.messenger.MessengerType",
   "enum" : [ "Generic", "Kafka", "Twilio" ],
+  "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.messenger",
   "type" : "MessengerType"

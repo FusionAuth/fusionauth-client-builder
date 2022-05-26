@@ -1,6 +1,7 @@
 {
   "className" : "io.fusionauth.domain.CanonicalizationMethod",
   "enum" : [ "exclusive", "exclusive_with_comments", "inclusive", "inclusive_with_comments" ],
+  "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "CanonicalizationMethod"

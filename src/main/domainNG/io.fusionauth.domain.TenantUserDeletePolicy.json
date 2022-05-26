@@ -10,6 +10,7 @@
       "type" : "TimeBasedDeletePolicy"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.TimeBasedDeletePolicy" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

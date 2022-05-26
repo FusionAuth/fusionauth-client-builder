@@ -12,6 +12,7 @@
     } ]
   },
   "fields" : { },
+  "imports" : [ "java.util.HashMap", "java.lang.String" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

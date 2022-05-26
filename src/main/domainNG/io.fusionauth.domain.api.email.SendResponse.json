@@ -25,6 +25,7 @@
       } ]
     }
   },
+  "imports" : [ "java.util.Map", "java.lang.String", "io.fusionauth.domain.api.email.SendResponse$EmailTemplateErrors", "java.util.UUID" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api.email",

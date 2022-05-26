@@ -7,6 +7,7 @@
       "type" : "IPAccessControlList"
     }
   },
+  "imports" : [ "io.fusionauth.domain.IPAccessControlList" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

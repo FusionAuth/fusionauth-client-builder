@@ -49,6 +49,7 @@
       "type" : "UUID"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.Map", "java.lang.String", "io.fusionauth.domain.Entity", "java.util.UUID", "java.time.ZonedDateTime", "java.util.Set" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

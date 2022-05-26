@@ -7,6 +7,7 @@
       "type" : "Key"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Key" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

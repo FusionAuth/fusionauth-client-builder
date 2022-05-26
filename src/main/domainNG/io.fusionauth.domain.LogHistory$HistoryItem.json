@@ -19,6 +19,7 @@
       "type" : "ZonedDateTime"
     }
   },
+  "imports" : [ "java.util.UUID", "java.lang.String", "java.time.ZonedDateTime" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

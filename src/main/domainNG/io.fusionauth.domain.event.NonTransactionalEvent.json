@@ -1,6 +1,7 @@
 {
   "className" : "io.fusionauth.domain.event.NonTransactionalEvent",
   "fields" : { },
+  "imports" : [ ],
   "interfaces" : [ ],
   "objectType" : "Interface",
   "packageName" : "io.fusionauth.domain.event",

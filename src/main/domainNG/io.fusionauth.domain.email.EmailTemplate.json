@@ -58,6 +58,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.LocalizedStrings" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

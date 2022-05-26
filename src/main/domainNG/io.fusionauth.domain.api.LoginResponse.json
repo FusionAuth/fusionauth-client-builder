@@ -89,6 +89,7 @@
       "type" : "User"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "io.fusionauth.domain.api.LoginPreventedResponse", "java.lang.String", "io.fusionauth.domain.ChangePasswordReason", "io.fusionauth.domain.TwoFactorMethod", "java.util.Map", "java.util.Set", "io.fusionauth.domain.AuthenticationThreats", "java.time.ZonedDateTime", "io.fusionauth.domain.User" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

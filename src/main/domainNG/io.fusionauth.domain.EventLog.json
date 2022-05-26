@@ -22,6 +22,7 @@
       "type" : "EventLogType"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.Long", "java.time.ZonedDateTime", "java.lang.String", "io.fusionauth.domain.EventLogType" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

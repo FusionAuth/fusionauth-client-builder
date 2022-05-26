@@ -22,6 +22,7 @@
       } ]
     }
   },
+  "imports" : [ "io.fusionauth.domain.search.BaseElasticSearchCriteria", "io.fusionauth.domain.Buildable", "java.util.Set", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

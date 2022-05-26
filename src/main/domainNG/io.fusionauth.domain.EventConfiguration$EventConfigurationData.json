@@ -7,6 +7,7 @@
       "type" : "TransactionType"
     }
   },
+  "imports" : [ "io.fusionauth.domain.TransactionType" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

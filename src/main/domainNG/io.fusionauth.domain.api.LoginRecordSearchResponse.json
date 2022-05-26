@@ -14,6 +14,7 @@
       "type" : "long"
     }
   },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.DisplayableRawLogin" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

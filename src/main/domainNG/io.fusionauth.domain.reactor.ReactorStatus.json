@@ -50,6 +50,7 @@
       "type" : "ReactorFeatureStatus"
     }
   },
+  "imports" : [ "io.fusionauth.domain.reactor.ReactorFeatureStatus", "java.time.LocalDate" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.reactor",

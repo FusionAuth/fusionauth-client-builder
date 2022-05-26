@@ -9,6 +9,7 @@
       "type" : "int"
     }
   },
+  "imports" : [ ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api.report",

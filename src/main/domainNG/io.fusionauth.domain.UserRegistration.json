@@ -87,6 +87,7 @@
       "type" : "boolean"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.Map", "java.lang.String", "java.util.List", "java.util.Locale", "java.util.UUID", "java.time.ZonedDateTime", "java.util.SortedSet", "java.time.ZoneId", "io.fusionauth.domain.ContentStatus" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

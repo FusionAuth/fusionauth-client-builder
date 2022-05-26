@@ -7,6 +7,7 @@
       "type" : "BaseEvent"
     }
   },
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.event",

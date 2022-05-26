@@ -10,6 +10,7 @@
       "type" : "UUID"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -11,6 +11,7 @@
       "type" : "Locale"
     }
   },
+  "imports" : [ "io.fusionauth.domain.email.EmailTemplate", "java.util.Locale" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

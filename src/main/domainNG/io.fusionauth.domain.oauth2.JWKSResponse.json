@@ -14,6 +14,7 @@
       } ]
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "io.fusionauth.jwks.domain.JSONWebKey" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

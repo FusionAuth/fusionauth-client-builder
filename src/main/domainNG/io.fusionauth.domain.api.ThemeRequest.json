@@ -11,6 +11,7 @@
       "type" : "Theme"
     }
   },
+  "imports" : [ "java.util.UUID", "io.fusionauth.domain.Theme" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

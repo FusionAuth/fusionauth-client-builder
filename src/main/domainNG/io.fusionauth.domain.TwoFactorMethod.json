@@ -46,6 +46,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "io.fusionauth.domain.AuthenticatorConfiguration", "java.lang.Boolean" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -17,6 +17,7 @@
       } ]
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.Map", "io.fusionauth.domain.event.EventType", "io.fusionauth.domain.EventConfiguration$EventConfigurationData" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

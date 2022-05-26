@@ -18,6 +18,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "io.fusionauth.domain.RawLogin", "io.fusionauth.domain.Buildable", "java.lang.String", "io.fusionauth.domain.Location" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -15,6 +15,7 @@
       "type" : "Sort"
     }
   },
+  "imports" : [ "java.lang.String", "io.fusionauth.domain.search.Sort" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.search",

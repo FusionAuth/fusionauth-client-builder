@@ -7,6 +7,7 @@
       "type" : "BaseConnectorConfiguration"
     }
   },
+  "imports" : [ "io.fusionauth.domain.connector.BaseConnectorConfiguration" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

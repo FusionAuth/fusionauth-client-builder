@@ -15,6 +15,7 @@
       "type" : "CanonicalizationMethod"
     }
   },
+  "imports" : [ "java.util.UUID", "java.net.URI", "io.fusionauth.domain.CanonicalizationMethod" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

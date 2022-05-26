@@ -18,6 +18,7 @@
       "type" : "IdentityProviderOauth2Configuration"
     }
   },
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "io.fusionauth.domain.Buildable", "java.net.URI", "java.lang.String", "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -1,6 +1,7 @@
 {
   "className" : "io.fusionauth.domain.RefreshTokenUsagePolicy",
   "enum" : [ "Reusable", "OneTimeUse" ],
+  "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "RefreshTokenUsagePolicy"

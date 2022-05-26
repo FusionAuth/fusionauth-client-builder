@@ -18,6 +18,7 @@
       "type" : "URI"
     }
   },
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.PasswordlessIdentityProvider", "io.fusionauth.domain.provider.HYPRApplicationConfiguration", "java.lang.String", "java.net.URI" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

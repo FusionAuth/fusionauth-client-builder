@@ -14,6 +14,7 @@
       "type" : "LocalizedStrings"
     }
   },
+  "imports" : [ "io.fusionauth.domain.message.MessageTemplate", "io.fusionauth.domain.Buildable", "java.lang.String", "io.fusionauth.domain.LocalizedStrings" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

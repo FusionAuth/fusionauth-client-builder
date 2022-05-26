@@ -11,6 +11,7 @@
       "type" : "ApplicationMultiFactorConfiguration$MultiFactorSMSTemplate"
     }
   },
+  "imports" : [ "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorEmailTemplate", "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorSMSTemplate" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

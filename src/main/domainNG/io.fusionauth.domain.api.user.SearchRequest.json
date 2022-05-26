@@ -10,6 +10,7 @@
       "type" : "UserSearchCriteria"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.search.UserSearchCriteria" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

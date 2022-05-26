@@ -12,6 +12,7 @@
     } ]
   },
   "fields" : { },
+  "imports" : [ "java.util.TreeMap", "java.util.Locale", "java.lang.Integer" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

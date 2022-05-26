@@ -26,6 +26,7 @@
       "type" : "User"
     }
   },
+  "imports" : [ "io.fusionauth.domain.UserRegistration", "io.fusionauth.domain.User" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api.user",

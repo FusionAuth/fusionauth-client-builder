@@ -47,6 +47,7 @@
       "type" : "int"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.util.List", "java.lang.String", "io.fusionauth.domain.util.HTTPMethod", "java.net.URI" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

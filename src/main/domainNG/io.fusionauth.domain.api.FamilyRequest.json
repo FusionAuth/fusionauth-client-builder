@@ -7,6 +7,7 @@
       "type" : "FamilyMember"
     }
   },
+  "imports" : [ "io.fusionauth.domain.FamilyMember" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

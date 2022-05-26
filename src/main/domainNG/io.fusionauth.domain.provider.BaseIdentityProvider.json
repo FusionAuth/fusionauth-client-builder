@@ -67,6 +67,7 @@
       } ]
     }
   },
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "io.fusionauth.domain.internal._InternalJSONColumn", "io.fusionauth.domain.Enableable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.provider.BaseIdentityProvider$LambdaConfiguration", "io.fusionauth.domain.provider.IdentityProviderLinkingStrategy", "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.provider",

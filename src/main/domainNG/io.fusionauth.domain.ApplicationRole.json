@@ -36,6 +36,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "java.lang.Comparable", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "java.time.ZonedDateTime" ],
   "interfaces" : [ {
     "className" : "java.lang.Comparable",
     "type" : "Comparable",

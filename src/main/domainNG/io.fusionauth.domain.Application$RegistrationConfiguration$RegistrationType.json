@@ -1,6 +1,7 @@
 {
   "className" : "io.fusionauth.domain.Application$RegistrationConfiguration$RegistrationType",
   "enum" : [ "basic", "advanced" ],
+  "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "Application$RegistrationConfiguration$RegistrationType"

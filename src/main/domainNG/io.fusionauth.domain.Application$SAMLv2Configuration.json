@@ -52,6 +52,7 @@
       "type" : "Application$SAMLv2Configuration$XMLSignatureLocation"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.List", "java.net.URI", "java.util.UUID", "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2Logout", "io.fusionauth.domain.CanonicalizationMethod", "io.fusionauth.domain.Application$SAMLv2Configuration$XMLSignatureLocation" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

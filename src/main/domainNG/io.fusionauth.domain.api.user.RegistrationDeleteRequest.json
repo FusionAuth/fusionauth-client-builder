@@ -5,6 +5,7 @@
     "type" : "BaseEventRequest"
   },
   "fields" : { },
+  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

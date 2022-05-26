@@ -83,6 +83,7 @@
       "type" : "URI"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.List", "java.util.UUID", "java.lang.Integer", "java.util.Map", "java.lang.String", "io.fusionauth.domain.event.EventType", "java.lang.Boolean", "io.fusionauth.domain.HTTPHeaders", "java.time.ZonedDateTime", "java.net.URI" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

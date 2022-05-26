@@ -42,6 +42,7 @@
       "type" : "UUID"
     }
   },
+  "imports" : [ "io.fusionauth.domain.oauth2.OAuthResponse", "io.fusionauth.domain.Buildable", "java.lang.String", "java.lang.Integer", "java.net.URI", "io.fusionauth.domain.oauth2.TokenType", "java.util.UUID" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.oauth2.OAuthResponse",
     "type" : "OAuthResponse"

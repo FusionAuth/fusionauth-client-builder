@@ -21,6 +21,7 @@
       "type" : "boolean"
     }
   },
+  "imports" : [ "java.util.UUID", "java.lang.String", "io.fusionauth.domain.jwt.RefreshToken$MetaData" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

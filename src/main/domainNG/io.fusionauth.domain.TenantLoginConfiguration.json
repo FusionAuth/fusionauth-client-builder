@@ -9,6 +9,7 @@
       "type" : "boolean"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

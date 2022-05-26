@@ -7,6 +7,7 @@
       "type" : "Entity"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Entity" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

@@ -50,6 +50,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.net.URI", "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration$ClientAuthenticationMethod", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -13,6 +13,7 @@
       "type" : "UnverifiedBehavior"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.UnverifiedBehavior" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

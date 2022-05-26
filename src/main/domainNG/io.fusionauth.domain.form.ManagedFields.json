@@ -14,6 +14,7 @@
       } ]
     }
   },
+  "imports" : [ "java.util.Map", "java.lang.String", "io.fusionauth.domain.form.FormField" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.form",

@@ -23,6 +23,7 @@
       "type" : "User"
     }
   },
+  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.util.UUID", "io.fusionauth.domain.User" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

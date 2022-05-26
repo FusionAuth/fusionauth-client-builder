@@ -26,6 +26,7 @@
       "type" : "DeviceInfo$DeviceType"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.jwt.DeviceInfo$DeviceType" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

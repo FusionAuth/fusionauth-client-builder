@@ -11,6 +11,7 @@
       "type" : "MessageTemplate"
     }
   },
+  "imports" : [ "java.util.Locale", "io.fusionauth.domain.message.MessageTemplate" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

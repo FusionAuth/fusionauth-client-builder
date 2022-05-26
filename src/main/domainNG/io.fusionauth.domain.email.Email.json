@@ -58,6 +58,7 @@
       } ]
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "io.fusionauth.domain.email.Attachment", "io.fusionauth.domain.email.EmailAddress", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

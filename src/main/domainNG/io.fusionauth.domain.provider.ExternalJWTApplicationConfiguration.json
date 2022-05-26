@@ -5,6 +5,7 @@
     "type" : "BaseIdentityProviderApplicationConfiguration"
   },
   "fields" : { },
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "io.fusionauth.domain.Buildable" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

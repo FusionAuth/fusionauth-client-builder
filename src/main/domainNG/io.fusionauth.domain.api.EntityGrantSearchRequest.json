@@ -7,6 +7,7 @@
       "type" : "EntityGrantSearchCriteria"
     }
   },
+  "imports" : [ "io.fusionauth.domain.search.EntityGrantSearchCriteria" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

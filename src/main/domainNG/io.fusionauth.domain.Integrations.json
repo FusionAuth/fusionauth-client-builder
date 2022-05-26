@@ -14,6 +14,7 @@
       "type" : "KafkaConfiguration"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.CleanSpeakConfiguration", "io.fusionauth.domain.KafkaConfiguration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

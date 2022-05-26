@@ -27,6 +27,7 @@
       "type" : "URI"
     }
   },
+  "imports" : [ "java.lang.String", "java.lang.Integer", "java.net.URI" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.oauth2",

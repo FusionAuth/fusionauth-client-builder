@@ -19,6 +19,7 @@
       "type" : "EntityTypePermission"
     }
   },
+  "imports" : [ "io.fusionauth.domain.EntityType", "java.util.List", "io.fusionauth.domain.EntityTypePermission" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

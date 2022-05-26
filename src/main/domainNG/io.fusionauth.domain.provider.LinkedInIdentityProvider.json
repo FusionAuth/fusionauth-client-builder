@@ -26,6 +26,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.SupportsPostBindings", "io.fusionauth.domain.provider.LinkedInApplicationConfiguration", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

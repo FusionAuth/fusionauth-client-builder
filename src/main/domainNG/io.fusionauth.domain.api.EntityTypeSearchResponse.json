@@ -14,6 +14,7 @@
       "type" : "long"
     }
   },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.EntityType" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

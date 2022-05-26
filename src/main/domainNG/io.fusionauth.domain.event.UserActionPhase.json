@@ -1,6 +1,7 @@
 {
   "className" : "io.fusionauth.domain.event.UserActionPhase",
   "enum" : [ "start", "modify", "cancel", "end" ],
+  "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.event",
   "type" : "UserActionPhase"

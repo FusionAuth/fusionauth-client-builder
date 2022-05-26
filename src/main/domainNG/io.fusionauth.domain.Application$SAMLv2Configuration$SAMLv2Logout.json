@@ -26,6 +26,7 @@
       "type" : "CanonicalizationMethod"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLLogoutBehavior", "java.util.UUID", "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2SingleLogout", "io.fusionauth.domain.CanonicalizationMethod" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

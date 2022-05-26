@@ -19,6 +19,7 @@
       "type" : "ApplicationRole"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Application", "java.util.List", "io.fusionauth.domain.ApplicationRole" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

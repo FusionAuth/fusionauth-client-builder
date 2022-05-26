@@ -33,6 +33,7 @@
       "type" : "boolean"
     }
   },
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.DomainBasedIdentityProvider", "io.fusionauth.domain.provider.SupportsPostBindings", "io.fusionauth.domain.provider.OpenIdConnectApplicationConfiguration", "java.util.Set", "java.lang.String", "java.net.URI", "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -53,6 +53,7 @@
       "type" : "SystemConfiguration$UIConfiguration"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "io.fusionauth.domain.SystemConfiguration$AuditLogConfiguration", "java.lang.String", "io.fusionauth.domain.CORSConfiguration", "java.util.Map", "io.fusionauth.domain.SystemConfiguration$EventLogConfiguration", "java.time.ZonedDateTime", "io.fusionauth.domain.SystemConfiguration$LoginRecordConfiguration", "java.time.ZoneId", "io.fusionauth.domain.SystemConfiguration$UIConfiguration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

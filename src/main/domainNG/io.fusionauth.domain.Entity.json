@@ -53,6 +53,7 @@
       "type" : "EntityType"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Tenantable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.EntityType" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

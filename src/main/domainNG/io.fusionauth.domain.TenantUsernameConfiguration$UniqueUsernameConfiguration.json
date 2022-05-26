@@ -17,6 +17,7 @@
       "type" : "TenantUsernameConfiguration$UniqueUsernameStrategy"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.lang.Character", "io.fusionauth.domain.TenantUsernameConfiguration$UniqueUsernameStrategy" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

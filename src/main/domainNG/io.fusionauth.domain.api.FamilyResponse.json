@@ -15,6 +15,7 @@
       "type" : "Family"
     }
   },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.Family" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

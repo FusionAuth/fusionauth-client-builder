@@ -45,6 +45,7 @@
       "type" : "FormType"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "java.util.List", "io.fusionauth.domain.form.FormStep", "io.fusionauth.domain.form.FormType" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -10,6 +10,7 @@
       "type" : "GroupMemberSearchCriteria"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.search.GroupMemberSearchCriteria" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

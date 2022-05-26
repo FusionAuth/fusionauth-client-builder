@@ -7,6 +7,7 @@
       "type" : "Integrations"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Integrations" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

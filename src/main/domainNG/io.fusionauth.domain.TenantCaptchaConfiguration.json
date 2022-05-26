@@ -21,6 +21,7 @@
       "type" : "double"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.CaptchaMethod", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

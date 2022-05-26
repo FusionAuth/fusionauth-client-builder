@@ -26,6 +26,7 @@
       } ]
     }
   },
+  "imports" : [ "java.util.List", "java.util.UUID", "java.util.Map" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

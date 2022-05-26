@@ -26,6 +26,7 @@
       "type" : "URI"
     }
   },
+  "imports" : [ "io.fusionauth.domain.messenger.BaseMessengerConfiguration", "io.fusionauth.domain.Buildable", "java.lang.String", "java.net.URI" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

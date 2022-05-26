@@ -30,6 +30,7 @@
       "type" : "EventLogType"
     }
   },
+  "imports" : [ "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.EventLogType" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.search",

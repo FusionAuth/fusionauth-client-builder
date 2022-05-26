@@ -71,6 +71,7 @@
       "type" : "FormFieldValidator"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.UUID", "io.fusionauth.domain.form.FormControl", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "java.util.List", "io.fusionauth.domain.form.FormDataType", "io.fusionauth.domain.form.FormFieldValidator" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

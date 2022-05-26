@@ -58,6 +58,7 @@
       } ]
     }
   },
+  "imports" : [ "java.util.UUID", "java.util.List", "java.lang.String", "java.util.Locale", "java.util.Map", "io.fusionauth.domain.email.EmailAddress" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api.email",

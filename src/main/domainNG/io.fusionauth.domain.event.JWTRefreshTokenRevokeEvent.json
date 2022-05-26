@@ -29,6 +29,7 @@
       "type" : "UUID"
     }
   },
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.ApplicationEvent", "java.util.UUID", "java.util.Map", "java.lang.Integer", "io.fusionauth.domain.User" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

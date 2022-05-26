@@ -18,6 +18,7 @@
       } ]
     }
   },
+  "imports" : [ "java.util.Map", "java.lang.String", "java.util.Set" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

@@ -15,6 +15,7 @@
       } ]
     }
   },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.EntityGrant" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

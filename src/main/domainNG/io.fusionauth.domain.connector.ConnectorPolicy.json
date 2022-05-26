@@ -32,6 +32,7 @@
       "type" : "boolean"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.UUID", "java.util.Map", "java.lang.String", "java.util.Set" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

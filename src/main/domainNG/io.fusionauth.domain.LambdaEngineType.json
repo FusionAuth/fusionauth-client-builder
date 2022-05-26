@@ -1,6 +1,7 @@
 {
   "className" : "io.fusionauth.domain.LambdaEngineType",
   "enum" : [ "GraalJS", "Nashorn" ],
+  "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
   "type" : "LambdaEngineType"

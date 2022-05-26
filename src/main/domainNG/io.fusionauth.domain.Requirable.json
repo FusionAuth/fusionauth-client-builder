@@ -6,6 +6,7 @@
       "type" : "boolean"
     }
   },
+  "imports" : [ ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

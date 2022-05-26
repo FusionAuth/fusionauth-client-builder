@@ -18,6 +18,7 @@
       "type" : "TenantMultiFactorConfiguration$MultiFactorSMSMethod"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorAuthenticatorMethod", "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorEmailMethod", "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorSMSMethod" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

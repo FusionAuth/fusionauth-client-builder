@@ -30,6 +30,7 @@
       "type" : "RateLimitedRequestConfiguration"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.RateLimitedRequestConfiguration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

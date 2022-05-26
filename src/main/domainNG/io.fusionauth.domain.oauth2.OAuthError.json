@@ -35,6 +35,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "java.lang.String", "io.fusionauth.domain.oauth2.OAuthError$OAuthErrorType", "java.util.List", "io.fusionauth.domain.TwoFactorMethod", "io.fusionauth.domain.oauth2.OAuthError$OAuthErrorReason" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.oauth2",

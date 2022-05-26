@@ -18,6 +18,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "java.util.Map", "java.lang.String" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.search",

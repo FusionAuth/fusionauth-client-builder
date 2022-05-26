@@ -10,6 +10,7 @@
       "type" : "SecureGeneratorType"
     }
   },
+  "imports" : [ "io.fusionauth.domain.SecureGeneratorType" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

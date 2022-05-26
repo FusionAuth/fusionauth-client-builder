@@ -26,6 +26,7 @@
       "type" : "CleanSpeakConfiguration$UsernameModeration"
     }
   },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Integration", "java.lang.String", "java.util.List", "java.util.UUID", "java.net.URI", "io.fusionauth.domain.CleanSpeakConfiguration$UsernameModeration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

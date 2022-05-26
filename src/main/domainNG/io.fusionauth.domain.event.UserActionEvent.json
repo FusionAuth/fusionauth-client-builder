@@ -84,6 +84,7 @@
       "type" : "String"
     }
   },
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.ApplicationEvent", "java.time.ZonedDateTime", "java.util.List", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.email.Email", "io.fusionauth.domain.event.UserActionPhase" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

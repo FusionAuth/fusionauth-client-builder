@@ -11,6 +11,7 @@
       } ]
     }
   },
+  "imports" : [ "java.util.Set", "io.fusionauth.domain.AuthenticationThreats" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.event",
