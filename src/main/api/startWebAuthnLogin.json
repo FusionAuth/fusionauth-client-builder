@@ -1,0 +1,20 @@
+{
+  "uri": "/api/webauthn/start",
+  "comments": [
+    "Start a WebAuthn authentication ceremony by generating a new challenge for the user"
+  ],
+  "method": "post",
+  "methodName": "startWebAuthnLogin",
+  "successResponse": "PublicKeyCredentialRequestOptions",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "An object containing data necessary for starting the authentication ceremony"
+      ],
+      "type": "body",
+      "javaType": "WebAuthnStartRequest"
+    }
+  ]
+}

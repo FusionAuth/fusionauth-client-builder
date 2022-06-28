@@ -1,0 +1,20 @@
+{
+  "uri": "/api/webauthn/complete",
+  "comments": [
+    "Complete a WebAuthn registration ceremony by validating the client request and saving the new credential"
+  ],
+  "method": "post",
+  "methodName": "completeWebAuthnRegistration",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "An object containing data necessary for completing the registration ceremony"
+      ],
+      "type": "body",
+      "javaType": "WebAuthnCompleteRequest"
+    }
+  ]
+}
