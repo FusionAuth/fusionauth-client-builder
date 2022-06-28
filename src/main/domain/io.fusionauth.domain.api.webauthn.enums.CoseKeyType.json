@@ -1,0 +1,20 @@
+{
+  "packageName" : "io.fusionauth.domain.api.webauthn.enums",
+  "type" : "CoseKeyType",
+  "enum" : [ {
+    "name" : "Reserved",
+    "args" : [ "0" ]
+  }, {
+    "name" : "OKP",
+    "args" : [ "1" ]
+  }, {
+    "name" : "EC2",
+    "args" : [ "2" ]
+  }, {
+    "name" : "RSA",
+    "args" : [ "3" ]
+  }, {
+    "name" : "Symmetric",
+    "args" : [ "4" ]
+  } ]
+}

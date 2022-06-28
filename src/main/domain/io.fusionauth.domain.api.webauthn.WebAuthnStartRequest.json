@@ -1,0 +1,27 @@
+{
+  "packageName" : "io.fusionauth.domain.api.webauthn",
+  "type" : "WebAuthnStartRequest",
+  "description" : "/**\n * @author Spencer Witt\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebAuthnStartRequest"
+    } ]
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "loginId" : {
+      "type" : "String"
+    },
+    "state" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    }
+  }
+}
