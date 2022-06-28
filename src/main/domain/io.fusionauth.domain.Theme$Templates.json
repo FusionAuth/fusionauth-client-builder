@@ -86,6 +86,12 @@
     "oauth2Wait" : {
       "type" : "String"
     },
+    "oauth2WebAuthN" : {
+      "type" : "String"
+    },
+    "oauth2WebAuthNComplete" : {
+      "type" : "String"
+    },
     "passwordChange" : {
       "type" : "String"
     },
