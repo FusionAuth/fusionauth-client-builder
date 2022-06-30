@@ -138,6 +138,7 @@ import io.fusionauth.domain.api.UserDeleteSingleRequest;
 import io.fusionauth.domain.api.UserRequest;
 import io.fusionauth.domain.api.UserResponse;
 import io.fusionauth.domain.api.VersionResponse;
+import io.fusionauth.domain.api.WebAuthnCredentialResponse;
 import io.fusionauth.domain.api.WebhookRequest;
 import io.fusionauth.domain.api.WebhookResponse;
 import io.fusionauth.domain.api.email.SendRequest;
