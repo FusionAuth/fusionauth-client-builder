@@ -5,7 +5,7 @@
   ],
   "method": "post",
   "methodName": "startWebAuthnLogin",
-  "successResponse": "PublicKeyCredentialRequestOptions",
+  "successResponse": "WebAuthnStartResponse",
   "errorResponse": "Errors",
   "params": [
     {
