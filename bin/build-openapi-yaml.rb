@@ -612,7 +612,7 @@ domain_files.each do |fn|
 end
 
 schemas["ZonedDateTime"] = {}
-schemas["ZonedDateTime"]["description"] = "The number of Milliseconds since the unix Epoch in UTC."
+schemas["ZonedDateTime"]["description"] = "The number of milliseconds since the unix epoch. Always in UTC."
 schemas["ZonedDateTime"]["example"] = "1659380719000"
 schemas["ZonedDateTime"]["type"] = "integer"
 schemas["ZonedDateTime"]["format"] = "int64"
