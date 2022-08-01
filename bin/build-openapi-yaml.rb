@@ -612,8 +612,8 @@ domain_files.each do |fn|
 end
 
 schemas["ZonedDateTime"] = {}
-schemas["ZonedDateTime"]["description"] = "A date-time with a time-zone in the ISO-8601 calendar system, such as 2007-12-03T10:15:30+01:00 Europe/Paris."
-schemas["ZonedDateTime"]["example"] = "2007-12-03"
+schemas["ZonedDateTime"]["description"] = "The number of Milliseconds since the unix Epoch in UTC."
+schemas["ZonedDateTime"]["example"] = "1659380719000"
 schemas["ZonedDateTime"]["type"] = "integer"
 schemas["ZonedDateTime"]["format"] = "int64"
 schemas["Locale"] = {}
