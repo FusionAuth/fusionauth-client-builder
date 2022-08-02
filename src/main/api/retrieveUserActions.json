@@ -1,7 +1,7 @@
 {
   "uri": "/api/user-action",
   "comments": [
-    "Retrieves all of the user actions."
+    "Retrieves all the user actions."
   ],
   "method": "get",
   "methodName": "retrieveUserActions",

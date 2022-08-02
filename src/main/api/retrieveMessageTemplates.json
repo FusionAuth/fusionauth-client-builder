@@ -1,7 +1,7 @@
 {
   "uri": "/api/message/template",
   "comments": [
-    "Retrieves all of the message templates."
+    "Retrieves all the message templates."
   ],
   "method": "get",
   "methodName": "retrieveMessageTemplates",

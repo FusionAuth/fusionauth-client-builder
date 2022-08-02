@@ -11,7 +11,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all of the information used to send the code."
+        "The request object that contains all the information used to send the code."
       ],
       "type": "body",
       "javaType": "TwoFactorSendRequest"

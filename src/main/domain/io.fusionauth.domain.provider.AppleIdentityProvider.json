@@ -17,6 +17,8 @@
     "type" : "JSONWebKeyInfoProvider"
   }, {
     "type" : "RequiresCORSConfiguration"
+  }, {
+    "type" : "SupportsPostBindings"
   } ],
   "fields" : {
     "buttonText" : {

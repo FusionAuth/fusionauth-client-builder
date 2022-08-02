@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/family/pending",
   "comments": [
-    "Retrieves all of the children for the given parent email address."
+    "Retrieves all the children for the given parent email address."
   ],
   "method": "get",
   "methodName": "retrievePendingChildren",

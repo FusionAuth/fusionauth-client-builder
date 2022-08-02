@@ -136,6 +136,11 @@ func (b *${hackCollisions(d d.type)?cap_first}) SetStatus(status int) {
 [@addFunctions d.type/]
     [#elseif d.enum??]
 type ${d.type} string
+
+func (e ${d.type}) String() string {
+	return string(e)
+}
+
 const (
       [#list d.enum as value]
         [#if d.type == "EventType" || d.type == "GrantType"]

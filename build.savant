@@ -17,15 +17,21 @@ import java.nio.file.Files
 import java.nio.file.Paths
 
 fusionauthJWTVersion = "3.4.0" // Keep this at 3.4.0 for now to preserve the algorithms enum
-javaErrorVersion = "2.2.2"
+javaErrorVersion = "2.2.3"
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.30.1", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.36.9", licenses: ["ApacheV2_0"]) {
   workflow {
-    standard()
+    fetch {
+      cache()
+      url(url: "https://repository.savantbuild.org")
+    }
+    publish {
+      cache()
+    }
   }
 
   publishWorkflow {
-    subversion(repository: "http://svn.inversoft.org/savant")
+    subversion(repository: "https://svn.savantbuild.org")
   }
 
   dependencies {
@@ -87,11 +93,12 @@ target(name: "generateDomain", description: "Generates all of the json files for
 
   ["io.fusionauth.domain.Buildable.json",
    "io.fusionauth.domain.Integration.json",
-   "io.fusionauth.domain.internal._InternalJSONColumn.json",
-   "io.fusionauth.domain.internal.annotation.InternalUse.json",
-   "io.fusionauth.domain.internal.annotation.InternalJSONColumn.json",
    "io.fusionauth.domain.internal.annotation.ExcludeFromDatabaseDataColumn.json",
+   "io.fusionauth.domain.internal.annotation.InternalJSONColumn.json",
+   "io.fusionauth.domain.internal.annotation.InternalUse.json",
+   "io.fusionauth.domain.internal._InternalJSONColumn.json",
    "io.fusionauth.domain.internal.DatabaseObjectMapperHolder.json",
+   "io.fusionauth.domain.internal.InternalJSONColumnService.json",
    "io.fusionauth.domain.internal.ReflectionTools.json",
    "io.fusionauth.jwt.domain.Buildable.json",
    "io.fusionauth.jwt.domain.Header.json",
@@ -214,6 +221,8 @@ target(name: "build-go", description: "Build the Go Client Library") {
                             outputFile: "../go-client/pkg/fusionauth/Client.go")
   clientLibrary.buildClient(template: "src/main/client/go.domain.ftl",
                             outputFile: "../go-client/pkg/fusionauth/Domain.go")
+  clientLibrary.buildClient(template: "src/main/client/go.domain.test.ftl",
+                            outputFile: "../go-client/pkg/fusionauth/Domain_dynamic_test.go")
   formatClientLibrary("go-client")
 }
 
@@ -230,6 +239,11 @@ target(name: "build-dart", description: "Build the Dart Client Library") {
   formatClientLibrary("fusionauth-dart-client")
 }
 
+target(name: "build-openapi", description: "Build the OpenAPI file") {
+  projVersion = project.version.toString()
+  cleanExecute(["ruby", "bin/build-openapi-yaml.rb", "--source-directory", "./src", "--out", "../fusionauth-openapi/openapi.yaml", "--api-version", projVersion])
+}
+
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
                                                                                   "build-php",
 //                                                                                  "build-angular",
@@ -238,10 +252,12 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
                                                                                   "build-node",
                                                                                   "build-typescript",
                                                                                   "build-javascript",
+                                                                                  "build-openapi",
                                                                                   "build-python",
                                                                                   "build-ruby",
                                                                                   "build-dart"]) {
 }
+
 
 // Still testing this to see if it will work with stdout and prompts, etc which are required for dart, and python. Perhaps we can configure all of this to
 // skip all requests for input or confirmations.
@@ -250,15 +266,34 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
 //        to call this target from CI during a release.
 //
 target(name: "publish-all", description: "Publish all client libraries") {
-  ["dart", "java", "netcore", "node", "php", "python", "ruby", "typescript"].each { client ->
+  [
+   "dart-client",
+   "java-client",
+   "netcore-client",
+   "node-client",
+   "php-client",
+   "python-client",
+   "ruby-client",
+   "typescript-client",
+   "openapi"
+  ].each { client ->
     ProcessBuilder pb = new ProcessBuilder(
         "sb", "publish")
         .inheritIO()
-        .directory(new File("../fusionauth-${client}-client"))
+        .directory(new File("../fusionauth-${client}"))
 
     def process = pb.start()
     process.consumeProcessOutput(System.out, System.err)
     process.waitFor()
     return process.exitValue() == 0
   }
+}
+
+boolean cleanExecute(List<String> args) {
+  ProcessBuilder pb = new ProcessBuilder(args).inheritIO().directory(new File('.'))
+
+  def process = pb.start()
+  process.consumeProcessOutput(System.out, System.err)
+  process.waitFor()
+  return process.exitValue() == 0
 }

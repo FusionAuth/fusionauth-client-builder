@@ -66,6 +66,9 @@
     "setupPasswordIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "trustTokenTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "twoFactorIdTimeToLiveInSeconds" : {
       "type" : "int"
     },

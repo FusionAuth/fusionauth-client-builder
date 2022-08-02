@@ -18,8 +18,17 @@
     "identityProviderId" : {
       "type" : "UUID"
     },
+    "identityProviderLinks" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "IdentityProviderLink"
+      } ]
+    },
     "identityProviderName" : {
       "type" : "String"
+    },
+    "identityProviderTenantConfiguration" : {
+      "type" : "IdentityProviderTenantConfiguration"
     },
     "identityProviderType" : {
       "type" : "IdentityProviderType"

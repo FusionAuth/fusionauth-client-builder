@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/family",
   "comments": [
-    "Retrieves all of the families that a user belongs to."
+    "Retrieves all the families that a user belongs to."
   ],
   "method": "get",
   "methodName": "retrieveFamilies",

@@ -2,6 +2,12 @@
   "packageName" : "io.fusionauth.domain.api",
   "type" : "EntityTypeRequest",
   "description" : "/**\n * Entity Type API request object.\n *\n * @author Brian Pontarelli\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EntityTypeRequest"
+    } ]
+  } ],
   "fields" : {
     "entityType" : {
       "type" : "EntityType"

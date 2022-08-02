@@ -1,10 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "Lambda",
-  "description" : "// TODO : Future : This shouldn't be enableable\n",
-  "extends" : [ {
-    "type" : "Enableable"
-  } ],
+  "description" : "/**\n * A JavaScript lambda function that is executed during certain events inside FusionAuth.\n *\n * @author Brian Pontarelli\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
@@ -17,6 +14,9 @@
     },
     "debug" : {
       "type" : "boolean"
+    },
+    "engineType" : {
+      "type" : "LambdaEngineType"
     },
     "id" : {
       "type" : "UUID"

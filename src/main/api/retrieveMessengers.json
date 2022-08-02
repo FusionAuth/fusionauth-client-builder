@@ -1,7 +1,7 @@
 {
   "uri": "/api/messenger",
   "comments": [
-    "Retrieves all of the messengers."
+    "Retrieves all the messengers."
   ],
   "method": "get",
   "methodName": "retrieveMessengers",

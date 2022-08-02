@@ -1,0 +1,20 @@
+{
+  "uri": "/api/group/member/search",
+  "comments": [
+    "Searches group members with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchGroupMembers",
+  "successResponse": "GroupMemberSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "GroupMemberSearchRequest"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "uri": "/api/application",
   "comments": [
-    "Retrieves all of the applications."
+    "Retrieves all the applications."
   ],
   "method": "get",
   "methodName": "retrieveApplications",

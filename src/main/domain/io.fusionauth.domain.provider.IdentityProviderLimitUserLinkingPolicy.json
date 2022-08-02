@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderLimitUserLinkingPolicy",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "IdentityProviderLimitUserLinkingPolicy"
+    } ]
+  } ],
+  "fields" : {
+    "maximumLinks" : {
+      "type" : "int"
+    }
+  }
+}

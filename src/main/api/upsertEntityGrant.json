@@ -25,7 +25,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all of the information used to create the Entity Grant."
+        "The request object that contains all the information used to create the Entity Grant."
       ],
       "type": "body",
       "javaType": "EntityGrantRequest"

@@ -1,7 +1,7 @@
 {
   "uri": "/api/entity/type",
   "comments": [
-    "Retrieves all of the Entity Types."
+    "Retrieves all the Entity Types."
   ],
   "method": "get",
   "methodName": "retrieveEntityTypes",

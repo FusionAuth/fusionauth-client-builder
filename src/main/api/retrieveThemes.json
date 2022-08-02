@@ -1,7 +1,7 @@
 {
   "uri": "/api/theme",
   "comments": [
-    "Retrieves all of the themes."
+    "Retrieves all the themes."
   ],
   "method": "get",
   "methodName": "retrieveThemes",

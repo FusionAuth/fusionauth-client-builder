@@ -34,7 +34,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all of the information used to create the permission."
+        "The request object that contains all the information used to create the permission."
       ],
       "type": "body",
       "javaType": "EntityTypeRequest"

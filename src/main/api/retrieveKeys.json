@@ -1,7 +1,7 @@
 {
   "uri": "/api/key",
   "comments": [
-    "Retrieves all of the keys."
+    "Retrieves all the keys."
   ],
   "method": "get",
   "methodName": "retrieveKeys",

@@ -1,7 +1,7 @@
 {
   "uri": "/api/email/template",
   "comments": [
-    "Retrieves all of the email templates."
+    "Retrieves all the email templates."
   ],
   "method": "get",
   "methodName": "retrieveEmailTemplates",

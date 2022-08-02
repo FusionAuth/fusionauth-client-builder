@@ -1,7 +1,7 @@
 {
   "uri": "/api/connector",
   "comments": [
-    "Retrieves all of the connectors."
+    "Retrieves all the connectors."
   ],
   "method": "get",
   "methodName": "retrieveConnectors",

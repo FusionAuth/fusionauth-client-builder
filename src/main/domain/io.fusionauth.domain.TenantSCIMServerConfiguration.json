@@ -1,0 +1,30 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantSCIMServerConfiguration",
+  "description" : "/**\n * @author Rob Davis\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantSCIMServerConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "clientEntityTypeId" : {
+      "type" : "UUID"
+    },
+    "schemas" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "serverEntityTypeId" : {
+      "type" : "UUID"
+    }
+  }
+}

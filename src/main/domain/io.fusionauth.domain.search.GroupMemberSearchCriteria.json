@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "GroupMemberSearchCriteria",
+  "description" : "/**\n * Search criteria for Group Members\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "fields" : {
+    "groupId" : {
+      "type" : "UUID"
+    },
+    "userId" : {
+      "type" : "UUID"
+    }
+  }
+}

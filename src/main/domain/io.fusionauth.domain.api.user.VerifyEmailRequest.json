@@ -9,6 +9,9 @@
     "oneTimeCode" : {
       "type" : "String"
     },
+    "userId" : {
+      "type" : "UUID"
+    },
     "verificationId" : {
       "type" : "String"
     }

@@ -67,6 +67,9 @@
     "jwtConfiguration" : {
       "type" : "JWTConfiguration"
     },
+    "lambdaConfiguration" : {
+      "type" : "TenantLambdaConfiguration"
+    },
     "lastUpdateInstant" : {
       "type" : "ZonedDateTime"
     },
@@ -102,6 +105,12 @@
     },
     "registrationConfiguration" : {
       "type" : "TenantRegistrationConfiguration"
+    },
+    "scimServerConfiguration" : {
+      "type" : "TenantSCIMServerConfiguration"
+    },
+    "ssoConfiguration" : {
+      "type" : "TenantSSOConfiguration"
     },
     "state" : {
       "type" : "ObjectState"

@@ -26,7 +26,16 @@
     "client_secret" : {
       "type" : "String"
     },
+    "emailClaim" : {
+      "type" : "String"
+    },
     "scope" : {
+      "type" : "String"
+    },
+    "uniqueIdClaim" : {
+      "type" : "String"
+    },
+    "usernameClaim" : {
       "type" : "String"
     }
   }

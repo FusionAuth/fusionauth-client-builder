@@ -59,5 +59,17 @@
   }, {
     "name" : "ClientCredentialsJWTPopulate",
     "args" : [ "populate" ]
+  }, {
+    "name" : "SCIMServerGroupRequestConverter",
+    "args" : [ "convert" ]
+  }, {
+    "name" : "SCIMServerGroupResponseConverter",
+    "args" : [ "convert" ]
+  }, {
+    "name" : "SCIMServerUserRequestConverter",
+    "args" : [ "convert" ]
+  }, {
+    "name" : "SCIMServerUserResponseConverter",
+    "args" : [ "convert" ]
   } ]
 }

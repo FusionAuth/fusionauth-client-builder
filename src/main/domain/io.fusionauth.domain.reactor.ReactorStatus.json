@@ -6,6 +6,9 @@
     "advancedIdentityProviders" : {
       "type" : "ReactorFeatureStatus"
     },
+    "advancedLambdas" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "advancedMultiFactorAuthentication" : {
       "type" : "ReactorFeatureStatus"
     },
@@ -24,11 +27,17 @@
     "entityManagement" : {
       "type" : "ReactorFeatureStatus"
     },
-    "threatDetection" : {
-      "type" : "ReactorFeatureStatus"
+    "expiration" : {
+      "type" : "LocalDate"
     },
     "licensed" : {
       "type" : "boolean"
+    },
+    "scimServer" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "threatDetection" : {
+      "type" : "ReactorFeatureStatus"
     }
   }
 }

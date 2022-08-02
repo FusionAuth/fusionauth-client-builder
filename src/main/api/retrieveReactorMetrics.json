@@ -1,0 +1,10 @@
+{
+  "uri": "/api/reactor/metrics",
+  "comments": [
+    "Retrieves the FusionAuth Reactor metrics."
+  ],
+  "method": "get",
+  "methodName": "retrieveReactorMetrics",
+  "successResponse": "ReactorMetricsResponse",
+  "errorResponse": "Void"
+}

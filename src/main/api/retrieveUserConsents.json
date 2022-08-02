@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/consent",
   "comments": [
-    "Retrieves all of the consents for a User."
+    "Retrieves all the consents for a User."
   ],
   "method": "get",
   "methodName": "retrieveUserConsents",

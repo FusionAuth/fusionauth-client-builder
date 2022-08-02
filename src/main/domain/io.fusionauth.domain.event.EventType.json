@@ -42,17 +42,23 @@
     "name" : "UserDeleteComplete",
     "args" : [ "user.delete.complete" ]
   }, {
-    "name" : "UserLoginIdDuplicateOnCreate",
-    "args" : [ "user.loginId.duplicate.create" ]
-  }, {
-    "name" : "UserLoginIdDuplicateOnUpdate",
-    "args" : [ "user.loginId.duplicate.update" ]
-  }, {
     "name" : "UserEmailUpdate",
     "args" : [ "user.email.update" ]
   }, {
     "name" : "UserEmailVerified",
     "args" : [ "user.email.verified" ]
+  }, {
+    "name" : "UserIdentityProviderLink",
+    "args" : [ "user.identity-provider.link" ]
+  }, {
+    "name" : "UserIdentityProviderUnlink",
+    "args" : [ "user.identity-provider.unlink" ]
+  }, {
+    "name" : "UserLoginIdDuplicateOnCreate",
+    "args" : [ "user.loginId.duplicate.create" ]
+  }, {
+    "name" : "UserLoginIdDuplicateOnUpdate",
+    "args" : [ "user.loginId.duplicate.update" ]
   }, {
     "name" : "UserLoginFailed",
     "args" : [ "user.login.failed" ]
