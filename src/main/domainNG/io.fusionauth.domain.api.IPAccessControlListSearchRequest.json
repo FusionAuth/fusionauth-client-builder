@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.IPAccessControlListSearchRequest",
+  "extends" : { },
+  "fields" : {
+    "search" : {
+      "className" : "io.fusionauth.domain.search.IPAccessControlListSearchCriteria",
+      "type" : "IPAccessControlListSearchCriteria"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.search.IPAccessControlListSearchCriteria" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "IPAccessControlListSearchRequest"
+}

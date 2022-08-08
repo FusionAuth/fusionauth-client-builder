@@ -1,0 +1,41 @@
+{
+  "uri": "/api/two-factor/status",
+  "comments": [
+    "Retrieve a user's two-factor status.",
+    "",
+    "This can be used to see if a user will need to complete a two-factor challenge to complete a login,",
+    "and optionally identify the state of the two-factor trust across various applications."
+  ],
+  "method": "get",
+  "methodName": "retrieveTwoFactorStatus",
+  "successResponse": "TwoFactorStatusResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "userId",
+      "comments": [
+        "The user Id to retrieve the Two-Factor status."
+      ],
+      "type": "urlParameter",
+      "parameterName": "userId",
+      "javaType": "UUID"
+    },
+    {
+      "name": "applicationId",
+      "comments": [
+        "The optional applicationId to verify."
+      ],
+      "type": "urlParameter",
+      "parameterName": "applicationId",
+      "javaType": "UUID"
+    },
+    {
+      "name": "twoFactorTrustId",
+      "comments": [
+        "The optional two-factor trust Id to verify."
+      ],
+      "type": "urlSegment",
+      "javaType": "String"
+    }
+  ]
+}

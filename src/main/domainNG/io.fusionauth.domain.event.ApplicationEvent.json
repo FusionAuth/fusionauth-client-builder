@@ -1,0 +1,9 @@
+{
+  "className" : "io.fusionauth.domain.event.ApplicationEvent",
+  "fields" : { },
+  "imports" : [ ],
+  "interfaces" : [ ],
+  "objectType" : "Interface",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "ApplicationEvent"
+}

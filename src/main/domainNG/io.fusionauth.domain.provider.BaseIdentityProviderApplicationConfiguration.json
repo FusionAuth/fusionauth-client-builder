@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration",
+  "extends" : { },
+  "fields" : {
+    "createRegistration" : {
+      "type" : "boolean"
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    }
+  },
+  "imports" : [ "java.util.Map", "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "BaseIdentityProviderApplicationConfiguration"
+}

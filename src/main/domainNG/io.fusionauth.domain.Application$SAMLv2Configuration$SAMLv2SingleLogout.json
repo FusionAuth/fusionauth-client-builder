@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2SingleLogout",
+  "extends" : { },
+  "fields" : {
+    "keyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "url" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "xmlSignatureC14nMethod" : {
+      "className" : "io.fusionauth.domain.CanonicalizationMethod",
+      "type" : "CanonicalizationMethod"
+    }
+  },
+  "imports" : [ "java.util.UUID", "java.net.URI", "io.fusionauth.domain.CanonicalizationMethod" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Application$SAMLv2Configuration$SAMLv2SingleLogout"
+}

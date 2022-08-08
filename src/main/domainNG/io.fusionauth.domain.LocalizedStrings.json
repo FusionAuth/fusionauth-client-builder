@@ -1,0 +1,20 @@
+{
+  "className" : "io.fusionauth.domain.LocalizedStrings",
+  "extends" : {
+    "className" : "java.util.TreeMap",
+    "type" : "TreeMap",
+    "typeArguments" : [ {
+      "className" : "java.util.Locale",
+      "type" : "Locale"
+    }, {
+      "className" : "java.lang.String",
+      "type" : "String"
+    } ]
+  },
+  "fields" : { },
+  "imports" : [ "java.util.TreeMap", "java.util.Locale", "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "LocalizedStrings"
+}

@@ -1,6 +1,6 @@
 [#import "_macros.ftl" as global/]
 /*
- * Copyright (c) 2018-2019, FusionAuth, All Rights Reserved
+ * Copyright (c) 2018-2022, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,10 @@
  */
 package io.fusionauth.client;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -89,6 +91,7 @@ import io.fusionauth.domain.api.LambdaRequest;
 import io.fusionauth.domain.api.LambdaResponse;
 import io.fusionauth.domain.api.LoginRecordSearchRequest;
 import io.fusionauth.domain.api.LoginRecordSearchResponse;
+import io.fusionauth.domain.api.LoginPingRequest;
 import io.fusionauth.domain.api.LoginRequest;
 import io.fusionauth.domain.api.LoginResponse;
 import io.fusionauth.domain.api.LogoutRequest;
@@ -168,6 +171,7 @@ import io.fusionauth.domain.api.twoFactor.TwoFactorLoginRequest;
 import io.fusionauth.domain.api.twoFactor.TwoFactorSendRequest;
 import io.fusionauth.domain.api.twoFactor.TwoFactorStartRequest;
 import io.fusionauth.domain.api.twoFactor.TwoFactorStartResponse;
+import io.fusionauth.domain.api.twoFactor.TwoFactorStatusResponse;
 import io.fusionauth.domain.api.user.ActionRequest;
 import io.fusionauth.domain.api.user.ActionResponse;
 import io.fusionauth.domain.api.user.ChangePasswordRequest;
@@ -289,10 +293,10 @@ public class FusionAuthClient {
     [#if param.type == "form"][#assign formPost = true/][/#if]
   [/#list]
   [#if formPost]
-    Map<String, String> parameters = new HashMap<>();
+    Map<String, List<String>> parameters = new HashMap<>();
     [#list api.params![] as param]
       [#if param.type == "form"]
-    parameters.put("${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)});
+    parameters.put("${param.name}", Arrays.asList(${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)}));
       [/#if]
     [/#list]
   [/#if]

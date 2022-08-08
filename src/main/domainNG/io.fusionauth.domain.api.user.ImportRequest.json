@@ -1,0 +1,30 @@
+{
+  "className" : "io.fusionauth.domain.api.user.ImportRequest",
+  "extends" : { },
+  "fields" : {
+    "encryptionScheme" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "factor" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
+    "users" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.User",
+        "type" : "User"
+      } ]
+    },
+    "validateDbConstraints" : {
+      "type" : "boolean"
+    }
+  },
+  "imports" : [ "java.lang.String", "java.lang.Integer", "java.util.List", "io.fusionauth.domain.User" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "ImportRequest"
+}

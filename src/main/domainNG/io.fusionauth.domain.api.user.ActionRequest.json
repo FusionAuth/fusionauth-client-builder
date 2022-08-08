@@ -1,0 +1,18 @@
+{
+  "className" : "io.fusionauth.domain.api.user.ActionRequest",
+  "extends" : { },
+  "fields" : {
+    "action" : {
+      "className" : "io.fusionauth.domain.api.user.ActionRequest$ActionData",
+      "type" : "ActionRequest$ActionData"
+    },
+    "broadcast" : {
+      "type" : "boolean"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.api.user.ActionRequest$ActionData" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "ActionRequest"
+}

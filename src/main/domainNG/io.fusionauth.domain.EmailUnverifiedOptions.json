@@ -1,0 +1,28 @@
+{
+  "className" : "io.fusionauth.domain.EmailUnverifiedOptions",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "allowEmailChangeWhenGated" : {
+      "type" : "boolean"
+    },
+    "behavior" : {
+      "className" : "io.fusionauth.domain.UnverifiedBehavior",
+      "type" : "UnverifiedBehavior"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.UnverifiedBehavior" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.EmailUnverifiedOptions",
+      "type" : "EmailUnverifiedOptions"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EmailUnverifiedOptions"
+}

@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.EntityGrantSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "grants" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.EntityGrant",
+        "type" : "EntityGrant"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.EntityGrant" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EntityGrantSearchResponse"
+}

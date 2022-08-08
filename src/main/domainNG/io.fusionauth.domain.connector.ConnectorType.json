@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.connector.ConnectorType",
+  "enum" : [ "FusionAuth", "Generic", "LDAP" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.connector",
+  "type" : "ConnectorType"
+}

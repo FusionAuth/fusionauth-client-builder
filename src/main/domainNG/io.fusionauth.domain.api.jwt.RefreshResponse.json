@@ -1,0 +1,9 @@
+{
+  "className" : "io.fusionauth.domain.api.jwt.RefreshResponse",
+  "fields" : { },
+  "imports" : [ ],
+  "interfaces" : [ ],
+  "objectType" : "Interface",
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "RefreshResponse"
+}

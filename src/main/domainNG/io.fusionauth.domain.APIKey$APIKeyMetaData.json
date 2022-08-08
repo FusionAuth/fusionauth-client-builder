@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.APIKey$APIKeyMetaData",
+  "extends" : { },
+  "fields" : {
+    "attributes" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    }
+  },
+  "imports" : [ "java.util.Map", "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "APIKey$APIKeyMetaData"
+}

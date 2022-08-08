@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.form.FormType",
+  "enum" : [ "registration", "adminRegistration", "adminUser", "selfServiceUser" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "FormType"
+}

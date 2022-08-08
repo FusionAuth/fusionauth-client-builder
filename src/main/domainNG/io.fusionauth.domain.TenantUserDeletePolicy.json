@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.TenantUserDeletePolicy",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "unverified" : {
+      "className" : "io.fusionauth.domain.TimeBasedDeletePolicy",
+      "type" : "TimeBasedDeletePolicy"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.TimeBasedDeletePolicy" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TenantUserDeletePolicy",
+      "type" : "TenantUserDeletePolicy"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantUserDeletePolicy"
+}

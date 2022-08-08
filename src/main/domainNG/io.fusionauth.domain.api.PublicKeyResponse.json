@@ -1,0 +1,26 @@
+{
+  "className" : "io.fusionauth.domain.api.PublicKeyResponse",
+  "extends" : { },
+  "fields" : {
+    "publicKey" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "publicKeys" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    }
+  },
+  "imports" : [ "java.lang.String", "java.util.Map" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "PublicKeyResponse"
+}

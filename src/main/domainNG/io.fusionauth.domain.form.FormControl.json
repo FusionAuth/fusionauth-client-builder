@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.form.FormControl",
+  "enum" : [ "checkbox", "number", "password", "radio", "select", "textarea", "text" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "FormControl"
+}

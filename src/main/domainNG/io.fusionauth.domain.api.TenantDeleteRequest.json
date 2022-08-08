@@ -1,0 +1,24 @@
+{
+  "className" : "io.fusionauth.domain.api.TenantDeleteRequest",
+  "extends" : {
+    "className" : "io.fusionauth.domain.api.BaseEventRequest",
+    "type" : "BaseEventRequest"
+  },
+  "fields" : {
+    "async" : {
+      "type" : "boolean"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.TenantDeleteRequest",
+      "type" : "TenantDeleteRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TenantDeleteRequest"
+}

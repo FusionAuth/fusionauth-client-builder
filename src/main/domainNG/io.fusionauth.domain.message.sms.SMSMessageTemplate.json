@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.message.sms.SMSMessageTemplate",
+  "extends" : {
+    "className" : "io.fusionauth.domain.message.MessageTemplate",
+    "type" : "MessageTemplate"
+  },
+  "fields" : {
+    "defaultTemplate" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "localizedTemplates" : {
+      "className" : "io.fusionauth.domain.LocalizedStrings",
+      "type" : "LocalizedStrings"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.message.MessageTemplate", "io.fusionauth.domain.Buildable", "java.lang.String", "io.fusionauth.domain.LocalizedStrings" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.message.sms.SMSMessageTemplate",
+      "type" : "SMSMessageTemplate"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.message.sms",
+  "type" : "SMSMessageTemplate"
+}

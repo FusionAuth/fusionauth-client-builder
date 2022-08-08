@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.search.Sort",
+  "enum" : [ "asc", "desc" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "Sort"
+}

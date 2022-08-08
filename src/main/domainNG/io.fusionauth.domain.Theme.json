@@ -1,0 +1,68 @@
+{
+  "className" : "io.fusionauth.domain.Theme",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "FUSIONAUTH_THEME_ID" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "defaultMessages" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "localizedMessages" : {
+      "className" : "io.fusionauth.domain.LocalizedStrings",
+      "type" : "LocalizedStrings"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "stylesheet" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "templates" : {
+      "className" : "io.fusionauth.domain.Theme$Templates",
+      "type" : "Theme$Templates"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.UUID", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.LocalizedStrings", "io.fusionauth.domain.Theme$Templates" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Theme",
+      "type" : "Theme"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Theme"
+}

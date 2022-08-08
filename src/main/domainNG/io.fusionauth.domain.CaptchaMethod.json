@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.CaptchaMethod",
+  "enum" : [ "GoogleRecaptchaV2", "GoogleRecaptchaV3", "HCaptcha", "HCaptchaEnterprise" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CaptchaMethod"
+}

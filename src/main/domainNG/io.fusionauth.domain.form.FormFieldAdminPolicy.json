@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.form.FormFieldAdminPolicy",
+  "enum" : [ "Edit", "View" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "FormFieldAdminPolicy"
+}

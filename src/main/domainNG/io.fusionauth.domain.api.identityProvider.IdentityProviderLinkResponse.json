@@ -1,0 +1,33 @@
+{
+  "className" : "io.fusionauth.domain.api.identityProvider.IdentityProviderLinkResponse",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "identityProviderLink" : {
+      "className" : "io.fusionauth.domain.IdentityProviderLink",
+      "type" : "IdentityProviderLink"
+    },
+    "identityProviderLinks" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.IdentityProviderLink",
+        "type" : "IdentityProviderLink"
+      } ]
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.IdentityProviderLink", "java.util.List" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.identityProvider.IdentityProviderLinkResponse",
+      "type" : "IdentityProviderLinkResponse"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.identityProvider",
+  "type" : "IdentityProviderLinkResponse"
+}

@@ -1,0 +1,9 @@
+{
+  "className" : "io.fusionauth.domain.jwks.JSONWebKeyInfoProvider",
+  "fields" : { },
+  "imports" : [ ],
+  "interfaces" : [ ],
+  "objectType" : "Interface",
+  "packageName" : "io.fusionauth.domain.jwks",
+  "type" : "JSONWebKeyInfoProvider"
+}

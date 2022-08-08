@@ -1,0 +1,60 @@
+{
+  "className" : "io.fusionauth.domain.EventInfo",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "deviceDescription" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "deviceName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "deviceType" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "ipAddress" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "location" : {
+      "className" : "io.fusionauth.domain.Location",
+      "type" : "Location"
+    },
+    "os" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userAgent" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.Location" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.EventInfo",
+      "type" : "EventInfo"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EventInfo"
+}

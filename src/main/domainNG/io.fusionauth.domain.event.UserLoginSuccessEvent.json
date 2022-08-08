@@ -1,0 +1,49 @@
+{
+  "className" : "io.fusionauth.domain.event.UserLoginSuccessEvent",
+  "extends" : {
+    "className" : "io.fusionauth.domain.event.BaseEvent",
+    "type" : "BaseEvent"
+  },
+  "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "authenticationType" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "connectorId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "identityProviderId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "identityProviderName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "ipAddress" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "user" : {
+      "className" : "io.fusionauth.domain.User",
+      "type" : "User"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.User" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.event.UserLoginSuccessEvent",
+      "type" : "UserLoginSuccessEvent"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserLoginSuccessEvent"
+}

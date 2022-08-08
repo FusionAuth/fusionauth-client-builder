@@ -1,0 +1,67 @@
+{
+  "className" : "io.fusionauth.domain.Application$SAMLv2Configuration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "audience" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "authorizedRedirectURLs" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.net.URI",
+        "type" : "URI"
+      } ]
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "defaultVerificationKeyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "issuer" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "keyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "logout" : {
+      "className" : "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2Logout",
+      "type" : "Application$SAMLv2Configuration$SAMLv2Logout"
+    },
+    "logoutURL" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "requireSignedRequests" : {
+      "type" : "boolean"
+    },
+    "xmlSignatureC14nMethod" : {
+      "className" : "io.fusionauth.domain.CanonicalizationMethod",
+      "type" : "CanonicalizationMethod"
+    },
+    "xmlSignatureLocation" : {
+      "className" : "io.fusionauth.domain.Application$SAMLv2Configuration$XMLSignatureLocation",
+      "type" : "Application$SAMLv2Configuration$XMLSignatureLocation"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.List", "java.net.URI", "java.util.UUID", "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2Logout", "io.fusionauth.domain.CanonicalizationMethod", "io.fusionauth.domain.Application$SAMLv2Configuration$XMLSignatureLocation" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Application$SAMLv2Configuration",
+      "type" : "Application$SAMLv2Configuration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Application$SAMLv2Configuration"
+}

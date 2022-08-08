@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.api.PreviewRequest",
+  "extends" : { },
+  "fields" : {
+    "emailTemplate" : {
+      "className" : "io.fusionauth.domain.email.EmailTemplate",
+      "type" : "EmailTemplate"
+    },
+    "locale" : {
+      "className" : "java.util.Locale",
+      "type" : "Locale"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.email.EmailTemplate", "java.util.Locale" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "PreviewRequest"
+}

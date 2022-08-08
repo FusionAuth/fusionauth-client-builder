@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.message.MessageType",
+  "enum" : [ "SMS" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.message",
+  "type" : "MessageType"
+}

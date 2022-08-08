@@ -1,0 +1,104 @@
+{
+  "className" : "io.fusionauth.domain.api.LoginResponse",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "actions" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.api.LoginPreventedResponse",
+        "type" : "LoginPreventedResponse"
+      } ]
+    },
+    "changePasswordId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "changePasswordReason" : {
+      "className" : "io.fusionauth.domain.ChangePasswordReason",
+      "type" : "ChangePasswordReason"
+    },
+    "emailVerificationId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "methods" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.TwoFactorMethod",
+        "type" : "TwoFactorMethod"
+      } ]
+    },
+    "pendingIdPLinkId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "refreshToken" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "registrationVerificationId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "state" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "threatsDetected" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.AuthenticationThreats",
+        "type" : "AuthenticationThreats"
+      } ]
+    },
+    "token" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "tokenExpirationInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "trustToken" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "twoFactorId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "twoFactorTrustId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "user" : {
+      "className" : "io.fusionauth.domain.User",
+      "type" : "User"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "io.fusionauth.domain.api.LoginPreventedResponse", "java.lang.String", "io.fusionauth.domain.ChangePasswordReason", "io.fusionauth.domain.TwoFactorMethod", "java.util.Map", "java.util.Set", "io.fusionauth.domain.AuthenticationThreats", "java.time.ZonedDateTime", "io.fusionauth.domain.User" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.LoginResponse",
+      "type" : "LoginResponse"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LoginResponse"
+}

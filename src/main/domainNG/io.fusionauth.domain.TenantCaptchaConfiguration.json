@@ -1,0 +1,36 @@
+{
+  "className" : "io.fusionauth.domain.TenantCaptchaConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "captchaMethod" : {
+      "className" : "io.fusionauth.domain.CaptchaMethod",
+      "type" : "CaptchaMethod"
+    },
+    "secretKey" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "siteKey" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "threshold" : {
+      "type" : "double"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.CaptchaMethod", "java.lang.String" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TenantCaptchaConfiguration",
+      "type" : "TenantCaptchaConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantCaptchaConfiguration"
+}

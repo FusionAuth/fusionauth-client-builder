@@ -1,0 +1,9 @@
+{
+  "className" : "io.fusionauth.domain.provider.DomainBasedIdentityProvider",
+  "fields" : { },
+  "imports" : [ ],
+  "interfaces" : [ ],
+  "objectType" : "Interface",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "DomainBasedIdentityProvider"
+}

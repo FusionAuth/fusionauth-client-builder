@@ -1,0 +1,27 @@
+{
+  "className" : "io.fusionauth.domain.LogHistory$HistoryItem",
+  "extends" : { },
+  "fields" : {
+    "actionerUserId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "comment" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "createInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "expiry" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    }
+  },
+  "imports" : [ "java.util.UUID", "java.lang.String", "java.time.ZonedDateTime" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "LogHistory$HistoryItem"
+}

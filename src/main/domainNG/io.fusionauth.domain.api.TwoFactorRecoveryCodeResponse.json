@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.api.TwoFactorRecoveryCodeResponse",
+  "extends" : { },
+  "fields" : {
+    "recoveryCodes" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    }
+  },
+  "imports" : [ "java.util.List", "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TwoFactorRecoveryCodeResponse"
+}

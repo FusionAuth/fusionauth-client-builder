@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2020, FusionAuth, All Rights Reserved
+ * Copyright (c) 2019-2022, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ import java.nio.file.Paths
 fusionauthJWTVersion = "3.4.0" // Keep this at 3.4.0 for now to preserve the algorithms enum
 javaErrorVersion = "2.2.3"
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.36.9", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.37.0", licenses: ["ApacheV2_0"]) {
   workflow {
     fetch {
       cache()
@@ -57,6 +57,7 @@ release = loadPlugin(id: "org.savantbuild.plugin:release-git:1.0.0")
 
 // Plugin settings
 clientLibrary.settings.debug = false
+//clientLibrary.settings.domainDirectory = Paths.get("src/main/domainNG")
 
 target(name: "extract-source-jars") {
   // Download the source JARs
@@ -158,8 +159,20 @@ target(name: "build-angular", description: "Build the Angular Client Library") {
 }
 
 target(name: "build-java", description: "Build the Java Client Library") {
+  // fusionauth-java-client
   clientLibrary.buildClient(template: "src/main/client/java.client.ftl",
                             outputFile: "../fusionauth-java-client/src/main/java/io/fusionauth/client/FusionAuthClient.java")
+  // fusionauth-app
+  clientLibrary.buildClient(template: "src/main/client/java.client.ftl",
+                            outputFile: "../fusionauth-app/src/main/java/io/fusionauth/client/FusionAuthClient.java")
+
+//  file.delete {
+//    fileSet(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain")
+//    fileSet(dir: "../fusionauth-java-client/src/main/java/com/inversoft/error")
+//  }
+//  clientLibrary.buildDomain(template: "src/main/client/java.domain.ftl",
+//                            outputDir: "../fusionauth-java-client/src/main/java/",
+//                            extension: "java")
 }
 
 target(name: "build-php", description: "Build the PHP Client Library") {
@@ -241,7 +254,8 @@ target(name: "build-dart", description: "Build the Dart Client Library") {
 
 target(name: "build-openapi", description: "Build the OpenAPI file") {
   projVersion = project.version.toString()
-  cleanExecute(["ruby", "bin/build-openapi-yaml.rb", "--source-directory", "./src", "--out", "../fusionauth-openapi/openapi.yaml", "--api-version", projVersion])
+  cleanExecute(
+      ["ruby", "bin/build-openapi-yaml.rb", "--source-directory", "./src", "--out", "../fusionauth-openapi/openapi.yaml", "--api-version", projVersion])
 }
 
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
@@ -267,15 +281,15 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
 //
 target(name: "publish-all", description: "Publish all client libraries") {
   [
-   "dart-client",
-   "java-client",
-   "netcore-client",
-   "node-client",
-   "php-client",
-   "python-client",
-   "ruby-client",
-   "typescript-client",
-   "openapi"
+      "dart-client",
+      "java-client",
+      "netcore-client",
+      "node-client",
+      "php-client",
+      "python-client",
+      "ruby-client",
+      "typescript-client",
+      "openapi"
   ].each { client ->
     ProcessBuilder pb = new ProcessBuilder(
         "sb", "publish")

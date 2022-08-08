@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.identityProvider.LookupResponse",
+  "extends" : { },
+  "fields" : {
+    "identityProvider" : {
+      "className" : "io.fusionauth.domain.api.identityProvider.LookupResponse$IdentityProviderDetails",
+      "type" : "LookupResponse$IdentityProviderDetails"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.api.identityProvider.LookupResponse$IdentityProviderDetails" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.identityProvider",
+  "type" : "LookupResponse"
+}

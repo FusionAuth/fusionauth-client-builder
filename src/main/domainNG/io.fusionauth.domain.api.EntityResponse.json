@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.EntityResponse",
+  "extends" : { },
+  "fields" : {
+    "entity" : {
+      "className" : "io.fusionauth.domain.Entity",
+      "type" : "Entity"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Entity" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EntityResponse"
+}

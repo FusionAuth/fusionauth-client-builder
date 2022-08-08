@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.jwt.ValidateResponse",
+  "extends" : { },
+  "fields" : {
+    "jwt" : {
+      "className" : "io.fusionauth.jwt.domain.JWT",
+      "type" : "JWT"
+    }
+  },
+  "imports" : [ "io.fusionauth.jwt.domain.JWT" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "ValidateResponse"
+}

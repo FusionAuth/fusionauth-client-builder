@@ -1,0 +1,20 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.UserinfoResponse",
+  "extends" : {
+    "className" : "java.util.LinkedHashMap",
+    "type" : "LinkedHashMap",
+    "typeArguments" : [ {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }, {
+      "className" : "java.lang.Object",
+      "type" : "Object"
+    } ]
+  },
+  "fields" : { },
+  "imports" : [ "java.util.LinkedHashMap", "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "UserinfoResponse"
+}

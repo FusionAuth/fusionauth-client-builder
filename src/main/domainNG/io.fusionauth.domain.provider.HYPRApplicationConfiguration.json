@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.provider.HYPRApplicationConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration",
+    "type" : "BaseIdentityProviderApplicationConfiguration"
+  },
+  "fields" : {
+    "relyingPartyApplicationId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "relyingPartyURL" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "io.fusionauth.domain.Buildable", "java.lang.String", "java.net.URI" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.HYPRApplicationConfiguration",
+      "type" : "HYPRApplicationConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "HYPRApplicationConfiguration"
+}

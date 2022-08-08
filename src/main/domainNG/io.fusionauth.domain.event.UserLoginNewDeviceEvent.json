@@ -1,0 +1,10 @@
+{
+  "className" : "io.fusionauth.domain.event.UserLoginNewDeviceEvent",
+  "extends" : { },
+  "fields" : { },
+  "imports" : [ ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserLoginNewDeviceEvent"
+}

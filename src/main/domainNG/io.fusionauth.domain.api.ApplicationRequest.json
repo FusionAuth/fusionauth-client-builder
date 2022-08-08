@@ -1,0 +1,27 @@
+{
+  "className" : "io.fusionauth.domain.api.ApplicationRequest",
+  "extends" : { },
+  "fields" : {
+    "application" : {
+      "className" : "io.fusionauth.domain.Application",
+      "type" : "Application"
+    },
+    "role" : {
+      "className" : "io.fusionauth.domain.ApplicationRole",
+      "type" : "ApplicationRole"
+    },
+    "webhookIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Application", "io.fusionauth.domain.ApplicationRole", "java.util.List", "java.util.UUID" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ApplicationRequest"
+}

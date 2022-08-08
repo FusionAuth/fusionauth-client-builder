@@ -1,0 +1,93 @@
+{
+  "className" : "io.fusionauth.domain.Application$ApplicationEmailConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "EmailTemplateIdFieldNames" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "EmailTemplateIdFields" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.reflect.Field",
+        "type" : "Field"
+      } ]
+    },
+    "emailUpdateEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "emailVerificationEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "emailVerifiedEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "forgotPasswordEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "loginIdInUseOnCreateEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "loginIdInUseOnUpdateEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "loginNewDeviceEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "loginSuspiciousEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "passwordResetSuccessEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "passwordUpdateEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "passwordlessEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "setPasswordEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "twoFactorMethodAddEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "twoFactorMethodRemoveEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "java.lang.String", "java.lang.reflect.Field", "java.util.UUID" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Application$ApplicationEmailConfiguration",
+      "type" : "Application$ApplicationEmailConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Application$ApplicationEmailConfiguration"
+}

@@ -1,0 +1,95 @@
+{
+  "className" : "io.fusionauth.domain.provider.SAMLv2IdentityProvider",
+  "extends" : {
+    "className" : "io.fusionauth.domain.provider.BaseIdentityProvider",
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.SAMLv2ApplicationConfiguration",
+      "type" : "SAMLv2ApplicationConfiguration"
+    } ]
+  },
+  "fields" : {
+    "buttonImageURL" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "buttonText" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "domains" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "emailClaim" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "idpEndpoint" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "issuer" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "keyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "nameIdFormat" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "postRequest" : {
+      "type" : "boolean"
+    },
+    "requestSigningKeyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "signRequest" : {
+      "type" : "boolean"
+    },
+    "uniqueIdClaim" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "useNameIdForEmail" : {
+      "type" : "boolean"
+    },
+    "usernameClaim" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "xmlSignatureC14nMethod" : {
+      "className" : "io.fusionauth.domain.CanonicalizationMethod",
+      "type" : "CanonicalizationMethod"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.DomainBasedIdentityProvider", "io.fusionauth.domain.RequiresCORSConfiguration", "io.fusionauth.domain.provider.SupportsPostBindings", "io.fusionauth.domain.provider.SAMLv2ApplicationConfiguration", "java.util.Set", "java.lang.String", "java.net.URI", "java.util.UUID", "io.fusionauth.domain.CanonicalizationMethod" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.SAMLv2IdentityProvider",
+      "type" : "SAMLv2IdentityProvider"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.provider.DomainBasedIdentityProvider",
+    "type" : "DomainBasedIdentityProvider"
+  }, {
+    "className" : "io.fusionauth.domain.RequiresCORSConfiguration",
+    "type" : "RequiresCORSConfiguration"
+  }, {
+    "className" : "io.fusionauth.domain.provider.SupportsPostBindings",
+    "type" : "SupportsPostBindings"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SAMLv2IdentityProvider"
+}

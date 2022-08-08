@@ -1,0 +1,36 @@
+{
+  "className" : "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "limitUserLinkCount" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderLimitUserLinkingPolicy",
+      "type" : "IdentityProviderLimitUserLinkingPolicy"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.Map", "java.lang.String", "io.fusionauth.domain.provider.IdentityProviderLimitUserLinkingPolicy" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration",
+      "type" : "IdentityProviderTenantConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderTenantConfiguration"
+}

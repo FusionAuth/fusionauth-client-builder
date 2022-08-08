@@ -1,0 +1,33 @@
+{
+  "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "authenticator" : {
+      "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorAuthenticatorMethod",
+      "type" : "TenantMultiFactorConfiguration$MultiFactorAuthenticatorMethod"
+    },
+    "email" : {
+      "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorEmailMethod",
+      "type" : "TenantMultiFactorConfiguration$MultiFactorEmailMethod"
+    },
+    "sms" : {
+      "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorSMSMethod",
+      "type" : "TenantMultiFactorConfiguration$MultiFactorSMSMethod"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorAuthenticatorMethod", "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorEmailMethod", "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorSMSMethod" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration",
+      "type" : "TenantMultiFactorConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantMultiFactorConfiguration"
+}

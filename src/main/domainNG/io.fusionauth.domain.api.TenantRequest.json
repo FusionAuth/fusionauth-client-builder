@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.api.TenantRequest",
+  "extends" : { },
+  "fields" : {
+    "sourceTenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "tenant" : {
+      "className" : "io.fusionauth.domain.Tenant",
+      "type" : "Tenant"
+    }
+  },
+  "imports" : [ "java.util.UUID", "io.fusionauth.domain.Tenant" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TenantRequest"
+}

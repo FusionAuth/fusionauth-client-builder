@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.jwt.JWTVendResponse",
+  "extends" : { },
+  "fields" : {
+    "token" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "JWTVendResponse"
+}

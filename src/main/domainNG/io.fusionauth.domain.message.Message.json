@@ -1,0 +1,9 @@
+{
+  "className" : "io.fusionauth.domain.message.Message",
+  "fields" : { },
+  "imports" : [ ],
+  "interfaces" : [ ],
+  "objectType" : "Interface",
+  "packageName" : "io.fusionauth.domain.message",
+  "type" : "Message"
+}

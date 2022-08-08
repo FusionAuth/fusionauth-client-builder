@@ -1,0 +1,10 @@
+{
+  "className" : "io.fusionauth.domain.Application$AuthenticationTokenConfiguration",
+  "extends" : { },
+  "fields" : { },
+  "imports" : [ ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Application$AuthenticationTokenConfiguration"
+}

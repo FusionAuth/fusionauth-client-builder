@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.IdentityProviderRequest",
+  "extends" : { },
+  "fields" : {
+    "identityProvider" : {
+      "className" : "io.fusionauth.domain.provider.BaseIdentityProvider",
+      "type" : "BaseIdentityProvider"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "IdentityProviderRequest"
+}

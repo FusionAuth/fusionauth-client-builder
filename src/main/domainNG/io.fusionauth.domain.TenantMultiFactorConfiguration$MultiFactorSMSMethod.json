@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorSMSMethod",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "messengerId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "templateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.util.UUID" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorSMSMethod",
+      "type" : "TenantMultiFactorConfiguration$MultiFactorSMSMethod"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantMultiFactorConfiguration$MultiFactorSMSMethod"
+}

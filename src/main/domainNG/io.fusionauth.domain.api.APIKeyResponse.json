@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.APIKeyResponse",
+  "extends" : { },
+  "fields" : {
+    "apiKey" : {
+      "className" : "io.fusionauth.domain.APIKey",
+      "type" : "APIKey"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.APIKey" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "APIKeyResponse"
+}

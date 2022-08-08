@@ -1,0 +1,28 @@
+{
+  "className" : "io.fusionauth.domain.event.AuditLogCreateEvent",
+  "extends" : {
+    "className" : "io.fusionauth.domain.event.BaseEvent",
+    "type" : "BaseEvent"
+  },
+  "fields" : {
+    "auditLog" : {
+      "className" : "io.fusionauth.domain.AuditLog",
+      "type" : "AuditLog"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.InstanceEvent", "io.fusionauth.domain.AuditLog" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.event.AuditLogCreateEvent",
+      "type" : "AuditLogCreateEvent"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.event.InstanceEvent",
+    "type" : "InstanceEvent"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "AuditLogCreateEvent"
+}

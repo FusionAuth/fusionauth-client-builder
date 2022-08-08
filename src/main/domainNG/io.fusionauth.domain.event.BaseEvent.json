@@ -1,0 +1,27 @@
+{
+  "className" : "io.fusionauth.domain.event.BaseEvent",
+  "extends" : { },
+  "fields" : {
+    "createInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "info" : {
+      "className" : "io.fusionauth.domain.EventInfo",
+      "type" : "EventInfo"
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "java.time.ZonedDateTime", "java.util.UUID", "io.fusionauth.domain.EventInfo" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "BaseEvent"
+}

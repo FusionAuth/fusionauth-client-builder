@@ -1,0 +1,102 @@
+{
+  "className" : "io.fusionauth.domain.ExternalIdentifierConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "authorizationGrantIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "changePasswordIdGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "changePasswordIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "deviceCodeTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "deviceUserCodeIdGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "emailVerificationIdGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "emailVerificationIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "emailVerificationOneTimeCodeGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "externalAuthenticationIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "oneTimePasswordTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "passwordlessLoginGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "passwordlessLoginTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "pendingAccountLinkTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "registrationVerificationIdGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "registrationVerificationIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "registrationVerificationOneTimeCodeGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "samlv2AuthNRequestIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "setupPasswordIdGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "setupPasswordIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "trustTokenTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "twoFactorIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "twoFactorOneTimeCodeIdGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "twoFactorOneTimeCodeIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "twoFactorTrustIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.SecureGeneratorConfiguration" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.ExternalIdentifierConfiguration",
+      "type" : "ExternalIdentifierConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ExternalIdentifierConfiguration"
+}
