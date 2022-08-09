@@ -1,6 +1,0 @@
-{
-  "packageName" : "io.fusionauth.domain.event",
-  "type" : "ApplicationEvent",
-  "description" : "/**\n * Events that are bound to applications.\n *\n * @author Brian Pontarelli\n */\n",
-  "fields" : { }
-}

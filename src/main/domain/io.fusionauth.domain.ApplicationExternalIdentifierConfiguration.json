@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationExternalIdentifierConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ApplicationExternalIdentifierConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "twoFactorTrustIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    }
+  }
+}

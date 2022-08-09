@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.api.twoFactor",
+  "type" : "TwoFactorStatusResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TwoFactorStatusResponse"
+    } ]
+  } ],
+  "fields" : {
+    "trusts" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "TwoFactorTrust"
+      } ]
+    },
+    "twoFactorTrustId" : {
+      "type" : "String"
+    }
+  }
+}

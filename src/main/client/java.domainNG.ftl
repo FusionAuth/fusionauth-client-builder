@@ -33,33 +33,24 @@
 [/#macro]
 package ${domain_item.packageName};
 
-import java.util.*;
-import java.util.function.*;
+[#if domain_item.objectType == "Object"]
+import java.util.function.Consumer;
+[/#if]
+[#assign jdkImports = false]
+[#list domain_item.imports![] as class]
+[#if !class?string?starts_with("io.fusionauth") ]
+import ${class};
+[#assign jdkImports = true]
+[/#if]
+[/#list]
+[#if jdkImports]
 
-import io.fusionauth.domain.*;
-import io.fusionauth.domain.api.*;
-import io.fusionauth.domain.api.cache.*;
-import io.fusionauth.domain.api.email.*;
-import io.fusionauth.domain.api.identityProvider.*;
-import io.fusionauth.domain.api.jwt.*;
-import io.fusionauth.domain.api.passwordless.*;
-import io.fusionauth.domain.api.report.*;
-import io.fusionauth.domain.api.twoFactor.*;
-import io.fusionauth.domain.api.user.*;
-import io.fusionauth.domain.connector.*;
-import io.fusionauth.domain.email.*;
-import io.fusionauth.domain.event.*;
-import io.fusionauth.domain.form.*;
-import io.fusionauth.domain.jwks.*;
-import io.fusionauth.domain.jwt.*;
-import io.fusionauth.domain.message.*;
-import io.fusionauth.domain.message.sms.*;
-import io.fusionauth.domain.messenger.*;
-import io.fusionauth.domain.oauth2.*;
-import io.fusionauth.domain.provider.*;
-import io.fusionauth.domain.reactor.*;
-import io.fusionauth.domain.search.*;
-import io.fusionauth.domain.util.*;
+[/#if]
+[#list domain_item.imports![] as class]
+[#if class?string?starts_with("io.fusionauth") && class != "io.fusionauth.domain.Buildable"]
+import ${class};
+[/#if]
+[/#list]
 
 [#if domain_item.description??]
 ${domain_item.description?replace("\n(?!$)", "\n  ", "r")}[#rt]
@@ -68,7 +59,7 @@ ${domain_item.description?replace("\n(?!$)", "\n  ", "r")}[#rt]
  * @author FusionAuth
  */
 [/#if]
-[#if domain_item.fields??]
+[#if domain_item.objectType == "Object"]
 public class [@printType domain_item true/] {
   [#list domain_item.fields?keys as fieldName]
     [#if !fieldName?is_first]
@@ -80,8 +71,13 @@ public class [@printType domain_item true/] {
     [/#if]
   public [@printType field/] ${global.scrubName(replaceKeywords(fieldName))};
   [/#list]
+
+  public [@printType domain_item/] with(Consumer<[@printType domain_item/]> consumer) {
+    consumer.accept(this);
+    return this;
+  }
 }
-[#else]
+[#elseif domain_item.objectType == "Enum"]
   [#assign useCustomNames = global.needsConverter(domain_item)][#t/]
   [#assign useStringName = global.needsConverterNoArgs(domain_item)][#t/]
 public enum ${domain_item.type} {

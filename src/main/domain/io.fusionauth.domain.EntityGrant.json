@@ -8,7 +8,7 @@
       "type" : "EntityGrant"
     } ]
   }, {
-    "type" : "_InternalJSONColumn"
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {

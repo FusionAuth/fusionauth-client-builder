@@ -11,12 +11,6 @@
     },
     "role" : {
       "type" : "ApplicationRole"
-    },
-    "webhookIds" : {
-      "type" : "List",
-      "typeArguments" : [ {
-        "type" : "UUID"
-      } ]
     }
   }
 }
