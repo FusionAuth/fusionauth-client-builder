@@ -342,7 +342,7 @@
       [#default]
         [#list domain_item.enum as enum]
           [#if enum?is_hash && enum.args?? && enum.args?size == 1]
-              [#return true]
+            [#return true]
           [/#if]
         [/#list]
         [#return false]

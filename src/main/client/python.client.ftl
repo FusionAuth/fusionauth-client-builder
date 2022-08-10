@@ -73,7 +73,7 @@ class FusionAuthClient:
             [#if param.type == "urlSegment"]
             .url_segment(${global.convertValue(param, "python")}) \
             [#elseif param.type == "urlParameter"]
-            .url_parameter('${param.parameterName}', ${global.convertValue(param, "python")}) \
+            .url_parameter('${param.parameterName}', self.convert_true_false(${global.convertValue(param, "python")})) \
             [#elseif param.type == "body"]
             .body_handler(JSONBodyHandler(${camel_to_underscores(param.name)})) \
             [/#if]
@@ -85,6 +85,13 @@ class FusionAuthClient:
             .go()
 
 [/#list]
+    def convert_true_false(self,val):
+        if val == True:
+            return 'true'
+        if val == False:
+            return 'false'
+        return val
+
     def start(self):
         return self.start_anonymous().authorization(self.api_key)
 

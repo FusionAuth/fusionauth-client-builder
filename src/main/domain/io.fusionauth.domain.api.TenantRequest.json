@@ -11,6 +11,12 @@
     },
     "tenant" : {
       "type" : "Tenant"
+    },
+    "webhookIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
     }
   }
 }

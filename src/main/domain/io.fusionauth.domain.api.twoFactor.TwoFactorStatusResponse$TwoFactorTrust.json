@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain.api.twoFactor",
+  "type" : "TwoFactorTrust",
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "expiration" : {
+      "type" : "ZonedDateTime"
+    },
+    "startInstant" : {
+      "type" : "ZonedDateTime"
+    }
+  }
+}

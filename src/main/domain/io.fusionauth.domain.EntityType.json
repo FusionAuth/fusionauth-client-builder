@@ -8,7 +8,7 @@
       "type" : "EntityType"
     } ]
   }, {
-    "type" : "_InternalJSONColumn"
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {

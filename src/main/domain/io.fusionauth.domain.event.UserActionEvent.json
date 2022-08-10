@@ -10,16 +10,8 @@
     "typeArguments" : [ {
       "type" : "UserActionEvent"
     } ]
-  }, {
-    "type" : "ApplicationEvent"
   } ],
   "fields" : {
-    "applicationIds" : {
-      "type" : "List",
-      "typeArguments" : [ {
-        "type" : "UUID"
-      } ]
-    },
     "action" : {
       "type" : "String"
     },

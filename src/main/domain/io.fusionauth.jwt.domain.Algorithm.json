@@ -21,6 +21,15 @@
     "name" : "HS512",
     "args" : [ "HmacSHA512" ]
   }, {
+    "name" : "PS256",
+    "args" : [ "SHA-256" ]
+  }, {
+    "name" : "PS384",
+    "args" : [ "SHA-384" ]
+  }, {
+    "name" : "PS512",
+    "args" : [ "SHA-512" ]
+  }, {
     "name" : "RS256",
     "args" : [ "SHA256withRSA" ]
   }, {

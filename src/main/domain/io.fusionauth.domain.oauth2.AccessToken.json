@@ -20,6 +20,9 @@
     "refresh_token" : {
       "type" : "String"
     },
+    "refresh_token_id" : {
+      "type" : "UUID"
+    },
     "scope" : {
       "type" : "String"
     },

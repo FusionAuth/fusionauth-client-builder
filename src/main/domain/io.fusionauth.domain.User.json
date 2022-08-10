@@ -11,7 +11,7 @@
       "type" : "User"
     } ]
   }, {
-    "type" : "_InternalJSONColumn"
+    "type" : "JSONColumnable"
   }, {
     "type" : "Tenantable"
   } ],

@@ -28,7 +28,7 @@
     [#if isDeclaration]
       [#local convertedType = convertedType?replace("IDictionary", "Dictionary")/]
     [/#if]
-    [#if isTypeArgument == true]
+    [#if isTypeArgument]
       [#local convertedType = convertedType?replace("?", "")/]
     [/#if]
     ${convertedType}[#t]
