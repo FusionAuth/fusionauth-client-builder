@@ -18,10 +18,10 @@
     "client_id" : {
       "type" : "String"
     },
-    "webAPIKey" : {
+    "scope" : {
       "type" : "String"
     },
-    "scope" : {
+    "webAPIKey" : {
       "type" : "String"
     }
   }

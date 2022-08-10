@@ -10,15 +10,6 @@
     "typeArguments" : [ {
       "type" : "JWTPublicKeyUpdateEvent"
     } ]
-  }, {
-    "type" : "ApplicationEvent"
   } ],
-  "fields" : {
-    "applicationIds" : {
-      "type" : "Set",
-      "typeArguments" : [ {
-        "type" : "UUID"
-      } ]
-    }
-  }
+  "fields" : { }
 }

@@ -12,7 +12,7 @@
     "type" : "Enableable"
   } ],
   "implements" : [ {
-    "type" : "_InternalJSONColumn"
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {

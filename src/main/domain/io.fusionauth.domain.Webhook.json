@@ -8,15 +8,9 @@
       "type" : "Webhook"
     } ]
   }, {
-    "type" : "_InternalJSONColumn"
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
-    "applicationIds" : {
-      "type" : "List",
-      "typeArguments" : [ {
-        "type" : "UUID"
-      } ]
-    },
     "connectTimeout" : {
       "type" : "int"
     },
@@ -65,6 +59,12 @@
     },
     "sslCertificate" : {
       "type" : "String"
+    },
+    "tenantIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
     },
     "url" : {
       "type" : "URI"

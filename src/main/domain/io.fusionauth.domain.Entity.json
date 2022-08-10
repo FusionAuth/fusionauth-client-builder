@@ -10,7 +10,7 @@
   }, {
     "type" : "Tenantable"
   }, {
-    "type" : "_InternalJSONColumn"
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {

@@ -15,6 +15,9 @@
     "email" : {
       "type" : "MultiFactorEmailMethod"
     },
+    "loginPolicy" : {
+      "type" : "MultiFactorLoginPolicy"
+    },
     "sms" : {
       "type" : "MultiFactorSMSMethod"
     }

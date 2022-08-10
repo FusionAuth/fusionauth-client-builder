@@ -10,8 +10,6 @@
     "typeArguments" : [ {
       "type" : "JWTRefreshTokenRevokeEvent"
     } ]
-  }, {
-    "type" : "ApplicationEvent"
   } ],
   "fields" : {
     "applicationId" : {
@@ -24,6 +22,9 @@
       }, {
         "type" : "int"
       } ]
+    },
+    "refreshToken" : {
+      "type" : "RefreshToken"
     },
     "user" : {
       "type" : "User"

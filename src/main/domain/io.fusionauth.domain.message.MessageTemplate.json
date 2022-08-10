@@ -3,7 +3,7 @@
   "type" : "MessageTemplate",
   "description" : "/**\n * Stores an message template used to distribute messages;\n *\n * @author Michael Sleevi\n */\n",
   "implements" : [ {
-    "type" : "_InternalJSONColumn"
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {

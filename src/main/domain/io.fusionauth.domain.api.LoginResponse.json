@@ -36,6 +36,9 @@
     "refreshToken" : {
       "type" : "String"
     },
+    "refreshTokenId" : {
+      "type" : "UUID"
+    },
     "registrationVerificationId" : {
       "type" : "String"
     },

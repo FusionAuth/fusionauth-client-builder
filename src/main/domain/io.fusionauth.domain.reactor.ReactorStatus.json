@@ -15,6 +15,9 @@
     "advancedRegistration" : {
       "type" : "ReactorFeatureStatus"
     },
+    "applicationMultiFactorAuthentication" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "applicationThemes" : {
       "type" : "ReactorFeatureStatus"
     },
@@ -29,6 +32,14 @@
     },
     "expiration" : {
       "type" : "LocalDate"
+    },
+    "licenseAttributes" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "String"
+      } ]
     },
     "licensed" : {
       "type" : "boolean"
