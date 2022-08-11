@@ -10,12 +10,7 @@
   } ],
   "fields" : {
     "clientExtensionResults" : {
-      "type" : "HashMap",
-      "typeArguments" : [ {
-        "type" : "String"
-      }, {
-        "type" : "String"
-      } ]
+      "type" : "WebAuthnExtensionsClientOutputs"
     },
     "id" : {
       "type" : "String"

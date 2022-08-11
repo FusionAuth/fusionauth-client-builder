@@ -7,8 +7,6 @@
     "typeArguments" : [ {
       "type" : "Consent"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {

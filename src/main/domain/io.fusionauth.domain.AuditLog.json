@@ -7,8 +7,6 @@
     "typeArguments" : [ {
       "type" : "AuditLog"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {
