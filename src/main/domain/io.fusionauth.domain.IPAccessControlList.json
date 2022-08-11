@@ -7,8 +7,6 @@
     "typeArguments" : [ {
       "type" : "IPAccessControlList"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {

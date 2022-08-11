@@ -12,14 +12,14 @@
     "credential" : {
       "type" : "PublicKeyRegistrationRequest"
     },
-    "loginId" : {
-      "type" : "String"
-    },
     "origin" : {
       "type" : "String"
     },
     "rpId" : {
       "type" : "String"
+    },
+    "userId" : {
+      "type" : "UUID"
     }
   }
 }

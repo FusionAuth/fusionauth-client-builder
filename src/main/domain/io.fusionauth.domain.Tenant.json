@@ -7,8 +7,6 @@
     "typeArguments" : [ {
       "type" : "Tenant"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {
@@ -123,6 +121,9 @@
     },
     "usernameConfiguration" : {
       "type" : "TenantUsernameConfiguration"
+    },
+    "webAuthnConfiguration" : {
+      "type" : "TenantWebAuthnConfiguration"
     }
   }
 }
