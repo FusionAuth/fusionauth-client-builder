@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2020, FusionAuth, All Rights Reserved
+ * Copyright (c) 2019-2022, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 import java.nio.file.Files
 import java.nio.file.Paths
 
-fusionauthJWTVersion = "3.4.0" // Keep this at 3.4.0 for now to preserve the algorithms enum
+fusionauthJWTVersion = "5.1.2"
 javaErrorVersion = "2.2.3"
 
 project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.38.0", licenses: ["ApacheV2_0"]) {
@@ -57,6 +57,7 @@ release = loadPlugin(id: "org.savantbuild.plugin:release-git:1.0.0")
 
 // Plugin settings
 clientLibrary.settings.debug = false
+//clientLibrary.settings.domainDirectory = Paths.get("src/main/domainNG")
 
 target(name: "extract-source-jars") {
   // Download the source JARs
@@ -86,28 +87,24 @@ target(name: "generateDomain", description: "Generates all of the json files for
     fileSet(dir: "src/main/domain")
   }
 
-  clientLibrary.generateDomainJson(srcDir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain", outDir: "src/main/domain")
+  clientLibrary.generateDomainJson(srcDir: "../fusionauth-app/src/main/java/io/fusionauth/domain", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/java-error/com/inversoft/error", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwt/domain/", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwks/domain/", outDir: "src/main/domain")
 
-  ["io.fusionauth.domain.Buildable.json",
-   "io.fusionauth.domain.Integration.json",
-   "io.fusionauth.domain.internal.annotation.ExcludeFromDatabaseDataColumn.json",
-   "io.fusionauth.domain.internal.annotation.InternalJSONColumn.json",
-   "io.fusionauth.domain.internal.annotation.InternalUse.json",
-   "io.fusionauth.domain.internal._InternalJSONColumn.json",
-   "io.fusionauth.domain.internal.DatabaseObjectMapperHolder.json",
-   "io.fusionauth.domain.internal.InternalJSONColumnService.json",
-   "io.fusionauth.domain.internal.ReflectionTools.json",
-   "io.fusionauth.jwt.domain.Buildable.json",
-   "io.fusionauth.jwt.domain.Header.json",
-   "io.fusionauth.jwt.domain.KeyPair.json",
-   "io.fusionauth.jwt.domain.KeyType.json",
-   "io.fusionauth.jwt.domain.Type.json",
-   "io.fusionauth.domain.util.DefaultTools.json",
-   "io.fusionauth.domain.util.Normalizer.json",
-   "io.fusionauth.domain.util.SQLTools.json"]
+  [
+      "io.fusionauth.domain.Buildable.json",
+      "io.fusionauth.domain.Integration.json",
+      "io.fusionauth.domain.internal.annotation.InternalUse.json",
+      "io.fusionauth.domain.util.DefaultTools.json",
+      "io.fusionauth.domain.util.Normalizer.json",
+      "io.fusionauth.domain.util.SQLTools.json",
+      "io.fusionauth.jwt.domain.Buildable.json",
+      "io.fusionauth.jwt.domain.Header.json",
+      "io.fusionauth.jwt.domain.KeyPair.json",
+      "io.fusionauth.jwt.domain.KeyType.json",
+      "io.fusionauth.jwt.domain.Type.json"
+  ]
       .forEach({ Files.deleteIfExists(Paths.get("src/main/domain").resolve(it)) })
 }
 
@@ -258,7 +255,8 @@ target(name: "build-dart", description: "Build the Dart Client Library") {
 
 target(name: "build-openapi", description: "Build the OpenAPI file") {
   projVersion = project.version.toString()
-  cleanExecute(["ruby", "bin/build-openapi-yaml.rb", "--source-directory", "./src", "--out", "../fusionauth-openapi/openapi.yaml", "--api-version", projVersion])
+  cleanExecute(
+      ["ruby", "bin/build-openapi-yaml.rb", "--source-directory", "./src", "--out", "../fusionauth-openapi/openapi.yaml", "--api-version", projVersion])
 }
 
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
@@ -284,15 +282,15 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
 //
 target(name: "publish-all", description: "Publish all client libraries") {
   [
-   "dart-client",
-   "java-client",
-   "netcore-client",
-   "node-client",
-   "php-client",
-   "python-client",
-   "ruby-client",
-   "typescript-client",
-   "openapi"
+      "dart-client",
+      "java-client",
+      "netcore-client",
+      "node-client",
+      "php-client",
+      "python-client",
+      "ruby-client",
+      "typescript-client",
+      "openapi"
   ].each { client ->
     ProcessBuilder pb = new ProcessBuilder(
         "sb", "publish")

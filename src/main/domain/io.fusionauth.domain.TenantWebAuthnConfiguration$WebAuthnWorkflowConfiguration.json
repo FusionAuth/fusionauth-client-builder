@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebAuthnWorkflowConfiguration",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebAuthnWorkflowConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "authenticatorAttachmentPreference" : {
+      "type" : "AuthenticatorAttachmentPreference"
+    },
+    "userVerificationRequirement" : {
+      "type" : "UserVerificationRequirement"
+    },
+    "authenticatorAttachment" : {
+      "type" : "AuthenticatorAttachment"
+    }
+  }
+}
