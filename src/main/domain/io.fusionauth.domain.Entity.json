@@ -9,6 +9,8 @@
     } ]
   }, {
     "type" : "Tenantable"
+  }, {
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {

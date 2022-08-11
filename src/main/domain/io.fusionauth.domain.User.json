@@ -11,6 +11,8 @@
       "type" : "User"
     } ]
   }, {
+    "type" : "JSONColumnable"
+  }, {
     "type" : "Tenantable"
   } ],
   "fields" : {

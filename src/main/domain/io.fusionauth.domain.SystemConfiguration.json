@@ -7,6 +7,8 @@
     "typeArguments" : [ {
       "type" : "SystemConfiguration"
     } ]
+  }, {
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "auditLogConfiguration" : {
