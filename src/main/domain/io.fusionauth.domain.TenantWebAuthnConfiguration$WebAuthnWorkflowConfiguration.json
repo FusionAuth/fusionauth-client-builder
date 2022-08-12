@@ -16,9 +16,6 @@
     },
     "userVerificationRequirement" : {
       "type" : "UserVerificationRequirement"
-    },
-    "authenticatorAttachment" : {
-      "type" : "AuthenticatorAttachment"
     }
   }
 }
