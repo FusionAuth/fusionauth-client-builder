@@ -3,7 +3,7 @@
   "type" : "UserRegistrationCreateEvent",
   "description" : "/**\n * Models the User Create Registration Event (and can be converted to JSON).\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -17,9 +17,6 @@
     },
     "registration" : {
       "type" : "UserRegistration"
-    },
-    "user" : {
-      "type" : "User"
     }
   }
 }

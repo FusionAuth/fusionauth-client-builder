@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebhookEventLogSearchResponse",
+  "description" : "/**\n * Webhook event log response.\n *\n * @author Rob Davis\n */\n",
+  "fields" : {
+    "webhookEventLogs" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "WebhookEventLog"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

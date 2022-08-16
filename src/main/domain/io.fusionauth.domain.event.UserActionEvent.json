@@ -10,6 +10,8 @@
     "typeArguments" : [ {
       "type" : "UserActionEvent"
     } ]
+  }, {
+    "type" : "EntityIdentifiable"
   } ],
   "fields" : {
     "action" : {

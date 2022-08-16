@@ -1,9 +1,9 @@
 {
   "packageName" : "io.fusionauth.domain.event",
   "type" : "UserRegistrationCreateCompleteEvent",
-  "description" : "/**\n * Models the User Created Registration Event (and can be converted to JSON).\n * <p>\n * This is different than the user.registration.create event in that it will be sent after the user has been created. This event cannot be made transactional.\n *\n * @author Daniel DeGroff\n */\n",
+  "description" : "/**\n * Models the User Created Registration Event (and can be converted to JSON).\n * <p>\n * This is different than the user.registration.create event in that it will be sent after the user has been created. This event cannot be made\n * transactional.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -19,9 +19,6 @@
     },
     "registration" : {
       "type" : "UserRegistration"
-    },
-    "user" : {
-      "type" : "User"
     }
   }
 }

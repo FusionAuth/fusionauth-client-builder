@@ -3,7 +3,7 @@
   "type" : "UserRegistrationDeleteCompleteEvent",
   "description" : "/**\n * Models the User Deleted Registration Event (and can be converted to JSON).\n * <p>\n * This is different than user.registration.delete in that it is sent after the TX has been committed. This event cannot be transactional.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -19,9 +19,6 @@
     },
     "registration" : {
       "type" : "UserRegistration"
-    },
-    "user" : {
-      "type" : "User"
     }
   }
 }

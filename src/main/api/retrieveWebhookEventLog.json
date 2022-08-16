@@ -1,0 +1,20 @@
+{
+  "uri": "/api/system/webhook-event-log",
+  "comments": [
+    "Retrieves a single webhook event log for the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveWebhookEventLog",
+  "successResponse": "WebhookEventLogResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "webhookEventLogId",
+      "comments": [
+        "The Id of the webhook event log to retrieve."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

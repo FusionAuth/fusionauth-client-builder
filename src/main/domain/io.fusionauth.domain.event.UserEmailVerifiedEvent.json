@@ -3,7 +3,7 @@
   "type" : "UserEmailVerifiedEvent",
   "description" : "/**\n * Models the User Email Verify Event (and can be converted to JSON).\n *\n * @author Trevor Smith\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -11,9 +11,5 @@
       "type" : "UserEmailVerifiedEvent"
     } ]
   } ],
-  "fields" : {
-    "user" : {
-      "type" : "User"
-    }
-  }
+  "fields" : { }
 }

@@ -1,0 +1,5 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "AttemptResult",
+  "enum" : [ "Success", "Failure" ]
+}

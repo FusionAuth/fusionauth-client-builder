@@ -1,0 +1,44 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookEventLog",
+  "description" : "/**\n * An instance of an event that could execute webhooks.\n *\n * @author Rob Davis\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebhookEventLog"
+    } ]
+  }, {
+    "type" : "JSONColumnable"
+  } ],
+  "fields" : {
+    "entityId" : {
+      "type" : "UUID"
+    },
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "eventType" : {
+      "type" : "EventType"
+    },
+    "eventTransactionStatus" : {
+      "type" : "EventTransactionStatus"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastAttemptInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "message" : {
+      "type" : "String"
+    }
+  }
+}

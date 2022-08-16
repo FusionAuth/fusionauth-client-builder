@@ -10,6 +10,8 @@
     "typeArguments" : [ {
       "type" : "JWTRefreshEvent"
     } ]
+  }, {
+    "type" : "EntityIdentifiable"
   } ],
   "fields" : {
     "applicationId" : {

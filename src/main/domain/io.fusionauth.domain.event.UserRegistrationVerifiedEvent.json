@@ -3,7 +3,7 @@
   "type" : "UserRegistrationVerifiedEvent",
   "description" : "/**\n * Models the User Registration Verified Event (and can be converted to JSON).\n *\n * @author Trevor Smith\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -17,9 +17,6 @@
     },
     "registration" : {
       "type" : "UserRegistration"
-    },
-    "user" : {
-      "type" : "User"
     }
   }
 }

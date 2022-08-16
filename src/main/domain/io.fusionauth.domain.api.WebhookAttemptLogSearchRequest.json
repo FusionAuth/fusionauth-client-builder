@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebhookAttemptLogSearchRequest",
+  "description" : "/**\n * @author Rob Davis\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebhookAttemptLogSearchRequest"
+    } ]
+  } ],
+  "fields" : {
+    "search" : {
+      "type" : "WebhookAttemptLogSearchCriteria"
+    }
+  }
+}

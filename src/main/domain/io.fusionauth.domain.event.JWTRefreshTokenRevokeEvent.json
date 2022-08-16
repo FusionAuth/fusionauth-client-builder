@@ -10,6 +10,8 @@
     "typeArguments" : [ {
       "type" : "JWTRefreshTokenRevokeEvent"
     } ]
+  }, {
+    "type" : "EntityIdentifiable"
   } ],
   "fields" : {
     "applicationId" : {

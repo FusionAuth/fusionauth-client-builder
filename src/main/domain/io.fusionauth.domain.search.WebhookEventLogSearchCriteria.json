@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "WebhookEventLogSearchCriteria",
+  "description" : "/**\n * Search criteria for the webhook event log.\n *\n * @author Rob Davis\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "fields" : {
+    "end" : {
+      "type" : "ZonedDateTime"
+    },
+    "message" : {
+      "type" : "String"
+    },
+    "start" : {
+      "type" : "ZonedDateTime"
+    },
+    "eventType" : {
+      "type" : "EventType"
+    },
+    "eventTransactionStatus" : {
+      "type" : "EventTransactionStatus"
+    }
+  }
+}
