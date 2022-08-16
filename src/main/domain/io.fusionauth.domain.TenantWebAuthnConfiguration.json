@@ -14,6 +14,12 @@
   "fields" : {
     "reauthenticationWorkflowConfiguration" : {
       "type" : "WebAuthnWorkflowConfiguration"
+    },
+    "rpId" : {
+      "type" : "String"
+    },
+    "rpName" : {
+      "type" : "String"
     }
   }
 }
