@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "GroupUpdateEvent",
+  "description" : "/**\n * Models the Group Create Event (and can be converted to JSON).\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "GroupUpdateEvent"
+    } ]
+  } ],
+  "fields" : {
+    "group" : {
+      "type" : "Group"
+    },
+    "original" : {
+      "type" : "Group"
+    }
+  }
+}

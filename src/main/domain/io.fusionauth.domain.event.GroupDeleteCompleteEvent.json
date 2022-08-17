@@ -1,0 +1,21 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "GroupDeleteCompleteEvent",
+  "description" : "/**\n * Models the Group Create Event (and can be converted to JSON).\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "GroupDeleteCompleteEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "group" : {
+      "type" : "Group"
+    }
+  }
+}
