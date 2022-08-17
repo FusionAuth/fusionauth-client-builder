@@ -12,6 +12,12 @@
     } ]
   } ],
   "fields" : {
+    "applicationIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
     "action" : {
       "type" : "String"
     },

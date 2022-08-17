@@ -9,6 +9,9 @@
     "groupId" : {
       "type" : "UUID"
     },
+    "tenantId" : {
+      "type" : "UUID"
+    },
     "userId" : {
       "type" : "UUID"
     }

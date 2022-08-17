@@ -21,6 +21,36 @@
     "name" : "KickstartSuccess",
     "args" : [ "kickstart.success" ]
   }, {
+    "name" : "GroupCreate",
+    "args" : [ "group.create" ]
+  }, {
+    "name" : "GroupCreateComplete",
+    "args" : [ "group.create.complete" ]
+  }, {
+    "name" : "GroupDelete",
+    "args" : [ "group.delete" ]
+  }, {
+    "name" : "GroupDeleteComplete",
+    "args" : [ "group.delete.complete" ]
+  }, {
+    "name" : "GroupMemberAdd",
+    "args" : [ "group.member.add" ]
+  }, {
+    "name" : "GroupMemberAddComplete",
+    "args" : [ "group.member.add.complete" ]
+  }, {
+    "name" : "GroupMemberRemove",
+    "args" : [ "group.member.remove" ]
+  }, {
+    "name" : "GroupMemberRemoveComplete",
+    "args" : [ "group.member.remove.complete" ]
+  }, {
+    "name" : "GroupUpdate",
+    "args" : [ "group.update" ]
+  }, {
+    "name" : "GroupUpdateComplete",
+    "args" : [ "group.update.complete" ]
+  }, {
     "name" : "UserAction",
     "args" : [ "user.action" ]
   }, {

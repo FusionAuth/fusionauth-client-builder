@@ -11,5 +11,12 @@
       "type" : "JWTPublicKeyUpdateEvent"
     } ]
   } ],
-  "fields" : { }
+  "fields" : {
+    "applicationIds" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    }
+  }
 }
