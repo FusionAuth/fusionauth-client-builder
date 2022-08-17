@@ -45,6 +45,12 @@
     "name" : "GroupMemberRemoveComplete",
     "args" : [ "group.member.remove.complete" ]
   }, {
+    "name" : "GroupMemberUpdate",
+    "args" : [ "group.member.update" ]
+  }, {
+    "name" : "GroupMemberUpdateComplete",
+    "args" : [ "group.member.update.complete" ]
+  }, {
     "name" : "GroupUpdate",
     "args" : [ "group.update" ]
   }, {

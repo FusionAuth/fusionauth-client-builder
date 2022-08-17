@@ -1,14 +1,14 @@
 {
   "packageName" : "io.fusionauth.domain.event",
-  "type" : "GroupMemberRemoveCompleteEvent",
-  "description" : "/**\n * Models the Group Member Remove Complete Event.\n *\n * @author Daniel DeGroff\n */\n",
+  "type" : "GroupMemberUpdateCompleteEvent",
+  "description" : "/**\n * Models the Group Member Update Complete Event.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
     "type" : "BaseEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
-      "type" : "GroupMemberRemoveCompleteEvent"
+      "type" : "GroupMemberUpdateCompleteEvent"
     } ]
   }, {
     "type" : "NonTransactionalEvent"
