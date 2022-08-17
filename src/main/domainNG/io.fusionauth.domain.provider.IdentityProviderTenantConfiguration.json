@@ -21,7 +21,7 @@
       "type" : "IdentityProviderLimitUserLinkingPolicy"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.Map", "java.lang.String", "io.fusionauth.domain.provider.IdentityProviderLimitUserLinkingPolicy" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.provider.IdentityProviderLimitUserLinkingPolicy" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -29,6 +29,9 @@
       "className" : "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration",
       "type" : "IdentityProviderTenantConfiguration"
     } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.provider",

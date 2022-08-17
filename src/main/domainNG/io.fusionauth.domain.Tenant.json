@@ -155,7 +155,7 @@
       "type" : "TenantUsernameConfiguration"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.Map", "java.lang.String", "io.fusionauth.domain.TenantAccessControlConfiguration", "io.fusionauth.domain.TenantCaptchaConfiguration", "java.util.List", "io.fusionauth.domain.connector.ConnectorPolicy", "io.fusionauth.domain.EmailConfiguration", "io.fusionauth.domain.EventConfiguration", "io.fusionauth.domain.ExternalIdentifierConfiguration", "io.fusionauth.domain.FailedAuthenticationConfiguration", "io.fusionauth.domain.FamilyConfiguration", "io.fusionauth.domain.TenantFormConfiguration", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.JWTConfiguration", "io.fusionauth.domain.TenantLambdaConfiguration", "io.fusionauth.domain.TenantLoginConfiguration", "java.net.URI", "io.fusionauth.domain.MaximumPasswordAge", "io.fusionauth.domain.MinimumPasswordAge", "io.fusionauth.domain.TenantMultiFactorConfiguration", "io.fusionauth.domain.Tenant$TenantOAuth2Configuration", "io.fusionauth.domain.PasswordEncryptionConfiguration", "io.fusionauth.domain.PasswordValidationRules", "io.fusionauth.domain.TenantRateLimitConfiguration", "io.fusionauth.domain.TenantRegistrationConfiguration", "io.fusionauth.domain.TenantSCIMServerConfiguration", "io.fusionauth.domain.TenantSSOConfiguration", "io.fusionauth.domain.ObjectState", "io.fusionauth.domain.TenantUserDeletePolicy", "io.fusionauth.domain.TenantUsernameConfiguration" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.TenantAccessControlConfiguration", "io.fusionauth.domain.TenantCaptchaConfiguration", "java.util.List", "io.fusionauth.domain.connector.ConnectorPolicy", "io.fusionauth.domain.EmailConfiguration", "io.fusionauth.domain.EventConfiguration", "io.fusionauth.domain.ExternalIdentifierConfiguration", "io.fusionauth.domain.FailedAuthenticationConfiguration", "io.fusionauth.domain.FamilyConfiguration", "io.fusionauth.domain.TenantFormConfiguration", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.JWTConfiguration", "io.fusionauth.domain.TenantLambdaConfiguration", "io.fusionauth.domain.TenantLoginConfiguration", "java.net.URI", "io.fusionauth.domain.MaximumPasswordAge", "io.fusionauth.domain.MinimumPasswordAge", "io.fusionauth.domain.TenantMultiFactorConfiguration", "io.fusionauth.domain.Tenant$TenantOAuth2Configuration", "io.fusionauth.domain.PasswordEncryptionConfiguration", "io.fusionauth.domain.PasswordValidationRules", "io.fusionauth.domain.TenantRateLimitConfiguration", "io.fusionauth.domain.TenantRegistrationConfiguration", "io.fusionauth.domain.TenantSCIMServerConfiguration", "io.fusionauth.domain.TenantSSOConfiguration", "io.fusionauth.domain.ObjectState", "io.fusionauth.domain.TenantUserDeletePolicy", "io.fusionauth.domain.TenantUsernameConfiguration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -163,6 +163,9 @@
       "className" : "io.fusionauth.domain.Tenant",
       "type" : "Tenant"
     } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

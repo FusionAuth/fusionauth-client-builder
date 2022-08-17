@@ -53,7 +53,7 @@
       "type" : "SystemConfiguration$UIConfiguration"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "io.fusionauth.domain.SystemConfiguration$AuditLogConfiguration", "java.lang.String", "io.fusionauth.domain.CORSConfiguration", "java.util.Map", "io.fusionauth.domain.SystemConfiguration$EventLogConfiguration", "java.time.ZonedDateTime", "io.fusionauth.domain.SystemConfiguration$LoginRecordConfiguration", "java.time.ZoneId", "io.fusionauth.domain.SystemConfiguration$UIConfiguration" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.SystemConfiguration$AuditLogConfiguration", "java.lang.String", "io.fusionauth.domain.CORSConfiguration", "java.util.Map", "io.fusionauth.domain.SystemConfiguration$EventLogConfiguration", "java.time.ZonedDateTime", "io.fusionauth.domain.SystemConfiguration$LoginRecordConfiguration", "java.time.ZoneId", "io.fusionauth.domain.SystemConfiguration$UIConfiguration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -61,6 +61,9 @@
       "className" : "io.fusionauth.domain.SystemConfiguration",
       "type" : "SystemConfiguration"
     } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

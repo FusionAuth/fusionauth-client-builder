@@ -20,6 +20,10 @@
         "type" : "Integer"
       } ]
     },
+    "refreshToken" : {
+      "className" : "io.fusionauth.domain.jwt.RefreshToken",
+      "type" : "RefreshToken"
+    },
     "user" : {
       "className" : "io.fusionauth.domain.User",
       "type" : "User"
@@ -29,7 +33,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.ApplicationEvent", "java.util.UUID", "java.util.Map", "java.lang.Integer", "io.fusionauth.domain.User" ],
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.util.Map", "java.lang.Integer", "io.fusionauth.domain.jwt.RefreshToken", "io.fusionauth.domain.User" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -37,9 +41,6 @@
       "className" : "io.fusionauth.domain.event.JWTRefreshTokenRevokeEvent",
       "type" : "JWTRefreshTokenRevokeEvent"
     } ]
-  }, {
-    "className" : "io.fusionauth.domain.event.ApplicationEvent",
-    "type" : "ApplicationEvent"
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.event",

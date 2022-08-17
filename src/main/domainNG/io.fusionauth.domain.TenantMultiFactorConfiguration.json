@@ -13,12 +13,16 @@
       "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorEmailMethod",
       "type" : "TenantMultiFactorConfiguration$MultiFactorEmailMethod"
     },
+    "loginPolicy" : {
+      "className" : "io.fusionauth.domain.MultiFactorLoginPolicy",
+      "type" : "MultiFactorLoginPolicy"
+    },
     "sms" : {
       "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorSMSMethod",
       "type" : "TenantMultiFactorConfiguration$MultiFactorSMSMethod"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorAuthenticatorMethod", "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorEmailMethod", "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorSMSMethod" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorAuthenticatorMethod", "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorEmailMethod", "io.fusionauth.domain.MultiFactorLoginPolicy", "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorSMSMethod" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -25,6 +25,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "refreshTokenId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "scope" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -42,7 +46,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.oauth2.OAuthResponse", "io.fusionauth.domain.Buildable", "java.lang.String", "java.lang.Integer", "java.net.URI", "io.fusionauth.domain.oauth2.TokenType", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.oauth2.OAuthResponse", "io.fusionauth.domain.Buildable", "java.lang.String", "java.lang.Integer", "java.net.URI", "java.util.UUID", "io.fusionauth.domain.oauth2.TokenType" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.oauth2.OAuthResponse",
     "type" : "OAuthResponse"
