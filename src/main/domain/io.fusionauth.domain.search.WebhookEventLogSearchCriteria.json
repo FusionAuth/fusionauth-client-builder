@@ -18,8 +18,8 @@
     "eventType" : {
       "type" : "EventType"
     },
-    "eventTransactionStatus" : {
-      "type" : "EventTransactionStatus"
+    "eventStatus" : {
+      "type" : "eventStatus"
     }
   }
 }
