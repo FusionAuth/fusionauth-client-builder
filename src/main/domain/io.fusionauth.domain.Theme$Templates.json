@@ -89,9 +89,6 @@
     "oauth2WebAuthN" : {
       "type" : "String"
     },
-    "oauth2WebAuthNComplete" : {
-      "type" : "String"
-    },
     "passwordChange" : {
       "type" : "String"
     },
