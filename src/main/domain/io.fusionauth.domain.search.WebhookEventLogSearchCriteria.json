@@ -18,8 +18,8 @@
     "eventType" : {
       "type" : "EventType"
     },
-    "eventStatus" : {
-      "type" : "eventStatus"
+    "webhookEventResult" : {
+      "type" : "WebhookEventResult"
     }
   }
 }

@@ -28,6 +28,9 @@
         "type" : "Object"
       } ]
     },
+    "webhookCallResponse" : {
+      "type" : "WebhookCallResponse"
+    },
     "webhookEventLogId" : {
       "type" : "UUID"
     },
@@ -37,7 +40,10 @@
     "attemptResult" : {
       "type" : "AttemptResult"
     },
-    "message" : {
+    "duration" : {
+      "type" : "long"
+    },
+    "url" : {
       "type" : "String"
     }
   }

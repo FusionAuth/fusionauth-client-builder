@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.event",
   "type" : "UserUpdateEvent",
-  "description" : "/**\n * Models the User Update Event (and can be converted to JSON).\n *\n * @author Brian Pontarelli\n */\n",
+  "description" : "/**\n * Models the User Update Event.\n *\n * @author Brian Pontarelli\n */\n",
   "extends" : [ {
     "type" : "BaseUserEvent"
   } ],

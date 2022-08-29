@@ -1,5 +1,0 @@
-{
-  "packageName" : "io.fusionauth.domain",
-  "type" : "eventStatus",
-  "enum" : [ "Running", "Failed", "Succeeded" ]
-}

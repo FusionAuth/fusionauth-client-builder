@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.event",
   "type" : "UserReactivateEvent",
-  "description" : "/**\n * Models the User Reactivate Event (and can be converted to JSON).\n *\n * @author Brian Pontarelli\n */\n",
+  "description" : "/**\n * Models the User Reactivate Event.\n *\n * @author Brian Pontarelli\n */\n",
   "extends" : [ {
     "type" : "BaseUserEvent"
   } ],

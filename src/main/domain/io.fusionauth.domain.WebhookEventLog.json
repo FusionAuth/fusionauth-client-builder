@@ -22,11 +22,14 @@
         "type" : "Object"
       } ]
     },
+    "event" : {
+      "type" : "BaseEvent"
+    },
     "eventType" : {
       "type" : "EventType"
     },
-    "eventStatus" : {
-      "type" : "eventStatus"
+    "webhookEventResult" : {
+      "type" : "WebhookEventResult"
     },
     "id" : {
       "type" : "UUID"
@@ -37,7 +40,16 @@
     "lastAttemptInstant" : {
       "type" : "ZonedDateTime"
     },
+    "successCount" : {
+      "type" : "int"
+    },
+    "failCount" : {
+      "type" : "int"
+    },
     "message" : {
+      "type" : "String"
+    },
+    "successFailCounts" : {
       "type" : "String"
     }
   }

@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.event",
   "type" : "UserCreateCompleteEvent",
-  "description" : "/**\n * Models the User Created Event (and can be converted to JSON).\n * <p>\n * This is different than the user.create event in that it will be sent after the user has been created. This event cannot be made transactional.\n *\n * @author Daniel DeGroff\n */\n",
+  "description" : "/**\n * Models the User Created Event.\n * <p>\n * This is different than the user.create event in that it will be sent after the user has been created. This event cannot be made transactional.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
     "type" : "BaseUserEvent"
   } ],

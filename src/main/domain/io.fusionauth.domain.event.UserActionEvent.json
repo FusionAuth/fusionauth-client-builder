@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.event",
   "type" : "UserActionEvent",
-  "description" : "/**\n * Models the user action event (and can be converted to JSON).\n *\n * @author Brian Pontarelli\n */\n",
+  "description" : "/**\n * Models the user action Event.\n *\n * @author Brian Pontarelli\n */\n",
   "extends" : [ {
     "type" : "BaseEvent"
   } ],
@@ -14,6 +14,12 @@
     "type" : "EntityIdentifiable"
   } ],
   "fields" : {
+    "applicationIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
     "action" : {
       "type" : "String"
     },
