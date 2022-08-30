@@ -9,14 +9,14 @@
     "end" : {
       "type" : "ZonedDateTime"
     },
+    "eventType" : {
+      "type" : "EventType"
+    },
     "message" : {
       "type" : "String"
     },
     "start" : {
       "type" : "ZonedDateTime"
-    },
-    "eventType" : {
-      "type" : "EventType"
     },
     "webhookEventResult" : {
       "type" : "WebhookEventResult"

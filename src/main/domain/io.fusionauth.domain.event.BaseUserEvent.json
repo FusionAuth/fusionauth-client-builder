@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.event",
   "type" : "BaseUserEvent",
-  "description" : "/**\n * Base-class for all FusionAuth events.\n *\n * @author Brian Pontarelli\n */\n",
+  "description" : "/**\n * Base-class for all FusionAuth user events.\n *\n * @author Rob Davis\n */\n",
   "extends" : [ {
     "type" : "BaseEvent"
   } ],

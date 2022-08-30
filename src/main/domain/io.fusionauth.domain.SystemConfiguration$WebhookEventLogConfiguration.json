@@ -1,9 +1,0 @@
-{
-  "packageName" : "io.fusionauth.domain",
-  "type" : "WebhookEventLogConfiguration",
-  "fields" : {
-    "numberOfDaysToRetain" : {
-      "type" : "int"
-    }
-  }
-}

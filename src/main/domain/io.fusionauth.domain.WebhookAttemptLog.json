@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "WebhookAttemptLog",
-  "description" : "/**\n * A webhook call attempt result.\n *\n * @author Rob Davis\n */\n",
+  "description" : "/**\n * A webhook call attempt log.\n *\n * @author Rob Davis\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
@@ -11,15 +11,6 @@
     "type" : "JSONColumnable"
   } ],
   "fields" : {
-    "id" : {
-      "type" : "UUID"
-    },
-    "start" : {
-      "type" : "ZonedDateTime"
-    },
-    "end" : {
-      "type" : "ZonedDateTime"
-    },
     "data" : {
       "type" : "Map",
       "typeArguments" : [ {
@@ -27,6 +18,15 @@
       }, {
         "type" : "Object"
       } ]
+    },
+    "end" : {
+      "type" : "ZonedDateTime"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "start" : {
+      "type" : "ZonedDateTime"
     },
     "webhookCallResponse" : {
       "type" : "WebhookCallResponse"

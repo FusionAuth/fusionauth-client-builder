@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.search",
   "type" : "WebhookAttemptLogSearchCriteria",
-  "description" : "/**\n * Search criteria for the webhook event log.\n *\n * @author Rob Davis\n */\n",
+  "description" : "/**\n * Search criteria for the webhook attempt log.\n *\n * @author Rob Davis\n */\n",
   "extends" : [ {
     "type" : "BaseSearchCriteria"
   } ],

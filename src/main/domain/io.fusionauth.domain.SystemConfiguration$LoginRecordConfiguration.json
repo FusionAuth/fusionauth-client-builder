@@ -1,9 +1,0 @@
-{
-  "packageName" : "io.fusionauth.domain",
-  "type" : "LoginRecordConfiguration",
-  "fields" : {
-    "delete" : {
-      "type" : "DeleteConfiguration"
-    }
-  }
-}

@@ -1,16 +1,16 @@
 {
   "packageName" : "io.fusionauth.domain.api",
   "type" : "WebhookAttemptLogSearchResponse",
-  "description" : "/**\n * Webhook event log response.\n *\n * @author Rob Davis\n */\n",
+  "description" : "/**\n * Webhook attempt log search response.\n *\n * @author Rob Davis\n */\n",
   "fields" : {
+    "total" : {
+      "type" : "long"
+    },
     "webhookAttemptLogs" : {
       "type" : "List",
       "typeArguments" : [ {
         "type" : "WebhookAttemptLog"
       } ]
-    },
-    "total" : {
-      "type" : "long"
     }
   }
 }

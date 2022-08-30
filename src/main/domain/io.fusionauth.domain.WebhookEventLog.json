@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "WebhookEventLog",
-  "description" : "/**\n * An instance of an event that could execute webhooks.\n *\n * @author Rob Davis\n */\n",
+  "description" : "/**\n * An instance of a webhook event log.\n *\n * @author Rob Davis\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
@@ -11,9 +11,6 @@
     "type" : "JSONColumnable"
   } ],
   "fields" : {
-    "entityId" : {
-      "type" : "UUID"
-    },
     "data" : {
       "type" : "Map",
       "typeArguments" : [ {
@@ -22,14 +19,17 @@
         "type" : "Object"
       } ]
     },
+    "entityId" : {
+      "type" : "UUID"
+    },
     "event" : {
       "type" : "BaseEvent"
     },
     "eventType" : {
       "type" : "EventType"
     },
-    "webhookEventResult" : {
-      "type" : "WebhookEventResult"
+    "failCount" : {
+      "type" : "int"
     },
     "id" : {
       "type" : "UUID"
@@ -43,8 +43,8 @@
     "successCount" : {
       "type" : "int"
     },
-    "failCount" : {
-      "type" : "int"
+    "webhookEventResult" : {
+      "type" : "WebhookEventResult"
     },
     "message" : {
       "type" : "String"

@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.api",
   "type" : "WebhookEventLogResponse",
-  "description" : "/**\n * Webhook Event Log response.\n *\n * @author Rob Davis\n */\n",
+  "description" : "/**\n * Webhook event log response.\n *\n * @author Rob Davis\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {

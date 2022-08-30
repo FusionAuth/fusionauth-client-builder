@@ -1,6 +1,0 @@
-{
-  "packageName" : "io.fusionauth.domain.event",
-  "type" : "UserEvent",
-  "description" : "/**\n * A marker interface indicating this event is a user event that can supply a user id.\n *\n * @author Rob Davis\n */\n",
-  "fields" : { }
-}
