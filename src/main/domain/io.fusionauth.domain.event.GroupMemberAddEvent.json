@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "GroupMemberAddEvent",
+  "description" : "/**\n * Models the Group Member Add Event.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "GroupMemberAddEvent"
+    } ]
+  } ],
+  "fields" : {
+    "group" : {
+      "type" : "Group"
+    },
+    "members" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "GroupMember"
+      } ]
+    }
+  }
+}

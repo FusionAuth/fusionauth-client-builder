@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "GroupUpdateCompleteEvent",
+  "description" : "/**\n * Models the Group Update Complete Event.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "GroupUpdateCompleteEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "group" : {
+      "type" : "Group"
+    },
+    "original" : {
+      "type" : "Group"
+    }
+  }
+}

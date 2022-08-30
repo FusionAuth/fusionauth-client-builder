@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.event.GroupCreateEvent",
+  "extends" : {
+    "className" : "io.fusionauth.domain.event.BaseEvent",
+    "type" : "BaseEvent"
+  },
+  "fields" : {
+    "group" : {
+      "className" : "io.fusionauth.domain.Group",
+      "type" : "Group"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Group" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.event.GroupCreateEvent",
+      "type" : "GroupCreateEvent"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "GroupCreateEvent"
+}

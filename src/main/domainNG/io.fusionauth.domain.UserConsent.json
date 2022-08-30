@@ -57,7 +57,7 @@
       } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.Map", "java.lang.String", "io.fusionauth.domain.Consent", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.ConsentStatus", "java.util.List" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.Consent", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.ConsentStatus", "java.util.List" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -65,6 +65,9 @@
       "className" : "io.fusionauth.domain.UserConsent",
       "type" : "UserConsent"
     } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

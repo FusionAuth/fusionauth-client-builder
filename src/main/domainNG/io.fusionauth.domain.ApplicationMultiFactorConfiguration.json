@@ -6,12 +6,20 @@
       "className" : "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorEmailTemplate",
       "type" : "ApplicationMultiFactorConfiguration$MultiFactorEmailTemplate"
     },
+    "loginPolicy" : {
+      "className" : "io.fusionauth.domain.MultiFactorLoginPolicy",
+      "type" : "MultiFactorLoginPolicy"
+    },
     "sms" : {
       "className" : "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorSMSTemplate",
       "type" : "ApplicationMultiFactorConfiguration$MultiFactorSMSTemplate"
+    },
+    "trustPolicy" : {
+      "className" : "io.fusionauth.domain.ApplicationMultiFactorTrustPolicy",
+      "type" : "ApplicationMultiFactorTrustPolicy"
     }
   },
-  "imports" : [ "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorEmailTemplate", "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorSMSTemplate" ],
+  "imports" : [ "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorEmailTemplate", "io.fusionauth.domain.MultiFactorLoginPolicy", "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorSMSTemplate", "io.fusionauth.domain.ApplicationMultiFactorTrustPolicy" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

@@ -36,7 +36,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.FamilyMember$FamilyRole", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.FamilyMember$FamilyRole", "java.util.UUID" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -44,6 +44,9 @@
       "className" : "io.fusionauth.domain.FamilyMember",
       "type" : "FamilyMember"
     } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

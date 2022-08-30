@@ -92,7 +92,7 @@
       "type" : "UserTwoFactorConfiguration"
     }
   },
-  "imports" : [ "io.fusionauth.domain.SecureIdentity", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "io.fusionauth.domain.Tenantable", "java.util.List", "java.util.Locale", "java.time.LocalDate", "java.util.UUID", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "java.net.URI", "java.time.ZoneId", "io.fusionauth.domain.UserTwoFactorConfiguration" ],
+  "imports" : [ "io.fusionauth.domain.SecureIdentity", "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.Tenantable", "java.util.List", "java.util.Locale", "java.time.LocalDate", "java.util.UUID", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "java.net.URI", "java.time.ZoneId", "io.fusionauth.domain.UserTwoFactorConfiguration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -100,6 +100,9 @@
       "className" : "io.fusionauth.domain.User",
       "type" : "User"
     } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
   }, {
     "className" : "io.fusionauth.domain.Tenantable",
     "type" : "Tenantable"

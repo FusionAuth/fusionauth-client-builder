@@ -29,6 +29,9 @@
         "type" : "EmailHeader"
       } ]
     },
+    "debug" : {
+      "type" : "boolean"
+    },
     "defaultFromEmail" : {
       "className" : "java.lang.String",
       "type" : "String"
