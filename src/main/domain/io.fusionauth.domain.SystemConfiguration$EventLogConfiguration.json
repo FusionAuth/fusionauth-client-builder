@@ -1,0 +1,9 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EventLogConfiguration",
+  "fields" : {
+    "numberToRetain" : {
+      "type" : "int"
+    }
+  }
+}

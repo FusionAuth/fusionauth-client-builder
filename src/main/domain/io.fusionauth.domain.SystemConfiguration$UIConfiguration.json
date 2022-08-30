@@ -1,0 +1,21 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UIConfiguration",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UIConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "headerColor" : {
+      "type" : "String"
+    },
+    "logoURL" : {
+      "type" : "String"
+    },
+    "menuFontColor" : {
+      "type" : "String"
+    }
+  }
+}
