@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookCallResponse",
+  "description" : "/**\n * A webhook call response.\n *\n * @author Rob Davis\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebhookCallResponse"
+    } ]
+  } ],
+  "fields" : {
+    "errorResponse" : {
+      "type" : "String"
+    },
+    "exception" : {
+      "type" : "String"
+    },
+    "statusCode" : {
+      "type" : "int"
+    },
+    "successResponse" : {
+      "type" : "String"
+    },
+    "url" : {
+      "type" : "URL"
+    }
+  }
+}
