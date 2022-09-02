@@ -1,9 +1,0 @@
-{
-  "packageName" : "io.fusionauth.domain",
-  "type" : "AuditLogConfiguration",
-  "fields" : {
-    "delete" : {
-      "type" : "DeleteConfiguration"
-    }
-  }
-}

@@ -6,7 +6,7 @@
     "type" : "BaseEvent"
   } ],
   "implements" : [ {
-    "type" : "EntityIdentifiable"
+    "type" : "ObjectIdentifiable"
   } ],
   "fields" : {
     "user" : {

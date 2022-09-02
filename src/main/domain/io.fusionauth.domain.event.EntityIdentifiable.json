@@ -1,6 +1,0 @@
-{
-  "packageName" : "io.fusionauth.domain.event",
-  "type" : "EntityIdentifiable",
-  "description" : "/**\n * A marker interface indicating this event is an entity event that can supply an entity id.\n *\n * @author Rob Davis\n */\n",
-  "fields" : { }
-}

@@ -19,17 +19,11 @@
         "type" : "Object"
       } ]
     },
-    "entityId" : {
-      "type" : "UUID"
-    },
     "event" : {
       "type" : "BaseEvent"
     },
     "eventType" : {
       "type" : "EventType"
-    },
-    "failCount" : {
-      "type" : "int"
     },
     "id" : {
       "type" : "UUID"
@@ -40,17 +34,14 @@
     "lastAttemptInstant" : {
       "type" : "ZonedDateTime"
     },
-    "successCount" : {
-      "type" : "int"
+    "linkedObjectId" : {
+      "type" : "UUID"
+    },
+    "webhookAttemptStatistics" : {
+      "type" : "WebhookAttemptStatistics"
     },
     "webhookEventResult" : {
       "type" : "WebhookEventResult"
-    },
-    "message" : {
-      "type" : "String"
-    },
-    "successFailCounts" : {
-      "type" : "String"
     }
   }
 }

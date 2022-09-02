@@ -1,5 +1,0 @@
-{
-  "packageName" : "io.fusionauth.domain",
-  "type" : "WebhookEventResult",
-  "enum" : [ "Failed", "Running", "Succeeded" ]
-}

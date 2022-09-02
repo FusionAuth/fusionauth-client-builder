@@ -3,7 +3,7 @@
   "type" : "GroupMemberUpdateEvent",
   "description" : "/**\n * Models the Group Member Update Event.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseGroupEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -12,9 +12,6 @@
     } ]
   } ],
   "fields" : {
-    "group" : {
-      "type" : "Group"
-    },
     "members" : {
       "type" : "List",
       "typeArguments" : [ {

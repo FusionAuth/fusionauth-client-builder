@@ -12,11 +12,11 @@
     } ]
   } ],
   "fields" : {
+    "data" : {
+      "type" : "String"
+    },
     "end" : {
       "type" : "ZonedDateTime"
-    },
-    "message" : {
-      "type" : "String"
     },
     "start" : {
       "type" : "ZonedDateTime"
