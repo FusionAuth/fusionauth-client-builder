@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "BaseGroupEvent",
+  "description" : "/**\n * Base-class for all FusionAuth group events.\n *\n * @author Rob Davis\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "ObjectIdentifiable"
+  } ],
+  "fields" : {
+    "group" : {
+      "type" : "Group"
+    }
+  }
+}
