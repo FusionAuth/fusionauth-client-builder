@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.api.GroupSearchRequest",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "search" : {
+      "className" : "io.fusionauth.domain.search.GroupSearchCriteria",
+      "type" : "GroupSearchCriteria"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.search.GroupSearchCriteria" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.GroupSearchRequest",
+      "type" : "GroupSearchRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "GroupSearchRequest"
+}
