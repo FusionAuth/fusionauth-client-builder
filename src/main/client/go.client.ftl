@@ -89,7 +89,7 @@ func (c *FusionAuthClient) StartAnonymous(responseRef interface{}, errorRef inte
   if c.TenantId != "" {
     rc.WithHeader("X-FusionAuth-TenantId", c.TenantId)
   }
-  rc.WithHeader("Content-Type", "text/plain")
+
   rc.WithHeader("Accept", "application/json")
   return rc
 }
