@@ -9,13 +9,11 @@
     } ]
   } ],
   "fields" : {
-    "state" : {
-      "type" : "Map",
-      "typeArguments" : [ {
-        "type" : "String"
-      }, {
-        "type" : "Object"
-      } ]
+    "credentialName" : {
+      "type" : "String"
+    },
+    "userAgent" : {
+      "type" : "String"
     },
     "userId" : {
       "type" : "UUID"
