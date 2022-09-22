@@ -1,5 +1,5 @@
 {
-  "packageName" : "io.fusionauth.domain.api.webauthn.enums",
+  "packageName" : "io.fusionauth.domain.api.webauthn",
   "type" : "CoseAlgorithmIdentifier",
   "description" : "/**\n * A number identifying a cryptographic algorithm. Values should be registered with the <a\n * href=\"https://www.iana.org/assignments/cose/cose.xhtml#algorithms\">IANA COSE Algorithms registry</a>\n *\n * @author Spencer Witt\n */\n",
   "enum" : [ {

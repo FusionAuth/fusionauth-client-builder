@@ -1,5 +1,5 @@
 {
-  "packageName" : "io.fusionauth.domain.api.webauthn.enums",
+  "packageName" : "io.fusionauth.domain.api.webauthn",
   "type" : "AuthenticatorTransport",
   "description" : "/**\n * Describes how the authenticator communicates with a client. This can be used by the client as a hint to locate the\n * appropriate authenticator.\n *\n * @author Spencer Witt\n */\n",
   "enum" : [ "usb", "nfc", "ble", "internal", "cable" ]

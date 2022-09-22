@@ -1,5 +1,5 @@
 {
-  "packageName" : "io.fusionauth.domain.api.webauthn.enums",
+  "packageName" : "io.fusionauth.domain.api.webauthn",
   "type" : "CoseEllipticCurve",
   "description" : "/**\n * COSE Elliptic Curve identifier to determine which elliptic curve to use with a given key\n *\n * @author Spencer Witt\n */\n",
   "enum" : [ {

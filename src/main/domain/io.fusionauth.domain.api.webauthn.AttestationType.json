@@ -1,5 +1,5 @@
 {
-  "packageName" : "io.fusionauth.domain.api.webauthn.enums",
+  "packageName" : "io.fusionauth.domain.api.webauthn",
   "type" : "AttestationType",
   "description" : "/**\n * Used to indicate what type of attestation was included in the authenticator response for a given WebAuthn credential at the time it was created\n *\n * @author Spencer Witt\n */\n",
   "enum" : [ "basic", "self", "attestationCa", "anonymizationCa", "none" ]
