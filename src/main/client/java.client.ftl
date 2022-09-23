@@ -192,6 +192,7 @@ import io.fusionauth.domain.api.user.VerifyEmailResponse;
 import io.fusionauth.domain.api.user.VerifyRegistrationRequest;
 import io.fusionauth.domain.api.user.VerifyRegistrationResponse;
 import io.fusionauth.domain.api.webauthn.WebAuthnCompleteRequest;
+import io.fusionauth.domain.api.webauthn.WebAuthnImportRequest;
 import io.fusionauth.domain.api.webauthn.WebAuthnLoginRequest;
 import io.fusionauth.domain.api.webauthn.WebAuthnRegisterRequest;
 import io.fusionauth.domain.api.webauthn.WebAuthnRegisterResponse;
