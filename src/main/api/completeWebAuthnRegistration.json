@@ -5,7 +5,7 @@
   ],
   "method": "post",
   "methodName": "completeWebAuthnRegistration",
-  "successResponse": "Void",
+  "successResponse": "WebAuthnCompleteResponse",
   "errorResponse": "Errors",
   "params": [
     {
