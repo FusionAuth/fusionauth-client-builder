@@ -3,7 +3,7 @@
   "type" : "UserUpdateCompleteEvent",
   "description" : "/**\n * Models the User Update Event once it is completed. This cannot be transactional.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -15,9 +15,6 @@
   } ],
   "fields" : {
     "original" : {
-      "type" : "User"
-    },
-    "user" : {
       "type" : "User"
     }
   }

@@ -3,7 +3,7 @@
   "type" : "GroupDeleteEvent",
   "description" : "/**\n * Models the Group Delete Event.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseGroupEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -11,9 +11,5 @@
       "type" : "GroupDeleteEvent"
     } ]
   } ],
-  "fields" : {
-    "group" : {
-      "type" : "Group"
-    }
-  }
+  "fields" : { }
 }

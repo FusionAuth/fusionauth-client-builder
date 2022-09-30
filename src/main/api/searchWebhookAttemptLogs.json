@@ -1,0 +1,20 @@
+{
+  "uri": "/api/system/webhook-attempt-log/search",
+  "comments": [
+    "Searches the webhook attempt logs with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchWebhookAttemptLogs",
+  "successResponse": "WebhookAttemptLogSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "WebhookAttemptLogSearchRequest"
+    }
+  ]
+}

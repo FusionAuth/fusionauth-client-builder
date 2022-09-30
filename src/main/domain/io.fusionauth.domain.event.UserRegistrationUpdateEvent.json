@@ -3,7 +3,7 @@
   "type" : "UserRegistrationUpdateEvent",
   "description" : "/**\n * Models the User Update Registration Event.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -20,9 +20,6 @@
     },
     "registration" : {
       "type" : "UserRegistration"
-    },
-    "user" : {
-      "type" : "User"
     }
   }
 }

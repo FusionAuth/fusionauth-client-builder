@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "AttemptResult",
+  "description" : "/**\n * @author Rob Davis\n */\n",
+  "enum" : [ "Success", "Failure", "Unknown" ]
+}

@@ -1,0 +1,20 @@
+{
+  "uri": "/api/system/webhook-attempt-log",
+  "comments": [
+    "Retrieves a single webhook attempt log for the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveWebhookAttemptLog",
+  "successResponse": "WebhookAttemptLogResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "webhookAttemptLogId",
+      "comments": [
+        "The Id of the webhook attempt log to retrieve."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}
