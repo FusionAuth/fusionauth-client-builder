@@ -1,11 +1,11 @@
 {
-  "uri": "/api/webauthn/login",
+  "uri": "/api/webauthn/assertion",
   "comments": [
-    "Complete a WebAuthn authentication ceremony by validating the signature against the previously generated challenge and then login the user in"
+    "Complete a WebAuthn authentication ceremony by validating the signature against the previously generated challenge without logging the user in"
   ],
   "method": "post",
-  "methodName": "completeWebAuthnLogin",
-  "successResponse": "LoginResponse",
+  "methodName": "completeWebAuthnAssertion",
+  "successResponse": "WebAuthnCompleteResponse",
   "errorResponse": "Errors",
   "anonymous": true,
   "params": [

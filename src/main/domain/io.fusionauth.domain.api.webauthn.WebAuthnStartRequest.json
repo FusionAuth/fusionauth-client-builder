@@ -12,6 +12,9 @@
     "applicationId" : {
       "type" : "UUID"
     },
+    "credentialId" : {
+      "type" : "UUID"
+    },
     "loginId" : {
       "type" : "String"
     },
@@ -22,6 +25,9 @@
       }, {
         "type" : "Object"
       } ]
+    },
+    "userId" : {
+      "type" : "UUID"
     },
     "workflow" : {
       "type" : "WebAuthnWorkflow"
