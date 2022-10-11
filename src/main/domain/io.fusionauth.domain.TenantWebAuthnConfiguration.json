@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "TenantWebAuthnConfiguration",
-  "description" : "/**\n * Tenant-level configuration for WebAuthn\n *\n * @author Spencer Witt\n */\n",
+  "description" : "// TODO : WebAuthn : Daniel Review : Do we need this Enableable\n",
   "extends" : [ {
     "type" : "Enableable"
   } ],
@@ -13,12 +13,12 @@
   } ],
   "fields" : {
     "reauthenticationWorkflowConfiguration" : {
-      "type" : "WebAuthnWorkflowConfiguration"
+      "type" : "TenantWebAuthnWorkflowConfiguration"
     },
-    "rpId" : {
+    "relyingPartyId" : {
       "type" : "String"
     },
-    "rpName" : {
+    "relyingPartyName" : {
       "type" : "String"
     }
   }

@@ -15,11 +15,11 @@
     "id" : {
       "type" : "String"
     },
-    "response" : {
-      "type" : "AuthenticatorRegistrationResponse"
-    },
     "rpId" : {
       "type" : "String"
+    },
+    "response" : {
+      "type" : "AuthenticatorRegistrationResponse"
     },
     "transports" : {
       "type" : "List",

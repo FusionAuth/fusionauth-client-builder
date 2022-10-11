@@ -15,11 +15,11 @@
     "id" : {
       "type" : "String"
     },
+    "relyingPartyId" : {
+      "type" : "String"
+    },
     "response" : {
       "type" : "AuthenticatorAuthenticationResponse"
-    },
-    "rpId" : {
-      "type" : "String"
     },
     "type" : {
       "type" : "String"

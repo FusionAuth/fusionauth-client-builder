@@ -18,7 +18,7 @@
     "origin" : {
       "type" : "String"
     },
-    "rpId" : {
+    "relyingPartyId" : {
       "type" : "String"
     }
   }
