@@ -5,14 +5,6 @@
     "type" : "Object"
   },
   "fields" : {
-    "applicationIds" : {
-      "className" : "java.util.List",
-      "type" : "List",
-      "typeArguments" : [ {
-        "className" : "java.util.UUID",
-        "type" : "UUID"
-      } ]
-    },
     "connectTimeout" : {
       "className" : "java.lang.Integer",
       "type" : "Integer"
@@ -78,12 +70,20 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "tenantIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    },
     "url" : {
       "className" : "java.net.URI",
       "type" : "URI"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.List", "java.util.UUID", "java.lang.Integer", "java.util.Map", "java.lang.String", "io.fusionauth.domain.event.EventType", "java.lang.Boolean", "io.fusionauth.domain.HTTPHeaders", "java.time.ZonedDateTime", "java.net.URI" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.lang.Integer", "java.util.Map", "java.lang.String", "io.fusionauth.domain.event.EventType", "java.lang.Boolean", "io.fusionauth.domain.HTTPHeaders", "java.util.UUID", "java.time.ZonedDateTime", "java.util.List", "java.net.URI" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -91,6 +91,9 @@
       "className" : "io.fusionauth.domain.Webhook",
       "type" : "Webhook"
     } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

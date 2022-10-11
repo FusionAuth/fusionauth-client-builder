@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "GroupSearchRequest",
+  "description" : "/**\n * Search request for Groups.\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "GroupSearchRequest"
+    } ]
+  } ],
+  "fields" : {
+    "search" : {
+      "type" : "GroupSearchCriteria"
+    }
+  }
+}

@@ -75,6 +75,8 @@ import io.fusionauth.domain.api.FormRequest;
 import io.fusionauth.domain.api.FormResponse;
 import io.fusionauth.domain.api.GroupMemberSearchRequest;
 import io.fusionauth.domain.api.GroupMemberSearchResponse;
+import io.fusionauth.domain.api.GroupSearchRequest;
+import io.fusionauth.domain.api.GroupSearchResponse;
 import io.fusionauth.domain.api.GroupRequest;
 import io.fusionauth.domain.api.GroupResponse;
 import io.fusionauth.domain.api.IPAccessControlListRequest;

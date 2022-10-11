@@ -17,6 +17,10 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "userId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"

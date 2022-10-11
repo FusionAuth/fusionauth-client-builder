@@ -84,7 +84,7 @@
       "type" : "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.ApplicationEvent", "java.time.ZonedDateTime", "java.util.List", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.email.Email", "io.fusionauth.domain.event.UserActionPhase" ],
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "java.time.ZonedDateTime", "java.util.List", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.email.Email", "io.fusionauth.domain.event.UserActionPhase" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -92,9 +92,6 @@
       "className" : "io.fusionauth.domain.event.UserActionEvent",
       "type" : "UserActionEvent"
     } ]
-  }, {
-    "className" : "io.fusionauth.domain.event.ApplicationEvent",
-    "type" : "ApplicationEvent"
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.event",

@@ -1,0 +1,36 @@
+{
+  "className" : "io.fusionauth.domain.event.GroupMemberUpdateCompleteEvent",
+  "extends" : {
+    "className" : "io.fusionauth.domain.event.BaseEvent",
+    "type" : "BaseEvent"
+  },
+  "fields" : {
+    "group" : {
+      "className" : "io.fusionauth.domain.Group",
+      "type" : "Group"
+    },
+    "members" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.GroupMember",
+        "type" : "GroupMember"
+      } ]
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.NonTransactionalEvent", "io.fusionauth.domain.Group", "java.util.List", "io.fusionauth.domain.GroupMember" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.event.GroupMemberUpdateCompleteEvent",
+      "type" : "GroupMemberUpdateCompleteEvent"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.event.NonTransactionalEvent",
+    "type" : "NonTransactionalEvent"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "GroupMemberUpdateCompleteEvent"
+}

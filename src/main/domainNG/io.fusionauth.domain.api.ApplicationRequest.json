@@ -9,17 +9,9 @@
     "role" : {
       "className" : "io.fusionauth.domain.ApplicationRole",
       "type" : "ApplicationRole"
-    },
-    "webhookIds" : {
-      "className" : "java.util.List",
-      "type" : "List",
-      "typeArguments" : [ {
-        "className" : "java.util.UUID",
-        "type" : "UUID"
-      } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.Application", "io.fusionauth.domain.ApplicationRole", "java.util.List", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.Application", "io.fusionauth.domain.ApplicationRole" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

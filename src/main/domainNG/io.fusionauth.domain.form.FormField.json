@@ -71,7 +71,7 @@
       "type" : "FormFieldValidator"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.UUID", "io.fusionauth.domain.form.FormControl", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "java.util.List", "io.fusionauth.domain.form.FormDataType", "io.fusionauth.domain.form.FormFieldValidator" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.UUID", "io.fusionauth.domain.form.FormControl", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "java.util.List", "io.fusionauth.domain.form.FormDataType", "io.fusionauth.domain.form.FormFieldValidator" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -79,6 +79,9 @@
       "className" : "io.fusionauth.domain.form.FormField",
       "type" : "FormField"
     } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.form",

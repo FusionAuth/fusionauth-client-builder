@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "GroupDeleteEvent",
+  "description" : "/**\n * Models the Group Delete Event.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "GroupDeleteEvent"
+    } ]
+  } ],
+  "fields" : {
+    "group" : {
+      "type" : "Group"
+    }
+  }
+}

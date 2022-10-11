@@ -18,6 +18,10 @@
       "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
       "type" : "ReactorFeatureStatus"
     },
+    "applicationMultiFactorAuthentication" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
     "applicationThemes" : {
       "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
       "type" : "ReactorFeatureStatus"
@@ -38,6 +42,17 @@
       "className" : "java.time.LocalDate",
       "type" : "LocalDate"
     },
+    "licenseAttributes" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
     "licensed" : {
       "type" : "boolean"
     },
@@ -50,7 +65,7 @@
       "type" : "ReactorFeatureStatus"
     }
   },
-  "imports" : [ "io.fusionauth.domain.reactor.ReactorFeatureStatus", "java.time.LocalDate" ],
+  "imports" : [ "io.fusionauth.domain.reactor.ReactorFeatureStatus", "java.time.LocalDate", "java.util.Map", "java.lang.String" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.reactor",

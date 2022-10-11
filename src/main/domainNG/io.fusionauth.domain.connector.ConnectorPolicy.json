@@ -32,7 +32,7 @@
       "type" : "boolean"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.internal._InternalJSONColumn", "java.util.UUID", "java.util.Map", "java.lang.String", "java.util.Set" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.UUID", "java.util.Map", "java.lang.String", "java.util.Set" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -40,6 +40,9 @@
       "className" : "io.fusionauth.domain.connector.ConnectorPolicy",
       "type" : "ConnectorPolicy"
     } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.connector",

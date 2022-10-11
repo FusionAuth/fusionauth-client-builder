@@ -67,8 +67,11 @@
       } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "io.fusionauth.domain.internal._InternalJSONColumn", "io.fusionauth.domain.Enableable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.provider.BaseIdentityProvider$LambdaConfiguration", "io.fusionauth.domain.provider.IdentityProviderLinkingStrategy", "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration" ],
-  "interfaces" : [ ],
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.Enableable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.provider.BaseIdentityProvider$LambdaConfiguration", "io.fusionauth.domain.provider.IdentityProviderLinkingStrategy", "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration" ],
+  "interfaces" : [ {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
+  } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.provider",
   "type" : "BaseIdentityProvider"

@@ -3,12 +3,6 @@
   "type" : "BaseEvent",
   "description" : "/**\n * Base-class for all FusionAuth events.\n *\n * @author Brian Pontarelli\n */\n",
   "fields" : {
-    "applicationIds" : {
-      "type" : "List",
-      "typeArguments" : [ {
-        "type" : "UUID"
-      } ]
-    },
     "createInstant" : {
       "type" : "ZonedDateTime"
     },
