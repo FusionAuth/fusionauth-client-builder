@@ -23,6 +23,15 @@
     "accountTwoFactorIndex" : {
       "type" : "String"
     },
+    "accountWebAuthnAdd" : {
+      "type" : "String"
+    },
+    "accountWebAuthnDelete" : {
+      "type" : "String"
+    },
+    "accountWebAuthnIndex" : {
+      "type" : "String"
+    },
     "emailComplete" : {
       "type" : "String"
     },
@@ -86,7 +95,7 @@
     "oauth2Wait" : {
       "type" : "String"
     },
-    "oauth2 WebAuthn" : {
+    "oauth2WebAuthn" : {
       "type" : "String"
     },
     "passwordChange" : {

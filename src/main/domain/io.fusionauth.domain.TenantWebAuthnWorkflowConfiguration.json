@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "TenantWebAuthnWorkflowConfiguration",
-  "description" : "/**\n * @author Spencer Witt\n */\n",
+  "description" : "// TODO : WebAuthn : Daniel Review : If this also ends up living in the Application, we should rename to WebAuthnWorkflowConfiguration\n",
   "extends" : [ {
     "type" : "Enableable"
   } ],
