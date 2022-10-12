@@ -1,0 +1,49 @@
+{
+  "className" : "io.fusionauth.domain.api.webauthn.PublicKeyRegistrationRequest",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "clientExtensionResults" : {
+      "className" : "io.fusionauth.domain.api.webauthn.WebAuthnExtensionsClientOutputs",
+      "type" : "WebAuthnExtensionsClientOutputs"
+    },
+    "id" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "relyingPartyId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "response" : {
+      "className" : "io.fusionauth.domain.api.webauthn.AuthenticatorRegistrationResponse",
+      "type" : "AuthenticatorRegistrationResponse"
+    },
+    "transports" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.api.webauthn.AuthenticatorTransport",
+        "type" : "AuthenticatorTransport"
+      } ]
+    },
+    "type" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.api.webauthn.WebAuthnExtensionsClientOutputs", "java.lang.String", "io.fusionauth.domain.api.webauthn.AuthenticatorRegistrationResponse", "java.util.List", "io.fusionauth.domain.api.webauthn.AuthenticatorTransport" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.webauthn.PublicKeyRegistrationRequest",
+      "type" : "PublicKeyRegistrationRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.webauthn",
+  "type" : "PublicKeyRegistrationRequest"
+}

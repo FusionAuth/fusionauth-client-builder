@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.api.webauthn.ResidentKeyRequirement",
+  "enum" : [ "discouraged", "preferred", "required" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.api.webauthn",
+  "type" : "ResidentKeyRequirement"
+}

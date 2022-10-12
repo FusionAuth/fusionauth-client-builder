@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.TenantWebAuthnWorkflowConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "authenticatorAttachmentPreference" : {
+      "className" : "io.fusionauth.domain.api.webauthn.AuthenticatorAttachmentPreference",
+      "type" : "AuthenticatorAttachmentPreference"
+    },
+    "userVerificationRequirement" : {
+      "className" : "io.fusionauth.domain.api.webauthn.UserVerificationRequirement",
+      "type" : "UserVerificationRequirement"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.api.webauthn.AuthenticatorAttachmentPreference", "io.fusionauth.domain.api.webauthn.UserVerificationRequirement" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TenantWebAuthnWorkflowConfiguration",
+      "type" : "TenantWebAuthnWorkflowConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantWebAuthnWorkflowConfiguration"
+}

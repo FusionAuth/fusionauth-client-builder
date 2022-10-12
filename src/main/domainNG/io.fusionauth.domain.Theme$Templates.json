@@ -33,6 +33,18 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "accountWebAuthnAdd" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "accountWebAuthnDelete" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "accountWebAuthnIndex" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "emailComplete" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -114,6 +126,10 @@
       "type" : "String"
     },
     "oauth2Wait" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2WebAuthn" : {
       "className" : "java.lang.String",
       "type" : "String"
     },

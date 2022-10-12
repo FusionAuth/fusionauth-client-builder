@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.webauthn.WebAuthnRegisterResponse",
+  "extends" : { },
+  "fields" : {
+    "options" : {
+      "className" : "io.fusionauth.domain.api.webauthn.PublicKeyCredentialCreationOptions",
+      "type" : "PublicKeyCredentialCreationOptions"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.api.webauthn.PublicKeyCredentialCreationOptions" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.webauthn",
+  "type" : "WebAuthnRegisterResponse"
+}

@@ -156,7 +156,8 @@ target(name: "build-angular", description: "Build the Angular Client Library") {
 
 target(name: "build-java", description: "Build the Java Client Library") {
   // Build the FusionAuth client in fusionauth-app first. Then copy everything over to fusionauth-java-client and massage it.
-  clientLibrary.buildClient(template: "src/main/client/java.client.ftl", outputFile: "../fusionauth-app/src/main/java/io/fusionauth/client/FusionAuthClient.java")
+  clientLibrary.buildClient(template: "src/main/client/java.client.ftl",
+                            outputFile: "../fusionauth-app/src/main/java/io/fusionauth/client/FusionAuthClient.java")
 
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/domain") {

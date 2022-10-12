@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.api.webauthn.AuthenticatorTransport",
+  "enum" : [ "usb", "nfc", "ble", "platform", "cable" ],
+  "imports" : [ "java.lang.String" ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.api.webauthn",
+  "type" : "AuthenticatorTransport"
+}
