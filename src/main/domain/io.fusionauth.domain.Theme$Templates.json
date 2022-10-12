@@ -86,7 +86,7 @@
     "oauth2Wait" : {
       "type" : "String"
     },
-    "oauth2WebAuthN" : {
+    "oauth2 WebAuthn" : {
       "type" : "String"
     },
     "passwordChange" : {
