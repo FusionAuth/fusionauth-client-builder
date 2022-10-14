@@ -9,7 +9,10 @@
     } ]
   } ],
   "fields" : {
-    "credentialName" : {
+    "displayName" : {
+      "type" : "String"
+    },
+    "name" : {
       "type" : "String"
     },
     "userAgent" : {
