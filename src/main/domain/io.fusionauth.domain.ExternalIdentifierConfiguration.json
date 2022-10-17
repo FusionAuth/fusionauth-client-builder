@@ -80,6 +80,12 @@
     },
     "twoFactorTrustIdTimeToLiveInSeconds" : {
       "type" : "int"
+    },
+    "webAuthnAuthenticationChallenge" : {
+      "type" : "int"
+    },
+    "webAuthnRegistrationChallenge" : {
+      "type" : "int"
     }
   }
 }

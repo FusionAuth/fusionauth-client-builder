@@ -98,6 +98,12 @@
     "oauth2WebAuthn" : {
       "type" : "String"
     },
+    "oauth2WebAuthnReauth" : {
+      "type" : "String"
+    },
+    "oauth2WebAuthnReauthEnable" : {
+      "type" : "String"
+    },
     "passwordChange" : {
       "type" : "String"
     },

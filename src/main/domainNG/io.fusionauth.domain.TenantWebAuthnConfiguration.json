@@ -1,33 +1,42 @@
 {
-  "className" : "io.fusionauth.domain.TenantWebAuthnConfiguration",
-  "extends" : {
-    "className" : "io.fusionauth.domain.Enableable",
-    "type" : "Enableable"
+  "className": "io.fusionauth.domain.TenantWebAuthnConfiguration",
+  "extends": {
+    "className": "io.fusionauth.domain.Enableable",
+    "type": "Enableable"
   },
-  "fields" : {
-    "reauthenticationWorkflowConfiguration" : {
-      "className" : "io.fusionauth.domain.TenantWebAuthnWorkflowConfiguration",
-      "type" : "TenantWebAuthnWorkflowConfiguration"
+  "fields": {
+    "reauthenticationWorkflow": {
+      "className": "io.fusionauth.domain.TenantWebAuthnWorkflowConfiguration",
+      "type": "TenantWebAuthnWorkflowConfiguration"
     },
-    "relyingPartyId" : {
-      "className" : "java.lang.String",
-      "type" : "String"
+    "relyingPartyId": {
+      "className": "java.lang.String",
+      "type": "String"
     },
-    "relyingPartyName" : {
-      "className" : "java.lang.String",
-      "type" : "String"
+    "relyingPartyName": {
+      "className": "java.lang.String",
+      "type": "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.TenantWebAuthnWorkflowConfiguration", "java.lang.String" ],
-  "interfaces" : [ {
-    "className" : "io.fusionauth.domain.Buildable",
-    "type" : "Buildable",
-    "typeArguments" : [ {
-      "className" : "io.fusionauth.domain.TenantWebAuthnConfiguration",
-      "type" : "TenantWebAuthnConfiguration"
-    } ]
-  } ],
-  "objectType" : "Object",
-  "packageName" : "io.fusionauth.domain",
-  "type" : "TenantWebAuthnConfiguration"
+  "imports": [
+    "io.fusionauth.domain.Enableable",
+    "io.fusionauth.domain.Buildable",
+    "io.fusionauth.domain.TenantWebAuthnWorkflowConfiguration",
+    "java.lang.String"
+  ],
+  "interfaces": [
+    {
+      "className": "io.fusionauth.domain.Buildable",
+      "type": "Buildable",
+      "typeArguments": [
+        {
+          "className": "io.fusionauth.domain.TenantWebAuthnConfiguration",
+          "type": "TenantWebAuthnConfiguration"
+        }
+      ]
+    }
+  ],
+  "objectType": "Object",
+  "packageName": "io.fusionauth.domain",
+  "type": "TenantWebAuthnConfiguration"
 }

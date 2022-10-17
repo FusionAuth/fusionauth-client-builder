@@ -12,7 +12,10 @@
     } ]
   } ],
   "fields" : {
-    "reauthenticationWorkflowConfiguration" : {
+    "bootstrapWorkflow" : {
+      "type" : "TenantWebAuthnWorkflowConfiguration"
+    },
+    "reauthenticationWorkflow" : {
       "type" : "TenantWebAuthnWorkflowConfiguration"
     },
     "relyingPartyId" : {
