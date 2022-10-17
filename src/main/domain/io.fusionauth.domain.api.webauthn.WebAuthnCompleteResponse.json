@@ -9,8 +9,8 @@
     } ]
   } ],
   "fields" : {
-    "credentialId" : {
-      "type" : "UUID"
+    "credential" : {
+      "type" : "WebAuthnCredential"
     }
   }
 }
