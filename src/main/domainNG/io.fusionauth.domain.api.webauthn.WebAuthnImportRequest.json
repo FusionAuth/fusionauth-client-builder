@@ -5,12 +5,19 @@
     "type" : "Object"
   },
   "fields" : {
-    "credential" : {
-      "className" : "io.fusionauth.domain.WebAuthnCredential",
-      "type" : "WebAuthnCredential"
+    "credentials" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.WebAuthnCredential",
+        "type" : "WebAuthnCredential"
+      } ]
+    },
+    "validateDbConstraints" : {
+      "type" : "boolean"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.WebAuthnCredential" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "io.fusionauth.domain.WebAuthnCredential" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

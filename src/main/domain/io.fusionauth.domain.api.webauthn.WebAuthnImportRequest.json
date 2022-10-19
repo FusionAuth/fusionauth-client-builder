@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.api.webauthn",
   "type" : "WebAuthnImportRequest",
-  "description" : "/**\n * API request to import an existing WebAuthn credential\n *\n * @author Spencer Witt\n */\n",
+  "description" : "/**\n * API request to import an existing WebAuthn credential(s)\n *\n * @author Spencer Witt\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
@@ -9,8 +9,14 @@
     } ]
   } ],
   "fields" : {
-    "credential" : {
-      "type" : "WebAuthnCredential"
+    "credentials" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "WebAuthnCredential"
+      } ]
+    },
+    "validateDbConstraints" : {
+      "type" : "boolean"
     }
   }
 }

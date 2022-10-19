@@ -133,6 +133,14 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "oauth2WebAuthnReauth" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2WebAuthnReauthEnable" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "passwordChange" : {
       "className" : "java.lang.String",
       "type" : "String"

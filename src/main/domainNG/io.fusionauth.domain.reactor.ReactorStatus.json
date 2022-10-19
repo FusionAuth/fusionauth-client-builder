@@ -63,6 +63,18 @@
     "threatDetection" : {
       "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
       "type" : "ReactorFeatureStatus"
+    },
+    "webAuthn" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "webAuthnPlatformAuthenticators" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "webAuthnRoamingAuthenticators" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
     }
   },
   "imports" : [ "io.fusionauth.domain.reactor.ReactorFeatureStatus", "java.time.LocalDate", "java.util.Map", "java.lang.String" ],

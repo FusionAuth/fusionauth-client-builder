@@ -5,12 +5,12 @@
     "type" : "Object"
   },
   "fields" : {
-    "credentialId" : {
-      "className" : "java.util.UUID",
-      "type" : "UUID"
+    "credential" : {
+      "className" : "io.fusionauth.domain.WebAuthnCredential",
+      "type" : "WebAuthnCredential"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.WebAuthnCredential" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

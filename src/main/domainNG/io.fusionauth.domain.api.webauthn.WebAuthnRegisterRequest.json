@@ -5,7 +5,11 @@
     "type" : "Object"
   },
   "fields" : {
-    "credentialName" : {
+    "displayName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "name" : {
       "className" : "java.lang.String",
       "type" : "String"
     },
