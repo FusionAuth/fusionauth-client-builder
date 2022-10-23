@@ -20,7 +20,7 @@ fusionauthJWTVersion = "5.1.2"
 javaErrorVersion = "2.2.3"
 savantVersion = "1.0.0"
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.41.0-20221020", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.41.0-EAP.20221022", licenses: ["ApacheV2_0"]) {
   workflow {
     fetch {
       cache()
