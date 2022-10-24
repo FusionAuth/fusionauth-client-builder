@@ -18,7 +18,6 @@ import java.nio.file.Paths
 
 fusionauthJWTVersion = "5.1.2"
 javaErrorVersion = "2.2.3"
-savantVersion = "1.0.0"
 
 project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.41.0-EAP.20221022", licenses: ["ApacheV2_0"]) {
   workflow {
@@ -51,10 +50,10 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.4
 
 // Plugins
 clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.3.3")
-dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:${savantVersion}")
-file = loadPlugin(id: "org.savantbuild.plugin:file:${savantVersion}")
-idea = loadPlugin(id: "org.savantbuild.plugin:idea:${savantVersion}")
-release = loadPlugin(id: "org.savantbuild.plugin:release-git:${savantVersion}")
+dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:1.0.0")
+file = loadPlugin(id: "org.savantbuild.plugin:file:1.0.0")
+idea = loadPlugin(id: "org.savantbuild.plugin:idea:1.0.0")
+release = loadPlugin(id: "org.savantbuild.plugin:release-git:1.0.0")
 
 // Plugin settings
 clientLibrary.settings.debug = false
