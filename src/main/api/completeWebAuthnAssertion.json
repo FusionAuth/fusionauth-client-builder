@@ -1,5 +1,5 @@
 {
-  "uri": "/api/webauthn/assertion",
+  "uri": "/api/webauthn/assert",
   "comments": [
     "Complete a WebAuthn authentication ceremony by validating the signature against the previously generated challenge without logging the user in"
   ],

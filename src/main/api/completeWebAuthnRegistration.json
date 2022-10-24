@@ -1,5 +1,5 @@
 {
-  "uri": "/api/webauthn/complete",
+  "uri": "/api/webauthn/register/complete",
   "comments": [
     "Complete a WebAuthn registration ceremony by validating the client request and saving the new credential"
   ],

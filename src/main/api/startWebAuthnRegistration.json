@@ -1,5 +1,5 @@
 {
-  "uri": "/api/webauthn/register",
+  "uri": "/api/webauthn/register/start",
   "comments": [
     "Start a WebAuthn registration ceremony by generating a new challenge for the user"
   ],
