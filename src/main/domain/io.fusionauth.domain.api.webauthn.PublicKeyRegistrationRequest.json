@@ -24,7 +24,7 @@
     "transports" : {
       "type" : "List",
       "typeArguments" : [ {
-        "type" : "AuthenticatorTransport"
+        "type" : "String"
       } ]
     },
     "type" : {
