@@ -15,6 +15,9 @@
     "bootstrapWorkflow" : {
       "type" : "TenantWebAuthnWorkflowConfiguration"
     },
+    "debug" : {
+      "type" : "boolean"
+    },
     "reauthenticationWorkflow" : {
       "type" : "TenantWebAuthnWorkflowConfiguration"
     },
