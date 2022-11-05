@@ -9,6 +9,9 @@
       "className" : "io.fusionauth.domain.TenantWebAuthnWorkflowConfiguration",
       "type" : "TenantWebAuthnWorkflowConfiguration"
     },
+    "debug" : {
+      "type" : "boolean"
+    },
     "reauthenticationWorkflow" : {
       "className" : "io.fusionauth.domain.TenantWebAuthnWorkflowConfiguration",
       "type" : "TenantWebAuthnWorkflowConfiguration"

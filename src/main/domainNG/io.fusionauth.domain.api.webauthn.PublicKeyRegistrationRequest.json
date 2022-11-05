@@ -25,8 +25,8 @@
       "className" : "java.util.List",
       "type" : "List",
       "typeArguments" : [ {
-        "className" : "io.fusionauth.domain.api.webauthn.AuthenticatorTransport",
-        "type" : "AuthenticatorTransport"
+        "className" : "java.lang.String",
+        "type" : "String"
       } ]
     },
     "type" : {
@@ -34,7 +34,7 @@
       "type" : "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.api.webauthn.WebAuthnExtensionsClientOutputs", "java.lang.String", "io.fusionauth.domain.api.webauthn.AuthenticatorRegistrationResponse", "java.util.List", "io.fusionauth.domain.api.webauthn.AuthenticatorTransport" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.api.webauthn.WebAuthnExtensionsClientOutputs", "java.lang.String", "io.fusionauth.domain.api.webauthn.AuthenticatorRegistrationResponse", "java.util.List" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
