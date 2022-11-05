@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "TenantWebAuthnConfiguration",
-  "description" : "// TODO : WebAuthn : Daniel Review : Do we need this Enableable\n",
+  "description" : "/**\n * Tenant-level configuration for WebAuthn\n *\n * @author Spencer Witt\n */\n",
   "extends" : [ {
     "type" : "Enableable"
   } ],
