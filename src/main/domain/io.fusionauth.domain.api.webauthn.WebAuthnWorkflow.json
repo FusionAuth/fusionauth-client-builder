@@ -2,5 +2,5 @@
   "packageName" : "io.fusionauth.domain.api.webauthn",
   "type" : "WebAuthnWorkflow",
   "description" : "/**\n * Identifies the WebAuthn workflow. This will affect the parameters used for credential creation\n * and request based on the Tenant configuration.\n *\n * @author Spencer Witt\n */\n",
-  "enum" : [ "reauthentication", "bootstrap", "twoFactor", "general" ]
+  "enum" : [ "bootstrap", "general", "reauthentication" ]
 }
