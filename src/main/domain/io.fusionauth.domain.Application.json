@@ -107,6 +107,9 @@
     },
     "verifyRegistration" : {
       "type" : "boolean"
+    },
+    "webAuthnConfiguration" : {
+      "type" : "ApplicationWebAuthnConfiguration"
     }
   }
 }
