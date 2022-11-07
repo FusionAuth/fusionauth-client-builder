@@ -24,6 +24,10 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "initiatedLogin" : {
+      "className" : "io.fusionauth.domain.SAMLv2IdPInitiatedLoginConfiguration",
+      "type" : "SAMLv2IdPInitiatedLoginConfiguration"
+    },
     "issuer" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -52,7 +56,7 @@
       "type" : "Application$SAMLv2Configuration$XMLSignatureLocation"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.List", "java.net.URI", "java.util.UUID", "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2Logout", "io.fusionauth.domain.CanonicalizationMethod", "io.fusionauth.domain.Application$SAMLv2Configuration$XMLSignatureLocation" ],
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.List", "java.net.URI", "java.util.UUID", "io.fusionauth.domain.SAMLv2IdPInitiatedLoginConfiguration", "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2Logout", "io.fusionauth.domain.CanonicalizationMethod", "io.fusionauth.domain.Application$SAMLv2Configuration$XMLSignatureLocation" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
