@@ -1,6 +1,6 @@
 {
   "className" : "io.fusionauth.domain.api.webauthn.WebAuthnWorkflow",
-  "enum" : [ "reauthentication", "bootstrap", "twoFactor", "general" ],
+  "enum" : [ "bootstrap", "general", "reauthentication" ],
   "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.api.webauthn",
