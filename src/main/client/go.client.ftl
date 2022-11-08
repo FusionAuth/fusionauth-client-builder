@@ -19,6 +19,7 @@ package fusionauth
 
 import (
   "bytes"
+  "context"
   "encoding/json"
   "fmt"
   "io"
@@ -94,8 +95,8 @@ func (c *FusionAuthClient) StartAnonymous(responseRef interface{}, errorRef inte
   return rc
 }
 
-func (rc *restClient) Do() error {
-  req, err := http.NewRequest(rc.Method, rc.Uri.String(), rc.Body)
+func (rc *restClient) Do(ctx context.Context) error {
+  req, err := http.NewRequestWithContext(ctx, rc.Method, rc.Uri.String(), rc.Body)
   if err != nil {
     return err
   }
@@ -201,6 +202,23 @@ func (rc *restClient) WithUriSegment(segment string) *restClient {
 // Deprecated: ${api.deprecated?replace("{{renamedMethod}}", (api.renamedMethod!'')?cap_first)}
   [/#if]
 func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (*[#if api.successResponse == "Void"]BaseHTTPResponse[#else]${global.convertType(api.successResponse, "go")}[/#if][#if api.errorResponse != "Void"], *${global.convertType(api.errorResponse, "go")}[/#if], error) {
+    return c.${api.methodName?cap_first}WithContext(context.Background()[#list api.params![] as param][#if !param.constant??], ${global.convertValue(param.name, "go")}[/#if][/#list])
+}
+
+// ${api.methodName?cap_first}WithContext
+  [#list api.comments as comment]
+//${(comment == "")?then('', ' ' +comment)}
+  [/#list]
+  [#list api.params![] as param]
+    [#if !param.constant??]
+//   ${global.optional(param, "go")}${global.convertType(param.javaType, "go")} ${global.convertValue(param.name, "go")} ${param.comments?join("\n//   ")}
+    [/#if]
+  [/#list]
+  [#if api.deprecated??]
+//
+// Deprecated: ${api.deprecated?replace("{{renamedMethod}}", (api.renamedMethod!'')?cap_first+"WithContext")}
+  [/#if]
+func (c *FusionAuthClient) ${api.methodName?cap_first}WithContext(ctx context.Context[#if (parameters?length > 0)], [/#if]${parameters}) (*[#if api.successResponse == "Void"]BaseHTTPResponse[#else]${global.convertType(api.successResponse, "go")}[/#if][#if api.errorResponse != "Void"], *${global.convertType(api.errorResponse, "go")}[/#if], error) {
     var resp [#if api.successResponse == "Void"]BaseHTTPResponse[#else]${global.convertType(api.successResponse, "go")}[/#if]
   [#if api.errorResponse != "Void"]
     var errors ${global.convertType(api.errorResponse, "go")}
@@ -264,7 +282,7 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}(${parameters}) (*[#if api
     WithFormData(formBody).
   [/#if]
     WithMethod(http.Method${api.method?capitalize}).
-    Do()
+    Do(ctx)
   [#if api.errorResponse != "Void"]
     if restClient.ErrorRef == nil {
       return &resp, nil, err
