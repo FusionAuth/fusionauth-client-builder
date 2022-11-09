@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.api.webauthn",
+  "type" : "WebAuthnLoginRequest",
+  "description" : "/**\n * Request to complete the WebAuthn registration ceremony\n *\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "BaseLoginRequest"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebAuthnLoginRequest"
+    } ]
+  } ],
+  "fields" : {
+    "credential" : {
+      "type" : "PublicKeyAuthenticationRequest"
+    },
+    "origin" : {
+      "type" : "String"
+    },
+    "rpId" : {
+      "type" : "String"
+    },
+    "twoFactorTrustId" : {
+      "type" : "String"
+    }
+  }
+}

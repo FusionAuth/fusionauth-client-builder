@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.api.webauthn.AuthenticatorAttachmentPreference",
+  "enum" : [ "any", "platform", "crossPlatform" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.api.webauthn",
+  "type" : "AuthenticatorAttachmentPreference"
+}

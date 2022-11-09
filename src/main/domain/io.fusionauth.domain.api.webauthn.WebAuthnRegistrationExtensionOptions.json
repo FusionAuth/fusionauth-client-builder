@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api.webauthn",
+  "type" : "WebAuthnRegistrationExtensionOptions",
+  "description" : "/**\n * Options to request extensions during credential registration\n *\n * @author Spencer Witt\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebAuthnRegistrationExtensionOptions"
+    } ]
+  } ],
+  "fields" : {
+    "credProps" : {
+      "type" : "boolean"
+    }
+  }
+}

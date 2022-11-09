@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.ApplicationWebAuthnConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "bootstrapWorkflow" : {
+      "className" : "io.fusionauth.domain.ApplicationWebAuthnWorkflowConfiguration",
+      "type" : "ApplicationWebAuthnWorkflowConfiguration"
+    },
+    "reauthenticationWorkflow" : {
+      "className" : "io.fusionauth.domain.ApplicationWebAuthnWorkflowConfiguration",
+      "type" : "ApplicationWebAuthnWorkflowConfiguration"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.ApplicationWebAuthnWorkflowConfiguration" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.ApplicationWebAuthnConfiguration",
+      "type" : "ApplicationWebAuthnConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationWebAuthnConfiguration"
+}

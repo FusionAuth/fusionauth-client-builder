@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.api.webauthn",
+  "type" : "PublicKeyAuthenticationRequest",
+  "description" : "/**\n * Request to authenticate with WebAuthn\n *\n * @author Spencer Witt\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "PublicKeyAuthenticationRequest"
+    } ]
+  } ],
+  "fields" : {
+    "clientExtensionResults" : {
+      "type" : "WebAuthnExtensionsClientOutputs"
+    },
+    "id" : {
+      "type" : "String"
+    },
+    "rpId" : {
+      "type" : "String"
+    },
+    "response" : {
+      "type" : "AuthenticatorAuthenticationResponse"
+    },
+    "type" : {
+      "type" : "String"
+    }
+  }
+}

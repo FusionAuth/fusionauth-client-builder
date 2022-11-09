@@ -1,0 +1,21 @@
+{
+  "uri": "/api/webauthn/assert",
+  "comments": [
+    "Complete a WebAuthn authentication ceremony by validating the signature against the previously generated challenge without logging the user in"
+  ],
+  "method": "post",
+  "methodName": "completeWebAuthnAssertion",
+  "successResponse": "WebAuthnCompleteResponse",
+  "errorResponse": "Errors",
+  "anonymous": true,
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "An object containing data necessary for completing the authentication ceremony"
+      ],
+      "type": "body",
+      "javaType": "WebAuthnLoginRequest"
+    }
+  ]
+}

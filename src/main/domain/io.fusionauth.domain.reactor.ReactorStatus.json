@@ -49,6 +49,15 @@
     },
     "threatDetection" : {
       "type" : "ReactorFeatureStatus"
+    },
+    "webAuthn" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "webAuthnPlatformAuthenticators" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "webAuthnRoamingAuthenticators" : {
+      "type" : "ReactorFeatureStatus"
     }
   }
 }

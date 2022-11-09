@@ -1,0 +1,33 @@
+{
+  "packageName" : "io.fusionauth.domain.api.webauthn",
+  "type" : "CoseAlgorithmIdentifier",
+  "description" : "/**\n * A number identifying a cryptographic algorithm. Values should be registered with the <a\n * href=\"https://www.iana.org/assignments/cose/cose.xhtml#algorithms\">IANA COSE Algorithms registry</a>\n *\n * @author Spencer Witt\n */\n",
+  "enum" : [ {
+    "name" : "ES256",
+    "args" : [ "SHA256withECDSA" ]
+  }, {
+    "name" : "ES384",
+    "args" : [ "SHA384withECDSA" ]
+  }, {
+    "name" : "ES512",
+    "args" : [ "SHA512withECDSA" ]
+  }, {
+    "name" : "RS256",
+    "args" : [ "SHA256withRSA" ]
+  }, {
+    "name" : "RS384",
+    "args" : [ "SHA384withRSA" ]
+  }, {
+    "name" : "RS512",
+    "args" : [ "SHA512withRSA" ]
+  }, {
+    "name" : "PS256",
+    "args" : [ "SHA-256" ]
+  }, {
+    "name" : "PS384",
+    "args" : [ "SHA-384" ]
+  }, {
+    "name" : "PS512",
+    "args" : [ "SHA-512" ]
+  } ]
+}

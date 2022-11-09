@@ -123,6 +123,9 @@
     },
     "usernameConfiguration" : {
       "type" : "TenantUsernameConfiguration"
+    },
+    "webAuthnConfiguration" : {
+      "type" : "TenantWebAuthnConfiguration"
     }
   }
 }

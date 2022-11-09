@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationWebAuthnWorkflowConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ApplicationWebAuthnWorkflowConfiguration"
+    } ]
+  } ],
+  "fields" : { }
+}

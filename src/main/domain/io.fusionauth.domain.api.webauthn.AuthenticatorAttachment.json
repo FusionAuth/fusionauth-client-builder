@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.api.webauthn",
+  "type" : "AuthenticatorAttachment",
+  "description" : "/**\n * Describes the <a href=\"https://www.w3.org/TR/webauthn-2/#authenticator-attachment-modality\">authenticator attachment modality</a>.\n *\n * @author Spencer Witt\n */\n",
+  "enum" : [ "platform", "crossPlatform" ]
+}
