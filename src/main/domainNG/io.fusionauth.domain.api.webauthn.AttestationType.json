@@ -1,8 +1,0 @@
-{
-  "className" : "io.fusionauth.domain.api.webauthn.AttestationType",
-  "enum" : [ "basic", "self", "attestationCa", "anonymizationCa", "none" ],
-  "imports" : [ ],
-  "objectType" : "Enum",
-  "packageName" : "io.fusionauth.domain.api.webauthn",
-  "type" : "AttestationType"
-}

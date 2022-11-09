@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.webauthn",
+  "type" : "ResidentKeyRequirement",
+  "description" : "/**\n * Describes the Relying Party's requirements for <a href=\"https://www.w3.org/TR/webauthn-2/#client-side-discoverable-credential\">client-side\n * discoverable credentials</a> (formerly known as \"resident keys\")\n *\n * @author Spencer Witt\n */\n",
+  "enum" : [ "discouraged", "preferred", "required" ]
+}

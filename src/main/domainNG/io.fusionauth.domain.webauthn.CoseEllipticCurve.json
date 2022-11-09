@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.webauthn.CoseEllipticCurve",
+  "enum" : [ "Reserved", "P256", "P384", "P521", "X25519", "X448", "Ed25519", "Ed448", "Secp256k1" ],
+  "imports" : [ "java.lang.String" ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.webauthn",
+  "type" : "CoseEllipticCurve"
+}

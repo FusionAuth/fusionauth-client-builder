@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.api.WebAuthnAssertResponse",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "credential" : {
+      "className" : "io.fusionauth.domain.WebAuthnCredential",
+      "type" : "WebAuthnCredential"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.WebAuthnCredential" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.WebAuthnAssertResponse",
+      "type" : "WebAuthnAssertResponse"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebAuthnAssertResponse"
+}

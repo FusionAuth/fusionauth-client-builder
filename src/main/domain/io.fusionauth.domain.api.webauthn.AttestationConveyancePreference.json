@@ -1,6 +1,0 @@
-{
-  "packageName" : "io.fusionauth.domain.api.webauthn",
-  "type" : "AttestationConveyancePreference",
-  "description" : "/**\n * Used to communicate whether and how authenticator attestation should be delivered to the Relying Party\n *\n * @author Spencer Witt\n */\n",
-  "enum" : [ "none", "indirect", "direct", "enterprise" ]
-}

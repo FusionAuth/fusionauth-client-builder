@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.webauthn.CoseKeyType",
+  "enum" : [ "Reserved", "OKP", "EC2", "RSA", "Symmetric" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.webauthn",
+  "type" : "CoseKeyType"
+}

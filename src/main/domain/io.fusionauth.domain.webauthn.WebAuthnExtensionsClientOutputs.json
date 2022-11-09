@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.webauthn",
+  "type" : "WebAuthnExtensionsClientOutputs",
+  "description" : "/**\n * Contains extension output for requested extensions during a WebAuthn ceremony\n *\n * @author Spencer Witt\n */\n",
+  "fields" : {
+    "credProps" : {
+      "type" : "CredentialPropertiesOutput"
+    }
+  }
+}

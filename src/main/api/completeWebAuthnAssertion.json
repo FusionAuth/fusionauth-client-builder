@@ -5,7 +5,7 @@
   ],
   "method": "post",
   "methodName": "completeWebAuthnAssertion",
-  "successResponse": "WebAuthnCompleteResponse",
+  "successResponse": "WebAuthnAssertResponse",
   "errorResponse": "Errors",
   "anonymous": true,
   "params": [

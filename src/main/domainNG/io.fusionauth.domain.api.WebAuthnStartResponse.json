@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.WebAuthnStartResponse",
+  "extends" : { },
+  "fields" : {
+    "options" : {
+      "className" : "io.fusionauth.domain.webauthn.PublicKeyCredentialRequestOptions",
+      "type" : "PublicKeyCredentialRequestOptions"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.webauthn.PublicKeyCredentialRequestOptions" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebAuthnStartResponse"
+}

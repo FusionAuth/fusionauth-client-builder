@@ -6,15 +6,15 @@
   },
   "fields" : {
     "authenticatorAttachmentPreference" : {
-      "className" : "io.fusionauth.domain.api.webauthn.AuthenticatorAttachmentPreference",
+      "className" : "io.fusionauth.domain.webauthn.AuthenticatorAttachmentPreference",
       "type" : "AuthenticatorAttachmentPreference"
     },
     "userVerificationRequirement" : {
-      "className" : "io.fusionauth.domain.api.webauthn.UserVerificationRequirement",
+      "className" : "io.fusionauth.domain.webauthn.UserVerificationRequirement",
       "type" : "UserVerificationRequirement"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.api.webauthn.AuthenticatorAttachmentPreference", "io.fusionauth.domain.api.webauthn.UserVerificationRequirement" ],
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.webauthn.AuthenticatorAttachmentPreference", "io.fusionauth.domain.webauthn.UserVerificationRequirement" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

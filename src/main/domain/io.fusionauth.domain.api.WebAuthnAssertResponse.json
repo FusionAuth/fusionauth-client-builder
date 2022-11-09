@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebAuthnAssertResponse",
+  "description" : "/**\n * API response for completing WebAuthn assertion\n *\n * @author Spencer Witt\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebAuthnAssertResponse"
+    } ]
+  } ],
+  "fields" : {
+    "credential" : {
+      "type" : "WebAuthnCredential"
+    }
+  }
+}

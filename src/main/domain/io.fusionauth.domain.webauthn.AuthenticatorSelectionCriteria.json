@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.webauthn",
+  "type" : "AuthenticatorSelectionCriteria",
+  "description" : "/**\n * Used by the Relying Party to specify their requirements for authenticator attributes. Fields use the deprecated \"resident key\" terminology to refer\n * to client-side discoverable credentials to maintain backwards compatibility with WebAuthn Level 1.\n *\n * @author Spencer Witt\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "AuthenticatorSelectionCriteria"
+    } ]
+  } ],
+  "fields" : {
+    "authenticatorAttachment" : {
+      "type" : "AuthenticatorAttachment"
+    },
+    "requireResidentKey" : {
+      "type" : "boolean"
+    },
+    "residentKey" : {
+      "type" : "ResidentKeyRequirement"
+    },
+    "userVerification" : {
+      "type" : "UserVerificationRequirement"
+    }
+  }
+}

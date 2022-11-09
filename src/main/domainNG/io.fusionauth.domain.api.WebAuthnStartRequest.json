@@ -1,0 +1,52 @@
+{
+  "className" : "io.fusionauth.domain.api.WebAuthnStartRequest",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "credentialId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "loginId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "state" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "workflow" : {
+      "className" : "io.fusionauth.domain.webauthn.WebAuthnWorkflow",
+      "type" : "WebAuthnWorkflow"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "java.util.Map", "io.fusionauth.domain.webauthn.WebAuthnWorkflow" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.WebAuthnStartRequest",
+      "type" : "WebAuthnStartRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebAuthnStartRequest"
+}

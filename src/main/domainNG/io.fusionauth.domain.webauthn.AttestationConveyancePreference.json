@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.webauthn.AttestationConveyancePreference",
+  "enum" : [ "none", "indirect", "direct", "enterprise" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.webauthn",
+  "type" : "AttestationConveyancePreference"
+}

@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebAuthnRegisterCompleteResponse",
+  "description" : "/**\n * API response for completing WebAuthn credential registration or assertion\n *\n * @author Spencer Witt\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebAuthnRegisterCompleteResponse"
+    } ]
+  } ],
+  "fields" : {
+    "credential" : {
+      "type" : "WebAuthnCredential"
+    }
+  }
+}

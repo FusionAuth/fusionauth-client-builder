@@ -5,7 +5,7 @@
   ],
   "method": "post",
   "methodName": "startWebAuthnRegistration",
-  "successResponse": "WebAuthnRegisterResponse",
+  "successResponse": "WebAuthnRegisterStartResponse",
   "errorResponse": "Errors",
   "params": [
     {
@@ -14,7 +14,7 @@
         "An object containing data necessary for starting the registration ceremony"
       ],
       "type": "body",
-      "javaType": "WebAuthnRegisterRequest"
+      "javaType": "WebAuthnRegisterStartRequest"
     }
   ]
 }
