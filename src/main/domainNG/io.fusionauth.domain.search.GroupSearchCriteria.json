@@ -13,10 +13,6 @@
         "type" : "String"
       } ]
     },
-    "id" : {
-      "className" : "java.util.UUID",
-      "type" : "UUID"
-    },
     "name" : {
       "className" : "java.lang.String",
       "type" : "String"

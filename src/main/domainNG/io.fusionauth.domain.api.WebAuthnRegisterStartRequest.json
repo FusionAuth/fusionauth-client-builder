@@ -1,0 +1,41 @@
+{
+  "className" : "io.fusionauth.domain.api.WebAuthnRegisterStartRequest",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "displayName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userAgent" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "workflow" : {
+      "className" : "io.fusionauth.domain.webauthn.WebAuthnWorkflow",
+      "type" : "WebAuthnWorkflow"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.UUID", "io.fusionauth.domain.webauthn.WebAuthnWorkflow" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.WebAuthnRegisterStartRequest",
+      "type" : "WebAuthnRegisterStartRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebAuthnRegisterStartRequest"
+}

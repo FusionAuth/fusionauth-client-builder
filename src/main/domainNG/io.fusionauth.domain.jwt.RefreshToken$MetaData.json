@@ -5,6 +5,17 @@
     "type" : "Object"
   },
   "fields" : {
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
     "device" : {
       "className" : "io.fusionauth.domain.jwt.DeviceInfo",
       "type" : "DeviceInfo"
@@ -18,7 +29,7 @@
       } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.jwt.DeviceInfo", "java.util.Set", "java.lang.String" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.jwt.DeviceInfo", "java.util.Set" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

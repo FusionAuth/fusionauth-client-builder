@@ -85,6 +85,12 @@
     },
     "twoFactorTrustIdTimeToLiveInSeconds" : {
       "type" : "int"
+    },
+    "webAuthnAuthenticationChallengeTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "webAuthnRegistrationChallengeTimeToLiveInSeconds" : {
+      "type" : "int"
     }
   },
   "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.SecureGeneratorConfiguration" ],

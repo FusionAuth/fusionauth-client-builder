@@ -1,0 +1,20 @@
+{
+  "uri": "/api/webauthn/register/start",
+  "comments": [
+    "Start a WebAuthn registration ceremony by generating a new challenge for the user"
+  ],
+  "method": "post",
+  "methodName": "startWebAuthnRegistration",
+  "successResponse": "WebAuthnRegisterStartResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "An object containing data necessary for starting the registration ceremony"
+      ],
+      "type": "body",
+      "javaType": "WebAuthnRegisterStartRequest"
+    }
+  ]
+}

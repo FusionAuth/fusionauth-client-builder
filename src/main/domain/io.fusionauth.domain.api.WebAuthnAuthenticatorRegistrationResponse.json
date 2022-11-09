@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebAuthnAuthenticatorRegistrationResponse",
+  "description" : "/**\n * The <i>authenticator's</i> response for the registration ceremony in its encoded format\n *\n * @author Spencer Witt\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebAuthnAuthenticatorRegistrationResponse"
+    } ]
+  } ],
+  "fields" : {
+    "attestationObject" : {
+      "type" : "String"
+    },
+    "clientDataJSON" : {
+      "type" : "String"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "className" : "io.fusionauth.domain.api.WebAuthnPublicKeyAuthenticationRequest",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "clientExtensionResults" : {
+      "className" : "io.fusionauth.domain.webauthn.WebAuthnExtensionsClientOutputs",
+      "type" : "WebAuthnExtensionsClientOutputs"
+    },
+    "id" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "relyingPartyId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "response" : {
+      "className" : "io.fusionauth.domain.api.WebAuthnAuthenticatorAuthenticationResponse",
+      "type" : "WebAuthnAuthenticatorAuthenticationResponse"
+    },
+    "type" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.webauthn.WebAuthnExtensionsClientOutputs", "java.lang.String", "io.fusionauth.domain.api.WebAuthnAuthenticatorAuthenticationResponse" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.WebAuthnPublicKeyAuthenticationRequest",
+      "type" : "WebAuthnPublicKeyAuthenticationRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebAuthnPublicKeyAuthenticationRequest"
+}

@@ -1,0 +1,37 @@
+{
+  "className" : "io.fusionauth.domain.api.WebAuthnRegisterCompleteRequest",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "credential" : {
+      "className" : "io.fusionauth.domain.api.WebAuthnPublicKeyRegistrationRequest",
+      "type" : "WebAuthnPublicKeyRegistrationRequest"
+    },
+    "origin" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "relyingPartyId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.api.WebAuthnPublicKeyRegistrationRequest", "java.lang.String", "java.util.UUID" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.WebAuthnRegisterCompleteRequest",
+      "type" : "WebAuthnRegisterCompleteRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebAuthnRegisterCompleteRequest"
+}

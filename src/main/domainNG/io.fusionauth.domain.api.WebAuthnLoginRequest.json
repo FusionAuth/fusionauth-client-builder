@@ -1,0 +1,37 @@
+{
+  "className" : "io.fusionauth.domain.api.WebAuthnLoginRequest",
+  "extends" : {
+    "className" : "io.fusionauth.domain.api.BaseLoginRequest",
+    "type" : "BaseLoginRequest"
+  },
+  "fields" : {
+    "credential" : {
+      "className" : "io.fusionauth.domain.api.WebAuthnPublicKeyAuthenticationRequest",
+      "type" : "WebAuthnPublicKeyAuthenticationRequest"
+    },
+    "origin" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "relyingPartyId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "twoFactorTrustId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.api.BaseLoginRequest", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.api.WebAuthnPublicKeyAuthenticationRequest", "java.lang.String" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.WebAuthnLoginRequest",
+      "type" : "WebAuthnLoginRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebAuthnLoginRequest"
+}

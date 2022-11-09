@@ -1,0 +1,33 @@
+{
+  "packageName" : "io.fusionauth.domain.webauthn",
+  "type" : "CoseEllipticCurve",
+  "description" : "/**\n * COSE Elliptic Curve identifier to determine which elliptic curve to use with a given key\n *\n * @author Spencer Witt\n */\n",
+  "enum" : [ {
+    "name" : "Reserved",
+    "args" : [ "0", "N/A" ]
+  }, {
+    "name" : "P256",
+    "args" : [ "1", "secp256r1" ]
+  }, {
+    "name" : "P384",
+    "args" : [ "2", "secp384r1" ]
+  }, {
+    "name" : "P521",
+    "args" : [ "3", "secp521r1" ]
+  }, {
+    "name" : "X25519",
+    "args" : [ "4", "X25519" ]
+  }, {
+    "name" : "X448",
+    "args" : [ "5", "X448" ]
+  }, {
+    "name" : "Ed25519",
+    "args" : [ "6", "Ed25519" ]
+  }, {
+    "name" : "Ed448",
+    "args" : [ "7", "Ed448" ]
+  }, {
+    "name" : "Secp256k1",
+    "args" : [ "8", "secp256k1" ]
+  } ]
+}
