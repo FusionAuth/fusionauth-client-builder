@@ -89,7 +89,13 @@
     "oauth2TwoFactor" : {
       "type" : "String"
     },
+    "oauth2TwoFactorEnable" : {
+      "type" : "String"
+    },
     "oauth2TwoFactorMethods" : {
+      "type" : "String"
+    },
+    "oauth2TwoFactorRecoveryCodes" : {
       "type" : "String"
     },
     "oauth2Wait" : {

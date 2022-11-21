@@ -2,5 +2,5 @@
   "packageName" : "io.fusionauth.domain",
   "type" : "MultiFactorLoginPolicy",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
-  "enum" : [ "Disabled", "Enabled" ]
+  "enum" : [ "Disabled", "Enabled", "Required" ]
 }
