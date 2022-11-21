@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "FailedAuthenticationActionCancelPolicy",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "onPasswordReset" : {
+      "type" : "boolean"
+    }
+  }
+}
