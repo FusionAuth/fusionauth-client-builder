@@ -5,6 +5,10 @@
     "type" : "Object"
   },
   "fields" : {
+    "code" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "recoveryCodes" : {
       "className" : "java.util.List",
       "type" : "List",
@@ -14,7 +18,7 @@
       } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "java.lang.String" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.List" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

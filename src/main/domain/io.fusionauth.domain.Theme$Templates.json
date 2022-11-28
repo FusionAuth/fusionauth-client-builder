@@ -92,10 +92,10 @@
     "oauth2TwoFactorEnable" : {
       "type" : "String"
     },
-    "oauth2TwoFactorMethods" : {
+    "oauth2TwoFactorEnableComplete" : {
       "type" : "String"
     },
-    "oauth2TwoFactorRecoveryCodes" : {
+    "oauth2TwoFactorMethods" : {
       "type" : "String"
     },
     "oauth2Wait" : {
