@@ -650,10 +650,12 @@ openapi: "3.0.3"
 info:
   version: #{options[:apiversion]}
   title: FusionAuth API
+  description: "This is a FusionAuth server. Find out more at [https://fusionauth.io](https://fusionauth.io). You need to [set up an API key](https://fusionauth.io/docs/v1/tech/apis/authentication#managing-api-keys) in the FusionAuth instance you are using to test out the API calls."
   license:
     name: Apache2
 servers:
   - url: http://localhost:9011
+  - url: https://sandbox.fusionauth.io
 security:
   - #{api_key_auth_name}: []
 )
