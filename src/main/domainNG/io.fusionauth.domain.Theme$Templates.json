@@ -121,6 +121,14 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "oauth2TwoFactorEnable" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2TwoFactorEnableComplete" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "oauth2TwoFactorMethods" : {
       "className" : "java.lang.String",
       "type" : "String"

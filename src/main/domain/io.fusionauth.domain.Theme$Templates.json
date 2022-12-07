@@ -89,6 +89,12 @@
     "oauth2TwoFactor" : {
       "type" : "String"
     },
+    "oauth2TwoFactorEnable" : {
+      "type" : "String"
+    },
+    "oauth2TwoFactorEnableComplete" : {
+      "type" : "String"
+    },
     "oauth2TwoFactorMethods" : {
       "type" : "String"
     },
