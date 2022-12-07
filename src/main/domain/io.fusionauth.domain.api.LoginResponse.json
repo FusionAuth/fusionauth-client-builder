@@ -21,6 +21,12 @@
     "changePasswordReason" : {
       "type" : "ChangePasswordReason"
     },
+    "configurableMethods" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
     "emailVerificationId" : {
       "type" : "String"
     },

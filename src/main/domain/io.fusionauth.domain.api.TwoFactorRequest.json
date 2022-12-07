@@ -35,6 +35,9 @@
     },
     "secretBase32Encoded" : {
       "type" : "String"
+    },
+    "twoFactorId" : {
+      "type" : "String"
     }
   }
 }

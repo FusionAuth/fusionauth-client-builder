@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "FailedAuthenticationActionCancelPolicy",
+  "description" : "/**\n * A policy to configure if and when the user-action is canceled prior to the expiration of the action.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "onPasswordReset" : {
+      "type" : "boolean"
+    }
+  }
+}

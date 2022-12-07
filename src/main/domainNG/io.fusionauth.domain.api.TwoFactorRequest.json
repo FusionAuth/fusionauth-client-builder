@@ -36,6 +36,10 @@
     "secretBase32Encoded" : {
       "className" : "java.lang.String",
       "type" : "String"
+    },
+    "twoFactorId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
     }
   },
   "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String" ],

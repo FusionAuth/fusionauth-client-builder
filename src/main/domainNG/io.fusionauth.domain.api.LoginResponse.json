@@ -21,6 +21,14 @@
       "className" : "io.fusionauth.domain.ChangePasswordReason",
       "type" : "ChangePasswordReason"
     },
+    "configurableMethods" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
     "emailVerificationId" : {
       "className" : "java.lang.String",
       "type" : "String"
