@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "LoginHintConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "LoginHintConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "parameterName" : {
+      "type" : "String"
+    }
+  }
+}
