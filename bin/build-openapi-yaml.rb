@@ -612,8 +612,8 @@ domain_files.each do |fn|
 end
 
 schemas["ZonedDateTime"] = {}
-schemas["ZonedDateTime"]["description"] = "A date-time with a time-zone in the ISO-8601 calendar system, such as 2007-12-03T10:15:30+01:00 Europe/Paris."
-schemas["ZonedDateTime"]["example"] = "2007-12-03"
+schemas["ZonedDateTime"]["description"] = "The number of milliseconds since the unix epoch: January 1, 1970 00:00:00 UTC. This value is always in UTC."
+schemas["ZonedDateTime"]["example"] = "1659380719000"
 schemas["ZonedDateTime"]["type"] = "integer"
 schemas["ZonedDateTime"]["format"] = "int64"
 schemas["Locale"] = {}
@@ -650,10 +650,12 @@ openapi: "3.0.3"
 info:
   version: #{options[:apiversion]}
   title: FusionAuth API
+  description: "This is a FusionAuth server. Find out more at [https://fusionauth.io](https://fusionauth.io). You need to [set up an API key](https://fusionauth.io/docs/v1/tech/apis/authentication#managing-api-keys) in the FusionAuth instance you are using to test out the API calls."
   license:
     name: Apache2
 servers:
   - url: http://localhost:9011
+  - url: https://sandbox.fusionauth.io
 security:
   - #{api_key_auth_name}: []
 )

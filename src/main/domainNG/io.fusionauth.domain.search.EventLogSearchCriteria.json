@@ -1,0 +1,38 @@
+{
+  "className" : "io.fusionauth.domain.search.EventLogSearchCriteria",
+  "extends" : { },
+  "fields" : {
+    "SortableFields" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "end" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "message" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "start" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.EventLogType",
+      "type" : "EventLogType"
+    }
+  },
+  "imports" : [ "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.EventLogType" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "EventLogSearchCriteria"
+}

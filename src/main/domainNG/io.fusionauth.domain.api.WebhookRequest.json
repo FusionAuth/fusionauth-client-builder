@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.WebhookRequest",
+  "extends" : { },
+  "fields" : {
+    "webhook" : {
+      "className" : "io.fusionauth.domain.Webhook",
+      "type" : "Webhook"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Webhook" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebhookRequest"
+}

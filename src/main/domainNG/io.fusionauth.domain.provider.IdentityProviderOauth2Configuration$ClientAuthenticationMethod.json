@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration$ClientAuthenticationMethod",
+  "enum" : [ "none", "client_secret_basic", "client_secret_post" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderOauth2Configuration$ClientAuthenticationMethod"
+}

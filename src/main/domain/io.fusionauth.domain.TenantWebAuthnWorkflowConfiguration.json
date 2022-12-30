@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantWebAuthnWorkflowConfiguration",
+  "description" : "/**\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantWebAuthnWorkflowConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "authenticatorAttachmentPreference" : {
+      "type" : "AuthenticatorAttachmentPreference"
+    },
+    "userVerificationRequirement" : {
+      "type" : "UserVerificationRequirement"
+    }
+  }
+}

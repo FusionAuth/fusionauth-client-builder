@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.ApplicationExternalIdentifierConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "twoFactorTrustIdTimeToLiveInSeconds" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.Integer" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.ApplicationExternalIdentifierConfiguration",
+      "type" : "ApplicationExternalIdentifierConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationExternalIdentifierConfiguration"
+}

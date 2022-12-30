@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.api.PreviewMessageTemplateRequest",
+  "extends" : { },
+  "fields" : {
+    "locale" : {
+      "className" : "java.util.Locale",
+      "type" : "Locale"
+    },
+    "messageTemplate" : {
+      "className" : "io.fusionauth.domain.message.MessageTemplate",
+      "type" : "MessageTemplate"
+    }
+  },
+  "imports" : [ "java.util.Locale", "io.fusionauth.domain.message.MessageTemplate" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "PreviewMessageTemplateRequest"
+}

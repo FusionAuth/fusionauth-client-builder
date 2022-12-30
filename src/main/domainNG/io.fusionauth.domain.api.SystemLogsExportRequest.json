@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.api.SystemLogsExportRequest",
+  "extends" : { },
+  "fields" : {
+    "lastNBytes" : {
+      "type" : "int"
+    }
+  },
+  "imports" : [ ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "SystemLogsExportRequest"
+}

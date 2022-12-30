@@ -1,0 +1,58 @@
+{
+  "className" : "io.fusionauth.domain.ApplicationRole",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "description" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "isDefault" : {
+      "type" : "boolean"
+    },
+    "isSuperRole" : {
+      "type" : "boolean"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.lang.Comparable", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "java.time.ZonedDateTime" ],
+  "interfaces" : [ {
+    "className" : "java.lang.Comparable",
+    "type" : "Comparable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.ApplicationRole",
+      "type" : "ApplicationRole"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.ApplicationRole",
+      "type" : "ApplicationRole"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationRole"
+}

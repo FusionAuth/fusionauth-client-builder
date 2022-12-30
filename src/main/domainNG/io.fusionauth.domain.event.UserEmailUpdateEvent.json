@@ -1,0 +1,32 @@
+{
+  "className" : "io.fusionauth.domain.event.UserEmailUpdateEvent",
+  "extends" : {
+    "className" : "io.fusionauth.domain.event.BaseEvent",
+    "type" : "BaseEvent"
+  },
+  "fields" : {
+    "previousEmail" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "user" : {
+      "className" : "io.fusionauth.domain.User",
+      "type" : "User"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.NonTransactionalEvent", "java.lang.String", "io.fusionauth.domain.User" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.event.UserEmailUpdateEvent",
+      "type" : "UserEmailUpdateEvent"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.event.NonTransactionalEvent",
+    "type" : "NonTransactionalEvent"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserEmailUpdateEvent"
+}

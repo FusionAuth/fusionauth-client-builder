@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.api.twoFactor.TwoFactorStatusResponse$TwoFactorTrust",
+  "extends" : { },
+  "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "expiration" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "startInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    }
+  },
+  "imports" : [ "java.util.UUID", "java.time.ZonedDateTime" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.twoFactor",
+  "type" : "TwoFactorStatusResponse$TwoFactorTrust"
+}

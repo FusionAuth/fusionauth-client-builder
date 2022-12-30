@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationWebAuthnConfiguration",
+  "description" : "/**\n * Application-level configuration for WebAuthn\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ApplicationWebAuthnConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "bootstrapWorkflow" : {
+      "type" : "ApplicationWebAuthnWorkflowConfiguration"
+    },
+    "reauthenticationWorkflow" : {
+      "type" : "ApplicationWebAuthnWorkflowConfiguration"
+    }
+  }
+}

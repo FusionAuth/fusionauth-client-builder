@@ -1,0 +1,45 @@
+{
+  "className" : "io.fusionauth.domain.messenger.BaseMessengerConfiguration",
+  "extends" : { },
+  "fields" : {
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "transport" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.messenger",
+  "type" : "BaseMessengerConfiguration"
+}

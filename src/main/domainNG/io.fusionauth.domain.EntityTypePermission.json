@@ -1,0 +1,62 @@
+{
+  "className" : "io.fusionauth.domain.EntityTypePermission",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "description" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "entityTypeId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "isDefault" : {
+      "type" : "boolean"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.EntityTypePermission",
+      "type" : "EntityTypePermission"
+    } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EntityTypePermission"
+}

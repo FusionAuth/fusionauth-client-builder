@@ -1,0 +1,28 @@
+{
+  "className" : "io.fusionauth.domain.search.SearchResults",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object",
+    "typeArguments" : [ {
+      "className" : "java.lang.Object",
+      "type" : "Object"
+    } ]
+  },
+  "fields" : {
+    "results" : {
+      "className" : "java.util.List",
+      "type" : "List"
+    },
+    "total" : {
+      "type" : "long"
+    },
+    "totalEqualToActual" : {
+      "type" : "boolean"
+    }
+  },
+  "imports" : [ "java.util.List" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "SearchResults"
+}

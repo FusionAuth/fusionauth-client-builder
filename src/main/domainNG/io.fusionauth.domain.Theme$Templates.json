@@ -1,0 +1,205 @@
+{
+  "className" : "io.fusionauth.domain.Theme$Templates",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "Names" : {
+      "className" : "java.util.SortedSet",
+      "type" : "SortedSet",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "accountEdit" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "accountIndex" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "accountTwoFactorDisable" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "accountTwoFactorEnable" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "accountTwoFactorIndex" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "accountWebAuthnAdd" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "accountWebAuthnDelete" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "accountWebAuthnIndex" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "emailComplete" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "emailSent" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "emailVerificationRequired" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "emailVerify" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "helpers" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "index" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2Authorize" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2AuthorizedNotRegistered" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2ChildRegistrationNotAllowed" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2ChildRegistrationNotAllowedComplete" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2CompleteRegistration" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2Device" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2DeviceComplete" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2Error" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2Logout" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2Passwordless" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2Register" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2StartIdPLink" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2TwoFactor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2TwoFactorEnable" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2TwoFactorEnableComplete" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2TwoFactorMethods" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2Wait" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2WebAuthn" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2WebAuthnReauth" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2WebAuthnReauthEnable" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "passwordChange" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "passwordComplete" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "passwordForgot" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "passwordSent" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "registrationComplete" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "registrationSent" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "registrationVerificationRequired" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "registrationVerify" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "samlv2Logout" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "unauthorized" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.SortedSet", "java.lang.String" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Theme$Templates",
+      "type" : "Theme$Templates"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Theme$Templates"
+}

@@ -1,0 +1,48 @@
+{
+  "className" : "io.fusionauth.domain.provider.SAMLv2IdPInitiatedIdentityProvider",
+  "extends" : {
+    "className" : "io.fusionauth.domain.provider.BaseIdentityProvider",
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.SAMLv2IdPInitiatedApplicationConfiguration",
+      "type" : "SAMLv2IdPInitiatedApplicationConfiguration"
+    } ]
+  },
+  "fields" : {
+    "emailClaim" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "issuer" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "keyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "uniqueIdClaim" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "useNameIdForEmail" : {
+      "type" : "boolean"
+    },
+    "usernameClaim" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.SAMLv2IdPInitiatedApplicationConfiguration", "java.lang.String", "java.util.UUID" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.SAMLv2IdPInitiatedIdentityProvider",
+      "type" : "SAMLv2IdPInitiatedIdentityProvider"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SAMLv2IdPInitiatedIdentityProvider"
+}

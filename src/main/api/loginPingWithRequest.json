@@ -1,0 +1,23 @@
+{
+  "uri": "/api/login",
+  "comments": [
+    "Sends a ping to FusionAuth indicating that the user was automatically logged into an application. When using",
+    "FusionAuth's SSO or your own, you should call this if the user is already logged in centrally, but accesses an",
+    "application where they no longer have a session. This helps correctly track login counts, times and helps with",
+    "reporting."
+  ],
+  "method": "put",
+  "methodName": "loginPingWithRequest",
+  "successResponse": "LoginResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The login request that contains the user credentials used to log them in."
+      ],
+      "type": "body",
+      "javaType": "LoginPingRequest"
+    }
+  ]
+}

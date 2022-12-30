@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.ReactorMetricsResponse",
+  "extends" : { },
+  "fields" : {
+    "metrics" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorMetrics",
+      "type" : "ReactorMetrics"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.reactor.ReactorMetrics" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ReactorMetricsResponse"
+}

@@ -1,6 +1,6 @@
 [#import "_macros.ftl" as global/]
 /*
- * Copyright (c) 2018-2019, FusionAuth, All Rights Reserved
+ * Copyright (c) 2018-2022, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,10 @@
  */
 package io.fusionauth.client;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -35,18 +37,14 @@ import com.inversoft.rest.JSONResponseHandler;
 import com.inversoft.rest.RESTClient;
 import io.fusionauth.domain.LambdaType;
 import io.fusionauth.domain.OpenIdConfiguration;
-import io.fusionauth.domain.api.ApplicationRequest;
-import io.fusionauth.domain.api.ApplicationResponse;
 import io.fusionauth.domain.api.APIKeyRequest;
 import io.fusionauth.domain.api.APIKeyResponse;
+import io.fusionauth.domain.api.ApplicationRequest;
+import io.fusionauth.domain.api.ApplicationResponse;
 import io.fusionauth.domain.api.AuditLogRequest;
 import io.fusionauth.domain.api.AuditLogResponse;
 import io.fusionauth.domain.api.AuditLogSearchRequest;
 import io.fusionauth.domain.api.AuditLogSearchResponse;
-import io.fusionauth.domain.api.FormFieldRequest;
-import io.fusionauth.domain.api.FormFieldResponse;
-import io.fusionauth.domain.api.FormRequest;
-import io.fusionauth.domain.api.FormResponse;
 import io.fusionauth.domain.api.ConnectorRequest;
 import io.fusionauth.domain.api.ConnectorResponse;
 import io.fusionauth.domain.api.ConsentRequest;
@@ -71,24 +69,31 @@ import io.fusionauth.domain.api.EventLogSearchResponse;
 import io.fusionauth.domain.api.FamilyEmailRequest;
 import io.fusionauth.domain.api.FamilyRequest;
 import io.fusionauth.domain.api.FamilyResponse;
+import io.fusionauth.domain.api.FormFieldRequest;
+import io.fusionauth.domain.api.FormFieldResponse;
+import io.fusionauth.domain.api.FormRequest;
+import io.fusionauth.domain.api.FormResponse;
 import io.fusionauth.domain.api.GroupMemberSearchRequest;
 import io.fusionauth.domain.api.GroupMemberSearchResponse;
+import io.fusionauth.domain.api.GroupSearchRequest;
+import io.fusionauth.domain.api.GroupSearchResponse;
 import io.fusionauth.domain.api.GroupRequest;
 import io.fusionauth.domain.api.GroupResponse;
-import io.fusionauth.domain.api.IdentityProviderRequest;
-import io.fusionauth.domain.api.IdentityProviderResponse;
-import io.fusionauth.domain.api.IntegrationRequest;
-import io.fusionauth.domain.api.IntegrationResponse;
 import io.fusionauth.domain.api.IPAccessControlListRequest;
 import io.fusionauth.domain.api.IPAccessControlListResponse;
 import io.fusionauth.domain.api.IPAccessControlListSearchRequest;
 import io.fusionauth.domain.api.IPAccessControlListSearchResponse;
+import io.fusionauth.domain.api.IdentityProviderRequest;
+import io.fusionauth.domain.api.IdentityProviderResponse;
+import io.fusionauth.domain.api.IntegrationRequest;
+import io.fusionauth.domain.api.IntegrationResponse;
 import io.fusionauth.domain.api.KeyRequest;
 import io.fusionauth.domain.api.KeyResponse;
 import io.fusionauth.domain.api.LambdaRequest;
 import io.fusionauth.domain.api.LambdaResponse;
 import io.fusionauth.domain.api.LoginRecordSearchRequest;
 import io.fusionauth.domain.api.LoginRecordSearchResponse;
+import io.fusionauth.domain.api.LoginPingRequest;
 import io.fusionauth.domain.api.LoginRequest;
 import io.fusionauth.domain.api.LoginResponse;
 import io.fusionauth.domain.api.LogoutRequest;
@@ -136,6 +141,16 @@ import io.fusionauth.domain.api.UserDeleteSingleRequest;
 import io.fusionauth.domain.api.UserRequest;
 import io.fusionauth.domain.api.UserResponse;
 import io.fusionauth.domain.api.VersionResponse;
+import io.fusionauth.domain.api.WebAuthnAssertResponse;
+import io.fusionauth.domain.api.WebAuthnCredentialImportRequest;
+import io.fusionauth.domain.api.WebAuthnCredentialResponse;
+import io.fusionauth.domain.api.WebAuthnLoginRequest;
+import io.fusionauth.domain.api.WebAuthnRegisterCompleteRequest;
+import io.fusionauth.domain.api.WebAuthnRegisterCompleteResponse;
+import io.fusionauth.domain.api.WebAuthnRegisterStartRequest;
+import io.fusionauth.domain.api.WebAuthnRegisterStartResponse;
+import io.fusionauth.domain.api.WebAuthnStartRequest;
+import io.fusionauth.domain.api.WebAuthnStartResponse;
 import io.fusionauth.domain.api.WebhookRequest;
 import io.fusionauth.domain.api.WebhookResponse;
 import io.fusionauth.domain.api.email.SendRequest;
@@ -155,9 +170,9 @@ import io.fusionauth.domain.api.jwt.RefreshTokenResponse;
 import io.fusionauth.domain.api.jwt.RefreshTokenRevokeRequest;
 import io.fusionauth.domain.api.jwt.ValidateResponse;
 import io.fusionauth.domain.api.passwordless.PasswordlessLoginRequest;
-import io.fusionauth.domain.api.passwordless.PasswordlessStartResponse;
 import io.fusionauth.domain.api.passwordless.PasswordlessSendRequest;
 import io.fusionauth.domain.api.passwordless.PasswordlessStartRequest;
+import io.fusionauth.domain.api.passwordless.PasswordlessStartResponse;
 import io.fusionauth.domain.api.report.DailyActiveUserReportResponse;
 import io.fusionauth.domain.api.report.LoginReportResponse;
 import io.fusionauth.domain.api.report.MonthlyActiveUserReportResponse;
@@ -168,6 +183,7 @@ import io.fusionauth.domain.api.twoFactor.TwoFactorLoginRequest;
 import io.fusionauth.domain.api.twoFactor.TwoFactorSendRequest;
 import io.fusionauth.domain.api.twoFactor.TwoFactorStartRequest;
 import io.fusionauth.domain.api.twoFactor.TwoFactorStartResponse;
+import io.fusionauth.domain.api.twoFactor.TwoFactorStatusResponse;
 import io.fusionauth.domain.api.user.ActionRequest;
 import io.fusionauth.domain.api.user.ActionResponse;
 import io.fusionauth.domain.api.user.ChangePasswordRequest;
@@ -188,8 +204,8 @@ import io.fusionauth.domain.api.user.VerifyRegistrationRequest;
 import io.fusionauth.domain.api.user.VerifyRegistrationResponse;
 import io.fusionauth.domain.oauth2.AccessToken;
 import io.fusionauth.domain.oauth2.IntrospectResponse;
-import io.fusionauth.domain.oauth2.OAuthError;
 import io.fusionauth.domain.oauth2.JWKSResponse;
+import io.fusionauth.domain.oauth2.OAuthError;
 import io.fusionauth.domain.provider.IdentityProviderType;
 
 /**
@@ -289,10 +305,10 @@ public class FusionAuthClient {
     [#if param.type == "form"][#assign formPost = true/][/#if]
   [/#list]
   [#if formPost]
-    Map<String, String> parameters = new HashMap<>();
+    Map<String, List<String>> parameters = new HashMap<>();
     [#list api.params![] as param]
       [#if param.type == "form"]
-    parameters.put("${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)});
+    parameters.put("${param.name}", Arrays.asList(${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)}));
       [/#if]
     [/#list]
   [/#if]

@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.EntityTypeSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "entityTypes" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.EntityType",
+        "type" : "EntityType"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.EntityType" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EntityTypeSearchResponse"
+}

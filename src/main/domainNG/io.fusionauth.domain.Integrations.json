@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.Integrations",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "cleanspeak" : {
+      "className" : "io.fusionauth.domain.CleanSpeakConfiguration",
+      "type" : "CleanSpeakConfiguration"
+    },
+    "kafka" : {
+      "className" : "io.fusionauth.domain.KafkaConfiguration",
+      "type" : "KafkaConfiguration"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.CleanSpeakConfiguration", "io.fusionauth.domain.KafkaConfiguration" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Integrations",
+      "type" : "Integrations"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Integrations"
+}

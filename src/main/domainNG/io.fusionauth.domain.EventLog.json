@@ -1,0 +1,37 @@
+{
+  "className" : "io.fusionauth.domain.EventLog",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "id" : {
+      "className" : "java.lang.Long",
+      "type" : "Long"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "message" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.EventLogType",
+      "type" : "EventLogType"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.Long", "java.time.ZonedDateTime", "java.lang.String", "io.fusionauth.domain.EventLogType" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.EventLog",
+      "type" : "EventLog"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EventLog"
+}

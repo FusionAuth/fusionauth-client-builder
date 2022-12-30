@@ -1,0 +1,27 @@
+{
+  "className" : "io.fusionauth.domain.api.ApplicationResponse",
+  "extends" : { },
+  "fields" : {
+    "application" : {
+      "className" : "io.fusionauth.domain.Application",
+      "type" : "Application"
+    },
+    "applications" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Application",
+        "type" : "Application"
+      } ]
+    },
+    "role" : {
+      "className" : "io.fusionauth.domain.ApplicationRole",
+      "type" : "ApplicationRole"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Application", "java.util.List", "io.fusionauth.domain.ApplicationRole" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ApplicationResponse"
+}

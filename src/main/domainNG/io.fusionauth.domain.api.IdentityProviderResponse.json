@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.api.IdentityProviderResponse",
+  "extends" : { },
+  "fields" : {
+    "identityProvider" : {
+      "className" : "io.fusionauth.domain.provider.BaseIdentityProvider",
+      "type" : "BaseIdentityProvider"
+    },
+    "identityProviders" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.provider.BaseIdentityProvider",
+        "type" : "BaseIdentityProvider"
+      } ]
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "java.util.List" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "IdentityProviderResponse"
+}

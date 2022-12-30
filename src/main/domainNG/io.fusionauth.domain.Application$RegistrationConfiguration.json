@@ -1,0 +1,60 @@
+{
+  "className" : "io.fusionauth.domain.Application$RegistrationConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "birthDate" : {
+      "className" : "io.fusionauth.domain.Requirable",
+      "type" : "Requirable"
+    },
+    "confirmPassword" : {
+      "type" : "boolean"
+    },
+    "firstName" : {
+      "className" : "io.fusionauth.domain.Requirable",
+      "type" : "Requirable"
+    },
+    "formId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "fullName" : {
+      "className" : "io.fusionauth.domain.Requirable",
+      "type" : "Requirable"
+    },
+    "lastName" : {
+      "className" : "io.fusionauth.domain.Requirable",
+      "type" : "Requirable"
+    },
+    "loginIdType" : {
+      "className" : "io.fusionauth.domain.Application$RegistrationConfiguration$LoginIdType",
+      "type" : "Application$RegistrationConfiguration$LoginIdType"
+    },
+    "middleName" : {
+      "className" : "io.fusionauth.domain.Requirable",
+      "type" : "Requirable"
+    },
+    "mobilePhone" : {
+      "className" : "io.fusionauth.domain.Requirable",
+      "type" : "Requirable"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.Application$RegistrationConfiguration$RegistrationType",
+      "type" : "Application$RegistrationConfiguration$RegistrationType"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Requirable", "java.util.UUID", "io.fusionauth.domain.Application$RegistrationConfiguration$LoginIdType", "io.fusionauth.domain.Application$RegistrationConfiguration$RegistrationType" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Application$RegistrationConfiguration",
+      "type" : "Application$RegistrationConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Application$RegistrationConfiguration"
+}

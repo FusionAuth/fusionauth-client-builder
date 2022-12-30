@@ -1,0 +1,31 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantWebAuthnConfiguration",
+  "description" : "/**\n * Tenant-level configuration for WebAuthn\n *\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantWebAuthnConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "bootstrapWorkflow" : {
+      "type" : "TenantWebAuthnWorkflowConfiguration"
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "reauthenticationWorkflow" : {
+      "type" : "TenantWebAuthnWorkflowConfiguration"
+    },
+    "relyingPartyId" : {
+      "type" : "String"
+    },
+    "relyingPartyName" : {
+      "type" : "String"
+    }
+  }
+}

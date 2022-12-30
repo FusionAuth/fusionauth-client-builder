@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.UserActionReasonRequest",
+  "extends" : { },
+  "fields" : {
+    "userActionReason" : {
+      "className" : "io.fusionauth.domain.UserActionReason",
+      "type" : "UserActionReason"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.UserActionReason" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserActionReasonRequest"
+}

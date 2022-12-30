@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/two-factor",
   "comments": [
-    "Disable Two Factor authentication for a user."
+    "Disable two-factor authentication for a user."
   ],
   "method": "delete",
   "methodName": "disableTwoFactor",
@@ -11,7 +11,7 @@
     {
       "name": "userId",
       "comments": [
-        "The Id of the User for which you're disabling Two Factor authentication."
+        "The Id of the User for which you're disabling two-factor authentication."
       ],
       "type": "urlSegment",
       "parameterName": "userId",
@@ -29,7 +29,7 @@
     {
       "name": "code",
       "comments": [
-        "The Two Factor code used verify the the caller knows the Two Factor secret."
+        "The two-factor code used verify the the caller knows the two-factor secret."
       ],
       "type": "urlParameter",
       "parameterName": "code",

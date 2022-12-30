@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.api.WebhookResponse",
+  "extends" : { },
+  "fields" : {
+    "webhook" : {
+      "className" : "io.fusionauth.domain.Webhook",
+      "type" : "Webhook"
+    },
+    "webhooks" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Webhook",
+        "type" : "Webhook"
+      } ]
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Webhook", "java.util.List" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebhookResponse"
+}

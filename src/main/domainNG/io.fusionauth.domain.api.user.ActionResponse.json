@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.api.user.ActionResponse",
+  "extends" : { },
+  "fields" : {
+    "action" : {
+      "className" : "io.fusionauth.domain.UserActionLog",
+      "type" : "UserActionLog"
+    },
+    "actions" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.UserActionLog",
+        "type" : "UserActionLog"
+      } ]
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.UserActionLog", "java.util.List" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "ActionResponse"
+}

@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.webauthn.UserVerificationRequirement",
+  "enum" : [ "required", "preferred", "discouraged" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.webauthn",
+  "type" : "UserVerificationRequirement"
+}

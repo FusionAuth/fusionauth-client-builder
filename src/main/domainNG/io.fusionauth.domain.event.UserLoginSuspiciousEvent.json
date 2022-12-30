@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.event.UserLoginSuspiciousEvent",
+  "extends" : { },
+  "fields" : {
+    "threatsDetected" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.AuthenticationThreats",
+        "type" : "AuthenticationThreats"
+      } ]
+    }
+  },
+  "imports" : [ "java.util.Set", "io.fusionauth.domain.AuthenticationThreats" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserLoginSuspiciousEvent"
+}

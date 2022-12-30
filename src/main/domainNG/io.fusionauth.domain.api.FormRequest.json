@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.FormRequest",
+  "extends" : { },
+  "fields" : {
+    "form" : {
+      "className" : "io.fusionauth.domain.form.Form",
+      "type" : "Form"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.form.Form" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "FormRequest"
+}

@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.event",
   "type" : "JWTPublicKeyUpdateEvent",
-  "description" : "/**\n * Models the JWT public key Refresh Token Revoke Event (and can be converted to JSON). This event might be for a single\n * token, a user or an entire application.\n *\n * @author Brian Pontarelli\n */\n",
+  "description" : "/**\n * Models the JWT public key Refresh Token Revoke Event. This event might be for a single\n * token, a user or an entire application.\n *\n * @author Brian Pontarelli\n */\n",
   "extends" : [ {
     "type" : "BaseEvent"
   } ],
@@ -10,8 +10,6 @@
     "typeArguments" : [ {
       "type" : "JWTPublicKeyUpdateEvent"
     } ]
-  }, {
-    "type" : "ApplicationEvent"
   } ],
   "fields" : {
     "applicationIds" : {

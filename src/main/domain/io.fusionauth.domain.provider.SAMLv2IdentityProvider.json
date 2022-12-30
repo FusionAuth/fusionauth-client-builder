@@ -45,6 +45,9 @@
     "keyId" : {
       "type" : "UUID"
     },
+    "loginHintConfiguration" : {
+      "type" : "LoginHintConfiguration"
+    },
     "nameIdFormat" : {
       "type" : "String"
     },

@@ -26,6 +26,9 @@
     "defaultVerificationKeyId" : {
       "type" : "UUID"
     },
+    "initiatedLogin" : {
+      "type" : "SAMLv2IdPInitiatedLoginConfiguration"
+    },
     "issuer" : {
       "type" : "String"
     },

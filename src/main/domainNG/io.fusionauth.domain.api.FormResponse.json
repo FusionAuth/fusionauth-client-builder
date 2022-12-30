@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.api.FormResponse",
+  "extends" : { },
+  "fields" : {
+    "form" : {
+      "className" : "io.fusionauth.domain.form.Form",
+      "type" : "Form"
+    },
+    "forms" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.form.Form",
+        "type" : "Form"
+      } ]
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.form.Form", "java.util.List" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "FormResponse"
+}

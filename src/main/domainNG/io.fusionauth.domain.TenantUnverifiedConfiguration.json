@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.TenantUnverifiedConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "email" : {
+      "className" : "io.fusionauth.domain.UnverifiedBehavior",
+      "type" : "UnverifiedBehavior"
+    },
+    "whenGated" : {
+      "className" : "io.fusionauth.domain.RegistrationUnverifiedOptions",
+      "type" : "RegistrationUnverifiedOptions"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.UnverifiedBehavior", "io.fusionauth.domain.RegistrationUnverifiedOptions" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TenantUnverifiedConfiguration",
+      "type" : "TenantUnverifiedConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantUnverifiedConfiguration"
+}

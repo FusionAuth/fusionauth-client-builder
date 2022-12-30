@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.TokenType",
+  "enum" : [ "Bearer", "MAC" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "TokenType"
+}

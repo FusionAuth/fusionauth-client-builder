@@ -8,7 +8,7 @@
       "type" : "IdentityProviderLink"
     } ]
   }, {
-    "type" : "_InternalJSONColumn"
+    "type" : "JSONColumnable"
   }, {
     "type" : "Tenantable"
   } ],

@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.api.user.RecentLoginResponse",
+  "extends" : { },
+  "fields" : {
+    "logins" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.DisplayableRawLogin",
+        "type" : "DisplayableRawLogin"
+      } ]
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.DisplayableRawLogin" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "RecentLoginResponse"
+}

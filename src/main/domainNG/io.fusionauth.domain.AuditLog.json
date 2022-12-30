@@ -1,0 +1,63 @@
+{
+  "className" : "io.fusionauth.domain.AuditLog",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "id" : {
+      "className" : "java.lang.Long",
+      "type" : "Long"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "insertUser" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "message" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "newValue" : {
+      "className" : "java.lang.Object",
+      "type" : "Object"
+    },
+    "oldValue" : {
+      "className" : "java.lang.Object",
+      "type" : "Object"
+    },
+    "reason" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "java.lang.Long", "java.time.ZonedDateTime" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.AuditLog",
+      "type" : "AuditLog"
+    } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "AuditLog"
+}

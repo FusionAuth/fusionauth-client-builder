@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.webauthn.CoseAlgorithmIdentifier",
+  "enum" : [ "ES256", "ES384", "ES512", "RS256", "RS384", "RS512", "PS256", "PS384", "PS512" ],
+  "imports" : [ "java.lang.String", "io.fusionauth.domain.webauthn.CoseKeyType" ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.webauthn",
+  "type" : "CoseAlgorithmIdentifier"
+}

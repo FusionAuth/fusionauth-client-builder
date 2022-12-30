@@ -1,0 +1,27 @@
+{
+  "className" : "io.fusionauth.domain.api.TenantRequest",
+  "extends" : { },
+  "fields" : {
+    "sourceTenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "tenant" : {
+      "className" : "io.fusionauth.domain.Tenant",
+      "type" : "Tenant"
+    },
+    "webhookIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    }
+  },
+  "imports" : [ "java.util.UUID", "io.fusionauth.domain.Tenant", "java.util.List" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TenantRequest"
+}

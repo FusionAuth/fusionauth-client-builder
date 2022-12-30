@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.GroupSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "groups" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Group",
+        "type" : "Group"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.Group" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "GroupSearchResponse"
+}

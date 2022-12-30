@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.RefreshTokenExpirationPolicy",
+  "enum" : [ "Fixed", "SlidingWindow" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RefreshTokenExpirationPolicy"
+}

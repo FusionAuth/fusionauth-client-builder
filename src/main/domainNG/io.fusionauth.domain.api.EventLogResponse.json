@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.EventLogResponse",
+  "extends" : { },
+  "fields" : {
+    "eventLog" : {
+      "className" : "io.fusionauth.domain.EventLog",
+      "type" : "EventLog"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.EventLog" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EventLogResponse"
+}

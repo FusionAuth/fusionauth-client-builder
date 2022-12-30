@@ -1,0 +1,20 @@
+{
+  "className" : "io.fusionauth.domain.RefreshTokenRevocationPolicy",
+  "extends" : { },
+  "fields" : {
+    "onLoginPrevented" : {
+      "type" : "boolean"
+    },
+    "onMultiFactorEnable" : {
+      "type" : "boolean"
+    },
+    "onPasswordChanged" : {
+      "type" : "boolean"
+    }
+  },
+  "imports" : [ ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RefreshTokenRevocationPolicy"
+}

@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.api.ThemeRequest",
+  "extends" : { },
+  "fields" : {
+    "sourceThemeId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "theme" : {
+      "className" : "io.fusionauth.domain.Theme",
+      "type" : "Theme"
+    }
+  },
+  "imports" : [ "java.util.UUID", "io.fusionauth.domain.Theme" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ThemeRequest"
+}

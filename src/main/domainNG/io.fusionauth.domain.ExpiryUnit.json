@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.ExpiryUnit",
+  "enum" : [ "MINUTES", "HOURS", "DAYS", "WEEKS", "MONTHS", "YEARS" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ExpiryUnit"
+}

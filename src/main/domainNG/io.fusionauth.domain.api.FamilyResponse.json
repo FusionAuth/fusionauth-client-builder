@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.api.FamilyResponse",
+  "extends" : { },
+  "fields" : {
+    "families" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Family",
+        "type" : "Family"
+      } ]
+    },
+    "family" : {
+      "className" : "io.fusionauth.domain.Family",
+      "type" : "Family"
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.Family" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "FamilyResponse"
+}

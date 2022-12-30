@@ -1,0 +1,73 @@
+{
+  "className" : "io.fusionauth.domain.email.EmailTemplate",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "defaultFromName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "defaultHtmlTemplate" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "defaultSubject" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "defaultTextTemplate" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "fromEmail" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "localizedFromNames" : {
+      "className" : "io.fusionauth.domain.LocalizedStrings",
+      "type" : "LocalizedStrings"
+    },
+    "localizedHtmlTemplates" : {
+      "className" : "io.fusionauth.domain.LocalizedStrings",
+      "type" : "LocalizedStrings"
+    },
+    "localizedSubjects" : {
+      "className" : "io.fusionauth.domain.LocalizedStrings",
+      "type" : "LocalizedStrings"
+    },
+    "localizedTextTemplates" : {
+      "className" : "io.fusionauth.domain.LocalizedStrings",
+      "type" : "LocalizedStrings"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.LocalizedStrings" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.email.EmailTemplate",
+      "type" : "EmailTemplate"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.email",
+  "type" : "EmailTemplate"
+}

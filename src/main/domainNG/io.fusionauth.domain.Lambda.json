@@ -1,0 +1,55 @@
+{
+  "className" : "io.fusionauth.domain.Lambda",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "body" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "enabled" : {
+      "type" : "boolean"
+    },
+    "engineType" : {
+      "className" : "io.fusionauth.domain.LambdaEngineType",
+      "type" : "LambdaEngineType"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.LambdaType",
+      "type" : "LambdaType"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "io.fusionauth.domain.LambdaEngineType", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.LambdaType" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Lambda",
+      "type" : "Lambda"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Lambda"
+}

@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.email.EmailAddress",
+  "extends" : { },
+  "fields" : {
+    "address" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "display" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.email",
+  "type" : "EmailAddress"
+}

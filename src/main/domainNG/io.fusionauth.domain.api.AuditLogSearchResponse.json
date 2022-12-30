@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.AuditLogSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "auditLogs" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.AuditLog",
+        "type" : "AuditLog"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.AuditLog" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "AuditLogSearchResponse"
+}

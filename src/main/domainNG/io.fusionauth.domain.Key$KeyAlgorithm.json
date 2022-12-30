@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.Key$KeyAlgorithm",
+  "enum" : [ "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "RS256", "RS384", "RS512" ],
+  "imports" : [ "java.lang.String" ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Key$KeyAlgorithm"
+}

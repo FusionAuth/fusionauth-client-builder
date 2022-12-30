@@ -8,7 +8,7 @@
       "type" : "Tenant"
     } ]
   }, {
-    "type" : "_InternalJSONColumn"
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {
@@ -123,6 +123,9 @@
     },
     "usernameConfiguration" : {
       "type" : "TenantUsernameConfiguration"
+    },
+    "webAuthnConfiguration" : {
+      "type" : "TenantWebAuthnConfiguration"
     }
   }
 }

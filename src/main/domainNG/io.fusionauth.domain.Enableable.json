@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.Enableable",
+  "extends" : { },
+  "fields" : {
+    "enabled" : {
+      "type" : "boolean"
+    }
+  },
+  "imports" : [ ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Enableable"
+}

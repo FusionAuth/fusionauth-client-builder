@@ -1,0 +1,52 @@
+{
+  "className" : "io.fusionauth.domain.GroupMember",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "groupId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "user" : {
+      "className" : "io.fusionauth.domain.User",
+      "type" : "User"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.User" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.GroupMember",
+      "type" : "GroupMember"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "GroupMember"
+}

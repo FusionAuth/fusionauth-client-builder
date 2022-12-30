@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.email.Attachment",
+  "extends" : { },
+  "fields" : {
+    "attachment" : {
+      "type" : "byte[]"
+    },
+    "mime" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.email",
+  "type" : "Attachment"
+}

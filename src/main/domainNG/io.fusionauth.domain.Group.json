@@ -1,0 +1,70 @@
+{
+  "className" : "io.fusionauth.domain.Group",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "roles" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      }, {
+        "className" : "java.util.List",
+        "type" : "List",
+        "typeArguments" : [ {
+          "className" : "io.fusionauth.domain.ApplicationRole",
+          "type" : "ApplicationRole"
+        } ]
+      } ]
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Tenantable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "java.util.List" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Group",
+      "type" : "Group"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.Tenantable",
+    "type" : "Tenantable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Group"
+}

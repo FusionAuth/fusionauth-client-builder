@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.ApplicationMultiFactorTrustPolicy",
+  "enum" : [ "Any", "This", "None" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationMultiFactorTrustPolicy"
+}

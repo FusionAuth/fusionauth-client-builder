@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.Application$SAMLv2Configuration$XMLSignatureLocation",
+  "enum" : [ "Assertion", "Response" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Application$SAMLv2Configuration$XMLSignatureLocation"
+}

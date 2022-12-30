@@ -1,0 +1,34 @@
+{
+  "className" : "io.fusionauth.domain.search.EntityGrantSearchCriteria",
+  "extends" : { },
+  "fields" : {
+    "SortableFields" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "entityId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "java.util.Map", "java.lang.String", "java.util.UUID" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "EntityGrantSearchCriteria"
+}

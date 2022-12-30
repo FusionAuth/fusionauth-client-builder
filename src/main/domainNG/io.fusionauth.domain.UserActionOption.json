@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.UserActionOption",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "localizedNames" : {
+      "className" : "io.fusionauth.domain.LocalizedStrings",
+      "type" : "LocalizedStrings"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.lang.Comparable", "io.fusionauth.domain.LocalizedStrings", "java.lang.String" ],
+  "interfaces" : [ {
+    "className" : "java.lang.Comparable",
+    "type" : "Comparable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.UserActionOption",
+      "type" : "UserActionOption"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserActionOption"
+}

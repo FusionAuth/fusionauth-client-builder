@@ -1,0 +1,51 @@
+{
+  "className" : "io.fusionauth.domain.FamilyConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "allowChildRegistrations" : {
+      "type" : "boolean"
+    },
+    "confirmChildEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "deleteOrphanedAccounts" : {
+      "type" : "boolean"
+    },
+    "deleteOrphanedAccountsDays" : {
+      "type" : "int"
+    },
+    "familyRequestEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "maximumChildAge" : {
+      "type" : "int"
+    },
+    "minimumOwnerAge" : {
+      "type" : "int"
+    },
+    "parentEmailRequired" : {
+      "type" : "boolean"
+    },
+    "parentRegistrationEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.util.UUID" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.FamilyConfiguration",
+      "type" : "FamilyConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "FamilyConfiguration"
+}

@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LoginPingRequest",
+  "description" : "/**\n * Login Ping API request object.\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "BaseLoginRequest"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "LoginPingRequest"
+    } ]
+  } ],
+  "fields" : {
+    "userId" : {
+      "type" : "UUID"
+    }
+  }
+}

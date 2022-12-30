@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebAuthnRegisterStartRequest",
+  "description" : "/**\n * API request to start a WebAuthn registration ceremony\n *\n * @author Spencer Witt\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebAuthnRegisterStartRequest"
+    } ]
+  } ],
+  "fields" : {
+    "displayName" : {
+      "type" : "String"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "userAgent" : {
+      "type" : "String"
+    },
+    "userId" : {
+      "type" : "UUID"
+    },
+    "workflow" : {
+      "type" : "WebAuthnWorkflow"
+    }
+  }
+}

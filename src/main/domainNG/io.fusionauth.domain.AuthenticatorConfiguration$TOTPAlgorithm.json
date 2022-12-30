@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.AuthenticatorConfiguration$TOTPAlgorithm",
+  "enum" : [ "HmacSHA1", "HmacSHA256", "HmacSHA512" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "AuthenticatorConfiguration$TOTPAlgorithm"
+}

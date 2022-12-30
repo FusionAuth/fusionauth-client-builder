@@ -1,0 +1,177 @@
+{
+  "className" : "io.fusionauth.domain.Tenant",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "accessControlConfiguration" : {
+      "className" : "io.fusionauth.domain.TenantAccessControlConfiguration",
+      "type" : "TenantAccessControlConfiguration"
+    },
+    "captchaConfiguration" : {
+      "className" : "io.fusionauth.domain.TenantCaptchaConfiguration",
+      "type" : "TenantCaptchaConfiguration"
+    },
+    "configured" : {
+      "type" : "boolean"
+    },
+    "connectorPolicies" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.connector.ConnectorPolicy",
+        "type" : "ConnectorPolicy"
+      } ]
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "emailConfiguration" : {
+      "className" : "io.fusionauth.domain.EmailConfiguration",
+      "type" : "EmailConfiguration"
+    },
+    "eventConfiguration" : {
+      "className" : "io.fusionauth.domain.EventConfiguration",
+      "type" : "EventConfiguration"
+    },
+    "externalIdentifierConfiguration" : {
+      "className" : "io.fusionauth.domain.ExternalIdentifierConfiguration",
+      "type" : "ExternalIdentifierConfiguration"
+    },
+    "failedAuthenticationConfiguration" : {
+      "className" : "io.fusionauth.domain.FailedAuthenticationConfiguration",
+      "type" : "FailedAuthenticationConfiguration"
+    },
+    "familyConfiguration" : {
+      "className" : "io.fusionauth.domain.FamilyConfiguration",
+      "type" : "FamilyConfiguration"
+    },
+    "formConfiguration" : {
+      "className" : "io.fusionauth.domain.TenantFormConfiguration",
+      "type" : "TenantFormConfiguration"
+    },
+    "httpSessionMaxInactiveInterval" : {
+      "type" : "int"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "issuer" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "jwtConfiguration" : {
+      "className" : "io.fusionauth.domain.JWTConfiguration",
+      "type" : "JWTConfiguration"
+    },
+    "lambdaConfiguration" : {
+      "className" : "io.fusionauth.domain.TenantLambdaConfiguration",
+      "type" : "TenantLambdaConfiguration"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "loginConfiguration" : {
+      "className" : "io.fusionauth.domain.TenantLoginConfiguration",
+      "type" : "TenantLoginConfiguration"
+    },
+    "logoutURL" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "maximumPasswordAge" : {
+      "className" : "io.fusionauth.domain.MaximumPasswordAge",
+      "type" : "MaximumPasswordAge"
+    },
+    "minimumPasswordAge" : {
+      "className" : "io.fusionauth.domain.MinimumPasswordAge",
+      "type" : "MinimumPasswordAge"
+    },
+    "multiFactorConfiguration" : {
+      "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration",
+      "type" : "TenantMultiFactorConfiguration"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauthConfiguration" : {
+      "className" : "io.fusionauth.domain.Tenant$TenantOAuth2Configuration",
+      "type" : "Tenant$TenantOAuth2Configuration"
+    },
+    "passwordEncryptionConfiguration" : {
+      "className" : "io.fusionauth.domain.PasswordEncryptionConfiguration",
+      "type" : "PasswordEncryptionConfiguration"
+    },
+    "passwordValidationRules" : {
+      "className" : "io.fusionauth.domain.PasswordValidationRules",
+      "type" : "PasswordValidationRules"
+    },
+    "rateLimitConfiguration" : {
+      "className" : "io.fusionauth.domain.TenantRateLimitConfiguration",
+      "type" : "TenantRateLimitConfiguration"
+    },
+    "registrationConfiguration" : {
+      "className" : "io.fusionauth.domain.TenantRegistrationConfiguration",
+      "type" : "TenantRegistrationConfiguration"
+    },
+    "scimServerConfiguration" : {
+      "className" : "io.fusionauth.domain.TenantSCIMServerConfiguration",
+      "type" : "TenantSCIMServerConfiguration"
+    },
+    "ssoConfiguration" : {
+      "className" : "io.fusionauth.domain.TenantSSOConfiguration",
+      "type" : "TenantSSOConfiguration"
+    },
+    "state" : {
+      "className" : "io.fusionauth.domain.ObjectState",
+      "type" : "ObjectState"
+    },
+    "themeId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "userDeletePolicy" : {
+      "className" : "io.fusionauth.domain.TenantUserDeletePolicy",
+      "type" : "TenantUserDeletePolicy"
+    },
+    "usernameConfiguration" : {
+      "className" : "io.fusionauth.domain.TenantUsernameConfiguration",
+      "type" : "TenantUsernameConfiguration"
+    },
+    "webAuthnConfiguration" : {
+      "className" : "io.fusionauth.domain.TenantWebAuthnConfiguration",
+      "type" : "TenantWebAuthnConfiguration"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.TenantAccessControlConfiguration", "io.fusionauth.domain.TenantCaptchaConfiguration", "java.util.List", "io.fusionauth.domain.connector.ConnectorPolicy", "io.fusionauth.domain.EmailConfiguration", "io.fusionauth.domain.EventConfiguration", "io.fusionauth.domain.ExternalIdentifierConfiguration", "io.fusionauth.domain.FailedAuthenticationConfiguration", "io.fusionauth.domain.FamilyConfiguration", "io.fusionauth.domain.TenantFormConfiguration", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.JWTConfiguration", "io.fusionauth.domain.TenantLambdaConfiguration", "io.fusionauth.domain.TenantLoginConfiguration", "java.net.URI", "io.fusionauth.domain.MaximumPasswordAge", "io.fusionauth.domain.MinimumPasswordAge", "io.fusionauth.domain.TenantMultiFactorConfiguration", "io.fusionauth.domain.Tenant$TenantOAuth2Configuration", "io.fusionauth.domain.PasswordEncryptionConfiguration", "io.fusionauth.domain.PasswordValidationRules", "io.fusionauth.domain.TenantRateLimitConfiguration", "io.fusionauth.domain.TenantRegistrationConfiguration", "io.fusionauth.domain.TenantSCIMServerConfiguration", "io.fusionauth.domain.TenantSSOConfiguration", "io.fusionauth.domain.ObjectState", "io.fusionauth.domain.TenantUserDeletePolicy", "io.fusionauth.domain.TenantUsernameConfiguration", "io.fusionauth.domain.TenantWebAuthnConfiguration" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Tenant",
+      "type" : "Tenant"
+    } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Tenant"
+}

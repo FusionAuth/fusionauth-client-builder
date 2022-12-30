@@ -1,0 +1,31 @@
+{
+  "className" : "io.fusionauth.domain.AuthenticatorConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "algorithm" : {
+      "className" : "io.fusionauth.domain.AuthenticatorConfiguration$TOTPAlgorithm",
+      "type" : "AuthenticatorConfiguration$TOTPAlgorithm"
+    },
+    "codeLength" : {
+      "type" : "int"
+    },
+    "timeStep" : {
+      "type" : "int"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.AuthenticatorConfiguration$TOTPAlgorithm" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.AuthenticatorConfiguration",
+      "type" : "AuthenticatorConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "AuthenticatorConfiguration"
+}

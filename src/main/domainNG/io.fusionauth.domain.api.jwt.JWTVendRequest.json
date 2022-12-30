@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.api.jwt.JWTVendRequest",
+  "extends" : { },
+  "fields" : {
+    "claims" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "keyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "timeToLiveInSeconds" : {
+      "type" : "int"
+    }
+  },
+  "imports" : [ "java.util.Map", "java.lang.String", "java.util.UUID" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.jwt",
+  "type" : "JWTVendRequest"
+}

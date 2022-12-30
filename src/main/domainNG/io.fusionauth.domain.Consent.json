@@ -1,0 +1,78 @@
+{
+  "className" : "io.fusionauth.domain.Consent",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "consentEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "countryMinimumAgeForSelfConsent" : {
+      "className" : "io.fusionauth.domain.LocalizedIntegers",
+      "type" : "LocalizedIntegers"
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "defaultMinimumAgeForSelfConsent" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
+    "emailPlus" : {
+      "className" : "io.fusionauth.domain.Consent$EmailPlus",
+      "type" : "Consent$EmailPlus"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "multipleValuesAllowed" : {
+      "type" : "boolean"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "values" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "java.util.UUID", "io.fusionauth.domain.LocalizedIntegers", "java.lang.Integer", "io.fusionauth.domain.Consent$EmailPlus", "java.time.ZonedDateTime", "java.util.List" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Consent",
+      "type" : "Consent"
+    } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Consent"
+}

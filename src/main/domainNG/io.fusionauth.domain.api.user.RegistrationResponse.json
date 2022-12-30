@@ -1,0 +1,35 @@
+{
+  "className" : "io.fusionauth.domain.api.user.RegistrationResponse",
+  "extends" : { },
+  "fields" : {
+    "refreshToken" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "registration" : {
+      "className" : "io.fusionauth.domain.UserRegistration",
+      "type" : "UserRegistration"
+    },
+    "registrationVerificationId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "token" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "tokenExpirationInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "user" : {
+      "className" : "io.fusionauth.domain.User",
+      "type" : "User"
+    }
+  },
+  "imports" : [ "java.lang.String", "io.fusionauth.domain.UserRegistration", "java.time.ZonedDateTime", "io.fusionauth.domain.User" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.user",
+  "type" : "RegistrationResponse"
+}

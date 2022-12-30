@@ -15,6 +15,9 @@
     "advancedRegistration" : {
       "type" : "ReactorFeatureStatus"
     },
+    "applicationMultiFactorAuthentication" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "applicationThemes" : {
       "type" : "ReactorFeatureStatus"
     },
@@ -30,6 +33,14 @@
     "expiration" : {
       "type" : "LocalDate"
     },
+    "licenseAttributes" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "String"
+      } ]
+    },
     "licensed" : {
       "type" : "boolean"
     },
@@ -37,6 +48,15 @@
       "type" : "ReactorFeatureStatus"
     },
     "threatDetection" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "webAuthn" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "webAuthnPlatformAuthenticators" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "webAuthnRoamingAuthenticators" : {
       "type" : "ReactorFeatureStatus"
     }
   }

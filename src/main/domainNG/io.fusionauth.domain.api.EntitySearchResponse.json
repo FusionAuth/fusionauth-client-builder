@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.api.EntitySearchResponse",
+  "extends" : { },
+  "fields" : {
+    "entities" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Entity",
+        "type" : "Entity"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    },
+    "totalEqualToActual" : {
+      "type" : "boolean"
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.Entity" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EntitySearchResponse"
+}

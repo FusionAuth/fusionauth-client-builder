@@ -1,6 +1,6 @@
 [#import "_macros.ftl" as global/]
 /*
-* Copyright (c) 2019, FusionAuth, All Rights Reserved
+* Copyright (c) 2019-2022, FusionAuth, All Rights Reserved
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -89,7 +89,7 @@ func (c *FusionAuthClient) StartAnonymous(responseRef interface{}, errorRef inte
   if c.TenantId != "" {
     rc.WithHeader("X-FusionAuth-TenantId", c.TenantId)
   }
-  rc.WithHeader("Content-Type", "text/plain")
+
   rc.WithHeader("Accept", "application/json")
   return rc
 }

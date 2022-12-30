@@ -15,6 +15,9 @@
         "type" : "EmailHeader"
       } ]
     },
+    "debug" : {
+      "type" : "boolean"
+    },
     "defaultFromEmail" : {
       "type" : "String"
     },

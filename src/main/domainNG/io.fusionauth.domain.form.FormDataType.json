@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.form.FormDataType",
+  "enum" : [ "bool", "consent", "date", "email", "number", "string" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "FormDataType"
+}

@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorSMSTemplate",
+  "extends" : { },
+  "fields" : {
+    "templateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "java.util.UUID" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationMultiFactorConfiguration$MultiFactorSMSTemplate"
+}

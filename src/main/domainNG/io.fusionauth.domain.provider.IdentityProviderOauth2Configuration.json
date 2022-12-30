@@ -1,0 +1,65 @@
+{
+  "className" : "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "authorization_endpoint" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "clientAuthenticationMethod" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration$ClientAuthenticationMethod",
+      "type" : "IdentityProviderOauth2Configuration$ClientAuthenticationMethod"
+    },
+    "client_id" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "client_secret" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "emailClaim" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "issuer" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "scope" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "token_endpoint" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "uniqueIdClaim" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userinfo_endpoint" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "usernameClaim" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.net.URI", "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration$ClientAuthenticationMethod", "java.lang.String" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration",
+      "type" : "IdentityProviderOauth2Configuration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderOauth2Configuration"
+}

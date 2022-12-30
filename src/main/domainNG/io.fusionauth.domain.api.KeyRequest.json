@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.KeyRequest",
+  "extends" : { },
+  "fields" : {
+    "key" : {
+      "className" : "io.fusionauth.domain.Key",
+      "type" : "Key"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Key" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "KeyRequest"
+}

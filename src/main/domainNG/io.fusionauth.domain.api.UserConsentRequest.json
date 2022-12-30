@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.UserConsentRequest",
+  "extends" : { },
+  "fields" : {
+    "userConsent" : {
+      "className" : "io.fusionauth.domain.UserConsent",
+      "type" : "UserConsent"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.UserConsent" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserConsentRequest"
+}

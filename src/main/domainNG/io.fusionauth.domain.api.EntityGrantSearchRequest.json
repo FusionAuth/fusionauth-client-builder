@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.EntityGrantSearchRequest",
+  "extends" : { },
+  "fields" : {
+    "search" : {
+      "className" : "io.fusionauth.domain.search.EntityGrantSearchCriteria",
+      "type" : "EntityGrantSearchCriteria"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.search.EntityGrantSearchCriteria" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EntityGrantSearchRequest"
+}

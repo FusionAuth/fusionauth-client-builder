@@ -1,0 +1,30 @@
+{
+  "className" : "io.fusionauth.domain.Application$LoginConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "allowTokenRefresh" : {
+      "type" : "boolean"
+    },
+    "generateRefreshTokens" : {
+      "type" : "boolean"
+    },
+    "requireAuthentication" : {
+      "type" : "boolean"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Application$LoginConfiguration",
+      "type" : "Application$LoginConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Application$LoginConfiguration"
+}

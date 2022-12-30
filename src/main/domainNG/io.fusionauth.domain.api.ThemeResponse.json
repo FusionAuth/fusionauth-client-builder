@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.api.ThemeResponse",
+  "extends" : { },
+  "fields" : {
+    "theme" : {
+      "className" : "io.fusionauth.domain.Theme",
+      "type" : "Theme"
+    },
+    "themes" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Theme",
+        "type" : "Theme"
+      } ]
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Theme", "java.util.List" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ThemeResponse"
+}

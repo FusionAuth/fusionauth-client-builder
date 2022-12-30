@@ -1,0 +1,39 @@
+{
+  "className" : "io.fusionauth.domain.api.identityProvider.LookupResponse$IdentityProviderDetails",
+  "extends" : { },
+  "fields" : {
+    "applicationIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "idpEndpoint" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauth2" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration",
+      "type" : "IdentityProviderOauth2Configuration"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderType",
+      "type" : "IdentityProviderType"
+    }
+  },
+  "imports" : [ "java.util.List", "java.util.UUID", "java.net.URI", "java.lang.String", "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration", "io.fusionauth.domain.provider.IdentityProviderType" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.identityProvider",
+  "type" : "LookupResponse$IdentityProviderDetails"
+}

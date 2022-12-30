@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.EventLogType",
+  "enum" : [ "Information", "Debug", "Error" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "EventLogType"
+}

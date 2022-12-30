@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.ConnectorRequest",
+  "extends" : { },
+  "fields" : {
+    "connector" : {
+      "className" : "io.fusionauth.domain.connector.BaseConnectorConfiguration",
+      "type" : "BaseConnectorConfiguration"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.connector.BaseConnectorConfiguration" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ConnectorRequest"
+}

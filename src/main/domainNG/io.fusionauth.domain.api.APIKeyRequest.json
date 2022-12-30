@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.api.APIKeyRequest",
+  "extends" : { },
+  "fields" : {
+    "apiKey" : {
+      "className" : "io.fusionauth.domain.APIKey",
+      "type" : "APIKey"
+    },
+    "sourceKeyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.APIKey", "java.util.UUID" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "APIKeyRequest"
+}

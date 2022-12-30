@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.TransactionType",
+  "enum" : [ "None", "Any", "SimpleMajority", "SuperMajority", "AbsoluteMajority" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TransactionType"
+}

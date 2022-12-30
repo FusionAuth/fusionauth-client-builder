@@ -1,0 +1,160 @@
+{
+  "className" : "io.fusionauth.domain.Application",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "FUSIONAUTH_APP_ID" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "accessControlConfiguration" : {
+      "className" : "io.fusionauth.domain.ApplicationAccessControlConfiguration",
+      "type" : "ApplicationAccessControlConfiguration"
+    },
+    "active" : {
+      "type" : "boolean"
+    },
+    "authenticationTokenConfiguration" : {
+      "className" : "io.fusionauth.domain.Application$AuthenticationTokenConfiguration",
+      "type" : "Application$AuthenticationTokenConfiguration"
+    },
+    "cleanSpeakConfiguration" : {
+      "className" : "io.fusionauth.domain.CleanSpeakConfiguration",
+      "type" : "CleanSpeakConfiguration"
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "emailConfiguration" : {
+      "className" : "io.fusionauth.domain.Application$ApplicationEmailConfiguration",
+      "type" : "Application$ApplicationEmailConfiguration"
+    },
+    "externalIdentifierConfiguration" : {
+      "className" : "io.fusionauth.domain.ApplicationExternalIdentifierConfiguration",
+      "type" : "ApplicationExternalIdentifierConfiguration"
+    },
+    "formConfiguration" : {
+      "className" : "io.fusionauth.domain.ApplicationFormConfiguration",
+      "type" : "ApplicationFormConfiguration"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "jwtConfiguration" : {
+      "className" : "io.fusionauth.domain.JWTConfiguration",
+      "type" : "JWTConfiguration"
+    },
+    "lambdaConfiguration" : {
+      "className" : "io.fusionauth.domain.Application$LambdaConfiguration",
+      "type" : "Application$LambdaConfiguration"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "loginConfiguration" : {
+      "className" : "io.fusionauth.domain.Application$LoginConfiguration",
+      "type" : "Application$LoginConfiguration"
+    },
+    "multiFactorConfiguration" : {
+      "className" : "io.fusionauth.domain.ApplicationMultiFactorConfiguration",
+      "type" : "ApplicationMultiFactorConfiguration"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "oauthConfiguration" : {
+      "className" : "io.fusionauth.domain.oauth2.OAuth2Configuration",
+      "type" : "OAuth2Configuration"
+    },
+    "passwordlessConfiguration" : {
+      "className" : "io.fusionauth.domain.Application$PasswordlessConfiguration",
+      "type" : "Application$PasswordlessConfiguration"
+    },
+    "registrationConfiguration" : {
+      "className" : "io.fusionauth.domain.Application$RegistrationConfiguration",
+      "type" : "Application$RegistrationConfiguration"
+    },
+    "registrationDeletePolicy" : {
+      "className" : "io.fusionauth.domain.ApplicationRegistrationDeletePolicy",
+      "type" : "ApplicationRegistrationDeletePolicy"
+    },
+    "roles" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.ApplicationRole",
+        "type" : "ApplicationRole"
+      } ]
+    },
+    "samlv2Configuration" : {
+      "className" : "io.fusionauth.domain.Application$SAMLv2Configuration",
+      "type" : "Application$SAMLv2Configuration"
+    },
+    "state" : {
+      "className" : "io.fusionauth.domain.ObjectState",
+      "type" : "ObjectState"
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "themeId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "unverified" : {
+      "className" : "io.fusionauth.domain.RegistrationUnverifiedOptions",
+      "type" : "RegistrationUnverifiedOptions"
+    },
+    "verificationEmailTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "verificationStrategy" : {
+      "className" : "io.fusionauth.domain.VerificationStrategy",
+      "type" : "VerificationStrategy"
+    },
+    "verifyRegistration" : {
+      "type" : "boolean"
+    },
+    "webAuthnConfiguration" : {
+      "className" : "io.fusionauth.domain.ApplicationWebAuthnConfiguration",
+      "type" : "ApplicationWebAuthnConfiguration"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.Tenantable", "java.util.UUID", "io.fusionauth.domain.ApplicationAccessControlConfiguration", "io.fusionauth.domain.Application$AuthenticationTokenConfiguration", "io.fusionauth.domain.CleanSpeakConfiguration", "java.util.Map", "java.lang.String", "io.fusionauth.domain.Application$ApplicationEmailConfiguration", "io.fusionauth.domain.ApplicationExternalIdentifierConfiguration", "io.fusionauth.domain.ApplicationFormConfiguration", "java.time.ZonedDateTime", "io.fusionauth.domain.JWTConfiguration", "io.fusionauth.domain.Application$LambdaConfiguration", "io.fusionauth.domain.Application$LoginConfiguration", "io.fusionauth.domain.ApplicationMultiFactorConfiguration", "io.fusionauth.domain.oauth2.OAuth2Configuration", "io.fusionauth.domain.Application$PasswordlessConfiguration", "io.fusionauth.domain.Application$RegistrationConfiguration", "io.fusionauth.domain.ApplicationRegistrationDeletePolicy", "java.util.List", "io.fusionauth.domain.ApplicationRole", "io.fusionauth.domain.Application$SAMLv2Configuration", "io.fusionauth.domain.ObjectState", "io.fusionauth.domain.RegistrationUnverifiedOptions", "io.fusionauth.domain.VerificationStrategy", "io.fusionauth.domain.ApplicationWebAuthnConfiguration" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Application",
+      "type" : "Application"
+    } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
+  }, {
+    "className" : "io.fusionauth.domain.Tenantable",
+    "type" : "Tenantable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Application"
+}

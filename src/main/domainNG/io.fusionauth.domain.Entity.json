@@ -1,0 +1,74 @@
+{
+  "className" : "io.fusionauth.domain.Entity",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "clientId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "clientSecret" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "parentId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.EntityType",
+      "type" : "EntityType"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Tenantable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.EntityType" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Entity",
+      "type" : "Entity"
+    } ]
+  }, {
+    "className" : "io.fusionauth.domain.Tenantable",
+    "type" : "Tenantable"
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Entity"
+}

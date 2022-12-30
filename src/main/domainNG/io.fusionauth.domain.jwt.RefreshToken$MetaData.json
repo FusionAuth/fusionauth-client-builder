@@ -1,0 +1,44 @@
+{
+  "className" : "io.fusionauth.domain.jwt.RefreshToken$MetaData",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "device" : {
+      "className" : "io.fusionauth.domain.jwt.DeviceInfo",
+      "type" : "DeviceInfo"
+    },
+    "scopes" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.jwt.DeviceInfo", "java.util.Set" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.jwt.RefreshToken$MetaData",
+      "type" : "RefreshToken$MetaData"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.jwt",
+  "type" : "RefreshToken$MetaData"
+}

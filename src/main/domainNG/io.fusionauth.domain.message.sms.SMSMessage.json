@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.message.sms.SMSMessage",
+  "extends" : { },
+  "fields" : {
+    "phoneNumber" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "textMessage" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.message.sms",
+  "type" : "SMSMessage"
+}

@@ -1,0 +1,26 @@
+{
+  "className" : "io.fusionauth.domain.api.MemberResponse",
+  "extends" : { },
+  "fields" : {
+    "members" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      }, {
+        "className" : "java.util.List",
+        "type" : "List",
+        "typeArguments" : [ {
+          "className" : "io.fusionauth.domain.GroupMember",
+          "type" : "GroupMember"
+        } ]
+      } ]
+    }
+  },
+  "imports" : [ "java.util.Map", "java.util.UUID", "java.util.List" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "MemberResponse"
+}

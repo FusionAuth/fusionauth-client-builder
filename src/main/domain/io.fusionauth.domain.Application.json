@@ -8,7 +8,7 @@
       "type" : "Application"
     } ]
   }, {
-    "type" : "_InternalJSONColumn"
+    "type" : "JSONColumnable"
   }, {
     "type" : "Tenantable"
   } ],
@@ -35,6 +35,9 @@
     },
     "emailConfiguration" : {
       "type" : "ApplicationEmailConfiguration"
+    },
+    "externalIdentifierConfiguration" : {
+      "type" : "ApplicationExternalIdentifierConfiguration"
     },
     "formConfiguration" : {
       "type" : "ApplicationFormConfiguration"
@@ -104,6 +107,9 @@
     },
     "verifyRegistration" : {
       "type" : "boolean"
+    },
+    "webAuthnConfiguration" : {
+      "type" : "ApplicationWebAuthnConfiguration"
     }
   }
 }

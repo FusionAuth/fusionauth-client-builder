@@ -1,0 +1,61 @@
+{
+  "className" : "io.fusionauth.domain.TwoFactorMethod",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "Authenticator" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "Email" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "SMS" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "authenticator" : {
+      "className" : "io.fusionauth.domain.AuthenticatorConfiguration",
+      "type" : "AuthenticatorConfiguration"
+    },
+    "email" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "id" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "lastUsed" : {
+      "className" : "java.lang.Boolean",
+      "type" : "Boolean"
+    },
+    "method" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "mobilePhone" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "secret" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "io.fusionauth.domain.AuthenticatorConfiguration", "java.lang.Boolean" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TwoFactorMethod",
+      "type" : "TwoFactorMethod"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TwoFactorMethod"
+}

@@ -1,0 +1,41 @@
+{
+  "className" : "io.fusionauth.domain.messenger.TwilioMessengerConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.messenger.BaseMessengerConfiguration",
+    "type" : "BaseMessengerConfiguration"
+  },
+  "fields" : {
+    "accountSID" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "authToken" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "fromPhoneNumber" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "messagingServiceSid" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "url" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.messenger.BaseMessengerConfiguration", "io.fusionauth.domain.Buildable", "java.lang.String", "java.net.URI" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.messenger.TwilioMessengerConfiguration",
+      "type" : "TwilioMessengerConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.messenger",
+  "type" : "TwilioMessengerConfiguration"
+}

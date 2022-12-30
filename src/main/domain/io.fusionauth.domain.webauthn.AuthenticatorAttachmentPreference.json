@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.webauthn",
+  "type" : "AuthenticatorAttachmentPreference",
+  "description" : "/**\n * Describes the authenticator attachment modality preference for a WebAuthn workflow. See {@link AuthenticatorAttachment}\n *\n * @author Spencer Witt\n */\n",
+  "enum" : [ "any", "platform", "crossPlatform" ]
+}
