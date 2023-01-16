@@ -2,6 +2,9 @@
   "className" : "io.fusionauth.domain.api.SystemLogsExportRequest",
   "extends" : { },
   "fields" : {
+    "includeArchived" : {
+      "type" : "boolean"
+    },
     "lastNBytes" : {
       "type" : "int"
     }

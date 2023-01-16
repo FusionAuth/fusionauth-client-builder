@@ -9,9 +9,13 @@
     "role" : {
       "className" : "io.fusionauth.domain.ApplicationRole",
       "type" : "ApplicationRole"
+    },
+    "sourceApplicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Application", "io.fusionauth.domain.ApplicationRole" ],
+  "imports" : [ "io.fusionauth.domain.Application", "io.fusionauth.domain.ApplicationRole", "java.util.UUID" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

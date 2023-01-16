@@ -2,6 +2,10 @@
   "className" : "io.fusionauth.domain.search.BaseSearchCriteria",
   "extends" : { },
   "fields" : {
+    "maxHitCount" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
     "numberOfResults" : {
       "type" : "int"
     },
@@ -13,7 +17,7 @@
       "type" : "int"
     }
   },
-  "imports" : [ "java.lang.String" ],
+  "imports" : [ "java.lang.Integer", "java.lang.String" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.search",
