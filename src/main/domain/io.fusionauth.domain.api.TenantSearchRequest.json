@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TenantSearchRequest",
+  "description" : "/**\n * Search request for Tenants\n *\n * @author Mark Manes\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantSearchRequest"
+    } ]
+  } ],
+  "fields" : {
+    "search" : {
+      "type" : "TenantSearchCriteria"
+    }
+  }
+}
