@@ -1,6 +1,6 @@
 [#import "_macros.ftl" as global/]
 /*
- * Copyright (c) 2018-2022, FusionAuth, All Rights Reserved
+ * Copyright (c) 2018-2023, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -121,6 +121,8 @@ import io.fusionauth.domain.api.SystemConfigurationResponse;
 import io.fusionauth.domain.api.TenantDeleteRequest;
 import io.fusionauth.domain.api.TenantRequest;
 import io.fusionauth.domain.api.TenantResponse;
+import io.fusionauth.domain.api.TenantSearchRequest;
+import io.fusionauth.domain.api.TenantSearchResponse;
 import io.fusionauth.domain.api.ThemeRequest;
 import io.fusionauth.domain.api.ThemeResponse;
 import io.fusionauth.domain.api.TwoFactorDisableRequest;
