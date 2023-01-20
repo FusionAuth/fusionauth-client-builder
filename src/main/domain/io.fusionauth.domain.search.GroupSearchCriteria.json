@@ -11,6 +11,9 @@
     },
     "tenantId" : {
       "type" : "UUID"
+    },
+    "query" : {
+      "type" : "String"
     }
   }
 }
