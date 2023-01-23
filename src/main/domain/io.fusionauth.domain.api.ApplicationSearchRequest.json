@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ApplicationSearchRequest",
+  "description" : "/**\n * Search request for Applications\n *\n * @author Spencer Witt\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ApplicationSearchRequest"
+    } ]
+  } ],
+  "fields" : {
+    "search" : {
+      "type" : "ApplicationSearchCriteria"
+    }
+  }
+}
