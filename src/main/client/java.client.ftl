@@ -89,6 +89,8 @@ import io.fusionauth.domain.api.IntegrationRequest;
 import io.fusionauth.domain.api.IntegrationResponse;
 import io.fusionauth.domain.api.KeyRequest;
 import io.fusionauth.domain.api.KeyResponse;
+import io.fusionauth.domain.api.KeySearchRequest;
+import io.fusionauth.domain.api.KeySearchResponse;
 import io.fusionauth.domain.api.LambdaRequest;
 import io.fusionauth.domain.api.LambdaResponse;
 import io.fusionauth.domain.api.LoginRecordSearchRequest;
