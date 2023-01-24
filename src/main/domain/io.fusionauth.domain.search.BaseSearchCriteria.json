@@ -3,9 +3,6 @@
   "type" : "BaseSearchCriteria",
   "description" : "/**\n * @author Brian Pontarelli\n */\n",
   "fields" : {
-    "maxHitCount" : {
-      "type" : "int"
-    },
     "numberOfResults" : {
       "type" : "int"
     },

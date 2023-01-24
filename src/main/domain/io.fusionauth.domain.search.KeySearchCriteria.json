@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "KeySearchCriteria",
+  "description" : "/**\n * Search criteria for Keys\n *\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "fields" : {
+    "algorithm" : {
+      "type" : "KeyAlgorithm"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "type" : {
+      "type" : "KeyType"
+    }
+  }
+}
