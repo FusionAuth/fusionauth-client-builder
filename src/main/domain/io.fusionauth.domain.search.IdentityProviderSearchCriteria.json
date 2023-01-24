@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "IdentityProviderSearchCriteria",
+  "description" : "/**\n * Search criteria for Identity Providers.\n *\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "fields" : {
+    "name" : {
+      "type" : "String"
+    }
+  }
+}
