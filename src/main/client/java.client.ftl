@@ -123,6 +123,8 @@ import io.fusionauth.domain.api.SystemConfigurationResponse;
 import io.fusionauth.domain.api.TenantDeleteRequest;
 import io.fusionauth.domain.api.TenantRequest;
 import io.fusionauth.domain.api.TenantResponse;
+import io.fusionauth.domain.api.TenantSearchRequest;
+import io.fusionauth.domain.api.TenantSearchResponse;
 import io.fusionauth.domain.api.ThemeRequest;
 import io.fusionauth.domain.api.ThemeResponse;
 import io.fusionauth.domain.api.TwoFactorDisableRequest;
