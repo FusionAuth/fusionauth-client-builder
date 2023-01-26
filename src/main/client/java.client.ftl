@@ -125,6 +125,8 @@ import io.fusionauth.domain.api.TenantSearchRequest;
 import io.fusionauth.domain.api.TenantSearchResponse;
 import io.fusionauth.domain.api.ThemeRequest;
 import io.fusionauth.domain.api.ThemeResponse;
+import io.fusionauth.domain.api.ThemeSearchRequest;
+import io.fusionauth.domain.api.ThemeSearchResponse;
 import io.fusionauth.domain.api.TwoFactorDisableRequest;
 import io.fusionauth.domain.api.TwoFactorRecoveryCodeResponse;
 import io.fusionauth.domain.api.TwoFactorRequest;
