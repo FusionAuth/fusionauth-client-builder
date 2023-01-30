@@ -12,6 +12,9 @@
     } ]
   } ],
   "fields" : {
+    "body" : {
+      "type" : "String"
+    },
     "name" : {
       "type" : "String"
     }
