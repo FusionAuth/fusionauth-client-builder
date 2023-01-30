@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LambdaSearchResponse",
+  "description" : "/**\n * Lambda search response\n *\n * @author Mark Manes\n */\n",
+  "fields" : {
+    "tenants" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Lambda"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}
