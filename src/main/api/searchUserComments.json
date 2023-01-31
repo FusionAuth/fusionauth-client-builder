@@ -1,0 +1,20 @@
+{
+  "uri": "/api/user/comment/search",
+  "comments": [
+    "Searches user comments with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchUserComments",
+  "successResponse": "UserCommentSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "UserCommentSearchRequest"
+    }
+  ]
+}

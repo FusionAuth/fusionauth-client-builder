@@ -133,6 +133,8 @@ import io.fusionauth.domain.api.UserActionRequest;
 import io.fusionauth.domain.api.UserActionResponse;
 import io.fusionauth.domain.api.UserCommentRequest;
 import io.fusionauth.domain.api.UserCommentResponse;
+import io.fusionauth.domain.api.UserCommentSearchRequest;
+import io.fusionauth.domain.api.UserCommentSearchResponse;
 import io.fusionauth.domain.api.UserConsentRequest;
 import io.fusionauth.domain.api.UserConsentResponse;
 import io.fusionauth.domain.api.UserDeleteRequest;
