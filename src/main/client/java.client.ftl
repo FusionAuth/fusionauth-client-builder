@@ -153,6 +153,8 @@ import io.fusionauth.domain.api.WebAuthnStartRequest;
 import io.fusionauth.domain.api.WebAuthnStartResponse;
 import io.fusionauth.domain.api.WebhookRequest;
 import io.fusionauth.domain.api.WebhookResponse;
+import io.fusionauth.domain.api.WebhookSearchRequest;
+import io.fusionauth.domain.api.WebhookSearchResponse;
 import io.fusionauth.domain.api.email.SendRequest;
 import io.fusionauth.domain.api.email.SendResponse;
 import io.fusionauth.domain.api.identityProvider.IdentityProviderLinkRequest;

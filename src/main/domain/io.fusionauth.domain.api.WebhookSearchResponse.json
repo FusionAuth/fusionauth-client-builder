@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebhookSearchResponse",
+  "description" : "/**\n * Webhook search response\n *\n * @author Spencer Witt\n */\n",
+  "fields" : {
+    "total" : {
+      "type" : "long"
+    },
+    "webhooks" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Webhook"
+      } ]
+    }
+  }
+}

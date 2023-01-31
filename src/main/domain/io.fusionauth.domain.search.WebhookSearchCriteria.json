@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "WebhookSearchCriteria",
+  "description" : "/**\n * Search criteria for webhooks.\n *\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "fields" : {
+    "description" : {
+      "type" : "String"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    }
+  }
+}
