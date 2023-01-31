@@ -3,7 +3,7 @@
   "type" : "SAMLv2IdPInitiatedIdentityProvider",
   "description" : "/**\n * SAML v2 IdP Initiated identity provider configuration.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseIdentityProvider",
+    "type" : "BaseSAMLv2IdentityProvider",
     "typeArguments" : [ {
       "type" : "SAMLv2IdPInitiatedApplicationConfiguration"
     } ]
@@ -15,22 +15,7 @@
     } ]
   } ],
   "fields" : {
-    "emailClaim" : {
-      "type" : "String"
-    },
     "issuer" : {
-      "type" : "String"
-    },
-    "keyId" : {
-      "type" : "UUID"
-    },
-    "uniqueIdClaim" : {
-      "type" : "String"
-    },
-    "useNameIdForEmail" : {
-      "type" : "boolean"
-    },
-    "usernameClaim" : {
       "type" : "String"
     }
   }

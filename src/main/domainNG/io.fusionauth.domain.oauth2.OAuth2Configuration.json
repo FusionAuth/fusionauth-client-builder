@@ -21,6 +21,10 @@
         "type" : "URI"
       } ]
     },
+    "authorizedURLValidationPolicy" : {
+      "className" : "io.fusionauth.domain.oauth2.Oauth2AuthorizedURLValidationPolicy",
+      "type" : "Oauth2AuthorizedURLValidationPolicy"
+    },
     "clientAuthenticationPolicy" : {
       "className" : "io.fusionauth.domain.oauth2.ClientAuthenticationPolicy",
       "type" : "ClientAuthenticationPolicy"
@@ -70,7 +74,7 @@
       "type" : "boolean"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "java.net.URI", "io.fusionauth.domain.oauth2.ClientAuthenticationPolicy", "java.lang.String", "java.util.Set", "io.fusionauth.domain.oauth2.GrantType", "io.fusionauth.domain.oauth2.LogoutBehavior", "io.fusionauth.domain.oauth2.ProofKeyForCodeExchangePolicy" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "java.net.URI", "io.fusionauth.domain.oauth2.Oauth2AuthorizedURLValidationPolicy", "io.fusionauth.domain.oauth2.ClientAuthenticationPolicy", "java.lang.String", "java.util.Set", "io.fusionauth.domain.oauth2.GrantType", "io.fusionauth.domain.oauth2.LogoutBehavior", "io.fusionauth.domain.oauth2.ProofKeyForCodeExchangePolicy" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

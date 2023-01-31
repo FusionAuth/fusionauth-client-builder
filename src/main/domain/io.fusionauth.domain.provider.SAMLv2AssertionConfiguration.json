@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SAMLv2AssertionConfiguration",
+  "description" : "/**\n * @author Lyle Schemmerling\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "SAMLv2AssertionConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "destination" : {
+      "type" : "SAMLv2DestinationAssertionConfiguration"
+    }
+  }
+}

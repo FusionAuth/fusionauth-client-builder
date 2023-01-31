@@ -1,0 +1,33 @@
+{
+  "className" : "io.fusionauth.domain.provider.SAMLv2DestinationAssertionConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "alternates" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "policy" : {
+      "className" : "io.fusionauth.domain.SAMLv2DestinationAssertionPolicy",
+      "type" : "SAMLv2DestinationAssertionPolicy"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "java.lang.String", "io.fusionauth.domain.SAMLv2DestinationAssertionPolicy" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.SAMLv2DestinationAssertionConfiguration",
+      "type" : "SAMLv2DestinationAssertionConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SAMLv2DestinationAssertionConfiguration"
+}
