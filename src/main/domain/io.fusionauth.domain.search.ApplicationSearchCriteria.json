@@ -15,6 +15,9 @@
     "name" : {
       "type" : "String"
     },
+    "state" : {
+      "type" : "ObjectState"
+    },
     "tenantId" : {
       "type" : "UUID"
     }
