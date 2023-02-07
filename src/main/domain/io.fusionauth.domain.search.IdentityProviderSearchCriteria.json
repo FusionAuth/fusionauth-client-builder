@@ -6,6 +6,9 @@
     "type" : "BaseSearchCriteria"
   } ],
   "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
     "name" : {
       "type" : "String"
     }
