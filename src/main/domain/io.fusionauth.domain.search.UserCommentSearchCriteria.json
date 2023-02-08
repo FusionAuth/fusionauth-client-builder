@@ -9,6 +9,9 @@
     "comment" : {
       "type" : "String"
     },
+    "commenterId" : {
+      "type" : "UUID"
+    },
     "tenantId" : {
       "type" : "UUID"
     },
