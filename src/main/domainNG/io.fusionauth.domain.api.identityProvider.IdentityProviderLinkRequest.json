@@ -5,28 +5,16 @@
     "type" : "BaseEventRequest"
   },
   "fields" : {
-    "displayName" : {
-      "className" : "java.lang.String",
-      "type" : "String"
-    },
-    "identityProviderId" : {
-      "className" : "java.util.UUID",
-      "type" : "UUID"
-    },
-    "identityProviderUserId" : {
-      "className" : "java.lang.String",
-      "type" : "String"
+    "identityProviderLink" : {
+      "className" : "io.fusionauth.domain.IdentityProviderLink",
+      "type" : "IdentityProviderLink"
     },
     "pendingIdPLinkId" : {
       "className" : "java.lang.String",
       "type" : "String"
-    },
-    "userId" : {
-      "className" : "java.util.UUID",
-      "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.IdentityProviderLink", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
