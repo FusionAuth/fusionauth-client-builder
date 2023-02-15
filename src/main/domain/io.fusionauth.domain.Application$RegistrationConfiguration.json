@@ -38,6 +38,9 @@
     "mobilePhone" : {
       "type" : "Requirable"
     },
+    "preferredLanguages" : {
+      "type" : "Requirable"
+    },
     "type" : {
       "type" : "RegistrationType"
     }
