@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.provider",
   "type" : "SAMLv2IdpInitiatedConfiguration",
-  "description" : "/**\n * Config for regular SAML IDP configurations that support IDP-initiated requests\n *\n * @author Lyle Schemmerling\n */\n",
+  "description" : "/**\n * Config for regular SAML IDP configurations that support IdP initiated requests\n *\n * @author Lyle Schemmerling\n */\n",
   "extends" : [ {
     "type" : "Enableable"
   } ],
