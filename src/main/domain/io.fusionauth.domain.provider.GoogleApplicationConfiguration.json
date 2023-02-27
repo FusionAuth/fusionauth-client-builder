@@ -21,6 +21,9 @@
     "client_secret" : {
       "type" : "String"
     },
+    "enableOneTap" : {
+      "type" : "BooleanApplicationConfiguration"
+    },
     "loginMethod" : {
       "type" : "IdentityProviderLoginMethod"
     },
