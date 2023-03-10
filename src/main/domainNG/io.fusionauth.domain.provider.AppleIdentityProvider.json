@@ -17,6 +17,10 @@
       "className" : "java.net.URI",
       "type" : "URI"
     },
+    "bundleId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "buttonText" : {
       "className" : "java.lang.String",
       "type" : "String"

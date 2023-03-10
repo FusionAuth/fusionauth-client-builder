@@ -11,6 +11,9 @@
     },
     "role" : {
       "type" : "ApplicationRole"
+    },
+    "sourceApplicationId" : {
+      "type" : "UUID"
     }
   }
 }

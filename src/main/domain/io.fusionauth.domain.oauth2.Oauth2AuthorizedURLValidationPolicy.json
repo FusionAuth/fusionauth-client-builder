@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "Oauth2AuthorizedURLValidationPolicy",
+  "description" : "/**\n * @author Johnathon Wood\n */\n",
+  "enum" : [ "AllowWildcards", "ExactMatch" ]
+}

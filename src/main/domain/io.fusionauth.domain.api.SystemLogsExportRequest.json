@@ -6,6 +6,9 @@
     "type" : "BaseExportRequest"
   } ],
   "fields" : {
+    "includeArchived" : {
+      "type" : "boolean"
+    },
     "lastNBytes" : {
       "type" : "int"
     }

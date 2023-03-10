@@ -12,6 +12,9 @@
     } ]
   } ],
   "fields" : {
+    "bundleId" : {
+      "type" : "String"
+    },
     "buttonText" : {
       "type" : "String"
     },

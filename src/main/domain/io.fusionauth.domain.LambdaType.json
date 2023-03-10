@@ -71,5 +71,8 @@
   }, {
     "name" : "SCIMServerUserResponseConverter",
     "args" : [ "convert" ]
+  }, {
+    "name" : "SelfServiceRegistrationValidation",
+    "args" : [ "validate" ]
   } ]
 }

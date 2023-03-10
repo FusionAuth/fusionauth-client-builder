@@ -13,6 +13,10 @@
     "samlv2PopulateId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"
+    },
+    "selfServiceRegistrationValidationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
     }
   },
   "imports" : [ "java.util.UUID" ],
