@@ -9,6 +9,10 @@
     } ]
   },
   "fields" : {
+    "apiMode" : {
+      "className" : "io.fusionauth.domain.provider.SteamAPIMode",
+      "type" : "SteamAPIMode"
+    },
     "buttonText" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -26,7 +30,7 @@
       "type" : "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.SupportsPostBindings", "io.fusionauth.domain.provider.SteamApplicationConfiguration", "java.lang.String" ],
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.SupportsPostBindings", "io.fusionauth.domain.provider.SteamApplicationConfiguration", "io.fusionauth.domain.provider.SteamAPIMode", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
