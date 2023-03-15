@@ -197,8 +197,8 @@ def process_domain_file(fn, schemas, options, identity_providers)
               listElementType = fields[k]["typeArguments"][1]["typeArguments"][0]["type"]
               addListValue(properties[k],k2,listElementType,identity_providers)
             elsif mapValueType == "D" && k == "applicationConfiguration" && objectname.match(/IdentityProvider$/) 
-              if objectname.match(/BaseIdentityProvider$/)
-                # remove this one, we don't need to provide anything for the BaseIdentityProvider application config.properties, I think
+              if objectname.match(/BaseIdentityProvider$/) or objectname.match(/BaseSAMLv2IdentityProvider$/)
+                # remove this one, we don't need to provide anything for the BaseIdentityProvider or BaseSAMLv2IdentityProvider application config.properties, I think
                 properties.delete(k)
               else
                 identityproviderconfigrefname = objectname.sub("IdentityProvider","") + "ApplicationConfiguration"
@@ -599,13 +599,20 @@ domain_files.each do |fn|
   fs = f.read
   json = JSON.parse(fs)
   f.close
-  if json["extends"] && json["extends"][0]["type"] == "BaseIdentityProvider"
+  if json["extends"] && json["extends"][0]["type"] == "BaseIdentityProvider" && json["type"] != "BaseSAMLv2IdentityProvider"
+    identity_providers << json["type"]
+  end
+  if json["extends"] && json["extends"][0]["type"] == "BaseSAMLv2IdentityProvider"
     identity_providers << json["type"]
   end
 end
 
 domain_files.each do |fn|
+  puts fn
   if fn.match(/io.fusionauth.domain.provider.BaseIdentityProvider.json/)
+    next
+  end
+  if fn.match(/io.fusionauth.domain.provider.BaseSAMLv2IdentityProvider.json/)
     next
   end
   process_domain_file(fn, schemas, options,identity_providers)
