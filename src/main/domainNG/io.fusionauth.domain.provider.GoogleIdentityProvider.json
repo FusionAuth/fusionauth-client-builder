@@ -25,12 +25,16 @@
       "className" : "io.fusionauth.domain.provider.IdentityProviderLoginMethod",
       "type" : "IdentityProviderLoginMethod"
     },
+    "properties" : {
+      "className" : "io.fusionauth.domain.provider.GoogleIdentityProviderProperties",
+      "type" : "GoogleIdentityProviderProperties"
+    },
     "scope" : {
       "className" : "java.lang.String",
       "type" : "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.SupportsPostBindings", "io.fusionauth.domain.provider.GoogleApplicationConfiguration", "java.lang.String", "io.fusionauth.domain.provider.IdentityProviderLoginMethod" ],
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.SupportsPostBindings", "io.fusionauth.domain.provider.GoogleApplicationConfiguration", "java.lang.String", "io.fusionauth.domain.provider.IdentityProviderLoginMethod", "io.fusionauth.domain.provider.GoogleIdentityProviderProperties" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
