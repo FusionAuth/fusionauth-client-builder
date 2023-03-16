@@ -93,13 +93,14 @@ For more information on the Savant build tool, checkout [savantbuild.org](http:/
 
 If you want to help us directly support and publish a new language, there are a few ways you can help.
 
-We start with a JSON DSL to define [each API opration](https://github.com/FusionAuth/fusionauth-client-builder/tree/master/src/main/api).
+We start with a JSON DSL to define [each API operation](https://github.com/FusionAuth/fusionauth-client-builder/tree/master/src/main/api).
 
 We then build the code using a template. For example, here is [the ruby template](https://github.com/FusionAuth/fusionauth-client-builder/blob/master/src/main/client/ruby.client.ftl)
 
 This ruby template then produces the ruby client:
 
 https://github.com/FusionAuth/fusionauth-ruby-client
+
 https://github.com/FusionAuth/fusionauth-ruby-client/blob/master/lib/fusionauth/fusionauth_client.rb
 
 So if you wanted to add support for a new language, such as elixir, you want to:
