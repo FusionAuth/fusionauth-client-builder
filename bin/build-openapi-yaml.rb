@@ -608,7 +608,6 @@ domain_files.each do |fn|
 end
 
 domain_files.each do |fn|
-  puts fn
   if fn.match(/io.fusionauth.domain.provider.BaseIdentityProvider.json/)
     next
   end
