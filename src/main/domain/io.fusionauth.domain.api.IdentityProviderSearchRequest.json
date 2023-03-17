@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "IdentityProviderSearchRequest",
+  "description" : "/**\n * Search request for Identity Providers\n *\n * @author Spencer Witt\n */\n",
+  "fields" : {
+    "search" : {
+      "type" : "IdentityProviderSearchCriteria"
+    }
+  }
+}

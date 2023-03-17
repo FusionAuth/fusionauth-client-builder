@@ -89,6 +89,8 @@ import io.fusionauth.domain.api.IPAccessControlListRequest;
 import io.fusionauth.domain.api.IPAccessControlListResponse;
 import io.fusionauth.domain.api.IPAccessControlListSearchRequest;
 import io.fusionauth.domain.api.IPAccessControlListSearchResponse;
+import io.fusionauth.domain.api.IdentityProviderSearchRequest;
+import io.fusionauth.domain.api.IdentityProviderSearchResponse;
 import io.fusionauth.domain.api.IdentityProviderRequest;
 import io.fusionauth.domain.api.IdentityProviderResponse;
 import io.fusionauth.domain.api.IntegrationRequest;

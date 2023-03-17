@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "IdentityProviderSearchResponse",
+  "description" : "/**\n * Identity Provider response.\n *\n * @author Spencer Witt\n */\n",
+  "fields" : {
+    "identityProviders" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "BaseIdentityProvider",
+        "typeArguments" : [ {
+          "type" : "*"
+        } ]
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}
