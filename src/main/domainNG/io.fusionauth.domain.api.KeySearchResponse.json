@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.KeySearchResponse",
+  "extends" : { },
+  "fields" : {
+    "keys" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Key",
+        "type" : "Key"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.Key" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "KeySearchResponse"
+}

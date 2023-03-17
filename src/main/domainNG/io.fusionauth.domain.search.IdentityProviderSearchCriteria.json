@@ -1,0 +1,30 @@
+{
+  "className" : "io.fusionauth.domain.search.IdentityProviderSearchCriteria",
+  "extends" : { },
+  "fields" : {
+    "SortableFields" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.util.Map", "java.lang.String", "java.util.UUID" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "IdentityProviderSearchCriteria"
+}

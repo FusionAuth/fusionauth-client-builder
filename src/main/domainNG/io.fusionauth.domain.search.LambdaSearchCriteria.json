@@ -1,0 +1,44 @@
+{
+  "className" : "io.fusionauth.domain.search.LambdaSearchCriteria",
+  "extends" : {
+    "className" : "io.fusionauth.domain.search.BaseSearchCriteria",
+    "type" : "BaseSearchCriteria"
+  },
+  "fields" : {
+    "SortableFields" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "body" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.LambdaType",
+      "type" : "LambdaType"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.search.BaseSearchCriteria", "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.LambdaType" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.search.LambdaSearchCriteria",
+      "type" : "LambdaSearchCriteria"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "LambdaSearchCriteria"
+}
