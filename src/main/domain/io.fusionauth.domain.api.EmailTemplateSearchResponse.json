@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EmailTemplateSearchResponse",
+  "description" : "/**\n * Email template search response\n *\n * @author Mark Manes\n */\n",
+  "fields" : {
+    "emailTemplates" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "EmailTemplate"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}
