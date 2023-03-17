@@ -12,6 +12,9 @@
     } ]
   } ],
   "fields" : {
+    "apiMode" : {
+      "type" : "SteamAPIMode"
+    },
     "buttonText" : {
       "type" : "String"
     },

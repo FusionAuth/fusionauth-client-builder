@@ -12,20 +12,11 @@
     } ]
   } ],
   "fields" : {
-    "displayName" : {
-      "type" : "String"
-    },
-    "identityProviderId" : {
-      "type" : "UUID"
-    },
-    "identityProviderUserId" : {
-      "type" : "String"
+    "identityProviderLink" : {
+      "type" : "IdentityProviderLink"
     },
     "pendingIdPLinkId" : {
       "type" : "String"
-    },
-    "userId" : {
-      "type" : "UUID"
     }
   }
 }

@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebhookSearchRequest",
+  "description" : "/**\n * Search request for webhooks\n *\n * @author Spencer Witt\n */\n",
+  "fields" : {
+    "search" : {
+      "type" : "WebhookSearchCriteria"
+    }
+  }
+}

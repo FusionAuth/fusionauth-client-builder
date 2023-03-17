@@ -24,6 +24,9 @@
     "loginMethod" : {
       "type" : "IdentityProviderLoginMethod"
     },
+    "properties" : {
+      "type" : "GoogleIdentityProviderProperties"
+    },
     "scope" : {
       "type" : "String"
     }

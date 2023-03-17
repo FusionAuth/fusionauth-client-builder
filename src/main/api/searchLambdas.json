@@ -1,0 +1,20 @@
+{
+  "uri": "/api/lambda/search",
+  "comments": [
+    "Searches lambdas with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchLambdas",
+  "successResponse": "LambdaSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "LambdaSearchRequest"
+    }
+  ]
+}

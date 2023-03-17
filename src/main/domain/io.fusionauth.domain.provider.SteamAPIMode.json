@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SteamAPIMode",
+  "description" : "/**\n * Steam API modes.\n *\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "Public", "Partner" ]
+}

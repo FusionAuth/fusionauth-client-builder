@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.SAMLv2DestinationAssertionPolicy",
+  "enum" : [ "Enabled", "Disabled", "AllowAlternates" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SAMLv2DestinationAssertionPolicy"
+}

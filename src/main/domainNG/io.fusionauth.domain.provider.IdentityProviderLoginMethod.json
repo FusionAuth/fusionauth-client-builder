@@ -1,6 +1,6 @@
 {
   "className" : "io.fusionauth.domain.provider.IdentityProviderLoginMethod",
-  "enum" : [ "UsePopup", "UseRedirect" ],
+  "enum" : [ "UsePopup", "UseRedirect", "UseVendorJavaScript" ],
   "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.provider",
