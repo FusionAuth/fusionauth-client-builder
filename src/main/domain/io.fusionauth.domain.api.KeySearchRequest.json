@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "KeySearchRequest",
+  "description" : "/**\n * Search request for Keys\n *\n * @author Spencer Witt\n */\n",
+  "fields" : {
+    "search" : {
+      "type" : "KeySearchCriteria"
+    }
+  }
+}

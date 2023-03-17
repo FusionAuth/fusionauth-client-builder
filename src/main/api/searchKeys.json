@@ -1,0 +1,20 @@
+{
+  "uri": "/api/key/search",
+  "comments": [
+    "Searches keys with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchKeys",
+  "successResponse": "KeySearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "KeySearchRequest"
+    }
+  ]
+}
