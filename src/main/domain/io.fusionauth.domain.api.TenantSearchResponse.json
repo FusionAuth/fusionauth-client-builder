@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TenantSearchResponse",
+  "description" : "/**\n * Tenant search response\n *\n * @author Mark Manes\n */\n",
+  "fields" : {
+    "tenants" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Tenant"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

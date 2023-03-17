@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.provider.SteamAPIMode",
+  "enum" : [ "Public", "Partner" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "SteamAPIMode"
+}

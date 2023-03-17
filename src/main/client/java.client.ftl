@@ -1,6 +1,6 @@
 [#import "_macros.ftl" as global/]
 /*
- * Copyright (c) 2018-2022, FusionAuth, All Rights Reserved
+ * Copyright (c) 2018-2023, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,6 +41,8 @@ import io.fusionauth.domain.api.APIKeyRequest;
 import io.fusionauth.domain.api.APIKeyResponse;
 import io.fusionauth.domain.api.ApplicationRequest;
 import io.fusionauth.domain.api.ApplicationResponse;
+import io.fusionauth.domain.api.ApplicationSearchRequest;
+import io.fusionauth.domain.api.ApplicationSearchResponse;
 import io.fusionauth.domain.api.AuditLogRequest;
 import io.fusionauth.domain.api.AuditLogResponse;
 import io.fusionauth.domain.api.AuditLogSearchRequest;
@@ -49,8 +51,12 @@ import io.fusionauth.domain.api.ConnectorRequest;
 import io.fusionauth.domain.api.ConnectorResponse;
 import io.fusionauth.domain.api.ConsentRequest;
 import io.fusionauth.domain.api.ConsentResponse;
+import io.fusionauth.domain.api.ConsentSearchRequest;
+import io.fusionauth.domain.api.ConsentSearchResponse;
 import io.fusionauth.domain.api.EmailTemplateRequest;
 import io.fusionauth.domain.api.EmailTemplateResponse;
+import io.fusionauth.domain.api.EmailTemplateSearchRequest;
+import io.fusionauth.domain.api.EmailTemplateSearchResponse;
 import io.fusionauth.domain.api.EntityGrantRequest;
 import io.fusionauth.domain.api.EntityGrantResponse;
 import io.fusionauth.domain.api.EntityGrantSearchRequest;
@@ -93,6 +99,8 @@ import io.fusionauth.domain.api.KeySearchRequest;
 import io.fusionauth.domain.api.KeySearchResponse;
 import io.fusionauth.domain.api.LambdaRequest;
 import io.fusionauth.domain.api.LambdaResponse;
+import io.fusionauth.domain.api.LambdaSearchRequest;
+import io.fusionauth.domain.api.LambdaSearchResponse;
 import io.fusionauth.domain.api.LoginRecordSearchRequest;
 import io.fusionauth.domain.api.LoginRecordSearchResponse;
 import io.fusionauth.domain.api.LoginPingRequest;
@@ -123,8 +131,12 @@ import io.fusionauth.domain.api.SystemConfigurationResponse;
 import io.fusionauth.domain.api.TenantDeleteRequest;
 import io.fusionauth.domain.api.TenantRequest;
 import io.fusionauth.domain.api.TenantResponse;
+import io.fusionauth.domain.api.TenantSearchRequest;
+import io.fusionauth.domain.api.TenantSearchResponse;
 import io.fusionauth.domain.api.ThemeRequest;
 import io.fusionauth.domain.api.ThemeResponse;
+import io.fusionauth.domain.api.ThemeSearchRequest;
+import io.fusionauth.domain.api.ThemeSearchResponse;
 import io.fusionauth.domain.api.TwoFactorDisableRequest;
 import io.fusionauth.domain.api.TwoFactorRecoveryCodeResponse;
 import io.fusionauth.domain.api.TwoFactorRequest;
@@ -135,6 +147,8 @@ import io.fusionauth.domain.api.UserActionRequest;
 import io.fusionauth.domain.api.UserActionResponse;
 import io.fusionauth.domain.api.UserCommentRequest;
 import io.fusionauth.domain.api.UserCommentResponse;
+import io.fusionauth.domain.api.UserCommentSearchRequest;
+import io.fusionauth.domain.api.UserCommentSearchResponse;
 import io.fusionauth.domain.api.UserConsentRequest;
 import io.fusionauth.domain.api.UserConsentResponse;
 import io.fusionauth.domain.api.UserDeleteRequest;
@@ -155,6 +169,8 @@ import io.fusionauth.domain.api.WebAuthnStartRequest;
 import io.fusionauth.domain.api.WebAuthnStartResponse;
 import io.fusionauth.domain.api.WebhookRequest;
 import io.fusionauth.domain.api.WebhookResponse;
+import io.fusionauth.domain.api.WebhookSearchRequest;
+import io.fusionauth.domain.api.WebhookSearchResponse;
 import io.fusionauth.domain.api.email.SendRequest;
 import io.fusionauth.domain.api.email.SendResponse;
 import io.fusionauth.domain.api.identityProvider.IdentityProviderLinkRequest;

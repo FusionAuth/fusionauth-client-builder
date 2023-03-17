@@ -1,0 +1,34 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "BaseSAMLv2IdentityProvider",
+  "description" : "/**\n * @author Lyle Schemmerling\n */\n",
+  "typeArguments" : [ {
+    "name" : "D",
+    "extends" : [ {
+      "type" : "BaseIdentityProviderApplicationConfiguration"
+    } ]
+  } ],
+  "extends" : [ {
+    "type" : "BaseIdentityProvider",
+    "typeArguments" : [ {
+      "type" : "D"
+    } ]
+  } ],
+  "fields" : {
+    "emailClaim" : {
+      "type" : "String"
+    },
+    "keyId" : {
+      "type" : "UUID"
+    },
+    "uniqueIdClaim" : {
+      "type" : "String"
+    },
+    "useNameIdForEmail" : {
+      "type" : "boolean"
+    },
+    "usernameClaim" : {
+      "type" : "String"
+    }
+  }
+}

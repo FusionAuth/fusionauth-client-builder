@@ -1,0 +1,20 @@
+{
+  "uri": "/api/webhook/search",
+  "comments": [
+    "Searches webhooks with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchWebhooks",
+  "successResponse": "WebhookSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "WebhookSearchRequest"
+    }
+  ]
+}

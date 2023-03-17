@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ConsentSearchResponse",
+  "description" : "/**\n * Consent search response\n *\n * @author Spencer Witt\n */\n",
+  "fields" : {
+    "consents" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Consent"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}
