@@ -1,6 +1,6 @@
 [#import "_macros.ftl" as global/]
 /*
- * Copyright (c) 2018-2022, FusionAuth, All Rights Reserved
+ * Copyright (c) 2018-2023, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,6 +41,8 @@ import io.fusionauth.domain.api.APIKeyRequest;
 import io.fusionauth.domain.api.APIKeyResponse;
 import io.fusionauth.domain.api.ApplicationRequest;
 import io.fusionauth.domain.api.ApplicationResponse;
+import io.fusionauth.domain.api.ApplicationSearchRequest;
+import io.fusionauth.domain.api.ApplicationSearchResponse;
 import io.fusionauth.domain.api.AuditLogRequest;
 import io.fusionauth.domain.api.AuditLogResponse;
 import io.fusionauth.domain.api.AuditLogSearchRequest;
@@ -91,6 +93,8 @@ import io.fusionauth.domain.api.KeyRequest;
 import io.fusionauth.domain.api.KeyResponse;
 import io.fusionauth.domain.api.LambdaRequest;
 import io.fusionauth.domain.api.LambdaResponse;
+import io.fusionauth.domain.api.LambdaSearchRequest;
+import io.fusionauth.domain.api.LambdaSearchResponse;
 import io.fusionauth.domain.api.LoginRecordSearchRequest;
 import io.fusionauth.domain.api.LoginRecordSearchResponse;
 import io.fusionauth.domain.api.LoginPingRequest;
@@ -121,6 +125,8 @@ import io.fusionauth.domain.api.SystemConfigurationResponse;
 import io.fusionauth.domain.api.TenantDeleteRequest;
 import io.fusionauth.domain.api.TenantRequest;
 import io.fusionauth.domain.api.TenantResponse;
+import io.fusionauth.domain.api.TenantSearchRequest;
+import io.fusionauth.domain.api.TenantSearchResponse;
 import io.fusionauth.domain.api.ThemeRequest;
 import io.fusionauth.domain.api.ThemeResponse;
 import io.fusionauth.domain.api.TwoFactorDisableRequest;
@@ -133,6 +139,8 @@ import io.fusionauth.domain.api.UserActionRequest;
 import io.fusionauth.domain.api.UserActionResponse;
 import io.fusionauth.domain.api.UserCommentRequest;
 import io.fusionauth.domain.api.UserCommentResponse;
+import io.fusionauth.domain.api.UserCommentSearchRequest;
+import io.fusionauth.domain.api.UserCommentSearchResponse;
 import io.fusionauth.domain.api.UserConsentRequest;
 import io.fusionauth.domain.api.UserConsentResponse;
 import io.fusionauth.domain.api.UserDeleteRequest;

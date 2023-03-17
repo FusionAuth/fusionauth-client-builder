@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserCommentSearchRequest",
+  "description" : "/**\n * Search request for user comments\n *\n * @author Spencer Witt\n */\n",
+  "fields" : {
+    "search" : {
+      "type" : "UserCommentSearchCriteria"
+    }
+  }
+}

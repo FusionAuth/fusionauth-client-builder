@@ -1,0 +1,20 @@
+{
+  "uri": "/api/application/search",
+  "comments": [
+    "Searches applications with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchApplications",
+  "successResponse": "ApplicationSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "ApplicationSearchRequest"
+    }
+  ]
+}

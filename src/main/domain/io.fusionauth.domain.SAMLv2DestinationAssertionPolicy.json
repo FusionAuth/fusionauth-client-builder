@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SAMLv2DestinationAssertionPolicy",
+  "description" : "/**\n * @author Lyle Schemmerling\n */\n",
+  "enum" : [ "Enabled", "Disabled", "AllowAlternates" ]
+}

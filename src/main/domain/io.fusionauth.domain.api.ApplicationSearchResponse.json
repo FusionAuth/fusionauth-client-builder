@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ApplicationSearchResponse",
+  "description" : "/**\n * Application search response\n *\n * @author Spencer Witt\n */\n",
+  "fields" : {
+    "applications" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Application"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

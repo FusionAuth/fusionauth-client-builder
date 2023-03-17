@@ -5,6 +5,10 @@
     "type" : "BaseIdentityProviderApplicationConfiguration"
   },
   "fields" : {
+    "apiMode" : {
+      "className" : "io.fusionauth.domain.provider.SteamAPIMode",
+      "type" : "SteamAPIMode"
+    },
     "buttonText" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -22,7 +26,7 @@
       "type" : "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "io.fusionauth.domain.Buildable", "java.lang.String" ],
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.SteamAPIMode", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
