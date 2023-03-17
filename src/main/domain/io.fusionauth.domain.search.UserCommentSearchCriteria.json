@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "UserCommentSearchCriteria",
+  "description" : "/**\n * Search criteria for user comments.\n *\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "fields" : {
+    "comment" : {
+      "type" : "String"
+    },
+    "commenterId" : {
+      "type" : "UUID"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    },
+    "userId" : {
+      "type" : "UUID"
+    }
+  }
+}
