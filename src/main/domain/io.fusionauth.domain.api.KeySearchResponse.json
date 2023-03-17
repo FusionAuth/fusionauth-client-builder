@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "KeySearchResponse",
+  "description" : "/**\n * Key search response\n *\n * @author Spencer Witt\n */\n",
+  "fields" : {
+    "keys" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Key"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

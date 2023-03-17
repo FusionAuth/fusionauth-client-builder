@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "ConsentSearchCriteria",
+  "description" : "/**\n * Search criteria for Consents\n *\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "fields" : {
+    "name" : {
+      "type" : "String"
+    }
+  }
+}

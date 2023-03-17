@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.provider.GoogleIdentityProviderProperties",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "api" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "button" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.provider.GoogleIdentityProviderProperties",
+      "type" : "GoogleIdentityProviderProperties"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "GoogleIdentityProviderProperties"
+}

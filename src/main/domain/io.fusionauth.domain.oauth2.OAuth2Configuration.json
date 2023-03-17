@@ -1,0 +1,67 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuth2Configuration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "OAuth2Configuration"
+    } ]
+  } ],
+  "fields" : {
+    "authorizedOriginURLs" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "URI"
+      } ]
+    },
+    "authorizedRedirectURLs" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "URI"
+      } ]
+    },
+    "authorizedURLValidationPolicy" : {
+      "type" : "Oauth2AuthorizedURLValidationPolicy"
+    },
+    "clientAuthenticationPolicy" : {
+      "type" : "ClientAuthenticationPolicy"
+    },
+    "clientId" : {
+      "type" : "String"
+    },
+    "clientSecret" : {
+      "type" : "String"
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "deviceVerificationURL" : {
+      "type" : "URI"
+    },
+    "enabledGrants" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "GrantType"
+      } ]
+    },
+    "generateRefreshTokens" : {
+      "type" : "boolean"
+    },
+    "logoutBehavior" : {
+      "type" : "LogoutBehavior"
+    },
+    "logoutURL" : {
+      "type" : "URI"
+    },
+    "proofKeyForCodeExchangePolicy" : {
+      "type" : "ProofKeyForCodeExchangePolicy"
+    },
+    "requireClientAuthentication" : {
+      "type" : "boolean"
+    },
+    "requireRegistration" : {
+      "type" : "boolean"
+    }
+  }
+}

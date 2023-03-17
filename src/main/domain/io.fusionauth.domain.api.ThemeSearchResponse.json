@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ThemeSearchResponse",
+  "description" : "/**\n * Search response for Themes\n *\n * @author Mark Manes\n */\n",
+  "fields" : {
+    "themes" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Theme"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

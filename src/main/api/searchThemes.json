@@ -1,0 +1,20 @@
+{
+  "uri": "/api/theme/search",
+  "comments": [
+    "Searches themes with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchThemes",
+  "successResponse": "ThemeSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "ThemeSearchRequest"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LambdaSearchRequest",
+  "description" : "/**\n * Search request for Lambdas\n *\n * @author Mark Manes\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "LambdaSearchRequest"
+    } ]
+  } ],
+  "fields" : {
+    "search" : {
+      "type" : "LambdaSearchCriteria"
+    }
+  }
+}

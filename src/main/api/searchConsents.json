@@ -1,0 +1,20 @@
+{
+  "uri": "/api/consent/search",
+  "comments": [
+    "Searches consents with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchConsents",
+  "successResponse": "ConsentSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "ConsentSearchRequest"
+    }
+  ]
+}
