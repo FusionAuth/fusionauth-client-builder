@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "ThemeSearchCriteria",
+  "description" : "/**\n * Search criteria for themes\n *\n * @author Mark Manes\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "fields" : {
+    "name" : {
+      "type" : "String"
+    }
+  }
+}
