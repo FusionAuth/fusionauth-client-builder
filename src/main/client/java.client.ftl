@@ -226,6 +226,7 @@ import io.fusionauth.domain.oauth2.AccessToken;
 import io.fusionauth.domain.oauth2.IntrospectResponse;
 import io.fusionauth.domain.oauth2.JWKSResponse;
 import io.fusionauth.domain.oauth2.OAuthError;
+import io.fusionauth.domain.oauth2.UserinfoResponse;
 import io.fusionauth.domain.provider.IdentityProviderType;
 
 /**

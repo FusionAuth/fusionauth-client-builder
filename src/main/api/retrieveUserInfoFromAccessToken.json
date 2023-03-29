@@ -5,7 +5,7 @@
   ],
   "method": "get",
   "methodName": "retrieveUserInfoFromAccessToken",
-  "successResponse": "UserResponse",
+  "successResponse": "UserinfoResponse",
   "errorResponse": "OAuthError",
   "anonymous": true,
   "authorization": "\"Bearer \" + encodedJWT",
