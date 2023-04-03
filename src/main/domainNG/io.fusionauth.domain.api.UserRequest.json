@@ -9,6 +9,10 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "currentPassword" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "disableDomainBlock" : {
       "type" : "boolean"
     },
@@ -23,7 +27,7 @@
       "type" : "User"
     }
   },
-  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.util.UUID", "io.fusionauth.domain.User" ],
+  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.User" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

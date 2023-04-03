@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SelfServiceFormConfiguration",
+  "description" : "/**\n * @author andrewpai\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "SelfServiceFormConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "requireCurrentPasswordOnPasswordChange" : {
+      "type" : "boolean"
+    }
+  }
+}

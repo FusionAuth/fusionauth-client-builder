@@ -15,6 +15,9 @@
     "applicationId" : {
       "type" : "UUID"
     },
+    "currentPassword" : {
+      "type" : "String"
+    },
     "disableDomainBlock" : {
       "type" : "boolean"
     },
