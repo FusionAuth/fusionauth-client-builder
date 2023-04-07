@@ -20,6 +20,10 @@
     "name" : {
       "className" : "java.lang.String",
       "type" : "String"
+    },
+    "type" : {
+      "className" : "java.lang.String",
+      "type" : "String"
     }
   },
   "imports" : [ "java.util.Map", "java.lang.String", "java.util.UUID" ],

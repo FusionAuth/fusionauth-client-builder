@@ -11,6 +11,9 @@
     },
     "tenantId" : {
       "type" : "UUID"
+    },
+    "url" : {
+      "type" : "String"
     }
   }
 }

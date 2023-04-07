@@ -20,6 +20,10 @@
     "tenantId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"
+    },
+    "url" : {
+      "className" : "java.lang.String",
+      "type" : "String"
     }
   },
   "imports" : [ "java.util.Map", "java.lang.String", "java.util.UUID" ],
