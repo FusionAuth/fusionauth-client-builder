@@ -13,7 +13,7 @@
       "type" : "String"
     },
     "type" : {
-      "type" : "String"
+      "type" : "IdentityProviderType"
     }
   }
 }
