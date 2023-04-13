@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.LambdaSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "lambdas" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Lambda",
+        "type" : "Lambda"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.Lambda" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "LambdaSearchResponse"
+}

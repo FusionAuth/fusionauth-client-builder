@@ -5,6 +5,10 @@
     "type" : "BaseIdentityProviderApplicationConfiguration"
   },
   "fields" : {
+    "bundleId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "buttonText" : {
       "className" : "java.lang.String",
       "type" : "String"

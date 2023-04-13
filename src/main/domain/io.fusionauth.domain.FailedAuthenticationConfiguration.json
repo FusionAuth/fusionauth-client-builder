@@ -9,11 +9,17 @@
     } ]
   } ],
   "fields" : {
+    "actionCancelPolicy" : {
+      "type" : "FailedAuthenticationActionCancelPolicy"
+    },
     "actionDuration" : {
       "type" : "long"
     },
     "actionDurationUnit" : {
       "type" : "ExpiryUnit"
+    },
+    "emailUser" : {
+      "type" : "boolean"
     },
     "resetCountInSeconds" : {
       "type" : "int"

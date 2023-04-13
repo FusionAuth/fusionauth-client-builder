@@ -3,7 +3,7 @@
   "type" : "SAMLv2IdentityProvider",
   "description" : "/**\n * SAML v2 identity provider configuration.\n *\n * @author Brian Pontarelli\n */\n",
   "extends" : [ {
-    "type" : "BaseIdentityProvider",
+    "type" : "BaseSAMLv2IdentityProvider",
     "typeArguments" : [ {
       "type" : "SAMLv2ApplicationConfiguration"
     } ]
@@ -27,23 +27,26 @@
         "type" : "String"
       } ]
     },
+    "assertionConfiguration" : {
+      "type" : "SAMLv2AssertionConfiguration"
+    },
     "buttonImageURL" : {
       "type" : "URI"
     },
     "buttonText" : {
       "type" : "String"
     },
-    "emailClaim" : {
-      "type" : "String"
-    },
     "idpEndpoint" : {
       "type" : "URI"
+    },
+    "idpInitiatedConfiguration" : {
+      "type" : "SAMLv2IdpInitiatedConfiguration"
     },
     "issuer" : {
       "type" : "String"
     },
-    "keyId" : {
-      "type" : "UUID"
+    "loginHintConfiguration" : {
+      "type" : "LoginHintConfiguration"
     },
     "nameIdFormat" : {
       "type" : "String"
@@ -56,15 +59,6 @@
     },
     "signRequest" : {
       "type" : "boolean"
-    },
-    "uniqueIdClaim" : {
-      "type" : "String"
-    },
-    "useNameIdForEmail" : {
-      "type" : "boolean"
-    },
-    "usernameClaim" : {
-      "type" : "String"
     },
     "xmlSignatureC14nMethod" : {
       "type" : "CanonicalizationMethod"

@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.api.TenantSearchRequest",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "search" : {
+      "className" : "io.fusionauth.domain.search.TenantSearchCriteria",
+      "type" : "TenantSearchCriteria"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.search.TenantSearchCriteria" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.TenantSearchRequest",
+      "type" : "TenantSearchRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TenantSearchRequest"
+}

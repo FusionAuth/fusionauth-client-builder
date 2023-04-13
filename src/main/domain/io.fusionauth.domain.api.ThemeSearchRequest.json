@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ThemeSearchRequest",
+  "description" : "/**\n * Search request for Themes.\n *\n * @author Mark Manes\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ThemeSearchRequest"
+    } ]
+  } ],
+  "fields" : {
+    "search" : {
+      "type" : "ThemeSearchCriteria"
+    }
+  }
+}

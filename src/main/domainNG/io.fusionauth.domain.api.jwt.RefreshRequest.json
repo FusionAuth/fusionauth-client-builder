@@ -1,6 +1,9 @@
 {
   "className" : "io.fusionauth.domain.api.jwt.RefreshRequest",
-  "extends" : { },
+  "extends" : {
+    "className" : "io.fusionauth.domain.api.BaseEventRequest",
+    "type" : "BaseEventRequest"
+  },
   "fields" : {
     "refreshToken" : {
       "className" : "java.lang.String",
@@ -11,8 +14,15 @@
       "type" : "String"
     }
   },
-  "imports" : [ "java.lang.String" ],
-  "interfaces" : [ ],
+  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.lang.String" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.jwt.RefreshRequest",
+      "type" : "RefreshRequest"
+    } ]
+  } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api.jwt",
   "type" : "RefreshRequest"

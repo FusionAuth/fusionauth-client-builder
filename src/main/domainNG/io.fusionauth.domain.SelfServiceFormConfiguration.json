@@ -1,0 +1,24 @@
+{
+  "className" : "io.fusionauth.domain.SelfServiceFormConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "requireCurrentPasswordOnPasswordChange" : {
+      "type" : "boolean"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.SelfServiceFormConfiguration",
+      "type" : "SelfServiceFormConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SelfServiceFormConfiguration"
+}

@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.TenantSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "tenants" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Tenant",
+        "type" : "Tenant"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.Tenant" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TenantSearchResponse"
+}

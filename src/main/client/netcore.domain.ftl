@@ -1,7 +1,7 @@
 [#-- @ftlvariable name="packages" type="String[]" --]
 [#-- @ftlvariable name="types_in_use" type="String[]" --]
 /*
- * Copyright (c) 2018-2022, FusionAuth, All Rights Reserved
+ * Copyright (c) 2018-2023, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -52,10 +52,13 @@
 [/#macro]
 
 [#list packages as package]
-  [#if package != domain_item.packageName]
+  [#if package != domain_item.packageName && (package != "io.fusionauth.domain.provider" || domain_item.type == "IdentityProviderDetails")]
 using ${replaceKeywords(package)};
   [/#if]
 [/#list]
+[#if domain_item.type == "IdentityProviderSearchCriteria"]
+using io.fusionauth.domain.provider;
+[/#if]
 [#if domain_item.enum?? && (global.needsConverter(domain_item) || global.needsConverterNoArgs(domain_item))]
 using System.Runtime.Serialization;
 [#elseif global.hasAnySetter(domain_item)]
@@ -106,7 +109,7 @@ namespace ${replaceKeywords(domain_item.packageName)} {
     private readonly Dictionary<string, dynamic> ${global.scrubName(replaceKeywords(fieldName))} = new Dictionary<string, dynamic>();
       [#else]
     [#if domain_item.type == "JWT" && domain_item.packageName == "io.fusionauth.jwt.domain" && field.type == "ZonedDateTime"]
-    [#-- per https://github.com/FusionAuth/fusionauth-issues/issues/1362 JWT DateTimeOffsets need to be parsed as seconds, as opposed to milliseconds 
+    [#-- per https://github.com/FusionAuth/fusionauth-issues/issues/1362 JWT DateTimeOffsets need to be parsed as seconds, as opposed to milliseconds
     --]
     [JsonConverter(typeof(DateTimeOffsetSecondsConverter))]
     [/#if]

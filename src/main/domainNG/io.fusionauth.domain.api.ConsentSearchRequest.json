@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.ConsentSearchRequest",
+  "extends" : { },
+  "fields" : {
+    "search" : {
+      "className" : "io.fusionauth.domain.search.ConsentSearchCriteria",
+      "type" : "ConsentSearchCriteria"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.search.ConsentSearchCriteria" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ConsentSearchRequest"
+}

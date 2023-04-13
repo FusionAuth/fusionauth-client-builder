@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.UserCommentSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "total" : {
+      "type" : "long"
+    },
+    "userComments" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.UserComment",
+        "type" : "UserComment"
+      } ]
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.UserComment" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserCommentSearchResponse"
+}

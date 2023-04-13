@@ -9,12 +9,16 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "selfServiceFormConfiguration" : {
+      "className" : "io.fusionauth.domain.SelfServiceFormConfiguration",
+      "type" : "SelfServiceFormConfiguration"
+    },
     "selfServiceFormId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID", "io.fusionauth.domain.SelfServiceFormConfiguration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

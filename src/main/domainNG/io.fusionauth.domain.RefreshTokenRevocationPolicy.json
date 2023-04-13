@@ -5,6 +5,9 @@
     "onLoginPrevented" : {
       "type" : "boolean"
     },
+    "onMultiFactorEnable" : {
+      "type" : "boolean"
+    },
     "onPasswordChanged" : {
       "type" : "boolean"
     }

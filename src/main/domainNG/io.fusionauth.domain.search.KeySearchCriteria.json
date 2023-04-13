@@ -1,0 +1,42 @@
+{
+  "className" : "io.fusionauth.domain.search.KeySearchCriteria",
+  "extends" : { },
+  "fields" : {
+    "NullableFields" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "SortableFields" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "algorithm" : {
+      "className" : "io.fusionauth.domain.Key$KeyAlgorithm",
+      "type" : "Key$KeyAlgorithm"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.Key$KeyType",
+      "type" : "Key$KeyType"
+    }
+  },
+  "imports" : [ "java.util.Set", "java.lang.String", "java.util.Map", "io.fusionauth.domain.Key$KeyAlgorithm", "io.fusionauth.domain.Key$KeyType" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "KeySearchCriteria"
+}

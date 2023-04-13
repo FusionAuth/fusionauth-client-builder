@@ -9,6 +9,9 @@
     } ]
   } ],
   "fields" : {
+    "code" : {
+      "type" : "String"
+    },
     "recoveryCodes" : {
       "type" : "List",
       "typeArguments" : [ {

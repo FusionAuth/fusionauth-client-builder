@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "EmailTemplateSearchRequest",
+  "description" : "/**\n * Search request for email templates\n *\n * @author Mark Manes\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EmailTemplateSearchRequest"
+    } ]
+  } ],
+  "fields" : {
+    "search" : {
+      "type" : "EmailTemplateSearchCriteria"
+    }
+  }
+}

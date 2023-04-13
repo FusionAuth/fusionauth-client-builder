@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.WebhookSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "total" : {
+      "type" : "long"
+    },
+    "webhooks" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.Webhook",
+        "type" : "Webhook"
+      } ]
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.Webhook" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebhookSearchResponse"
+}

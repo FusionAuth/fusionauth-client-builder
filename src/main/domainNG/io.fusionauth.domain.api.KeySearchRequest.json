@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.KeySearchRequest",
+  "extends" : { },
+  "fields" : {
+    "search" : {
+      "className" : "io.fusionauth.domain.search.KeySearchCriteria",
+      "type" : "KeySearchCriteria"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.search.KeySearchCriteria" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "KeySearchRequest"
+}

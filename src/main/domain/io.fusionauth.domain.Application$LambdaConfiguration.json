@@ -10,6 +10,9 @@
     },
     "samlv2PopulateId" : {
       "type" : "UUID"
+    },
+    "selfServiceRegistrationValidationId" : {
+      "type" : "UUID"
     }
   }
 }

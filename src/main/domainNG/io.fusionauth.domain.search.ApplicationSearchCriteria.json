@@ -1,0 +1,44 @@
+{
+  "className" : "io.fusionauth.domain.search.ApplicationSearchCriteria",
+  "extends" : {
+    "className" : "io.fusionauth.domain.search.BaseSearchCriteria",
+    "type" : "BaseSearchCriteria"
+  },
+  "fields" : {
+    "SortableFields" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "state" : {
+      "className" : "io.fusionauth.domain.ObjectState",
+      "type" : "ObjectState"
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.search.BaseSearchCriteria", "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.ObjectState", "java.util.UUID" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.search.ApplicationSearchCriteria",
+      "type" : "ApplicationSearchCriteria"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "ApplicationSearchCriteria"
+}

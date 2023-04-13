@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/two-factor",
   "comments": [
-    "Enable Two Factor authentication for a user."
+    "Enable two-factor authentication for a user."
   ],
   "method": "post",
   "methodName": "enableTwoFactor",
@@ -11,7 +11,7 @@
     {
       "name": "userId",
       "comments": [
-        "The Id of the user to enable Two Factor authentication."
+        "The Id of the user to enable two-factor authentication."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The two factor enable request information."
+        "The two-factor enable request information."
       ],
       "type": "body",
       "javaType": "TwoFactorRequest"

@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.UserCommentSearchRequest",
+  "extends" : { },
+  "fields" : {
+    "search" : {
+      "className" : "io.fusionauth.domain.search.UserCommentSearchCriteria",
+      "type" : "UserCommentSearchCriteria"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.search.UserCommentSearchCriteria" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UserCommentSearchRequest"
+}

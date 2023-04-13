@@ -1,0 +1,20 @@
+{
+  "uri": "/api/tenant/search",
+  "comments": [
+    "Searches tenants with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchTenants",
+  "successResponse": "TenantSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "TenantSearchRequest"
+    }
+  ]
+}

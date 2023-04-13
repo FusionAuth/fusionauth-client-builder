@@ -5,12 +5,19 @@
     "type" : "Object"
   },
   "fields" : {
+    "actionCancelPolicy" : {
+      "className" : "io.fusionauth.domain.FailedAuthenticationActionCancelPolicy",
+      "type" : "FailedAuthenticationActionCancelPolicy"
+    },
     "actionDuration" : {
       "type" : "long"
     },
     "actionDurationUnit" : {
       "className" : "io.fusionauth.domain.ExpiryUnit",
       "type" : "ExpiryUnit"
+    },
+    "emailUser" : {
+      "type" : "boolean"
     },
     "resetCountInSeconds" : {
       "type" : "int"
@@ -23,7 +30,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.ExpiryUnit", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.FailedAuthenticationActionCancelPolicy", "io.fusionauth.domain.ExpiryUnit", "java.util.UUID" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
