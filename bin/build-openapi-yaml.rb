@@ -308,10 +308,12 @@ def process_api_file(fn, paths, options)
 
   method = json["method"]
   uri = json["uri"]
-  
+  include_optional_segment_param = false
+  uri_without_optional = uri
+
   # check to see if the url segments are optional
   if json["params"]
-    uri_without_optional = uri
+    include_optional_segment_param = true
     segmentparams = json["params"].select{|p| p["type"] == "urlSegment"}
     segmentparams.each do |p|
       if p["constant"] == true
@@ -319,30 +321,29 @@ def process_api_file(fn, paths, options)
         uri_without_optional = uri_without_optional + "/"+p["value"].delete('"')
         next
       end
-      
-      if param_optional(p["comments"]) 
+
+      if param_optional(p["comments"])
         uri = uri + "/{"+p["name"]+"}"
       else
         uri = uri + "/{"+p["name"]+"}"
         uri_without_optional = uri_without_optional + "/{"+p["name"]+"}"
       end
-
     end
+  end
 
-    if options[:verbose] 
-      puts "adding path for " + uri
+  if options[:verbose]
+    puts "adding path for " + uri
+  end
+
+  # builds for full uri, including optional path params at end
+  build_path(uri, json, paths, include_optional_segment_param, options)
+
+  # only support an optional parameter on the last url segment
+  if uri_without_optional != uri
+    if options[:verbose]
+      puts "adding path for " + uri_without_optional
     end
-
-    # builds for full uri, including optional path params at end
-    build_path(uri, json, paths, true, options)
-
-    # only support an optional parameter on the last url segment
-    if uri_without_optional != uri
-      if options[:verbose] 
-        puts "adding path for " + uri_without_optional
-      end
-      build_path(uri_without_optional, json, paths, false, options)
-    end 
+    build_path(uri_without_optional, json, paths, false, options)
   end
 end
 
