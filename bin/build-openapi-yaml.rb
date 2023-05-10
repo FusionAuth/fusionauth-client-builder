@@ -378,7 +378,10 @@ def build_operation_id(new_api_object, old_api_object, uri, method)
       # need this because there are both /api/user/action and /api/user-action endpoints, and this code gives them the same name
       operation_name = uri_array[2]+ "-" + "actioning"
     end
-  end 
+  elsif operation_name == "identity-provider" && uri_array[3] && uri_array[3][-1] != "}"
+    # /api/identity-provider/link, /api/identity-provider/lookup, etc
+    operation_name = uri_array[2]+ "-" + uri_array[3]
+  end
   operation_name = operation_name.split("-").map{|e| e.capitalize}.join("")
 
   operation_name[0] = operation_name[0].capitalize # just capitalize first letter
