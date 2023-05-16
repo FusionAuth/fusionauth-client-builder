@@ -290,7 +290,7 @@ def process_rawpaths(rawpaths, options)
   return new_paths
 end
 
-def process_api_file(fn, paths, options)
+def process_api_file(fn, paths, options, deferred)
   if options[:verbose] 
     puts "processing "+fn
   end
@@ -308,12 +308,10 @@ def process_api_file(fn, paths, options)
 
   method = json["method"]
   uri = json["uri"]
-  include_optional_segment_param = false
-  uri_without_optional = uri
-
+  
   # check to see if the url segments are optional
   if json["params"]
-    include_optional_segment_param = true
+    uri_without_optional = uri
     segmentparams = json["params"].select{|p| p["type"] == "urlSegment"}
     segmentparams.each do |p|
       if p["constant"] == true
@@ -321,30 +319,42 @@ def process_api_file(fn, paths, options)
         uri_without_optional = uri_without_optional + "/"+p["value"].delete('"')
         next
       end
-
-      if param_optional(p["comments"])
+      
+      if param_optional(p["comments"]) 
         uri = uri + "/{"+p["name"]+"}"
       else
         uri = uri + "/{"+p["name"]+"}"
         uri_without_optional = uri_without_optional + "/{"+p["name"]+"}"
       end
+
     end
-  end
 
-  if options[:verbose]
-    puts "adding path for " + uri
-  end
-
-  # builds for full uri, including optional path params at end
-  build_path(uri, json, paths, include_optional_segment_param, options)
-
-  # only support an optional parameter on the last url segment
-  if uri_without_optional != uri
-    if options[:verbose]
-      puts "adding path for " + uri_without_optional
+    if options[:verbose] 
+      puts "adding path for " + uri
     end
-    build_path(uri_without_optional, json, paths, false, options)
+
+    # builds for full uri, including optional path params at end
+    build_path(uri, json, paths, true, options)
+
+    # only support an optional parameter on the last url segment
+    if uri_without_optional != uri
+      if options[:verbose] 
+        puts "adding path for " + uri_without_optional
+      end
+      build_path(uri_without_optional, json, paths, false, options)
+    end
+  else
+    # If this path doesn't have any parameters, we need to defer building it because
+    # maybe we'll encounter another path with optional parameters that we can merge
+    defer_path(json, deferred)
   end
+end
+
+def defer_path(json, deferred)
+  if not deferred.key?(json["uri"])
+    deferred[json["uri"]] = []
+  end
+  deferred[json["uri"]].push(json)
 end
 
 # build new operation id for operations that have multiple parameters all going to the same endpoint
@@ -369,18 +379,24 @@ def build_operation_id(new_api_object, old_api_object, uri, method)
   end
   uri_array = uri.split("/")
   operation_name = uri_array[2]
-
-  # user has sub paths, and isn't a path param in disguise
-  if operation_name == "user" && uri_array[3] && uri_array[3][-1] != "}"
-    if uri_array[3] != "action"
-      operation_name = uri_array[2]+ "-" + uri_array[3]
-    else 
-      # need this because there are both /api/user/action and /api/user-action endpoints, and this code gives them the same name
-      operation_name = uri_array[2]+ "-" + "actioning"
+  if uri_array[3] && uri_array[3][-1] != "}"
+    # keeping this `if` to maintain backwards compatibility
+    if operation_name == "user"
+      # user has sub paths, and isn't a path param in disguise
+      if uri_array[3] != "action"
+        operation_name += "-" + uri_array[3]
+      else
+        # need this because there are both /api/user/action and /api/user-action endpoints, and this code gives them the same name
+        operation_name += "-" + "actioning"
+      end
+    else
+      # Using `generateTwoFactorSecret` in GET /api/two-factor/secret instead of `retrieveTwoFactorSecret`
+      if operation_name == "two-factor" && uri_array[3] == "secret"
+        prefix = "generate"
+      end
+      # always using last part of the operation
+      operation_name += "-" + uri_array[3]
     end
-  elsif operation_name == "identity-provider" && uri_array[3] && uri_array[3][-1] != "}"
-    # /api/identity-provider/link, /api/identity-provider/lookup, etc
-    operation_name = uri_array[2]+ "-" + uri_array[3]
   end
   operation_name = operation_name.split("-").map{|e| e.capitalize}.join("")
 
@@ -574,6 +590,7 @@ domain_files = []
 api_files = []
 schemas = {}
 components = {}
+deferred = {}
 
 # have to do additional processing on paths
 rawpaths = {}
@@ -647,7 +664,18 @@ components["schemas"] = schemas
 components["securitySchemes"] = build_security_schemes(api_key_auth_name)
 
 api_files.each do |fn|
-  process_api_file(fn, rawpaths, options)
+  process_api_file(fn, rawpaths, options, deferred)
+end
+
+# 
+if deferred.length
+  deferred.each do |uri, objects|
+    if not rawpaths.key?(uri)
+      objects.each do |json|
+        build_path(uri, json, rawpaths, true, options)
+      end
+    end
+  end
 end
 
 spec["paths"] = process_rawpaths(rawpaths, options)
