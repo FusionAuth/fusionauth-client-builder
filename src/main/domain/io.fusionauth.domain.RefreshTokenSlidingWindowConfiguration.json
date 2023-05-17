@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RefreshTokenSlidingWindowConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "RefreshTokenSlidingWindowConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "maximumTimeToLiveInMinutes" : {
+      "type" : "int"
+    }
+  }
+}

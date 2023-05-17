@@ -2,6 +2,12 @@
   "packageName" : "io.fusionauth.domain",
   "type" : "RefreshTokenRevocationPolicy",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "RefreshTokenRevocationPolicy"
+    } ]
+  } ],
   "fields" : {
     "onLoginPrevented" : {
       "type" : "boolean"

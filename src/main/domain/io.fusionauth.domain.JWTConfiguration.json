@@ -24,6 +24,9 @@
     "refreshTokenRevocationPolicy" : {
       "type" : "RefreshTokenRevocationPolicy"
     },
+    "refreshTokenSlidingWindowConfiguration" : {
+      "type" : "RefreshTokenSlidingWindowConfiguration"
+    },
     "refreshTokenTimeToLiveInMinutes" : {
       "type" : "int"
     },
