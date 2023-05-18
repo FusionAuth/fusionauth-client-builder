@@ -46,7 +46,7 @@ export class FusionAuthClient {
 
   /**
    * Sets whether and how cookies will be sent with each request.
-   * 
+   *
    * @param value The value that indicates whether and how cookies will be sent.
    * @returns {FusionAuthClient}
    */
@@ -161,7 +161,7 @@ export type UUID = string;
   [/#if]
 [/#macro]
 
-[#list domain?sort_by("type") as d]
+[#list domain as d]
 [#if d.description??]${d.description}[/#if][#t]
 [#if d.fields??]
 [#-- Use interface here because classes require the correct order for declaration if it extends something --]

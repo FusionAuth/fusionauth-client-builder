@@ -41,7 +41,7 @@ part 'FusionAuthDomain.g.dart';
   [/#if]
 [/#macro]
 
-[#list domain?sort_by("type") as d]
+[#list domain as d]
 [#--Skip cases--]
 [#if dartExcludes?seq_contains(d.type)]
   [#continue]

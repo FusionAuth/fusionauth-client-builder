@@ -103,7 +103,7 @@ func (b *BaseHTTPResponse) SetStatus(status int) {
 }
 
 [#assign ignoredTypes = ["HTTPHeaders","IntrospectResponse","LocalizedIntegers","LocalizedStrings","UserinfoResponse","ApplicationEvent"]/]
-[#list domain?sort_by("type") as d]
+[#list domain as d]
   [#if !(ignoredTypes?seq_contains(d.type))]
     [#assign subPackage = getSubPackage(d.packageName)/]
     [#if d.description??]${d.description}[/#if][#t]

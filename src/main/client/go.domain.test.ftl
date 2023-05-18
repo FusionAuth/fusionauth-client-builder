@@ -25,7 +25,7 @@ import(
 )
 
 [#assign ignoredTypes = ["HTTPHeaders","IntrospectResponse","LocalizedIntegers","LocalizedStrings","UserinfoResponse","ApplicationEvent"]/]
-[#list domain?sort_by("type") as d]
+[#list domain as d]
   [#if !(ignoredTypes?seq_contains(d.type))]
     [#if d.enum??]
 

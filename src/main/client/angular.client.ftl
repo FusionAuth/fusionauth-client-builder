@@ -134,7 +134,7 @@ export class FusionAuthClient {
 [/#macro]
 
 [#-- @formatter:off --]
-[#list domain?sort_by("type") as d]
+[#list domain as d]
 [#if d.description??]${d.description}[/#if][#t]
 [#if d.fields??]
 [#-- Use interface here because classes require the correct order for declaration if it extends something --]
