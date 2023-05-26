@@ -52,7 +52,7 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.4
 clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.4.1")
 dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:2.0.0-RC.6")
 file = loadPlugin(id: "org.savantbuild.plugin:file:2.0.0-RC.6")
-idea = loadPlugin(id: "org.savantbuild.plugin:idea:2.0.0-RC.6")
+idea = loadPlugin(id: "org.savantbuild.plugin:idea:2.0.0-RC.7")
 release = loadPlugin(id: "org.savantbuild.plugin:release-git:2.0.0-RC.6")
 
 // Plugin settings
