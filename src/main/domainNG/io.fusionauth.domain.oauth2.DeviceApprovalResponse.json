@@ -1,0 +1,41 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.DeviceApprovalResponse",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "deviceGrantStatus" : {
+      "className" : "io.fusionauth.api.domain.ExternalIdentifier$DeviceGrantStatus",
+      "type" : "ExternalIdentifier$DeviceGrantStatus"
+    },
+    "deviceInfo" : {
+      "className" : "io.fusionauth.domain.jwt.DeviceInfo",
+      "type" : "DeviceInfo"
+    },
+    "identityProviderLink" : {
+      "className" : "io.fusionauth.domain.IdentityProviderLink",
+      "type" : "IdentityProviderLink"
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.api.domain.ExternalIdentifier$DeviceGrantStatus", "io.fusionauth.domain.jwt.DeviceInfo", "io.fusionauth.domain.IdentityProviderLink", "java.util.UUID" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.oauth2.DeviceApprovalResponse",
+      "type" : "DeviceApprovalResponse"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "DeviceApprovalResponse"
+}

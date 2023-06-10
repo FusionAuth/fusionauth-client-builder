@@ -1,0 +1,33 @@
+{
+  "className" : "io.fusionauth.domain.api.identityProvider.IdentityProviderPendingLinkResponse",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "identityProviderTenantConfiguration" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration",
+      "type" : "IdentityProviderTenantConfiguration"
+    },
+    "linkCount" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
+    "pendingIdPLink" : {
+      "className" : "io.fusionauth.domain.provider.PendingIdPLink",
+      "type" : "PendingIdPLink"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration", "java.lang.Integer", "io.fusionauth.domain.provider.PendingIdPLink" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.identityProvider.IdentityProviderPendingLinkResponse",
+      "type" : "IdentityProviderPendingLinkResponse"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.identityProvider",
+  "type" : "IdentityProviderPendingLinkResponse"
+}

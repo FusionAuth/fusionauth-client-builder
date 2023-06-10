@@ -1,9 +1,6 @@
 {
   "className" : "io.fusionauth.domain.RefreshTokenRevocationPolicy",
-  "extends" : {
-    "className" : "java.lang.Object",
-    "type" : "Object"
-  },
+  "extends" : { },
   "fields" : {
     "onLoginPrevented" : {
       "type" : "boolean"
@@ -15,15 +12,8 @@
       "type" : "boolean"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable" ],
-  "interfaces" : [ {
-    "className" : "io.fusionauth.domain.Buildable",
-    "type" : "Buildable",
-    "typeArguments" : [ {
-      "className" : "io.fusionauth.domain.RefreshTokenRevocationPolicy",
-      "type" : "RefreshTokenRevocationPolicy"
-    } ]
-  } ],
+  "imports" : [ ],
+  "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",
   "type" : "RefreshTokenRevocationPolicy"
