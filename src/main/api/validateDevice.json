@@ -9,24 +9,24 @@
   "successResponse": "Void",
   "errorResponse": "Void",
   "anonymous": true,
-    "params": [
-      {
-        "name": "user_code",
-        "comments": [
-          "The end-user verification code."
-        ],
-        "type": "urlParameter",
-        "parameterName": "user_code",
-        "javaType": "String"
-      },
-      {
-        "name": "client_id",
-        "comments": [
-          "The client id."
-        ],
-        "type": "urlParameter",
-        "parameterName": "client_id",
-        "javaType": "String"
-      }
-    ]
+  "params": [
+    {
+      "name": "user_code",
+      "comments": [
+        "The end-user verification code."
+      ],
+      "type": "urlParameter",
+      "parameterName": "user_code",
+      "javaType": "String"
+    },
+    {
+      "name": "client_id",
+      "comments": [
+        "The client id."
+      ],
+      "type": "urlParameter",
+      "parameterName": "client_id",
+      "javaType": "String"
+    }
+  ]
 }

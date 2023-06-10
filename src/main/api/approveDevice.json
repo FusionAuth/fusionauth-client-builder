@@ -1,0 +1,46 @@
+{
+  "uri": "/oauth2/device/approve",
+  "comments": [
+    "Approve a device grant."
+  ],
+  "method": "post",
+  "methodName": "approveDevice",
+  "successResponse": "DeviceApprovalResponse",
+  "errorResponse": "Errors",
+  "params": [
+   {
+      "name": "client_id",
+      "comments": [
+        "(Optional) The unique client identifier. The client Id is the Id of the FusionAuth Application in which you are attempting to authenticate."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "client_secret",
+      "comments": [
+        "(Optional) The client secret. This value will be required if client authentication is enabled."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "token",
+      "comments": [
+        "The access token used to identify the user."
+      ],
+      "type": "form",
+      "parameterName": "user_code",
+      "javaType": "String"
+    },
+    {
+      "name": "user_code",
+      "comments": [
+        "The end-user verification code."
+      ],
+      "type": "form",
+      "parameterName": "user_code",
+      "javaType": "String"
+    }
+  ]
+}

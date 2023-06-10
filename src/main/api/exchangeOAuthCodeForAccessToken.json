@@ -21,7 +21,7 @@
     {
       "name": "client_id",
       "comments": [
-        "The unique client identifier. The client Id is the Id of the FusionAuth Application in which you are attempting to authenticate."
+        "(Optional) The unique client identifier. The client Id is the Id of the FusionAuth Application in which you are attempting to authenticate."
       ],
       "type": "form",
       "javaType": "String"
