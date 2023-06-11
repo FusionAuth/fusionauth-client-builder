@@ -6,8 +6,8 @@
   },
   "fields" : {
     "deviceGrantStatus" : {
-      "className" : "io.fusionauth.api.domain.ExternalIdentifier$DeviceGrantStatus",
-      "type" : "ExternalIdentifier$DeviceGrantStatus"
+      "className" : "java.lang.String",
+      "type" : "String"
     },
     "deviceInfo" : {
       "className" : "io.fusionauth.domain.jwt.DeviceInfo",
@@ -26,7 +26,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.api.domain.ExternalIdentifier$DeviceGrantStatus", "io.fusionauth.domain.jwt.DeviceInfo", "io.fusionauth.domain.IdentityProviderLink", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "io.fusionauth.domain.jwt.DeviceInfo", "io.fusionauth.domain.IdentityProviderLink", "java.util.UUID" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
