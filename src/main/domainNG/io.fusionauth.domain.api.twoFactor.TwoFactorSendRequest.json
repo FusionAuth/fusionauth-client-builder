@@ -5,6 +5,10 @@
     "type" : "Object"
   },
   "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "email" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -26,7 +30,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
