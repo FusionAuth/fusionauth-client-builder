@@ -1,0 +1,42 @@
+{
+  "uri": "/oauth2/device/user-code",
+  "comments": [
+    "Retrieve a user_code that is part of an in-progress Device Authorization Grant.",
+    "",
+    "This API is useful if you want to build your own login workflow to complete a device grant."
+  ],
+  "method": "get",
+  "methodName": "retrieveUserCode",
+  "successResponse": "Void",
+  "errorResponse": "Void",
+  "anonymous": true,
+  "params": [
+    {
+      "name": "client_id",
+      "comments": [
+        "The client id."
+      ],
+      "type": "form",
+      "parameterName": "client_id",
+      "javaType": "String"
+    },
+    {
+      "name": "client_secret",
+      "comments": [
+        "The client id."
+      ],
+      "type": "form",
+      "parameterName": "client_secret",
+      "javaType": "String"
+    },
+    {
+      "name": "user_code",
+      "comments": [
+        "The end-user verification code."
+      ],
+      "type": "form",
+      "parameterName": "user_code",
+      "javaType": "String"
+    }
+  ]
+}

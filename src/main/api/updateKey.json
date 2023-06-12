@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the new key information."
+        "The request that contains all the new key information."
       ],
       "type": "body",
       "javaType": "KeyRequest"

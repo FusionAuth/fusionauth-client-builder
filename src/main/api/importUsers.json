@@ -18,7 +18,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the information about all of the users to import."
+        "The request that contains all the information about all the users to import."
       ],
       "type": "body",
       "javaType": "ImportRequest"

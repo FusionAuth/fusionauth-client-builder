@@ -18,7 +18,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the information about all of the refresh tokens to import."
+        "The request that contains all the information about all the refresh tokens to import."
       ],
       "type": "body",
       "javaType": "RefreshTokenImportRequest"

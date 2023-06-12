@@ -13,7 +13,7 @@
       "name": "request",
       "underscoreName": "request",
       "comments": [
-        "The action request that includes all of the information about the action being taken including",
+        "The action request that includes all the information about the action being taken including",
         "the id of the action, any options and the duration (if applicable)."
       ],
       "type": "body",

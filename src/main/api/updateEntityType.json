@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the new Entity Type information."
+        "The request that contains all the new Entity Type information."
       ],
       "type": "body",
       "javaType": "EntityTypeRequest"

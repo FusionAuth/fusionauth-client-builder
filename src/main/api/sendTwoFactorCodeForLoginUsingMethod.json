@@ -20,7 +20,7 @@
     {
       "name": "request",
       "comments": [
-        "The Two Factor send request that contains all of the information used to send the Two Factor code to the user."
+        "The Two Factor send request that contains all the information used to send the Two Factor code to the user."
       ],
       "type": "body",
       "javaType": "TwoFactorSendRequest"

@@ -306,7 +306,7 @@ public class FusionAuthClient {
 [#list apis as api]
   /**
   [#list api.comments as comment]
-   * ${comment}
+   * [#if comment?has_content]${comment}[#else]<p>[/#if]
   [/#list]
    *
   [#list api.params![] as param]

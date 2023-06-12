@@ -1,7 +1,7 @@
 {
   "uri": "/api/identity-provider",
   "comments": [
-    "Retrieves the identity provider for the given id or all of the identity providers if the id is null."
+    "Retrieves the identity provider for the given id or all the identity providers if the id is null."
   ],
   "method": "get",
   "methodName": "retrieveIdentityProvider",

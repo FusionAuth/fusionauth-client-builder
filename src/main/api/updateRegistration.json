@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the new registration information."
+        "The request that contains all the new registration information."
       ],
       "type": "body",
       "javaType": "RegistrationRequest"

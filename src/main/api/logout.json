@@ -14,7 +14,7 @@
     {
       "name": "global",
       "comments": [
-        "When this value is set to true all of the refresh tokens issued to the owner of the",
+        "When this value is set to true all the refresh tokens issued to the owner of the",
         "provided token will be revoked."
       ],
       "type": "urlParameter",

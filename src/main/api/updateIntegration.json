@@ -11,7 +11,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the new integration information."
+        "The request that contains all the new integration information."
       ],
       "type": "body",
       "javaType": "IntegrationRequest"

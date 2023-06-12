@@ -20,7 +20,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the information about the modification."
+        "The request that contains all the information about the modification."
       ],
       "type": "body",
       "javaType": "ActionRequest"

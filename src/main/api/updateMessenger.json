@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all of the new messenger information."
+        "The request object that contains all the new messenger information."
       ],
       "type": "body",
       "javaType": "MessengerRequest"

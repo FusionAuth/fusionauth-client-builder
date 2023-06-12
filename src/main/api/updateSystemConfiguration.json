@@ -11,7 +11,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the new system configuration information."
+        "The request that contains all the new system configuration information."
       ],
       "type": "body",
       "javaType": "SystemConfigurationRequest"

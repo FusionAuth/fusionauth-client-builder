@@ -20,7 +20,7 @@
     {
       "name": "request",
       "comments": [
-        "The send email request that contains all of the information used to send the email."
+        "The send email request that contains all the information used to send the email."
       ],
       "type": "body",
       "javaType": "SendRequest"
