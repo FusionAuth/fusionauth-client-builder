@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "DeviceApprovalResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "DeviceApprovalResponse"
+    } ]
+  } ],
+  "fields" : {
+    "deviceGrantStatus" : {
+      "type" : "String"
+    },
+    "deviceInfo" : {
+      "type" : "DeviceInfo"
+    },
+    "identityProviderLink" : {
+      "type" : "IdentityProviderLink"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    },
+    "userId" : {
+      "type" : "UUID"
+    }
+  }
+}

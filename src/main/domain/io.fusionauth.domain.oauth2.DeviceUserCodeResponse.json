@@ -1,0 +1,31 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "DeviceUserCodeResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "DeviceUserCodeResponse"
+    } ]
+  } ],
+  "fields" : {
+    "client_id" : {
+      "type" : "String"
+    },
+    "deviceInfo" : {
+      "type" : "DeviceInfo"
+    },
+    "expires_in" : {
+      "type" : "int"
+    },
+    "pendingIdPLink" : {
+      "type" : "PendingIdPLink"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    },
+    "user_code" : {
+      "type" : "String"
+    }
+  }
+}

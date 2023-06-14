@@ -27,6 +27,9 @@
     "identityProviderId" : {
       "type" : "UUID"
     },
+    "identityProviderType" : {
+      "type" : "IdentityProviderType"
+    },
     "identityProviderUserId" : {
       "type" : "String"
     },

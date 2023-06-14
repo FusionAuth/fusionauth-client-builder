@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.api.identityProvider",
+  "type" : "IdentityProviderPendingLinkResponse",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "IdentityProviderPendingLinkResponse"
+    } ]
+  } ],
+  "fields" : {
+    "identityProviderTenantConfiguration" : {
+      "type" : "IdentityProviderTenantConfiguration"
+    },
+    "linkCount" : {
+      "type" : "int"
+    },
+    "pendingIdPLink" : {
+      "type" : "PendingIdPLink"
+    }
+  }
+}
