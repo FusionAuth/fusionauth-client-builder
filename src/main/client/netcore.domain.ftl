@@ -56,7 +56,7 @@
 using ${replaceKeywords(package)};
   [/#if]
 [/#list]
-[#if domain_item.type == "IdentityProviderSearchCriteria"]
+[#if ["DeviceUserCodeResponse", "IdentityProviderLink", "IdentityProviderPendingLinkResponse", "IdentityProviderSearchCriteria"]?seq_contains(domain_item.type)]
 using io.fusionauth.domain.provider;
 [/#if]
 [#if domain_item.enum?? && (global.needsConverter(domain_item) || global.needsConverterNoArgs(domain_item))]

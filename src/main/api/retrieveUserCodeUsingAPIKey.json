@@ -8,7 +8,7 @@
     "This request will require an API key."
   ],
   "method": "get",
-  "methodName": "retrieveUserCode",
+  "methodName": "retrieveUserCodeUsingAPIKey",
   "successResponse": "Void",
   "errorResponse": "Void",
   "anonymous": false,
