@@ -24,6 +24,10 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "identityProviderType" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderType",
+      "type" : "IdentityProviderType"
+    },
     "identityProviderUserId" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -49,7 +53,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.Tenantable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.Tenantable", "java.util.Map", "java.lang.String", "java.util.UUID", "io.fusionauth.domain.provider.IdentityProviderType", "java.time.ZonedDateTime" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

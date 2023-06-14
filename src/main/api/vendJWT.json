@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the claims for this JWT."
+        "The request that contains all the claims for this JWT."
       ],
       "type": "body",
       "javaType": "JWTVendRequest"

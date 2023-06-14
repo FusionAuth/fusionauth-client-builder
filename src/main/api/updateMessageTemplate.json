@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the new message template information."
+        "The request that contains all the new message template information."
       ],
       "type": "body",
       "javaType": "MessageTemplateRequest"

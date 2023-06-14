@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the new theme information."
+        "The request that contains all the new theme information."
       ],
       "type": "body",
       "javaType": "ThemeRequest"

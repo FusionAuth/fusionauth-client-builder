@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all of the new form information."
+        "The request object that contains all the new form information."
       ],
       "type": "body",
       "javaType": "FormRequest"

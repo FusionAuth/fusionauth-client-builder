@@ -22,11 +22,11 @@
       "type" : "String"
     },
     "type" : {
-      "className" : "io.fusionauth.domain.jwt.DeviceInfo$DeviceType",
-      "type" : "DeviceInfo$DeviceType"
+      "className" : "java.lang.String",
+      "type" : "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.jwt.DeviceInfo$DeviceType" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.time.ZonedDateTime" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

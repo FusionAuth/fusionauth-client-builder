@@ -33,7 +33,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the new role information."
+        "The request that contains all the new role information."
       ],
       "type": "body",
       "javaType": "ApplicationRequest"

@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the new user information."
+        "The request that contains all the new user information."
       ],
       "type": "body",
       "javaType": "UserRequest"

@@ -33,7 +33,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the new permission information."
+        "The request that contains all the new permission information."
       ],
       "type": "body",
       "javaType": "EntityTypeRequest"

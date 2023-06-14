@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the new webhook information."
+        "The request that contains all the new webhook information."
       ],
       "type": "body",
       "javaType": "WebhookRequest"

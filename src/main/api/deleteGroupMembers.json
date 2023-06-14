@@ -11,7 +11,7 @@
     {
       "name": "request",
       "comments": [
-        "The member request that contains all of the information used to remove members to the group."
+        "The member request that contains all the information used to remove members to the group."
       ],
       "type": "body",
       "javaType": "MemberDeleteRequest"

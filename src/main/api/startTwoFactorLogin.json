@@ -6,7 +6,7 @@
     "to send the code out-of-band. The Two-Factor login is completed by making a request to the Two-Factor Login ",
     "API (/api/two-factor/login). with the two-factor identifier and the one-time use code.",
     "",
-    "This API is intended to allow you to begin a Two-Factor login outside of a normal login that originated from the Login API (/api/login)."
+    "This API is intended to allow you to begin a Two-Factor login outside a normal login that originated from the Login API (/api/login)."
   ],
   "method": "post",
   "methodName": "startTwoFactorLogin",
@@ -16,7 +16,7 @@
     {
       "name": "request",
       "comments": [
-        "The Two-Factor start request that contains all of the information used to begin the Two-Factor login request."
+        "The Two-Factor start request that contains all the information used to begin the Two-Factor login request."
       ],
       "type": "body",
       "javaType": "TwoFactorStartRequest"

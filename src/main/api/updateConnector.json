@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all of the new connector information."
+        "The request object that contains all the new connector information."
       ],
       "type": "body",
       "javaType": "ConnectorRequest"

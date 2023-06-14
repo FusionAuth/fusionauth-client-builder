@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all of the new tenant information."
+        "The request that contains all the new tenant information."
       ],
       "type": "body",
       "javaType": "TenantRequest"

@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all of the information needed to create the APIKey."
+        "The request object that contains all the information needed to create the APIKey."
       ],
       "type": "body",
       "javaType": "APIKeyRequest"
