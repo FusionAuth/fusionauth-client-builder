@@ -184,7 +184,7 @@ func (rc *restClient) WithUriSegment(segment string) *restClient {
 
 [#-- @formatter:off --]
 [#-- Ignoring these few following APIs due to currently being unable to convert the json response into the actual IdentityProvider type. Need a conversion utility. --]
-[#assign ignoredAPIs = ["CreateIdentityProvider","IntrospectAccessToken","RetrieveIdentityProvider","RetrieveIdentityProviders","RetrieveUserInfoFromAccessToken","UpdateIdentityProvider"]/]
+[#assign ignoredAPIs = ["CreateIdentityProvider","IntrospectAccessToken","IntrospectClientCredentialsAccessToken","RetrieveIdentityProvider","RetrieveIdentityProviders","RetrieveUserInfoFromAccessToken","UpdateIdentityProvider"]/]
 [#list apis as api]
   [#if !(ignoredAPIs?seq_contains(api.methodName?cap_first))]
 // ${api.methodName?cap_first}
