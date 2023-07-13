@@ -40,6 +40,10 @@
       "className" : "io.fusionauth.domain.Requirable",
       "type" : "Requirable"
     },
+    "preferredLanguages" : {
+      "className" : "io.fusionauth.domain.Requirable",
+      "type" : "Requirable"
+    },
     "type" : {
       "className" : "io.fusionauth.domain.Application$RegistrationConfiguration$RegistrationType",
       "type" : "Application$RegistrationConfiguration$RegistrationType"

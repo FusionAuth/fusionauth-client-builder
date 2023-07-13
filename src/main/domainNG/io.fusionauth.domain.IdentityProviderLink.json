@@ -24,6 +24,10 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "identityProviderName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "identityProviderType" : {
       "className" : "io.fusionauth.domain.provider.IdentityProviderType",
       "type" : "IdentityProviderType"
