@@ -86,7 +86,7 @@ class FusionAuthClient {
     [#if param.type == "form"][#assign formPost = true/][/#if]
   [/#list]
   [#if formPost]
-    var body = Map<String, dynamic>();
+    var body = <String, dynamic>{};
     [#list api.params![] as param]
       [#if param.type == "form"]
     body['${param.name}'] = ${(param.constant?? && param.constant)?then("'"+param.value+"'", param.name)};
