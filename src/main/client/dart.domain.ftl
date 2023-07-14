@@ -57,7 +57,7 @@ class [@printType d/] {
   [#assign scrubbedName = global.scrubName(fieldName)/]
   [#if field.description??]${field.description}[/#if][#t]
   [#if field.anySetter?? && field.anySetter]
-  final Map<String, dynamic> _${scrubbedName} = Map<String, dynamic>();
+  final Map<String, dynamic> _${scrubbedName} = <String, dynamic>{};
   dynamic operator[](String index) => _${scrubbedName}[index]; // Get any other fields
   void operator[]=(String index, dynamic value) => _${scrubbedName}[index] = value; // Set any other fields
   [#else]
