@@ -88,6 +88,7 @@ class [@printType d/] {
   [#else]
   factory BaseIdentityProvider.fromJson(Map<String, dynamic> json) => BaseIdentityProviderFromJson(json);
   [/#if]
+  @override
   Map<String, dynamic> toJson() => _$${d.type}ToJson(this);
 }
 [#else]
