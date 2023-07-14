@@ -1,0 +1,33 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SAMLv2AssertionEncryptionConfiguration",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "SAMLv2AssertionEncryptionConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "digestAlgorithm" : {
+      "type" : "String"
+    },
+    "encryptionAlgorithm" : {
+      "type" : "String"
+    },
+    "keyLocation" : {
+      "type" : "String"
+    },
+    "keyTransportAlgorithm" : {
+      "type" : "String"
+    },
+    "keyTransportEncryptionKeyId" : {
+      "type" : "UUID"
+    },
+    "maskGenerationFunction" : {
+      "type" : "String"
+    }
+  }
+}

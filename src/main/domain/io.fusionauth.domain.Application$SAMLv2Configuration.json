@@ -11,6 +11,9 @@
     } ]
   } ],
   "fields" : {
+    "assertionEncryptionConfiguration" : {
+      "type" : "SAMLv2AssertionEncryptionConfiguration"
+    },
     "audience" : {
       "type" : "String"
     },

@@ -1,0 +1,45 @@
+{
+  "className" : "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2AssertionEncryptionConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "digestAlgorithm" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "encryptionAlgorithm" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "keyLocation" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "keyTransportAlgorithm" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "keyTransportEncryptionKeyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "maskGenerationFunction" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.UUID" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2AssertionEncryptionConfiguration",
+      "type" : "Application$SAMLv2Configuration$SAMLv2AssertionEncryptionConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Application$SAMLv2Configuration$SAMLv2AssertionEncryptionConfiguration"
+}
