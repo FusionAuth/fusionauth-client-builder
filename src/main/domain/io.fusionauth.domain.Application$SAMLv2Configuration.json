@@ -38,6 +38,9 @@
     "keyId" : {
       "type" : "UUID"
     },
+    "loginHintConfiguration" : {
+      "type" : "LoginHintConfiguration"
+    },
     "logout" : {
       "type" : "SAMLv2Logout"
     },

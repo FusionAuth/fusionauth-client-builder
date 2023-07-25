@@ -40,6 +40,10 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "loginHintConfiguration" : {
+      "className" : "io.fusionauth.domain.provider.LoginHintConfiguration",
+      "type" : "LoginHintConfiguration"
+    },
     "logout" : {
       "className" : "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2Logout",
       "type" : "Application$SAMLv2Configuration$SAMLv2Logout"
@@ -60,7 +64,7 @@
       "type" : "Application$SAMLv2Configuration$XMLSignatureLocation"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2AssertionEncryptionConfiguration", "java.lang.String", "java.util.List", "java.net.URI", "java.util.UUID", "io.fusionauth.domain.SAMLv2IdPInitiatedLoginConfiguration", "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2Logout", "io.fusionauth.domain.CanonicalizationMethod", "io.fusionauth.domain.Application$SAMLv2Configuration$XMLSignatureLocation" ],
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2AssertionEncryptionConfiguration", "java.lang.String", "java.util.List", "java.net.URI", "java.util.UUID", "io.fusionauth.domain.SAMLv2IdPInitiatedLoginConfiguration", "io.fusionauth.domain.provider.LoginHintConfiguration", "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2Logout", "io.fusionauth.domain.CanonicalizationMethod", "io.fusionauth.domain.Application$SAMLv2Configuration$XMLSignatureLocation" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
