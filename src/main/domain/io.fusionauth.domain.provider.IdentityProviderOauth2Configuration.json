@@ -24,6 +24,9 @@
     "emailClaim" : {
       "type" : "String"
     },
+    "emailVerifiedClaim" : {
+      "type" : "String"
+    },
     "issuer" : {
       "type" : "URI"
     },
