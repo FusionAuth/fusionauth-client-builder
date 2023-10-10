@@ -166,11 +166,11 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: ", JSONColumnable", value: "")
     filter(token: "implements JSONColumnable, ", value: "")
     filter(token: "implements JSONColumnable", value: "")
-    filter(token: "@JSONColumn", value: "")
-    filter(token: "@ExcludeFromJSONColumn", value: "")
-    filter(token: "import com.inversoft.mybatis.ExcludeFromJSONColumn;", value: "")
-    filter(token: "import com.inversoft.mybatis.JSONColumn;", value: "")
-    filter(token: "import com.inversoft.mybatis.JSONColumnable;", value: "")
+    filter(token: "@JSONColumn\n  ", value: "")
+    filter(token: "@ExcludeFromJSONColumn\n  ", value: "")
+    filter(token: "import com.inversoft.mybatis.ExcludeFromJSONColumn;\n", value: "")
+    filter(token: "import com.inversoft.mybatis.JSONColumn;\n", value: "")
+    filter(token: "import com.inversoft.mybatis.JSONColumnable;\n", value: "")
   }
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/client")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/client") {
