@@ -9,6 +9,10 @@
     } ]
   },
   "fields" : {
+    "nextResults" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "results" : {
       "className" : "java.util.List",
       "type" : "List"
@@ -20,7 +24,7 @@
       "type" : "boolean"
     }
   },
-  "imports" : [ "java.util.List" ],
+  "imports" : [ "java.lang.String", "java.util.List" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.search",

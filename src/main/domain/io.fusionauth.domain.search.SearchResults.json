@@ -6,6 +6,9 @@
     "name" : "T"
   } ],
   "fields" : {
+    "nextResults" : {
+      "type" : "String"
+    },
     "results" : {
       "type" : "List",
       "typeArguments" : [ {

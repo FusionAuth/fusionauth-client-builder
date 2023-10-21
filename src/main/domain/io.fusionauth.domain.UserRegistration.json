@@ -71,6 +71,9 @@
     },
     "verified" : {
       "type" : "boolean"
+    },
+    "verifiedInstant" : {
+      "type" : "ZonedDateTime"
     }
   }
 }

@@ -18,6 +18,9 @@
     "hardDelete" : {
       "type" : "boolean"
     },
+    "limit" : {
+      "type" : "int"
+    },
     "query" : {
       "type" : "String"
     },

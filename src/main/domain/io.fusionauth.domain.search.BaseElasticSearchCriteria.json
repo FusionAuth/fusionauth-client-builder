@@ -15,6 +15,9 @@
         "type" : "UUID"
       } ]
     },
+    "nextResults" : {
+      "type" : "String"
+    },
     "query" : {
       "type" : "String"
     },

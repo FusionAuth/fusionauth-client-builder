@@ -15,7 +15,7 @@
     "userIds" : {
       "type" : "List",
       "typeArguments" : [ {
-        "type" : "String"
+        "type" : "UUID"
       } ]
     }
   }

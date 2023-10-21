@@ -2,6 +2,10 @@
   "className" : "io.fusionauth.domain.api.user.SearchResponse",
   "extends" : { },
   "fields" : {
+    "nextResults" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "total" : {
       "type" : "long"
     },
@@ -17,7 +21,7 @@
       } ]
     }
   },
-  "imports" : [ "java.util.List", "io.fusionauth.domain.User" ],
+  "imports" : [ "java.lang.String", "java.util.List", "io.fusionauth.domain.User" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api.user",

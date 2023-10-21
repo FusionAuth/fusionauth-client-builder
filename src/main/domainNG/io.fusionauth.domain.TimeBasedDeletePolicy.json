@@ -5,11 +5,15 @@
     "type" : "Enableable"
   },
   "fields" : {
+    "enabledInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
     "numberOfDaysToRetain" : {
       "type" : "int"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable" ],
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.time.ZonedDateTime" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

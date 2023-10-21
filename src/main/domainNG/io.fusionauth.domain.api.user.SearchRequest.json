@@ -1,8 +1,8 @@
 {
   "className" : "io.fusionauth.domain.api.user.SearchRequest",
   "extends" : {
-    "className" : "java.lang.Object",
-    "type" : "Object"
+    "className" : "io.fusionauth.domain.api.ExpandableRequest",
+    "type" : "ExpandableRequest"
   },
   "fields" : {
     "search" : {
@@ -10,7 +10,7 @@
       "type" : "UserSearchCriteria"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.search.UserSearchCriteria" ],
+  "imports" : [ "io.fusionauth.domain.api.ExpandableRequest", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.search.UserSearchCriteria" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -25,6 +25,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "emailVerifiedClaim" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "issuer" : {
       "className" : "java.net.URI",
       "type" : "URI"

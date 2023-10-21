@@ -11,6 +11,9 @@
     "hardDelete" : {
       "type" : "boolean"
     },
+    "limit" : {
+      "type" : "int"
+    },
     "query" : {
       "className" : "java.lang.String",
       "type" : "String"

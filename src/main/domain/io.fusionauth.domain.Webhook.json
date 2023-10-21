@@ -57,8 +57,14 @@
     "readTimeout" : {
       "type" : "int"
     },
+    "signatureConfiguration" : {
+      "type" : "WebhookSignatureConfiguration"
+    },
     "sslCertificate" : {
       "type" : "String"
+    },
+    "sslCertificateKeyId" : {
+      "type" : "UUID"
     },
     "tenantIds" : {
       "type" : "List",

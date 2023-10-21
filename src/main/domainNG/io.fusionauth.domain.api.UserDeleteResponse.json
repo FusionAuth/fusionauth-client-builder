@@ -15,12 +15,12 @@
       "className" : "java.util.List",
       "type" : "List",
       "typeArguments" : [ {
-        "className" : "java.lang.String",
-        "type" : "String"
+        "className" : "java.util.UUID",
+        "type" : "UUID"
       } ]
     }
   },
-  "imports" : [ "java.util.List", "java.lang.String" ],
+  "imports" : [ "java.util.List", "java.util.UUID" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

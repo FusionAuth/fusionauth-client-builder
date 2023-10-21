@@ -85,6 +85,10 @@
     },
     "verified" : {
       "type" : "boolean"
+    },
+    "verifiedInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
     }
   },
   "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "java.util.List", "java.util.Locale", "java.util.UUID", "java.time.ZonedDateTime", "java.util.SortedSet", "java.time.ZoneId", "io.fusionauth.domain.ContentStatus" ],

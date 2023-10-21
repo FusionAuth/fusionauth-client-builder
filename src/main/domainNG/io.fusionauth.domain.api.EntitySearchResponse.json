@@ -10,6 +10,10 @@
         "type" : "Entity"
       } ]
     },
+    "nextResults" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "total" : {
       "type" : "long"
     },
@@ -17,7 +21,7 @@
       "type" : "boolean"
     }
   },
-  "imports" : [ "java.util.List", "io.fusionauth.domain.Entity" ],
+  "imports" : [ "java.util.List", "io.fusionauth.domain.Entity", "java.lang.String" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

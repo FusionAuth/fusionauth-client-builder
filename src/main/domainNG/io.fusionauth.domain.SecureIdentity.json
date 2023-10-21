@@ -63,6 +63,10 @@
     },
     "verified" : {
       "type" : "boolean"
+    },
+    "verifiedInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
     }
   },
   "imports" : [ "java.time.ZonedDateTime", "io.fusionauth.domain.BreachedPasswordStatus", "java.util.UUID", "java.lang.String", "java.lang.Integer", "io.fusionauth.domain.ChangePasswordReason", "io.fusionauth.domain.ContentStatus" ],

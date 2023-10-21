@@ -66,9 +66,17 @@
       "className" : "java.lang.Integer",
       "type" : "Integer"
     },
+    "signatureConfiguration" : {
+      "className" : "io.fusionauth.domain.WebhookSignatureConfiguration",
+      "type" : "WebhookSignatureConfiguration"
+    },
     "sslCertificate" : {
       "className" : "java.lang.String",
       "type" : "String"
+    },
+    "sslCertificateKeyId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
     },
     "tenantIds" : {
       "className" : "java.util.List",
@@ -83,7 +91,7 @@
       "type" : "URI"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.lang.Integer", "java.util.Map", "java.lang.String", "io.fusionauth.domain.event.EventType", "java.lang.Boolean", "io.fusionauth.domain.HTTPHeaders", "java.util.UUID", "java.time.ZonedDateTime", "java.util.List", "java.net.URI" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.lang.Integer", "java.util.Map", "java.lang.String", "io.fusionauth.domain.event.EventType", "java.lang.Boolean", "io.fusionauth.domain.HTTPHeaders", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.WebhookSignatureConfiguration", "java.util.List", "java.net.URI" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

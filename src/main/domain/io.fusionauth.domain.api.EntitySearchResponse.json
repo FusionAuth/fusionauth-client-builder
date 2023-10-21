@@ -9,6 +9,9 @@
         "type" : "Entity"
       } ]
     },
+    "nextResults" : {
+      "type" : "String"
+    },
     "total" : {
       "type" : "long"
     }
