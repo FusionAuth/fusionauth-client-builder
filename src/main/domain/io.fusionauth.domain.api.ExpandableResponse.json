@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ExpandableResponse",
+  "description" : "/**\n * An expandable API response.\n *\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "expandable" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    }
+  }
+}

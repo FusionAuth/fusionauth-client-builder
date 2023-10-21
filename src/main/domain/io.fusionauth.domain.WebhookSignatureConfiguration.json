@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookSignatureConfiguration",
+  "description" : "/**\n * Configuration for signing webhooks.\n *\n * @author Brent Halsey\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebhookSignatureConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "signingKeyId" : {
+      "type" : "UUID"
+    }
+  }
+}
