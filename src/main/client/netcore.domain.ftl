@@ -73,7 +73,8 @@ using io.fusionauth.converters;
 using System.Collections.Generic;
 using System;
 
-namespace ${replaceKeywords(domain_item.packageName)} {
+namespace ${replaceKeywords(domain_item.packageName)}
+{
 
   [#if domain_item.description??]
   ${domain_item.description?replace("\n(?!$)", "\n  ", "r")}[#rt]
