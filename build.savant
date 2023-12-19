@@ -51,7 +51,7 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.4
 // Plugins
 clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.4.1")
 dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:2.0.0-RC.6")
-file = loadPlugin(id: "org.savantbuild.plugin:file:2.0.0-RC.6")
+file = loadPlugin(id: "org.savantbuild.plugin:file:2.0.0-RC.7.{integration}")
 idea = loadPlugin(id: "org.savantbuild.plugin:idea:2.0.0-RC.7")
 release = loadPlugin(id: "org.savantbuild.plugin:release-git:2.0.0-RC.6")
 
@@ -162,7 +162,7 @@ target(name: "build-java", description: "Build the Java Client Library") {
 
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/domain") {
-    fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/domain")
+    fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/domain", excludePatterns: ["internal/annotation/*"])
     filter(token: ", JSONColumnable", value: "")
     filter(token: "implements JSONColumnable, ", value: "")
     filter(token: "implements JSONColumnable", value: "")
@@ -171,10 +171,17 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: "import com.inversoft.mybatis.ExcludeFromJSONColumn;\n", value: "")
     filter(token: "import com.inversoft.mybatis.JSONColumn;\n", value: "")
     filter(token: "import com.inversoft.mybatis.JSONColumnable;\n", value: "")
+    filter(token: "import io.fusionauth.domain.internal.annotation.MaskStringEntry;\n", value: "")
+    filter(token: "import io.fusionauth.domain.internal.annotation.MaskString;\n", value: "")
+    filter(token: "import io.fusionauth.domain.internal.annotation.InternalUse;\n", value: "")
+    filter(token: ".*@MaskStringEntry\\.List\\(\\{(\\n|.)*\\}\\)\\n", value: "")
+    filter(token: ".*@MaskStringEntry\\(.*\n", value: "")
+    filter(token: ".*@MaskString.*\n", value: "")
+    filter(token: ".*@InternalUse.*\n ", value: "")
   }
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/client")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/client") {
-    fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/client")
+    fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/client", excludePatterns: ["json/internal/*"])
   }
 }
 

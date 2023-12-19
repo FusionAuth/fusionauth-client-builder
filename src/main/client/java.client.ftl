@@ -260,6 +260,8 @@ public class FusionAuthClient {
 
   private final String baseURL;
 
+  private final ObjectMapper customMapper;
+
   private final String tenantId;
 
   public int connectTimeout;
@@ -279,11 +281,16 @@ public class FusionAuthClient {
   }
 
   public FusionAuthClient(String apiKey, String baseURL, int connectTimeout, int readTimeout, String tenantId) {
+    this(apiKey, baseURL, connectTimeout, readTimeout, tenantId, null);
+  }
+
+  public FusionAuthClient(String apiKey, String baseURL, int connectTimeout, int readTimeout, String tenantId, ObjectMapper objectMapper) {
     this.apiKey = apiKey;
     this.baseURL = baseURL;
     this.connectTimeout = connectTimeout;
     this.readTimeout = readTimeout;
     this.tenantId = tenantId;
+    this.customMapper = objectMapper;
   }
 
   /**
@@ -301,6 +308,17 @@ public class FusionAuthClient {
     }
 
     return new FusionAuthClient(apiKey, baseURL, connectTimeout, readTimeout, tenantId.toString());
+  }
+
+  /**
+  * Creates a new copy of this client with the object mapper. This will take the place of the default FusionAuth object mapper when serializing
+  * objects to JSON for the request body
+  *
+  * @param objectMapper The object mapper
+  * @return the new FusionAuthClient
+  */
+  public FusionAuthClient setObjectMapper(ObjectMapper objectMapper) {
+    return new FusionAuthClient(apiKey, baseURL, connectTimeout, readTimeout, tenantId, objectMapper);
   }
 
 [#list apis as api]
@@ -346,7 +364,7 @@ public class FusionAuthClient {
       [#elseif param.type == "urlParameter"]
         .urlParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, param.name)})
       [#elseif param.type == "body"]
-        .bodyHandler(new JSONBodyHandler(${param.name}, objectMapper))
+        .bodyHandler(new JSONBodyHandler(${param.name}, objectMapper()))
       [/#if]
     [/#list]
     [#if formPost]
@@ -375,5 +393,9 @@ public class FusionAuthClient {
     }
 
     return client;
+  }
+
+  private ObjectMapper objectMapper() {
+    return customMapper != null ? customMapper : objectMapper;
   }
 }
