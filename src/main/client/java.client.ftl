@@ -312,7 +312,7 @@ public class FusionAuthClient {
 
   /**
   * Creates a new copy of this client with the object mapper. This will take the place of the default FusionAuth object mapper when serializing
-  * objects to JSON for the request body
+  * and deserializing objects to and from JSON for the request and response bodies.
   *
   * @param objectMapper The object mapper
   * @return the new FusionAuthClient
@@ -382,8 +382,8 @@ public class FusionAuthClient {
 
   protected <T, U> RESTClient<T, U> startAnonymous(Class<T> type, Class<U> errorType) {
     RESTClient<T, U> client = new RESTClient<>(type, errorType)
-        .successResponseHandler(type != Void.TYPE ? new JSONResponseHandler<>(type, objectMapper) : null)
-        .errorResponseHandler(errorType != Void.TYPE ? new JSONResponseHandler<>(errorType, objectMapper) : null)
+        .successResponseHandler(type != Void.TYPE ? new JSONResponseHandler<>(type, objectMapper()) : null)
+        .errorResponseHandler(errorType != Void.TYPE ? new JSONResponseHandler<>(errorType, objectMapper()) : null)
         .url(baseURL)
         .connectTimeout(connectTimeout)
         .readTimeout(readTimeout);
