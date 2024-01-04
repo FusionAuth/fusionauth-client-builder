@@ -1,7 +1,7 @@
 {
   "uri": "/api/application",
   "comments": [
-    "Updates the application role with the given id for the application."
+    "Updates the application role with the given Id for the application."
   ],
   "method": "put",
   "methodName": "updateApplicationRole",

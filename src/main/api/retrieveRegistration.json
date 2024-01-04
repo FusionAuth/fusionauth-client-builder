@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/registration",
   "comments": [
-    "Retrieves the user registration for the user with the given id and the given application id."
+    "Retrieves the user registration for the user with the given Id and the given application id."
   ],
   "method": "get",
   "methodName": "retrieveRegistration",

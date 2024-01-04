@@ -14,7 +14,7 @@
       "underscoreName": "request",
       "comments": [
         "The action request that includes all the information about the action being taken including",
-        "the id of the action, any options and the duration (if applicable)."
+        "the Id of the action, any options and the duration (if applicable)."
       ],
       "type": "body",
       "javaType": "ActionRequest"

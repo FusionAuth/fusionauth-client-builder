@@ -1,7 +1,7 @@
 {
   "uri": "/api/application",
   "comments": [
-    "Retrieves the application for the given id or all the applications if the id is null."
+    "Retrieves the application for the given Id or all the applications if the Id is null."
   ],
   "method": "get",
   "methodName": "retrieveApplication",

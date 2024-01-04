@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/search",
   "comments": [
-    "Retrieves the users for the given ids. If any id is invalid, it is ignored."
+    "Retrieves the users for the given ids. If any Id is invalid, it is ignored."
   ],
   "method": "get",
   "methodName": "searchUsersByIds",

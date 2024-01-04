@@ -1,7 +1,7 @@
 {
   "uri": "/api/application",
   "comments": [
-    "Creates a new role for an application. You must specify the id of the application you are creating the role for.",
+    "Creates a new role for an application. You must specify the Id of the application you are creating the role for.",
     "You can optionally specify an Id for the role inside the ApplicationRole object itself, if not provided one will be generated."
   ],
   "method": "post",
