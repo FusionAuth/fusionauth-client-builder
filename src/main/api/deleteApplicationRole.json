@@ -12,7 +12,7 @@
     {
       "name": "applicationId",
       "comments": [
-        "The Id of the application to deactivate."
+        "The Id of the application that the role belongs to."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
