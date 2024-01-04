@@ -1,0 +1,35 @@
+{
+  "uri": "/api/application",
+  "comments": [
+    "Hard deletes a custom OAuth scope. This action will cause tokens that contain the deleted scope to be rejected.",
+    "OAuth workflows that are still requesting the deleted custom scope may fail depending on the application's unknown scope policy."
+  ],
+  "method": "delete",
+  "methodName": "deleteOAuthScope",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "applicationId",
+      "comments": [
+        "The Id of the application that the custom scope belongs to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "constant": true,
+      "name": "scope",
+      "type": "urlSegment",
+      "value": "\"scope\""
+    },
+    {
+      "name": "scope",
+      "comments": [
+        "The Id of the custom scope to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}
