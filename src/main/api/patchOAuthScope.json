@@ -1,10 +1,10 @@
 {
   "uri": "/api/application",
   "comments": [
-    "Updates the custom OAuth scope with the given Id for the application."
+    "Updates, via PATCH, the custom OAuth scope with the given Id for the application."
   ],
-  "method": "put",
-  "methodName": "updateOAuthScope",
+  "method": "patch",
+  "methodName": "patchOAuthScope",
   "successResponse": "ApplicationResponse",
   "errorResponse": "Errors",
   "params": [
@@ -33,7 +33,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains all the new custom scope information."
+        "The request that contains just the new custom scope information."
       ],
       "type": "body",
       "javaType": "ApplicationRequest"
