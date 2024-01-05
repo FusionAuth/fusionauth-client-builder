@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2023, FusionAuth, All Rights Reserved
+ * Copyright (c) 2019-2024, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -93,10 +93,11 @@ target(name: "generateDomain", description: "Generates all of the json files for
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwks/domain/", outDir: "src/main/domain")
 
   [
+      "io.fusionauth.api.domain.json.annotation.InternalUse.json",
+      "io.fusionauth.api.domain.json.annotation.MaskString.json",
+      "io.fusionauth.api.domain.json.annotation.MaskStringEntry.json",
       "io.fusionauth.domain.Buildable.json",
       "io.fusionauth.domain.Integration.json",
-      "io.fusionauth.domain.internal.annotation.InternalUse.json",
-      "io.fusionauth.domain.search.AuthenticationKeySearchCriteria.json",
       "io.fusionauth.domain.util.DefaultTools.json",
       "io.fusionauth.domain.util.Normalizer.json",
       "io.fusionauth.domain.util.SQLTools.json",
@@ -171,9 +172,9 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: "import com.inversoft.mybatis.ExcludeFromJSONColumn;\n", value: "")
     filter(token: "import com.inversoft.mybatis.JSONColumn;\n", value: "")
     filter(token: "import com.inversoft.mybatis.JSONColumnable;\n", value: "")
-    filter(token: "import io.fusionauth.domain.internal.annotation.MaskStringEntry;\n", value: "")
-    filter(token: "import io.fusionauth.domain.internal.annotation.MaskString;\n", value: "")
-    filter(token: "import io.fusionauth.domain.internal.annotation.InternalUse;\n", value: "")
+    filter(token: "import io.fusionauth.api.domain.json.annotation.MaskStringEntry;\n", value: "")
+    filter(token: "import io.fusionauth.api.domain.json.annotation.MaskString;\n", value: "")
+    filter(token: "import io.fusionauth.api.domain.json.annotation.InternalUse;\n", value: "")
     filter(token: ".*@MaskStringEntry\\.List\\(\\{(\\n|.)*\\}\\)\\n", value: "")
     filter(token: ".*@MaskStringEntry\\(.*\n", value: "")
     filter(token: ".*@MaskString.*\n", value: "")
