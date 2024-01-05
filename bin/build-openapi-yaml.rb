@@ -459,7 +459,7 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
   openapiobj["operationId"] = operationId
   if json["anonymous"] == true
     # sometimes anonymous requests can take JWT bearer tokens. We shouldn't see that on any other request definitions, which all default to API key auth
-    if json["authorization"] == '"Bearer " + encodedJWT'
+    if json["authorization"] and json["authorization"].include? 'Bearer'
       openapiobj["security"] = []
       openapiobj["security"].push({BEARER_AUTH_SCHEME_NAME => []})
     end
