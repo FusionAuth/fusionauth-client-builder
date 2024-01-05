@@ -297,7 +297,7 @@ public class FusionAuthClient {
   * Creates a new copy of this client with the provided tenant Id. When more than one tenant is configured in FusionAuth
   * use this method to set the tenant Id prior to making API calls.
   * <p>
-  * When only one tenant is configured, or you have you have not configured tenants, setting the tenant is not necessary.
+  * When only one tenant is configured, or you have not configured tenants, setting the tenant is not necessary.
   *
   * @param tenantId The tenant Id
   * @return the new FusionAuthClient
