@@ -14,8 +14,10 @@ options[:sourcedir] = "../src/"
 options[:outfile] = "openapi.yaml"
 options[:apiversion] = "1.0.0"
 
-# openapi component that defines our api key auth
-api_key_auth_name = "ApiKeyAuth"
+# openapi component that defines api key auth
+API_KEY_AUTH_SCHEME_NAME = "ApiKeyAuth"
+# openapi component that defines jwt bearer auth
+BEARER_AUTH_SCHEME_NAME = "BearerAuth"
 
 OptionParser.new do |opts|
   opts.banner = "Usage: build-openapi-yaml.rb [options]"
@@ -456,7 +458,11 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
   openapiobj["description"] = desc
   openapiobj["operationId"] = operationId
   if json["anonymous"] == true
-    openapiobj["security"] = []
+    # sometimes anonymous requests can take JWT bearer tokens. We shouldn't see that on any other request definitions, which all default to API key auth
+    if json["authorization"] and json["authorization"].include? 'Bearer'
+      openapiobj["security"] = []
+      openapiobj["security"].push({BEARER_AUTH_SCHEME_NAME => []})
+    end
   end
   
 
@@ -569,20 +575,25 @@ def build_nested_content_response(hash, ref, description)
   end
 end
 
-def build_security_schemes(api_key_auth_name)
-  security_schemes = {}
+def add_api_key_security_scheme(api_key_auth_name, security_schemes)
   security_schemes[api_key_auth_name] = {}
   security_schemes[api_key_auth_name]["type"] = "apiKey"
   security_schemes[api_key_auth_name]["name"] = "Authorization"
   security_schemes[api_key_auth_name]["in"] = "header"
 
-  # TODO we don't have a way in the json to designate these api calls. need to extend the metadata
-  #security_schemes["jwt"] = {}
-  #security_schemes["jwt"]["type"] = "http"
-  #security_schemes["jwt"]["scheme"] = "Bearer"
+  return security_schemes
+end
+
+def add_jwt_bearer_security_scheme(bearer_jwt_scheme_name, security_schemes)
+  # from https://swagger.io/docs/specification/authentication/bearer-authentication/
+  security_schemes[bearer_jwt_scheme_name] = {}
+  security_schemes[bearer_jwt_scheme_name]["type"] = "http"
+  security_schemes[bearer_jwt_scheme_name]["scheme"] = "bearer"
+  security_schemes[bearer_jwt_scheme_name]["bearerFormat"] = "JWT"
 
   return security_schemes
 end
+
 
 ######### processing starts
 
@@ -661,7 +672,11 @@ schemas["ZoneId"]["type"] = "string"
 add_identity_provider_field(schemas, identity_providers)
 
 components["schemas"] = schemas
-components["securitySchemes"] = build_security_schemes(api_key_auth_name)
+
+# add our security schemes
+components["securitySchemes"] = {}
+add_api_key_security_scheme(API_KEY_AUTH_SCHEME_NAME, components["securitySchemes"])
+add_jwt_bearer_security_scheme(BEARER_AUTH_SCHEME_NAME, components["securitySchemes"])
 
 api_files.each do |fn|
   process_api_file(fn, rawpaths, options, deferred)
@@ -695,7 +710,8 @@ servers:
   - url: http://localhost:9011
   - url: https://sandbox.fusionauth.io
 security:
-  - #{api_key_auth_name}: []
+  - #{API_KEY_AUTH_SCHEME_NAME}: []
+
 )
 
   # components and paths
