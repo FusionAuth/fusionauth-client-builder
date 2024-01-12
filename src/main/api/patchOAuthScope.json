@@ -11,7 +11,7 @@
     {
       "name": "applicationId",
       "comments": [
-        "The Id of the application that the custom scope belongs to."
+        "The Id of the application that the OAuth scope belongs to."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
@@ -25,7 +25,7 @@
     {
       "name": "scopeId",
       "comments": [
-        "The Id of the custom scope to update."
+        "The Id of the OAuth scope to update."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
@@ -33,7 +33,7 @@
     {
       "name": "request",
       "comments": [
-        "The request that contains just the new custom scope information."
+        "The request that contains just the new OAuth scope information."
       ],
       "type": "body",
       "javaType": "ApplicationRequest"

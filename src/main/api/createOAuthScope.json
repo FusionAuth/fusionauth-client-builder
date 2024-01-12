@@ -2,7 +2,7 @@
   "uri": "/api/application",
   "comments": [
     "Creates a new custom OAuth scope for an application. You must specify the Id of the application you are creating the scope for.",
-    "You can optionally specify an Id for the custom scope on the URL, if not provided one will be generated."
+    "You can optionally specify an Id for the OAuth scope on the URL, if not provided one will be generated."
   ],
   "method": "post",
   "methodName": "createOAuthScope",
@@ -12,7 +12,7 @@
     {
       "name": "applicationId",
       "comments": [
-        "The Id of the application to create the custom scope on."
+        "The Id of the application to create the OAuth scope on."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
@@ -26,7 +26,7 @@
     {
       "name": "scopeId",
       "comments": [
-        "(Optional) The Id of the custom scope. If not provided a secure random UUID will be generated."
+        "(Optional) The Id of the OAuth scope. If not provided a secure random UUID will be generated."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
@@ -34,7 +34,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all the information used to create the custom OAuth scope."
+        "The request object that contains all the information used to create the OAuth OAuth scope."
       ],
       "type": "body",
       "javaType": "ApplicationRequest"
