@@ -96,6 +96,7 @@ target(name: "generateDomain", description: "Generates all of the json files for
       "io.fusionauth.api.domain.annotation.InternalUse.json",
       "io.fusionauth.api.domain.json.annotation.MaskString.json",
       "io.fusionauth.api.domain.json.annotation.MaskStringEntry.json",
+      "io.fusionauth.api.domain.json.annotation.MaskStringMap.json",
       "io.fusionauth.domain.Buildable.json",
       "io.fusionauth.domain.Integration.json",
       "io.fusionauth.domain.util.DefaultTools.json",
@@ -174,6 +175,7 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: "import com.inversoft.mybatis.JSONColumnable;\n", value: "")
     filter(token: "import io.fusionauth.api.domain.json.annotation.MaskStringEntry;\n", value: "")
     filter(token: "import io.fusionauth.api.domain.json.annotation.MaskString;\n", value: "")
+    filter(token: "import io.fusionauth.api.domain.json.annotation.MaskStringMap;\n", value: "")
     filter(token: "import io.fusionauth.api.domain.json.annotation.InternalUse;\n", value: "")
     filter(token: ".*@MaskStringEntry\\.List\\(\\{(\\n|.)*\\}\\)\\n", value: "")
     filter(token: ".*@MaskStringEntry\\(.*\n", value: "")
