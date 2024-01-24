@@ -11,7 +11,7 @@
     {
       "name": "actionId",
       "comments": [
-        "The action id of the action to cancel."
+        "The action Id of the action to cancel."
       ],
       "type": "urlSegment",
       "javaType": "UUID"

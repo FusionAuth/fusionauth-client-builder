@@ -14,7 +14,7 @@
     {
       "name": "verificationId",
       "comments": [
-        "The email verification id sent to the user."
+        "The email verification Id sent to the user."
       ],
       "type": "urlSegment",
       "javaType": "String"

@@ -12,7 +12,7 @@
     {
       "name": "emailTemplateId",
       "comments": [
-        "The id for the template."
+        "The Id for the template."
       ],
       "type": "urlSegment",
       "javaType": "UUID"

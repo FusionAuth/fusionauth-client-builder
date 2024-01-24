@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/family",
   "comments": [
-    "Adds a user to an existing family. The family id must be specified."
+    "Adds a user to an existing family. The family Id must be specified."
   ],
   "method": "put",
   "methodName": "addUserToFamily",
@@ -11,7 +11,7 @@
     {
       "name": "familyId",
       "comments": [
-        "The id of the family."
+        "The Id of the family."
       ],
       "type": "urlSegment",
       "javaType": "UUID"

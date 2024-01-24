@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/family",
   "comments": [
-    "Creates a family with the user id in the request as the owner and sole member of the family. You can optionally specify an id for the",
+    "Creates a family with the user Id in the request as the owner and sole member of the family. You can optionally specify an Id for the",
     "family, if not provided one will be generated."
   ],
   "method": "post",
@@ -12,7 +12,7 @@
     {
       "name": "familyId",
       "comments": [
-        "(Optional) The id for the family. If not provided a secure random UUID will be generated."
+        "(Optional) The Id for the family. If not provided a secure random UUID will be generated."
       ],
       "type": "urlSegment",
       "javaType": "UUID"

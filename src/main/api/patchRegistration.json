@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/registration",
   "comments": [
-    "Updates, via PATCH, the registration for the user with the given id and the application defined in the request."
+    "Updates, via PATCH, the registration for the user with the given Id and the application defined in the request."
   ],
   "method": "patch",
   "methodName": "patchRegistration",

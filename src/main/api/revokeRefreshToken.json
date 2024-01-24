@@ -44,7 +44,7 @@
       "name": "userId",
       "parameterName": "userId",
       "comments": [
-        "(Optional) The user id whose tokens to delete."
+        "(Optional) The user Id whose tokens to delete."
       ],
       "type": "urlParameter",
       "javaType": "UUID"
@@ -53,7 +53,7 @@
       "name": "applicationId",
       "parameterName": "applicationId",
       "comments": [
-        "(Optional) The application id of the tokens to delete."
+        "(Optional) The application Id of the tokens to delete."
       ],
       "type": "urlParameter",
       "javaType": "UUID"

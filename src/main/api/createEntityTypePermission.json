@@ -1,7 +1,7 @@
 {
   "uri": "/api/entity/type",
   "comments": [
-    "Creates a new permission for an entity type. You must specify the id of the entity type you are creating the permission for.",
+    "Creates a new permission for an entity type. You must specify the Id of the entity type you are creating the permission for.",
     "You can optionally specify an Id for the permission inside the EntityTypePermission object itself, if not provided one will be generated."
   ],
   "method": "post",

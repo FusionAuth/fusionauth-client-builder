@@ -1,7 +1,7 @@
 {
   "uri": "/api/reactor",
   "comments": [
-    "Activates the FusionAuth Reactor using a license id and optionally a license text (for air-gapped deployments)"
+    "Activates the FusionAuth Reactor using a license Id and optionally a license text (for air-gapped deployments)"
   ],
   "method": "post",
   "methodName": "activateReactor",
