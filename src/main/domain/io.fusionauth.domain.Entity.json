@@ -8,9 +8,9 @@
       "type" : "Entity"
     } ]
   }, {
-    "type" : "Tenantable"
-  }, {
     "type" : "JSONColumnable"
+  }, {
+    "type" : "Tenantable"
   } ],
   "fields" : {
     "data" : {

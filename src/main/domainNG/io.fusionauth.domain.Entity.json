@@ -53,7 +53,7 @@
       "type" : "EntityType"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Tenantable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.EntityType" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.Tenantable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.EntityType" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -62,11 +62,11 @@
       "type" : "Entity"
     } ]
   }, {
-    "className" : "io.fusionauth.domain.Tenantable",
-    "type" : "Tenantable"
-  }, {
     "className" : "com.inversoft.mybatis.JSONColumnable",
     "type" : "JSONColumnable"
+  }, {
+    "className" : "io.fusionauth.domain.Tenantable",
+    "type" : "Tenantable"
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

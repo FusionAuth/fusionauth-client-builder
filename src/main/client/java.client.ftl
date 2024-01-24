@@ -260,6 +260,8 @@ public class FusionAuthClient {
 
   private final String baseURL;
 
+  private final ObjectMapper customMapper;
+
   private final String tenantId;
 
   public int connectTimeout;
@@ -279,18 +281,23 @@ public class FusionAuthClient {
   }
 
   public FusionAuthClient(String apiKey, String baseURL, int connectTimeout, int readTimeout, String tenantId) {
+    this(apiKey, baseURL, connectTimeout, readTimeout, tenantId, null);
+  }
+
+  public FusionAuthClient(String apiKey, String baseURL, int connectTimeout, int readTimeout, String tenantId, ObjectMapper objectMapper) {
     this.apiKey = apiKey;
     this.baseURL = baseURL;
     this.connectTimeout = connectTimeout;
     this.readTimeout = readTimeout;
     this.tenantId = tenantId;
+    this.customMapper = objectMapper;
   }
 
   /**
   * Creates a new copy of this client with the provided tenant Id. When more than one tenant is configured in FusionAuth
   * use this method to set the tenant Id prior to making API calls.
   * <p>
-  * When only one tenant is configured, or you have you have not configured tenants, setting the tenant is not necessary.
+  * When only one tenant is configured, or you have not configured tenants, setting the tenant is not necessary.
   *
   * @param tenantId The tenant Id
   * @return the new FusionAuthClient
@@ -301,6 +308,17 @@ public class FusionAuthClient {
     }
 
     return new FusionAuthClient(apiKey, baseURL, connectTimeout, readTimeout, tenantId.toString());
+  }
+
+  /**
+  * Creates a new copy of this client with the object mapper. This will take the place of the default FusionAuth object mapper when serializing
+  * and deserializing objects to and from JSON for the request and response bodies.
+  *
+  * @param objectMapper The object mapper
+  * @return the new FusionAuthClient
+  */
+  public FusionAuthClient setObjectMapper(ObjectMapper objectMapper) {
+    return new FusionAuthClient(apiKey, baseURL, connectTimeout, readTimeout, tenantId, objectMapper);
   }
 
 [#list apis as api]
@@ -346,7 +364,7 @@ public class FusionAuthClient {
       [#elseif param.type == "urlParameter"]
         .urlParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, param.name)})
       [#elseif param.type == "body"]
-        .bodyHandler(new JSONBodyHandler(${param.name}, objectMapper))
+        .bodyHandler(new JSONBodyHandler(${param.name}, objectMapper()))
       [/#if]
     [/#list]
     [#if formPost]
@@ -364,8 +382,8 @@ public class FusionAuthClient {
 
   protected <T, U> RESTClient<T, U> startAnonymous(Class<T> type, Class<U> errorType) {
     RESTClient<T, U> client = new RESTClient<>(type, errorType)
-        .successResponseHandler(type != Void.TYPE ? new JSONResponseHandler<>(type, objectMapper) : null)
-        .errorResponseHandler(errorType != Void.TYPE ? new JSONResponseHandler<>(errorType, objectMapper) : null)
+        .successResponseHandler(type != Void.TYPE ? new JSONResponseHandler<>(type, objectMapper()) : null)
+        .errorResponseHandler(errorType != Void.TYPE ? new JSONResponseHandler<>(errorType, objectMapper()) : null)
         .url(baseURL)
         .connectTimeout(connectTimeout)
         .readTimeout(readTimeout);
@@ -375,5 +393,9 @@ public class FusionAuthClient {
     }
 
     return client;
+  }
+
+  private ObjectMapper objectMapper() {
+    return customMapper != null ? customMapper : objectMapper;
   }
 }
