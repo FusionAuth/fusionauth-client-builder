@@ -1,11 +1,10 @@
 {
   "uri": "/api/application",
   "comments": [
-    "Hard deletes a custom OAuth scope. This action will cause tokens that contain the deleted scope to be rejected.",
-    "OAuth workflows that are still requesting the deleted OAuth scope may fail depending on the application's unknown scope policy."
+    "Retrieves a custom OAuth scope."
   ],
-  "method": "delete",
-  "methodName": "deleteOAuthScope",
+  "method": "get",
+  "methodName": "retrieveOAuthScope",
   "successResponse": "Void",
   "errorResponse": "Errors",
   "params": [
@@ -26,7 +25,7 @@
     {
       "name": "scopeId",
       "comments": [
-        "The Id of the OAuth scope to delete."
+        "The Id of the OAuth scope to retrieve."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
