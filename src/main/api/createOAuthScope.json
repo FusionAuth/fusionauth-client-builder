@@ -6,7 +6,7 @@
   ],
   "method": "post",
   "methodName": "createOAuthScope",
-  "successResponse": "ApplicationResponse",
+  "successResponse": "ApplicationOAuthScopeResponse",
   "errorResponse": "Errors",
   "params": [
     {
@@ -37,7 +37,7 @@
         "The request object that contains all the information used to create the OAuth OAuth scope."
       ],
       "type": "body",
-      "javaType": "ApplicationRequest"
+      "javaType": "ApplicationOAuthScopeRequest"
     }
   ]
 }

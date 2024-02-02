@@ -5,7 +5,7 @@
   ],
   "method": "get",
   "methodName": "retrieveOAuthScope",
-  "successResponse": "ApplicationResponse",
+  "successResponse": "ApplicationOAuthScopeResponse",
   "errorResponse": "Errors",
   "params": [
     {

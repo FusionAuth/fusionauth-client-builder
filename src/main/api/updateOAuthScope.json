@@ -5,7 +5,7 @@
   ],
   "method": "put",
   "methodName": "updateOAuthScope",
-  "successResponse": "ApplicationResponse",
+  "successResponse": "ApplicationOAuthScopeResponse",
   "errorResponse": "Errors",
   "params": [
     {
@@ -36,7 +36,7 @@
         "The request that contains all the new OAuth scope information."
       ],
       "type": "body",
-      "javaType": "ApplicationRequest"
+      "javaType": "ApplicationOAuthScopeRequest"
     }
   ]
 }

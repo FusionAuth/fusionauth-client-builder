@@ -5,7 +5,7 @@
   ],
   "method": "patch",
   "methodName": "patchOAuthScope",
-  "successResponse": "ApplicationResponse",
+  "successResponse": "ApplicationOAuthScopeResponse",
   "errorResponse": "Errors",
   "params": [
     {
@@ -36,7 +36,7 @@
         "The request that contains just the new OAuth scope information."
       ],
       "type": "body",
-      "javaType": "ApplicationRequest"
+      "javaType": "ApplicationOAuthScopeRequest"
     }
   ]
 }

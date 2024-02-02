@@ -39,6 +39,8 @@ import io.fusionauth.domain.LambdaType;
 import io.fusionauth.domain.OpenIdConfiguration;
 import io.fusionauth.domain.api.APIKeyRequest;
 import io.fusionauth.domain.api.APIKeyResponse;
+import io.fusionauth.domain.api.ApplicationOAuthScopeRequest;
+import io.fusionauth.domain.api.ApplicationOAuthScopeResponse;
 import io.fusionauth.domain.api.ApplicationRequest;
 import io.fusionauth.domain.api.ApplicationResponse;
 import io.fusionauth.domain.api.ApplicationSearchRequest;
@@ -48,7 +50,7 @@ import io.fusionauth.domain.api.AuditLogResponse;
 import io.fusionauth.domain.api.AuditLogSearchRequest;
 import io.fusionauth.domain.api.AuditLogSearchResponse;
 import io.fusionauth.domain.api.ConnectorRequest;
-import io.fusionauth.domain.api.ConnectorResponse;
+import io.fusionauth.domain.api.ConnectorResponse;`
 import io.fusionauth.domain.api.ConsentRequest;
 import io.fusionauth.domain.api.ConsentResponse;
 import io.fusionauth.domain.api.ConsentSearchRequest;
