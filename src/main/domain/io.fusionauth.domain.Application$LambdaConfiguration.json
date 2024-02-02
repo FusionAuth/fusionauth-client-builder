@@ -13,6 +13,9 @@
     },
     "selfServiceRegistrationValidationId" : {
       "type" : "UUID"
+    },
+    "userinfoPopulateId" : {
+      "type" : "UUID"
     }
   }
 }

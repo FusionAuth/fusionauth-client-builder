@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthScopeConsentMode",
+  "description" : "/**\n * Controls the policy for requesting user permission to grant access to requested scopes during an OAuth workflow\n * for a third-party application.\n *\n * @author Spencer Witt\n */\n",
+  "enum" : [ "AlwaysPrompt", "RememberDecisionDevice", "NeverPrompt" ]
+}

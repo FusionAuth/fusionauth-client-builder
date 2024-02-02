@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthApplicationRelationship",
+  "description" : "/**\n * The application's relationship to the authorization server. First-party applications will be granted implicit permission for requested scopes.\n * Third-party applications will use the {@link OAuthScopeConsentMode} policy.\n *\n * @author Spencer Witt\n */\n",
+  "enum" : [ "FirstParty", "ThirdParty" ]
+}

@@ -87,6 +87,12 @@
     "samlv2Configuration" : {
       "type" : "SAMLv2Configuration"
     },
+    "scopes" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "ApplicationOAuthScope"
+      } ]
+    },
     "state" : {
       "type" : "ObjectState"
     },

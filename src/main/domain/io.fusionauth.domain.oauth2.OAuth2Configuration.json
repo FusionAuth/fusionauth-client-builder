@@ -33,6 +33,9 @@
     "clientSecret" : {
       "type" : "String"
     },
+    "consentMode" : {
+      "type" : "OAuthScopeConsentMode"
+    },
     "debug" : {
       "type" : "boolean"
     },
@@ -54,14 +57,23 @@
     "logoutURL" : {
       "type" : "URI"
     },
+    "oidcScopePolicy" : {
+      "type" : "OidcScopePolicy"
+    },
     "proofKeyForCodeExchangePolicy" : {
       "type" : "ProofKeyForCodeExchangePolicy"
+    },
+    "relationship" : {
+      "type" : "OAuthApplicationRelationship"
     },
     "requireClientAuthentication" : {
       "type" : "boolean"
     },
     "requireRegistration" : {
       "type" : "boolean"
+    },
+    "unknownScopePolicy" : {
+      "type" : "UnknownScopePolicy"
     }
   }
 }

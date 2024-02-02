@@ -74,5 +74,8 @@
   }, {
     "name" : "SelfServiceRegistrationValidation",
     "args" : [ "validate" ]
+  }, {
+    "name" : "UserInfoPopulate",
+    "args" : [ "populate" ]
   } ]
 }
