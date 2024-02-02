@@ -50,7 +50,7 @@ import io.fusionauth.domain.api.AuditLogResponse;
 import io.fusionauth.domain.api.AuditLogSearchRequest;
 import io.fusionauth.domain.api.AuditLogSearchResponse;
 import io.fusionauth.domain.api.ConnectorRequest;
-import io.fusionauth.domain.api.ConnectorResponse;`
+import io.fusionauth.domain.api.ConnectorResponse;
 import io.fusionauth.domain.api.ConsentRequest;
 import io.fusionauth.domain.api.ConsentResponse;
 import io.fusionauth.domain.api.ConsentSearchRequest;
