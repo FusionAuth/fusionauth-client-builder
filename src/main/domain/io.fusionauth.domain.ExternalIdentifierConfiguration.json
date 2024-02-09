@@ -57,6 +57,9 @@
     "registrationVerificationOneTimeCodeGenerator" : {
       "type" : "SecureGeneratorConfiguration"
     },
+    "rememberOAuthScopeConsentChoiceTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "samlv2AuthNRequestIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
