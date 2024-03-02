@@ -95,8 +95,14 @@ end
 def add_identity_provider_field(schemas, identity_providers)
   schemas["IdentityProviderField"] = {}
   schemas["IdentityProviderField"]["oneOf"] = []
+  schemas["IdentityProviderField"]["discriminator"] = {
+    "propertyName" => "type",
+    "mapping" => {}
+  }
   identity_providers.each do |idp|
-    schemas["IdentityProviderField"]["oneOf"] << {"$ref" => make_ref(idp) }
+    ref = make_ref(idp)
+    schemas["IdentityProviderField"]["oneOf"] << {"$ref" => ref }
+    schemas["IdentityProviderField"]["discriminator"]["mapping"][idp.sub("IdentityProvider","")] = ref
   end
 end
 
