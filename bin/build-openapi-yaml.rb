@@ -671,7 +671,7 @@ schemas["ZoneId"]["type"] = "string"
 
 add_identity_provider_field(schemas, identity_providers)
 
-components["schemas"] = schemas
+components["schemas"] = schemas.sort.to_h
 
 # add our security schemes
 components["securitySchemes"] = {}
