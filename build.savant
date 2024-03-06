@@ -255,14 +255,6 @@ target(name: "build-android", description: "Build the Android Client Library") {
                             outputFile: "../fusionauth-android-client/src/main/java/io/fusionauth/client/FusionAuthClient.java")
 }
 
-target(name: "build-dart", description: "Build the Dart Client Library") {
-  clientLibrary.buildClient(template: "src/main/client/dart.client.ftl",
-                            outputFile: "../fusionauth-dart-client/lib/src/FusionAuthClient.dart")
-  clientLibrary.buildClient(template: "src/main/client/dart.domain.ftl",
-                            outputFile: "../fusionauth-dart-client/lib/src/FusionAuthDomain.dart")
-  formatClientLibrary("fusionauth-dart-client")
-}
-
 target(name: "build-openapi", description: "Build the OpenAPI file") {
   projVersion = project.version.toString()
   cleanExecute(
@@ -279,12 +271,11 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
                                                                                   "build-javascript",
                                                                                   "build-openapi",
                                                                                   "build-python",
-                                                                                  "build-ruby",
-                                                                                  "build-dart"]) {
+                                                                                  "build-ruby"]) {
 }
 
 
-// Still testing this to see if it will work with stdout and prompts, etc which are required for dart, and python. Perhaps we can configure all of this to
+// Still testing this to see if it will work with stdout and prompts, etc which are required for python. Perhaps we can configure all of this to
 // skip all requests for input or confirmations.
 //
 // Daniel: This is working, python requires interactive login, need to configure this credential, and then we should be able
@@ -292,7 +283,6 @@ target(name: "build-all", description: "Builds all client libraries", dependsOn:
 //
 target(name: "publish-all", description: "Publish all client libraries") {
   [
-      "dart-client",
       "java-client",
       "netcore-client",
       "node-client",
