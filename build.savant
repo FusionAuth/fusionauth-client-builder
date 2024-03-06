@@ -174,7 +174,7 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: "import com.inversoft.mybatis.JSONColumnable;\n", value: "")
     filter(token: "import io.fusionauth.api.domain.json.annotation.MaskMapValue;\n", value: "")
     filter(token: "import io.fusionauth.api.domain.json.annotation.MaskString;\n", value: "")
-    filter(token: "import io.fusionauth.api.domain.json.annotation.InternalUse;\n", value: "")
+    filter(token: "import io.fusionauth.api.domain.annotation.InternalUse;\n", value: "")
     filter(token: ".*@MaskMapValue\\.List\\(\\{(\\n|.)*\\}\\)\\n", value: "")
     filter(token: ".*@MaskMapValue\\(.*\n", value: "")
     filter(token: ".*@MaskString.*\n", value: "")

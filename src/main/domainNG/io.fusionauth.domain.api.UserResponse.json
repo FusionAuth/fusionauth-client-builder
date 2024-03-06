@@ -6,6 +6,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "emailVerificationOneTimeCode" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "registrationVerificationIds" : {
       "className" : "java.util.Map",
       "type" : "Map",
