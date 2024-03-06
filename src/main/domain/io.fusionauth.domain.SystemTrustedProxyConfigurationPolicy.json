@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SystemTrustedProxyConfigurationPolicy",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "All", "OnlyConfigured" ]
+}

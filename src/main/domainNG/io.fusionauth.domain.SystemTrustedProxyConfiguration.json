@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.SystemTrustedProxyConfiguration",
+  "extends" : { },
+  "fields" : {
+    "trustPolicy" : {
+      "className" : "io.fusionauth.domain.SystemTrustedProxyConfigurationPolicy",
+      "type" : "SystemTrustedProxyConfigurationPolicy"
+    },
+    "trusted" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.SystemTrustedProxyConfigurationPolicy", "java.util.List", "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SystemTrustedProxyConfiguration"
+}
