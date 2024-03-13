@@ -5,7 +5,7 @@
   ],
   "method": "post",
   "methodName": "commentOnUser",
-  "successResponse": "Void",
+  "successResponse": "UserCommentResponse",
   "errorResponse": "Errors",
   "params": [
     {
