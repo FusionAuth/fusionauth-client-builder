@@ -2,6 +2,9 @@
   "packageName" : "io.fusionauth.domain.api",
   "type" : "ApplicationSearchResponse",
   "description" : "/**\n * Application search response\n *\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "ExpandableResponse"
+  } ],
   "fields" : {
     "applications" : {
       "type" : "List",
