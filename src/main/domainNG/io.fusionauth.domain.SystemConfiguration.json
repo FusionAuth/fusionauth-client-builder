@@ -48,12 +48,16 @@
       "className" : "java.time.ZoneId",
       "type" : "ZoneId"
     },
+    "trustedProxyConfiguration" : {
+      "className" : "io.fusionauth.domain.SystemTrustedProxyConfiguration",
+      "type" : "SystemTrustedProxyConfiguration"
+    },
     "uiConfiguration" : {
       "className" : "io.fusionauth.domain.SystemConfiguration$UIConfiguration",
       "type" : "SystemConfiguration$UIConfiguration"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.SystemConfiguration$AuditLogConfiguration", "java.lang.String", "io.fusionauth.domain.CORSConfiguration", "java.util.Map", "io.fusionauth.domain.SystemConfiguration$EventLogConfiguration", "java.time.ZonedDateTime", "io.fusionauth.domain.SystemConfiguration$LoginRecordConfiguration", "java.time.ZoneId", "io.fusionauth.domain.SystemConfiguration$UIConfiguration" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.SystemConfiguration$AuditLogConfiguration", "java.lang.String", "io.fusionauth.domain.CORSConfiguration", "java.util.Map", "io.fusionauth.domain.SystemConfiguration$EventLogConfiguration", "java.time.ZonedDateTime", "io.fusionauth.domain.SystemConfiguration$LoginRecordConfiguration", "java.time.ZoneId", "io.fusionauth.domain.SystemTrustedProxyConfiguration", "io.fusionauth.domain.SystemConfiguration$UIConfiguration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.SystemTrustedProxyConfigurationPolicy",
+  "enum" : [ "All", "OnlyConfigured" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SystemTrustedProxyConfigurationPolicy"
+}

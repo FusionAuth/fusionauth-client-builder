@@ -6,6 +6,9 @@
     "emailVerificationId" : {
       "type" : "String"
     },
+    "emailVerificationOneTimeCode" : {
+      "type" : "String"
+    },
     "registrationVerificationIds" : {
       "type" : "Map",
       "typeArguments" : [ {

@@ -32,6 +32,9 @@
     "accountWebAuthnIndex" : {
       "type" : "String"
     },
+    "confirmationRequired" : {
+      "type" : "String"
+    },
     "emailComplete" : {
       "type" : "String"
     },

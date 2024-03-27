@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SystemTrustedProxyConfiguration",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "fields" : {
+    "trustPolicy" : {
+      "type" : "SystemTrustedProxyConfigurationPolicy"
+    },
+    "trusted" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    }
+  }
+}

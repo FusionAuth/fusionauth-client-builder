@@ -40,6 +40,9 @@
     "reportTimezone" : {
       "type" : "ZoneId"
     },
+    "trustedProxyConfiguration" : {
+      "type" : "SystemTrustedProxyConfiguration"
+    },
     "uiConfiguration" : {
       "type" : "UIConfiguration"
     }

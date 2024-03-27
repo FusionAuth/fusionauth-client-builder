@@ -45,6 +45,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "confirmationRequired" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "emailComplete" : {
       "className" : "java.lang.String",
       "type" : "String"
