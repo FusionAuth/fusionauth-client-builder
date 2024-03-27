@@ -57,11 +57,11 @@
     "logoutURL" : {
       "type" : "URI"
     },
-    "oidcScopePolicy" : {
-      "type" : "OidcScopePolicy"
-    },
     "proofKeyForCodeExchangePolicy" : {
       "type" : "ProofKeyForCodeExchangePolicy"
+    },
+    "providedScopePolicy" : {
+      "type" : "ProvidedScopePolicy"
     },
     "relationship" : {
       "type" : "OAuthApplicationRelationship"
@@ -71,6 +71,9 @@
     },
     "requireRegistration" : {
       "type" : "boolean"
+    },
+    "scopeHandlingPolicy" : {
+      "type" : "OAuthScopeHandlingPolicy"
     },
     "unknownScopePolicy" : {
       "type" : "UnknownScopePolicy"

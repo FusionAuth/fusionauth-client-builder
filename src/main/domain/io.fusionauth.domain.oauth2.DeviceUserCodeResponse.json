@@ -21,6 +21,9 @@
     "pendingIdPLink" : {
       "type" : "PendingIdPLink"
     },
+    "scope" : {
+      "type" : "String"
+    },
     "tenantId" : {
       "type" : "UUID"
     },

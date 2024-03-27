@@ -1,11 +1,11 @@
 {
   "packageName" : "io.fusionauth.domain.oauth2",
-  "type" : "OidcScopePolicy",
-  "description" : "/**\n * The policy for OIDC scope handling\n *\n * @author Spencer Witt\n */\n",
+  "type" : "ProvidedScopePolicy",
+  "description" : "/**\n * The policy for provided scope handling\n *\n * @author Spencer Witt\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
-      "type" : "OidcScopePolicy"
+      "type" : "ProvidedScopePolicy"
     } ]
   } ],
   "fields" : {
