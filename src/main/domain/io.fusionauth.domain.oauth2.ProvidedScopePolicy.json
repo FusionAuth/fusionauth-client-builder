@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.oauth2",
   "type" : "ProvidedScopePolicy",
-  "description" : "/**\n * The policy for provided scope handling\n *\n * @author Spencer Witt\n */\n",
+  "description" : "/**\n * The handling policy for scopes provided by FusionAuth\n *\n * @author Spencer Witt\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
