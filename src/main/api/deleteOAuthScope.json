@@ -1,7 +1,7 @@
 {
   "uri": "/api/application",
   "comments": [
-    "Hard deletes a custom OAuth scope. This action will cause tokens that contain the deleted scope to be rejected.",
+    "Hard deletes a custom OAuth scope.",
     "OAuth workflows that are still requesting the deleted OAuth scope may fail depending on the application's unknown scope policy."
   ],
   "method": "delete",
