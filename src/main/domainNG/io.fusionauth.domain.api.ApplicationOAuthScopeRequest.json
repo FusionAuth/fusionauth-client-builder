@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.ApplicationOAuthScopeRequest",
+  "extends" : { },
+  "fields" : {
+    "scope" : {
+      "className" : "io.fusionauth.domain.ApplicationOAuthScope",
+      "type" : "ApplicationOAuthScope"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.ApplicationOAuthScope" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ApplicationOAuthScopeRequest"
+}

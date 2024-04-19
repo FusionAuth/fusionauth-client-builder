@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.UnknownScopePolicy",
+  "enum" : [ "Allow", "Remove", "Reject" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "UnknownScopePolicy"
+}

@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.OAuthScopeHandlingPolicy",
+  "enum" : [ "Compatibility", "Strict" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthScopeHandlingPolicy"
+}

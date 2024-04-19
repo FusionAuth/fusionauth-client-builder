@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.OAuthScopeConsentMode",
+  "enum" : [ "AlwaysPrompt", "RememberDecision", "NeverPrompt" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthScopeConsentMode"
+}

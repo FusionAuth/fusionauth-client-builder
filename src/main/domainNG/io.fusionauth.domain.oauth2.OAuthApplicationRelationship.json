@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.OAuthApplicationRelationship",
+  "enum" : [ "FirstParty", "ThirdParty" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthApplicationRelationship"
+}
