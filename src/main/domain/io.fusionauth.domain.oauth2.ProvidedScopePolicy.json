@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "ProvidedScopePolicy",
+  "description" : "/**\n * The handling policy for scopes provided by FusionAuth\n *\n * @author Spencer Witt\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ProvidedScopePolicy"
+    } ]
+  } ],
+  "fields" : {
+    "address" : {
+      "type" : "Requirable"
+    },
+    "email" : {
+      "type" : "Requirable"
+    },
+    "phone" : {
+      "type" : "Requirable"
+    },
+    "profile" : {
+      "type" : "Requirable"
+    }
+  }
+}

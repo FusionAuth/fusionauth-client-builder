@@ -12,6 +12,9 @@
     "registrationVerificationId" : {
       "type" : "String"
     },
+    "registrationVerificationOneTimeCode" : {
+      "type" : "String"
+    },
     "token" : {
       "type" : "String"
     },

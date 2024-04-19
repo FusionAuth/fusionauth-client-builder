@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "ApplicationOAuthScopeResponse",
+  "description" : "/**\n * The Application Scope API response.\n *\n * @author Spencer Witt\n */\n",
+  "fields" : {
+    "scope" : {
+      "type" : "ApplicationOAuthScope"
+    }
+  }
+}

@@ -29,6 +29,8 @@ import com.inversoft.rest.ClientResponse;
 import com.inversoft.rest.JSONBodyHandler;
 import com.inversoft.rest.JSONResponseHandler;
 import com.inversoft.rest.RESTClient;
+import io.fusionauth.domain.api.ApplicationOAuthScopeRequest;
+import io.fusionauth.domain.api.ApplicationOAuthScopeResponse;
 import io.fusionauth.domain.api.ApplicationRequest;
 import io.fusionauth.domain.api.ApplicationResponse;
 import io.fusionauth.domain.api.AuditLogRequest;

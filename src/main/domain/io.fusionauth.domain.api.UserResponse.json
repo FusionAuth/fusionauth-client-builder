@@ -17,6 +17,14 @@
         "type" : "String"
       } ]
     },
+    "registrationVerificationOneTimeCodes" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      }, {
+        "type" : "String"
+      } ]
+    },
     "token" : {
       "type" : "String"
     },

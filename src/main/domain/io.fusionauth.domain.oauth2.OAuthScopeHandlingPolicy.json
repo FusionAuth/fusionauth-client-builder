@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthScopeHandlingPolicy",
+  "description" : "/**\n * Controls the policy for whether OAuth workflows will more strictly adhere to the OAuth and OIDC specification\n * or run in backwards compatibility mode.\n *\n * @author David Charles\n */\n",
+  "enum" : [ "Compatibility", "Strict" ]
+}

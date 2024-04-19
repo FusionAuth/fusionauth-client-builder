@@ -12,6 +12,15 @@
     "advancedMultiFactorAuthentication" : {
       "type" : "ReactorFeatureStatus"
     },
+    "advancedOAuthScopes" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "advancedOAuthScopesCustomScopes" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "advancedOAuthScopesThirdPartyApplications" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "advancedRegistration" : {
       "type" : "ReactorFeatureStatus"
     },

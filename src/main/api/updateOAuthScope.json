@@ -1,0 +1,42 @@
+{
+  "uri": "/api/application",
+  "comments": [
+    "Updates the OAuth scope with the given Id for the application."
+  ],
+  "method": "put",
+  "methodName": "updateOAuthScope",
+  "successResponse": "ApplicationOAuthScopeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "applicationId",
+      "comments": [
+        "The Id of the application that the OAuth scope belongs to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "constant": true,
+      "name": "scope",
+      "type": "urlSegment",
+      "value": "\"scope\""
+    },
+    {
+      "name": "scopeId",
+      "comments": [
+        "The Id of the OAuth scope to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains all the new OAuth scope information."
+      ],
+      "type": "body",
+      "javaType": "ApplicationOAuthScopeRequest"
+    }
+  ]
+}

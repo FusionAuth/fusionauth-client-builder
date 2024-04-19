@@ -1,0 +1,34 @@
+{
+  "uri": "/api/application",
+  "comments": [
+    "Retrieves a custom OAuth scope."
+  ],
+  "method": "get",
+  "methodName": "retrieveOAuthScope",
+  "successResponse": "ApplicationOAuthScopeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "applicationId",
+      "comments": [
+        "The Id of the application that the OAuth scope belongs to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "constant": true,
+      "name": "scope",
+      "type": "urlSegment",
+      "value": "\"scope\""
+    },
+    {
+      "name": "scopeId",
+      "comments": [
+        "The Id of the OAuth scope to retrieve."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

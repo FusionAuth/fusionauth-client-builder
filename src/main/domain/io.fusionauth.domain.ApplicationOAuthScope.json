@@ -1,0 +1,55 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationOAuthScope",
+  "description" : "/**\n * A custom OAuth scope for a specific application.\n *\n * @author Spencer Witt\n */\n",
+  "implements" : [ {
+    "type" : "Comparable",
+    "typeArguments" : [ {
+      "type" : "ApplicationOAuthScope"
+    } ]
+  }, {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ApplicationOAuthScope"
+    } ]
+  }, {
+    "type" : "JSONColumnable"
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "defaultConsentDetail" : {
+      "type" : "String"
+    },
+    "defaultConsentMessage" : {
+      "type" : "String"
+    },
+    "description" : {
+      "type" : "String"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "required" : {
+      "type" : "boolean"
+    }
+  }
+}

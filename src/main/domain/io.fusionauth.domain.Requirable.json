@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "Requirable",
-  "description" : "/**\n * Something that can be required and thus also optional. This currently extends Enableable because anything that is\n * require/optional is almost always enableable as well.\n *\n * @author Brian Pontarelli\n */\n",
+  "description" : "/**\n * Something that can be required and thus also optional. This currently extends Enableable because anything that is\n * required/optional is almost always enableable as well.\n *\n * @author Brian Pontarelli\n */\n",
   "extends" : [ {
     "type" : "Enableable"
   } ],

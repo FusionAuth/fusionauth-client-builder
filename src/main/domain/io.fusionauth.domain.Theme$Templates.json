@@ -68,6 +68,9 @@
     "oauth2CompleteRegistration" : {
       "type" : "String"
     },
+    "oauth2Consent" : {
+      "type" : "String"
+    },
     "oauth2Device" : {
       "type" : "String"
     },
