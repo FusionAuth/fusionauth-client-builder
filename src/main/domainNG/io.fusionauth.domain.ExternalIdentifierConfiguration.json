@@ -60,6 +60,9 @@
       "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
       "type" : "SecureGeneratorConfiguration"
     },
+    "rememberOAuthScopeConsentChoiceTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "samlv2AuthNRequestIdTimeToLiveInSeconds" : {
       "type" : "int"
     },

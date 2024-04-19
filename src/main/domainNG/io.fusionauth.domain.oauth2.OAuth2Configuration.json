@@ -37,6 +37,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "consentMode" : {
+      "className" : "io.fusionauth.domain.oauth2.OAuthScopeConsentMode",
+      "type" : "OAuthScopeConsentMode"
+    },
     "debug" : {
       "type" : "boolean"
     },
@@ -67,14 +71,30 @@
       "className" : "io.fusionauth.domain.oauth2.ProofKeyForCodeExchangePolicy",
       "type" : "ProofKeyForCodeExchangePolicy"
     },
+    "providedScopePolicy" : {
+      "className" : "io.fusionauth.domain.oauth2.ProvidedScopePolicy",
+      "type" : "ProvidedScopePolicy"
+    },
+    "relationship" : {
+      "className" : "io.fusionauth.domain.oauth2.OAuthApplicationRelationship",
+      "type" : "OAuthApplicationRelationship"
+    },
     "requireClientAuthentication" : {
       "type" : "boolean"
     },
     "requireRegistration" : {
       "type" : "boolean"
+    },
+    "scopeHandlingPolicy" : {
+      "className" : "io.fusionauth.domain.oauth2.OAuthScopeHandlingPolicy",
+      "type" : "OAuthScopeHandlingPolicy"
+    },
+    "unknownScopePolicy" : {
+      "className" : "io.fusionauth.domain.oauth2.UnknownScopePolicy",
+      "type" : "UnknownScopePolicy"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "java.net.URI", "io.fusionauth.domain.oauth2.Oauth2AuthorizedURLValidationPolicy", "io.fusionauth.domain.oauth2.ClientAuthenticationPolicy", "java.lang.String", "java.util.Set", "io.fusionauth.domain.oauth2.GrantType", "io.fusionauth.domain.oauth2.LogoutBehavior", "io.fusionauth.domain.oauth2.ProofKeyForCodeExchangePolicy" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "java.net.URI", "io.fusionauth.domain.oauth2.Oauth2AuthorizedURLValidationPolicy", "io.fusionauth.domain.oauth2.ClientAuthenticationPolicy", "java.lang.String", "io.fusionauth.domain.oauth2.OAuthScopeConsentMode", "java.util.Set", "io.fusionauth.domain.oauth2.GrantType", "io.fusionauth.domain.oauth2.LogoutBehavior", "io.fusionauth.domain.oauth2.ProofKeyForCodeExchangePolicy", "io.fusionauth.domain.oauth2.ProvidedScopePolicy", "io.fusionauth.domain.oauth2.OAuthApplicationRelationship", "io.fusionauth.domain.oauth2.OAuthScopeHandlingPolicy", "io.fusionauth.domain.oauth2.UnknownScopePolicy" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

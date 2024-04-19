@@ -14,6 +14,18 @@
       "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
       "type" : "ReactorFeatureStatus"
     },
+    "advancedOAuthScopes" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "advancedOAuthScopesCustomScopes" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "advancedOAuthScopesThirdPartyApplications" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
     "advancedRegistration" : {
       "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
       "type" : "ReactorFeatureStatus"

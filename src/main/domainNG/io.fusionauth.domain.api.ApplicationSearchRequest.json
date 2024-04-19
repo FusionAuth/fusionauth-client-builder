@@ -1,8 +1,8 @@
 {
   "className" : "io.fusionauth.domain.api.ApplicationSearchRequest",
   "extends" : {
-    "className" : "java.lang.Object",
-    "type" : "Object"
+    "className" : "io.fusionauth.domain.api.ExpandableRequest",
+    "type" : "ExpandableRequest"
   },
   "fields" : {
     "search" : {
@@ -10,7 +10,7 @@
       "type" : "ApplicationSearchCriteria"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.search.ApplicationSearchCriteria" ],
+  "imports" : [ "io.fusionauth.domain.api.ExpandableRequest", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.search.ApplicationSearchCriteria" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -21,6 +21,17 @@
         "type" : "String"
       } ]
     },
+    "registrationVerificationOneTimeCodes" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
     "token" : {
       "className" : "java.lang.String",
       "type" : "String"

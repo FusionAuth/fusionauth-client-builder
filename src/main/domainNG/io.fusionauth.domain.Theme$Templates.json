@@ -93,6 +93,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "oauth2Consent" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "oauth2Device" : {
       "className" : "java.lang.String",
       "type" : "String"

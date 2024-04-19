@@ -21,6 +21,10 @@
       "className" : "io.fusionauth.domain.provider.PendingIdPLink",
       "type" : "PendingIdPLink"
     },
+    "scope" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "tenantId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"

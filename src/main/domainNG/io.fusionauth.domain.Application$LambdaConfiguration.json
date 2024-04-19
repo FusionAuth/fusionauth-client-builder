@@ -17,6 +17,10 @@
     "selfServiceRegistrationValidationId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"
+    },
+    "userinfoPopulateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
     }
   },
   "imports" : [ "java.util.UUID" ],

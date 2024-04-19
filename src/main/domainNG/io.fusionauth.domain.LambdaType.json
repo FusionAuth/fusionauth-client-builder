@@ -1,6 +1,6 @@
 {
   "className" : "io.fusionauth.domain.LambdaType",
-  "enum" : [ "JWTPopulate", "OpenIDReconcile", "SAMLv2Reconcile", "SAMLv2Populate", "AppleReconcile", "ExternalJWTReconcile", "FacebookReconcile", "GoogleReconcile", "HYPRReconcile", "TwitterReconcile", "LDAPConnectorReconcile", "LinkedInReconcile", "EpicGamesReconcile", "NintendoReconcile", "SonyPSNReconcile", "SteamReconcile", "TwitchReconcile", "XboxReconcile", "ClientCredentialsJWTPopulate", "SCIMServerGroupRequestConverter", "SCIMServerGroupResponseConverter", "SCIMServerUserRequestConverter", "SCIMServerUserResponseConverter", "SelfServiceRegistrationValidation" ],
+  "enum" : [ "JWTPopulate", "OpenIDReconcile", "SAMLv2Reconcile", "SAMLv2Populate", "AppleReconcile", "ExternalJWTReconcile", "FacebookReconcile", "GoogleReconcile", "HYPRReconcile", "TwitterReconcile", "LDAPConnectorReconcile", "LinkedInReconcile", "EpicGamesReconcile", "NintendoReconcile", "SonyPSNReconcile", "SteamReconcile", "TwitchReconcile", "XboxReconcile", "ClientCredentialsJWTPopulate", "SCIMServerGroupRequestConverter", "SCIMServerGroupResponseConverter", "SCIMServerUserRequestConverter", "SCIMServerUserResponseConverter", "SelfServiceRegistrationValidation", "UserInfoPopulate" ],
   "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
