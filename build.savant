@@ -87,8 +87,8 @@ target(name: "generateDomain", description: "Generates all of the json files for
     fileSet(dir: "src/main/domain")
   }
 
-  clientLibrary.generateDomainJson(srcDir: "../fusionauth-app/src/main/java/io/fusionauth/domain", outDir: "src/main/domain")
-  clientLibrary.generateDomainJson(srcDir: "build/src/java-error/com/inversoft/error", outDir: "src/main/domain")
+  clientLibrary.generateDomainJson(srcDir: "../fusionauth-app/src/main/java/io/fusionauth/domain/", outDir: "src/main/domain")
+  clientLibrary.generateDomainJson(srcDir: "build/src/java-error/com/inversoft/error/", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwt/domain/", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwks/domain/", outDir: "src/main/domain")
 
