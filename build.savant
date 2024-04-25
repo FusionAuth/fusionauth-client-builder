@@ -83,12 +83,16 @@ target(name: "generateDomain", description: "Generates all of the json files for
     return
   }
 
+  println "DEBUG -- file.delete src/main/domain"
   file.delete {
     fileSet(dir: "src/main/domain")
   }
 
+  println "DEBUG -- generateDomainJson ../fusionauth-app"
   clientLibrary.generateDomainJson(srcDir: "../fusionauth-app/src/main/java/io/fusionauth/domain/", outDir: "src/main/domain")
+  println "DEBUG -- generateDomainJson build/src/java-error"
   clientLibrary.generateDomainJson(srcDir: "build/src/java-error/com/inversoft/error/", outDir: "src/main/domain")
+  println "DEBUG -- generateDomainJson build/src/fusionauth-jwt"
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwt/domain/", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwks/domain/", outDir: "src/main/domain")
 
