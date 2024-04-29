@@ -164,6 +164,11 @@ def process_domain_file(fn, schemas, options, identity_providers)
     unless fields && fields.length > 0
       fields = {}
     end
+    # when a discriminator is required you must set it as such in the mapped schema object
+    if ["BaseIdentityProvider", "BaseSAMLv2IdentityProvider"].include? ex["type"]
+      openapiobj["required"] = ["type"]
+    end
+
     if ["HashMap", "TreeMap", "LinkedHashMap"].include? ex["type"]
       # these are java builtins classes TODO unsure if this will cause issues
       next
