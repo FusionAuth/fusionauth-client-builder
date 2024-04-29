@@ -144,7 +144,6 @@ def process_domain_file(fn, schemas, options, identity_providers)
   end
   openapiobj["type"] = "object"
 
-
   # TODO What about ENUMS in an existing data model with fields?
   if json["enum"] 
     openapiobj["type"] = "string"
@@ -164,6 +163,11 @@ def process_domain_file(fn, schemas, options, identity_providers)
     unless fields && fields.length > 0
       fields = {}
     end
+    # when a discriminator is required you must set it as such in the mapped schema object
+    if ex["type"] === "BaseIdentityProvider"
+      openapiobj["required"] = ["type"]
+    end
+
     if ["HashMap", "TreeMap", "LinkedHashMap"].include? ex["type"]
       # these are java builtins classes TODO unsure if this will cause issues
       next
