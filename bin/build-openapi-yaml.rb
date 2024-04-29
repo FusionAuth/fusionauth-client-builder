@@ -144,7 +144,6 @@ def process_domain_file(fn, schemas, options, identity_providers)
   end
   openapiobj["type"] = "object"
 
-
   # TODO What about ENUMS in an existing data model with fields?
   if json["enum"] 
     openapiobj["type"] = "string"
