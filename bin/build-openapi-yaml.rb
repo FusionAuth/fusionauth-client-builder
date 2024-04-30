@@ -195,9 +195,16 @@ def process_domain_file(fn, schemas, options, identity_providers)
     properties = {}
     openapiobj["properties"] = properties
     fields.each do |k,v|
+      # APIMatic Error - circular reference, removing User as we don't return with GroupMember
+      if objectname == "GroupMember" && k == "user"
+        next
+      end
       properties[k] = {}
       v.each do |k2,v2|
-        if k2 == "type" 
+        # if objectname == "GroupMember"
+        #   puts "#{k} #{v} #{k2} #{v2}"
+        # end
+        if k2 == "type"         
           if is_primitive(v2)
             properties[k] = convert_primitive(v2)
           elsif v2 == "List"
