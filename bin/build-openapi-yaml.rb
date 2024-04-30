@@ -163,9 +163,19 @@ def process_domain_file(fn, schemas, options, identity_providers)
     unless fields && fields.length > 0
       fields = {}
     end
-    # when a discriminator is required you must set it as such in the mapped schema object
+    # APIMatic Error - when a discriminator is required you must set it as such in the mapped schema object
     if ["BaseIdentityProvider", "BaseSAMLv2IdentityProvider"].include? ex["type"]
       openapiobj["required"] = ["type"]
+    end
+
+    # APIMatic Error - BaseIdentityProvider fields where not added after requiring type ref
+    if ["BaseSAMLv2IdentityProvider"].include? ex["type"]
+      baseIdentityFiles = Dir.glob(options[:sourcedir]+"/main/domain/io.fusionauth.domain.provider.BaseIdentityProvider.json")
+      baseIdentityFile = baseIdentityFiles[0]
+      baseIdentityFileOpen = File.open(baseIdentityFile)
+      baseIdentityFileOpens = baseIdentityFileOpen.read
+      baseIdentityFileJson = JSON.parse(baseIdentityFileOpens)
+      fields = fields.merge(baseIdentityFileJson["fields"])
     end
 
     if ["HashMap", "TreeMap", "LinkedHashMap"].include? ex["type"]
@@ -211,7 +221,7 @@ def process_domain_file(fn, schemas, options, identity_providers)
             elsif mapValueType == "D" && k == "applicationConfiguration" && objectname.match(/IdentityProvider$/) 
               if objectname.match(/BaseIdentityProvider$/) or objectname.match(/BaseSAMLv2IdentityProvider$/)
                 # remove this one, we don't need to provide anything for the BaseIdentityProvider or BaseSAMLv2IdentityProvider application config.properties, I think
-                properties.delete(k)
+                # properties.delete(k)
               else
                 identityproviderconfigrefname = objectname.sub("IdentityProvider","") + "ApplicationConfiguration"
                 properties[k]["additionalProperties"]['$ref'] = make_ref(identityproviderconfigrefname)
