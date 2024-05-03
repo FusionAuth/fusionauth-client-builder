@@ -10,7 +10,7 @@ require 'yaml'
 options = {}
 
 # default options
-options[:sourcedir] = "../src/"
+options[:sourcedir] = Dir.getwd + "/src"
 options[:outfile] = "openapi.yaml"
 options[:apiversion] = "1.0.0"
 
@@ -127,7 +127,7 @@ def modify_type(packageName,objectName)
 end
 
 def process_domain_file(fn, schemas, options, identity_providers)
-  if options[:verbose] 
+  if options[:verbose]
     puts "processing "+fn
   end
 
@@ -145,7 +145,7 @@ def process_domain_file(fn, schemas, options, identity_providers)
   openapiobj["type"] = "object"
 
   # TODO What about ENUMS in an existing data model with fields?
-  if json["enum"] 
+  if json["enum"]
     openapiobj["type"] = "string"
     # some enums have name attribute, other are just plain strings
     if json["enum"][0] && json["enum"][0]["name"]
@@ -204,13 +204,13 @@ def process_domain_file(fn, schemas, options, identity_providers)
         # if objectname == "GroupMember"
         #   puts "#{k} #{v} #{k2} #{v2}"
         # end
-        if k2 == "type"         
+        if k2 == "type"
           if is_primitive(v2)
             properties[k] = convert_primitive(v2)
           elsif v2 == "List"
             listElementType = fields[k]["typeArguments"][0]["type"]
             addListValue(properties[k],k2,listElementType,identity_providers, k, objectname)
-            
+
           elsif v2 == "Map"
             properties[k][k2] = "object"
             properties[k]["additionalProperties"] = {}
@@ -225,7 +225,7 @@ def process_domain_file(fn, schemas, options, identity_providers)
             elsif mapValueType == "List"
               listElementType = fields[k]["typeArguments"][1]["typeArguments"][0]["type"]
               addListValue(properties[k],k2,listElementType,identity_providers)
-            elsif mapValueType == "D" && k == "applicationConfiguration" && objectname.match(/IdentityProvider$/) 
+            elsif mapValueType == "D" && k == "applicationConfiguration" && objectname.match(/IdentityProvider$/)
               if objectname.match(/BaseIdentityProvider$/) or objectname.match(/BaseSAMLv2IdentityProvider$/)
                 # remove this one, we don't need to provide anything for the BaseIdentityProvider or BaseSAMLv2IdentityProvider application config.properties, I think
                 # properties.delete(k)
@@ -246,7 +246,7 @@ def process_domain_file(fn, schemas, options, identity_providers)
                # special handling of this. We create IdentityProviderField elsewhere
                # see https://github.com/OpenAPITools/openapi-generator/issues/10880#issuecomment-995243186 for why
                properties[k]["$ref"] = make_ref('IdentityProviderField')
- 
+
             else
               # put in ref
               properties[k]['$ref'] = make_ref(v2, packagename)
@@ -257,7 +257,7 @@ def process_domain_file(fn, schemas, options, identity_providers)
     end
   end
 
-  schemas[objectname] = openapiobj 
+  schemas[objectname] = openapiobj
 
 end
 
@@ -279,13 +279,6 @@ def addListValue(hash,key,listElementType,identity_providers,rootkey=nil,objectn
   end
 end
 
-def param_optional(comments_arr)
-  if comments_arr && comments_arr[0].include?("(Optional)") 
-    return true
-  end
-  return false
-end
-
 def process_rawpaths(rawpaths, options)
 
   new_paths = {}
@@ -297,21 +290,21 @@ def process_rawpaths(rawpaths, options)
   rawpaths.each do |uri, methods|
     new_paths[uri] = {}
 
-    methods.each do |method, pathobjs| 
+    methods.each do |method, pathobjs|
 
       if pathobjs.length == 1
         # no merging needed
         new_paths[uri][method] = pathobjs[0]
       else
         orig_object = pathobjs[0]
-     
+
         pathobjs.drop(1).each do |pathobj|
-          if options[:verbose] 
+          if options[:verbose]
             puts "merging in " + uri.to_s + " " + method.to_s +  " operationId: " + pathobj["operationId"].to_s
           end
           orig_object = merge_operations(pathobj, orig_object, uri, method)
         end
-        new_paths[uri][method] = orig_object 
+        new_paths[uri][method] = orig_object
       end
     end
   end
@@ -319,8 +312,10 @@ def process_rawpaths(rawpaths, options)
   return new_paths
 end
 
+api_files_done = []
+
 def process_api_file(fn, paths, options, deferred)
-  if options[:verbose] 
+  if options[:verbose]
     puts "processing "+fn
   end
   f = File.open(fn)
@@ -329,7 +324,7 @@ def process_api_file(fn, paths, options, deferred)
   f.close
 
   if json["deprecated"]
-    if options[:verbose] 
+    if options[:verbose]
       puts "skipping deprecated "+fn
     end
     return
@@ -337,41 +332,24 @@ def process_api_file(fn, paths, options, deferred)
 
   method = json["method"]
   uri = json["uri"]
-  
+
   # check to see if the url segments are optional
   if json["params"]
-    uri_without_optional = uri
     segmentparams = json["params"].select{|p| p["type"] == "urlSegment"}
     segmentparams.each do |p|
       if p["constant"] == true
         uri = uri + "/"+p["value"].delete('"')
-        uri_without_optional = uri_without_optional + "/"+p["value"].delete('"')
         next
       end
-      
-      if param_optional(p["comments"]) 
-        uri = uri + "/{"+p["name"]+"}"
-      else
-        uri = uri + "/{"+p["name"]+"}"
-        uri_without_optional = uri_without_optional + "/{"+p["name"]+"}"
-      end
-
+      uri = uri + "/{"+p["name"]+"}"
     end
 
-    if options[:verbose] 
+    if options[:verbose]
       puts "adding path for " + uri
     end
 
     # builds for full uri, including optional path params at end
     build_path(uri, json, paths, true, options)
-
-    # only support an optional parameter on the last url segment
-    if uri_without_optional != uri
-      if options[:verbose] 
-        puts "adding path for " + uri_without_optional
-      end
-      build_path(uri_without_optional, json, paths, false, options)
-    end
   else
     # If this path doesn't have any parameters, we need to defer building it because
     # maybe we'll encounter another path with optional parameters that we can merge
@@ -444,7 +422,7 @@ def merge_operations(new_api_object, old_api_object, uri, method)
   # only problem would be if two different operations took different path params in same location but we don't have that
   oldparamstohandle = old_api_object["parameters"].select{|p| p["in"] != "query" && p["in"] != "path" }
   newparamstohandle = new_api_object["parameters"].select{|p| p["in"] != "query" && p["in"] != "path"}
-  if oldparamstohandle & newparamstohandle != newparamstohandle 
+  if oldparamstohandle & newparamstohandle != newparamstohandle
     p "Saw some new params that were not query params. Doh! "
   end
   new_api_object["parameters"] += queryparamstoadd
@@ -465,12 +443,12 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
   method = json["method"]
   desc = json["comments"].join(" ").delete("\n").strip
   operationId = json["methodName"]
-  if include_optional_segment_param
-    operationId += "WithId"
-  end
+  # if include_optional_segment_param
+  #   operationId += "WithId"
+  # end
   jsonparams = json["params"]
 
-  if not paths[uri] 
+  if not paths[uri]
     paths[uri] = {}
   end
 
@@ -491,7 +469,7 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
       openapiobj["security"].push({BEARER_AUTH_SCHEME_NAME => []})
     end
   end
-  
+
 
   params = []
   openapiobj["parameters"] = params
@@ -500,7 +478,7 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
     segmentparams = jsonparams.select{|p| p["type"] == "urlSegment"}
     queryparams = jsonparams.select{|p| p["type"] == "urlParameter"}
     bodyparams = jsonparams.select{|p| p["type"] == "body"}
-  
+
     queryparams.each do |p|
       params << build_openapi_paramobj(p, "query")
     end
@@ -511,14 +489,14 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
         next
       end
 
-      if param_optional(p["comments"])
-        if include_optional_segment_param
-          # we have an optional param but it is in the URI, so we want to add it to the parameters
-          params << build_openapi_paramobj(p, "path")
-        end
-      else
+      # if param_optional(p["comments"])
+      #   if include_optional_segment_param
+      #     # we have an optional param but it is in the URI, so we want to add it to the parameters
+      #     params << build_openapi_paramobj(p, "path")
+      #   end
+      # else
         params << build_openapi_paramobj(p, "path")
-      end
+      # end
     end
 
     if bodyparams && bodyparams.length > 0
@@ -547,7 +525,7 @@ def add_header_params(params, json)
    apis_requiring_tenant_header = ["tenant","user-action","entity","user/family","user","two-factor","user/comment","application","email/template","user/registration","group","consent"]
 
    apis_with_optional_tenant_header = ["login", "passwordless", "identity-provider/login","jwt"]
-   
+
    no_header_needed = true
    required = false
    if apis_requiring_tenant_header.include? json["uri"].gsub("/api/","")
@@ -586,14 +564,14 @@ def build_openapi_paramobj(jsonparamobj, paramtype)
     paramobj["required"] = true
   end
   if jsonparamobj["comments"] && jsonparamobj["comments"][0]
-    paramobj["description"] = jsonparamobj["comments"].join(" ").gsub('(Optional)','').gsub("\n",'').delete("\n").strip
+    paramobj["description"] = jsonparamobj["comments"].join(" ").gsub("\n",'').delete("\n").strip
   end
   return paramobj
 end
 
 def build_nested_content_response(hash, ref, description)
   hash["description"] = description
-  
+
   if ref
     hash["content"] = {}
     hash["content"]["application/json"] = {}
@@ -645,7 +623,7 @@ else
   domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*")
 end
 
-if options[:verbose] 
+if options[:verbose]
   puts "Processing files: "
   puts api_files
   puts domain_files
@@ -709,7 +687,7 @@ api_files.each do |fn|
   process_api_file(fn, rawpaths, options, deferred)
 end
 
-# 
+#
 if deferred.length
   deferred.each do |uri, objects|
     if not rawpaths.key?(uri)
@@ -746,14 +724,13 @@ security:
   f.write spec.to_yaml.gsub(/^---/,'')
 end
 
-# TODO handle {} in component schema ? 
+# TODO handle {} in component schema ?
 # TODO custom deserializers? IdentityProviderRequestDeserializer or is that handled by openapi?
 
 # not defined anywhere, we don't support this yet
 # TODO more status codes
 
 # TODO cookies
-# TODO anyof https://github.com/swagger-api/swagger-codegen/issues/10011 
+# TODO anyof https://github.com/swagger-api/swagger-codegen/issues/10011
 # TODO content -type is sent on GETs https://github.com/swagger-api/swagger-codegen/issues/8310
 # TODO should we handle type form, notUsed? that is used for oauth token exchange
-  
