@@ -9,7 +9,7 @@
             "name": "Debug specific file with rdbg",
             "request": "launch",
             "script": "${file}",
-            "args":["-f IPAccessControlList", "-v true"],
+            "args":["-f retrieveUser", "-v true"],
             "askParameters": true
         },
         {

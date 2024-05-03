@@ -341,7 +341,15 @@ def process_api_file(fn, paths, options, deferred)
         uri = uri + "/"+p["value"].delete('"')
         next
       end
-      uri = uri + "/{"+p["name"]+"}"
+      # TODO: This should be temporary and we should fix the underlying
+      # duplicate names in the .java files
+      if p["name"] === "ipAccessControlListId"
+        uri = uri + "/{"+"accessControlListId"+"}"
+      elsif p["name"] === "apiKeyId"
+        uri = uri + "/{"+"keyId"+"}"
+      else
+        uri = uri + "/{"+p["name"]+"}"
+      end
     end
 
     if options[:verbose]
@@ -380,10 +388,6 @@ def build_operation_id(new_api_object, old_api_object, uri, method)
   elsif method == "post"
     prefix = "create"
   end
-  suffix = ""
-  if uri[-1] == "}"
-    suffix = "WithId"
-  end
   uri_array = uri.split("/")
   operation_name = uri_array[2]
   if uri_array[3] && uri_array[3][-1] != "}"
@@ -409,7 +413,10 @@ def build_operation_id(new_api_object, old_api_object, uri, method)
 
   operation_name[0] = operation_name[0].capitalize # just capitalize first letter
 
-  return prefix + operation_name + suffix
+  base_operation_name = prefix + operation_name
+  oldSuffix = old_api_object["operationId"].split(base_operation_name)[-1] || ""
+  newSuffix = new_api_object["operationId"].split(base_operation_name)[-1] || ""
+  return base_operation_name + oldSuffix + newSuffix
 
 end
 
@@ -443,9 +450,6 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
   method = json["method"]
   desc = json["comments"].join(" ").delete("\n").strip
   operationId = json["methodName"]
-  # if include_optional_segment_param
-  #   operationId += "WithId"
-  # end
   jsonparams = json["params"]
 
   if not paths[uri]
@@ -488,15 +492,7 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
         # ignore this, we build it elsewhere
         next
       end
-
-      # if param_optional(p["comments"])
-      #   if include_optional_segment_param
-      #     # we have an optional param but it is in the URI, so we want to add it to the parameters
-      #     params << build_openapi_paramobj(p, "path")
-      #   end
-      # else
         params << build_openapi_paramobj(p, "path")
-      # end
     end
 
     if bodyparams && bodyparams.length > 0
@@ -555,7 +551,16 @@ end
 
 def build_openapi_paramobj(jsonparamobj, paramtype)
   paramobj = {}
-  paramobj["name"] = jsonparamobj["name"]
+  # TODO: This should be temporary and we should fix the underlying
+  # duplicate names in the .java files
+  if jsonparamobj["name"] === "ipAccessControlListId"
+    paramobj["name"] = "accessControlListId"
+  elsif jsonparamobj["name"] === "apiKeyId"
+    paramobj["name"] = "keyId"
+  else
+    paramobj["name"] = jsonparamobj["name"]
+  end
+
   paramobj["in"] = paramtype
   paramobj["schema"] = {}
   paramobj["schema"]["type"] = "string"
