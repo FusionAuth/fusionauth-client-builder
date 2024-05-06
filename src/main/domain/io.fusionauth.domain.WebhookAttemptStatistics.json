@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookAttemptStatistics",
+  "description" : "/**\n * Statistics about webhook attempts.\n *\n * @author Rob Davis\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebhookAttemptStatistics"
+    } ]
+  } ],
+  "fields" : {
+    "failCount" : {
+      "type" : "int"
+    },
+    "successCount" : {
+      "type" : "int"
+    }
+  }
+}

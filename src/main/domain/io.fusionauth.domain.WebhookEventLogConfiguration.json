@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookEventLogConfiguration",
+  "description" : "/**\n * The system configuration for Webhook Event Log data.\n *\n * @author Rob Davis\n */\n",
+  "fields" : {
+    "delete" : {
+      "type" : "DeleteConfiguration"
+    }
+  }
+}

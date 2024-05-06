@@ -3,7 +3,7 @@
   "type" : "UserDeactivateEvent",
   "description" : "/**\n * Models the User Deactivate Event.\n *\n * @author Brian Pontarelli\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -11,9 +11,5 @@
       "type" : "UserDeactivateEvent"
     } ]
   } ],
-  "fields" : {
-    "user" : {
-      "type" : "User"
-    }
-  }
+  "fields" : { }
 }

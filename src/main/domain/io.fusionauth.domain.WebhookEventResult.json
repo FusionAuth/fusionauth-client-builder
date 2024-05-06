@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookEventResult",
+  "description" : "/**\n * The possible result states of a webhook event\n *\n * @author Rob Davis\n */\n",
+  "enum" : [ "Failed", "Running", "Succeeded" ]
+}
