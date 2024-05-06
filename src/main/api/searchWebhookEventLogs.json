@@ -1,0 +1,20 @@
+{
+  "uri": "/api/system/webhook-event-log/search",
+  "comments": [
+    "Searches the webhook event logs with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchWebhookEventLogs",
+  "successResponse": "WebhookEventLogSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "WebhookEventLogSearchRequest"
+    }
+  ]
+}
