@@ -1,0 +1,109 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SimpleThemeVariables",
+  "description" : "/**\n * Theme object for values used in the css variables for simple themes.\n *\n * @author Lyle Schemmerling\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "SimpleThemeVariables"
+    } ]
+  } ],
+  "fields" : {
+    "alertBackgroundColor" : {
+      "type" : "String"
+    },
+    "alertFontColor" : {
+      "type" : "String"
+    },
+    "backgroundImageUrl" : {
+      "type" : "String"
+    },
+    "backgroundRepeat" : {
+      "type" : "String"
+    },
+    "backgroundSize" : {
+      "type" : "String"
+    },
+    "borderRadius" : {
+      "type" : "String"
+    },
+    "deleteButtonColor" : {
+      "type" : "String"
+    },
+    "deleteButtonFocusColor" : {
+      "type" : "String"
+    },
+    "deleteButtonTextColor" : {
+      "type" : "String"
+    },
+    "deleteButtonTextFocusColor" : {
+      "type" : "String"
+    },
+    "errorFontColor" : {
+      "type" : "String"
+    },
+    "fontColor" : {
+      "type" : "String"
+    },
+    "fontFamily" : {
+      "type" : "String"
+    },
+    "footerDisplay" : {
+      "type" : "String"
+    },
+    "iconBackgroundColor" : {
+      "type" : "String"
+    },
+    "iconColor" : {
+      "type" : "String"
+    },
+    "inputBackgroundColor" : {
+      "type" : "String"
+    },
+    "inputIconColor" : {
+      "type" : "String"
+    },
+    "inputTextColor" : {
+      "type" : "String"
+    },
+    "linkTextColor" : {
+      "type" : "String"
+    },
+    "linkTextFocusColor" : {
+      "type" : "String"
+    },
+    "logoImageDisplay" : {
+      "type" : "String"
+    },
+    "logoImageSize" : {
+      "type" : "String"
+    },
+    "logoImageUrl" : {
+      "type" : "String"
+    },
+    "monoFontColor" : {
+      "type" : "String"
+    },
+    "monoFontFamily" : {
+      "type" : "String"
+    },
+    "pageBackgroundColor" : {
+      "type" : "String"
+    },
+    "panelBackgroundColor" : {
+      "type" : "String"
+    },
+    "primaryButtonColor" : {
+      "type" : "String"
+    },
+    "primaryButtonFocusColor" : {
+      "type" : "String"
+    },
+    "primaryButtonTextColor" : {
+      "type" : "String"
+    },
+    "primaryButtonTextFocusColor" : {
+      "type" : "String"
+    }
+  }
+}

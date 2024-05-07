@@ -42,6 +42,12 @@
     },
     "templates" : {
       "type" : "Templates"
+    },
+    "type" : {
+      "type" : "ThemeType"
+    },
+    "variables" : {
+      "type" : "SimpleThemeVariables"
     }
   }
 }

@@ -8,6 +8,9 @@
   "fields" : {
     "name" : {
       "type" : "String"
+    },
+    "type" : {
+      "type" : "ThemeType"
     }
   }
 }
