@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.ThemeType",
+  "enum" : [ "advanced", "simple" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ThemeType"
+}
