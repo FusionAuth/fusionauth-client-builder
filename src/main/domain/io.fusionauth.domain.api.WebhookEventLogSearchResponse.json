@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.api",
   "type" : "WebhookEventLogSearchResponse",
-  "description" : "/**\n * Webhook event log search response.\n *\n * @author Rob Davis\n */\n",
+  "description" : "/**\n * Webhook event log search response.\n *\n * @author Spencer Witt\n */\n",
   "fields" : {
     "total" : {
       "type" : "long"

@@ -1,6 +1,6 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "WebhookAttemptResult",
-  "description" : "/**\n * The possible states of a webhook attempt.\n *\n * @author Rob Davis\n */\n",
+  "description" : "/**\n * The possible states of an individual webhook attempt to a single endpoint.\n *\n * @author Spencer Witt\n */\n",
   "enum" : [ "Success", "Failure", "Unknown" ]
 }

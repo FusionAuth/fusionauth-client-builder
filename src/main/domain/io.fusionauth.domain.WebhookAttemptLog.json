@@ -1,9 +1,14 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "WebhookAttemptLog",
-  "description" : "/**\n * A webhook call attempt log.\n *\n * @author Rob Davis\n */\n",
+  "description" : "/**\n * A webhook call attempt log.\n *\n * @author Spencer Witt\n */\n",
   "implements" : [ {
     "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebhookAttemptLog"
+    } ]
+  }, {
+    "type" : "Comparable",
     "typeArguments" : [ {
       "type" : "WebhookAttemptLog"
     } ]
