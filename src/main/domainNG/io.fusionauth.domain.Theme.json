@@ -5,6 +5,10 @@
     "type" : "Object"
   },
   "fields" : {
+    "FUSIONAUTH_SIMPLE_THEME_ID" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "FUSIONAUTH_THEME_ID" : {
       "className" : "java.util.UUID",
       "type" : "UUID"
@@ -51,9 +55,17 @@
     "templates" : {
       "className" : "io.fusionauth.domain.Theme$Templates",
       "type" : "Theme$Templates"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.ThemeType",
+      "type" : "ThemeType"
+    },
+    "variables" : {
+      "className" : "io.fusionauth.domain.SimpleThemeVariables",
+      "type" : "SimpleThemeVariables"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.UUID", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.LocalizedStrings", "io.fusionauth.domain.Theme$Templates" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.UUID", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.LocalizedStrings", "io.fusionauth.domain.Theme$Templates", "io.fusionauth.domain.ThemeType", "io.fusionauth.domain.SimpleThemeVariables" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

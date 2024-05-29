@@ -1,0 +1,148 @@
+{
+  "className" : "io.fusionauth.domain.SimpleThemeVariables",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "alertBackgroundColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "alertFontColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "backgroundImageUrl" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "backgroundSize" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "borderRadius" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "deleteButtonColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "deleteButtonFocusColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "deleteButtonTextColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "deleteButtonTextFocusColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "errorFontColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "errorIconColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "fontColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "fontFamily" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "footerDisplay" : {
+      "type" : "boolean"
+    },
+    "iconBackgroundColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "iconColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "infoIconColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "inputBackgroundColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "inputIconColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "inputTextColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "linkTextColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "linkTextFocusColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "logoImageSize" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "logoImageUrl" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "monoFontColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "monoFontFamily" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "pageBackgroundColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "panelBackgroundColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "primaryButtonColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "primaryButtonFocusColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "primaryButtonTextColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "primaryButtonTextFocusColor" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.SimpleThemeVariables",
+      "type" : "SimpleThemeVariables"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SimpleThemeVariables"
+}

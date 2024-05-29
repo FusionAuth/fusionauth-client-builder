@@ -16,9 +16,13 @@
     "name" : {
       "className" : "java.lang.String",
       "type" : "String"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.ThemeType",
+      "type" : "ThemeType"
     }
   },
-  "imports" : [ "java.util.Map", "java.lang.String" ],
+  "imports" : [ "java.util.Map", "java.lang.String", "io.fusionauth.domain.ThemeType" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.search",
