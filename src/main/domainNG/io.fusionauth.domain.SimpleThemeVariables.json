@@ -14,8 +14,8 @@
       "type" : "String"
     },
     "backgroundImageURL" : {
-      "className" : "java.lang.String",
-      "type" : "String"
+      "className" : "java.net.URI",
+      "type" : "URI"
     },
     "backgroundSize" : {
       "className" : "java.lang.String",
@@ -97,8 +97,8 @@
       "type" : "String"
     },
     "logoImageURL" : {
-      "className" : "java.lang.String",
-      "type" : "String"
+      "className" : "java.net.URI",
+      "type" : "URI"
     },
     "monoFontColor" : {
       "className" : "java.lang.String",
@@ -133,7 +133,7 @@
       "type" : "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.net.URI" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
