@@ -16,7 +16,7 @@
       "type" : "String"
     },
     "backgroundImageURL" : {
-      "type" : "String"
+      "type" : "URI"
     },
     "backgroundSize" : {
       "type" : "String"
@@ -79,7 +79,7 @@
       "type" : "String"
     },
     "logoImageURL" : {
-      "type" : "String"
+      "type" : "URI"
     },
     "monoFontColor" : {
       "type" : "String"
