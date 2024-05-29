@@ -15,7 +15,7 @@
     "alertFontColor" : {
       "type" : "String"
     },
-    "backgroundImageUrl" : {
+    "backgroundImageURL" : {
       "type" : "String"
     },
     "backgroundSize" : {
@@ -78,7 +78,7 @@
     "logoImageSize" : {
       "type" : "String"
     },
-    "logoImageUrl" : {
+    "logoImageURL" : {
       "type" : "String"
     },
     "monoFontColor" : {

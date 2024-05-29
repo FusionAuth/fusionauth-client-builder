@@ -13,7 +13,7 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
-    "backgroundImageUrl" : {
+    "backgroundImageURL" : {
       "className" : "java.lang.String",
       "type" : "String"
     },
@@ -96,7 +96,7 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
-    "logoImageUrl" : {
+    "logoImageURL" : {
       "className" : "java.lang.String",
       "type" : "String"
     },
