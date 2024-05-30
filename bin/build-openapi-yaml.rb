@@ -312,8 +312,6 @@ def process_rawpaths(rawpaths, options)
   return new_paths
 end
 
-api_files_done = []
-
 def process_api_file(fn, paths, options, deferred)
   if options[:verbose]
     puts "processing "+fn
@@ -465,6 +463,10 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
   paths[uri][method] << openapiobj
 
   openapiobj["description"] = desc
+  urlSplit = uri.split("/")
+  openapiobj["tags"] = [urlSplit[1] === "api" ? urlSplit[2] : urlSplit[1]]
+  # Add to global tags to include at root
+  $tags |= openapiobj["tags"]
   openapiobj["operationId"] = operationId
   if json["anonymous"] == true
     # sometimes anonymous requests can take JWT bearer tokens. We shouldn't see that on any other request definitions, which all default to API key auth
@@ -612,6 +614,7 @@ api_files = []
 schemas = {}
 components = {}
 deferred = {}
+$tags = []
 
 # have to do additional processing on paths
 rawpaths = {}
@@ -721,6 +724,7 @@ servers:
   - url: https://sandbox.fusionauth.io
 security:
   - #{API_KEY_AUTH_SCHEME_NAME}: []
+#{{"tags"=>$tags.sort.map { |name| {"name"=>name} }}.to_yaml.gsub(/^---/,'')}
 
 )
 
