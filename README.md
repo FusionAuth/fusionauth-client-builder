@@ -63,8 +63,6 @@ fusionauth
 ├── fusionauth-android-client
 ├── fusionauth-csharp-client
 ├── fusionauth-java-client
-├── fusionauth-javascript-client
-├── fusionauth-node-client
 ├── fusionauth-openapi
 ├── fusionauth-php-client
 ├── fusionauth-python-client
