@@ -273,11 +273,11 @@ target(name: "publish-all", description: "Publish all client libraries") {
   [
       "java-client",
       "netcore-client",
-      "openapi"
+      "openapi",
       "php-client",
       "python-client",
       "ruby-client",
-      "typescript-client",
+      "typescript-client"
   ].each { client ->
     ProcessBuilder pb = new ProcessBuilder(
         "sb", "publish")
