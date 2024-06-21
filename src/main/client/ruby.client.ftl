@@ -57,7 +57,7 @@ module FusionAuth
 [#if api.deprecated??]
     # @deprecated ${api.deprecated?replace("{{renamedMethod}}", camel_to_underscores(api.renamedMethod!''))}
 [/#if]
-    def ${camel_to_underscores(api.methodName)}(${global.methodParameters(api, "ruby")})
+    def ${camel_to_underscores(api.methodName)}[#if (api.params![])?filter(p -> !p.constant??)?has_content](${global.methodParameters(api, "ruby")})[/#if]
       [#assign formPost = false/]
       [#list api.params![] as param]
         [#if param.type == "form"][#assign formPost = true/][/#if]
@@ -87,8 +87,8 @@ module FusionAuth
       [#if formPost]
           .body_handler(FusionAuth::FormDataBodyHandler.new(body))
       [/#if]
-          .${api.method}()
-          .go()
+          .${api.method}
+          .go
     end
 
 [/#list]
@@ -99,8 +99,7 @@ module FusionAuth
     #
     private
     def start
-      client = startAnonymous.authorization(@api_key)
-      client
+      startAnonymous.authorization(@api_key)
     end
 
     private

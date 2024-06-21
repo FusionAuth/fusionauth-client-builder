@@ -1,0 +1,10 @@
+{
+  "uri": "/api/health",
+  "comments": [
+    "Retrieves the FusionAuth system status using an API key. Using an API key will cause the response to include the product version, health checks and various runtime metrics."
+  ],
+  "method": "get",
+  "methodName": "retrieveSystemStatusUsingAPIKey",
+  "successResponse": "StatusResponse",
+  "errorResponse": "Void"
+}
