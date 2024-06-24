@@ -1,0 +1,14 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "StatusResponse",
+  "description" : "/**\n * The public Status API response\n *\n * @author Daniel DeGroff\n */\n",
+  "extends" : [ {
+    "type" : "LinkedHashMap",
+    "typeArguments" : [ {
+      "type" : "String"
+    }, {
+      "type" : "Object"
+    } ]
+  } ],
+  "fields" : { }
+}

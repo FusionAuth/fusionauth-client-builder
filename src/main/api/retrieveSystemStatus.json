@@ -1,0 +1,11 @@
+{
+  "uri": "/api/status",
+  "comments": [
+    "Retrieves the FusionAuth system status. This request is anonymous and does not require an API key. When an API key is not provided the response will contain a single value in the JSON response indicating the current health check."
+  ],
+  "method": "get",
+  "methodName": "retrieveSystemStatus",
+  "successResponse": "StatusResponse",
+  "errorResponse": "Void",
+  "anonymous": true
+}

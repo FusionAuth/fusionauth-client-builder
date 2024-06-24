@@ -1,0 +1,11 @@
+{
+  "uri": "/api/health",
+  "comments": [
+    "Retrieves the FusionAuth system health. This API will return 200 if the system is healthy, and 500 if the system is un-healthy."
+  ],
+  "method": "get",
+  "methodName": "retrieveSystemHealth",
+  "successResponse": "Void",
+  "errorResponse": "Void",
+  "anonymous": true
+}
