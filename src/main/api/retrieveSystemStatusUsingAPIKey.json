@@ -1,5 +1,5 @@
 {
-  "uri": "/api/health",
+  "uri": "/api/status",
   "comments": [
     "Retrieves the FusionAuth system status using an API key. Using an API key will cause the response to include the product version, health checks and various runtime metrics."
   ],
