@@ -3,7 +3,7 @@
   "type" : "UserLoginIdDuplicateOnCreateEvent",
   "description" : "/**\n * Models an event where a user is being created with an \"in-use\" login Id (email or username).\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -21,9 +21,6 @@
       "type" : "String"
     },
     "existing" : {
-      "type" : "User"
-    },
-    "user" : {
       "type" : "User"
     }
   }

@@ -1,0 +1,31 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "WebhookEventLogSearchCriteria",
+  "description" : "/**\n * Search criteria for the webhook event log.\n *\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "WebhookEventLogSearchCriteria"
+    } ]
+  } ],
+  "fields" : {
+    "end" : {
+      "type" : "ZonedDateTime"
+    },
+    "event" : {
+      "type" : "String"
+    },
+    "eventResult" : {
+      "type" : "WebhookEventResult"
+    },
+    "eventType" : {
+      "type" : "EventType"
+    },
+    "start" : {
+      "type" : "ZonedDateTime"
+    }
+  }
+}

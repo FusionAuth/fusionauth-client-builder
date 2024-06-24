@@ -45,6 +45,9 @@
     },
     "uiConfiguration" : {
       "type" : "UIConfiguration"
+    },
+    "webhookEventLogConfiguration" : {
+      "type" : "WebhookEventLogConfiguration"
     }
   }
 }

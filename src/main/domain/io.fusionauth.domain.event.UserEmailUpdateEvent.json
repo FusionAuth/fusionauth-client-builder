@@ -3,7 +3,7 @@
   "type" : "UserEmailUpdateEvent",
   "description" : "/**\n * Models an event where a user's email is updated outside of a forgot / change password workflow.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -16,9 +16,6 @@
   "fields" : {
     "previousEmail" : {
       "type" : "String"
-    },
-    "user" : {
-      "type" : "User"
     }
   }
 }
