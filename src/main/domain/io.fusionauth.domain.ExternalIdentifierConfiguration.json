@@ -18,6 +18,9 @@
     "changePasswordIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "completionTokenTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "deviceCodeTimeToLiveInSeconds" : {
       "type" : "int"
     },
