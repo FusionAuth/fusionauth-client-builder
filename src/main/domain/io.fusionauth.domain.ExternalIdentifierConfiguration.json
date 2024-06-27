@@ -18,9 +18,6 @@
     "changePasswordIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
-    "completionTokenTimeToLiveInSeconds" : {
-      "type" : "int"
-    },
     "deviceCodeTimeToLiveInSeconds" : {
       "type" : "int"
     },
@@ -37,6 +34,9 @@
       "type" : "SecureGeneratorConfiguration"
     },
     "externalAuthenticationIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "loginIntentTimeToLiveInSeconds" : {
       "type" : "int"
     },
     "oneTimePasswordTimeToLiveInSeconds" : {
