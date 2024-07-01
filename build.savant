@@ -19,7 +19,7 @@ import java.nio.file.Paths
 fusionauthJWTVersion = "5.2.4"
 javaErrorVersion = "2.2.3"
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.51.0", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.51.1", licenses: ["ApacheV2_0"]) {
   workflow {
     fetch {
       cache()
@@ -253,14 +253,13 @@ target(name: "build-openapi", description: "Build the OpenAPI file") {
 }
 
 target(name: "build-all", description: "Builds all client libraries", dependsOn: ["build-java",
-                                                                                  "build-php",
-//                                                                                  "build-angular",
                                                                                   "build-go",
                                                                                   "build-netcore",
-                                                                                  "build-typescript",
                                                                                   "build-openapi",
+                                                                                  "build-php",
                                                                                   "build-python",
-                                                                                  "build-ruby"]) {
+                                                                                  "build-ruby",
+                                                                                  "build-typescript"]) {
 }
 
 
@@ -274,11 +273,11 @@ target(name: "publish-all", description: "Publish all client libraries") {
   [
       "java-client",
       "netcore-client",
+      "openapi",
       "php-client",
       "python-client",
       "ruby-client",
-      "typescript-client",
-      "openapi"
+      "typescript-client"
   ].each { client ->
     ProcessBuilder pb = new ProcessBuilder(
         "sb", "publish")

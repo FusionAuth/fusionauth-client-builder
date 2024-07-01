@@ -130,6 +130,7 @@ import io.fusionauth.domain.api.ReactorMetricsResponse;
 import io.fusionauth.domain.api.ReactorRequest;
 import io.fusionauth.domain.api.ReactorResponse;
 import io.fusionauth.domain.api.ReindexRequest;
+import io.fusionauth.domain.api.StatusResponse;
 import io.fusionauth.domain.api.SystemConfigurationRequest;
 import io.fusionauth.domain.api.SystemConfigurationResponse;
 import io.fusionauth.domain.api.TenantDeleteRequest;
