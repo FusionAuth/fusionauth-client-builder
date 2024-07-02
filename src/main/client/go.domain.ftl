@@ -102,6 +102,8 @@ func (b *BaseHTTPResponse) SetStatus(status int) {
   b.StatusCode = status
 }
 
+type LinkedHashMap map[string]interface{}
+
 [#assign ignoredTypes = ["HTTPHeaders","IntrospectResponse","LocalizedIntegers","LocalizedStrings","UserinfoResponse","ApplicationEvent"]/]
 [#list domain as d]
   [#if !(ignoredTypes?seq_contains(d.type))]
