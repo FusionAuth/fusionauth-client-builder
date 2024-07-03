@@ -19,7 +19,7 @@ import java.nio.file.Paths
 fusionauthJWTVersion = "5.2.4"
 javaErrorVersion = "2.2.3"
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.51.1", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.51.2", licenses: ["ApacheV2_0"]) {
   workflow {
     fetch {
       cache()
