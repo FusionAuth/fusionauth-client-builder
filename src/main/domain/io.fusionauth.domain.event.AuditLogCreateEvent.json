@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.event",
   "type" : "AuditLogCreateEvent",
-  "description" : "/**\n * Event event to an audit log was created.\n *\n * @author Daniel DeGroff\n */\n",
+  "description" : "/**\n * Event to indicate an audit log was created.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
     "type" : "BaseEvent"
   } ],

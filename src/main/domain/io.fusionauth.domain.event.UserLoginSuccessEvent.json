@@ -3,7 +3,7 @@
   "type" : "UserLoginSuccessEvent",
   "description" : "/**\n * Models the User Login Success Event.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -29,9 +29,6 @@
     },
     "ipAddress" : {
       "type" : "String"
-    },
-    "user" : {
-      "type" : "User"
     }
   }
 }

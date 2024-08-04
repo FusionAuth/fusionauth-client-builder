@@ -3,7 +3,7 @@
   "type" : "UserLoginFailedEvent",
   "description" : "/**\n * Models the User Login Failed Event.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -20,9 +20,6 @@
     },
     "ipAddress" : {
       "type" : "String"
-    },
-    "user" : {
-      "type" : "User"
     }
   }
 }

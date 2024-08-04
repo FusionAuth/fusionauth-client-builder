@@ -3,7 +3,7 @@
   "type" : "UserIdentityProviderUnlinkEvent",
   "description" : "/**\n * Models the User Identity Provider Unlink Event.\n *\n * @author Rob Davis\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -16,9 +16,6 @@
   "fields" : {
     "identityProviderLink" : {
       "type" : "IdentityProviderLink"
-    },
-    "user" : {
-      "type" : "User"
     }
   }
 }
