@@ -44,12 +44,6 @@
     },
     "attemptResult" : {
       "type" : "WebhookAttemptResult"
-    },
-    "duration" : {
-      "type" : "long"
-    },
-    "url" : {
-      "type" : "String"
     }
   }
 }
