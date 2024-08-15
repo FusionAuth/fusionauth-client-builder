@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebhookAttemptLogResponse",
+  "description" : "/**\n * Webhook attempt log response.\n *\n * @author Spencer Witt\n */\n",
+  "fields" : {
+    "webhookAttemptLog" : {
+      "type" : "WebhookAttemptLog"
+    }
+  }
+}
