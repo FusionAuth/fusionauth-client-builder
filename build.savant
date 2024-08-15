@@ -57,7 +57,7 @@ release = loadPlugin(id: "org.savantbuild.plugin:release-git:2.0.0-RC.6")
 
 // Plugin settings
 clientLibrary.settings.debug = false
-//clientLibrary.settings.domainDirectory = Paths.get("src/main/domainNG")
+
 
 target(name: "extract-source-jars") {
   // Download the source JARs
@@ -157,33 +157,45 @@ target(name: "build-angular", description: "Build the Angular Client Library") {
 }
 
 target(name: "build-java", description: "Build the Java Client Library") {
+
+  var currentDomainDirectory = clientLibrary.settings.domainDirectory
+  clientLibrary.settings.domainDirectory = Paths.get("src/main/domainNG")
   // Build the FusionAuth client in fusionauth-app first. Then copy everything over to fusionauth-java-client and massage it.
   clientLibrary.buildClient(template: "src/main/client/java.client.ftl",
                             outputFile: "../fusionauth-app/src/main/java/io/fusionauth/client/FusionAuthClient.java")
 
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain")
-  file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/domain") {
-    fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/domain", excludePatterns: ["internal/annotation/*"])
-    filter(token: ", JSONColumnable", value: "")
-    filter(token: "implements JSONColumnable, ", value: "")
-    filter(token: "implements JSONColumnable", value: "")
-    filter(token: "@JSONColumn\n  ", value: "")
-    filter(token: "@ExcludeFromJSONColumn\n  ", value: "")
-    filter(token: "import com.inversoft.mybatis.ExcludeFromJSONColumn;\n", value: "")
-    filter(token: "import com.inversoft.mybatis.JSONColumn;\n", value: "")
-    filter(token: "import com.inversoft.mybatis.JSONColumnable;\n", value: "")
-    filter(token: "import io.fusionauth.api.domain.json.annotation.MaskMapValue;\n", value: "")
-    filter(token: "import io.fusionauth.api.domain.json.annotation.MaskString;\n", value: "")
-    filter(token: "import io.fusionauth.api.domain.annotation.InternalUse;\n", value: "")
-    filter(token: ".*@MaskMapValue\\.List\\(\\{(\\n|.)*\\}\\)\\n", value: "")
-    filter(token: ".*@MaskMapValue\\(.*\n", value: "")
-    filter(token: ".*@MaskString.*\n", value: "")
-    filter(token: ".*@InternalUse.*\n ", value: "")
-  }
+//  file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/domain") {
+//    fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/domain", excludePatterns: ["internal/annotation/*"])
+//    filter(token: ", JSONColumnable", value: "")
+//    filter(token: "implements JSONColumnable, ", value: "")
+//    filter(token: "implements JSONColumnable", value: "")
+//    filter(token: "@JSONColumn\n  ", value: "")
+//    filter(token: "@ExcludeFromJSONColumn\n  ", value: "")
+//    filter(token: "import com.inversoft.mybatis.ExcludeFromJSONColumn;\n", value: "")
+//    filter(token: "import com.inversoft.mybatis.JSONColumn;\n", value: "")
+//    filter(token: "import com.inversoft.mybatis.JSONColumnable;\n", value: "")
+//    filter(token: "import io.fusionauth.api.domain.json.annotation.MaskMapValue;\n", value: "")
+//    filter(token: "import io.fusionauth.api.domain.json.annotation.MaskString;\n", value: "")
+//    filter(token: "import io.fusionauth.api.domain.annotation.InternalUse;\n", value: "")
+//    filter(token: ".*@MaskMapValue\\.List\\(\\{(\\n|.)*\\}\\)\\n", value: "")
+//    filter(token: ".*@MaskMapValue\\(.*\n", value: "")
+//    filter(token: ".*@MaskString.*\n", value: "")
+//    filter(token: ".*@InternalUse.*\n ", value: "")
+//  }
+
+  clientLibrary.buildDomain(template: "src/main/client/java.domainNG.ftl",
+                            outputDir: "../fusionauth-java-client/src/main/java/",
+                            extension: "java")
+
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/client")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/client") {
     fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/client", excludePatterns: ["json/internal/*"])
   }
+
+
+  // Set it back
+  clientLibrary.settings.domainDirectory = currentDomainDirectory
 }
 
 target(name: "build-php", description: "Build the PHP Client Library") {
