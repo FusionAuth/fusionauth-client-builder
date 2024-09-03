@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.WebhookEventLogConfiguration",
+  "extends" : { },
+  "fields" : {
+    "delete" : {
+      "className" : "io.fusionauth.domain.SystemConfiguration$DeleteConfiguration",
+      "type" : "SystemConfiguration$DeleteConfiguration"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.SystemConfiguration$DeleteConfiguration" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookEventLogConfiguration"
+}

@@ -1,0 +1,32 @@
+{
+  "className" : "io.fusionauth.domain.WebhookCallResponse",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "exception" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "statusCode" : {
+      "type" : "int"
+    },
+    "url" : {
+      "className" : "java.net.URI",
+      "type" : "URI"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.net.URI" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.WebhookCallResponse",
+      "type" : "WebhookCallResponse"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookCallResponse"
+}

@@ -1,0 +1,25 @@
+{
+  "className" : "io.fusionauth.domain.api.WebhookEventLogResponse",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "webhookEventLog" : {
+      "className" : "io.fusionauth.domain.WebhookEventLog",
+      "type" : "WebhookEventLog"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.WebhookEventLog" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.WebhookEventLogResponse",
+      "type" : "WebhookEventLogResponse"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebhookEventLogResponse"
+}

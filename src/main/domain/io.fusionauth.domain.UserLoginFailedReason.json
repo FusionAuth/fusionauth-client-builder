@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserLoginFailedReason",
+  "description" : "/**\n * The reason for the login failure.\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserLoginFailedReason"
+    } ]
+  } ],
+  "fields" : {
+    "code" : {
+      "type" : "String"
+    },
+    "lambdaId" : {
+      "type" : "UUID"
+    },
+    "lambdaResult" : {
+      "type" : "Errors"
+    }
+  }
+}

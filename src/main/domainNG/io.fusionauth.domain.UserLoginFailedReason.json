@@ -1,0 +1,33 @@
+{
+  "className" : "io.fusionauth.domain.UserLoginFailedReason",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "code" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "lambdaId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "lambdaResult" : {
+      "className" : "com.inversoft.error.Errors",
+      "type" : "Errors"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.UUID", "com.inversoft.error.Errors" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.UserLoginFailedReason",
+      "type" : "UserLoginFailedReason"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserLoginFailedReason"
+}

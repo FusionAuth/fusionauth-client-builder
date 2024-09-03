@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserLoginFailedReasonCode",
+  "description" : "/**\n * User login failed reason codes.\n */\n",
+  "fields" : { }
+}

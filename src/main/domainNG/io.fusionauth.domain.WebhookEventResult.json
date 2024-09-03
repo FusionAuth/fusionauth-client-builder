@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.WebhookEventResult",
+  "enum" : [ "Failed", "Running", "Succeeded" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookEventResult"
+}

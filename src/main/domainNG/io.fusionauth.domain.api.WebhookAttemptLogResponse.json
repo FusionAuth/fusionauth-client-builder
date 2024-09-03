@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.WebhookAttemptLogResponse",
+  "extends" : { },
+  "fields" : {
+    "webhookAttemptLog" : {
+      "className" : "io.fusionauth.domain.WebhookAttemptLog",
+      "type" : "WebhookAttemptLog"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.WebhookAttemptLog" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebhookAttemptLogResponse"
+}

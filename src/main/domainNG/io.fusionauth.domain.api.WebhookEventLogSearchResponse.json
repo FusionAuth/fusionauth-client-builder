@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.WebhookEventLogSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "total" : {
+      "type" : "long"
+    },
+    "webhookEventLogs" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.WebhookEventLog",
+        "type" : "WebhookEventLog"
+      } ]
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.WebhookEventLog" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "WebhookEventLogSearchResponse"
+}

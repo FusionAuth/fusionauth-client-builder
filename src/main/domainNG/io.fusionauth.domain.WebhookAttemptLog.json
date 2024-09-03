@@ -1,0 +1,66 @@
+{
+  "className" : "io.fusionauth.domain.WebhookAttemptLog",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "endInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "startInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "webhookCallResponse" : {
+      "className" : "io.fusionauth.domain.WebhookCallResponse",
+      "type" : "WebhookCallResponse"
+    },
+    "webhookEventLogId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "webhookId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.Comparable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "java.util.UUID", "io.fusionauth.domain.WebhookCallResponse" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.WebhookAttemptLog",
+      "type" : "WebhookAttemptLog"
+    } ]
+  }, {
+    "className" : "java.lang.Comparable",
+    "type" : "Comparable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.WebhookAttemptLog",
+      "type" : "WebhookAttemptLog"
+    } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookAttemptLog"
+}

@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.UserLoginFailedReasonCode",
+  "extends" : { },
+  "fields" : {
+    "Credentials" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "LambdaValidation" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserLoginFailedReasonCode"
+}

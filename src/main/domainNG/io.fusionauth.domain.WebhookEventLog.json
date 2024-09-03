@@ -1,0 +1,79 @@
+{
+  "className" : "io.fusionauth.domain.WebhookEventLog",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "attempts" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.WebhookAttemptLog",
+        "type" : "WebhookAttemptLog"
+      } ]
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "event" : {
+      "className" : "io.fusionauth.domain.event.EventRequest",
+      "type" : "EventRequest"
+    },
+    "eventResult" : {
+      "className" : "io.fusionauth.domain.WebhookEventResult",
+      "type" : "WebhookEventResult"
+    },
+    "eventType" : {
+      "className" : "io.fusionauth.domain.event.EventType",
+      "type" : "EventType"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastAttemptInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "linkedObjectId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "sequence" : {
+      "className" : "java.lang.Long",
+      "type" : "Long"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.List", "io.fusionauth.domain.WebhookAttemptLog", "java.util.Map", "java.lang.String", "io.fusionauth.domain.event.EventRequest", "io.fusionauth.domain.WebhookEventResult", "io.fusionauth.domain.event.EventType", "java.util.UUID", "java.time.ZonedDateTime", "java.lang.Long" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.WebhookEventLog",
+      "type" : "WebhookEventLog"
+    } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookEventLog"
+}
