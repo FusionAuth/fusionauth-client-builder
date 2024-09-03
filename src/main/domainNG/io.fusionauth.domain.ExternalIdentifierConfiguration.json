@@ -36,6 +36,9 @@
     "externalAuthenticationIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "loginIntentTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "oneTimePasswordTimeToLiveInSeconds" : {
       "type" : "int"
     },

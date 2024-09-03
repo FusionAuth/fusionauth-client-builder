@@ -26,7 +26,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String" ],
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.ObjectIdentifiable", "java.util.UUID", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
@@ -34,6 +34,9 @@
       "className" : "io.fusionauth.domain.event.JWTRefreshEvent",
       "type" : "JWTRefreshEvent"
     } ]
+  }, {
+    "className" : "io.fusionauth.domain.event.ObjectIdentifiable",
+    "type" : "ObjectIdentifiable"
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.event",

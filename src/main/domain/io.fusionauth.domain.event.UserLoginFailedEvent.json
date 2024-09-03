@@ -20,6 +20,9 @@
     },
     "ipAddress" : {
       "type" : "String"
+    },
+    "reason" : {
+      "type" : "UserLoginFailedReason"
     }
   }
 }

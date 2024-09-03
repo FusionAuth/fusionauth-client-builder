@@ -1,14 +1,10 @@
 {
   "className" : "io.fusionauth.domain.event.GroupMemberAddEvent",
   "extends" : {
-    "className" : "io.fusionauth.domain.event.BaseEvent",
-    "type" : "BaseEvent"
+    "className" : "io.fusionauth.domain.event.BaseGroupEvent",
+    "type" : "BaseGroupEvent"
   },
   "fields" : {
-    "group" : {
-      "className" : "io.fusionauth.domain.Group",
-      "type" : "Group"
-    },
     "members" : {
       "className" : "java.util.List",
       "type" : "List",
@@ -18,7 +14,7 @@
       } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Group", "java.util.List", "io.fusionauth.domain.GroupMember" ],
+  "imports" : [ "io.fusionauth.domain.event.BaseGroupEvent", "io.fusionauth.domain.Buildable", "java.util.List", "io.fusionauth.domain.GroupMember" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

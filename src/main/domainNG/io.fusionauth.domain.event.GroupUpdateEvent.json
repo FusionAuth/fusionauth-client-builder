@@ -1,20 +1,16 @@
 {
   "className" : "io.fusionauth.domain.event.GroupUpdateEvent",
   "extends" : {
-    "className" : "io.fusionauth.domain.event.BaseEvent",
-    "type" : "BaseEvent"
+    "className" : "io.fusionauth.domain.event.BaseGroupEvent",
+    "type" : "BaseGroupEvent"
   },
   "fields" : {
-    "group" : {
-      "className" : "io.fusionauth.domain.Group",
-      "type" : "Group"
-    },
     "original" : {
       "className" : "io.fusionauth.domain.Group",
       "type" : "Group"
     }
   },
-  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Group" ],
+  "imports" : [ "io.fusionauth.domain.event.BaseGroupEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.Group" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

@@ -9,6 +9,9 @@
     } ]
   } ],
   "fields" : {
+    "loginValidationId" : {
+      "type" : "UUID"
+    },
     "scimEnterpriseUserRequestConverterId" : {
       "type" : "UUID"
     },

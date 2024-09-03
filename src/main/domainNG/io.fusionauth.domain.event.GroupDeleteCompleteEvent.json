@@ -1,16 +1,11 @@
 {
   "className" : "io.fusionauth.domain.event.GroupDeleteCompleteEvent",
   "extends" : {
-    "className" : "io.fusionauth.domain.event.BaseEvent",
-    "type" : "BaseEvent"
+    "className" : "io.fusionauth.domain.event.BaseGroupEvent",
+    "type" : "BaseGroupEvent"
   },
-  "fields" : {
-    "group" : {
-      "className" : "io.fusionauth.domain.Group",
-      "type" : "Group"
-    }
-  },
-  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.NonTransactionalEvent", "io.fusionauth.domain.Group" ],
+  "fields" : { },
+  "imports" : [ "io.fusionauth.domain.event.BaseGroupEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.NonTransactionalEvent" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

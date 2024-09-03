@@ -5,6 +5,10 @@
     "type" : "Object"
   },
   "fields" : {
+    "loginValidationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "scimEnterpriseUserRequestConverterId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"

@@ -2,12 +2,5 @@
   "packageName" : "io.fusionauth.domain.provider",
   "type" : "DomainBasedIdentityProvider",
   "description" : "/**\n * Interface for all identity providers that can be domain based.\n */\n",
-  "fields" : {
-    "domains" : {
-      "type" : "Set",
-      "typeArguments" : [ {
-        "type" : "String"
-      } ]
-    }
-  }
+  "fields" : { }
 }

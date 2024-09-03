@@ -1,8 +1,8 @@
 {
   "className" : "io.fusionauth.domain.event.UserLoginFailedEvent",
   "extends" : {
-    "className" : "io.fusionauth.domain.event.BaseEvent",
-    "type" : "BaseEvent"
+    "className" : "io.fusionauth.domain.event.BaseUserEvent",
+    "type" : "BaseUserEvent"
   },
   "fields" : {
     "applicationId" : {
@@ -17,12 +17,12 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
-    "user" : {
-      "className" : "io.fusionauth.domain.User",
-      "type" : "User"
+    "reason" : {
+      "className" : "io.fusionauth.domain.UserLoginFailedReason",
+      "type" : "UserLoginFailedReason"
     }
   },
-  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.User" ],
+  "imports" : [ "io.fusionauth.domain.event.BaseUserEvent", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.UserLoginFailedReason" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
