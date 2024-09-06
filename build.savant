@@ -24,6 +24,7 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.5
     fetch {
       cache()
       url(url: "https://repository.savantbuild.org")
+      maven()
     }
     publish {
       cache()
@@ -49,7 +50,7 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.5
 }
 
 // Plugins
-clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.4.1")
+clientLibrary = loadPlugin(id: "com.inversoft.savant.plugin:client-library:0.4.2-{integration}")
 dependency = loadPlugin(id: "org.savantbuild.plugin:dependency:2.0.0-RC.7")
 file = loadPlugin(id: "org.savantbuild.plugin:file:2.0.0-RC.7")
 idea = loadPlugin(id: "org.savantbuild.plugin:idea:2.0.0-RC.7")
