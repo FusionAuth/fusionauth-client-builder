@@ -77,12 +77,6 @@ target(name: "extract-source-jars") {
 }
 
 target(name: "generateDomain", description: "Generates all of the json files for the domain", dependsOn: ['extract-source-jars']) {
-  // Bail during a release
-  if (System.getProperty("fusionauth.release") != null) {
-    println "skip generating domain during release"
-    return
-  }
-
   file.delete {
     fileSet(dir: "src/main/domain")
   }
@@ -129,11 +123,7 @@ target(name: "int", description: "Releases a local integration build of the proj
   dependency.integrate()
 }
 
-target(name: "pre-release") {
-  System.setProperty("fusionauth.release", "true")
-}
-
-target(name: "release", description: "Release", dependsOn: ["clean", "pre-release", "int"]) {
+target(name: "release", description: "Release", dependsOn: ["clean", "int"]) {
   release.release()
 }
 
