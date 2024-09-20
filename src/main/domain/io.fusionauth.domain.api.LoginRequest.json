@@ -23,6 +23,12 @@
     },
     "twoFactorTrustId" : {
       "type" : "String"
+    },
+    "types" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "IdentityTypes"
+      } ]
     }
   }
 }

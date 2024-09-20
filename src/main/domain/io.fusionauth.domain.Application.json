@@ -93,6 +93,9 @@
         "type" : "ApplicationOAuthScope"
       } ]
     },
+    "smsConfiguration" : {
+      "type" : "SMSConfiguration"
+    },
     "state" : {
       "type" : "ObjectState"
     },

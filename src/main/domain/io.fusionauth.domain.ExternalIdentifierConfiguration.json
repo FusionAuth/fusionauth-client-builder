@@ -48,6 +48,12 @@
     "passwordlessLoginTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "passwordlessShortCodeLoginGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "passwordlessShortCodeLoginTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "pendingAccountLinkTimeToLiveInSeconds" : {
       "type" : "int"
     },
@@ -70,6 +76,15 @@
       "type" : "SecureGeneratorConfiguration"
     },
     "setupPasswordIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "smsVerificationIdGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "smsVerificationOneTimeCodeGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "smsVerificationTimeToLiveInSeconds" : {
       "type" : "int"
     },
     "trustTokenTimeToLiveInSeconds" : {

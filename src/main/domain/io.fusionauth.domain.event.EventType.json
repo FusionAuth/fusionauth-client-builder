@@ -84,6 +84,9 @@
     "name" : "UserEmailVerified",
     "args" : [ "user.email.verified" ]
   }, {
+    "name" : "UserPhoneVerified",
+    "args" : [ "user.phone.verified" ]
+  }, {
     "name" : "UserIdentityProviderLink",
     "args" : [ "user.identity-provider.link" ]
   }, {

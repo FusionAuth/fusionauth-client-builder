@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user.verify",
+  "type" : "VerifySendCompleteRequest",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
+  "fields" : {
+    "verificationId" : {
+      "type" : "String"
+    },
+    "oneTimeCode" : {
+      "type" : "String"
+    }
+  }
+}

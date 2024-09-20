@@ -1,0 +1,12 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user.verify",
+  "type" : "VerifyStartResponse",
+  "fields" : {
+    "verificationId" : {
+      "type" : "String"
+    },
+    "oneTimeCode" : {
+      "type" : "String"
+    }
+  }
+}
