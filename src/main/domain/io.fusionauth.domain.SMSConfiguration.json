@@ -1,0 +1,21 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SMSConfiguration",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "SMSConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "messengerId" : {
+      "type" : "UUID"
+    },
+    "verifyPhoneNumber" : {
+      "type" : "boolean"
+    },
+    "verificationTemplateId" : {
+      "type" : "UUID"
+    }
+  }
+}

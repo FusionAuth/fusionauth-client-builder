@@ -1,0 +1,5 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user.verify",
+  "type" : "CodeTypes",
+  "fields" : { }
+}

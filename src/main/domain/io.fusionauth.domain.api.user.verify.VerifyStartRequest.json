@@ -1,0 +1,18 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user.verify",
+  "type" : "VerifyStartRequest",
+  "fields" : {
+    "loginId" : {
+      "type" : "String"
+    },
+    "loginType" : {
+      "type" : "IdentityTypes"
+    },
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "codeType" : {
+      "type" : "CodeTypes"
+    }
+  }
+}
