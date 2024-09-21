@@ -27,7 +27,7 @@
     "types" : {
       "type" : "List",
       "typeArguments" : [ {
-        "type" : "IdentityTypes"
+        "type" : "String"
       } ]
     }
   }
