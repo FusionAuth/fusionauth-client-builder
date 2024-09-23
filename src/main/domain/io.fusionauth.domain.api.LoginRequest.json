@@ -15,6 +15,12 @@
     "loginId" : {
       "type" : "String"
     },
+    "loginIdTypes" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
     "oneTimePassword" : {
       "type" : "String"
     },
@@ -23,12 +29,6 @@
     },
     "twoFactorTrustId" : {
       "type" : "String"
-    },
-    "types" : {
-      "type" : "List",
-      "typeArguments" : [ {
-        "type" : "String"
-      } ]
     }
   }
 }

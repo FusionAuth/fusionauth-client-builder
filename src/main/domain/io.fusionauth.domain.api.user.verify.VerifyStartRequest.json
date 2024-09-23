@@ -5,7 +5,7 @@
     "loginId" : {
       "type" : "String"
     },
-    "loginType" : {
+    "loginIdType" : {
       "type" : "String"
     },
     "applicationId" : {

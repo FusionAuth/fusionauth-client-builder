@@ -1,6 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "SMSConfiguration",
+  "description" : "/**\n * Hold SMS configuration for passwordless and verification cases.\n *\n * @author Brady Wied\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
