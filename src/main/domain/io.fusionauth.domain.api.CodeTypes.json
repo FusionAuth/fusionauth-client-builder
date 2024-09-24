@@ -1,0 +1,5 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "CodeTypes",
+  "enum" : [ "clickable", "shortCode" ]
+}

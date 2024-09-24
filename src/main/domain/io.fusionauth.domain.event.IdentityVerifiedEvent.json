@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "IdentityVerifiedEvent",
+  "description" : "/**\n * Models the identity verified event\n *\n * @author Brady Wied\n */\n",
+  "extends" : [ {
+    "type" : "BaseUserEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "IdentityVerifiedEvent"
+    } ]
+  } ],
+  "fields" : {
+    "loginId" : {
+      "type" : "String"
+    }
+  }
+}
