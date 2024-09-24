@@ -97,9 +97,6 @@
     "passwordEncryptionConfiguration" : {
       "type" : "PasswordEncryptionConfiguration"
     },
-    "passwordlessSMSMethod" : {
-      "type" : "TenantPasswordlessSMSMethod"
-    },
     "passwordValidationRules" : {
       "type" : "PasswordValidationRules"
     },
@@ -113,7 +110,7 @@
       "type" : "TenantSCIMServerConfiguration"
     },
     "smsConfiguration" : {
-      "type" : "SMSConfiguration"
+      "type" : "TenantSMSConfiguration"
     },
     "ssoConfiguration" : {
       "type" : "TenantSSOConfiguration"

@@ -94,7 +94,7 @@
       } ]
     },
     "smsConfiguration" : {
-      "type" : "SMSConfiguration"
+      "type" : "TenantSMSConfiguration"
     },
     "state" : {
       "type" : "ObjectState"
