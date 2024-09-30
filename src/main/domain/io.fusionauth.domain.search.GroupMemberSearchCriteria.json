@@ -5,6 +5,12 @@
   "extends" : [ {
     "type" : "BaseSearchCriteria"
   } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "GroupMemberSearchCriteria"
+    } ]
+  } ],
   "fields" : {
     "groupId" : {
       "type" : "UUID"
