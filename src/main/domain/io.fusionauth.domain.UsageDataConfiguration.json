@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UsageDataConfiguration",
+  "description" : "/**\n * Config for Usage Data / Stats\n *\n * @author Lyle Schemmerling\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "fields" : {
+    "numberOfDaysToRetain" : {
+      "type" : "int"
+    }
+  }
+}
