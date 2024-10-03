@@ -78,12 +78,6 @@
     "setupPasswordIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
-    "smsVerificationIdGenerator" : {
-      "type" : "SecureGeneratorConfiguration"
-    },
-    "smsVerificationOneTimeCodeGenerator" : {
-      "type" : "SecureGeneratorConfiguration"
-    },
     "smsVerificationTimeToLiveInSeconds" : {
       "type" : "int"
     },

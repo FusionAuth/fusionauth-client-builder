@@ -29,6 +29,12 @@
     },
     "user" : {
       "type" : "User"
+    },
+    "verificationIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
     }
   }
 }

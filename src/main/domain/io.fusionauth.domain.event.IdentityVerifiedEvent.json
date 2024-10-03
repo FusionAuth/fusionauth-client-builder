@@ -14,6 +14,9 @@
   "fields" : {
     "loginId" : {
       "type" : "String"
+    },
+    "loginIdType" : {
+      "type" : "String"
     }
   }
 }

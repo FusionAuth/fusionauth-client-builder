@@ -12,17 +12,17 @@
     "messengerId" : {
       "type" : "UUID"
     },
-    "verifyPhoneNumber" : {
-      "type" : "boolean"
-    },
-    "passwordlessEnabled" : {
-      "type" : "boolean"
-    },
     "passwordlessTemplateId" : {
       "type" : "UUID"
     },
+    "verificationStrategy" : {
+      "type" : "VerificationStrategy"
+    },
     "verificationTemplateId" : {
       "type" : "UUID"
+    },
+    "verifyPhoneNumber" : {
+      "type" : "boolean"
     }
   }
 }
