@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.event.IdentityVerifiedEvent",
+  "extends" : {
+    "className" : "io.fusionauth.domain.event.BaseUserEvent",
+    "type" : "BaseUserEvent"
+  },
+  "fields" : {
+    "loginId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "loginIdType" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.event.BaseUserEvent", "io.fusionauth.domain.Buildable", "java.lang.String" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.event.IdentityVerifiedEvent",
+      "type" : "IdentityVerifiedEvent"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "IdentityVerifiedEvent"
+}

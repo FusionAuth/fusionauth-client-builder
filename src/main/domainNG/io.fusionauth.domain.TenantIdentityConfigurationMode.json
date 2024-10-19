@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.TenantIdentityConfigurationMode",
+  "enum" : [ "Compatible", "Discrete" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantIdentityConfigurationMode"
+}

@@ -49,6 +49,13 @@
     "passwordlessLoginTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "passwordlessShortCodeLoginGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "passwordlessShortCodeLoginTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "pendingAccountLinkTimeToLiveInSeconds" : {
       "type" : "int"
     },
@@ -74,6 +81,9 @@
       "type" : "SecureGeneratorConfiguration"
     },
     "setupPasswordIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "smsVerificationTimeToLiveInSeconds" : {
       "type" : "int"
     },
     "trustTokenTimeToLiveInSeconds" : {

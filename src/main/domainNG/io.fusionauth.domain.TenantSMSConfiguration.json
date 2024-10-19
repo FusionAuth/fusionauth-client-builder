@@ -1,0 +1,40 @@
+{
+  "className" : "io.fusionauth.domain.TenantSMSConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "messengerId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "passwordlessTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "verificationStrategy" : {
+      "className" : "io.fusionauth.domain.VerificationStrategy",
+      "type" : "VerificationStrategy"
+    },
+    "verificationTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "verifyPhoneNumber" : {
+      "type" : "boolean"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID", "io.fusionauth.domain.VerificationStrategy" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TenantSMSConfiguration",
+      "type" : "TenantSMSConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantSMSConfiguration"
+}
