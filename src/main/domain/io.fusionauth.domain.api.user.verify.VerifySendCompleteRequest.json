@@ -1,14 +1,15 @@
 {
   "packageName" : "io.fusionauth.domain.api.user.verify",
   "type" : "VerifySendCompleteRequest",
+  "description" : "/**\n * @author Brady Wied\n */\n",
   "extends" : [ {
     "type" : "BaseEventRequest"
   } ],
   "fields" : {
-    "verificationId" : {
+    "oneTimeCode" : {
       "type" : "String"
     },
-    "oneTimeCode" : {
+    "verificationId" : {
       "type" : "String"
     }
   }

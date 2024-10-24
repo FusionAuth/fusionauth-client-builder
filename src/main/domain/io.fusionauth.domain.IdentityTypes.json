@@ -1,5 +1,0 @@
-{
-  "packageName" : "io.fusionauth.domain",
-  "type" : "IdentityTypes",
-  "enum" : [ "email", "phoneNumber", "username" ]
-}

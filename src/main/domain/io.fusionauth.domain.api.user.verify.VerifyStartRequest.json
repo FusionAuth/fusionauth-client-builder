@@ -1,15 +1,19 @@
 {
   "packageName" : "io.fusionauth.domain.api.user.verify",
   "type" : "VerifyStartRequest",
+  "description" : "/**\n * @author Brady Wied\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
   "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
     "loginId" : {
       "type" : "String"
     },
     "loginIdType" : {
       "type" : "String"
-    },
-    "applicationId" : {
-      "type" : "UUID"
     },
     "verificationStrategy" : {
       "type" : "String"

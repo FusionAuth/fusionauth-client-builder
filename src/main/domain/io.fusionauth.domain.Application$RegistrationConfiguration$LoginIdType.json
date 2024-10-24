@@ -1,6 +1,6 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "LoginIdType",
-  "description" : "// TODO : ENG-1 : Brady - this overlaps with the IdentityType enumeration\n",
+  "description" : "//      This is separate from IdentityType.\n",
   "enum" : [ "email", "username" ]
 }

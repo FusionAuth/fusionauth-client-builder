@@ -58,6 +58,9 @@
     "id" : {
       "type" : "UUID"
     },
+    "identityConfiguration" : {
+      "type" : "TenantIdentityConfiguration"
+    },
     "insertInstant" : {
       "type" : "ZonedDateTime"
     },

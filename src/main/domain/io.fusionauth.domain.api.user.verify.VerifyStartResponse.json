@@ -1,11 +1,12 @@
 {
   "packageName" : "io.fusionauth.domain.api.user.verify",
   "type" : "VerifyStartResponse",
+  "description" : "/**\n * @author Brady Wied\n */\n",
   "fields" : {
-    "verificationId" : {
+    "oneTimeCode" : {
       "type" : "String"
     },
-    "oneTimeCode" : {
+    "verificationId" : {
       "type" : "String"
     }
   }

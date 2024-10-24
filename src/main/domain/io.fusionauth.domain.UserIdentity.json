@@ -1,0 +1,43 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserIdentity",
+  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserIdentity"
+    } ]
+  } ],
+  "fields" : {
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastLoginInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "moderationStatus" : {
+      "type" : "ContentStatus"
+    },
+    "primary" : {
+      "type" : "boolean"
+    },
+    "type" : {
+      "type" : "IdentityType"
+    },
+    "uniqueValue" : {
+      "type" : "String"
+    },
+    "value" : {
+      "type" : "String"
+    },
+    "verified" : {
+      "type" : "boolean"
+    },
+    "verifiedInstant" : {
+      "type" : "ZonedDateTime"
+    }
+  }
+}
