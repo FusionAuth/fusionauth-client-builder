@@ -9,12 +9,6 @@
     } ]
   } ],
   "fields" : {
-    "enabledTypes" : {
-      "type" : "Set",
-      "typeArguments" : [ {
-        "type" : "String"
-      } ]
-    },
     "mode" : {
       "type" : "TenantIdentityConfigurationMode"
     }
