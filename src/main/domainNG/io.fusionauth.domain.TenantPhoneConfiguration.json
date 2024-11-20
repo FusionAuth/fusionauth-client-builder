@@ -1,5 +1,5 @@
 {
-  "className" : "io.fusionauth.domain.TenantSMSConfiguration",
+  "className" : "io.fusionauth.domain.TenantPhoneConfiguration",
   "extends" : {
     "className" : "java.lang.Object",
     "type" : "Object"
@@ -30,11 +30,11 @@
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
     "typeArguments" : [ {
-      "className" : "io.fusionauth.domain.TenantSMSConfiguration",
-      "type" : "TenantSMSConfiguration"
+      "className" : "io.fusionauth.domain.TenantPhoneConfiguration",
+      "type" : "TenantPhoneConfiguration"
     } ]
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",
-  "type" : "TenantSMSConfiguration"
+  "type" : "TenantPhoneConfiguration"
 }

@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.IdentityVerifiedReason",
+  "enum" : [ "Unknown", "Skipped", "Trusted", "Unverifiable", "Implicit", "Pending", "Completed", "Disabled" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "IdentityVerifiedReason"
+}

@@ -6,7 +6,8 @@
   },
   "fields" : {
     "id" : {
-      "type" : "long"
+      "className" : "java.lang.Long",
+      "type" : "Long"
     },
     "insertInstant" : {
       "className" : "java.time.ZonedDateTime",
@@ -53,9 +54,13 @@
     "verifiedInstant" : {
       "className" : "java.time.ZonedDateTime",
       "type" : "ZonedDateTime"
+    },
+    "verifiedReason" : {
+      "className" : "io.fusionauth.domain.IdentityVerifiedReason",
+      "type" : "IdentityVerifiedReason"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.time.ZonedDateTime", "io.fusionauth.domain.ContentStatus", "java.util.UUID", "io.fusionauth.domain.IdentityType", "java.lang.String" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.Long", "java.time.ZonedDateTime", "io.fusionauth.domain.ContentStatus", "java.util.UUID", "io.fusionauth.domain.IdentityType", "java.lang.String", "io.fusionauth.domain.IdentityVerifiedReason" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

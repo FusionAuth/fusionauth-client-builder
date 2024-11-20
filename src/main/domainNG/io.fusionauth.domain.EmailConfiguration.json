@@ -5,22 +5,6 @@
     "type" : "Object"
   },
   "fields" : {
-    "EmailTemplateIdFieldNames" : {
-      "className" : "java.util.List",
-      "type" : "List",
-      "typeArguments" : [ {
-        "className" : "java.lang.String",
-        "type" : "String"
-      } ]
-    },
-    "EmailTemplateIdFields" : {
-      "className" : "java.util.List",
-      "type" : "List",
-      "typeArguments" : [ {
-        "className" : "java.lang.reflect.Field",
-        "type" : "Field"
-      } ]
-    },
     "additionalHeaders" : {
       "className" : "java.util.List",
       "type" : "List",
@@ -138,7 +122,7 @@
       "type" : "boolean"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "java.lang.String", "java.lang.reflect.Field", "io.fusionauth.domain.EmailHeader", "java.util.UUID", "java.lang.Integer", "io.fusionauth.domain.EmailConfiguration$EmailSecurityType", "io.fusionauth.domain.EmailUnverifiedOptions", "io.fusionauth.domain.VerificationStrategy" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "io.fusionauth.domain.EmailHeader", "java.lang.String", "java.util.UUID", "java.lang.Integer", "io.fusionauth.domain.EmailConfiguration$EmailSecurityType", "io.fusionauth.domain.EmailUnverifiedOptions", "io.fusionauth.domain.VerificationStrategy" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

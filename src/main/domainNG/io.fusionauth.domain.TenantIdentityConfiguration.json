@@ -5,20 +5,12 @@
     "type" : "Object"
   },
   "fields" : {
-    "enabledTypes" : {
-      "className" : "java.util.Set",
-      "type" : "Set",
-      "typeArguments" : [ {
-        "className" : "java.lang.String",
-        "type" : "String"
-      } ]
-    },
     "mode" : {
       "className" : "io.fusionauth.domain.TenantIdentityConfigurationMode",
       "type" : "TenantIdentityConfigurationMode"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.Set", "java.lang.String", "io.fusionauth.domain.TenantIdentityConfigurationMode" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.TenantIdentityConfigurationMode" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
