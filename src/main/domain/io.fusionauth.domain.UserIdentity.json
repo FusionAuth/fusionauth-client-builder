@@ -38,6 +38,9 @@
     },
     "verifiedInstant" : {
       "type" : "ZonedDateTime"
+    },
+    "verifiedReason" : {
+      "type" : "IdentityVerifiedReason"
     }
   }
 }

@@ -103,6 +103,9 @@
     "passwordValidationRules" : {
       "type" : "PasswordValidationRules"
     },
+    "phoneConfiguration" : {
+      "type" : "TenantPhoneConfiguration"
+    },
     "rateLimitConfiguration" : {
       "type" : "TenantRateLimitConfiguration"
     },
@@ -111,9 +114,6 @@
     },
     "scimServerConfiguration" : {
       "type" : "TenantSCIMServerConfiguration"
-    },
-    "smsConfiguration" : {
-      "type" : "TenantSMSConfiguration"
     },
     "ssoConfiguration" : {
       "type" : "TenantSSOConfiguration"

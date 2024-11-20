@@ -1,11 +1,11 @@
 {
   "packageName" : "io.fusionauth.domain",
-  "type" : "TenantSMSConfiguration",
-  "description" : "/**\n * Hold SMS configuration for passwordless and verification cases.\n *\n * @author Brady Wied\n */\n",
+  "type" : "TenantPhoneConfiguration",
+  "description" : "/**\n * Hold tenant phone configuration for passwordless and verification cases.\n *\n * @author Brady Wied\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
-      "type" : "TenantSMSConfiguration"
+      "type" : "TenantPhoneConfiguration"
     } ]
   } ],
   "fields" : {
