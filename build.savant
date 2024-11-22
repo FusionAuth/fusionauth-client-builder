@@ -200,6 +200,9 @@ target(name: "build-netcore", description: "Build the C# .netCore Client Library
   clientLibrary.buildDomain(template: "src/main/client/netcore.domain.ftl",
                             outputDir: "../fusionauth-netcore-client/fusionauth-netcore-client/domain",
                             extension: "cs")
+  file.delete {
+    fileSet(dir: "../fusionauth-netcore-client/fusionauth-netcore-client/domain/", includePatterns: [~/IdentityType.cs/])
+  }
 }
 
 target(name: "build-typescript", description: "Build the Typescript Client Library") {
