@@ -84,9 +84,6 @@
     "name" : "UserEmailVerified",
     "args" : [ "user.email.verified" ]
   }, {
-    "name" : "IdentityVerified",
-    "args" : [ "identity.verified" ]
-  }, {
     "name" : "UserIdentityProviderLink",
     "args" : [ "user.identity-provider.link" ]
   }, {
@@ -164,5 +161,8 @@
   }, {
     "name" : "Test",
     "args" : [ "test" ]
+  }, {
+    "name" : "IdentityVerified",
+    "args" : [ "identity.verified" ]
   } ]
 }
