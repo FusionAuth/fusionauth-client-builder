@@ -2,5 +2,5 @@
   "packageName" : "io.fusionauth.domain",
   "type" : "IdentityVerifiedReason",
   "description" : "/**\n * Models the reason that {@link UserIdentity#verified} was set to true or false.\n *\n * @author Brady Wied\n */\n",
-  "enum" : [ "Unknown", "Skipped", "Trusted", "Unverifiable", "Implicit", "Pending", "Completed", "Disabled" ]
+  "enum" : [ "Skipped", "Trusted", "Unverifiable", "Implicit", "Pending", "Completed", "Disabled" ]
 }

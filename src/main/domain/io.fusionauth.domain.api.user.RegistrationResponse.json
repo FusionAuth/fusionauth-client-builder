@@ -6,6 +6,9 @@
     "refreshToken" : {
       "type" : "String"
     },
+    "refreshTokenId" : {
+      "type" : "UUID"
+    },
     "registration" : {
       "type" : "UserRegistration"
     },

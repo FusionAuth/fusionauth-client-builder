@@ -1,0 +1,12 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "IdentityInfo",
+  "fields" : {
+    "type" : {
+      "type" : "String"
+    },
+    "value" : {
+      "type" : "String"
+    }
+  }
+}
