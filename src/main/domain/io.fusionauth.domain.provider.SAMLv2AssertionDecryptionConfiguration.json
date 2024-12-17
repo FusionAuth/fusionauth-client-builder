@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.provider",
   "type" : "SAMLv2AssertionDecryptionConfiguration",
-  "description" : "/**\n * Config for encrypted assertions when acting as SAML SP\n *\n * @author Jaret Hendrickson\n */\n",
+  "description" : "/**\n * Configuration for encrypted assertions when acting as SAML Service Provider\n *\n * @author Jaret Hendrickson\n */\n",
   "extends" : [ {
     "type" : "Enableable"
   } ],
