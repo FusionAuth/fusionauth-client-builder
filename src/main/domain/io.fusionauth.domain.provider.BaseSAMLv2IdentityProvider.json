@@ -15,6 +15,9 @@
     } ]
   } ],
   "fields" : {
+    "assertionDecryptionConfiguration" : {
+      "type" : "SAMLv2AssertionDecryptionConfiguration"
+    },
     "emailClaim" : {
       "type" : "String"
     },
