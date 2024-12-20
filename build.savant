@@ -170,6 +170,8 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: ".*@MaskMapValue\\(.*\n", value: "")
     filter(token: ".*@MaskString.*\n", value: "")
     filter(token: ".*@InternalUse.*\n ", value: "")
+    filter(token: "import io.fusionauth.api.domain.users.InternalUser;", value: "import io.fusionauth.domain.User;")
+    filter(token: "InternalUser", value: "User")
   }
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/client")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/client") {
