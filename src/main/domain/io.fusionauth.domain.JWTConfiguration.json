@@ -21,6 +21,9 @@
     "refreshTokenExpirationPolicy" : {
       "type" : "RefreshTokenExpirationPolicy"
     },
+    "refreshTokenOneTimeUseConfiguration" : {
+      "type" : "RefreshTokenOneTimeUseConfiguration"
+    },
     "refreshTokenRevocationPolicy" : {
       "type" : "RefreshTokenRevocationPolicy"
     },

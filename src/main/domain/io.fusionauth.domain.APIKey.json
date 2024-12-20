@@ -10,7 +10,7 @@
   } ],
   "fields" : {
     "expirationInstant" : {
-        "type" : "ZonedDateTime"
+      "type" : "ZonedDateTime"
     },
     "id" : {
       "type" : "UUID"
