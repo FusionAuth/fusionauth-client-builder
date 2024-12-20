@@ -11,6 +11,9 @@
     "onMultiFactorEnable" : {
       "type" : "boolean"
     },
+    "onOneTimeTokenReuse" : {
+      "type" : "boolean"
+    },
     "onPasswordChanged" : {
       "type" : "boolean"
     }
