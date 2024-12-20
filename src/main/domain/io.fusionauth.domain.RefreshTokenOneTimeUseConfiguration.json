@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "RefreshTokenOneTimeUseConfiguration",
+  "description" : "/**\n * Refresh token one-time use configuration. This configuration is utilized when the usage policy is\n * configured for one-time use.\n *\n * @author Daniel DeGroff\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "RefreshTokenOneTimeUseConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "gracePeriodInSeconds" : {
+      "type" : "int"
+    }
+  }
+}
