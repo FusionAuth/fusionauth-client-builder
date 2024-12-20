@@ -5,6 +5,10 @@
     "type" : "Object"
   },
   "fields" : {
+    "expirationInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
     "id" : {
       "className" : "java.util.UUID",
       "type" : "UUID"
