@@ -172,6 +172,9 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: ".*@MaskMapValue\\(.*\n", value: "")
     filter(token: ".*@MaskString.*\n", value: "")
     filter(token: ".*@InternalUse.*\n ", value: "")
+  }
+  file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/domain/event") {
+    fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/domain/event", excludePatterns: ["internal/annotation/*"])
     // our events have `InternalUser` objects in them, but that class is intentionally not usable
     // outside of FusionAuth. We serialize events to public `User` objects anyways, so we replace
     // our references here
