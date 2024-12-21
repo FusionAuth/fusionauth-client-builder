@@ -7,8 +7,6 @@
     "typeArguments" : [ {
       "type" : "Theme"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {

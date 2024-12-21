@@ -7,8 +7,6 @@
     "typeArguments" : [ {
       "type" : "Family"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "members" : {

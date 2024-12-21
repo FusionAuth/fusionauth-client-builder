@@ -7,8 +7,6 @@
     "typeArguments" : [ {
       "type" : "Form"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {

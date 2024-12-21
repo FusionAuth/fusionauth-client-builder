@@ -7,8 +7,6 @@
     "typeArguments" : [ {
       "type" : "Webhook"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "connectTimeout" : {

@@ -7,8 +7,6 @@
     "typeArguments" : [ {
       "type" : "RefreshToken"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "applicationId" : {

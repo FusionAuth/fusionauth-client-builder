@@ -1,6 +1,0 @@
-{
-  "packageName" : "io.fusionauth.domain",
-  "type" : "TenantIdentityConfigurationMode",
-  "description" : "/**\n * @author Daniel DeGroff\n */\n",
-  "enum" : [ "Compatible", "Discrete" ]
-}

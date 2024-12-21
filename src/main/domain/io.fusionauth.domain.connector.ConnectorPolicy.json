@@ -7,8 +7,6 @@
     "typeArguments" : [ {
       "type" : "ConnectorPolicy"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "connectorId" : {
