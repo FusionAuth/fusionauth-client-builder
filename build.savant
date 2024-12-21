@@ -172,6 +172,9 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: ".*@MaskMapValue\\(.*\n", value: "")
     filter(token: ".*@MaskString.*\n", value: "")
     filter(token: ".*@InternalUse.*\n ", value: "")
+    // our events have `InternalUser` objects in them, but that class is intentionally not usable
+    // outside of FusionAuth. We serialize events to public `User` objects anyways, so we replace
+    // our references here
     filter(token: "import io.fusionauth.api.domain.users.InternalUser;", value: "import io.fusionauth.domain.User;")
     filter(token: "InternalUser", value: "User")
   }
