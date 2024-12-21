@@ -9,6 +9,10 @@
     } ]
   },
   "fields" : {
+    "assertionDecryptionConfiguration" : {
+      "className" : "io.fusionauth.domain.provider.SAMLv2AssertionDecryptionConfiguration",
+      "type" : "SAMLv2AssertionDecryptionConfiguration"
+    },
     "emailClaim" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -29,7 +33,7 @@
       "type" : "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "io.fusionauth.domain.provider.BaseIdentityProvider", "java.lang.String", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.provider.SAMLv2AssertionDecryptionConfiguration", "java.lang.String", "java.util.UUID" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.provider",

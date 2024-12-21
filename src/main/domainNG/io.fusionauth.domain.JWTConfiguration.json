@@ -17,6 +17,10 @@
       "className" : "io.fusionauth.domain.RefreshTokenExpirationPolicy",
       "type" : "RefreshTokenExpirationPolicy"
     },
+    "refreshTokenOneTimeUseConfiguration" : {
+      "className" : "io.fusionauth.domain.RefreshTokenOneTimeUseConfiguration",
+      "type" : "RefreshTokenOneTimeUseConfiguration"
+    },
     "refreshTokenRevocationPolicy" : {
       "className" : "io.fusionauth.domain.RefreshTokenRevocationPolicy",
       "type" : "RefreshTokenRevocationPolicy"
@@ -36,7 +40,7 @@
       "type" : "int"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.util.UUID", "io.fusionauth.domain.RefreshTokenExpirationPolicy", "io.fusionauth.domain.RefreshTokenRevocationPolicy", "io.fusionauth.domain.RefreshTokenSlidingWindowConfiguration", "io.fusionauth.domain.RefreshTokenUsagePolicy" ],
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.util.UUID", "io.fusionauth.domain.RefreshTokenExpirationPolicy", "io.fusionauth.domain.RefreshTokenOneTimeUseConfiguration", "io.fusionauth.domain.RefreshTokenRevocationPolicy", "io.fusionauth.domain.RefreshTokenSlidingWindowConfiguration", "io.fusionauth.domain.RefreshTokenUsagePolicy" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
