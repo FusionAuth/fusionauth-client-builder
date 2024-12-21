@@ -1,0 +1,20 @@
+{
+  "uri": "/api/identity/verify/complete",
+  "comments": [
+      "Completes verification of an identity using verification codes from the Verify Start API."
+    ],
+  "method": "post",
+  "methodName": "completeVerifyIdentity",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The identity verify complete request that contains all the information used to verify the identity."
+      ],
+      "type": "body",
+      "javaType": "VerifySendCompleteRequest"
+    }
+  ]
+}

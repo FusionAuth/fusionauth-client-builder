@@ -1,0 +1,20 @@
+{
+  "uri": "/api/identity/verify/send",
+  "comments": [
+      "Send a verification code using the appropriate transport for the identity type being verified."
+    ],
+  "method": "post",
+  "methodName": "sendVerifyIdentity",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The identity verify send request that contains all the information used send the code."
+      ],
+      "type": "body",
+      "javaType": "VerifySendCompleteRequest"
+    }
+  ]
+}
