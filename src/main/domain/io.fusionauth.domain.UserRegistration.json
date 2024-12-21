@@ -7,8 +7,6 @@
     "typeArguments" : [ {
       "type" : "UserRegistration"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {

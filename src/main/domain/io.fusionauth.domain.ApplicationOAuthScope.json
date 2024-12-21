@@ -12,8 +12,6 @@
     "typeArguments" : [ {
       "type" : "ApplicationOAuthScope"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "applicationId" : {

@@ -7,8 +7,6 @@
     "typeArguments" : [ {
       "type" : "EntityTypePermission"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {

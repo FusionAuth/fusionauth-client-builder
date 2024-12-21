@@ -12,8 +12,6 @@
     "typeArguments" : [ {
       "type" : "WebhookAttemptLog"
     } ]
-  }, {
-    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {
