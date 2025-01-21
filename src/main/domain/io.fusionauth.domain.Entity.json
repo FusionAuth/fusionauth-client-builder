@@ -8,6 +8,8 @@
       "type" : "Entity"
     } ]
   }, {
+    "type" : "JSONColumnable"
+  }, {
     "type" : "Tenantable"
   } ],
   "fields" : {

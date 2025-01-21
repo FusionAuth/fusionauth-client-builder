@@ -5,6 +5,9 @@
   "extends" : [ {
     "type" : "Enableable"
   } ],
+  "implements" : [ {
+    "type" : "JSONColumnable"
+  } ],
   "fields" : {
     "data" : {
       "type" : "Map",

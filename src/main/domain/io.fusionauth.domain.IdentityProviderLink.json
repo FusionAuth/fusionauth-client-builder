@@ -8,6 +8,8 @@
       "type" : "IdentityProviderLink"
     } ]
   }, {
+    "type" : "JSONColumnable"
+  }, {
     "type" : "Tenantable"
   } ],
   "fields" : {

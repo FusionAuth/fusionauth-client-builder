@@ -7,13 +7,12 @@
     "typeArguments" : [ {
       "type" : "SystemConfiguration"
     } ]
+  }, {
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "auditLogConfiguration" : {
       "type" : "AuditLogConfiguration"
-    },
-    "cookieEncryptionKey" : {
-      "type" : "String"
     },
     "corsConfiguration" : {
       "type" : "CORSConfiguration"

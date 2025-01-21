@@ -2,6 +2,9 @@
   "packageName" : "io.fusionauth.domain.message",
   "type" : "MessageTemplate",
   "description" : "/**\n * Stores an message template used to distribute messages;\n *\n * @author Michael Sleevi\n */\n",
+  "implements" : [ {
+    "type" : "JSONColumnable"
+  } ],
   "fields" : {
     "data" : {
       "type" : "Map",

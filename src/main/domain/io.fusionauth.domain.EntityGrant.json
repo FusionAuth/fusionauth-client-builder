@@ -7,6 +7,8 @@
     "typeArguments" : [ {
       "type" : "EntityGrant"
     } ]
+  }, {
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "data" : {
