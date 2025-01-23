@@ -26,6 +26,12 @@
     "loginId" : {
       "type" : "String"
     },
+    "loginIdTypes" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
     "state" : {
       "type" : "Map",
       "typeArguments" : [ {
