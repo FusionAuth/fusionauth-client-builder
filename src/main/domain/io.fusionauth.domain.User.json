@@ -72,6 +72,9 @@
     "parentEmail" : {
       "type" : "String"
     },
+    "phoneNumber" : {
+      "type" : "String"
+    },
     "tenantId" : {
       "type" : "UUID"
     },
