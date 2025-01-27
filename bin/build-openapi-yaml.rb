@@ -1,3 +1,17 @@
+# Copyright (c) 2025, FusionAuth, All Rights Reserved
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+# either express or implied. See the License for the specific
+# language governing permissions and limitations under the License.
+
 #!/usr/bin/env ruby
 
 require 'json'
@@ -126,7 +140,9 @@ def modify_type(packageName,objectName)
   return objectName
 end
 
-def process_domain_file(fn, schemas, options, identity_providers)
+def process_domain_file(fn, schemas, options, identity_providers, domain_files)
+  # This method is working on domain_files, but also needs to read them. Do not modify the list!
+
   if options[:verbose] 
     puts "processing "+fn
   end
@@ -168,13 +184,17 @@ def process_domain_file(fn, schemas, options, identity_providers)
       # these are java builtins classes TODO unsure if this will cause issues
       next
     end
-    # only happens for domain classes
-    files = Dir.glob(options[:sourcedir]+"/main/domain/io.fusionauth.domain.*"+ex["type"]+".json")
-    file = files[0]
-    ef = File.open(file)
-    efs = ef.read
-    ejson = JSON.parse(efs)
-    fields = fields.merge(ejson["fields"])
+    type = ex["type"]
+
+    #  Search domain_files for a file that matches *\.type.json exactly
+    file = domain_files.find { |file| file.match(/\.#{type}\.json$/) }
+    if file
+      ef = File.open(file)
+      efs = ef.read
+      ejson = JSON.parse(efs)
+      fields = fields.merge(ejson["fields"])
+    end
+
   end
 
   if fields
@@ -299,6 +319,14 @@ def process_rawpaths(rawpaths, options)
 end
 
 def process_api_file(fn, paths, options, deferred)
+  # If the file name contains DisplayableRawLogin log all the params to console
+  # if fn.include?("DisplayableRawLogin")
+  #   puts "Processing file: #{fn}"
+  #   json["params"].each do |param|
+  #     puts "Param name: #{param['name']}, Param type: #{param['type']}"
+  #   end
+  # end
+
   if options[:verbose] 
     puts "processing "+fn
   end
@@ -652,7 +680,7 @@ domain_files.each do |fn|
   if fn.match(/io.fusionauth.domain.provider.BaseSAMLv2IdentityProvider.json/)
     next
   end
-  process_domain_file(fn, schemas, options,identity_providers)
+  process_domain_file(fn, schemas, options,identity_providers, domain_files)
 end
 
 schemas["ZonedDateTime"] = {}
