@@ -319,14 +319,6 @@ def process_rawpaths(rawpaths, options)
 end
 
 def process_api_file(fn, paths, options, deferred)
-  # If the file name contains DisplayableRawLogin log all the params to console
-  # if fn.include?("DisplayableRawLogin")
-  #   puts "Processing file: #{fn}"
-  #   json["params"].each do |param|
-  #     puts "Param name: #{param['name']}, Param type: #{param['type']}"
-  #   end
-  # end
-
   if options[:verbose] 
     puts "processing "+fn
   end
