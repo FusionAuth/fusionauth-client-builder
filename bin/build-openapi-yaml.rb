@@ -187,7 +187,7 @@ def process_domain_file(fn, schemas, options, identity_providers, domain_files)
     type = ex["type"]
 
     #  Search domain_files for a file that matches *\.type.json exactly
-    file = domain_files.find { |file| file.match(/\.#{type}\.json$/) }
+    file = domain_files.find { |file| file.end_with?(".#{type}.json") }
     if file
       ef = File.open(file)
       efs = ef.read
