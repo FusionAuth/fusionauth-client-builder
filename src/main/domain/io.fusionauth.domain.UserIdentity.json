@@ -9,6 +9,9 @@
     } ]
   } ],
   "fields" : {
+    "displayValue" : {
+      "type" : "String"
+    },
     "insertInstant" : {
       "type" : "ZonedDateTime"
     },
@@ -26,9 +29,6 @@
     },
     "type" : {
       "type" : "IdentityType"
-    },
-    "uniqueValue" : {
-      "type" : "String"
     },
     "value" : {
       "type" : "String"
