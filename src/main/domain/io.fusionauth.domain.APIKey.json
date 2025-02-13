@@ -33,8 +33,14 @@
     "metaData" : {
       "type" : "APIKeyMetaData"
     },
+    "name" : {
+      "type" : "String"
+    },
     "permissions" : {
       "type" : "APIKeyPermissions"
+    },
+    "retrievable" : {
+      "type" : "boolean"
     },
     "tenantId" : {
       "type" : "UUID"

@@ -26,6 +26,9 @@
         "type" : "IdentityInfo"
       } ]
     },
+    "duplicatePhoneNumber" : {
+      "type" : "String"
+    },
     "duplicateUsername" : {
       "type" : "String"
     }
