@@ -2,5 +2,5 @@
   "packageName" : "io.fusionauth.domain",
   "type" : "LoginIdType",
   "description" : "//      This is separate from IdentityType.\n",
-  "enum" : [ "email", "username" ]
+  "enum" : [ "email", "phoneNumber", "username" ]
 }
