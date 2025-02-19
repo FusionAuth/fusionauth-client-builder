@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "VerificationId",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "VerificationId"
+    } ]
+  } ],
+  "fields" : {
+    "id" : {
+      "type" : "String"
+    },
+    "oneTimeCode" : {
+      "type" : "String"
+    },
+    "type" : {
+      "type" : "IdentityType"
+    },
+    "value" : {
+      "type" : "String"
+    }
+  }
+}
