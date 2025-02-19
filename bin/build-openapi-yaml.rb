@@ -485,6 +485,7 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
     segmentparams = jsonparams.select{|p| p["type"] == "urlSegment"}
     queryparams = jsonparams.select{|p| p["type"] == "urlParameter"}
     bodyparams = jsonparams.select{|p| p["type"] == "body"}
+    formparams = jsonparams.select{|p| p["type"] == "form"}
   
     queryparams.each do |p|
       params << build_openapi_paramobj(p, "query")
@@ -506,12 +507,22 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
       end
     end
 
-    if bodyparams && bodyparams.length > 0
-      openapiobj["requestBody"] = {}
-      openapiobj["requestBody"]["content"] = {}
-      openapiobj["requestBody"]["content"]["application/json"] = {}
-      openapiobj["requestBody"]["content"]["application/json"]["schema"] = {}
-      openapiobj["requestBody"]["content"]["application/json"]["schema"]["$ref"] = make_ref(bodyparams[0]["javaType"])
+    if formparams&.any? || bodyparams&.any?
+      request_body = {}
+
+      if bodyparams&.any?
+        request_body["application/json"] = {
+          "schema" => {
+            "$ref" => make_ref(bodyparams[0]["javaType"])
+          }
+        }
+      end
+
+      if formparams&.any?
+        request_body["application/x-www-form-urlencoded"] = build_openapi_form_schema(formparams)
+      end
+
+      openapiobj["requestBody"] = { "content" => request_body }
     end
   end
 
@@ -558,6 +569,28 @@ def add_header_params(params, json)
    header_param["schema"]["format"] = "UUID"
 
    params << header_param
+end
+
+def build_openapi_form_schema(form_parameters)
+  properties = {}
+  required = []
+
+  form_parameters.each do |param|
+    property = build_openapi_form_schema_property(param)
+    properties[param["name"]] = property
+
+    required << param["name"] unless param_optional(param["comments"])
+  end
+
+
+  { "schema" => { "type" => "object", "properties" => properties, "required" => required } }
+end
+
+def build_openapi_form_schema_property(param)
+  property = convert_primitive(param["javaType"])
+  property["description"] = param["comments"].join(" ").delete("\n").strip
+  property["enum"] = [param["value"]] if param["value"]
+  property
 end
 
 def build_openapi_paramobj(jsonparamobj, paramtype)
