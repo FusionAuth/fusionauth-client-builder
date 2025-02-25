@@ -36,6 +36,15 @@
     "externalAuthenticationIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "identityVerificationIdGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "identityVerificationIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "identityVerificationOneTimeCodeGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
     "loginIntentTimeToLiveInSeconds" : {
       "type" : "int"
     },
@@ -76,9 +85,6 @@
       "type" : "SecureGeneratorConfiguration"
     },
     "setupPasswordIdTimeToLiveInSeconds" : {
-      "type" : "int"
-    },
-    "smsVerificationTimeToLiveInSeconds" : {
       "type" : "int"
     },
     "trustTokenTimeToLiveInSeconds" : {
