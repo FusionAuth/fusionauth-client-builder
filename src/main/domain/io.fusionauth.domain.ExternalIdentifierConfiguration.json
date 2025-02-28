@@ -36,15 +36,6 @@
     "externalAuthenticationIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
-    "identityVerificationIdGenerator" : {
-      "type" : "SecureGeneratorConfiguration"
-    },
-    "identityVerificationIdTimeToLiveInSeconds" : {
-      "type" : "int"
-    },
-    "identityVerificationOneTimeCodeGenerator" : {
-      "type" : "SecureGeneratorConfiguration"
-    },
     "loginIntentTimeToLiveInSeconds" : {
       "type" : "int"
     },
@@ -65,6 +56,15 @@
     },
     "pendingAccountLinkTimeToLiveInSeconds" : {
       "type" : "int"
+    },
+    "phoneNumberVerificationIdGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "phoneNumberVerificationIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "phoneNumberVerificationOneTimeCodeGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
     },
     "registrationVerificationIdGenerator" : {
       "type" : "SecureGeneratorConfiguration"
