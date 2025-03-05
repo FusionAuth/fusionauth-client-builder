@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "PhoneUnverifiedOptions",
+  "description" : "/**\n * Configuration for unverified phone number identities.\n *\n * @author Spencer Witt\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "PhoneUnverifiedOptions"
+    } ]
+  } ],
+  "fields" : {
+    "behavior" : {
+      "type" : "UnverifiedBehavior"
+    }
+  }
+}

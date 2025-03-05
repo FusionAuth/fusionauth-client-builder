@@ -15,6 +15,12 @@
     "passwordlessTemplateId" : {
       "type" : "UUID"
     },
+    "unverified" : {
+      "type" : "PhoneUnverifiedOptions"
+    },
+    "verificationCompleteTemplateId" : {
+      "type" : "UUID"
+    },
     "verificationStrategy" : {
       "type" : "VerificationStrategy"
     },
