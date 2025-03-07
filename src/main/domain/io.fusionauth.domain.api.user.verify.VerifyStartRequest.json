@@ -2,6 +2,12 @@
   "packageName" : "io.fusionauth.domain.api.user.verify",
   "type" : "VerifyStartRequest",
   "description" : "/**\n * @author Brady Wied\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "VerifyStartRequest"
+    } ]
+  } ],
   "fields" : {
     "applicationId" : {
       "type" : "UUID"

@@ -128,6 +128,9 @@
     "passwordSent" : {
       "type" : "String"
     },
+    "phoneNumberVerificationRequired" : {
+      "type" : "String"
+    },
     "registrationComplete" : {
       "type" : "String"
     },
