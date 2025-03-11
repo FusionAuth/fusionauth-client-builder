@@ -14,7 +14,7 @@
         "The identity verify send request that contains all the information used send the code."
       ],
       "type": "body",
-      "javaType": "VerifySendCompleteRequest"
+      "javaType": "VerifySendRequest"
     }
   ]
 }

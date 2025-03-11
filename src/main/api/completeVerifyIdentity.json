@@ -14,7 +14,7 @@
         "The identity verify complete request that contains all the information used to verify the identity."
       ],
       "type": "body",
-      "javaType": "VerifySendCompleteRequest"
+      "javaType": "VerifyCompleteRequest"
     }
   ]
 }

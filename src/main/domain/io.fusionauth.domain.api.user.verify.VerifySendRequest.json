@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user.verify",
+  "type" : "VerifySendRequest",
+  "description" : "/**\n * Verify Send API request object.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "VerifySendRequest"
+    } ]
+  } ],
+  "fields" : {
+    "oneTimeCode" : {
+      "type" : "String"
+    },
+    "verificationId" : {
+      "type" : "String"
+    }
+  }
+}

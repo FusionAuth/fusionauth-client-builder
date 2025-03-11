@@ -1,14 +1,14 @@
 {
   "packageName" : "io.fusionauth.domain.api.user.verify",
-  "type" : "VerifySendCompleteRequest",
-  "description" : "/**\n * @author Brady Wied\n */\n",
+  "type" : "VerifyCompleteRequest",
+  "description" : "/**\n * Verify Complete API request object.\n */\n",
   "extends" : [ {
     "type" : "BaseEventRequest"
   } ],
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
-      "type" : "VerifySendCompleteRequest"
+      "type" : "VerifyCompleteRequest"
     } ]
   } ],
   "fields" : {
