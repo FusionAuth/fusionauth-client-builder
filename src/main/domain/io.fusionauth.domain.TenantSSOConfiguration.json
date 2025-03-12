@@ -3,6 +3,9 @@
   "type" : "TenantSSOConfiguration",
   "description" : "/**\n * @author Brett Pontarelli\n */\n",
   "fields" : {
+    "allowAccessTokenBootstrap" : {
+      "type" : "boolean"
+    },
     "deviceTrustTimeToLiveInSeconds" : {
       "type" : "int"
     }
