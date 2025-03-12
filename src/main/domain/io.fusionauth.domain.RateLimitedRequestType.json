@@ -2,5 +2,5 @@
   "packageName" : "io.fusionauth.domain",
   "type" : "RateLimitedRequestType",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
-  "enum" : [ "FailedLogin", "ForgotPassword", "SendEmailVerification", "SendPasswordless", "SendRegistrationVerification", "SendTwoFactor", "SendPhoneNumberVerification" ]
+  "enum" : [ "FailedLogin", "ForgotPassword", "SendEmailVerification", "SendPasswordless", "SendRegistrationVerification", "SendTwoFactor", "SendPhoneVerification" ]
 }
