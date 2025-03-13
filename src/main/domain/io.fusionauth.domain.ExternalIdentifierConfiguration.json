@@ -57,13 +57,13 @@
     "pendingAccountLinkTimeToLiveInSeconds" : {
       "type" : "int"
     },
-    "phoneNumberVerificationIdGenerator" : {
+    "phoneVerificationIdGenerator" : {
       "type" : "SecureGeneratorConfiguration"
     },
-    "phoneNumberVerificationIdTimeToLiveInSeconds" : {
+    "phoneVerificationIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
-    "phoneNumberVerificationOneTimeCodeGenerator" : {
+    "phoneVerificationOneTimeCodeGenerator" : {
       "type" : "SecureGeneratorConfiguration"
     },
     "registrationVerificationIdGenerator" : {
