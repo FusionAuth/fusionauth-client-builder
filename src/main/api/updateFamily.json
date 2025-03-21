@@ -1,0 +1,28 @@
+{
+  "uri": "/api/user/family",
+  "comments": [
+    "Updates a family with a given Id."
+  ],
+  "method": "put",
+  "methodName": "updateFamily",
+  "successResponse": "FamilyResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "familyId",
+      "comments": [
+         "The Id of the family to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all the new family information."
+      ],
+      "type": "body",
+      "javaType": "FamilyRequest"
+    }
+  ]
+}
