@@ -7,9 +7,14 @@ DIRECTORY="src/main/api/" # Update with the actual path
 OPERATIONS=("create" "update" "delete" "retrieve" "patch")
 
 # Entities to exclude from validation
-# user consent uses 'revoke' instead of delete
 
-EXCLUDE_ENTITIES=("UserConsent") 
+# user consent uses 'revoke' instead of delete
+# audit log can't be CRUDed, only retrieved
+# user link is not fully CRUDable either
+# entity type permission is not retrievable (you can get all of them for a given entity type, but not one). same for application role
+# no patch or retrieve for groupmembers
+
+EXCLUDE_ENTITIES=("UserConsent" "AuditLog" "UserLink" "EntityTypePermission" "ApplicationRole" "GroupMembers") 
 
 
 # Function to check if an entity is in the exclude list
