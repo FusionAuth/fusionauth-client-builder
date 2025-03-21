@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory containing the JSON files
-DIRECTORY="src/main/api/" # Update with the actual path
+DIRECTORY="src/main/api/" 
 
 # Required operations
 OPERATIONS=("create" "update" "delete" "retrieve" "patch")
@@ -22,7 +22,7 @@ is_excluded() {
     return 1
 }
 
-# Declare an associative array to track entities and their operations
+# Declare an array to track entities and their operations
 entity_files=()
 
 # Process each JSON file in the directory
