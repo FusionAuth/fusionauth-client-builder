@@ -6,22 +6,18 @@ DIRECTORY="src/main/api/" # Update with the actual path
 # Required operations
 OPERATIONS=("create" "update" "delete" "retrieve" "patch")
 
-# Entities to exclude from validation
+# Entities/ops to exclude from validation
 
-# user consent uses 'revoke' instead of delete
-# audit log can't be CRUDed, only retrieved
-# user link is not fully CRUDable either
-# entity type permission is not retrievable (you can get all of them for a given entity type, but not one). same for application role
-# no patch or retrieve for groupmembers
-
-EXCLUDE_ENTITIES=("UserConsent" "AuditLog" "UserLink" "EntityTypePermission" "ApplicationRole" "GroupMembers") 
+#EXCLUDE_ENTITIES=("UserConsent-delete" "AuditLog" "UserLink" "EntityTypePermission" "ApplicationRole" "GroupMembers" "Family") 
+EXCLUDE_ENTITIES_OPS=("UserConsent-delete" "ApplicationRole-retrieve" "Family-delete" "Family-patch" "Family-retrieve" "EntityTypePermission-retrieve" "ApplicationRole-retrieve" "GroupMembers-retrieve" "GroupMembers-patch" "UserLink-patch" "UserLink-update" "AuditLog-delete" "AuditLog-patch" "AuditLog-update") 
 
 
 # Function to check if an entity is in the exclude list
 is_excluded() {
     local entity="$1"
-    for excluded in "${EXCLUDE_ENTITIES[@]}"; do
-        if [[ "$entity" == "$excluded" ]]; then
+    local op="$2"
+    for excluded in "${EXCLUDE_ENTITIES_OPS[@]}"; do
+        if [[ "${entity}-${op}" == "$excluded" ]]; then
             return 0
         fi
     done
@@ -37,19 +33,11 @@ for file in "$DIRECTORY"/create*.json; do
 
     # Extract operation and entity name
     filename=$(basename "$file" .json)
-    #echo $filename
    
     entity=$(echo "$filename" | sed -E "s/^create//" | sed 's/.json$//')
-    #echo $entity
-
-    # Skip if the entity is in the exclude list
-    if is_excluded "$entity"; then
-        continue
-    fi
 
     # Track operations for each entity
     entity_files+=("$entity")
-    #echo ${entity_files[@]}
 done
 
 # Check if each entity has all required operations
@@ -59,6 +47,12 @@ for entity in "${entity_files[@]}"; do
     missing_operations=()
     
     for op in "${OPERATIONS[@]}"; do
+
+        # Skip if the entity is in the exclude list
+        if is_excluded "$entity" "$op"; then
+           continue
+        fi
+
         if [[ ! -e "$DIRECTORY"/${op}${entity}.json ]]; then
             #echo "testing $DIRECTORY/${op}${entity}.json"
             missing_operations+=("$op")
