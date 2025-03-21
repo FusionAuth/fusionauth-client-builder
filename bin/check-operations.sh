@@ -7,7 +7,10 @@ DIRECTORY="src/main/api/" # Update with the actual path
 OPERATIONS=("create" "update" "delete" "retrieve" "patch")
 
 # Entities to exclude from validation
-EXCLUDE_ENTITIES=("specialEntity1" "specialEntity2") # Add any entities to exclude
+# user consent uses 'revoke' instead of delete
+
+EXCLUDE_ENTITIES=("UserConsent") 
+
 
 # Function to check if an entity is in the exclude list
 is_excluded() {
