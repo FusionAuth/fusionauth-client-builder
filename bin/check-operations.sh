@@ -7,8 +7,6 @@ DIRECTORY="src/main/api/" # Update with the actual path
 OPERATIONS=("create" "update" "delete" "retrieve" "patch")
 
 # Entities/ops to exclude from validation
-
-#EXCLUDE_ENTITIES=("UserConsent-delete" "AuditLog" "UserLink" "EntityTypePermission" "ApplicationRole" "GroupMembers" "Family") 
 EXCLUDE_ENTITIES_OPS=("UserConsent-delete" "ApplicationRole-retrieve" "Family-delete" "Family-patch" "Family-retrieve" "EntityTypePermission-retrieve" "ApplicationRole-retrieve" "GroupMembers-retrieve" "GroupMembers-patch" "UserLink-patch" "UserLink-update" "AuditLog-delete" "AuditLog-patch" "AuditLog-update") 
 
 
