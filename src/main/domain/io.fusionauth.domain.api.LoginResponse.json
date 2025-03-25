@@ -30,6 +30,9 @@
     "emailVerificationId" : {
       "type" : "String"
     },
+    "identityVerificationId" : {
+      "type" : "String"
+    },
     "methods" : {
       "type" : "List",
       "typeArguments" : [ {
