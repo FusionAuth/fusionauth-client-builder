@@ -2,6 +2,9 @@
   "packageName" : "io.fusionauth.domain",
   "type" : "WebhookEventLogConfiguration",
   "description" : "/**\n * The system configuration for Webhook Event Log data.\n *\n * @author Spencer Witt\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
   "fields" : {
     "delete" : {
       "type" : "DeleteConfiguration"
