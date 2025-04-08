@@ -1,0 +1,28 @@
+{
+  "uri": "/api/entity",
+  "comments": [
+    "Updates, via PATCH, the Entity with the given Id."
+  ],
+  "method": "patch",
+  "methodName": "patchEntity",
+  "successResponse": "EntityResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityId",
+      "comments": [
+        "The Id of the Entity Type to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new Entity information."
+      ],
+      "type": "body",
+      "javaType": "EntityRequest"
+    }
+  ]
+}

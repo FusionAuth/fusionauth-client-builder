@@ -1,0 +1,42 @@
+{
+  "uri": "/api/entity/type",
+  "comments": [
+    "Patches the permission with the given Id for the entity type."
+  ],
+  "method": "patch",
+  "methodName": "patchEntityTypePermission",
+  "successResponse": "EntityTypeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityTypeId",
+      "comments": [
+        "The Id of the entityType that the permission belongs to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "permission",
+      "constant": true,
+      "type": "urlSegment",
+      "value": "\"permission\""
+    },
+    {
+      "name": "permissionId",
+      "comments": [
+        "The Id of the permission to patch."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains the new permission information."
+      ],
+      "type": "body",
+      "javaType": "EntityTypeRequest"
+    }
+  ]
+}

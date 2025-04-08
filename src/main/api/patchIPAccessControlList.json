@@ -1,0 +1,28 @@
+{
+  "uri": "/api/ip-acl",
+  "comments": [
+    "Update the IP Access Control List with the given Id."
+  ],
+  "method": "patch",
+  "methodName": "patchIPAccessControlList",
+  "successResponse": "IPAccessControlListResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "accessControlListId",
+      "comments": [
+        "The Id of the IP Access Control List to patch."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains the new IP Access Control List information."
+      ],
+      "type": "body",
+      "javaType": "IPAccessControlListRequest"
+    }
+  ]
+}
