@@ -94,6 +94,9 @@
     "oauthConfiguration" : {
       "type" : "TenantOAuth2Configuration"
     },
+    "passwordEnabled" : {
+      "type" : "boolean"
+    },
     "passwordEncryptionConfiguration" : {
       "type" : "PasswordEncryptionConfiguration"
     },

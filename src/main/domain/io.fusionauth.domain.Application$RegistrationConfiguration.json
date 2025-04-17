@@ -41,9 +41,6 @@
     "preferredLanguages" : {
       "type" : "Requirable"
     },
-    "requirePassword" : {
-      "type" : "boolean"
-    },
     "type" : {
       "type" : "RegistrationType"
     }
