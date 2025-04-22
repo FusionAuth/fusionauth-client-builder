@@ -11,6 +11,7 @@
   [/#if]
 [/#function]
 <?php
+
 namespace FusionAuth;
 
 /*
@@ -42,42 +43,32 @@ namespace FusionAuth;
  */
 class FusionAuthClient
 {
-  /**
-   * @var string
-   */
-  private $apiKey;
+    /**
+     * @var string
+     */
+    private string $tenantId;
 
-  /**
-   * @var string
-   */
-  private $baseURL;
+    /**
+     * @var int
+     */
+    public int $connectTimeout = 2000;
 
-  /**
-   * @var string
-   */
-  private $tenantId;
+    /**
+     * @var int
+     */
+    public int $readTimeout = 2000;
 
-  /**
-   * @var int
-   */
-  public $connectTimeout = 2000;
+    public function __construct(
+        private readonly string $apiKey,
+        private readonly string $baseURL
+    ) {
+    }
 
-  /**
-   * @var int
-   */
-  public $readTimeout = 2000;
-
-  public function __construct($apiKey, $baseURL)
-  {
-    include_once 'RESTClient.php';
-    $this->apiKey = $apiKey;
-    $this->baseURL = $baseURL;
-  }
-
-  public function withTenantId($tenantId) {
-    $this->tenantId = $tenantId;
-    return $this;
-  }
+    public function withTenantId(string $tenantId): self
+    {
+        $this->tenantId = $tenantId;
+        return $this;
+    }
 
 [#list apis as api]
   /**
@@ -97,58 +88,58 @@ class FusionAuthClient
    * @deprecated ${api.deprecated?replace("{{renamedMethod}}", api.renamedMethod!'')}
 [/#if]
    */
-  public function ${api.methodName}(${global.methodParameters(api, "php")})
-  {
+    public function ${api.methodName}(${global.methodParameters(api, "php")}): ClientResponse
+    {
     [#assign formPost = false/]
     [#list api.params![] as param]
       [#if param.type == "form"][#assign formPost = true/][/#if]
     [/#list]
     [#if formPost]
-    $post_data = array(
+        $postData = [
       [#list api.params![] as param]
         [#if param.type == "form"]
-      '${param.name}' => ${(param.constant?? && param.constant)?then("'"+param.value+"'", "$"+param.name)}[#if param?has_next],[/#if]
+            '${param.name}' => ${(param.constant?? && param.constant)?then("'"+param.value+"'", "$"+param.name)}[#if param?has_next],[/#if]
         [/#if]
       [/#list]
-    );
+        ];
     [/#if]
-    return $this->start[#if api.anonymous??]Anonymous[/#if]()->uri("${api.uri}")
+        return $this->start[#if api.anonymous??]Anonymous[/#if]()->uri("${api.uri}")
     [#if api.authorization??]
-        ->authorization(${api.authorization?replace("+ ", ". $")})
+            ->authorization(${api.authorization?replace("+ ", ". $")})
     [/#if]
     [#list api.params![] as param]
       [#if param.type == "urlSegment"]
-        ->urlSegment(${(param.constant?? && param.constant)?then(param.value, "$" + param.name)})
+            ->urlSegment(${(param.constant?? && param.constant)?then(param.value, "$" + param.name)})
       [#elseif param.type == "urlParameter"]
-        ->urlParameter("${param.parameterName}", ${parameter_value(param)})
+            ->urlParameter("${param.parameterName}", ${parameter_value(param)})
       [#elseif param.type == "body"]
-        ->bodyHandler(new JSONBodyHandler($${param.name}))
+            ->bodyHandler(new JSONBodyHandler($${param.name}))
       [/#if]
     [/#list]
     [#if formPost]
-        ->bodyHandler(new FormDataBodyHandler($post_data))
+            ->bodyHandler(new FormDataBodyHandler($postData))
     [/#if]
-        ->${api.method}()
-        ->go();
-  }
+            ->${api.method}()
+            ->go();
+    }
 
 [/#list]
 
-  private function start()
-  {
-    return $this->startAnonymous()->authorization($this->apiKey);
-  }
-
-  private function startAnonymous()
-  {
-    $rest = new RESTClient();
-    if (isset($this->tenantId)) {
-      $rest->header("X-FusionAuth-TenantId", $this->tenantId);
+    private function start(): RESTClient
+    {
+        return $this->startAnonymous()->authorization($this->apiKey);
     }
-    return $rest->url($this->baseURL)
-        ->connectTimeout($this->connectTimeout)
-        ->readTimeout($this->readTimeout)
-        ->successResponseHandler(new JSONResponseHandler())
-        ->errorResponseHandler(new JSONResponseHandler());
-  }
+
+    private function startAnonymous(): RESTClient
+    {
+        $rest = new RESTClient();
+        if (isset($this->tenantId)) {
+            $rest->header("X-FusionAuth-TenantId", $this->tenantId);
+        }
+        return $rest->url($this->baseURL)
+            ->connectTimeout($this->connectTimeout)
+            ->readTimeout($this->readTimeout)
+            ->successResponseHandler(new JSONResponseHandler())
+            ->errorResponseHandler(new JSONResponseHandler());
+    }
 }

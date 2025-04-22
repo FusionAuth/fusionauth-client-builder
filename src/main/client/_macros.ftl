@@ -217,7 +217,7 @@
       [#if language == "php"]
         [#-- If the parameter is the last one and is optional, give it a default value --]
         [#if !param_has_next && optional]
-          [#local result = result + ["$" + param.name + " = NULL"]/]
+          [#local result = result + ["$" + param.name + " = null"]/]
         [#else]
           [#local result = result + ["$" + param.name]/]
         [/#if]
