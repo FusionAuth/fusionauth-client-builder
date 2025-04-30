@@ -24,7 +24,7 @@
       ],
       "type": "urlParameter",
       "parameterName": "loginIdTypes",
-      "javaType": "String[]"
+      "javaType": "List<String>"
     }
   ]
 }
