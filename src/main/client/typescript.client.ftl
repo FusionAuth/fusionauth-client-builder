@@ -100,7 +100,11 @@ export class FusionAuthClient {
     [#if param.type == "urlSegment"]
         .withUriSegment(${(param.constant?? && param.constant)?then(param.value, param.name)})
     [#elseif param.type == "urlParameter"]
+      [#if param.optional!false]
+        .withOptionalParameter('${param.parameterName}', ${(param.constant?? && param.constant)?then(param.value, param.name)})
+      [#else]
         .withParameter('${param.parameterName}', ${(param.constant?? && param.constant)?then(param.value, param.name)})
+      [/#if]
     [#elseif param.type == "body"]
         .withJSONBody(${param.name})
     [/#if]
