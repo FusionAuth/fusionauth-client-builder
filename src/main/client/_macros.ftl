@@ -53,7 +53,7 @@
     [#elseif type == "Void"]
       [#return "nil"/]
     [#elseif type?starts_with("Collection")]
-      [#return type?replace("Collection", "[]")?replace("UUID", "string")?replace("<", "")?replace(">", "")/]
+      [#return type?replace("Collection", "[]")?replace("UUID", "string")?replace("<", "")?replace(">", "")?replace("String", "string")/]
     [#elseif type == "String" || type = "UUID" || type == "ZoneId" || type == "URI" || type == "Locale" || type == "LocalDate" || type == "char" || type == "IdentityType" ]
       [#return "string"/]
     [#elseif type == "Object" || type == "D" || type == "T"]
