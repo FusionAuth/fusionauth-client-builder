@@ -239,8 +239,9 @@
         [/#if]
         [#local result = result + [convertValue(param.name, language) + (convertedType != "interface{}")?then(' ' + convertedType, ' interface{}')]]
       [#elseif language == "python"]
-        [#-- If the parameter is optional, give it a default value --]
-        [#if optional]
+        [#-- If the parameter is optional, give it a default value. Ideally we'd not use optional, which is driven by string comments, but
+         changing that now would cause a lot of disruption --]
+        [#if optional || param.optional!false]
           [#local result = result + [convertValue(param, language) + "=None"]/]
         [#else]
           [#local result = result + [convertValue(param, language)]/]
