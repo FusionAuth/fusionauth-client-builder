@@ -334,7 +334,15 @@ public class FusionAuthClient {
     return new FusionAuthClient(apiKey, baseURL, connectTimeout, readTimeout, tenantId, objectMapper);
   }
 
-[#list apis as api]
+[#-- Java supports method overloading, so exclude apis that are just overloads --]
+[#list apis?filter(api -> !(api.overload??)) as top_level_api]
+  [#if top_level_api.overloads!false]
+    [#assign overloads=[top_level_api] + apis?filter(other -> other.overload?? && other.overload == top_level_api.methodName) /]
+  [#else]
+    [#assign overloads=[top_level_api] /]
+  [/#if]
+  [#list overloads as api]
+  [#assign is_overload = api.overload??/]
   /**
   [#list api.comments as comment]
    * [#if comment?has_content]${comment}[#else]<p>[/#if]
@@ -353,7 +361,7 @@ public class FusionAuthClient {
 [#if api.deprecated??]
   @Deprecated
 [/#if]
-  public ClientResponse<${api.successResponse}, ${api.errorResponse}> ${api.methodName}(${global.methodParameters(api, "java")}) {
+  public ClientResponse<${api.successResponse}, ${api.errorResponse}> ${is_overload?then(api.overload, api.methodName)}(${global.methodParameters(api, "java")}) {
   [#assign formPost = false/]
   [#list api.params![] as param]
     [#if param.type == "form"][#assign formPost = true/][/#if]
@@ -387,6 +395,7 @@ public class FusionAuthClient {
         .go();
   }
 
+[/#list]
 [/#list]
 
   protected <T, U> RESTClient<T, U> start(Class<T> type, Class<U> errorType) {

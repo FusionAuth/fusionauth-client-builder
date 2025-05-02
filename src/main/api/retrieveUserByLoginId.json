@@ -1,12 +1,13 @@
 {
   "uri": "/api/user",
   "comments": [
-    "Retrieves the user for the loginId, using specific loginIdTypes. If no loginIdTypes are provided, the default is [email, username]"
+    "Retrieves the user for the loginId. The loginId can be either the username or the email."
   ],
   "method": "get",
   "methodName": "retrieveUserByLoginId",
   "successResponse": "UserResponse",
   "errorResponse": "Errors",
+  "overloads": true,
   "params": [
     {
       "name": "loginId",
@@ -16,16 +17,6 @@
       "type": "urlParameter",
       "parameterName": "loginId",
       "javaType": "String"
-    },
-    {
-      "name": "loginIdTypes",
-      "comments": [
-        "(Optional) the identity types that FusionAuth will compare the loginId to."
-      ],
-      "type": "urlParameter",
-      "parameterName": "loginIdTypes",
-      "javaType": "Collection<String>",
-      "optional": true
     }
   ]
 }
