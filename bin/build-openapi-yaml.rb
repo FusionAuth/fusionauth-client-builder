@@ -1,3 +1,17 @@
+# Copyright (c) 2025, FusionAuth, All Rights Reserved
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+# either express or implied. See the License for the specific
+# language governing permissions and limitations under the License.
+
 #!/usr/bin/env ruby
 
 require 'json'
@@ -54,41 +68,41 @@ end
 
 def convert_primitive(type)
   if type == "boolean"
-    return {"type" => "boolean"}
+    return { "type" => "boolean" }
   end
 
   if type == "Array"
-    return {"type" => "string", "format" => "binary"}
+    return { "type" => "string", "format" => "binary" }
   end
 
   if type == "URI"
-    return {"type" => "string", "format" => "URI"} # TODO not sure if that is correct?
+    return { "type" => "string", "format" => "URI" } # TODO not sure if that is correct?
   end
   if type == "Object"
-    return {"type" => "object"}
+    return { "type" => "object" }
   end
   if type == "Set" || type == "SortedSet"
-    return {"type" => "array", "uniqueItems" => true, "items" => {}}
+    return { "type" => "array", "uniqueItems" => true, "items" => {} }
   end
 
   if type == "UUID"
-    return {"type" => "string", "format" => "uuid"}
+    return { "type" => "string", "format" => "uuid" }
   end
 
   if type == "String" || type == "char"
-    return {"type" => "string"}
+    return { "type" => "string" }
   end
 
   if type == "integer" || type == "int"
-    return {"type" => "integer"}
+    return { "type" => "integer" }
   end
 
   if type == "long"
-    return {"type" => "integer", "format" => "int64"}
+    return { "type" => "integer", "format" => "int64" }
   end
 
   if type == "double"
-    return {"type" => "number", "format" => "double"}
+    return { "type" => "number", "format" => "double" }
   end
 end
 
@@ -101,26 +115,26 @@ def add_identity_provider_field(schemas, identity_providers)
   }
   identity_providers.each do |idp|
     ref = make_ref(idp)
-    schemas["IdentityProviderField"]["oneOf"] << {"$ref" => ref }
-    schemas["IdentityProviderField"]["discriminator"]["mapping"][idp.sub("IdentityProvider","")] = ref
+    schemas["IdentityProviderField"]["oneOf"] << { "$ref" => ref }
+    schemas["IdentityProviderField"]["discriminator"]["mapping"][idp.sub("IdentityProvider", "")] = ref
   end
 end
 
-def make_ref(type,packageName = nil)
+def make_ref(type, packageName = nil)
   if type == "Void"
     return nil
   end
-  objectName = modify_type(packageName,type)
-  return '#/components/schemas/'+objectName
+  objectName = modify_type(packageName, type)
+  return '#/components/schemas/' + objectName
 end
 
-def modify_type(packageName,objectName)
+def modify_type(packageName, objectName)
   # collisions in a few cases
   if objectName == "LambdaConfiguration"
     if packageName.match(/connector/)
-      return "Connector"+objectName
+      return "Connector" + objectName
     elsif packageName.match(/provider/)
-      return "Provider"+objectName
+      return "Provider" + objectName
     end
   end
   return objectName
@@ -129,8 +143,8 @@ end
 def process_domain_file(fn, schemas, options, identity_providers, domain_files)
   # This method is working on domain_files, but also needs to read them. Do not modify the list!
 
-  if options[:verbose] 
-    puts "processing "+fn
+  if options[:verbose]
+    puts "processing " + fn
   end
 
   f = File.open(fn)
@@ -139,20 +153,19 @@ def process_domain_file(fn, schemas, options, identity_providers, domain_files)
   f.close
 
   packagename = json["packageName"]
-  objectname = modify_type(packagename,json["type"])
+  objectname = modify_type(packagename, json["type"])
   openapiobj = {}
   if json["description"]
-    openapiobj["description"] = json["description"].gsub('/','').gsub(/@au.*/,'').gsub('*','').gsub(/\n/,'').gsub("\n",'').delete("\n").strip
+    openapiobj["description"] = json["description"].gsub('/', '').gsub(/@au.*/, '').gsub('*', '').gsub(/\n/, '').gsub("\n", '').delete("\n").strip
   end
   openapiobj["type"] = "object"
 
-
   # TODO What about ENUMS in an existing data model with fields?
-  if json["enum"] 
+  if json["enum"]
     openapiobj["type"] = "string"
     # some enums have name attribute, other are just plain strings
     if json["enum"][0] && json["enum"][0]["name"]
-      openapiobj["enum"] = json["enum"].map {|e| e["name"] }
+      openapiobj["enum"] = json["enum"].map { |e| e["name"] }
     else
       openapiobj["enum"] = json["enum"]
     end
@@ -186,16 +199,16 @@ def process_domain_file(fn, schemas, options, identity_providers, domain_files)
   if fields
     properties = {}
     openapiobj["properties"] = properties
-    fields.each do |k,v|
+    fields.each do |k, v|
       properties[k] = {}
-      v.each do |k2,v2|
-        if k2 == "type" 
+      v.each do |k2, v2|
+        if k2 == "type"
           if is_primitive(v2)
             properties[k] = convert_primitive(v2)
           elsif v2 == "List"
             listElementType = fields[k]["typeArguments"][0]["type"]
-            addListValue(properties[k],k2,listElementType,identity_providers, k, objectname)
-            
+            addListValue(properties[k], k2, listElementType, identity_providers, k, objectname)
+
           elsif v2 == "Map"
             properties[k][k2] = "object"
             properties[k]["additionalProperties"] = {}
@@ -209,13 +222,13 @@ def process_domain_file(fn, schemas, options, identity_providers, domain_files)
               properties[k]["additionalProperties"] = convert_primitive(mapValueType)
             elsif mapValueType == "List"
               listElementType = fields[k]["typeArguments"][1]["typeArguments"][0]["type"]
-              addListValue(properties[k],k2,listElementType,identity_providers)
-            elsif mapValueType == "D" && k == "applicationConfiguration" && objectname.match(/IdentityProvider$/) 
+              addListValue(properties[k], k2, listElementType, identity_providers)
+            elsif mapValueType == "D" && k == "applicationConfiguration" && objectname.match(/IdentityProvider$/)
               if objectname.match(/BaseIdentityProvider$/) or objectname.match(/BaseSAMLv2IdentityProvider$/)
                 # remove this one, we don't need to provide anything for the BaseIdentityProvider or BaseSAMLv2IdentityProvider application config.properties, I think
                 properties.delete(k)
               else
-                identityproviderconfigrefname = objectname.sub("IdentityProvider","") + "ApplicationConfiguration"
+                identityproviderconfigrefname = objectname.sub("IdentityProvider", "") + "ApplicationConfiguration"
                 properties[k]["additionalProperties"]['$ref'] = make_ref(identityproviderconfigrefname)
               end
             else
@@ -228,10 +241,10 @@ def process_domain_file(fn, schemas, options, identity_providers, domain_files)
             end
           else
             if v2.match(/BaseIdentityProvider$/)
-               # special handling of this. We create IdentityProviderField elsewhere
-               # see https://github.com/OpenAPITools/openapi-generator/issues/10880#issuecomment-995243186 for why
-               properties[k]["$ref"] = make_ref('IdentityProviderField')
- 
+              # special handling of this. We create IdentityProviderField elsewhere
+              # see https://github.com/OpenAPITools/openapi-generator/issues/10880#issuecomment-995243186 for why
+              properties[k]["$ref"] = make_ref('IdentityProviderField')
+
             else
               # put in ref
               properties[k]['$ref'] = make_ref(v2, packagename)
@@ -242,18 +255,18 @@ def process_domain_file(fn, schemas, options, identity_providers, domain_files)
     end
   end
 
-  schemas[objectname] = openapiobj 
+  schemas[objectname] = openapiobj
 
 end
 
-def addListValue(hash,key,listElementType,identity_providers,rootkey=nil,objectname=nil)
+def addListValue(hash, key, listElementType, identity_providers, rootkey = nil, objectname = nil)
   hash[key] = "array"
   hash["items"] = {}
   if is_primitive(listElementType)
     hash["items"] = convert_primitive(listElementType)
   elsif listElementType == "T" && rootkey == "results" && objectname == "SearchResults"
     # TODO not sure this works, test it out
-    hash["items"] = {"type" => "object"}
+    hash["items"] = { "type" => "object" }
   elsif listElementType.match(/BaseIdentityProvider$/)
     # special handling of this. We create IdentityProviderField elsewhere
     # see https://github.com/OpenAPITools/openapi-generator/issues/10880#issuecomment-995243186 for why
@@ -264,11 +277,12 @@ def addListValue(hash,key,listElementType,identity_providers,rootkey=nil,objectn
   end
 end
 
-def param_optional(comments_arr)
-  if comments_arr && comments_arr[0].include?("(Optional)") 
+def param_optional(param)
+  if param['comments']&.[](0)&.include?("(Optional)")
     return true
   end
-  return false
+
+  return param['optional']
 end
 
 def process_rawpaths(rawpaths, options)
@@ -282,21 +296,21 @@ def process_rawpaths(rawpaths, options)
   rawpaths.each do |uri, methods|
     new_paths[uri] = {}
 
-    methods.each do |method, pathobjs| 
+    methods.each do |method, pathobjs|
 
       if pathobjs.length == 1
         # no merging needed
         new_paths[uri][method] = pathobjs[0]
       else
         orig_object = pathobjs[0]
-     
+
         pathobjs.drop(1).each do |pathobj|
-          if options[:verbose] 
-            puts "merging in " + uri.to_s + " " + method.to_s +  " operationId: " + pathobj["operationId"].to_s
+          if options[:verbose]
+            puts "merging in " + uri.to_s + " " + method.to_s + " operationId: " + pathobj["operationId"].to_s
           end
           orig_object = merge_operations(pathobj, orig_object, uri, method)
         end
-        new_paths[uri][method] = orig_object 
+        new_paths[uri][method] = orig_object
       end
     end
   end
@@ -305,8 +319,8 @@ def process_rawpaths(rawpaths, options)
 end
 
 def process_api_file(fn, paths, options, deferred)
-  if options[:verbose] 
-    puts "processing "+fn
+  if options[:verbose]
+    puts "processing " + fn
   end
   f = File.open(fn)
   fs = f.read
@@ -314,36 +328,36 @@ def process_api_file(fn, paths, options, deferred)
   f.close
 
   if json["deprecated"]
-    if options[:verbose] 
-      puts "skipping deprecated "+fn
+    if options[:verbose]
+      puts "skipping deprecated " + fn
     end
     return
   end
 
   method = json["method"]
   uri = json["uri"]
-  
+
   # check to see if the url segments are optional
   if json["params"]
     uri_without_optional = uri
-    segmentparams = json["params"].select{|p| p["type"] == "urlSegment"}
+    segmentparams = json["params"].select { |p| p["type"] == "urlSegment" }
     segmentparams.each do |p|
       if p["constant"] == true
-        uri = uri + "/"+p["value"].delete('"')
-        uri_without_optional = uri_without_optional + "/"+p["value"].delete('"')
+        uri = uri + "/" + p["value"].delete('"')
+        uri_without_optional = uri_without_optional + "/" + p["value"].delete('"')
         next
       end
-      
-      if param_optional(p["comments"]) 
-        uri = uri + "/{"+p["name"]+"}"
+
+      if param_optional(p)
+        uri = uri + "/{" + p["name"] + "}"
       else
-        uri = uri + "/{"+p["name"]+"}"
-        uri_without_optional = uri_without_optional + "/{"+p["name"]+"}"
+        uri = uri + "/{" + p["name"] + "}"
+        uri_without_optional = uri_without_optional + "/{" + p["name"] + "}"
       end
 
     end
 
-    if options[:verbose] 
+    if options[:verbose]
       puts "adding path for " + uri
     end
 
@@ -352,7 +366,7 @@ def process_api_file(fn, paths, options, deferred)
 
     # only support an optional parameter on the last url segment
     if uri_without_optional != uri
-      if options[:verbose] 
+      if options[:verbose]
         puts "adding path for " + uri_without_optional
       end
       build_path(uri_without_optional, json, paths, false, options)
@@ -412,7 +426,7 @@ def build_operation_id(new_api_object, old_api_object, uri, method)
       operation_name += "-" + uri_array[3]
     end
   end
-  operation_name = operation_name.split("-").map{|e| e.capitalize}.join("")
+  operation_name = operation_name.split("-").map { |e| e.capitalize }.join("")
 
   operation_name[0] = operation_name[0].capitalize # just capitalize first letter
 
@@ -423,18 +437,18 @@ end
 def merge_operations(new_api_object, old_api_object, uri, method)
   new_api_object["description"] += " OR " + old_api_object["description"]
   new_api_object["operationId"] = build_operation_id(new_api_object, old_api_object, uri, method)
-  queryparamstoadd = old_api_object["parameters"].select{|p| p["in"] == "query"}
+  queryparamstoadd = old_api_object["parameters"].select { |p| p["in"] == "query" }
   # query params we add
   # path params are handled in the if uri_without_optional != uri code path
   # only problem would be if two different operations took different path params in same location but we don't have that
-  oldparamstohandle = old_api_object["parameters"].select{|p| p["in"] != "query" && p["in"] != "path" }
-  newparamstohandle = new_api_object["parameters"].select{|p| p["in"] != "query" && p["in"] != "path"}
-  if oldparamstohandle & newparamstohandle != newparamstohandle 
+  oldparamstohandle = old_api_object["parameters"].select { |p| p["in"] != "query" && p["in"] != "path" }
+  newparamstohandle = new_api_object["parameters"].select { |p| p["in"] != "query" && p["in"] != "path" }
+  if oldparamstohandle & newparamstohandle != newparamstohandle
     p "Saw some new params that were not query params. Doh! "
   end
   new_api_object["parameters"] += queryparamstoadd
 
-  #remove dups
+  # remove dups
   new_api_object["parameters"] = new_api_object["parameters"].uniq { |p| p["name"] }
 
   # make sure if we have a requestBody, we pass that along in the merge. This will blow up if we have two operations that take request bodies but don't have the same request body
@@ -455,7 +469,7 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
   end
   jsonparams = json["params"]
 
-  if not paths[uri] 
+  if not paths[uri]
     paths[uri] = {}
   end
 
@@ -473,19 +487,18 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
     # sometimes anonymous requests can take JWT bearer tokens. We shouldn't see that on any other request definitions, which all default to API key auth
     if json["authorization"] and json["authorization"].include? 'Bearer'
       openapiobj["security"] = []
-      openapiobj["security"].push({BEARER_AUTH_SCHEME_NAME => []})
+      openapiobj["security"].push({ BEARER_AUTH_SCHEME_NAME => [] })
     end
   end
-  
 
   params = []
   openapiobj["parameters"] = params
 
   if jsonparams
-    segmentparams = jsonparams.select{|p| p["type"] == "urlSegment"}
-    queryparams = jsonparams.select{|p| p["type"] == "urlParameter"}
-    bodyparams = jsonparams.select{|p| p["type"] == "body"}
-  
+    segmentparams = jsonparams.select { |p| p["type"] == "urlSegment" }
+    queryparams = jsonparams.select { |p| p["type"] == "urlParameter" }
+    bodyparams = jsonparams.select { |p| p["type"] == "body" }
+
     queryparams.each do |p|
       params << build_openapi_paramobj(p, "query")
     end
@@ -496,7 +509,7 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
         next
       end
 
-      if param_optional(p["comments"])
+      if param_optional(p)
         if include_optional_segment_param
           # we have an optional param but it is in the URI, so we want to add it to the parameters
           params << build_openapi_paramobj(p, "path")
@@ -515,7 +528,7 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
     end
   end
 
-  add_header_params(params,json)
+  add_header_params(params, json)
 
   openapiobj["responses"] = {}
   openapiobj["responses"]['200'] = {}
@@ -528,57 +541,68 @@ end
 
 def add_header_params(params, json)
 
-   # TODO this info should be shoved into the api definition JSON in client builder. This is currently absent and only available in the docs or code or here
-   apis_requiring_tenant_header = ["tenant","user-action","entity","user/family","user","two-factor","user/comment","application","email/template","user/registration","group","consent"]
+  # TODO this info should be shoved into the api definition JSON in client builder. This is currently absent and only available in the docs or code or here
+  apis_requiring_tenant_header = ["tenant", "user-action", "entity", "user/family", "user", "two-factor", "user/comment", "application", "email/template", "user/registration", "group", "consent"]
 
-   apis_with_optional_tenant_header = ["login", "passwordless", "identity-provider/login","jwt"]
-   
-   no_header_needed = true
-   required = false
-   if apis_requiring_tenant_header.include? json["uri"].gsub("/api/","")
-     required = true
-     no_header_needed = false
-   end
-   if apis_with_optional_tenant_header.include? json["uri"].gsub("/api/","")
-     required = false
-     no_header_needed = false
-   end
+  apis_with_optional_tenant_header = ["login", "passwordless", "identity-provider/login", "jwt"]
 
-   if no_header_needed
-     # no tenant header there
-     return
-   end
-   header_param = {}
-   header_param["in"] = "header"
-   header_param["name"] = "X-FusionAuth-TenantId"
-   header_param["description"] = "The unique Id of the tenant used to scope this API request. Only required when there is more than one tenant and the API key is not tenant-scoped."
-   header_param["required"] = false
-   header_param["schema"] = {}
-   header_param["schema"]["type"] = "string"
-   header_param["schema"]["format"] = "UUID"
+  no_header_needed = true
+  required = false
+  if apis_requiring_tenant_header.include? json["uri"].gsub("/api/", "")
+    required = true
+    no_header_needed = false
+  end
+  if apis_with_optional_tenant_header.include? json["uri"].gsub("/api/", "")
+    required = false
+    no_header_needed = false
+  end
 
-   params << header_param
+  if no_header_needed
+    # no tenant header there
+    return
+  end
+  header_param = {}
+  header_param["in"] = "header"
+  header_param["name"] = "X-FusionAuth-TenantId"
+  header_param["description"] = "The unique Id of the tenant used to scope this API request. Only required when there is more than one tenant and the API key is not tenant-scoped."
+  header_param["required"] = false
+  header_param["schema"] = {}
+  header_param["schema"]["type"] = "string"
+  header_param["schema"]["format"] = "UUID"
+
+  params << header_param
 end
 
 def build_openapi_paramobj(jsonparamobj, paramtype)
   paramobj = {}
   paramobj["name"] = jsonparamobj["name"]
   paramobj["in"] = paramtype
-  paramobj["schema"] = {}
-  paramobj["schema"]["type"] = "string"
+  paramobj["schema"] = if jsonparamobj['javaType'] == 'Collection<String>'
+                         {
+                           'type' => 'array',
+                           'items' => {
+                             'type' => 'string'
+                           }
+                         }
+                       else
+                         { 'type' => 'string' }
+                       end
 
   if paramtype == "path"
     paramobj["required"] = true
   end
+  if jsonparamobj['optional']
+    paramobj['required'] = false
+  end
   if jsonparamobj["comments"] && jsonparamobj["comments"][0]
-    paramobj["description"] = jsonparamobj["comments"].join(" ").gsub('(Optional)','').gsub("\n",'').delete("\n").strip
+    paramobj["description"] = jsonparamobj["comments"].join(" ").gsub('(Optional)', '').gsub("\n", '').delete("\n").strip
   end
   return paramobj
 end
 
 def build_nested_content_response(hash, ref, description)
   hash["description"] = description
-  
+
   if ref
     hash["content"] = {}
     hash["content"]["application/json"] = {}
@@ -606,7 +630,6 @@ def add_jwt_bearer_security_scheme(bearer_jwt_scheme_name, security_schemes)
   return security_schemes
 end
 
-
 ######### processing starts
 
 domain_files = []
@@ -622,15 +645,15 @@ spec = {}
 spec["components"] = components
 
 if options[:file]
-  api_files = Dir.glob(options[:sourcedir]+"/main/api/*"+options[:file]+"*")
-  #domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*"+options[:file]+".json")
-  domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*")
+  api_files = Dir.glob(options[:sourcedir] + "/main/api/*" + options[:file] + "*")
+  # domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*"+options[:file]+".json")
+  domain_files = Dir.glob(options[:sourcedir] + "/main/domain/*")
 else
-  api_files = Dir.glob(options[:sourcedir]+"/main/api/*")
-  domain_files = Dir.glob(options[:sourcedir]+"/main/domain/*")
+  api_files = Dir.glob(options[:sourcedir] + "/main/api/*")
+  domain_files = Dir.glob(options[:sourcedir] + "/main/domain/*")
 end
 
-if options[:verbose] 
+if options[:verbose]
   puts "Processing files: "
   puts api_files
   puts domain_files
@@ -658,7 +681,7 @@ domain_files.each do |fn|
   if fn.match(/io.fusionauth.domain.provider.BaseSAMLv2IdentityProvider.json/)
     next
   end
-  process_domain_file(fn, schemas, options,identity_providers, domain_files)
+  process_domain_file(fn, schemas, options, identity_providers, domain_files)
 end
 
 schemas["ZonedDateTime"] = {}
@@ -728,7 +751,7 @@ security:
 
   # components and paths
   # https://stackoverflow.com/questions/21251309/how-to-remove-on-top-of-a-yaml-file
-  f.write spec.to_yaml.gsub(/^---/,'')
+  f.write spec.to_yaml.gsub(/^---/, '')
 end
 
 # TODO handle {} in component schema ? 
