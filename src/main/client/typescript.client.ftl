@@ -56,15 +56,20 @@ export class FusionAuthClient {
   }
 
 [#-- @formatter:off --]
-[#list apis as api]
+[#-- TypeScript supports default arguments, so exclude apis that are just overloads --]
+[#list apis?filter(api -> !(api.overloads!false)) as api]
   /**
   [#list api.comments as comment]
    * ${comment}
   [/#list]
    *
   [#list api.params![] as param]
+    [#assign paramComments = param.comments![]/]
+    [#if param.optional!false]
+      [#assign paramComments = ["(Optional) "+param.comments[0]] + param.comments[1..]/]
+    [/#if]
     [#if !param.constant??]
-   * @param {${global.optional(param, "ts")}${global.convertType(param.javaType, "ts")}} ${param.name} ${param.comments?join("\n   *    ")}
+   * @param {${global.optional(param, "ts")}${global.convertType(param.javaType, "ts")}} ${param.name} ${paramComments?join("\n   *    ")}
     [/#if]
   [/#list]
    * @returns {Promise<ClientResponse<${global.convertType(api.successResponse, "ts")}>>}
@@ -74,7 +79,7 @@ export class FusionAuthClient {
   [/#if]
    */
   [#assign parameters = global.methodParameters(api, "ts")/]
-  ${api.methodName}(${parameters}): Promise<ClientResponse<${global.convertType(api.successResponse, "ts")}>> {
+  ${api.overload???then(api.overload, api.methodName)}(${parameters}): Promise<ClientResponse<${global.convertType(api.successResponse, "ts")}>> {
   [#assign formPost = false/]
   [#list api.params![] as param]
     [#if param.type == "form"][#assign formPost = true/][/#if]
