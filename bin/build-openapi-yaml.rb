@@ -277,6 +277,7 @@ def addListValue(hash, key, listElementType, identity_providers, rootkey = nil, 
   end
 end
 
+# Returns true if the 1st comment include (Optional) or an explicit optional boolean exists
 def param_optional(param)
   if param['comments']&.[](0)&.include?("(Optional)")
     return true
@@ -293,7 +294,7 @@ def process_rawpaths(rawpaths, options)
   # walk keys of paths to get uri
   # then walk keys of paths[uri] to get methods
   # then walk array of paths[uri][method] to get things to merge
-  rawpaths.sort_by { |uri, methods| uri }.each do |uri, methods|
+  rawpaths.sort_by { |uri, _| uri }.each do |uri, methods|
     new_paths[uri] = {}
 
     methods.each do |method, pathobjs|
@@ -577,6 +578,7 @@ def build_openapi_paramobj(jsonparamobj, paramtype)
   paramobj = {}
   paramobj["name"] = jsonparamobj["name"]
   paramobj["in"] = paramtype
+  # Cover Java generics here
   paramobj["schema"] = if jsonparamobj['javaType'] == 'Collection<String>'
                          {
                            'type' => 'array',
