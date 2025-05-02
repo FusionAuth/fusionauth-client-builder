@@ -113,7 +113,7 @@ def add_identity_provider_field(schemas, identity_providers)
     "propertyName" => "type",
     "mapping" => {}
   }
-  identity_providers.each do |idp|
+  identity_providers.sort.each do |idp|
     ref = make_ref(idp)
     schemas["IdentityProviderField"]["oneOf"] << { "$ref" => ref }
     schemas["IdentityProviderField"]["discriminator"]["mapping"][idp.sub("IdentityProvider", "")] = ref
@@ -293,7 +293,7 @@ def process_rawpaths(rawpaths, options)
   # walk keys of paths to get uri
   # then walk keys of paths[uri] to get methods
   # then walk array of paths[uri][method] to get things to merge
-  rawpaths.each do |uri, methods|
+  rawpaths.sort_by { |uri, methods| uri }.each do |uri, methods|
     new_paths[uri] = {}
 
     methods.each do |method, pathobjs|
@@ -652,6 +652,8 @@ else
   api_files = Dir.glob(options[:sourcedir] + "/main/api/*")
   domain_files = Dir.glob(options[:sourcedir] + "/main/domain/*")
 end
+api_files.sort!
+domain_files.sort!
 
 if options[:verbose]
   puts "Processing files: "
