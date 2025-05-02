@@ -128,7 +128,6 @@ def make_ref(type, packageName = nil)
   return '#/components/schemas/' + objectName
 end
 
-#
 def modify_type(packageName, objectName)
   # collisions in a few cases
   if objectName == "LambdaConfiguration"
