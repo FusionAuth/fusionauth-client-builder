@@ -34,7 +34,7 @@
       [#case "KeyAlgorithm"][#return "KeyAlgorithm?"/]
       [#default]
         [#if type?starts_with("Collection")]
-          [#return type?replace("Collection", "List")?replace("UUID", "string")/]
+          [#return type?replace("Collection", "List")?replace("UUID", "string")?replace("String", "string")/]
         [#else]
           [#return type/]
         [/#if]
