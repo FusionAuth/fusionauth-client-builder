@@ -217,7 +217,9 @@
       [#local optional = param.comments[0]?starts_with("(Optional)")/]
       [#if language == "php"]
         [#-- If the parameter is the last one and is optional, give it a default value --]
-        [#if !param_has_next && optional]
+        [#-- If the parameter is optional, give it a default value. Ideally we'd remove the assign boolean in this FTL,
+        which is driven by string comments, but changing that now would cause a lot of disruption --]
+        [#if !param_has_next && (optional || param.optional!false)]
           [#local result = result + ["$" + param.name + " = NULL"]/]
         [#else]
           [#local result = result + ["$" + param.name]/]
@@ -239,8 +241,8 @@
         [/#if]
         [#local result = result + [convertValue(param.name, language) + (convertedType != "interface{}")?then(' ' + convertedType, ' interface{}')]]
       [#elseif language == "python"]
-        [#-- If the parameter is optional, give it a default value. Ideally we'd not use optional, which is driven by string comments, but
-         changing that now would cause a lot of disruption --]
+        [#-- If the parameter is optional, give it a default value. Ideally we'd remove the assign boolean in this FTL,
+        which is driven by string comments, but changing that now would cause a lot of disruption --]
         [#if optional || param.optional!false]
           [#local result = result + [convertValue(param, language) + "=None"]/]
         [#else]

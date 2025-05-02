@@ -79,15 +79,20 @@ class FusionAuthClient
     return $this;
   }
 
-[#list apis as api]
+[#-- PHP supports default positional arguments, so exclude apis that are just overloads --]
+[#list apis?filter(api -> !(api.overloads!false)) as api]
   /**
   [#list api.comments as comment]
    * ${comment}
   [/#list]
    *
   [#list api.params![] as param]
+    [#assign paramComments = param.comments![]/]
+    [#if param.optional!false]
+      [#assign paramComments = ["(Optional) "+param.comments[0]] + param.comments[1..]/]
+    [/#if]
     [#if !param.constant??]
-   * @param ${global.convertType(param.javaType, "php")} $${param.name} ${param.comments?join("\n  *     ")}
+   * @param ${global.convertType(param.javaType, "php")} $${param.name} ${paramComments?join("\n  *     ")}
     [/#if]
   [/#list]
    *
@@ -97,7 +102,7 @@ class FusionAuthClient
    * @deprecated ${api.deprecated?replace("{{renamedMethod}}", api.renamedMethod!'')}
 [/#if]
    */
-  public function ${api.methodName}(${global.methodParameters(api, "php")})
+  public function ${api.overload???then(api.overload, api.methodName)}(${global.methodParameters(api, "php")})
   {
     [#assign formPost = false/]
     [#list api.params![] as param]
