@@ -652,6 +652,7 @@ else
   api_files = Dir.glob(options[:sourcedir] + "/main/api/*")
   domain_files = Dir.glob(options[:sourcedir] + "/main/domain/*")
 end
+
 api_files.sort!
 domain_files.sort!
 
