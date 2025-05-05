@@ -53,7 +53,7 @@
       ],
       "type": "urlParameter",
       "parameterName": "loginIdTypes",
-      "javaType": "Collection<String>",
+      "javaType": "List<String>",
       "optional": true
     }
   ]

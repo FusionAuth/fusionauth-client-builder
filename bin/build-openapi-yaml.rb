@@ -579,7 +579,7 @@ def build_openapi_paramobj(jsonparamobj, paramtype)
   paramobj["name"] = jsonparamobj["name"]
   paramobj["in"] = paramtype
   # Cover Java generics here
-  paramobj["schema"] = if jsonparamobj['javaType'] == 'Collection<String>'
+  paramobj["schema"] = if %w[Collection<String> List<String>].include? jsonparamobj['javaType']
                          {
                            'type' => 'array',
                            'items' => {
