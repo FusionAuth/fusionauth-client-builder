@@ -279,11 +279,7 @@ end
 
 # Returns true if the 1st comment include (Optional) or an explicit optional boolean exists
 def param_optional(param)
-  if param['comments']&.[](0)&.include?("(Optional)")
-    return true
-  end
-
-  return param['optional']
+  param['comments']&.[](0)&.include?("(Optional)")
 end
 
 def process_rawpaths(rawpaths, options)
