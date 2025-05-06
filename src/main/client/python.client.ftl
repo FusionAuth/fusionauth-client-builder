@@ -37,23 +37,18 @@ class FusionAuthClient:
       """Sets the tenant_id on the client"""
       self.tenant_id = tenant_id
 
-[#-- Python supports default positional arguments, so exclude apis that are just overloads --]
-[#list apis?filter(api -> !(api.overloads!false)) as api]
+[#list apis as api]
 [#if api.deprecated??]
     @deprecated("${api.deprecated?replace("{{renamedMethod}}", camel_to_underscores(api.renamedMethod!''))}")
 [/#if]
-    def ${camel_to_underscores(api.overload???then(api.overload, api.methodName))}(${global.methodParameters(api, "python")}):
+    def ${camel_to_underscores(api.methodName)}(${global.methodParameters(api, "python")}):
         """
         ${api.comments?join("\n        ")}
 
         Attributes:
         [#list api.params![] as param]
-          [#assign paramComments = param.comments![]/]
-          [#if param.optional!false]
-            [#assign paramComments = ["(Optional) "+param.comments[0]] + param.comments[1..]/]
-          [/#if]
           [#if !param.constant??]
-            ${global.convertValue(param, "python")}: ${paramComments?join("\n                    ")}
+            ${global.convertValue(param, "python")}: ${param.comments?join("\n                    ")}
           [/#if]
         [/#list]
         """

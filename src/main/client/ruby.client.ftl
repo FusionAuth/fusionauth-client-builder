@@ -42,27 +42,22 @@ module FusionAuth
       @tenant_id = tenant_id
     end
 
-[#-- Ruby supports default positional arguments, so exclude apis that are just overloads --]
-[#list apis?filter(api -> !(api.overloads!false)) as api]
+[#list apis as api]
     #
   [#list api.comments as comment]
     # ${comment}
   [/#list]
     #
   [#list api.params![] as param]
-    [#assign paramComments = param.comments![]/]
-    [#if param.optional!false]
-      [#assign paramComments = ["(Optional) "+param.comments[0]] + param.comments[1..]/]
-    [/#if]
     [#if !param.constant??]
-    # @param ${camel_to_underscores(param.name?replace("end", "_end"))} [${global.convertType(param.javaType, "ruby")}] ${paramComments?join("\n    #     ")}
+    # @param ${camel_to_underscores(param.name?replace("end", "_end"))} [${global.convertType(param.javaType, "ruby")}] ${param.comments?join("\n    #     ")}
     [/#if]
   [/#list]
     # @return [FusionAuth::ClientResponse] The ClientResponse object.
 [#if api.deprecated??]
     # @deprecated ${api.deprecated?replace("{{renamedMethod}}", camel_to_underscores(api.renamedMethod!''))}
 [/#if]
-    def ${camel_to_underscores(api.overload???then(api.overload, api.methodName))}[#if (api.params![])?filter(p -> !p.constant??)?has_content](${global.methodParameters(api, "ruby")})[/#if]
+    def ${camel_to_underscores(api.methodName)}[#if (api.params![])?filter(p -> !p.constant??)?has_content](${global.methodParameters(api, "ruby")})[/#if]
       [#assign formPost = false/]
       [#list api.params![] as param]
         [#if param.type == "form"][#assign formPost = true/][/#if]

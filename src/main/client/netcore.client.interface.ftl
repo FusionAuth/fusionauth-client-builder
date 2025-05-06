@@ -34,15 +34,8 @@ using io.fusionauth.domain.reactor;
 
 namespace io.fusionauth {
   public interface IFusionAuthAsyncClient {
-    [#-- C# supports method overloading, so exclude apis that are just overloads --]
-    [#list apis?filter(api -> !(api.overload??)) as top_level_api]
-    [#if top_level_api.overloads!false]
-      [#assign overloads=[top_level_api] + apis?filter(other -> other.overload?? && other.overload == top_level_api.methodName) /]
-    [#else]
-      [#assign overloads=[top_level_api] /]
-    [/#if]
-    [#list overloads as api]
-    [#assign is_overload = api.overload??/]
+    [#list apis as api]
+
     /// <summary>
       [#list api.comments as comment]
     /// ${comment}
@@ -63,22 +56,12 @@ namespace io.fusionauth {
      [#if api.deprecated??]
     [Obsolete("${api.deprecated?replace("{{renamedMethod}}",(api.renamedMethod!'')?cap_first + "Async")}")]
      [/#if]
-    Task<ClientResponse<${global.convertType(api.successResponse, "csharp")}>> ${is_overload?then(api.overload, api.methodName)?cap_first}Async(${global.methodParameters(api, "csharp")});
-
-    [/#list]
+    Task<ClientResponse<${global.convertType(api.successResponse, "csharp")}>> ${api.methodName?cap_first}Async(${global.methodParameters(api, "csharp")});
     [/#list]
   }
 
  public interface IFusionAuthSyncClient {
-   [#-- C# supports method overloading, so exclude apis that are just overloads --]
-   [#list apis?filter(api -> !(api.overload??)) as top_level_api]
-   [#if top_level_api.overloads!false]
-     [#assign overloads=[top_level_api] + apis?filter(other -> other.overload?? && other.overload == top_level_api.methodName) /]
-   [#else]
-     [#assign overloads=[top_level_api] /]
-   [/#if]
-   [#list overloads as api]
-   [#assign is_overload = api.overload??/]
+   [#list apis as api]
 
    /// <summary>
      [#list api.comments as comment]
@@ -99,8 +82,7 @@ namespace io.fusionauth {
     [#if api.deprecated??]
    [Obsolete("${api.deprecated?replace("{{renamedMethod}}",(api.renamedMethod!'')?cap_first + "Async")}")]
     [/#if]
-   ClientResponse<${global.convertType(api.successResponse, "csharp")}> ${is_overload?then(api.overload, api.methodName)?cap_first}(${global.methodParameters(api, "csharp")});
-   [/#list]
+   ClientResponse<${global.convertType(api.successResponse, "csharp")}> ${api.methodName?cap_first}(${global.methodParameters(api, "csharp")});
    [/#list]
  }
 }
