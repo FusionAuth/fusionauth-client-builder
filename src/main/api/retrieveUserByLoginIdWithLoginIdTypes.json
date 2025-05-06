@@ -7,7 +7,6 @@
   "methodName": "retrieveUserByLoginIdWithLoginIdTypes",
   "successResponse": "UserResponse",
   "errorResponse": "Errors",
-  "overload": "retrieveUserByLoginId",
   "params": [
     {
       "name": "loginId",
@@ -21,12 +20,11 @@
     {
       "name": "loginIdTypes",
       "comments": [
-        "the identity types that FusionAuth will compare the loginId to. Defaults to [email, username]"
+        "(Optional) the identity types that FusionAuth will compare the loginId to. Defaults to [email, username]"
       ],
       "type": "urlParameter",
       "parameterName": "loginIdTypes",
-      "javaType": "List<String>",
-      "optional": true
+      "javaType": "List<String>"
     }
   ]
 }

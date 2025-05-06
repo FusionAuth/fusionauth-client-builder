@@ -7,7 +7,6 @@
   "methodName": "retrieveUserByLoginId",
   "successResponse": "UserResponse",
   "errorResponse": "Errors",
-  "overloads": true,
   "params": [
     {
       "name": "loginId",

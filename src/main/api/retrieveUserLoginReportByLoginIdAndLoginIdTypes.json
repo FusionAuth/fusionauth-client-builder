@@ -8,7 +8,6 @@
   "methodName": "retrieveUserLoginReportByLoginIdAndLoginIdTypes",
   "successResponse": "LoginReportResponse",
   "errorResponse": "Errors",
-  "overload": "retrieveUserLoginReportByLoginId",
   "params": [
     {
       "name": "applicationId",
@@ -49,12 +48,11 @@
     {
       "name": "loginIdTypes",
       "comments": [
-        "the identity types that FusionAuth will compare the loginId to. Defaults to [email, username]"
+        "(Optional) the identity types that FusionAuth will compare the loginId to. Defaults to [email, username]"
       ],
       "type": "urlParameter",
       "parameterName": "loginIdTypes",
-      "javaType": "List<String>",
-      "optional": true
+      "javaType": "List<String>"
     }
   ]
 }

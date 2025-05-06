@@ -8,7 +8,6 @@
   "methodName": "retrieveUserLoginReportByLoginId",
   "successResponse": "LoginReportResponse",
   "errorResponse": "Errors",
-  "overloads": true,
   "params": [
     {
       "name": "applicationId",
