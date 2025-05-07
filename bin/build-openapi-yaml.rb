@@ -277,7 +277,7 @@ def addListValue(hash, key, listElementType, identity_providers, rootkey = nil, 
   end
 end
 
-# Returns true if the 1st comment include (Optional) or an explicit optional boolean exists
+# Returns true if the 1st comment includes (Optional)
 def param_optional(param)
   param['comments']&.[](0)&.include?("(Optional)")
 end
