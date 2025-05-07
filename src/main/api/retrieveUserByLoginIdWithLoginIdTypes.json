@@ -20,7 +20,7 @@
     {
       "name": "loginIdTypes",
       "comments": [
-        "(Optional) the identity types that FusionAuth will compare the loginId to. Defaults to [email, username]"
+        "the identity types that FusionAuth will compare the loginId to. Defaults to [email, username]"
       ],
       "type": "urlParameter",
       "parameterName": "loginIdTypes",
