@@ -1,11 +1,11 @@
 {
   "uri": "/api/report/login",
   "comments": [
-    "Retrieves the login report between the two instants for a particular user by login Id. If you specify an application id, it will only return the",
+    "Retrieves the login report between the two instants for a particular user by login Id, using specific loginIdTypes. If you specify an application id, it will only return the",
     "login counts for that application."
   ],
   "method": "get",
-  "methodName": "retrieveUserLoginReportByLoginId",
+  "methodName": "retrieveUserLoginReportByLoginIdAndLoginIdTypes",
   "successResponse": "LoginReportResponse",
   "errorResponse": "Errors",
   "params": [
@@ -44,6 +44,15 @@
       "type": "urlParameter",
       "parameterName": "end",
       "javaType": "long"
+    },
+    {
+      "name": "loginIdTypes",
+      "comments": [
+        "the identity types that FusionAuth will compare the loginId to."
+      ],
+      "type": "urlParameter",
+      "parameterName": "loginIdTypes",
+      "javaType": "List<String>"
     }
   ]
 }

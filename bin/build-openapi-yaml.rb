@@ -277,11 +277,9 @@ def addListValue(hash, key, listElementType, identity_providers, rootkey = nil, 
   end
 end
 
-def param_optional(comments_arr)
-  if comments_arr && comments_arr[0].include?("(Optional)")
-    return true
-  end
-  return false
+# Returns true if the 1st comment includes (Optional)
+def param_optional(param)
+  param['comments']&.[](0)&.include?("(Optional)")
 end
 
 def process_rawpaths(rawpaths, options)
@@ -347,7 +345,7 @@ def process_api_file(fn, paths, options, deferred)
         next
       end
 
-      if param_optional(p["comments"])
+      if param_optional(p)
         uri = uri + "/{" + p["name"] + "}"
       else
         uri = uri + "/{" + p["name"] + "}"
@@ -508,7 +506,7 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
         next
       end
 
-      if param_optional(p["comments"])
+      if param_optional(p)
         if include_optional_segment_param
           # we have an optional param but it is in the URI, so we want to add it to the parameters
           params << build_openapi_paramobj(p, "path")
@@ -576,11 +574,23 @@ def build_openapi_paramobj(jsonparamobj, paramtype)
   paramobj = {}
   paramobj["name"] = jsonparamobj["name"]
   paramobj["in"] = paramtype
-  paramobj["schema"] = {}
-  paramobj["schema"]["type"] = "string"
+  # Cover Java generics here
+  paramobj["schema"] = if %w[Collection<String> List<String> Set<String>].include? jsonparamobj['javaType']
+                         {
+                           'type' => 'array',
+                           'items' => {
+                             'type' => 'string'
+                           }
+                         }
+                       else
+                         { 'type' => 'string' }
+                       end
 
   if paramtype == "path"
     paramobj["required"] = true
+  end
+  if jsonparamobj['optional']
+    paramobj['required'] = false
   end
   if jsonparamobj["comments"] && jsonparamobj["comments"][0]
     paramobj["description"] = jsonparamobj["comments"].join(" ").gsub('(Optional)', '').gsub("\n", '').delete("\n").strip
