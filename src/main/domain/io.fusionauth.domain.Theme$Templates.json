@@ -86,9 +86,6 @@
     "oauth2Passwordless" : {
       "type" : "String"
     },
-    "oauth2PasswordlessFormField" : {
-      "type" : "String"
-    },
     "oauth2Register" : {
       "type" : "String"
     },
