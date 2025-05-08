@@ -45,11 +45,11 @@
     "passwordlessLoginGenerator" : {
       "type" : "SecureGeneratorConfiguration"
     },
+    "passwordlessLoginOneTimeCodeGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
     "passwordlessLoginTimeToLiveInSeconds" : {
       "type" : "int"
-    },
-    "passwordlessOneTimeCodeLoginGenerator" : {
-      "type" : "SecureGeneratorConfiguration"
     },
     "pendingAccountLinkTimeToLiveInSeconds" : {
       "type" : "int"
