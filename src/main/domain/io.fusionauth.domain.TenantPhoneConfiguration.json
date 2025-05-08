@@ -18,6 +18,9 @@
     "passwordlessTemplateId" : {
       "type" : "UUID"
     },
+    "setPasswordTemplateId" : {
+      "type" : "UUID"
+    },
     "unverified" : {
       "type" : "PhoneUnverifiedOptions"
     },
