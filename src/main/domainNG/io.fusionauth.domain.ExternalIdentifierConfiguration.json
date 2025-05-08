@@ -53,7 +53,7 @@
       "className": "io.fusionauth.domain.SecureGeneratorConfiguration",
       "type": "SecureGeneratorConfiguration"
     },
-    "passwordlessShortCodeLoginTimeToLiveInSeconds": {
+    "passwordlessOneTimeCodeLoginTimeToLiveInSeconds": {
       "type": "int"
     },
     "pendingAccountLinkTimeToLiveInSeconds": {
