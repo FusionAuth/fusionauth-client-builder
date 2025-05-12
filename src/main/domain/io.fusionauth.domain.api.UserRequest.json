@@ -24,6 +24,9 @@
     "sendSetPasswordEmail" : {
       "type" : "boolean"
     },
+    "sendSetPasswordIdentityType" : {
+      "type" : "SendSetPasswordIdentityType"
+    },
     "skipVerification" : {
       "type" : "boolean"
     },
