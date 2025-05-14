@@ -9,6 +9,9 @@
     } ]
   } ],
   "fields" : {
+    "allowPhoneNumberChangeWhenGated" : {
+      "type" : "boolean"
+    },
     "behavior" : {
       "type" : "UnverifiedBehavior"
     }
