@@ -204,7 +204,8 @@ target(name: "build-netcore", description: "Build the C# .netCore Client Library
                             outputDir: "../fusionauth-netcore-client/fusionauth-netcore-client/domain",
                             extension: "cs")
   file.delete {
-    fileSet(dir: "../fusionauth-netcore-client/fusionauth-netcore-client/domain/", includePatterns: [~/IdentityType.cs/])
+    // exclude IdentityType.cs
+    fileSet(dir: "../fusionauth-netcore-client/fusionauth-netcore-client/domain/", includePatterns: [~/\/IdentityType.cs/])
   }
 }
 
