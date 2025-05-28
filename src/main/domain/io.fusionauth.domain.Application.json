@@ -102,6 +102,9 @@
     "themeId" : {
       "type" : "UUID"
     },
+    "universalConfiguration" : {
+      "type" : "UniversalConfiguration"
+    },
     "unverified" : {
       "type" : "RegistrationUnverifiedOptions"
     },

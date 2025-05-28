@@ -53,10 +53,16 @@
     "licensed" : {
       "type" : "boolean"
     },
+    "organizationAdminApplication" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "scimServer" : {
       "type" : "ReactorFeatureStatus"
     },
     "threatDetection" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "universalApplication" : {
       "type" : "ReactorFeatureStatus"
     },
     "webAuthn" : {
