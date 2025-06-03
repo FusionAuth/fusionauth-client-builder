@@ -5,7 +5,7 @@
     ],
   "method": "post",
   "methodName": "completeVerifyIdentity",
-  "successResponse": "Void",
+  "successResponse": "VerifyCompleteResponse",
   "errorResponse": "Errors",
   "params": [
     {
