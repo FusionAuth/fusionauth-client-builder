@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.api.user.verify",
+  "type" : "VerifyRequest",
+  "description" : "/**\n * Identity verify request. Used to administratively verify an identity.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "VerifyRequest"
+    } ]
+  } ],
+  "fields" : {
+    "identityId" : {
+      "type" : "long"
+    },
+    "userId" : {
+      "type" : "UUID"
+    }
+  }
+}
