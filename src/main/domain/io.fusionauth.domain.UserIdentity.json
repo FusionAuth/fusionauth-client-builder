@@ -12,9 +12,6 @@
     "displayValue" : {
       "type" : "String"
     },
-    "id" : {
-      "type" : "long"
-    },
     "insertInstant" : {
       "type" : "ZonedDateTime"
     },
