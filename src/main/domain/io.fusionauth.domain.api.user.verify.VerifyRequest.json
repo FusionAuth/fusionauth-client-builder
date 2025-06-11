@@ -12,11 +12,11 @@
     } ]
   } ],
   "fields" : {
-    "identityId" : {
-      "type" : "long"
+    "loginId" : {
+      "type" : "String"
     },
-    "userId" : {
-      "type" : "UUID"
+    "loginIdType" : {
+      "type" : "String"
     }
   }
 }
