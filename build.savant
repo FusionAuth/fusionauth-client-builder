@@ -93,6 +93,7 @@ target(name: "generateDomain", description: "Generates all of the json files for
       "io.fusionauth.api.domain.json.annotation.MaskMapValue.json",
       "io.fusionauth.domain.Buildable.json",
       "io.fusionauth.domain.Integration.json",
+      "io.fusionauth.domain.RateLimitedRequestType.json",
       "io.fusionauth.domain.util.DefaultTools.json",
       "io.fusionauth.domain.util.Normalizer.json",
       "io.fusionauth.domain.util.SQLTools.json",
@@ -174,6 +175,7 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: "// TODO : ENG.*", value: "")
     filter(token: "// INTERNAL.*", value: "")
   }
+  Files.delete(Paths.get("../fusionauth-java-client/src/main/java/io/fusionauth/domain/RateLimitedRequestType.java"))
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/client")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/client") {
     fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/client", excludePatterns: ["json/internal/*"])
