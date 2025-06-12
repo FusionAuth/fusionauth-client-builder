@@ -232,6 +232,7 @@ import io.fusionauth.domain.api.user.VerifyEmailResponse;
 import io.fusionauth.domain.api.user.VerifyRegistrationRequest;
 import io.fusionauth.domain.api.user.VerifyRegistrationResponse;
 import io.fusionauth.domain.api.user.verify.VerifyCompleteRequest;
+import io.fusionauth.domain.api.user.verify.VerifyCompleteResponse;
 import io.fusionauth.domain.api.user.verify.VerifyRequest;
 import io.fusionauth.domain.api.user.verify.VerifyStartRequest;
 import io.fusionauth.domain.api.user.verify.VerifyStartResponse;
