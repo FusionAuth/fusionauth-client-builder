@@ -21,9 +21,6 @@
     "sendPasswordless" : {
       "type" : "RateLimitedRequestConfiguration"
     },
-    "sendPasswordlessPhone" : {
-      "type" : "RateLimitedRequestConfiguration"
-    },
     "sendPhoneVerification" : {
       "type" : "RateLimitedRequestConfiguration"
     },
