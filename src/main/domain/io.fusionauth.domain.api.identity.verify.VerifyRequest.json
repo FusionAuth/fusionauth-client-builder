@@ -1,5 +1,5 @@
 {
-  "packageName" : "io.fusionauth.domain.api.user.verify",
+  "packageName" : "io.fusionauth.domain.api.identity.verify",
   "type" : "VerifyRequest",
   "description" : "/**\n * Identity verify request. Used to administratively verify an identity.\n */\n",
   "extends" : [ {
