@@ -175,7 +175,6 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: "// TODO : ENG.*", value: "")
     filter(token: "// INTERNAL.*", value: "")
   }
-  Files.delete(Paths.get("../fusionauth-java-client/src/main/java/io/fusionauth/domain/RateLimitedRequestType.java"))
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/client")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/client") {
     fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/client", excludePatterns: ["json/internal/*"])
