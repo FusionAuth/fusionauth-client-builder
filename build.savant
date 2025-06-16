@@ -93,6 +93,7 @@ target(name: "generateDomain", description: "Generates all of the json files for
       "io.fusionauth.api.domain.json.annotation.MaskMapValue.json",
       "io.fusionauth.domain.Buildable.json",
       "io.fusionauth.domain.Integration.json",
+      "io.fusionauth.domain.RateLimitedRequestType.json",
       "io.fusionauth.domain.util.DefaultTools.json",
       "io.fusionauth.domain.util.Normalizer.json",
       "io.fusionauth.domain.util.SQLTools.json",
