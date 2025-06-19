@@ -1,5 +1,5 @@
 {
-  "packageName" : "io.fusionauth.domain.api.user.verify",
+  "packageName" : "io.fusionauth.domain.api.identity.verify",
   "type" : "VerifyCompleteRequest",
   "description" : "/**\n * Verify Complete API request object.\n */\n",
   "extends" : [ {

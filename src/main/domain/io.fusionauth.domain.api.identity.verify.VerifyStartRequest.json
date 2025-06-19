@@ -1,5 +1,5 @@
 {
-  "packageName" : "io.fusionauth.domain.api.user.verify",
+  "packageName" : "io.fusionauth.domain.api.identity.verify",
   "type" : "VerifyStartRequest",
   "description" : "/**\n * @author Brady Wied\n */\n",
   "implements" : [ {
