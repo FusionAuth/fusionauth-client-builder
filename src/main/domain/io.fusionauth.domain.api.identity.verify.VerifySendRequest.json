@@ -9,9 +9,6 @@
     } ]
   } ],
   "fields" : {
-    "oneTimeCode" : {
-      "type" : "String"
-    },
     "verificationId" : {
       "type" : "String"
     }
