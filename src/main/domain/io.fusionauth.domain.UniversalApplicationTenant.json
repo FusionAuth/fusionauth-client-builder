@@ -9,6 +9,9 @@
     } ]
   } ],
   "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
     "tenantId" : {
       "type" : "UUID"
     }
