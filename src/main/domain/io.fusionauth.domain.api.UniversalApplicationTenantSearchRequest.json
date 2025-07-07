@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UniversalApplicationTenantSearchRequest",
+  "description" : "/**\n * The request object with the search criteria for Universal Application Tenants.\n *\n * @author Lyle Schemmerling\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UniversalApplicationTenantSearchRequest"
+    } ]
+  } ],
+  "fields" : {
+    "search" : {
+      "type" : "UniversalApplicationTenantSearchCriteria"
+    }
+  }
+}

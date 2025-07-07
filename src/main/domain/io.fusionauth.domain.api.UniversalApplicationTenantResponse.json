@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UniversalApplicationTenantResponse",
+  "description" : "/**\n * The response object for a single Universal Application Tenant.\n *\n * @author Lyle Schemmerling\n */\n",
+  "fields" : {
+    "universalApplicationTenant" : {
+      "type" : "UniversalApplicationTenant"
+    }
+  }
+}

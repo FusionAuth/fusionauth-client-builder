@@ -1,0 +1,34 @@
+{
+  "uri": "/api/application",
+  "comments": [
+    "Retrieves the universal application tenant."
+  ],
+  "method": "get",
+  "methodName": "retrieveUniversalApplicationTenant",
+  "successResponse": "UniversalApplicationTenantResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "applicationId",
+      "comments": [
+        "The Id of the universal application that tenant is mapped to"
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "application-tenant",
+      "constant": true,
+      "type": "urlSegment",
+      "value": "\"application-tenant\""
+    },
+    {
+      "name": "universalApplicationTenantId",
+      "comments": [
+        "The Id of the universal application tenant."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

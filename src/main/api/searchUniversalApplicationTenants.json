@@ -1,0 +1,32 @@
+{
+  "uri": "/api/application",
+  "comments": [
+    "Searches universal application tenants for the specified applicationId and with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchUniversalApplicationTenants",
+  "successResponse": "UniversalApplicationTenantSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "universal-application-tenant",
+      "constant": true,
+      "type": "urlSegment",
+      "value": "\"universal-application-tenant\""
+    },
+    {
+      "name": "search",
+      "constant": true,
+      "type": "urlSegment",
+      "value": "\"search\""
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "UniversalApplicationTenantSearchRequest"
+    }
+  ]
+}

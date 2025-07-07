@@ -1,0 +1,35 @@
+{
+  "uri": "/api/application",
+  "comments": [
+    "Removes the specified tenants from the universal application tenants list."
+  ],
+  "method": "delete",
+  "methodName": "deleteUniversalApplicationTenants",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "applicationId",
+      "comments": [
+        "The Id of the universal application that the tenants are linked to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "application-tenant",
+      "constant": true,
+      "type": "urlSegment",
+      "value": "\"application-tenant\""
+    },
+    {
+      "name": "tenantIds",
+      "comments": [
+        "The Ids of the tenants to delete from the universal application tenants list."
+      ],
+      "type": "urlParameter",
+      "parameterName": "tenantIds",
+      "javaType": "Collection<UUID>"
+    }
+  ]
+}

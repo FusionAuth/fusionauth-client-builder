@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UniversalApplicationTenantRequest",
+  "description" : "/**\n * The request object for creating or updating a Universal Application Tenant.\n *\n * @author Lyle Schemmerling\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UniversalApplicationTenantRequest"
+    } ]
+  } ],
+  "fields" : {
+    "universalApplicationTenant" : {
+      "type" : "UniversalApplicationTenant"
+    }
+  }
+}

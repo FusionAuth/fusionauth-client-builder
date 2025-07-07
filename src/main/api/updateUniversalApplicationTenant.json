@@ -1,0 +1,42 @@
+{
+  "uri": "/api/application",
+  "comments": [
+    "Adds the application tenants for universal applications."
+  ],
+  "method": "put",
+  "methodName": "updateUniversalApplicationTenant",
+  "successResponse": "UniversalApplicationTenantResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "applicationId",
+      "comments": [
+        "The Id of the application that the UniversalApplicationTenant belongs to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "universal-application-tenant",
+      "constant": true,
+      "type": "urlSegment",
+      "value": "\"universal-application-tenant\""
+    },
+    {
+      "name": "universalApplicationTenantId",
+      "comments": [
+        "The Id of the universal application tenant."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all the information used to create the UniversalApplicationTenant."
+      ],
+      "type": "body",
+      "javaType": "UniversalApplicationTenantRequest"
+    }
+  ]
+}

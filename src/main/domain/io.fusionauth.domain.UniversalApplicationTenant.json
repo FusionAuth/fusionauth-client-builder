@@ -1,14 +1,36 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "UniversalApplicationTenant",
-  "description" : "/**\n * @author Lyle Schemmerling\n */\n",
+  "description" : "/**\n * An object that represents the mapping between a Universal Application and a Tenant.\n *\n * @author Lyle Schemmerling\n */\n",
   "implements" : [ {
     "type" : "Buildable",
     "typeArguments" : [ {
       "type" : "UniversalApplicationTenant"
     } ]
+  }, {
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
     "tenantId" : {
       "type" : "UUID"
     }
