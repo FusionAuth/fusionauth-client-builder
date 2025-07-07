@@ -1,6 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
-  "type" : "UniversalConfiguration",
+  "type" : "UniversalApplicationConfiguration",
+  "description" : "/**\n * @author Lyle Schemmerling\n */\n",
   "fields" : {
     "global" : {
       "type" : "boolean"

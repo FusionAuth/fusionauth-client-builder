@@ -103,7 +103,7 @@
       "type" : "UUID"
     },
     "universalConfiguration" : {
-      "type" : "UniversalConfiguration"
+      "type" : "UniversalApplicationConfiguration"
     },
     "unverified" : {
       "type" : "RegistrationUnverifiedOptions"

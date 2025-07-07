@@ -1,31 +1,31 @@
 {
   "uri": "/api/application",
   "comments": [
-    "Deletes the universal application tenant."
+    "Retrieves the universal application tenant."
   ],
-  "method": "delete",
-  "methodName": "deleteUniversalApplicationTenant",
-  "successResponse": "Void",
+  "method": "get",
+  "methodName": "retrieveUniversalApplicationTenant",
+  "successResponse": "UniversalApplicationTenantResponse",
   "errorResponse": "Errors",
   "params": [
     {
       "name": "applicationId",
       "comments": [
-        "The Id of the application that the UniversalApplicationTenant belongs to."
+        "The Id of the universal application that tenant is mapped to"
       ],
       "type": "urlSegment",
       "javaType": "UUID"
     },
     {
-      "name": "universal-application-tenant",
+      "name": "application-tenant",
       "constant": true,
       "type": "urlSegment",
-      "value": "\"universal-application-tenant\""
+      "value": "\"application-tenant\""
     },
     {
       "name": "universalApplicationTenantId",
       "comments": [
-        "The Id of the UniversalApplicationTenant to delete."
+        "The Id of the universal application tenant."
       ],
       "type": "urlSegment",
       "javaType": "UUID"

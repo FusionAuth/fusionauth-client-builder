@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "UniversalApplicationTenantSearchResponse",
+  "description" : "/**\n * The response object for Universal Application Tenants search results.\n *\n * @author Lyle Schemmerling\n */\n",
+  "fields" : {
+    "universalApplicationTenants" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UniversalApplicationTenant"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

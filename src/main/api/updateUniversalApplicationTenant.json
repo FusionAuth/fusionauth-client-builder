@@ -1,11 +1,11 @@
 {
   "uri": "/api/application",
   "comments": [
-    "Deletes the universal application tenant."
+    "Adds the application tenants for universal applications."
   ],
-  "method": "delete",
-  "methodName": "deleteUniversalApplicationTenant",
-  "successResponse": "Void",
+  "method": "put",
+  "methodName": "updateUniversalApplicationTenant",
+  "successResponse": "UniversalApplicationTenantResponse",
   "errorResponse": "Errors",
   "params": [
     {
@@ -25,10 +25,18 @@
     {
       "name": "universalApplicationTenantId",
       "comments": [
-        "The Id of the UniversalApplicationTenant to delete."
+        "The Id of the universal application tenant."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all the information used to create the UniversalApplicationTenant."
+      ],
+      "type": "body",
+      "javaType": "UniversalApplicationTenantRequest"
     }
   ]
 }
