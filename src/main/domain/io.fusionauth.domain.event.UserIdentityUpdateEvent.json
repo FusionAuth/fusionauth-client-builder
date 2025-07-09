@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserIdentityUpdateEvent",
+  "description" : "/**\n * Models the user identity update event\n *\n * @author Brent Halsey\n */\n",
+  "extends" : [ {
+    "type" : "BaseUserEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserIdentityUpdateEvent"
+    } ]
+  } ],
+  "fields" : {
+    "loginIdType" : {
+      "type" : "String"
+    },
+    "newLoginId" : {
+      "type" : "String"
+    },
+    "previousLoginId" : {
+      "type" : "String"
+    }
+  }
+}
