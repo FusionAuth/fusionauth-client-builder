@@ -1,8 +1,8 @@
 {
   "uri": "/api/user/bulk",
   "comments": [
-    "Deletes the users with the given ids, or users matching the provided JSON query or queryString.",
-    "The order of preference is ids, query and then queryString, it is recommended to only provide one of the three for the request.",
+    "Deletes the users with the given Ids, or users matching the provided JSON query or queryString.",
+    "The order of preference is Ids, query and then queryString, it is recommended to only provide one of the three for the request.",
     "",
     "This method can be used to deactivate or permanently delete (hard-delete) users based upon the hardDelete boolean in the request body.",
     "Using the dryRun parameter you may also request the result of the action without actually deleting or deactivating any users."
