@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UniversalApplicationConfiguration",
+  "description" : "/**\n * @author Lyle Schemmerling\n */\n",
+  "fields" : {
+    "universal" : {
+      "type" : "boolean"
+    }
+  }
+}
