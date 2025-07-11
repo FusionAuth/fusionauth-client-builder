@@ -164,5 +164,8 @@
   }, {
     "name" : "IdentityVerified",
     "args" : [ "identity.verified" ]
+  }, {
+    "name" : "UserIdentityUpdate",
+    "args" : [ "user.identity.update" ]
   } ]
 }
