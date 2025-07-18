@@ -1,7 +1,7 @@
 {
   "uri": "/api/report/login",
   "comments": [
-    "Retrieves the login report between the two instants for a particular user by login Id. If you specify an application id, it will only return the",
+    "Retrieves the login report between the two instants for a particular user by login Id. If you specify an application Id, it will only return the",
     "login counts for that application."
   ],
   "method": "get",
@@ -12,7 +12,7 @@
     {
       "name": "applicationId",
       "comments": [
-        "(Optional) The application id."
+        "(Optional) The application Id."
       ],
       "type": "urlParameter",
       "parameterName": "applicationId",
@@ -21,7 +21,7 @@
     {
       "name": "loginId",
       "comments": [
-        "The userId id."
+        "The userId Id."
       ],
       "type": "urlParameter",
       "parameterName": "loginId",

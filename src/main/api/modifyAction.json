@@ -12,7 +12,7 @@
     {
       "name": "actionId",
       "comments": [
-        "The Id of the action to modify. This is technically the user action log id."
+        "The Id of the action to modify. This is technically the user action log Id."
       ],
       "type": "urlSegment",
       "javaType": "UUID"

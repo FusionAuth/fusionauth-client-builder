@@ -1,7 +1,7 @@
 {
   "uri": "/api/entity/search",
   "comments": [
-    "Retrieves the entities for the given ids. If any Id is invalid, it is ignored."
+    "Retrieves the entities for the given Ids. If any Id is invalid, it is ignored."
   ],
   "method": "get",
   "methodName": "searchEntitiesByIds",

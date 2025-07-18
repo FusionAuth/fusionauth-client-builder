@@ -2,6 +2,9 @@
   "className" : "io.fusionauth.domain.TenantSSOConfiguration",
   "extends" : { },
   "fields" : {
+    "allowAccessTokenBootstrap" : {
+      "type" : "boolean"
+    },
     "deviceTrustTimeToLiveInSeconds" : {
       "type" : "int"
     }

@@ -11,7 +11,7 @@
     {
       "name": "applicationId",
       "comments": [
-        "(Optional) The application id."
+        "(Optional) The application Id."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
