@@ -53,10 +53,10 @@
     "licensed" : {
       "type" : "boolean"
     },
-    "organizationAdminApplication" : {
+    "scimServer" : {
       "type" : "ReactorFeatureStatus"
     },
-    "scimServer" : {
+    "tenantManagerApplication" : {
       "type" : "ReactorFeatureStatus"
     },
     "threatDetection" : {
