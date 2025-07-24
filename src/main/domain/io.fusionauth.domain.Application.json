@@ -105,6 +105,9 @@
     "themeId" : {
       "type" : "UUID"
     },
+    "universalConfiguration" : {
+      "type" : "UniversalApplicationConfiguration"
+    },
     "unverified" : {
       "type" : "RegistrationUnverifiedOptions"
     },
