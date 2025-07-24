@@ -56,7 +56,13 @@
     "scimServer" : {
       "type" : "ReactorFeatureStatus"
     },
+    "tenantManagerApplication" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "threatDetection" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "universalApplication" : {
       "type" : "ReactorFeatureStatus"
     },
     "webAuthn" : {

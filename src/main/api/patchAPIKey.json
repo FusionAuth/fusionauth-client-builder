@@ -1,9 +1,9 @@
 {
   "uri": "/api/api-key",
   "comments": [
-        "Updates an authentication API key by given id"
+    "Updates an API key with the given Id."
   ],
-  "method": "post",
+  "method": "patch",
   "methodName": "patchAPIKey",
   "successResponse": "APIKeyResponse",
   "errorResponse": "Errors",
@@ -11,7 +11,7 @@
     {
       "name": "keyId",
       "comments": [
-        "The Id of the authentication key. If not provided a secure random api key will be generated."
+        "The Id of the API key. If not provided a secure random api key will be generated."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all the information needed to create the APIKey."
+        "The request object that contains all the information needed to create the API key."
       ],
       "type": "body",
       "javaType": "APIKeyRequest"

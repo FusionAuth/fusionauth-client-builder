@@ -36,9 +36,16 @@
       "className" : "io.fusionauth.domain.APIKey$APIKeyMetaData",
       "type" : "APIKey$APIKeyMetaData"
     },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "permissions" : {
       "className" : "io.fusionauth.domain.APIKey$APIKeyPermissions",
       "type" : "APIKey$APIKeyPermissions"
+    },
+    "retrievable" : {
+      "type" : "boolean"
     },
     "tenantId" : {
       "className" : "java.util.UUID",

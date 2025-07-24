@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/bulk",
   "comments": [
-    "Deactivates the users with the given ids."
+    "Deactivates the users with the given Ids."
   ],
   "method": "delete",
   "methodName": "deactivateUsersByIds",

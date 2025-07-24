@@ -1,7 +1,7 @@
 {
   "uri": "/api/api-key",
   "comments": [
-    "Retrieves an authentication API key for the given id"
+    "Retrieves an authentication API key for the given Id."
   ],
   "method": "get",
   "methodName": "retrieveAPIKey",

@@ -1,7 +1,7 @@
 {
   "uri": "/api/email/send",
   "comments": [
-    "Send an email using an email template id. You can optionally provide <code>requestData</code> to access key value",
+    "Send an email using an email template Id. You can optionally provide <code>requestData</code> to access key value",
     "pairs in the email template."
   ],
   "method": "post",

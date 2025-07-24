@@ -22,7 +22,7 @@
     {
       "name": "client_id",
       "comments": [
-        "The client id."
+        "The client Id."
       ],
       "type": "urlParameter",
       "parameterName": "client_id",

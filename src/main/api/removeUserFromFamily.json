@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/family",
   "comments": [
-    "Removes a user from the family with the given id."
+    "Removes a user from the family with the given Id."
   ],
   "method": "delete",
   "methodName": "removeUserFromFamily",

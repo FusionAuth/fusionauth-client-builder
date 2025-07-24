@@ -1,7 +1,7 @@
 {
   "uri": "/api/report/registration",
   "comments": [
-    "Retrieves the registration report between the two instants. If you specify an application id, it will only return",
+    "Retrieves the registration report between the two instants. If you specify an application Id, it will only return",
     "the registration counts for that application."
   ],
   "method": "get",
@@ -12,7 +12,7 @@
     {
       "name": "applicationId",
       "comments": [
-        "(Optional) The application id."
+        "(Optional) The application Id."
       ],
       "type": "urlParameter",
       "parameterName": "applicationId",

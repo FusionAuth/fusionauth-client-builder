@@ -1,7 +1,7 @@
 {
   "uri": "/api/email/template",
   "comments": [
-    "Retrieves the email template for the given Id. If you don't specify the id, this will return all the email templates."
+    "Retrieves the email template for the given Id. If you don't specify the Id, this will return all the email templates."
   ],
   "method": "get",
   "methodName": "retrieveEmailTemplate",

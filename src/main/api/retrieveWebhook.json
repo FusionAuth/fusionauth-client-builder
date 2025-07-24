@@ -1,7 +1,7 @@
 {
   "uri": "/api/webhook",
   "comments": [
-    "Retrieves the webhook for the given Id. If you pass in null for the id, this will return all the webhooks."
+    "Retrieves the webhook for the given Id. If you pass in null for the Id, this will return all the webhooks."
   ],
   "method": "get",
   "methodName": "retrieveWebhook",

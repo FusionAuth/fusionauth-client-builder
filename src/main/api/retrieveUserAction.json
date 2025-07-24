@@ -1,7 +1,7 @@
 {
   "uri": "/api/user-action",
   "comments": [
-    "Retrieves the user action for the given Id. If you pass in null for the id, this will return all the user",
+    "Retrieves the user action for the given Id. If you pass in null for the Id, this will return all the user",
     "actions."
   ],
   "method": "get",

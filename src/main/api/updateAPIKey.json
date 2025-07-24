@@ -1,7 +1,7 @@
 {
   "uri": "/api/api-key",
   "comments": [
-    "Updates an API key by given id"
+    "Updates an API key with the given Id."
   ],
   "method": "put",
   "methodName": "updateAPIKey",
@@ -9,7 +9,7 @@
   "errorResponse": "Errors",
   "params": [
     {
-      "name": "apiKeyId",
+      "name": "keyId",
       "comments": [
         "The Id of the API key to update."
       ],
@@ -19,7 +19,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all the information used to create the API Key."
+        "The request that contains all the new API key information."
       ],
       "type": "body",
       "javaType": "APIKeyRequest"

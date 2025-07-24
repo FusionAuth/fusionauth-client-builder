@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/search",
   "comments": [
-    "Retrieves the users for the given ids. If any Id is invalid, it is ignored."
+    "Retrieves the users for the given Ids. If any Id is invalid, it is ignored."
   ],
   "method": "get",
   "methodName": "searchUsersByIds",
@@ -11,7 +11,7 @@
     {
       "name": "ids",
       "comments": [
-        "The user ids to search for."
+        "The user Ids to search for."
       ],
       "type": "urlParameter",
       "parameterName": "ids",

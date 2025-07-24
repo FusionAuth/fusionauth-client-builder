@@ -14,7 +14,7 @@
     {
       "name": "client_id",
       "comments": [
-        "The client id."
+        "The client Id."
       ],
       "type": "form",
       "parameterName": "client_id",
@@ -23,7 +23,7 @@
     {
       "name": "client_secret",
       "comments": [
-        "The client id."
+        "The client Id."
       ],
       "type": "form",
       "parameterName": "client_secret",
