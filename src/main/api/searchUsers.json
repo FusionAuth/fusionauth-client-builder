@@ -1,7 +1,7 @@
 {
   "uri": "/api/user/search",
   "comments": [
-    "Retrieves the users for the given ids. If any Id is invalid, it is ignored."
+    "Retrieves the users for the given Ids. If any Id is invalid, it is ignored."
   ],
   "deprecated": "This method has been renamed to {{renamedMethod}}, use that method instead.",
   "renamedMethod": "searchUsersByIds",
