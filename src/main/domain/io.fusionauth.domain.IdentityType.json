@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "IdentityType",
-  "description" : "/**\n * Keep track of identity types that FusionAuth provides out of the box.\n */\n",
+  "description" : "/**\n * Model identity types provided by FusionAuth.\n */\n",
   "implements" : [ {
     "type" : "Comparable",
     "typeArguments" : [ {
