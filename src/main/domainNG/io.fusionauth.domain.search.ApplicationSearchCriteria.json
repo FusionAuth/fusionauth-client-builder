@@ -5,6 +5,14 @@
     "type" : "BaseSearchCriteria"
   },
   "fields" : {
+    "NullableFields" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
     "SortableFields" : {
       "className" : "java.util.Map",
       "type" : "Map",
@@ -29,7 +37,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.search.BaseSearchCriteria", "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.ObjectState", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.search.BaseSearchCriteria", "io.fusionauth.domain.Buildable", "java.util.Set", "java.lang.String", "java.util.Map", "io.fusionauth.domain.ObjectState", "java.util.UUID" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
