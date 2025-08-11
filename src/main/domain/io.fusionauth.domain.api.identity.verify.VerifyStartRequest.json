@@ -27,7 +27,7 @@
       } ]
     },
     "verificationStrategy" : {
-      "type" : "String"
+      "type" : "VerificationStrategy"
     }
   }
 }
