@@ -43,6 +43,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.*;
 
+[#if domain_item.packageName?starts_with("io.fusionauth.domain")]
+import com.inversoft.error.*;
 import io.fusionauth.domain.*;
 import io.fusionauth.domain.api.*;
 import io.fusionauth.domain.api.cache.*;
@@ -68,7 +70,11 @@ import io.fusionauth.domain.reactor.*;
 import io.fusionauth.domain.search.*;
 import io.fusionauth.domain.util.*;
 import io.fusionauth.domain.webauthn.*;
+import io.fusionauth.jwks.domain.*;
+import io.fusionauth.jwt.domain.JWT;
+[#else]
 import io.fusionauth.jwt.domain.*;
+[/#if]
 
 [#if useCustomNames]
 import com.fasterxml.jackson.annotation.JsonCreator;
