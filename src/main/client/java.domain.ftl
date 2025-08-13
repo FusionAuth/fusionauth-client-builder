@@ -17,12 +17,9 @@
  * language governing permissions and limitations under the License.
  */
 [#import "_macros.ftl" as global/]
-[#function replaceKeywords value]
-  [#return value?replace("\\b(?=implicit)|\\b(?=event)", "@", "ir")]
-[/#function]
 [#macro printType type isDeclaration=false isTypeArgument=false]
   [#if type.type??]
-    ${type.type}[#t]
+    ${type.type?replace("*", "?")}[#t]
   [#else]
     ${type.name}[#t]
   [/#if]
@@ -70,7 +67,7 @@ import io.fusionauth.domain.search.*;
 import io.fusionauth.domain.util.*;
 
 [#if domain_item.description??]
-${domain_item.description?replace("\n(?!$)", "\n  ", "r")}[#rt]
+${domain_item.description}[#rt]
 [#else]
 /**
  * @author FusionAuth
@@ -86,7 +83,7 @@ public class [@printType domain_item true/] {
     [#if field.description??]
   ${field.description}[#rt]
     [/#if]
-  public [@printType field/] ${global.scrubName(replaceKeywords(fieldName))};
+  public [@printType field/] ${global.scrubName(fieldName)};
   [/#list]
 }
 [#else]
@@ -98,12 +95,12 @@ public enum ${domain_item.type} {
   [EnumMember(Value = "${value}")]
   ${value?string?cap_first}[#rt/]
     [#elseif value?is_string]
-  ${replaceKeywords(value)}[#rt/]
+  ${value}[#rt/]
     [#else]
       [#if useCustomNames]
   [EnumMember(Value = "${(value.args![])[0]!value.name}")]
       [/#if]
-  ${replaceKeywords(value.name)}[#rt/]
+  ${value.name}[#rt/]
     [/#if]
     [#lt][#sep], [/#sep]
   [/#list]
