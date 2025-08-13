@@ -1,6 +1,8 @@
 [#-- @ftlvariable name="domain_item" type="" --]
 [#-- @ftlvariable name="packages" type="String[]" --]
 [#-- @ftlvariable name="types_in_use" type="String[]" --]
+[#import "_macros.ftl" as global/]
+[#assign useCustomNames = global.needsConverter(domain_item)]
 /*
  * Copyright (c) 2018-2023, FusionAuth, All Rights Reserved
  *
@@ -16,7 +18,6 @@
  * either express or implied. See the License for the specific
  * language governing permissions and limitations under the License.
  */
-[#import "_macros.ftl" as global/]
 [#macro printType type isDeclaration=false isTypeArgument=false]
   [#if type.type??]
     ${type.type?replace("*", "?")}[#t]
@@ -66,6 +67,11 @@ import io.fusionauth.domain.reactor.*;
 import io.fusionauth.domain.search.*;
 import io.fusionauth.domain.util.*;
 
+[#if useCustomNames]
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+[/#if]
+
 [#if domain_item.description??]
 ${domain_item.description}[#rt]
 [#else]
@@ -87,7 +93,6 @@ public class [@printType domain_item true/] {
   [/#list]
 }
 [#else]
-  [#assign useCustomNames = global.needsConverter(domain_item)][#t/]
 public enum ${domain_item.type} {
   [#list domain_item.enum as value]
     [#if value?is_string]
@@ -98,7 +103,34 @@ public enum ${domain_item.type} {
         ("${(value.args![])[0]!value.name}")[#t]
       [/#if]
     [/#if]
-    [#lt][#sep],[/#sep]
+    [#lt][#sep],
+[/#sep][#if !value?has_next];[/#if]
   [/#list]
+  [#if useCustomNames]
+
+  private static final Map<String, ${domain_item.type}> nameMap = new HashMap<>(${domain_item.type}.values().length);
+
+  private final String customName;
+
+  ${domain_item.type}(String customName) {
+    this.customName = customName;
+  }
+
+  @JsonCreator
+  public static ${domain_item.type} forValue(String value) {
+    return nameMap.get(value);
+  }
+
+  @JsonValue
+  public String customName() {
+    return customName;
+  }
+
+  static {
+    for (${domain_item.type} value : ${domain_item.type}.values()) {
+      nameMap.put(value.customName(), value);
+    }
+  }
+  [/#if]
 }
 [/#if]
