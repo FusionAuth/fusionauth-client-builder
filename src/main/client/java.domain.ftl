@@ -21,18 +21,26 @@
   [#return value?replace("\\b(?=implicit)|\\b(?=event)", "@", "ir")]
 [/#function]
 [#macro printType type isDeclaration=false isTypeArgument=false]
-   ${type.type}[#t]
+  [#if type.type??]
+    ${type.type}[#t]
+  [#else]
+    ${type.name}[#t]
+  [/#if]
   [#if type.typeArguments?has_content && type.type != "Object"]
-    <[#list type.typeArguments as typeArgument][@printType type=typeArgument isTypeArgument=true/][#sep], [/#sep][/#list]>[#t]
+    <[#list type.typeArguments as typeArgument][@printType typeArgument isDeclaration true/][#sep], [/#sep][/#list]>[#t]
   [/#if]
   [#if isDeclaration]
-    [#if type.extends?? && type.extends.type?? && type.extends.type?string != "Object"]
- extends [@printType type.extends isDeclaration/][#rt]
-    [/#if]
+    [#list type.extends![]]
+ extends [#rt]
+      [#items as extends]
+        [@printType extends isDeclaration/][#sep], [/#sep][#t]
+      [/#items]
+    [/#list]
   [/#if]
 [/#macro]
 package ${domain_item.packageName};
 
+import java.time.*;
 import java.util.*;
 import java.util.function.*;
 

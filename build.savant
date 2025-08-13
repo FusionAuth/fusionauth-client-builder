@@ -162,6 +162,12 @@ target(name: "build-java", description: "Build the Java Client Library") {
                             outputFile: "../fusionauth-app/src/main/java/io/fusionauth/client/FusionAuthClient.java")
 
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain")
+
+  clientLibrary.buildDomain(template: "src/main/client/java.domain.ftl",
+                              outputDir: "../fusionauth-java-client/src/main/java",
+                              extension: "java")
+
+/**
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/domain") {
     fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/domain", excludePatterns: ["internal/annotation/*"])
     filter(token: ", JSONColumnable", value: "")
@@ -180,6 +186,7 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: ".*@MaskString.*\n", value: "")
     filter(token: ".*@InternalUse.*\n ", value: "")
   }
+*/
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/client")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/client") {
     fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/client", excludePatterns: ["json/internal/*"])
