@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "ObjectIdentifiable",
+  "description" : "/**\n * A marker interface indicating this event is an event that can supply a linked object Id.\n *\n * @author Rob Davis\n */\n",
+  "fields" : { }
+}

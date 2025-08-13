@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "WebhookEventResult",
+  "description" : "/**\n * The possible result states of a webhook event. This tracks the success of the overall webhook transaction according to the {@link TransactionType}\n * and configured webhooks.\n *\n * @author Rob Davis\n */\n",
+  "enum" : [ "Failed", "Running", "Succeeded" ]
+}

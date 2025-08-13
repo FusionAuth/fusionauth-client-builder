@@ -3,7 +3,7 @@
   "type" : "UserUpdateEvent",
   "description" : "/**\n * Models the User Update Event.\n *\n * @author Brian Pontarelli\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -13,9 +13,6 @@
   } ],
   "fields" : {
     "original" : {
-      "type" : "User"
-    },
-    "user" : {
       "type" : "User"
     }
   }

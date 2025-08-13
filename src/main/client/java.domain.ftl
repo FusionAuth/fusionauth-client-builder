@@ -38,6 +38,7 @@
 [/#macro]
 package ${domain_item.packageName};
 
+import java.net.*;
 import java.time.*;
 import java.util.*;
 import java.util.function.*;
@@ -66,6 +67,8 @@ import io.fusionauth.domain.provider.*;
 import io.fusionauth.domain.reactor.*;
 import io.fusionauth.domain.search.*;
 import io.fusionauth.domain.util.*;
+import io.fusionauth.domain.webauthn.*;
+import io.fusionauth.jwt.domain.*;
 
 [#if useCustomNames]
 import com.fasterxml.jackson.annotation.JsonCreator;

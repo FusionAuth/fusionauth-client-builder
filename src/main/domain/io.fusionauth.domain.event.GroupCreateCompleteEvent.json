@@ -3,7 +3,7 @@
   "type" : "GroupCreateCompleteEvent",
   "description" : "/**\n * Models the Group Created Event.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseGroupEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -13,9 +13,5 @@
   }, {
     "type" : "NonTransactionalEvent"
   } ],
-  "fields" : {
-    "group" : {
-      "type" : "Group"
-    }
-  }
+  "fields" : { }
 }

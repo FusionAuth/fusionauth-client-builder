@@ -3,7 +3,7 @@
   "type" : "UserCreateCompleteEvent",
   "description" : "/**\n * Models the User Created Event.\n * <p>\n * This is different than the user.create event in that it will be sent after the user has been created. This event cannot be made transactional.\n *\n * @author Daniel DeGroff\n */\n",
   "extends" : [ {
-    "type" : "BaseEvent"
+    "type" : "BaseUserEvent"
   } ],
   "implements" : [ {
     "type" : "Buildable",
@@ -13,9 +13,5 @@
   }, {
     "type" : "NonTransactionalEvent"
   } ],
-  "fields" : {
-    "user" : {
-      "type" : "User"
-    }
-  }
+  "fields" : { }
 }
