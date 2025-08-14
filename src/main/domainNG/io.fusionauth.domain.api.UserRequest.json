@@ -19,6 +19,10 @@
     "sendSetPasswordEmail" : {
       "type" : "boolean"
     },
+    "sendSetPasswordIdentityType" : {
+      "className" : "io.fusionauth.domain.SendSetPasswordIdentityType",
+      "type" : "SendSetPasswordIdentityType"
+    },
     "skipVerification" : {
       "type" : "boolean"
     },
@@ -35,7 +39,7 @@
       } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.User", "java.util.List" ],
+  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.SendSetPasswordIdentityType", "io.fusionauth.domain.User", "java.util.List" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

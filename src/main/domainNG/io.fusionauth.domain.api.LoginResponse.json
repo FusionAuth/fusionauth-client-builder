@@ -33,6 +33,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "identityVerificationId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "methods" : {
       "className" : "java.util.List",
       "type" : "List",

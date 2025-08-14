@@ -1,5 +1,5 @@
 {
-  "className" : "io.fusionauth.domain.event.IdentityVerifiedEvent",
+  "className" : "io.fusionauth.domain.event.UserIdentityVerifiedEvent",
   "extends" : {
     "className" : "io.fusionauth.domain.event.BaseUserEvent",
     "type" : "BaseUserEvent"
@@ -19,11 +19,11 @@
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
     "typeArguments" : [ {
-      "className" : "io.fusionauth.domain.event.IdentityVerifiedEvent",
-      "type" : "IdentityVerifiedEvent"
+      "className" : "io.fusionauth.domain.event.UserIdentityVerifiedEvent",
+      "type" : "UserIdentityVerifiedEvent"
     } ]
   } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.event",
-  "type" : "IdentityVerifiedEvent"
+  "type" : "UserIdentityVerifiedEvent"
 }

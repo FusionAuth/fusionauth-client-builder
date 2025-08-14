@@ -21,6 +21,14 @@
       "className" : "io.fusionauth.domain.RateLimitedRequestConfiguration",
       "type" : "RateLimitedRequestConfiguration"
     },
+    "sendPasswordlessPhone" : {
+      "className" : "io.fusionauth.domain.RateLimitedRequestConfiguration",
+      "type" : "RateLimitedRequestConfiguration"
+    },
+    "sendPhoneVerification" : {
+      "className" : "io.fusionauth.domain.RateLimitedRequestConfiguration",
+      "type" : "RateLimitedRequestConfiguration"
+    },
     "sendRegistrationVerification" : {
       "className" : "io.fusionauth.domain.RateLimitedRequestConfiguration",
       "type" : "RateLimitedRequestConfiguration"

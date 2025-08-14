@@ -1,12 +1,12 @@
 {
-  "className" : "io.fusionauth.domain.api.user.verify.VerifyStartResponse",
+  "className" : "io.fusionauth.domain.event.BaseUserEvent$IdentityInfo",
   "extends" : { },
   "fields" : {
-    "oneTimeCode" : {
+    "type" : {
       "className" : "java.lang.String",
       "type" : "String"
     },
-    "verificationId" : {
+    "value" : {
       "className" : "java.lang.String",
       "type" : "String"
     }
@@ -14,6 +14,6 @@
   "imports" : [ "java.lang.String" ],
   "interfaces" : [ ],
   "objectType" : "Object",
-  "packageName" : "io.fusionauth.domain.api.user.verify",
-  "type" : "VerifyStartResponse"
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "BaseUserEvent$IdentityInfo"
 }

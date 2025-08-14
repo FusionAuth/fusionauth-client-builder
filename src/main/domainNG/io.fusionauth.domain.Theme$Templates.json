@@ -173,6 +173,22 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "phoneComplete" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "phoneSent" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "phoneVerificationRequired" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "phoneVerify" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "registrationComplete" : {
       "className" : "java.lang.String",
       "type" : "String"
