@@ -9,12 +9,16 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "timeToLiveInSeconds" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
     "token" : {
       "className" : "java.lang.String",
       "type" : "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.lang.String" ],
+  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.lang.String", "java.lang.Integer" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

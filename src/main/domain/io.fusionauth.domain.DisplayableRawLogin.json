@@ -20,6 +20,9 @@
     },
     "loginId" : {
       "type" : "String"
+    },
+    "loginIdType" : {
+      "type" : "IdentityType"
     }
   }
 }

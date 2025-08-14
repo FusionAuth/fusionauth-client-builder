@@ -15,6 +15,9 @@
     "refreshToken" : {
       "type" : "String"
     },
+    "timeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "token" : {
       "type" : "String"
     }

@@ -3,6 +3,12 @@
   "type" : "SecureIdentity",
   "description" : "/**\n * @author Daniel DeGroff\n */\n",
   "fields" : {
+    "identities" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UserIdentity"
+      } ]
+    },
     "breachedPasswordLastCheckedInstant" : {
       "type" : "ZonedDateTime"
     },

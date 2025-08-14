@@ -1,0 +1,27 @@
+{
+  "className" : "io.fusionauth.domain.api.user.verify.VerifyStartRequest",
+  "extends" : { },
+  "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "loginId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "loginIdType" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "verificationStrategy" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.util.UUID", "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.user.verify",
+  "type" : "VerifyStartRequest"
+}

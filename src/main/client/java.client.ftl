@@ -38,6 +38,7 @@ import com.inversoft.rest.RESTClient;
 import io.fusionauth.domain.LambdaType;
 import io.fusionauth.domain.OpenIdConfiguration;
 import io.fusionauth.domain.api.APIKeyRequest;
+import io.fusionauth.client.json.FusionAuthJacksonModule;
 import io.fusionauth.domain.api.APIKeyResponse;
 import io.fusionauth.domain.api.ApplicationOAuthScopeRequest;
 import io.fusionauth.domain.api.ApplicationOAuthScopeResponse;
@@ -182,6 +183,12 @@ import io.fusionauth.domain.api.WebhookSearchRequest;
 import io.fusionauth.domain.api.WebhookSearchResponse;
 import io.fusionauth.domain.api.email.SendRequest;
 import io.fusionauth.domain.api.email.SendResponse;
+import io.fusionauth.domain.api.identity.verify.VerifyCompleteRequest;
+import io.fusionauth.domain.api.identity.verify.VerifyCompleteResponse;
+import io.fusionauth.domain.api.identity.verify.VerifyRequest;
+import io.fusionauth.domain.api.identity.verify.VerifyStartRequest;
+import io.fusionauth.domain.api.identity.verify.VerifyStartResponse;
+import io.fusionauth.domain.api.identity.verify.VerifySendRequest;
 import io.fusionauth.domain.api.identityProvider.IdentityProviderLinkRequest;
 import io.fusionauth.domain.api.identityProvider.IdentityProviderLinkResponse;
 import io.fusionauth.domain.api.identityProvider.IdentityProviderLoginRequest;
@@ -261,7 +268,8 @@ public class FusionAuthClient {
                                                                     .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                                                                     .configure(DeserializationFeature.USE_BIG_DECIMAL_FOR_FLOATS, true)
                                                                     .configure(DeserializationFeature.USE_BIG_INTEGER_FOR_INTS, true)
-                                                                    .registerModule(new JacksonModule());
+                                                                    .registerModule(new JacksonModule())
+                                                                    .registerModule(new FusionAuthJacksonModule());
 
   private final String apiKey;
 

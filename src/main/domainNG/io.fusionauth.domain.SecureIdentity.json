@@ -26,6 +26,14 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "identities" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.UserIdentity",
+        "type" : "UserIdentity"
+      } ]
+    },
     "lastLoginInstant" : {
       "className" : "java.time.ZonedDateTime",
       "type" : "ZonedDateTime"
@@ -69,7 +77,7 @@
       "type" : "ZonedDateTime"
     }
   },
-  "imports" : [ "java.time.ZonedDateTime", "io.fusionauth.domain.BreachedPasswordStatus", "java.util.UUID", "java.lang.String", "java.lang.Integer", "io.fusionauth.domain.ChangePasswordReason", "io.fusionauth.domain.ContentStatus" ],
+  "imports" : [ "java.util.List", "io.fusionauth.domain.UserIdentity", "java.time.ZonedDateTime", "io.fusionauth.domain.BreachedPasswordStatus", "java.util.UUID", "java.lang.String", "java.lang.Integer", "io.fusionauth.domain.ChangePasswordReason", "io.fusionauth.domain.ContentStatus" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

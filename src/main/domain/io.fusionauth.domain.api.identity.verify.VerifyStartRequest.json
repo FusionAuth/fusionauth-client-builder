@@ -1,0 +1,33 @@
+{
+  "packageName" : "io.fusionauth.domain.api.identity.verify",
+  "type" : "VerifyStartRequest",
+  "description" : "/**\n * @author Brady Wied\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "VerifyStartRequest"
+    } ]
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "loginId" : {
+      "type" : "String"
+    },
+    "loginIdType" : {
+      "type" : "String"
+    },
+    "state" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "verificationStrategy" : {
+      "type" : "VerificationStrategy"
+    }
+  }
+}

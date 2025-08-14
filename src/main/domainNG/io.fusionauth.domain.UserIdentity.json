@@ -1,0 +1,75 @@
+{
+  "className" : "io.fusionauth.domain.UserIdentity",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "id" : {
+      "className" : "java.lang.Long",
+      "type" : "Long"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastLoginInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "moderationStatus" : {
+      "className" : "io.fusionauth.domain.ContentStatus",
+      "type" : "ContentStatus"
+    },
+    "primary" : {
+      "type" : "boolean"
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.IdentityType",
+      "type" : "IdentityType"
+    },
+    "uniqueValue" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "value" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "verified" : {
+      "type" : "boolean"
+    },
+    "verifiedInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "verifiedReason" : {
+      "className" : "io.fusionauth.domain.IdentityVerifiedReason",
+      "type" : "IdentityVerifiedReason"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.Long", "java.time.ZonedDateTime", "io.fusionauth.domain.ContentStatus", "java.util.UUID", "io.fusionauth.domain.IdentityType", "java.lang.String", "io.fusionauth.domain.IdentityVerifiedReason" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.UserIdentity",
+      "type" : "UserIdentity"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UserIdentity"
+}

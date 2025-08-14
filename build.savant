@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2024, FusionAuth, All Rights Reserved
+ * Copyright (c) 2019-2025, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -93,6 +93,7 @@ target(name: "generateDomain", description: "Generates all of the json files for
       "io.fusionauth.api.domain.json.annotation.MaskMapValue.json",
       "io.fusionauth.domain.Buildable.json",
       "io.fusionauth.domain.Integration.json",
+      "io.fusionauth.domain.RateLimitedRequestType.json",
       "io.fusionauth.domain.util.DefaultTools.json",
       "io.fusionauth.domain.util.Normalizer.json",
       "io.fusionauth.domain.util.SQLTools.json",
@@ -170,6 +171,9 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: ".*@MaskMapValue\\(.*\n", value: "")
     filter(token: ".*@MaskString.*\n", value: "")
     filter(token: ".*@InternalUse.*\n ", value: "")
+    // don't want internal tickets and such in here
+    filter(token: "// TODO : ENG.*", value: "")
+    filter(token: "// INTERNAL.*", value: "")
   }
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/client")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/client") {
@@ -200,6 +204,10 @@ target(name: "build-netcore", description: "Build the C# .netCore Client Library
   clientLibrary.buildDomain(template: "src/main/client/netcore.domain.ftl",
                             outputDir: "../fusionauth-netcore-client/fusionauth-netcore-client/domain",
                             extension: "cs")
+  file.delete {
+    // exclude IdentityType.cs
+    fileSet(dir: "../fusionauth-netcore-client/fusionauth-netcore-client/domain/", includePatterns: [~/\/IdentityType.cs/])
+  }
 }
 
 target(name: "build-typescript", description: "Build the Typescript Client Library") {

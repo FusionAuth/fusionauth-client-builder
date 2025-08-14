@@ -1,0 +1,20 @@
+{
+  "uri": "/api/identity/verify",
+  "comments": [
+      "Administratively verify a user identity."
+    ],
+  "method": "post",
+  "methodName": "verifyIdentity",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The identity verify request that contains information to verify the identity."
+      ],
+      "type": "body",
+      "javaType": "VerifyRequest"
+    }
+  ]
+}

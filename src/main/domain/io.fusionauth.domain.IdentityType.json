@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "IdentityType",
+  "description" : "/**\n * Model identity types provided by FusionAuth.\n */\n",
+  "implements" : [ {
+    "type" : "Comparable",
+    "typeArguments" : [ {
+      "type" : "IdentityType"
+    } ]
+  } ],
+  "fields" : {
+    "name" : {
+      "type" : "String"
+    }
+  }
+}

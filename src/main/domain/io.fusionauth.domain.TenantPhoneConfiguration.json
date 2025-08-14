@@ -1,0 +1,70 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantPhoneConfiguration",
+  "description" : "/**\n * Hold tenant phone configuration for passwordless and verification cases.\n *\n * @author Brady Wied\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantPhoneConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "forgotPasswordTemplateId" : {
+      "type" : "UUID"
+    },
+    "identityUpdateTemplateId" : {
+      "type" : "UUID"
+    },
+    "implicitPhoneVerificationAllowed" : {
+      "type" : "boolean"
+    },
+    "loginIdInUseOnCreateTemplateId" : {
+      "type" : "UUID"
+    },
+    "loginIdInUseOnUpdateTemplateId" : {
+      "type" : "UUID"
+    },
+    "loginNewDeviceTemplateId" : {
+      "type" : "UUID"
+    },
+    "loginSuspiciousTemplateId" : {
+      "type" : "UUID"
+    },
+    "messengerId" : {
+      "type" : "UUID"
+    },
+    "passwordResetSuccessTemplateId" : {
+      "type" : "UUID"
+    },
+    "passwordUpdateTemplateId" : {
+      "type" : "UUID"
+    },
+    "passwordlessTemplateId" : {
+      "type" : "UUID"
+    },
+    "setPasswordTemplateId" : {
+      "type" : "UUID"
+    },
+    "twoFactorMethodAddTemplateId" : {
+      "type" : "UUID"
+    },
+    "twoFactorMethodRemoveTemplateId" : {
+      "type" : "UUID"
+    },
+    "unverified" : {
+      "type" : "PhoneUnverifiedOptions"
+    },
+    "verificationCompleteTemplateId" : {
+      "type" : "UUID"
+    },
+    "verificationStrategy" : {
+      "type" : "VerificationStrategy"
+    },
+    "verificationTemplateId" : {
+      "type" : "UUID"
+    },
+    "verifyPhoneNumber" : {
+      "type" : "boolean"
+    }
+  }
+}

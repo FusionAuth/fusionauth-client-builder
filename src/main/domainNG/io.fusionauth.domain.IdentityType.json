@@ -1,0 +1,48 @@
+{
+  "className" : "io.fusionauth.domain.IdentityType",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "Provided" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "io.fusionauth.domain.IdentityType",
+        "type" : "IdentityType"
+      } ]
+    },
+    "email" : {
+      "className" : "io.fusionauth.domain.IdentityType",
+      "type" : "IdentityType"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "phoneNumber" : {
+      "className" : "io.fusionauth.domain.IdentityType",
+      "type" : "IdentityType"
+    },
+    "username" : {
+      "className" : "io.fusionauth.domain.IdentityType",
+      "type" : "IdentityType"
+    }
+  },
+  "imports" : [ "java.lang.Comparable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.IdentityType" ],
+  "interfaces" : [ {
+    "className" : "java.lang.Comparable",
+    "type" : "Comparable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.IdentityType",
+      "type" : "IdentityType"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "IdentityType"
+}

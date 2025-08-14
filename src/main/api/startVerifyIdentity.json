@@ -1,0 +1,21 @@
+{
+  "uri": "/api/identity/verify/start",
+  "comments": [
+      "Start a verification of an identity by generating a code. This code can be sent to the User using the Verify Send API",
+      "Verification Code API or using a mechanism outside of FusionAuth. The verification is completed by using the Verify Complete API with this code."
+    ],
+  "method": "post",
+  "methodName": "startVerifyIdentity",
+  "successResponse": "VerifyStartResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The identity verify start request that contains all the information used to begin the request."
+      ],
+      "type": "body",
+      "javaType": "VerifyStartRequest"
+    }
+  ]
+}

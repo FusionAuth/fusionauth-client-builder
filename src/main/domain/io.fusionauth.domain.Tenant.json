@@ -100,6 +100,9 @@
     "passwordValidationRules" : {
       "type" : "PasswordValidationRules"
     },
+    "phoneConfiguration" : {
+      "type" : "TenantPhoneConfiguration"
+    },
     "rateLimitConfiguration" : {
       "type" : "TenantRateLimitConfiguration"
     },

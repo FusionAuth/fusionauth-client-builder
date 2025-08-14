@@ -36,6 +36,7 @@ using System.Collections.Generic;
 using io.fusionauth.domain;
 using io.fusionauth.domain.api;
 using io.fusionauth.domain.api.email;
+using io.fusionauth.domain.api.identity.verify;
 using io.fusionauth.domain.api.identityProvider;
 using io.fusionauth.domain.api.jwt;
 using io.fusionauth.domain.api.passwordless;

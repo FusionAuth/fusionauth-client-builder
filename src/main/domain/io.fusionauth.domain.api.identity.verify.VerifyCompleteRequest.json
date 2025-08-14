@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.api.identity.verify",
+  "type" : "VerifyCompleteRequest",
+  "description" : "/**\n * Verify Complete API request object.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "VerifyCompleteRequest"
+    } ]
+  } ],
+  "fields" : {
+    "oneTimeCode" : {
+      "type" : "String"
+    },
+    "verificationId" : {
+      "type" : "String"
+    }
+  }
+}

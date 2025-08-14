@@ -24,11 +24,20 @@
     "sendSetPasswordEmail" : {
       "type" : "boolean"
     },
+    "sendSetPasswordIdentityType" : {
+      "type" : "SendSetPasswordIdentityType"
+    },
     "skipVerification" : {
       "type" : "boolean"
     },
     "user" : {
       "type" : "User"
+    },
+    "verificationIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
     }
   }
 }

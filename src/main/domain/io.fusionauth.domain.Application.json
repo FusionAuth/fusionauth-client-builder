@@ -72,6 +72,9 @@
     "passwordlessConfiguration" : {
       "type" : "PasswordlessConfiguration"
     },
+    "phoneConfiguration" : {
+      "type" : "ApplicationPhoneConfiguration"
+    },
     "registrationConfiguration" : {
       "type" : "RegistrationConfiguration"
     },

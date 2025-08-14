@@ -161,5 +161,11 @@
   }, {
     "name" : "Test",
     "args" : [ "test" ]
+  }, {
+    "name" : "UserIdentityVerified",
+    "args" : [ "user.identity.verified" ]
+  }, {
+    "name" : "UserIdentityUpdate",
+    "args" : [ "user.identity.update" ]
   } ]
 }
