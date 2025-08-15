@@ -1,0 +1,14 @@
+{
+  "className" : "io.fusionauth.domain.UniversalApplicationConfiguration",
+  "extends" : { },
+  "fields" : {
+    "universal" : {
+      "type" : "boolean"
+    }
+  },
+  "imports" : [ ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "UniversalApplicationConfiguration"
+}

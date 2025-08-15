@@ -25,15 +25,8 @@
       } ]
     },
     "event" : {
-      "className" : "java.util.Map",
-      "type" : "Map",
-      "typeArguments" : [ {
-        "className" : "java.lang.String",
-        "type" : "String"
-      }, {
-        "className" : "java.lang.Object",
-        "type" : "Object"
-      } ]
+      "className" : "io.fusionauth.domain.event.EventRequest",
+      "type" : "EventRequest"
     },
     "eventResult" : {
       "className" : "io.fusionauth.domain.WebhookEventResult",
@@ -68,7 +61,7 @@
       "type" : "Long"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.List", "io.fusionauth.domain.WebhookAttemptLog", "java.util.Map", "java.lang.String", "io.fusionauth.domain.WebhookEventResult", "io.fusionauth.domain.event.EventType", "java.util.UUID", "java.time.ZonedDateTime", "java.lang.Long" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.List", "io.fusionauth.domain.WebhookAttemptLog", "java.util.Map", "java.lang.String", "io.fusionauth.domain.event.EventRequest", "io.fusionauth.domain.WebhookEventResult", "io.fusionauth.domain.event.EventType", "java.util.UUID", "java.time.ZonedDateTime", "java.lang.Long" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

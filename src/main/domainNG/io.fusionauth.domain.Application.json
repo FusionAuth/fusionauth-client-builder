@@ -87,6 +87,10 @@
       "className" : "io.fusionauth.domain.Application$PasswordlessConfiguration",
       "type" : "Application$PasswordlessConfiguration"
     },
+    "phoneConfiguration" : {
+      "className" : "io.fusionauth.domain.ApplicationPhoneConfiguration",
+      "type" : "ApplicationPhoneConfiguration"
+    },
     "registrationConfiguration" : {
       "className" : "io.fusionauth.domain.Application$RegistrationConfiguration",
       "type" : "Application$RegistrationConfiguration"
@@ -127,6 +131,10 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "universalConfiguration" : {
+      "className" : "io.fusionauth.domain.UniversalApplicationConfiguration",
+      "type" : "UniversalApplicationConfiguration"
+    },
     "unverified" : {
       "className" : "io.fusionauth.domain.RegistrationUnverifiedOptions",
       "type" : "RegistrationUnverifiedOptions"
@@ -147,7 +155,7 @@
       "type" : "ApplicationWebAuthnConfiguration"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.Tenantable", "java.util.UUID", "io.fusionauth.domain.ApplicationAccessControlConfiguration", "io.fusionauth.domain.Application$AuthenticationTokenConfiguration", "io.fusionauth.domain.CleanSpeakConfiguration", "java.util.Map", "java.lang.String", "io.fusionauth.domain.Application$ApplicationEmailConfiguration", "io.fusionauth.domain.ApplicationExternalIdentifierConfiguration", "io.fusionauth.domain.ApplicationFormConfiguration", "java.time.ZonedDateTime", "io.fusionauth.domain.JWTConfiguration", "io.fusionauth.domain.Application$LambdaConfiguration", "io.fusionauth.domain.Application$LoginConfiguration", "io.fusionauth.domain.ApplicationMultiFactorConfiguration", "io.fusionauth.domain.oauth2.OAuth2Configuration", "io.fusionauth.domain.Application$PasswordlessConfiguration", "io.fusionauth.domain.Application$RegistrationConfiguration", "io.fusionauth.domain.ApplicationRegistrationDeletePolicy", "java.util.List", "io.fusionauth.domain.ApplicationRole", "io.fusionauth.domain.Application$SAMLv2Configuration", "io.fusionauth.domain.ApplicationOAuthScope", "io.fusionauth.domain.ObjectState", "io.fusionauth.domain.RegistrationUnverifiedOptions", "io.fusionauth.domain.VerificationStrategy", "io.fusionauth.domain.ApplicationWebAuthnConfiguration" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.Tenantable", "java.util.UUID", "io.fusionauth.domain.ApplicationAccessControlConfiguration", "io.fusionauth.domain.Application$AuthenticationTokenConfiguration", "io.fusionauth.domain.CleanSpeakConfiguration", "java.util.Map", "java.lang.String", "io.fusionauth.domain.Application$ApplicationEmailConfiguration", "io.fusionauth.domain.ApplicationExternalIdentifierConfiguration", "io.fusionauth.domain.ApplicationFormConfiguration", "java.time.ZonedDateTime", "io.fusionauth.domain.JWTConfiguration", "io.fusionauth.domain.Application$LambdaConfiguration", "io.fusionauth.domain.Application$LoginConfiguration", "io.fusionauth.domain.ApplicationMultiFactorConfiguration", "io.fusionauth.domain.oauth2.OAuth2Configuration", "io.fusionauth.domain.Application$PasswordlessConfiguration", "io.fusionauth.domain.ApplicationPhoneConfiguration", "io.fusionauth.domain.Application$RegistrationConfiguration", "io.fusionauth.domain.ApplicationRegistrationDeletePolicy", "java.util.List", "io.fusionauth.domain.ApplicationRole", "io.fusionauth.domain.Application$SAMLv2Configuration", "io.fusionauth.domain.ApplicationOAuthScope", "io.fusionauth.domain.ObjectState", "io.fusionauth.domain.UniversalApplicationConfiguration", "io.fusionauth.domain.RegistrationUnverifiedOptions", "io.fusionauth.domain.VerificationStrategy", "io.fusionauth.domain.ApplicationWebAuthnConfiguration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

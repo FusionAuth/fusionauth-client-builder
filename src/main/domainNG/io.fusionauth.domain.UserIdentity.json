@@ -5,6 +5,10 @@
     "type" : "Object"
   },
   "fields" : {
+    "displayValue" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "id" : {
       "className" : "java.lang.Long",
       "type" : "Long"
@@ -36,10 +40,6 @@
       "className" : "io.fusionauth.domain.IdentityType",
       "type" : "IdentityType"
     },
-    "uniqueValue" : {
-      "className" : "java.lang.String",
-      "type" : "String"
-    },
     "userId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"
@@ -60,7 +60,7 @@
       "type" : "IdentityVerifiedReason"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.Long", "java.time.ZonedDateTime", "io.fusionauth.domain.ContentStatus", "java.util.UUID", "io.fusionauth.domain.IdentityType", "java.lang.String", "io.fusionauth.domain.IdentityVerifiedReason" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.lang.Long", "java.time.ZonedDateTime", "io.fusionauth.domain.ContentStatus", "java.util.UUID", "io.fusionauth.domain.IdentityType", "io.fusionauth.domain.IdentityVerifiedReason" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

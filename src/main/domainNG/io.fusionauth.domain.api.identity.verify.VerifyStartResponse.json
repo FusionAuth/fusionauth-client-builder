@@ -1,5 +1,5 @@
 {
-  "className" : "io.fusionauth.domain.api.user.verify.VerifySendCompleteRequest",
+  "className" : "io.fusionauth.domain.api.identity.verify.VerifyStartResponse",
   "extends" : { },
   "fields" : {
     "oneTimeCode" : {
@@ -14,6 +14,6 @@
   "imports" : [ "java.lang.String" ],
   "interfaces" : [ ],
   "objectType" : "Object",
-  "packageName" : "io.fusionauth.domain.api.user.verify",
-  "type" : "VerifySendCompleteRequest"
+  "packageName" : "io.fusionauth.domain.api.identity.verify",
+  "type" : "VerifyStartResponse"
 }

@@ -43,9 +43,17 @@
     "user" : {
       "className" : "io.fusionauth.domain.User",
       "type" : "User"
+    },
+    "verificationIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.api.UserResponse$VerificationId",
+        "type" : "UserResponse$VerificationId"
+      } ]
     }
   },
-  "imports" : [ "java.lang.String", "java.util.Map", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.User" ],
+  "imports" : [ "java.lang.String", "java.util.Map", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.User", "java.util.List", "io.fusionauth.domain.api.UserResponse$VerificationId" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

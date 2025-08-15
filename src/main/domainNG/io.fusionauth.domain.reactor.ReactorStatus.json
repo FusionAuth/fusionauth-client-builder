@@ -72,7 +72,15 @@
       "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
       "type" : "ReactorFeatureStatus"
     },
+    "tenantManagerApplication" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
     "threatDetection" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
+    "universalApplication" : {
       "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
       "type" : "ReactorFeatureStatus"
     },

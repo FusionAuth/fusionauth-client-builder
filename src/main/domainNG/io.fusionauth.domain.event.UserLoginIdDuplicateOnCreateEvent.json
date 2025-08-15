@@ -9,6 +9,18 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "duplicateIdentities" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.event.BaseUserEvent$IdentityInfo",
+        "type" : "BaseUserEvent$IdentityInfo"
+      } ]
+    },
+    "duplicatePhoneNumber" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "duplicateUsername" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -18,7 +30,7 @@
       "type" : "User"
     }
   },
-  "imports" : [ "io.fusionauth.domain.event.BaseUserEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.NonTransactionalEvent", "java.lang.String", "io.fusionauth.domain.User" ],
+  "imports" : [ "io.fusionauth.domain.event.BaseUserEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.NonTransactionalEvent", "io.fusionauth.domain.User", "java.lang.String", "java.util.List", "io.fusionauth.domain.event.BaseUserEvent$IdentityInfo" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
