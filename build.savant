@@ -94,6 +94,7 @@ target(name: "generateDomain", description: "Generates all of the json files for
   //   and it also complicates Deserialization for our IdPs etc. Simplifying of collapsing the domain may be useful.
   domainDSLBuilder()
 
+  // Note this is fairly brittle because if the class moves this doesn't get updated.
   [
       "io.fusionauth.api.domain.annotation.InternalUse.json",
       "io.fusionauth.api.domain.json.annotation.MaskString.json",
@@ -151,18 +152,32 @@ void formatClientLibrary(String clientLibrary) {
 }
 
 void domainDSLBuilder() {
-  ProcessBuilder pb = new ProcessBuilder("sb", "compile")
-  def process = pb.inheritIO().directory(new File("../fusionauth-app")).start()
-  process.consumeProcessOutput(System.out, System.err)
-  process.waitFor()
-  if (process.exitValue() != 0) {
+  // This isn't ideal, and ideally this and all of the client builders would build
+  // after fusionauth-app. That would be correct I think, however since we are still building
+  // the FusionAuth Client for fusionauth-app in this repo, it is a bit of a chicken and egg
+  // problem. So we can build fusionauth-plugin-api and fusionauth-app here first to be sure
+  // we have the jars to build, or we could move all of this after.
+  ProcessBuilder pluginPb = new ProcessBuilder("sb", "int")
+  def pluginProcess = pluginPb.inheritIO().directory(new File("../fusionauth-plugin-api")).start()
+  pluginProcess.consumeProcessOutput(System.out, System.err)
+  pluginProcess.waitFor()
+  if (pluginProcess.exitValue() != 0) {
+    fail("Unable to run `sb int` for fusionauth-plugin-api")
+  }
+
+  ProcessBuilder appPb = new ProcessBuilder("sb", "clean", "compile")
+  def appProcess = appPb.inheritIO().directory(new File("../fusionauth-app")).start()
+  appProcess.consumeProcessOutput(System.out, System.err)
+  appProcess.waitFor()
+  if (appProcess.exitValue() != 0) {
     fail("Unable to run `sb compile` for fusionauth-app")
   }
 
   String classPath = "../fusionauth-app/build/classes/test:../fusionauth-app/build/classes/main:../fusionauth-app/build/domain-builder/lib/*"
 
   var debug = switches.has("domain-debug") ? "debug" : ""
-  ProcessBuilder domainBuilder = new ProcessBuilder("${pb.environment().get("JAVA_HOME")}/bin/java", "-cp", classPath, "io.fusionauth.builders.DomainDSLBuilder", debug)
+  var home = appPb.environment().get("HOME")
+  ProcessBuilder domainBuilder = new ProcessBuilder("${home}/dev/java/current21/bin/java", "-cp", classPath, "io.fusionauth.builders.DomainDSLBuilder", debug)
   def domainBuilderProcess = domainBuilder.inheritIO().directory(new File("../fusionauth-app/")).start()
   domainBuilderProcess.consumeProcessOutput(System.out, System.err)
   domainBuilderProcess.waitFor()
