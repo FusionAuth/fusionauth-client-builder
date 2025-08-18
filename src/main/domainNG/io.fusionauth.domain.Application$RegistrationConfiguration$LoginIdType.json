@@ -1,6 +1,6 @@
 {
   "className" : "io.fusionauth.domain.Application$RegistrationConfiguration$LoginIdType",
-  "enum" : [ "email", "username" ],
+  "enum" : [ "email", "phoneNumber", "username" ],
   "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",

@@ -1,0 +1,58 @@
+{
+  "uri": "/api/report/login",
+  "comments": [
+    "Retrieves the login report between the two instants for a particular user by login Id, using specific loginIdTypes. If you specify an application id, it will only return the",
+    "login counts for that application."
+  ],
+  "method": "get",
+  "methodName": "retrieveUserLoginReportByLoginIdAndLoginIdTypes",
+  "successResponse": "LoginReportResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "applicationId",
+      "comments": [
+        "(Optional) The application id."
+      ],
+      "type": "urlParameter",
+      "parameterName": "applicationId",
+      "javaType": "UUID"
+    },
+    {
+      "name": "loginId",
+      "comments": [
+        "The userId id."
+      ],
+      "type": "urlParameter",
+      "parameterName": "loginId",
+      "javaType": "String"
+    },
+    {
+      "name": "start",
+      "comments": [
+        "The start instant as UTC milliseconds since Epoch."
+      ],
+      "type": "urlParameter",
+      "parameterName": "start",
+      "javaType": "long"
+    },
+    {
+      "name": "end",
+      "comments": [
+        "The end instant as UTC milliseconds since Epoch."
+      ],
+      "type": "urlParameter",
+      "parameterName": "end",
+      "javaType": "long"
+    },
+    {
+      "name": "loginIdTypes",
+      "comments": [
+        "the identity types that FusionAuth will compare the loginId to."
+      ],
+      "type": "urlParameter",
+      "parameterName": "loginIdTypes",
+      "javaType": "List<String>"
+    }
+  ]
+}

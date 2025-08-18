@@ -1,0 +1,55 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ApplicationPhoneConfiguration",
+  "description" : "/**\n * Hold application phone configuration for template overrides.\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ApplicationPhoneConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "forgotPasswordTemplateId" : {
+      "type" : "UUID"
+    },
+    "identityUpdateTemplateId" : {
+      "type" : "UUID"
+    },
+    "loginIdInUseOnCreateTemplateId" : {
+      "type" : "UUID"
+    },
+    "loginIdInUseOnUpdateTemplateId" : {
+      "type" : "UUID"
+    },
+    "loginNewDeviceTemplateId" : {
+      "type" : "UUID"
+    },
+    "loginSuspiciousTemplateId" : {
+      "type" : "UUID"
+    },
+    "passwordResetSuccessTemplateId" : {
+      "type" : "UUID"
+    },
+    "passwordUpdateTemplateId" : {
+      "type" : "UUID"
+    },
+    "passwordlessTemplateId" : {
+      "type" : "UUID"
+    },
+    "setPasswordTemplateId" : {
+      "type" : "UUID"
+    },
+    "twoFactorMethodAddTemplateId" : {
+      "type" : "UUID"
+    },
+    "twoFactorMethodRemoveTemplateId" : {
+      "type" : "UUID"
+    },
+    "verificationCompleteTemplateId" : {
+      "type" : "UUID"
+    },
+    "verificationTemplateId" : {
+      "type" : "UUID"
+    }
+  }
+}

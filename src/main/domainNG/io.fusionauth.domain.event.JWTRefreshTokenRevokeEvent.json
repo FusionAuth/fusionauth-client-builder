@@ -33,7 +33,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.ObjectIdentifiable", "java.util.UUID", "java.util.Map", "java.lang.Integer", "io.fusionauth.domain.jwt.RefreshToken", "io.fusionauth.domain.User" ],
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.ObjectIdentifiable", "io.fusionauth.domain.User", "java.util.UUID", "java.util.Map", "java.lang.Integer", "io.fusionauth.domain.jwt.RefreshToken" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

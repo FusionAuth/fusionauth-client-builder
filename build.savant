@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2024, FusionAuth, All Rights Reserved
+ * Copyright (c) 2019-2025, FusionAuth, All Rights Reserved
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,13 +13,14 @@
  * either express or implied. See the License for the specific
  * language governing permissions and limitations under the License.
  */
+
 import java.nio.file.Files
 import java.nio.file.Paths
 
 fusionauthJWTVersion = "5.2.4"
 javaErrorVersion = "2.2.3"
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.59.0", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.60.0", licenses: ["ApacheV2_0"]) {
   workflow {
     fetch {
       cache()
@@ -87,12 +88,20 @@ target(name: "generateDomain", description: "Generates all of the json files for
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwt/domain/", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwks/domain/", outDir: "src/main/domain")
 
+  // Run the DomainDSLBuilder as well, ideally we would try and switch to this DSL to build the domain objects at some point.
+  // - The DomainDSLBuilder uses ASM the goal is to build a more complete DSL so we can optionally collapse extensions and polymorphic
+  //   classes in order to simplify all client domains that we build. For example some languages don't support polymorphic classes,
+  //   and it also complicates Deserialization for our IdPs etc. Simplifying of collapsing the domain may be useful.
+  domainDSLBuilder()
+
+  // Note this is fairly brittle because if the class moves this doesn't get updated.
   [
       "io.fusionauth.api.domain.annotation.InternalUse.json",
       "io.fusionauth.api.domain.json.annotation.MaskString.json",
       "io.fusionauth.api.domain.json.annotation.MaskMapValue.json",
       "io.fusionauth.domain.Buildable.json",
       "io.fusionauth.domain.Integration.json",
+      "io.fusionauth.domain.RateLimitedRequestType.json",
       "io.fusionauth.domain.util.DefaultTools.json",
       "io.fusionauth.domain.util.Normalizer.json",
       "io.fusionauth.domain.util.SQLTools.json",
@@ -142,6 +151,41 @@ void formatClientLibrary(String clientLibrary) {
   }
 }
 
+void domainDSLBuilder() {
+  // This isn't ideal, and ideally this and all of the client builders would build
+  // after fusionauth-app. That would be correct I think, however since we are still building
+  // the FusionAuth Client for fusionauth-app in this repo, it is a bit of a chicken and egg
+  // problem. So we can build fusionauth-plugin-api and fusionauth-app here first to be sure
+  // we have the jars to build, or we could move all of this after.
+  ProcessBuilder pluginPb = new ProcessBuilder("sb", "int")
+  def pluginProcess = pluginPb.inheritIO().directory(new File("../fusionauth-plugin-api")).start()
+  pluginProcess.consumeProcessOutput(System.out, System.err)
+  pluginProcess.waitFor()
+  if (pluginProcess.exitValue() != 0) {
+    fail("Unable to run `sb int` for fusionauth-plugin-api")
+  }
+
+  ProcessBuilder appPb = new ProcessBuilder("sb", "clean", "compile")
+  def appProcess = appPb.inheritIO().directory(new File("../fusionauth-app")).start()
+  appProcess.consumeProcessOutput(System.out, System.err)
+  appProcess.waitFor()
+  if (appProcess.exitValue() != 0) {
+    fail("Unable to run `sb compile` for fusionauth-app")
+  }
+
+  String classPath = "../fusionauth-app/build/classes/test:../fusionauth-app/build/classes/main:../fusionauth-app/build/domain-builder/lib/*"
+
+  var debug = switches.has("domain-debug") ? "debug" : ""
+  var home = appPb.environment().get("HOME")
+  ProcessBuilder domainBuilder = new ProcessBuilder("${home}/dev/java/current21/bin/java", "-cp", classPath, "io.fusionauth.builders.DomainDSLBuilder", debug)
+  def domainBuilderProcess = domainBuilder.inheritIO().directory(new File("../fusionauth-app/")).start()
+  domainBuilderProcess.consumeProcessOutput(System.out, System.err)
+  domainBuilderProcess.waitFor()
+  if (domainBuilderProcess.exitValue() != 0) {
+    fail("Unable to run DomainDSLBuilder.")
+  }
+}
+
 target(name: "build-angular", description: "Build the Angular Client Library") {
   clientLibrary.
       buildClient(template: "src/main/client/angular.client.ftl", outputFile: "../fusionauth-angular-client/src/FusionAuthClient.ts")
@@ -170,6 +214,9 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: ".*@MaskMapValue\\(.*\n", value: "")
     filter(token: ".*@MaskString.*\n", value: "")
     filter(token: ".*@InternalUse.*\n ", value: "")
+    // don't want internal tickets and such in here
+    filter(token: "// TODO : ENG.*", value: "")
+    filter(token: "// INTERNAL.*", value: "")
   }
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/client")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/client") {
@@ -200,6 +247,10 @@ target(name: "build-netcore", description: "Build the C# .netCore Client Library
   clientLibrary.buildDomain(template: "src/main/client/netcore.domain.ftl",
                             outputDir: "../fusionauth-netcore-client/fusionauth-netcore-client/domain",
                             extension: "cs")
+  file.delete {
+    // exclude IdentityType.cs
+    fileSet(dir: "../fusionauth-netcore-client/fusionauth-netcore-client/domain/", includePatterns: [~/\/IdentityType.cs/])
+  }
 }
 
 target(name: "build-typescript", description: "Build the Typescript Client Library") {

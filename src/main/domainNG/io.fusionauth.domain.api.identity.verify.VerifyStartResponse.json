@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.api.identity.verify.VerifyStartResponse",
+  "extends" : { },
+  "fields" : {
+    "oneTimeCode" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "verificationId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.identity.verify",
+  "type" : "VerifyStartResponse"
+}

@@ -16,9 +16,13 @@
     "loginId" : {
       "className" : "java.lang.String",
       "type" : "String"
+    },
+    "loginIdType" : {
+      "className" : "io.fusionauth.domain.IdentityType",
+      "type" : "IdentityType"
     }
   },
-  "imports" : [ "io.fusionauth.domain.RawLogin", "io.fusionauth.domain.Buildable", "java.lang.String", "io.fusionauth.domain.Location" ],
+  "imports" : [ "io.fusionauth.domain.RawLogin", "io.fusionauth.domain.Buildable", "java.lang.String", "io.fusionauth.domain.Location", "io.fusionauth.domain.IdentityType" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

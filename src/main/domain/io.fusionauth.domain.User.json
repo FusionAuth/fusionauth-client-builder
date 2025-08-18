@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "User",
-  "description" : "/**\n * The global view of a User. This object contains all global information about the user including birthdate, registration information\n * preferred languages, global attributes, etc.\n *\n * @author Seth Musselman\n */\n",
+  "description" : "/**\n * The public, global view of a User. This object contains all global information about the user including birthdate, registration information\n * preferred languages, global attributes, etc.\n *\n * @author Seth Musselman\n */\n",
   "extends" : [ {
     "type" : "SecureIdentity"
   } ],
@@ -11,9 +11,9 @@
       "type" : "User"
     } ]
   }, {
-    "type" : "JSONColumnable"
-  }, {
     "type" : "Tenantable"
+  }, {
+    "type" : "JSONColumnable"
   } ],
   "fields" : {
     "preferredLanguages" : {
@@ -70,6 +70,9 @@
       "type" : "String"
     },
     "parentEmail" : {
+      "type" : "String"
+    },
+    "phoneNumber" : {
       "type" : "String"
     },
     "tenantId" : {

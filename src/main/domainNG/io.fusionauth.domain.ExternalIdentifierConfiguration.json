@@ -46,11 +46,26 @@
       "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
       "type" : "SecureGeneratorConfiguration"
     },
+    "passwordlessLoginOneTimeCodeGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
+    },
     "passwordlessLoginTimeToLiveInSeconds" : {
       "type" : "int"
     },
     "pendingAccountLinkTimeToLiveInSeconds" : {
       "type" : "int"
+    },
+    "phoneVerificationIdGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "phoneVerificationIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "phoneVerificationOneTimeCodeGenerator" : {
+      "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",
+      "type" : "SecureGeneratorConfiguration"
     },
     "registrationVerificationIdGenerator" : {
       "className" : "io.fusionauth.domain.SecureGeneratorConfiguration",

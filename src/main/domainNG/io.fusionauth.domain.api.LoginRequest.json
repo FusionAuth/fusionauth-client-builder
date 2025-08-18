@@ -9,6 +9,14 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "loginIdTypes" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
     "oneTimePassword" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -22,7 +30,7 @@
       "type" : "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.api.BaseLoginRequest", "io.fusionauth.domain.Buildable", "java.lang.String" ],
+  "imports" : [ "io.fusionauth.domain.api.BaseLoginRequest", "io.fusionauth.domain.Buildable", "java.lang.String", "java.util.List" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

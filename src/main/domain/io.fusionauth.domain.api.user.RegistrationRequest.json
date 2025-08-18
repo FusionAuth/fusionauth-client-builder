@@ -18,6 +18,9 @@
     "sendSetPasswordEmail" : {
       "type" : "boolean"
     },
+    "sendSetPasswordIdentityType" : {
+      "type" : "SendSetPasswordIdentityType"
+    },
     "skipRegistrationVerification" : {
       "type" : "boolean"
     },

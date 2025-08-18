@@ -15,6 +15,10 @@
     "sendSetPasswordEmail" : {
       "type" : "boolean"
     },
+    "sendSetPasswordIdentityType" : {
+      "className" : "io.fusionauth.domain.SendSetPasswordIdentityType",
+      "type" : "SendSetPasswordIdentityType"
+    },
     "skipRegistrationVerification" : {
       "type" : "boolean"
     },
@@ -26,7 +30,7 @@
       "type" : "User"
     }
   },
-  "imports" : [ "io.fusionauth.domain.UserRegistration", "io.fusionauth.domain.User" ],
+  "imports" : [ "io.fusionauth.domain.UserRegistration", "io.fusionauth.domain.SendSetPasswordIdentityType", "io.fusionauth.domain.User" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api.user",

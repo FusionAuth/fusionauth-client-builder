@@ -45,11 +45,23 @@
     "passwordlessLoginGenerator" : {
       "type" : "SecureGeneratorConfiguration"
     },
+    "passwordlessLoginOneTimeCodeGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
     "passwordlessLoginTimeToLiveInSeconds" : {
       "type" : "int"
     },
     "pendingAccountLinkTimeToLiveInSeconds" : {
       "type" : "int"
+    },
+    "phoneVerificationIdGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
+    },
+    "phoneVerificationIdTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
+    "phoneVerificationOneTimeCodeGenerator" : {
+      "type" : "SecureGeneratorConfiguration"
     },
     "registrationVerificationIdGenerator" : {
       "type" : "SecureGeneratorConfiguration"

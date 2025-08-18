@@ -1,0 +1,28 @@
+{
+  "className" : "io.fusionauth.domain.PhoneUnverifiedOptions",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "allowPhoneNumberChangeWhenGated" : {
+      "type" : "boolean"
+    },
+    "behavior" : {
+      "className" : "io.fusionauth.domain.UnverifiedBehavior",
+      "type" : "UnverifiedBehavior"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.UnverifiedBehavior" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.PhoneUnverifiedOptions",
+      "type" : "PhoneUnverifiedOptions"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "PhoneUnverifiedOptions"
+}
