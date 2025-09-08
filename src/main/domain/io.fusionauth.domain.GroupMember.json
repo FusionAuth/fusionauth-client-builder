@@ -26,9 +26,6 @@
     "insertInstant" : {
       "type" : "ZonedDateTime"
     },
-    "user" : {
-      "type" : "User"
-    },
     "userId" : {
       "type" : "UUID"
     }

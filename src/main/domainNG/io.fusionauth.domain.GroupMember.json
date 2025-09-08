@@ -28,16 +28,12 @@
       "className" : "java.time.ZonedDateTime",
       "type" : "ZonedDateTime"
     },
-    "user" : {
-      "className" : "io.fusionauth.domain.User",
-      "type" : "User"
-    },
     "userId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.User" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
