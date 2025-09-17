@@ -17,6 +17,15 @@
       ],
       "type": "notUsed",
       "javaType": "String"
+    },
+    {
+      "name": "tenantId",
+      "comments": [
+        "(Optional) The Id of the tenant to use for this request."
+      ],
+      "type": "urlParameter",
+      "parameterName": "tenantId",
+      "javaType": "UUID"
     }
   ]
 }

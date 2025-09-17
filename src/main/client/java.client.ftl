@@ -363,8 +363,16 @@ public class FusionAuthClient {
   [#if formPost]
     Map<String, List<String>> parameters = new HashMap<>();
     [#list api.params![] as param]
+      [#assign pval = param.name /]
       [#if param.type == "form"]
-    parameters.put("${param.name}", Arrays.asList(${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)}));
+      [#if param.constant?? && param.constant]
+        [#assign pval = "\""+param.value+"\"" /]
+      [#else]
+        [#if param.javaType != "String"]
+          [#assign pval = "\"\" + ${param.name}" /]
+        [/#if]
+      [/#if]
+    parameters.put("${param.name}", Arrays.asList(${pval}));
       [/#if]
     [/#list]
   [/#if]
