@@ -13,9 +13,6 @@
         "type" : "String"
       } ]
     },
-    "exact" : {
-      "type" : "boolean"
-    },
     "name" : {
       "className" : "java.lang.String",
       "type" : "String"

@@ -6,9 +6,6 @@
     "type" : "BaseSearchCriteria"
   } ],
   "fields" : {
-    "exact" : {
-      "type" : "boolean"
-    },
     "name" : {
       "type" : "String"
     },
