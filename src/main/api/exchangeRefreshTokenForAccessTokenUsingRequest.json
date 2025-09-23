@@ -1,0 +1,22 @@
+{
+  "uri": "/oauth2/token",
+  "comments": [
+    "Exchange a Refresh Token for an Access Token.",
+    "If you will be using the Refresh Token Grant, you will make a request to the Token endpoint to exchange the user’s refresh token for an access token."
+  ],
+  "method": "post",
+  "methodName": "exchangeRefreshTokenForAccessTokenWithRequest",
+  "successResponse": "AccessToken",
+  "errorResponse": "OAuthError",
+  "anonymous": true,
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The refresh token access token exchange request."
+      ],
+      "type": "body",
+      "javaType": "RefreshTokenAccessTokenRequest"
+    }
+  ]
+}

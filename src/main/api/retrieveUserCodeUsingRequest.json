@@ -1,0 +1,23 @@
+{
+  "uri": "/oauth2/device/user-code",
+  "comments": [
+    "Retrieve a user_code that is part of an in-progress Device Authorization Grant.",
+    "",
+    "This API is useful if you want to build your own login workflow to complete a device grant."
+  ],
+  "method": "post",
+  "methodName": "retrieveUserCodeWithRequest",
+  "successResponse": "Void",
+  "errorResponse": "Void",
+  "anonymous": true,
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The user code retrieval request."
+      ],
+      "type": "body",
+      "javaType": "RetrieveUserCodeRequest"
+    }
+  ]
+}

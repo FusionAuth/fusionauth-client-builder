@@ -41,14 +41,6 @@
       "type": "form",
       "parameterName": "user_code",
       "javaType": "String"
-    },
-    {
-      "name": "tenantId",
-      "comments": [
-        "(Optional) The Id of the tenant to use for this request."
-      ],
-      "type": "form",
-      "javaType": "UUID"
     }
   ]
 }

@@ -7,20 +7,19 @@
     "",
     "This request will require an API key."
   ],
-  "method": "get",
-  "methodName": "retrieveUserCodeUsingAPIKey",
+  "method": "post",
+  "methodName": "retrieveUserCodeUsingAPIKeyWithRequest",
   "successResponse": "Void",
   "errorResponse": "Void",
   "anonymous": false,
   "params": [
     {
-      "name": "user_code",
+      "name": "request",
       "comments": [
-        "The end-user verification code."
+        "The user code retrieval request including optional tenantId."
       ],
-      "type": "form",
-      "parameterName": "user_code",
-      "javaType": "String"
+      "type": "body",
+      "javaType": "RetrieveUserCodeUsingAPIKeyRequest"
     }
   ]
 }

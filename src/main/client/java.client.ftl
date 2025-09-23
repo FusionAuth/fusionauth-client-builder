@@ -238,11 +238,22 @@ import io.fusionauth.domain.api.user.VerifyEmailResponse;
 import io.fusionauth.domain.api.user.VerifyRegistrationRequest;
 import io.fusionauth.domain.api.user.VerifyRegistrationResponse;
 import io.fusionauth.domain.oauth2.AccessToken;
+import io.fusionauth.domain.oauth2.AccessTokenIntrospectRequest;
+import io.fusionauth.domain.oauth2.ClientCredentialsAccessTokenIntrospectRequest;
+import io.fusionauth.domain.oauth2.ClientCredentialsGrantRequest;
+import io.fusionauth.domain.oauth2.DeviceApprovalRequest;
 import io.fusionauth.domain.oauth2.DeviceApprovalResponse;
 import io.fusionauth.domain.oauth2.IntrospectResponse;
 import io.fusionauth.domain.oauth2.JWKSResponse;
+import io.fusionauth.domain.oauth2.OAuthCodeAccessTokenRequest;
+import io.fusionauth.domain.oauth2.OAuthCodePKCEAccessTokenRequest;
 import io.fusionauth.domain.oauth2.OAuthError;
+import io.fusionauth.domain.oauth2.RefreshTokenAccessTokenRequest;
+import io.fusionauth.domain.oauth2.RetrieveUserCodeRequest;
+import io.fusionauth.domain.oauth2.RetrieveUserCodeUsingAPIKeyRequest;
+import io.fusionauth.domain.oauth2.UserCredentialsAccessTokenRequest;
 import io.fusionauth.domain.oauth2.UserinfoResponse;
+import io.fusionauth.domain.oauth2.ValidateDeviceRequest;
 import io.fusionauth.domain.provider.IdentityProviderType;
 
 /**
