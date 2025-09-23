@@ -243,6 +243,8 @@ import io.fusionauth.domain.oauth2.ClientCredentialsAccessTokenIntrospectRequest
 import io.fusionauth.domain.oauth2.ClientCredentialsGrantRequest;
 import io.fusionauth.domain.oauth2.DeviceApprovalRequest;
 import io.fusionauth.domain.oauth2.DeviceApprovalResponse;
+import io.fusionauth.domain.oauth2.DeviceAuthorizationRequest;
+import io.fusionauth.domain.oauth2.DeviceResponse;
 import io.fusionauth.domain.oauth2.IntrospectResponse;
 import io.fusionauth.domain.oauth2.JWKSResponse;
 import io.fusionauth.domain.oauth2.OAuthCodeAccessTokenRequest;
