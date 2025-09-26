@@ -28,9 +28,17 @@
     "user" : {
       "className" : "io.fusionauth.domain.User",
       "type" : "User"
+    },
+    "verificationIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.UserRegistration", "io.fusionauth.domain.SendSetPasswordIdentityType", "io.fusionauth.domain.User" ],
+  "imports" : [ "io.fusionauth.domain.UserRegistration", "io.fusionauth.domain.SendSetPasswordIdentityType", "io.fusionauth.domain.User", "java.util.List", "java.lang.String" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api.user",
