@@ -17,6 +17,9 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "skipUserRequirement" : {
+      "type" : "boolean"
+    },
     "state" : {
       "className" : "java.util.Map",
       "type" : "Map",
