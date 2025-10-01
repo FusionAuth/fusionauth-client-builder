@@ -12,9 +12,13 @@
         "className" : "java.util.UUID",
         "type" : "UUID"
       } ]
+    },
+    "formStepType" : {
+      "className" : "io.fusionauth.domain.form.FormStepType",
+      "type" : "FormStepType"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "java.util.UUID", "io.fusionauth.domain.form.FormStepType" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

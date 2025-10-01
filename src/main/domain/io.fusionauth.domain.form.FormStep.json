@@ -14,6 +14,9 @@
       "typeArguments" : [ {
         "type" : "UUID"
       } ]
+    },
+    "formStepType" : {
+      "type" : "FormStepType"
     }
   }
 }
