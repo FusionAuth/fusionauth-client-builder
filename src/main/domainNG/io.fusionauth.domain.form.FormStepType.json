@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.form.FormStepType",
+  "enum" : [ "collectData", "verifyEmail", "verifyPhone" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "FormStepType"
+}
