@@ -15,7 +15,7 @@
         "type" : "UUID"
       } ]
     },
-    "formStepType" : {
+    "type" : {
       "type" : "FormStepType"
     }
   }

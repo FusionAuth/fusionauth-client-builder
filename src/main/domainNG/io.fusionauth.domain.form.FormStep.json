@@ -5,6 +5,14 @@
     "type" : "Object"
   },
   "fields" : {
+    "fieldObjects" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.form.FormField",
+        "type" : "FormField"
+      } ]
+    },
     "fields" : {
       "className" : "java.util.List",
       "type" : "List",
@@ -13,12 +21,12 @@
         "type" : "UUID"
       } ]
     },
-    "formStepType" : {
+    "type" : {
       "className" : "io.fusionauth.domain.form.FormStepType",
       "type" : "FormStepType"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "java.util.UUID", "io.fusionauth.domain.form.FormStepType" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "io.fusionauth.domain.form.FormField", "java.util.UUID", "io.fusionauth.domain.form.FormStepType" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
