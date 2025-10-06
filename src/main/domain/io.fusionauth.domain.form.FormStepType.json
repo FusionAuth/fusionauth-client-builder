@@ -2,5 +2,5 @@
   "packageName" : "io.fusionauth.domain.form",
   "type" : "FormStepType",
   "description" : "/**\n * Which type of step is in use?\n */\n",
-  "enum" : [ "collectData", "verifyEmail", "verifyPhone" ]
+  "enum" : [ "collectData", "verifyEmail", "verifyPhoneNumber" ]
 }
