@@ -60,6 +60,9 @@
         "type" : "IdentityProviderTenantConfiguration"
       } ]
     },
+    "tenantId" : {
+      "type" : "UUID"
+    },
     "type" : {
       "type" : "IdentityProviderType"
     }
