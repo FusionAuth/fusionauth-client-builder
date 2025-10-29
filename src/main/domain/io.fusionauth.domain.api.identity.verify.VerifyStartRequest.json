@@ -12,14 +12,14 @@
     "applicationId" : {
       "type" : "UUID"
     },
+    "existingUserStrategy" : {
+      "type" : "ExistingUserStrategy"
+    },
     "loginId" : {
       "type" : "String"
     },
     "loginIdType" : {
       "type" : "String"
-    },
-    "skipUserRequirement" : {
-      "type" : "boolean"
     },
     "state" : {
       "type" : "Map",
