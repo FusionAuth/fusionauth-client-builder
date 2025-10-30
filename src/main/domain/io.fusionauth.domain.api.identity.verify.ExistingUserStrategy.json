@@ -2,5 +2,5 @@
   "packageName" : "io.fusionauth.domain.api.identity.verify",
   "type" : "ExistingUserStrategy",
   "description" : "/**\n * Represent the various states/expectations of a user in the context of starting verification\n */\n",
-  "enum" : [ "MustExist", "MustNotExist" ]
+  "enum" : [ "mustExist", "mustNotExist" ]
 }

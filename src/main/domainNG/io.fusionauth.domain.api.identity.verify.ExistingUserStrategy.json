@@ -1,6 +1,6 @@
 {
   "className" : "io.fusionauth.domain.api.identity.verify.ExistingUserStrategy",
-  "enum" : [ "MustExist", "MustNotExist" ],
+  "enum" : [ "mustExist", "mustNotExist" ],
   "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain.api.identity.verify",
