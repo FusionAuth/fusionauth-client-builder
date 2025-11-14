@@ -1,0 +1,22 @@
+{
+  "uri": "/oauth2/token",
+  "comments": [
+    "Exchanges an OAuth authorization code and code_verifier for an access token.",
+    "Makes a request to the Token endpoint to exchange the authorization code returned from the Authorize endpoint and a code_verifier for an access token."
+  ],
+  "method": "post",
+  "methodName": "exchangeOAuthCodeForAccessTokenUsingPKCEWithRequest",
+  "successResponse": "AccessToken",
+  "errorResponse": "OAuthError",
+  "anonymous": true,
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The PKCE OAuth code access token exchange request."
+      ],
+      "type": "body",
+      "javaType": "OAuthCodePKCEAccessTokenRequest"
+    }
+  ]
+}
