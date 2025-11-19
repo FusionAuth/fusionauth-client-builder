@@ -26,6 +26,10 @@
       "className" : "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration",
       "type" : "IdentityProviderOauth2Configuration"
     },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "type" : {
       "className" : "io.fusionauth.domain.provider.IdentityProviderType",
       "type" : "IdentityProviderType"

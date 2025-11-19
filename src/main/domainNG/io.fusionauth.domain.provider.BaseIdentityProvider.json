@@ -65,6 +65,10 @@
         "className" : "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration",
         "type" : "IdentityProviderTenantConfiguration"
       } ]
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
     }
   },
   "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.Enableable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.provider.BaseIdentityProvider$LambdaConfiguration", "io.fusionauth.domain.provider.IdentityProviderLinkingStrategy", "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration" ],
