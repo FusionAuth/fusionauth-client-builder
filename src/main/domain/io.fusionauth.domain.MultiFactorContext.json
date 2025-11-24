@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "MultiFactorContext",
+  "description" : "/**\n * Communicate various contexts in which multi-factor authentication can be used.\n */\n",
+  "enum" : [ "changePassword", "login", "stepUp" ]
+}

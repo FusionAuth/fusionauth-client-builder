@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.MultiFactorContext",
+  "enum" : [ "changePassword", "login", "stepUp" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "MultiFactorContext"
+}
