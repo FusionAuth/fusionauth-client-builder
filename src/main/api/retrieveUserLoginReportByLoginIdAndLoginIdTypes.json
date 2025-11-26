@@ -48,7 +48,7 @@
     {
       "name": "loginIdTypes",
       "comments": [
-        "the identity types that FusionAuth will compare the loginId to."
+        "The identity types that FusionAuth will compare the loginId to."
       ],
       "type": "urlParameter",
       "parameterName": "loginIdTypes",
