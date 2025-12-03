@@ -9,6 +9,10 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "multiFactorRequirementId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "scimEnterpriseUserRequestConverterId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"
