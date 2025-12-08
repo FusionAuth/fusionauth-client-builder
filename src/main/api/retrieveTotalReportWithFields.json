@@ -1,0 +1,21 @@
+{
+  "uri": "/api/report/totals",
+  "comments": [
+    "Retrieves the totals report. This contains total counts for the specified fields."
+  ],
+  "method": "get",
+  "methodName": "retrieveTotalReport",
+  "successResponse": "TotalsReportResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "fields",
+      "comments": [
+        "List of fields to include in the response. Any combination of applicationTotals, globalRegistrations, and totalGlobalRegistrations."
+      ],
+      "type": "urlParameter",
+      "parameterName": "fields",
+      "javaType": "List<String>"
+    }
+  ]
+}
