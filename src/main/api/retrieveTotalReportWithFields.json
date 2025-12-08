@@ -4,7 +4,7 @@
     "Retrieves the totals report. This contains total counts for the specified fields."
   ],
   "method": "get",
-  "methodName": "retrieveTotalReport",
+  "methodName": "retrieveTotalReportWithFields",
   "successResponse": "TotalsReportResponse",
   "errorResponse": "Void",
   "params": [
