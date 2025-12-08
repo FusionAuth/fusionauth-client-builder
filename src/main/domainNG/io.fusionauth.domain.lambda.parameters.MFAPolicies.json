@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.lambda.parameters.MFAPolicies",
+  "extends" : { },
+  "fields" : {
+    "applicationLoginPolicy" : {
+      "className" : "io.fusionauth.domain.MultiFactorLoginPolicy",
+      "type" : "MultiFactorLoginPolicy"
+    },
+    "applicationMultiFactorTrustPolicy" : {
+      "className" : "io.fusionauth.domain.ApplicationMultiFactorTrustPolicy",
+      "type" : "ApplicationMultiFactorTrustPolicy"
+    },
+    "tenantLoginPolicy" : {
+      "className" : "io.fusionauth.domain.MultiFactorLoginPolicy",
+      "type" : "MultiFactorLoginPolicy"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.MultiFactorLoginPolicy", "io.fusionauth.domain.ApplicationMultiFactorTrustPolicy" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.lambda.parameters",
+  "type" : "MFAPolicies"
+}

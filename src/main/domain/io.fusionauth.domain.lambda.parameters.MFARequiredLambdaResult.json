@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.lambda.parameters",
+  "type" : "MFARequiredLambdaResult",
+  "description" : "/**\n * Represents the inbound lambda parameter 'result' for MFA Required lambdas.\n */\n",
+  "fields" : {
+    "required" : {
+      "type" : "boolean"
+    }
+  }
+}
