@@ -1,8 +1,8 @@
 {
-  "className" : "io.fusionauth.domain.MultiFactorContext",
+  "className" : "io.fusionauth.domain.MultiFactorAction",
   "enum" : [ "changePassword", "login", "stepUp" ],
   "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
-  "type" : "MultiFactorContext"
+  "type" : "MultiFactorAction"
 }
