@@ -1,6 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.lambda.parameters",
   "type" : "MFATrust",
+  "description" : "/**\n * Represents the inbound lambda parameter 'mfaTrust' inside the 'context' parameter for MFA Required lambdas.\n */\n",
   "fields" : {
     "applicationId" : {
       "type" : "UUID"
