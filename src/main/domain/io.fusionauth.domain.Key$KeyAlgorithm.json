@@ -28,5 +28,8 @@
   }, {
     "name" : "RS512",
     "args" : [ "SHA512withRSA" ]
+  }, {
+    "name" : "Ed25519",
+    "args" : [ "Ed25519" ]
   } ]
 }
