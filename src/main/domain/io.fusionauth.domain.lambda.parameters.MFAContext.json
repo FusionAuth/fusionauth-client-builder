@@ -12,6 +12,14 @@
     "eventInfo" : {
       "type" : "EventInfo"
     },
+    "jwt" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
     "mfaTrust" : {
       "type" : "MFATrust"
     },

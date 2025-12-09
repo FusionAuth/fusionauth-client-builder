@@ -4,6 +4,9 @@
   "fields" : {
     "required" : {
       "type" : "boolean"
+    },
+    "sendSuspiciousLoginEvent" : {
+      "type" : "boolean"
     }
   },
   "imports" : [ ],
