@@ -8,7 +8,7 @@
     "provides more payload options than retrieveTwoFactorStatus."
   ],
   "method": "post",
-  "methodName": "retrieveTwoFactorStatusBody",
+  "methodName": "retrieveTwoFactorStatusUsing",
   "successResponse": "TwoFactorStatusResponse",
   "errorResponse": "Errors",
   "params": [
