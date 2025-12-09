@@ -1,0 +1,24 @@
+{
+  "uri": "/api/two-factor/status",
+  "comments": [
+    "Retrieve a user's two-factor status.",
+    "",
+    "This can be used to see if a user will need to complete a two-factor challenge to complete a login,",
+    "and optionally identify the state of the two-factor trust across various applications. This operation",
+    "provides more payload options than retrieveTwoFactorStatus."
+  ],
+  "method": "post",
+  "methodName": "retrieveTwoFactorStatusUsing",
+  "successResponse": "TwoFactorStatusResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all the information used to check the status."
+      ],
+      "type": "body",
+      "javaType": "TwoFactorStatusRequest"
+    }
+  ]
+}
