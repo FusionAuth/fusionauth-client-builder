@@ -1,0 +1,21 @@
+{
+  "uri": "/api/report/totals",
+  "comments": [
+    "Retrieves the totals report. This allows excluding applicationTotals from the report. An empty list will include the applicationTotals."
+  ],
+  "method": "get",
+  "methodName": "retrieveTotalReportWithExcludes",
+  "successResponse": "TotalsReportResponse",
+  "errorResponse": "Void",
+  "params": [
+    {
+      "name": "excludes",
+      "comments": [
+        "List of fields to exclude in the response. Currently only allows applicationTotals."
+      ],
+      "type": "urlParameter",
+      "parameterName": "excludes",
+      "javaType": "List<String>"
+    }
+  ]
+}
