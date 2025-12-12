@@ -8,6 +8,9 @@
     "idTokenPopulateId" : {
       "type" : "UUID"
     },
+    "multiFactorRequirementId" : {
+      "type" : "UUID"
+    },
     "samlv2PopulateId" : {
       "type" : "UUID"
     },

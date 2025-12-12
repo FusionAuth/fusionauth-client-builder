@@ -10,6 +10,10 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "multiFactorRequirementId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "samlv2PopulateId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"

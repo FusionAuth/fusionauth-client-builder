@@ -68,6 +68,10 @@
     "licensed" : {
       "type" : "boolean"
     },
+    "multiFactorLambdas" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
     "scimServer" : {
       "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
       "type" : "ReactorFeatureStatus"
