@@ -1,0 +1,21 @@
+{
+  "uri": "/oauth2/introspect",
+  "comments": [
+    "Inspect an access token issued as the result of the User based grant such as the Authorization Code Grant, Implicit Grant, the User Credentials Grant or the Refresh Grant."
+  ],
+  "method": "post",
+  "methodName": "introspectAccessTokenWithRequest",
+  "successResponse": "IntrospectResponse",
+  "errorResponse": "OAuthError",
+  "anonymous": true,
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The access token introspection request."
+      ],
+      "type": "body",
+      "javaType": "AccessTokenIntrospectRequest"
+    }
+  ]
+}
