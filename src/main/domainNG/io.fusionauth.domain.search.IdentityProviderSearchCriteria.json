@@ -21,6 +21,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "type" : {
       "className" : "io.fusionauth.domain.provider.IdentityProviderType",
       "type" : "IdentityProviderType"
