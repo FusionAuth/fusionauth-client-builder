@@ -20,6 +20,9 @@
     "oauth2" : {
       "type" : "IdentityProviderOauth2Configuration"
     },
+    "tenantId" : {
+      "type" : "UUID"
+    },
     "type" : {
       "type" : "IdentityProviderType"
     }
