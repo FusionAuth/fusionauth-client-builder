@@ -12,6 +12,9 @@
     "applicationId" : {
       "type" : "UUID"
     },
+    "existingUserStrategy" : {
+      "type" : "ExistingUserStrategy"
+    },
     "loginId" : {
       "type" : "String"
     },
