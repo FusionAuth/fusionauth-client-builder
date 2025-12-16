@@ -20,14 +20,14 @@
         "type" : "Object"
       } ]
     },
+    "mfaTrust" : {
+      "type" : "Trust"
+    },
     "policies" : {
       "type" : "Policies"
     },
     "registration" : {
       "type" : "UserRegistration"
-    },
-    "trust" : {
-      "type" : "Trust"
     }
   }
 }

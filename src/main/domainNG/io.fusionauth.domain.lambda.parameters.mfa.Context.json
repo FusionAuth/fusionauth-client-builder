@@ -25,6 +25,10 @@
         "type" : "Object"
       } ]
     },
+    "mfaTrust" : {
+      "className" : "io.fusionauth.domain.lambda.parameters.mfa.Trust",
+      "type" : "Trust"
+    },
     "policies" : {
       "className" : "io.fusionauth.domain.lambda.parameters.mfa.Policies",
       "type" : "Policies"
@@ -32,13 +36,9 @@
     "registration" : {
       "className" : "io.fusionauth.domain.UserRegistration",
       "type" : "UserRegistration"
-    },
-    "trust" : {
-      "className" : "io.fusionauth.domain.lambda.parameters.mfa.Trust",
-      "type" : "Trust"
     }
   },
-  "imports" : [ "java.util.Set", "io.fusionauth.domain.AuthenticationThreats", "io.fusionauth.domain.EventInfo", "java.util.Map", "java.lang.String", "io.fusionauth.domain.lambda.parameters.mfa.Policies", "io.fusionauth.domain.UserRegistration", "io.fusionauth.domain.lambda.parameters.mfa.Trust" ],
+  "imports" : [ "java.util.Set", "io.fusionauth.domain.AuthenticationThreats", "io.fusionauth.domain.EventInfo", "java.util.Map", "java.lang.String", "io.fusionauth.domain.lambda.parameters.mfa.Trust", "io.fusionauth.domain.lambda.parameters.mfa.Policies", "io.fusionauth.domain.UserRegistration" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
