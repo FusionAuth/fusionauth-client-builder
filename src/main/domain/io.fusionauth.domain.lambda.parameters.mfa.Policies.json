@@ -1,6 +1,6 @@
 {
-  "packageName" : "io.fusionauth.domain.lambda.parameters",
-  "type" : "MFAPolicies",
+  "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
+  "type" : "Policies",
   "description" : "/**\n * Represents the inbound lambda parameter 'policies' for MFA Required lambdas.\n */\n",
   "fields" : {
     "applicationLoginPolicy" : {

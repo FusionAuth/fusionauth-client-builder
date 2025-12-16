@@ -1,5 +1,5 @@
 {
-  "className" : "io.fusionauth.domain.lambda.parameters.MFARequiredLambdaResult",
+  "className" : "io.fusionauth.domain.lambda.parameters.mfa.RequiredLambdaResult",
   "extends" : { },
   "fields" : {
     "required" : {
@@ -12,6 +12,6 @@
   "imports" : [ ],
   "interfaces" : [ ],
   "objectType" : "Object",
-  "packageName" : "io.fusionauth.domain.lambda.parameters",
-  "type" : "MFARequiredLambdaResult"
+  "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
+  "type" : "RequiredLambdaResult"
 }

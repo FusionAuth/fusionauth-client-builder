@@ -1,6 +1,6 @@
 {
-  "packageName" : "io.fusionauth.domain.lambda.parameters",
-  "type" : "MFAContext",
+  "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
+  "type" : "Context",
   "description" : "/**\n * Represents the inbound lambda parameter 'context' for MFA Required lambdas.\n */\n",
   "fields" : {
     "authenticationThreats" : {
@@ -20,14 +20,14 @@
         "type" : "Object"
       } ]
     },
-    "mfaTrust" : {
-      "type" : "MFATrust"
-    },
     "policies" : {
-      "type" : "MFAPolicies"
+      "type" : "Policies"
     },
     "registration" : {
       "type" : "UserRegistration"
+    },
+    "trust" : {
+      "type" : "Trust"
     }
   }
 }

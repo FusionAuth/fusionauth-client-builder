@@ -1,5 +1,5 @@
 {
-  "packageName" : "io.fusionauth.domain.lambda.parameters",
+  "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
   "type" : "StartInstant",
   "fields" : {
     "applications" : {

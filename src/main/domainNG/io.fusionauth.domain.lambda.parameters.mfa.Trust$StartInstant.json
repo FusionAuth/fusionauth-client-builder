@@ -1,5 +1,5 @@
 {
-  "className" : "io.fusionauth.domain.lambda.parameters.MFATrust$StartInstant",
+  "className" : "io.fusionauth.domain.lambda.parameters.mfa.Trust$StartInstant",
   "extends" : { },
   "fields" : {
     "applications" : {
@@ -21,6 +21,6 @@
   "imports" : [ "java.util.Map", "java.util.UUID", "java.time.ZonedDateTime" ],
   "interfaces" : [ ],
   "objectType" : "Object",
-  "packageName" : "io.fusionauth.domain.lambda.parameters",
-  "type" : "MFATrust$StartInstant"
+  "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
+  "type" : "Trust$StartInstant"
 }

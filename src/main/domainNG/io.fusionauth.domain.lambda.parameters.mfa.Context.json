@@ -1,5 +1,5 @@
 {
-  "className" : "io.fusionauth.domain.lambda.parameters.MFAContext",
+  "className" : "io.fusionauth.domain.lambda.parameters.mfa.Context",
   "extends" : { },
   "fields" : {
     "authenticationThreats" : {
@@ -25,22 +25,22 @@
         "type" : "Object"
       } ]
     },
-    "mfaTrust" : {
-      "className" : "io.fusionauth.domain.lambda.parameters.MFATrust",
-      "type" : "MFATrust"
-    },
     "policies" : {
-      "className" : "io.fusionauth.domain.lambda.parameters.MFAPolicies",
-      "type" : "MFAPolicies"
+      "className" : "io.fusionauth.domain.lambda.parameters.mfa.Policies",
+      "type" : "Policies"
     },
     "registration" : {
       "className" : "io.fusionauth.domain.UserRegistration",
       "type" : "UserRegistration"
+    },
+    "trust" : {
+      "className" : "io.fusionauth.domain.lambda.parameters.mfa.Trust",
+      "type" : "Trust"
     }
   },
-  "imports" : [ "java.util.Set", "io.fusionauth.domain.AuthenticationThreats", "io.fusionauth.domain.EventInfo", "java.util.Map", "java.lang.String", "io.fusionauth.domain.lambda.parameters.MFATrust", "io.fusionauth.domain.lambda.parameters.MFAPolicies", "io.fusionauth.domain.UserRegistration" ],
+  "imports" : [ "java.util.Set", "io.fusionauth.domain.AuthenticationThreats", "io.fusionauth.domain.EventInfo", "java.util.Map", "java.lang.String", "io.fusionauth.domain.lambda.parameters.mfa.Policies", "io.fusionauth.domain.UserRegistration", "io.fusionauth.domain.lambda.parameters.mfa.Trust" ],
   "interfaces" : [ ],
   "objectType" : "Object",
-  "packageName" : "io.fusionauth.domain.lambda.parameters",
-  "type" : "MFAContext"
+  "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
+  "type" : "Context"
 }

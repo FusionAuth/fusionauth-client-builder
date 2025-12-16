@@ -1,6 +1,6 @@
 {
-  "packageName" : "io.fusionauth.domain.lambda.parameters",
-  "type" : "MFATrust",
+  "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
+  "type" : "Trust",
   "description" : "/**\n * Represents the inbound lambda parameter 'mfaTrust' inside the 'context' parameter for MFA Required lambdas.\n */\n",
   "fields" : {
     "applicationId" : {

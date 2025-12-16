@@ -1,5 +1,5 @@
 {
-  "className" : "io.fusionauth.domain.lambda.parameters.MFATrust",
+  "className" : "io.fusionauth.domain.lambda.parameters.mfa.Trust",
   "extends" : { },
   "fields" : {
     "applicationId" : {
@@ -30,8 +30,8 @@
       "type" : "ZonedDateTime"
     },
     "startInstants" : {
-      "className" : "io.fusionauth.domain.lambda.parameters.MFATrust$StartInstant",
-      "type" : "MFATrust$StartInstant"
+      "className" : "io.fusionauth.domain.lambda.parameters.mfa.Trust$StartInstant",
+      "type" : "Trust$StartInstant"
     },
     "state" : {
       "className" : "java.util.Map",
@@ -53,9 +53,9 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "java.util.UUID", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.lambda.parameters.MFATrust$StartInstant" ],
+  "imports" : [ "java.util.UUID", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.lambda.parameters.mfa.Trust$StartInstant" ],
   "interfaces" : [ ],
   "objectType" : "Object",
-  "packageName" : "io.fusionauth.domain.lambda.parameters",
-  "type" : "MFATrust"
+  "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
+  "type" : "Trust"
 }

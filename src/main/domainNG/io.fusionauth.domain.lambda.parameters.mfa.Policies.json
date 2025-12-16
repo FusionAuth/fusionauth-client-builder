@@ -1,5 +1,5 @@
 {
-  "className" : "io.fusionauth.domain.lambda.parameters.MFAPolicies",
+  "className" : "io.fusionauth.domain.lambda.parameters.mfa.Policies",
   "extends" : { },
   "fields" : {
     "applicationLoginPolicy" : {
@@ -18,6 +18,6 @@
   "imports" : [ "io.fusionauth.domain.MultiFactorLoginPolicy", "io.fusionauth.domain.ApplicationMultiFactorTrustPolicy" ],
   "interfaces" : [ ],
   "objectType" : "Object",
-  "packageName" : "io.fusionauth.domain.lambda.parameters",
-  "type" : "MFAPolicies"
+  "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
+  "type" : "Policies"
 }
