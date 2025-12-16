@@ -10,20 +10,13 @@
         "type" : "AuthenticationThreats"
       } ]
     },
+    "encodedJWT" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "eventInfo" : {
       "className" : "io.fusionauth.domain.EventInfo",
       "type" : "EventInfo"
-    },
-    "jwt" : {
-      "className" : "java.util.Map",
-      "type" : "Map",
-      "typeArguments" : [ {
-        "className" : "java.lang.String",
-        "type" : "String"
-      }, {
-        "className" : "java.lang.Object",
-        "type" : "Object"
-      } ]
     },
     "mfaTrust" : {
       "className" : "io.fusionauth.domain.lambda.parameters.mfa.Trust",
@@ -38,7 +31,7 @@
       "type" : "UserRegistration"
     }
   },
-  "imports" : [ "java.util.Set", "io.fusionauth.domain.AuthenticationThreats", "io.fusionauth.domain.EventInfo", "java.util.Map", "java.lang.String", "io.fusionauth.domain.lambda.parameters.mfa.Trust", "io.fusionauth.domain.lambda.parameters.mfa.Policies", "io.fusionauth.domain.UserRegistration" ],
+  "imports" : [ "java.util.Set", "io.fusionauth.domain.AuthenticationThreats", "java.lang.String", "io.fusionauth.domain.EventInfo", "io.fusionauth.domain.lambda.parameters.mfa.Trust", "io.fusionauth.domain.lambda.parameters.mfa.Policies", "io.fusionauth.domain.UserRegistration" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
