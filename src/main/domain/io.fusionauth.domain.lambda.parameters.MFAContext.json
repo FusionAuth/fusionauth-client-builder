@@ -23,6 +23,9 @@
     "mfaTrust" : {
       "type" : "MFATrust"
     },
+    "policies" : {
+      "type" : "MFAPolicies"
+    },
     "registration" : {
       "type" : "UserRegistration"
     }
