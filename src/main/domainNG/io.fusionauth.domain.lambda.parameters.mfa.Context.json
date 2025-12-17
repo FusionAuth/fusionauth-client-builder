@@ -1,0 +1,43 @@
+{
+  "className" : "io.fusionauth.domain.lambda.parameters.mfa.Context",
+  "extends" : { },
+  "fields" : {
+    "accessToken" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "action" : {
+      "className" : "io.fusionauth.domain.MultiFactorAction",
+      "type" : "MultiFactorAction"
+    },
+    "application" : {
+      "className" : "io.fusionauth.domain.Application",
+      "type" : "Application"
+    },
+    "authenticationThreats" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.AuthenticationThreats",
+        "type" : "AuthenticationThreats"
+      } ]
+    },
+    "eventInfo" : {
+      "className" : "io.fusionauth.domain.EventInfo",
+      "type" : "EventInfo"
+    },
+    "mfaTrust" : {
+      "className" : "io.fusionauth.domain.lambda.parameters.mfa.Trust",
+      "type" : "Trust"
+    },
+    "policies" : {
+      "className" : "io.fusionauth.domain.lambda.parameters.mfa.Policies",
+      "type" : "Policies"
+    }
+  },
+  "imports" : [ "java.lang.String", "io.fusionauth.domain.MultiFactorAction", "io.fusionauth.domain.Application", "java.util.Set", "io.fusionauth.domain.AuthenticationThreats", "io.fusionauth.domain.EventInfo", "io.fusionauth.domain.lambda.parameters.mfa.Trust", "io.fusionauth.domain.lambda.parameters.mfa.Policies" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
+  "type" : "Context"
+}
