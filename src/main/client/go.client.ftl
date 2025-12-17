@@ -238,15 +238,11 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}WithContext(ctx context.Co
           [#if d.type == param.javaType]
             [#-- Iterate through all fields in the domain object --]
             [#list d.fields as fieldName, field]
-              [#if field.type == "UUID"]
-    if request.${global.convertValue(fieldName, "go")} != nil {
-        formBody.Set("${fieldName}", request.${global.convertValue(fieldName, "go")}.String())
-    }
-              [#elseif field.type == "String"]
-    formBody.Set("${fieldName}", request.${global.convertValue(fieldName, "go")})
+              [#if field.type == "UUID" || field.type == "String"]
+    formBody.Set("${fieldName}", request.${global.toCamelCase(fieldName)?cap_first})
               [#else]
-    if request.${global.convertValue(fieldName, "go")} != nil {
-        formBody.Set("${fieldName}", fmt.Sprintf("%v", request.${global.convertValue(fieldName, "go")}))
+    if request.${global.toCamelCase(fieldName)?cap_first} != nil {
+        formBody.Set("${fieldName}", fmt.Sprintf("%v", request.${global.toCamelCase(fieldName)?cap_first}))
     }
               [/#if]
             [/#list]
