@@ -1,0 +1,31 @@
+{
+  "className" : "io.fusionauth.domain.api.twoFactor.TwoFactorStatusRequest",
+  "extends" : { },
+  "fields" : {
+    "accessToken" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "action" : {
+      "className" : "io.fusionauth.domain.MultiFactorAction",
+      "type" : "MultiFactorAction"
+    },
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "twoFactorTrustId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "java.util.UUID", "java.lang.String", "io.fusionauth.domain.MultiFactorAction" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.twoFactor",
+  "type" : "TwoFactorStatusRequest"
+}
