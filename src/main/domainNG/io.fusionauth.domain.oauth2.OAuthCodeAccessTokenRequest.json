@@ -1,0 +1,35 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.OAuthCodeAccessTokenRequest",
+  "extends" : { },
+  "fields" : {
+    "client_id" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "client_secret" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "code" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "grant_type" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "redirect_uri" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "tenantId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthCodeAccessTokenRequest"
+}

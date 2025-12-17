@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.AccessTokenIntrospectRequest",
+  "extends" : { },
+  "fields" : {
+    "client_id" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "tenantId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "token" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "AccessTokenIntrospectRequest"
+}

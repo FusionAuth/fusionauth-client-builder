@@ -1,0 +1,27 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.DeviceAuthorizationRequest",
+  "extends" : { },
+  "fields" : {
+    "client_id" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "client_secret" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "scope" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "java.lang.String", "java.util.UUID" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "DeviceAuthorizationRequest"
+}
