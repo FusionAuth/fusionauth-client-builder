@@ -2,6 +2,14 @@
   "className" : "io.fusionauth.domain.lambda.parameters.mfa.Context",
   "extends" : { },
   "fields" : {
+    "action" : {
+      "className" : "io.fusionauth.domain.MultiFactorAction",
+      "type" : "MultiFactorAction"
+    },
+    "application" : {
+      "className" : "io.fusionauth.domain.Application",
+      "type" : "Application"
+    },
     "authenticationThreats" : {
       "className" : "java.util.Set",
       "type" : "Set",
@@ -25,13 +33,9 @@
     "policies" : {
       "className" : "io.fusionauth.domain.lambda.parameters.mfa.Policies",
       "type" : "Policies"
-    },
-    "registration" : {
-      "className" : "io.fusionauth.domain.UserRegistration",
-      "type" : "UserRegistration"
     }
   },
-  "imports" : [ "java.util.Set", "io.fusionauth.domain.AuthenticationThreats", "java.lang.String", "io.fusionauth.domain.EventInfo", "io.fusionauth.domain.lambda.parameters.mfa.Trust", "io.fusionauth.domain.lambda.parameters.mfa.Policies", "io.fusionauth.domain.UserRegistration" ],
+  "imports" : [ "io.fusionauth.domain.MultiFactorAction", "io.fusionauth.domain.Application", "java.util.Set", "io.fusionauth.domain.AuthenticationThreats", "java.lang.String", "io.fusionauth.domain.EventInfo", "io.fusionauth.domain.lambda.parameters.mfa.Trust", "io.fusionauth.domain.lambda.parameters.mfa.Policies" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",

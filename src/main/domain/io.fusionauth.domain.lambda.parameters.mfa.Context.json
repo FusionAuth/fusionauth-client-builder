@@ -3,6 +3,12 @@
   "type" : "Context",
   "description" : "/**\n * Represents the inbound lambda parameter 'context' for MFA Required lambdas.\n */\n",
   "fields" : {
+    "action" : {
+      "type" : "MultiFactorAction"
+    },
+    "application" : {
+      "type" : "Application"
+    },
     "authenticationThreats" : {
       "type" : "Set",
       "typeArguments" : [ {
@@ -20,9 +26,6 @@
     },
     "policies" : {
       "type" : "Policies"
-    },
-    "registration" : {
-      "type" : "UserRegistration"
     }
   }
 }
