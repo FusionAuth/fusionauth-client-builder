@@ -100,14 +100,30 @@ class FusionAuthClient
   public function ${api.methodName}(${global.methodParameters(api, "php")})
   {
     [#assign formPost = false/]
+    [#assign hasFormParams = false/]
     [#list api.params![] as param]
-      [#if param.type == "form"][#assign formPost = true/][/#if]
+      [#if param.type == "form" || param.type == "formBody"][#assign formPost = true/][/#if]
+      [#if param.type == "form"][#assign hasFormParams = true/][/#if]
     [/#list]
     [#if formPost]
     $post_data = array(
       [#list api.params![] as param]
         [#if param.type == "form"]
       '${param.name}' => ${(param.constant?? && param.constant)?then("'"+param.value+"'", "$"+param.name)}[#if param?has_next],[/#if]
+        [#elseif param.type == "formBody"]
+          [#-- Lookup the domain object by javaType --]
+          [#list domain as d]
+            [#if d.type == param.javaType]
+              [#-- Iterate through all fields in the domain object --]
+              [#list d.fields as fieldName, field]
+                 [#if field.type == "String"]
+      [#if fieldName?is_first && !hasFormParams][#else],[/#if]'${fieldName}' => $request->${fieldName}
+                 [#else]
+      [#if fieldName?is_first && !hasFormParams][#else],[/#if]'${fieldName}' => ($request->${fieldName} !== null ? (string)$request->${fieldName} : null)
+                [/#if]
+              [/#list]
+            [/#if]
+          [/#list]
         [/#if]
       [/#list]
     );

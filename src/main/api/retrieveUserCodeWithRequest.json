@@ -16,7 +16,7 @@
       "comments": [
         "The user code retrieval request."
       ],
-      "type": "body",
+      "type": "formBody",
       "javaType": "RetrieveUserCodeRequest"
     }
   ]

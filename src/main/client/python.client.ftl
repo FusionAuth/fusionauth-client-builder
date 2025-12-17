@@ -54,13 +54,27 @@ class FusionAuthClient:
         """
         [#assign formPost = false/]
         [#list api.params![] as param]
-          [#if param.type == "form"][#assign formPost = true/][/#if]
+          [#if param.type == "form" || param.type == "formBody"][#assign formPost = true/][/#if]
         [/#list]
         [#if formPost]
         body = {
           [#list api.params![] as param]
             [#if param.type == "form"]
             "${param.name}": ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)},
+            [#elseif param.type == "formBody"]
+              [#-- Lookup the domain object by javaType --]
+              [#list domain as d]
+                [#if d.type == param.javaType]
+                  [#-- Iterate through all fields in the domain object --]
+                  [#list d.fields as fieldName, field]
+                    [#if field.type == "String"]
+            "${fieldName}": request.${fieldName},
+                    [#else]
+            "${fieldName}": str(request.${fieldName}) if request.${fieldName} is not None else None,
+                    [/#if]
+                  [/#list]
+                [/#if]
+              [/#list]
             [/#if]
           [/#list]
         }

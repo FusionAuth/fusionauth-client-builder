@@ -15,7 +15,7 @@
       "comments": [
         "The device validation request."
       ],
-      "type": "body",
+      "type": "formBody",
       "javaType": "ValidateDeviceRequest"
     }
   ]

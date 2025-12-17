@@ -13,7 +13,7 @@
       "comments": [
         "The request object containing the device approval information and optional tenantId."
       ],
-      "type": "body",
+      "type": "formBody",
       "javaType": "DeviceApprovalRequest"
     }
   ]

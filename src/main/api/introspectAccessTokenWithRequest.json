@@ -14,7 +14,7 @@
       "comments": [
         "The access token introspection request."
       ],
-      "type": "body",
+      "type": "formBody",
       "javaType": "AccessTokenIntrospectRequest"
     }
   ]

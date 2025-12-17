@@ -225,13 +225,33 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}WithContext(ctx context.Co
   [/#if]
   [#assign formPost = false/]
   [#list api.params![] as param]
-    [#if param.type == "form"][#assign formPost = true/][/#if]
+    [#if param.type == "form" || param.type == "formBody"][#assign formPost = true/][/#if]
   [/#list]
   [#if formPost]
     formBody := url.Values{}
     [#list api.params![] as param]
       [#if param.type == "form"]
     formBody.Set("${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", global.convertValue(param.name, "go"))})
+      [#elseif param.type == "formBody"]
+        [#-- Lookup the domain object by javaType --]
+        [#list domain as d]
+          [#if d.type == param.javaType]
+            [#-- Iterate through all fields in the domain object --]
+            [#list d.fields as fieldName, field]
+              [#if field.type == "UUID"]
+    if request.${global.convertValue(fieldName, "go")} != nil {
+        formBody.Set("${fieldName}", request.${global.convertValue(fieldName, "go")}.String())
+    }
+              [#elseif field.type == "String"]
+    formBody.Set("${fieldName}", request.${global.convertValue(fieldName, "go")})
+              [#else]
+    if request.${global.convertValue(fieldName, "go")} != nil {
+        formBody.Set("${fieldName}", fmt.Sprintf("%v", request.${global.convertValue(fieldName, "go")}))
+    }
+              [/#if]
+            [/#list]
+          [/#if]
+        [/#list]
       [/#if]
     [/#list]
   [/#if]

@@ -14,7 +14,7 @@
       "comments": [
         "The device authorization request containing client authentication, scope, and optional device metadata."
       ],
-      "type": "body",
+      "type": "formBody",
       "javaType": "DeviceAuthorizationRequest"
     }
   ]

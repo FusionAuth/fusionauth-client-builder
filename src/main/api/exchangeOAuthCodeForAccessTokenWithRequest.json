@@ -15,7 +15,7 @@
       "comments": [
         "The OAuth code access token exchange request."
       ],
-      "type": "body",
+      "type": "formBody",
       "javaType": "OAuthCodeAccessTokenRequest"
     }
   ]

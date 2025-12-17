@@ -371,7 +371,7 @@ public class FusionAuthClient {
   public ClientResponse<${api.successResponse}, ${api.errorResponse}> ${api.methodName}(${global.methodParameters(api, "java")}) {
   [#assign formPost = false/]
   [#list api.params![] as param]
-    [#if param.type == "form"][#assign formPost = true/][/#if]
+    [#if param.type == "form" || param.type == "formBody"][#assign formPost = true/][/#if]
   [/#list]
   [#if formPost]
     Map<String, List<String>> parameters = new HashMap<>();
@@ -386,6 +386,23 @@ public class FusionAuthClient {
         [/#if]
       [/#if]
     parameters.put("${param.name}", Arrays.asList(${pval}));
+      [/#if]
+      [#if param.type == "formBody"]
+      [#-- Lookup the domain object by javaType --]
+      [#list domain as d]
+        [#if d.type == param.javaType]
+          [#-- Iterate through all fields in the domain object --]
+          [#list d.fields as fieldName, field]
+    [#if field.type == "String"]
+    parameters.put("${fieldName}", Arrays.asList(request.${fieldName}));
+    [#else]
+    if (request.${fieldName} != null) {
+      parameters.put("${fieldName}", Arrays.asList(request.${fieldName}.toString()));
+    }
+    [/#if]
+          [/#list]
+        [/#if]
+      [/#list]
       [/#if]
     [/#list]
   [/#if]
