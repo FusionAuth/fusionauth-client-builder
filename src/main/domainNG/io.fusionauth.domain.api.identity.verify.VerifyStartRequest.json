@@ -9,6 +9,10 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "existingUserStrategy" : {
+      "className" : "io.fusionauth.domain.api.identity.verify.ExistingUserStrategy",
+      "type" : "ExistingUserStrategy"
+    },
     "loginId" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -33,7 +37,7 @@
       "type" : "VerificationStrategy"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "java.util.Map", "io.fusionauth.domain.VerificationStrategy" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID", "io.fusionauth.domain.api.identity.verify.ExistingUserStrategy", "java.lang.String", "java.util.Map", "io.fusionauth.domain.VerificationStrategy" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
