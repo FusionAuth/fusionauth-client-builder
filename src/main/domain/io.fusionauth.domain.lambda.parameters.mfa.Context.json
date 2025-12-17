@@ -3,6 +3,9 @@
   "type" : "Context",
   "description" : "/**\n * Represents the inbound lambda parameter 'context' for MFA Required lambdas.\n */\n",
   "fields" : {
+    "accessToken" : {
+      "type" : "String"
+    },
     "action" : {
       "type" : "MultiFactorAction"
     },
@@ -14,9 +17,6 @@
       "typeArguments" : [ {
         "type" : "AuthenticationThreats"
       } ]
-    },
-    "encodedJWT" : {
-      "type" : "String"
     },
     "eventInfo" : {
       "type" : "EventInfo"
