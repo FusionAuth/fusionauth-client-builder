@@ -12,6 +12,9 @@
     "loginValidationId" : {
       "type" : "UUID"
     },
+    "multiFactorRequirementId" : {
+      "type" : "UUID"
+    },
     "scimEnterpriseUserRequestConverterId" : {
       "type" : "UUID"
     },
