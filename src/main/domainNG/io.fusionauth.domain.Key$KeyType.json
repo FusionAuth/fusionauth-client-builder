@@ -1,6 +1,6 @@
 {
   "className" : "io.fusionauth.domain.Key$KeyType",
-  "enum" : [ "EC", "RSA", "HMAC" ],
+  "enum" : [ "EC", "RSA", "HMAC", "OKP" ],
   "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",

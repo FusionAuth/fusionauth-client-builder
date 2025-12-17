@@ -1,5 +1,5 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "KeyType",
-  "enum" : [ "EC", "RSA", "HMAC" ]
+  "enum" : [ "EC", "RSA", "HMAC", "OKP" ]
 }
