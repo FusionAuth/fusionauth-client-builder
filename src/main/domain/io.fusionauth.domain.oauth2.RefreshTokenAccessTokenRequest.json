@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "RefreshTokenAccessTokenRequest",
+  "description" : "/**\n * The request object to exchange a Refresh Token for an Access Token.\n *\n * @author Lyle Schemmerling\n */\n",
+  "fields" : {
+    "client_id" : {
+      "type" : "String"
+    },
+    "client_secret" : {
+      "type" : "String"
+    },
+    "grant_type" : {
+      "type" : "String"
+    },
+    "refresh_token" : {
+      "type" : "String"
+    },
+    "scope" : {
+      "type" : "String"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    },
+    "user_code" : {
+      "type" : "String"
+    }
+  }
+}

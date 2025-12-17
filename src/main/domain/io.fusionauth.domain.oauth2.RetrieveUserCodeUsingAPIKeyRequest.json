@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "RetrieveUserCodeUsingAPIKeyRequest",
+  "description" : "/**\n * The request object for retrieving a user code that is part of an in-progress Device Authorization Grant using an API key\n *\n * @author Lyle Schemmerling\n */\n",
+  "fields" : {
+    "tenantId" : {
+      "type" : "UUID"
+    },
+    "user_code" : {
+      "type" : "String"
+    }
+  }
+}

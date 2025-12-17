@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthCodeAccessTokenRequest",
+  "description" : "/**\n * The request object for exchanging an OAuth authorization code for an access token.\n *\n * @author Lyle Schemmerling\n */\n",
+  "fields" : {
+    "client_id" : {
+      "type" : "String"
+    },
+    "client_secret" : {
+      "type" : "String"
+    },
+    "code" : {
+      "type" : "String"
+    },
+    "grant_type" : {
+      "type" : "String"
+    },
+    "redirect_uri" : {
+      "type" : "String"
+    },
+    "tenantId" : {
+      "type" : "String"
+    }
+  }
+}
