@@ -9,14 +9,14 @@
     "userId" : {
       "type" : "UUID"
     },
+    "accessToken" : {
+      "type" : "String"
+    },
     "action" : {
       "type" : "MultiFactorAction"
     },
     "applicationId" : {
       "type" : "UUID"
-    },
-    "token" : {
-      "type" : "String"
     },
     "twoFactorTrustId" : {
       "type" : "String"
