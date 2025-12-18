@@ -1,6 +1,6 @@
 {
   "packageName" : "io.fusionauth.domain",
   "type" : "FIPS",
-  "description" : "/**\n * Determines if FusionAuth is in FIPS mode based on the system property <code>fusionauth.fips.enabled</code>. This can only be enabled once and\n * should be enabled when the VM starts or as close to that point as possible.\n * <p>\n * Once this has been enabled, it cannot be disabled.\n * <p>\n * This also provides some helpers for FIPS things such as password length requirements.\n *\n * @author Brian Pontarelli & Daniel DeGroff\n */\n",
+  "description" : "/**\n * Determines if FusionAuth is in FIPS mode based on the system property <code>fusionauth.fips.enabled</code>. This can only be enabled once and\n * should be enabled when the VM starts or as close to that point as possible.\n * <p>\n * Once this has been enabled, it cannot be disabled.\n * <p>\n * This also provides some helpers for FIPS things such as password length requirements.\n *\n * @author Brian Pontarelli and Daniel DeGroff\n */\n",
   "fields" : { }
 }
