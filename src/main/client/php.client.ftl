@@ -137,6 +137,18 @@ class FusionAuthClient
         ->urlSegment(${(param.constant?? && param.constant)?then(param.value, "$" + param.name)})
       [#elseif param.type == "urlParameter"]
         ->urlParameter("${param.parameterName}", ${parameter_value(param)})
+      [#elseif param.type == "queryBody"]
+        [#list domain as d]
+          [#if d.type == param.javaType]
+            [#list d.fields as fieldName, field]
+              [#if field.type == "String"]
+        ->urlParameter("${fieldName}", $request->${fieldName})
+              [#else]
+        ->urlParameter("${fieldName}", $request->${fieldName} !== null ? (string)$request->${fieldName} : null)
+              [/#if]
+            [/#list]
+          [/#if]
+        [/#list]
       [#elseif param.type == "body"]
         ->bodyHandler(new JSONBodyHandler($${param.name}))
       [/#if]

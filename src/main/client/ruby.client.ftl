@@ -96,6 +96,18 @@ module FusionAuth
           .url_segment(${(param.constant?? && param.constant)?then(param.value, camel_to_underscores(param.name))})
         [#elseif param.type == "urlParameter"]
           .url_parameter('${param.parameterName}', ${(param.constant?? && param.constant)?then(param.value, camel_to_underscores(param.name?replace("end", "_end")))})
+        [#elseif param.type == "queryBody"]
+          [#list domain as d]
+            [#if d.type == param.javaType]
+              [#list d.fields as fieldName, field]
+                [#if field.type == "String"]
+          .url_parameter('${fieldName}', request.${fieldName})
+                [#else]
+          .url_parameter('${fieldName}', request.${fieldName}.nil? ? nil : request.${fieldName}.to_s)
+                [/#if]
+              [/#list]
+            [/#if]
+          [/#list]
         [#elseif param.type == "body"]
           .body_handler(FusionAuth::JSONBodyHandler.new(${camel_to_underscores(param.name)}))
         [/#if]

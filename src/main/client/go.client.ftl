@@ -290,6 +290,18 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}WithContext(ctx context.Co
       [#else]
         WithParameter("${param.parameterName}", string(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
       [/#if]
+    [#elseif param.type == "queryBody"]
+      [#list domain as d]
+        [#if d.type == param.javaType]
+          [#list d.fields as fieldName, field]
+            [#if field.type == "UUID" || field.type == "String"]
+        WithParameter("${fieldName}", request.${global.toCamelCase(fieldName)?cap_first}).
+            [#else]
+        WithParameter("${fieldName}", fmt.Sprintf("%v", request.${global.toCamelCase(fieldName)?cap_first})).
+            [/#if]
+          [/#list]
+        [/#if]
+      [/#list]
     [#elseif param.type == "body"]
       WithJSONBody(${global.convertValue(param.name, "go")}).
     [/#if]

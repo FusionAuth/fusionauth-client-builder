@@ -419,6 +419,20 @@ public class FusionAuthClient {
         .urlParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, param.name)})
       [#elseif param.type == "body"]
         .bodyHandler(new JSONBodyHandler(${param.name}, objectMapper()))
+      [#elseif param.type == "queryBody"]
+        [#-- Lookup the domain object by javaType --]
+        [#list domain as d]
+          [#if d.type == param.javaType]
+            [#-- Iterate through all fields in the domain object --]
+            [#list d.fields as fieldName, field]
+              [#if field.type == "String"]
+        .urlParameter("${fieldName}", request.${fieldName})
+              [#else]
+        .urlParameter("${fieldName}", request.${fieldName} != null ? request.${fieldName}.toString() : null)
+              [/#if]
+            [/#list]
+          [/#if]
+        [/#list]
       [/#if]
     [/#list]
     [#if formPost]

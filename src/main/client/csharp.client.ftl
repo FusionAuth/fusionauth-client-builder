@@ -107,13 +107,36 @@ namespace FusionAuth
     {
     [#assign formPost = false/]
     [#list api.params![] as param]
-      [#if param.type == "form"][#assign formPost = true/][/#if]
+      [#if param.type == "form" || param.type == "formBody"][#assign formPost = true/][/#if]
     [/#list]
     [#if formPost]
         Dictionary<string, string> body = new Dictionary<string, string>();
       [#list api.params![] as param]
         [#if param.type == "form"]
         body.Add("${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)});
+        [/#if]
+      [/#list]
+      [#list api.params![] as param]
+        [#if param.type == "formBody"]
+          [#-- Lookup the domain object by javaType --]
+          [#list domain as d]
+            [#if d.type == param.javaType]
+              [#-- Iterate through all fields in the domain object --]
+              [#list d.fields as fieldName, field]
+                [#if field.type == "UUID"]
+        if (request.${fieldName} != null) {
+            body.Add("${fieldName}", request.${fieldName}.ToString());
+        }
+                [#elseif field.type == "String"]
+        body.Add("${fieldName}", request.${fieldName});
+                [#else]
+        if (request.${fieldName} != null) {
+            body.Add("${fieldName}", request.${fieldName}.ToString());
+        }
+                [/#if]
+              [/#list]
+            [/#if]
+          [/#list]
         [/#if]
       [/#list]
     [/#if]
@@ -131,7 +154,7 @@ namespace FusionAuth
                                         [/#if]
                                       [/#list]
                                       [#if formPost]
-                                          .BodyHandler(new FormDataBodyHandler(body)
+                                          .BodyHandler(new FormDataBodyHandler(body))
                                       [/#if]
                                           .${api.method?cap_first}()
                                           .Go();

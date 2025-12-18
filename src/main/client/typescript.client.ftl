@@ -117,6 +117,18 @@ export class FusionAuthClient {
         .withUriSegment(${(param.constant?? && param.constant)?then(param.value, param.name)})
     [#elseif param.type == "urlParameter"]
         .withParameter('${param.parameterName}', ${(param.constant?? && param.constant)?then(param.value, param.name)})
+    [#elseif param.type == "queryBody"]
+      [#list domain as d]
+        [#if d.type == param.javaType]
+          [#list d.fields as fieldName, field]
+            [#if field.type == "String"]
+        .withParameter('${fieldName}', request.${fieldName})
+            [#else]
+        .withParameter('${fieldName}', request.${fieldName} != null ? request.${fieldName}.toString() : null)
+            [/#if]
+          [/#list]
+        [/#if]
+      [/#list]
     [#elseif param.type == "body"]
         .withJSONBody(${param.name})
     [/#if]
