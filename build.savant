@@ -177,7 +177,8 @@ void domainDSLBuilder() {
 
   var debug = switches.has("domain-debug") ? "debug" : ""
   var home = appPb.environment().get("HOME")
-  ProcessBuilder domainBuilder = new ProcessBuilder("${home}/dev/java/current21/bin/java", "-cp", classPath, "io.fusionauth.builders.DomainDSLBuilder", debug)
+  ProcessBuilder domainBuilder = new ProcessBuilder("${home}/dev/java/current21/bin/java", "-cp", classPath,
+                                                    "io.fusionauth.builders.DomainDSLBuilder", debug)
   def domainBuilderProcess = domainBuilder.inheritIO().directory(new File("../fusionauth-app/")).start()
   domainBuilderProcess.consumeProcessOutput(System.out, System.err)
   domainBuilderProcess.waitFor()
@@ -213,6 +214,9 @@ target(name: "build-java", description: "Build the Java Client Library") {
     filter(token: ".*@MaskMapValue\\.List\\(\\{(\\n|.)*\\}\\)\\n", value: "")
     filter(token: ".*@MaskMapValue\\(.*\n", value: "")
     filter(token: ".*@MaskString.*\n", value: "")
+    // don't need this form field in the public client, it's not part of the API
+    filter(token: "\\s+@InternalUse\n\\s+@JsonIgnore\n\\s+public List<FormField> fieldObjects = new ArrayList<>\\(\\);\n",
+           value: "")
     filter(token: ".*@InternalUse.*\n ", value: "")
     // don't want internal tickets and such in here
     filter(token: "// TODO : ENG.*", value: "")
