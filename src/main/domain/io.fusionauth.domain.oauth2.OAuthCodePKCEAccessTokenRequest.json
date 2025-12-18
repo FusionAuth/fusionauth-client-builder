@@ -1,0 +1,28 @@
+{
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthCodePKCEAccessTokenRequest",
+  "description" : "/**\n * The request object to make a request to the Token endpoint to exchange the authorization code returned from the Authorize endpoint and a\n * code_verifier for an access token.\n *\n * @author Lyle Schemmerling\n */\n",
+  "fields" : {
+    "client_id" : {
+      "type" : "String"
+    },
+    "client_secret" : {
+      "type" : "String"
+    },
+    "code" : {
+      "type" : "String"
+    },
+    "code_verifier" : {
+      "type" : "String"
+    },
+    "grant_type" : {
+      "type" : "String"
+    },
+    "redirect_uri" : {
+      "type" : "String"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    }
+  }
+}

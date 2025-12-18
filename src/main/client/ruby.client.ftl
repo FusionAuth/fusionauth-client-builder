@@ -59,14 +59,30 @@ module FusionAuth
 [/#if]
     def ${camel_to_underscores(api.methodName)}[#if (api.params![])?filter(p -> !p.constant??)?has_content](${global.methodParameters(api, "ruby")})[/#if]
       [#assign formPost = false/]
+      [#assign hasFormParams = false/]
       [#list api.params![] as param]
-        [#if param.type == "form"][#assign formPost = true/][/#if]
+        [#if param.type == "form" || param.type == "formBody"][#assign formPost = true/][/#if]
+        [#if param.type == "form"][#assign hasFormParams = true/][/#if]
       [/#list]
       [#if formPost]
-      body = {
+      form_parameters = {
         [#list api.params![] as param]
           [#if param.type == "form"]
-        "${param.name}" => ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)}[#if param?has_next],[/#if]
+        "${param.name}" => ${(param.constant?? && param.constant)?then("'"+param.value+"'", camel_to_underscores(param.name))},
+          [#elseif param.type == "formBody"]
+            [#-- Lookup the domain object by javaType --]
+            [#list domain as d]
+              [#if d.type == param.javaType]
+                [#-- Iterate through all fields in the domain object --]
+                [#list d.fields as fieldName, field]
+                  [#if field.type == "String"]
+        "${fieldName}" => request.${fieldName},
+                  [#else]
+        "${fieldName}" => (request.${fieldName}.to_s unless request.${fieldName}.nil?),
+                  [/#if]
+                [/#list]
+              [/#if]
+            [/#list]
           [/#if]
         [/#list]
       }
@@ -80,12 +96,24 @@ module FusionAuth
           .url_segment(${(param.constant?? && param.constant)?then(param.value, camel_to_underscores(param.name))})
         [#elseif param.type == "urlParameter"]
           .url_parameter('${param.parameterName}', ${(param.constant?? && param.constant)?then(param.value, camel_to_underscores(param.name?replace("end", "_end")))})
+        [#elseif param.type == "queryBody"]
+          [#list domain as d]
+            [#if d.type == param.javaType]
+              [#list d.fields as fieldName, field]
+                [#if field.type == "String"]
+          .url_parameter('${fieldName}', request.${fieldName})
+                [#else]
+          .url_parameter('${fieldName}', request.${fieldName}.nil? ? nil : request.${fieldName}.to_s)
+                [/#if]
+              [/#list]
+            [/#if]
+          [/#list]
         [#elseif param.type == "body"]
           .body_handler(FusionAuth::JSONBodyHandler.new(${camel_to_underscores(param.name)}))
         [/#if]
       [/#list]
       [#if formPost]
-          .body_handler(FusionAuth::FormDataBodyHandler.new(body))
+          .body_handler(FusionAuth::FormDataBodyHandler.new(form_parameters))
       [/#if]
           .${api.method}
           .go

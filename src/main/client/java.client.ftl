@@ -239,11 +239,24 @@ import io.fusionauth.domain.api.user.VerifyEmailResponse;
 import io.fusionauth.domain.api.user.VerifyRegistrationRequest;
 import io.fusionauth.domain.api.user.VerifyRegistrationResponse;
 import io.fusionauth.domain.oauth2.AccessToken;
+import io.fusionauth.domain.oauth2.AccessTokenIntrospectRequest;
+import io.fusionauth.domain.oauth2.ClientCredentialsAccessTokenIntrospectRequest;
+import io.fusionauth.domain.oauth2.ClientCredentialsGrantRequest;
+import io.fusionauth.domain.oauth2.DeviceApprovalRequest;
 import io.fusionauth.domain.oauth2.DeviceApprovalResponse;
+import io.fusionauth.domain.oauth2.DeviceAuthorizationRequest;
+import io.fusionauth.domain.oauth2.DeviceResponse;
 import io.fusionauth.domain.oauth2.IntrospectResponse;
 import io.fusionauth.domain.oauth2.JWKSResponse;
+import io.fusionauth.domain.oauth2.OAuthCodeAccessTokenRequest;
+import io.fusionauth.domain.oauth2.OAuthCodePKCEAccessTokenRequest;
 import io.fusionauth.domain.oauth2.OAuthError;
+import io.fusionauth.domain.oauth2.RefreshTokenAccessTokenRequest;
+import io.fusionauth.domain.oauth2.RetrieveUserCodeRequest;
+import io.fusionauth.domain.oauth2.RetrieveUserCodeUsingAPIKeyRequest;
+import io.fusionauth.domain.oauth2.UserCredentialsAccessTokenRequest;
 import io.fusionauth.domain.oauth2.UserinfoResponse;
+import io.fusionauth.domain.oauth2.ValidateDeviceRequest;
 import io.fusionauth.domain.provider.IdentityProviderType;
 
 /**
@@ -359,13 +372,38 @@ public class FusionAuthClient {
   public ClientResponse<${api.successResponse}, ${api.errorResponse}> ${api.methodName}(${global.methodParameters(api, "java")}) {
   [#assign formPost = false/]
   [#list api.params![] as param]
-    [#if param.type == "form"][#assign formPost = true/][/#if]
+    [#if param.type == "form" || param.type == "formBody"][#assign formPost = true/][/#if]
   [/#list]
   [#if formPost]
     Map<String, List<String>> parameters = new HashMap<>();
     [#list api.params![] as param]
+      [#assign pval = param.name /]
       [#if param.type == "form"]
-    parameters.put("${param.name}", Arrays.asList(${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)}));
+      [#if param.constant?? && param.constant]
+        [#assign pval = "\""+param.value+"\"" /]
+      [#else]
+        [#if param.javaType != "String"]
+          [#assign pval = "\"\" + ${param.name}" /]
+        [/#if]
+      [/#if]
+    parameters.put("${param.name}", Arrays.asList(${pval}));
+      [/#if]
+      [#if param.type == "formBody"]
+      [#-- Lookup the domain object by javaType --]
+      [#list domain as d]
+        [#if d.type == param.javaType]
+          [#-- Iterate through all fields in the domain object --]
+          [#list d.fields as fieldName, field]
+    [#if field.type == "String"]
+    parameters.put("${fieldName}", Arrays.asList(request.${fieldName}));
+    [#else]
+    if (request.${fieldName} != null) {
+      parameters.put("${fieldName}", Arrays.asList(request.${fieldName}.toString()));
+    }
+    [/#if]
+          [/#list]
+        [/#if]
+      [/#list]
       [/#if]
     [/#list]
   [/#if]
@@ -381,6 +419,20 @@ public class FusionAuthClient {
         .urlParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, param.name)})
       [#elseif param.type == "body"]
         .bodyHandler(new JSONBodyHandler(${param.name}, objectMapper()))
+      [#elseif param.type == "queryBody"]
+        [#-- Lookup the domain object by javaType --]
+        [#list domain as d]
+          [#if d.type == param.javaType]
+            [#-- Iterate through all fields in the domain object --]
+            [#list d.fields as fieldName, field]
+              [#if field.type == "String"]
+        .urlParameter("${fieldName}", request.${fieldName})
+              [#else]
+        .urlParameter("${fieldName}", request.${fieldName} != null ? request.${fieldName}.toString() : null)
+              [/#if]
+            [/#list]
+          [/#if]
+        [/#list]
       [/#if]
     [/#list]
     [#if formPost]

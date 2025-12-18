@@ -184,7 +184,7 @@ func (rc *restClient) WithUriSegment(segment string) *restClient {
 
 [#-- @formatter:off --]
 [#-- Ignoring these few following APIs due to currently being unable to convert the json response into the actual IdentityProvider type. Need a conversion utility. --]
-[#assign ignoredAPIs = ["CreateIdentityProvider","IntrospectAccessToken","IntrospectClientCredentialsAccessToken","RetrieveIdentityProvider","RetrieveIdentityProviders","RetrieveUserInfoFromAccessToken","UpdateIdentityProvider"]/]
+[#assign ignoredAPIs = ["CreateIdentityProvider","IntrospectAccessToken","IntrospectAccessTokenWithRequest","IntrospectClientCredentialsAccessToken","IntrospectClientCredentialsAccessTokenWithRequest","RetrieveIdentityProvider","RetrieveIdentityProviders","RetrieveUserInfoFromAccessToken","UpdateIdentityProvider"]/]
 [#list apis as api]
   [#if !(ignoredAPIs?seq_contains(api.methodName?cap_first))]
 // ${api.methodName?cap_first}
@@ -225,13 +225,29 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}WithContext(ctx context.Co
   [/#if]
   [#assign formPost = false/]
   [#list api.params![] as param]
-    [#if param.type == "form"][#assign formPost = true/][/#if]
+    [#if param.type == "form" || param.type == "formBody"][#assign formPost = true/][/#if]
   [/#list]
   [#if formPost]
     formBody := url.Values{}
     [#list api.params![] as param]
       [#if param.type == "form"]
     formBody.Set("${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", global.convertValue(param.name, "go"))})
+      [#elseif param.type == "formBody"]
+        [#-- Lookup the domain object by javaType --]
+        [#list domain as d]
+          [#if d.type == param.javaType]
+            [#-- Iterate through all fields in the domain object --]
+            [#list d.fields as fieldName, field]
+              [#if field.type == "UUID" || field.type == "String"]
+    formBody.Set("${fieldName}", request.${global.toCamelCase(fieldName)?cap_first})
+              [#else]
+    if request.${global.toCamelCase(fieldName)?cap_first} != nil {
+        formBody.Set("${fieldName}", fmt.Sprintf("%v", request.${global.toCamelCase(fieldName)?cap_first}))
+    }
+              [/#if]
+            [/#list]
+          [/#if]
+        [/#list]
       [/#if]
     [/#list]
   [/#if]
@@ -274,6 +290,18 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}WithContext(ctx context.Co
       [#else]
         WithParameter("${param.parameterName}", string(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
       [/#if]
+    [#elseif param.type == "queryBody"]
+      [#list domain as d]
+        [#if d.type == param.javaType]
+          [#list d.fields as fieldName, field]
+            [#if field.type == "UUID" || field.type == "String"]
+        WithParameter("${fieldName}", request.${global.toCamelCase(fieldName)?cap_first}).
+            [#else]
+        WithParameter("${fieldName}", fmt.Sprintf("%v", request.${global.toCamelCase(fieldName)?cap_first})).
+            [/#if]
+          [/#list]
+        [/#if]
+      [/#list]
     [#elseif param.type == "body"]
       WithJSONBody(${global.convertValue(param.name, "go")}).
     [/#if]

@@ -1,0 +1,37 @@
+{
+  "uri": "/oauth2/device_authorize",
+  "comments": [
+    "Start the Device Authorization flow using form-encoded parameters"
+  ],
+  "method": "post",
+  "methodName": "deviceAuthorize",
+  "successResponse": "DeviceResponse",
+  "errorResponse": "OAuthError",
+  "anonymous": true,
+  "params": [
+    {
+      "name": "client_id",
+      "comments": [
+        "The unique client identifier. The client Id is the Id of the FusionAuth Application in which you are attempting to authenticate."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "client_secret",
+      "comments": [
+        "(Optional) The client secret. This value may optionally be provided in the request body instead of the Authorization header."
+      ],
+      "type": "form",
+      "javaType": "String"
+    },
+    {
+      "name": "scope",
+      "comments": [
+        "(Optional) A space-delimited string of the requested scopes. Defaults to all scopes configured in the Application's OAuth configuration."
+      ],
+      "type": "form",
+      "javaType": "String"
+    }
+  ]
+}

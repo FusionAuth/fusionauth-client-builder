@@ -77,7 +77,7 @@ export class FusionAuthClient {
   ${api.methodName}(${parameters}): Promise<ClientResponse<${global.convertType(api.successResponse, "ts")}>> {
   [#assign formPost = false/]
   [#list api.params![] as param]
-    [#if param.type == "form"][#assign formPost = true/][/#if]
+    [#if param.type == "form" || param.type == "formBody"][#assign formPost = true/][/#if]
   [/#list]
   [#if formPost]
     let body = new URLSearchParams();
@@ -85,6 +85,22 @@ export class FusionAuthClient {
     [#list api.params![] as param]
       [#if param.type == "form"]
     body.append('${param.name}', ${(param.constant?? && param.constant)?then("'"+param.value+"'", param.name)});
+      [#elseif param.type == "formBody"]
+        [#-- Lookup the domain object by javaType --]
+        [#list domain as d]
+          [#if d.type == param.javaType]
+            [#-- Iterate through all fields in the domain object --]
+            [#list d.fields as fieldName, field]
+    if (request.${fieldName} !== null && request.${fieldName} !== undefined) {
+              [#if field.type == "String"]
+      body.append('${fieldName}', request.${fieldName});
+              [#else]
+      body.append('${fieldName}', request.${fieldName}.toString());
+              [/#if]
+    }
+            [/#list]
+          [/#if]
+        [/#list]
       [/#if]
     [/#list]
   [/#if]
@@ -101,6 +117,18 @@ export class FusionAuthClient {
         .withUriSegment(${(param.constant?? && param.constant)?then(param.value, param.name)})
     [#elseif param.type == "urlParameter"]
         .withParameter('${param.parameterName}', ${(param.constant?? && param.constant)?then(param.value, param.name)})
+    [#elseif param.type == "queryBody"]
+      [#list domain as d]
+        [#if d.type == param.javaType]
+          [#list d.fields as fieldName, field]
+            [#if field.type == "String"]
+        .withParameter('${fieldName}', request.${fieldName})
+            [#else]
+        .withParameter('${fieldName}', request.${fieldName} != null ? request.${fieldName}.toString() : null)
+            [/#if]
+          [/#list]
+        [/#if]
+      [/#list]
     [#elseif param.type == "body"]
         .withJSONBody(${param.name})
     [/#if]

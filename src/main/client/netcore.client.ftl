@@ -99,16 +99,27 @@ namespace io.fusionauth {
     public Task<ClientResponse<${global.convertType(api.successResponse, "csharp")}>> ${api.methodName?cap_first}Async(${global.methodParameters(api, "csharp")}) {
       [#assign formPost = false/]
       [#list api.params![] as param]
-        [#if param.type == "form"][#assign formPost = true/][/#if]
+        [#if param.type == "form" || param.type == "formBody"][#assign formPost = true/][/#if]
       [/#list]
       [#if formPost]
-      var body = new Dictionary<string, string> {
-        [#list api.params![] as param]
-          [#if param.type == "form"]
-          { "${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)} },
-          [/#if]
-        [/#list]
-      };
+      var body = new Dictionary<string, string>();
+      [#list api.params![] as param]
+        [#if param.type == "form"]
+      body.Add("${param.name}", ${(param.constant?? && param.constant)?then("\""+param.value+"\"", param.name)});
+        [#elseif param.type == "formBody"]
+          [#-- Lookup the domain object by javaType --]
+          [#list domain as d]
+            [#if d.type == param.javaType]
+              [#-- Iterate through all fields in the domain object --]
+              [#list d.fields as fieldName, field]
+      if (request.${fieldName} != null) {
+        body.Add("${fieldName}", request.${fieldName}.ToString());
+      }
+              [/#list]
+            [/#if]
+          [/#list]
+        [/#if]
+      [/#list]
       [/#if]
       return build[#if api.anonymous??]Anonymous[/#if]Client()
           .withUri("${api.uri}")
@@ -120,6 +131,18 @@ namespace io.fusionauth {
           .withUriSegment(${(param.constant?? && param.constant)?then(param.value, param.name)})
         [#elseif param.type == "urlParameter"]
           .withParameter("${param.parameterName}", ${(param.constant?? && param.constant)?then(param.value, param.name)})
+        [#elseif param.type == "queryBody"]
+          [#list domain as d]
+            [#if d.type == param.javaType]
+              [#list d.fields as fieldName, field]
+                [#if field.type == "String"]
+          .withParameter("${fieldName}", request.${fieldName})
+                [#else]
+          .withParameter("${fieldName}", request.${fieldName}?.ToString())
+                [/#if]
+              [/#list]
+            [/#if]
+          [/#list]
         [#elseif param.type == "body"]
           .withJSONBody(${param.name})
         [/#if]

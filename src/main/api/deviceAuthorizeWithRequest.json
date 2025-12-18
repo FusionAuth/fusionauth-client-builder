@@ -1,0 +1,21 @@
+{
+  "uri": "/oauth2/device_authorize",
+  "comments": [
+    "Start the Device Authorization flow using a request body"
+  ],
+  "method": "post",
+  "methodName": "deviceAuthorizeWithRequest",
+  "successResponse": "DeviceResponse",
+  "errorResponse": "OAuthError",
+  "anonymous": true,
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The device authorization request containing client authentication, scope, and optional device metadata."
+      ],
+      "type": "formBody",
+      "javaType": "DeviceAuthorizationRequest"
+    }
+  ]
+}

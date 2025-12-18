@@ -1,0 +1,20 @@
+{
+  "uri": "/oauth2/device/approve",
+  "comments": [
+    "Approve a device grant."
+  ],
+  "method": "post",
+  "methodName": "approveDeviceWithRequest",
+  "successResponse": "DeviceApprovalResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The request object containing the device approval information and optional tenantId."
+      ],
+      "type": "formBody",
+      "javaType": "DeviceApprovalRequest"
+    }
+  ]
+}

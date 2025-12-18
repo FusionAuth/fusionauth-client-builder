@@ -1,0 +1,39 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.OAuthCodePKCEAccessTokenRequest",
+  "extends" : { },
+  "fields" : {
+    "client_id" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "client_secret" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "code" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "code_verifier" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "grant_type" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "redirect_uri" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "java.lang.String", "java.util.UUID" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "OAuthCodePKCEAccessTokenRequest"
+}

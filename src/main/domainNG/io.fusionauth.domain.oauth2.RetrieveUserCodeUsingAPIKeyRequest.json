@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.oauth2.RetrieveUserCodeUsingAPIKeyRequest",
+  "extends" : { },
+  "fields" : {
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "user_code" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.util.UUID", "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.oauth2",
+  "type" : "RetrieveUserCodeUsingAPIKeyRequest"
+}
