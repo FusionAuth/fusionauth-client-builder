@@ -1,0 +1,61 @@
+{
+  "className" : "io.fusionauth.domain.lambda.parameters.mfa.Trust",
+  "extends" : { },
+  "fields" : {
+    "applicationId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "attributes" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "expirationInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "id" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "startInstants" : {
+      "className" : "io.fusionauth.domain.lambda.parameters.mfa.Trust$StartInstant",
+      "type" : "Trust$StartInstant"
+    },
+    "state" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "java.util.UUID", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.lambda.parameters.mfa.Trust$StartInstant" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
+  "type" : "Trust"
+}

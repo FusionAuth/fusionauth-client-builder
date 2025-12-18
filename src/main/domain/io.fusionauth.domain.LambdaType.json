@@ -80,5 +80,8 @@
   }, {
     "name" : "LoginValidation",
     "args" : [ "validate" ]
+  }, {
+    "name" : "MFARequirement",
+    "args" : [ "checkRequired" ]
   } ]
 }

@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.form",
+  "type" : "FormStepType",
+  "description" : "/**\n * Denotes the type of form step. This is used to configure different behavior on form steps in the registration flow.\n */\n",
+  "enum" : [ "collectData", "verifyEmail", "verifyPhoneNumber" ]
+}

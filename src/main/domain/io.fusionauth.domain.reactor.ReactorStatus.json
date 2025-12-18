@@ -53,6 +53,9 @@
     "licensed" : {
       "type" : "boolean"
     },
+    "multiFactorLambdas" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "scimServer" : {
       "type" : "ReactorFeatureStatus"
     },

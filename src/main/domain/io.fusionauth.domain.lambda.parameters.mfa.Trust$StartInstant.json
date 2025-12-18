@@ -1,0 +1,17 @@
+{
+  "packageName" : "io.fusionauth.domain.lambda.parameters.mfa",
+  "type" : "StartInstant",
+  "fields" : {
+    "applications" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      }, {
+        "type" : "ZonedDateTime"
+      } ]
+    },
+    "tenant" : {
+      "type" : "ZonedDateTime"
+    }
+  }
+}
