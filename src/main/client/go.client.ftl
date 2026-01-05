@@ -1,6 +1,6 @@
 [#import "_macros.ftl" as global/]
 /*
-* Copyright (c) 2019-${.now?string('yyyy')}, FusionAuth, All Rights Reserved
+* Copyright (c) FusionAuth, All Rights Reserved
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
