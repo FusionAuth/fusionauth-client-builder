@@ -24,6 +24,14 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "dpop_signing_alg_values_supported" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
     "end_session_endpoint" : {
       "className" : "java.lang.String",
       "type" : "String"
