@@ -9,9 +9,9 @@
   "errorResponse": "Errors",
   "params": [
     {
-      "name": "entityId",
+      "name": "targetEntityId",
       "comments": [
-        "The Id of the Entity that the User/Entity is being granted access to."
+        "The Id of the Entity that the User or Entity is being granted access to."
       ],
       "type": "urlSegment",
       "javaType": "UUID"
