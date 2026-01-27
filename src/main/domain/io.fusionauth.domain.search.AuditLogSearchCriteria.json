@@ -30,6 +30,9 @@
     "start" : {
       "type" : "ZonedDateTime"
     },
+    "tenantId" : {
+      "type" : "UUID"
+    },
     "user" : {
       "type" : "String"
     }

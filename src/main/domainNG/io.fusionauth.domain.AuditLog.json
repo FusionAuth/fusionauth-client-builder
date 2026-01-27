@@ -43,9 +43,13 @@
     "reason" : {
       "className" : "java.lang.String",
       "type" : "String"
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "java.lang.Long", "java.time.ZonedDateTime" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "java.lang.Long", "java.time.ZonedDateTime", "java.util.UUID" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
