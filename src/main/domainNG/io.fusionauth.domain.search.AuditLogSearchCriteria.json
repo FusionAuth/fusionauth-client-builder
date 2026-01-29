@@ -40,12 +40,16 @@
       "className" : "java.time.ZonedDateTime",
       "type" : "ZonedDateTime"
     },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "user" : {
       "className" : "java.lang.String",
       "type" : "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.search.BaseSearchCriteria", "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime" ],
+  "imports" : [ "io.fusionauth.domain.search.BaseSearchCriteria", "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "java.util.UUID" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

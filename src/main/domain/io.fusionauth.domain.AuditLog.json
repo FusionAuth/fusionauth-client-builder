@@ -39,6 +39,9 @@
     },
     "reason" : {
       "type" : "String"
+    },
+    "tenantId" : {
+      "type" : "UUID"
     }
   }
 }
