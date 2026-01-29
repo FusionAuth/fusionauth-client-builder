@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderSource",
+  "description" : "/**\n * The source of an identity provider configuration.\n */\n",
+  "enum" : [ "System", "TenantManager" ]
+}
