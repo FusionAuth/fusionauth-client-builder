@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.provider.IdentityProviderSource",
+  "enum" : [ "System", "TenantManager" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderSource"
+}

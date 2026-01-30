@@ -55,6 +55,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "source" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderSource",
+      "type" : "IdentityProviderSource"
+    },
     "tenantConfiguration" : {
       "className" : "java.util.Map",
       "type" : "Map",
@@ -71,7 +75,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.Enableable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.provider.BaseIdentityProvider$LambdaConfiguration", "io.fusionauth.domain.provider.IdentityProviderLinkingStrategy", "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration" ],
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.Enableable", "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.provider.BaseIdentityProvider$LambdaConfiguration", "io.fusionauth.domain.provider.IdentityProviderLinkingStrategy", "io.fusionauth.domain.provider.IdentityProviderSource", "io.fusionauth.domain.provider.IdentityProviderTenantConfiguration" ],
   "interfaces" : [ {
     "className" : "com.inversoft.mybatis.JSONColumnable",
     "type" : "JSONColumnable"

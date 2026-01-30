@@ -12,6 +12,9 @@
     "name" : {
       "type" : "String"
     },
+    "source" : {
+      "type" : "IdentityProviderSource"
+    },
     "tenantId" : {
       "type" : "UUID"
     },
