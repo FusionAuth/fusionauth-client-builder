@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.Key$KeySource",
+  "enum" : [ "System", "TenantManager" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "Key$KeySource"
+}

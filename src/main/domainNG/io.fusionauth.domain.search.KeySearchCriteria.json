@@ -29,12 +29,16 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "source" : {
+      "className" : "io.fusionauth.domain.Key$KeySource",
+      "type" : "Key$KeySource"
+    },
     "type" : {
       "className" : "io.fusionauth.domain.Key$KeyType",
       "type" : "Key$KeyType"
     }
   },
-  "imports" : [ "java.util.Set", "java.lang.String", "java.util.Map", "io.fusionauth.domain.Key$KeyAlgorithm", "io.fusionauth.domain.Key$KeyType" ],
+  "imports" : [ "java.util.Set", "java.lang.String", "java.util.Map", "io.fusionauth.domain.Key$KeyAlgorithm", "io.fusionauth.domain.Key$KeySource", "io.fusionauth.domain.Key$KeyType" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.search",
