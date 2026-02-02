@@ -12,6 +12,9 @@
     "name" : {
       "type" : "String"
     },
+    "source" : {
+      "type" : "KeySource"
+    },
     "type" : {
       "type" : "KeyType"
     }
