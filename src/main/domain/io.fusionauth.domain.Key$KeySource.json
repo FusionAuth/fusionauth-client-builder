@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "KeySource",
+  "description" : "/**\n * The source of a key.\n */\n",
+  "enum" : [ "System", "TenantManager" ]
+}
