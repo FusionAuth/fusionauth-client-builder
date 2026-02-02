@@ -9,6 +9,9 @@
       "className" : "io.fusionauth.domain.Requirable",
       "type" : "Requirable"
     },
+    "completeRegistration" : {
+      "type" : "boolean"
+    },
     "confirmPassword" : {
       "type" : "boolean"
     },
