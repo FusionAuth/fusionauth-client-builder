@@ -14,6 +14,9 @@
     "auditLogConfiguration" : {
       "type" : "AuditLogConfiguration"
     },
+    "brandName" : {
+      "type" : "String"
+    },
     "corsConfiguration" : {
       "type" : "CORSConfiguration"
     },
@@ -39,6 +42,9 @@
     },
     "reportTimezone" : {
       "type" : "ZoneId"
+    },
+    "tenantManagerAttributeFormId" : {
+      "type" : "UUID"
     },
     "trustedProxyConfiguration" : {
       "type" : "SystemTrustedProxyConfiguration"
