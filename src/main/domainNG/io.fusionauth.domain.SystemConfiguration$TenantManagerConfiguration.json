@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.SystemConfiguration$TenantManagerConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "attributeFormId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "brandName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.SystemConfiguration$TenantManagerConfiguration",
+      "type" : "SystemConfiguration$TenantManagerConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SystemConfiguration$TenantManagerConfiguration"
+}
