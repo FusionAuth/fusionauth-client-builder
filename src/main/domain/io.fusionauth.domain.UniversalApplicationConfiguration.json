@@ -3,6 +3,9 @@
   "type" : "UniversalApplicationConfiguration",
   "description" : "/**\n * @author Lyle Schemmerling\n */\n",
   "fields" : {
+    "allowTenantManagerIdentityProviders" : {
+      "type" : "boolean"
+    },
     "universal" : {
       "type" : "boolean"
     }

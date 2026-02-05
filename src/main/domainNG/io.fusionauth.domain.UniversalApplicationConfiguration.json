@@ -2,6 +2,9 @@
   "className" : "io.fusionauth.domain.UniversalApplicationConfiguration",
   "extends" : { },
   "fields" : {
+    "allowTenantManagerIdentityProviders" : {
+      "type" : "boolean"
+    },
     "universal" : {
       "type" : "boolean"
     }
