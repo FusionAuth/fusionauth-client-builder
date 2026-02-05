@@ -40,6 +40,9 @@
     "reportTimezone" : {
       "type" : "ZoneId"
     },
+    "tenantManagerConfiguration" : {
+      "type" : "TenantManagerConfiguration"
+    },
     "trustedProxyConfiguration" : {
       "type" : "SystemTrustedProxyConfiguration"
     },

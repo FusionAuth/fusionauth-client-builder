@@ -48,6 +48,10 @@
       "className" : "java.time.ZoneId",
       "type" : "ZoneId"
     },
+    "tenantManagerConfiguration" : {
+      "className" : "io.fusionauth.domain.SystemConfiguration$TenantManagerConfiguration",
+      "type" : "SystemConfiguration$TenantManagerConfiguration"
+    },
     "trustedProxyConfiguration" : {
       "className" : "io.fusionauth.domain.SystemTrustedProxyConfiguration",
       "type" : "SystemTrustedProxyConfiguration"
@@ -65,7 +69,7 @@
       "type" : "WebhookEventLogConfiguration"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.SystemConfiguration$AuditLogConfiguration", "java.lang.String", "io.fusionauth.domain.CORSConfiguration", "java.util.Map", "io.fusionauth.domain.SystemConfiguration$EventLogConfiguration", "java.time.ZonedDateTime", "io.fusionauth.domain.SystemConfiguration$LoginRecordConfiguration", "java.time.ZoneId", "io.fusionauth.domain.SystemTrustedProxyConfiguration", "io.fusionauth.domain.SystemConfiguration$UIConfiguration", "io.fusionauth.domain.UsageDataConfiguration", "io.fusionauth.domain.WebhookEventLogConfiguration" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.SystemConfiguration$AuditLogConfiguration", "java.lang.String", "io.fusionauth.domain.CORSConfiguration", "java.util.Map", "io.fusionauth.domain.SystemConfiguration$EventLogConfiguration", "java.time.ZonedDateTime", "io.fusionauth.domain.SystemConfiguration$LoginRecordConfiguration", "java.time.ZoneId", "io.fusionauth.domain.SystemConfiguration$TenantManagerConfiguration", "io.fusionauth.domain.SystemTrustedProxyConfiguration", "io.fusionauth.domain.SystemConfiguration$UIConfiguration", "io.fusionauth.domain.UsageDataConfiguration", "io.fusionauth.domain.WebhookEventLogConfiguration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
