@@ -1,17 +1,5 @@
 /*
- * Copyright (c) 2019-2025, FusionAuth, All Rights Reserved
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
- * either express or implied. See the License for the specific
- * language governing permissions and limitations under the License.
+ * Copyright (c) 2019-2026, FusionAuth, All Rights Reserved
  */
 
 import java.nio.file.Files
@@ -83,7 +71,7 @@ target(name: "generateDomain", description: "Generates all of the json files for
     fileSet(dir: "src/main/domain")
   }
 
-  clientLibrary.generateDomainJson(srcDir: "../fusionauth-app/src/main/java/io/fusionauth/domain", outDir: "src/main/domain")
+  clientLibrary.generateDomainJson(srcDir: "../../src/main/java/io/fusionauth/domain", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/java-error/com/inversoft/error", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwt/domain/", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwks/domain/", outDir: "src/main/domain")
@@ -166,7 +154,7 @@ void domainDSLBuilder() {
   }
 
   ProcessBuilder appPb = new ProcessBuilder("sb", "clean", "compile")
-  def appProcess = appPb.inheritIO().directory(new File("../fusionauth-app")).start()
+  def appProcess = appPb.inheritIO().directory(new File("../../")).start()
   appProcess.consumeProcessOutput(System.out, System.err)
   appProcess.waitFor()
   if (appProcess.exitValue() != 0) {
@@ -179,7 +167,7 @@ void domainDSLBuilder() {
   var home = appPb.environment().get("HOME")
   ProcessBuilder domainBuilder = new ProcessBuilder("${home}/dev/java/current21/bin/java", "-cp", classPath,
                                                     "io.fusionauth.builders.DomainDSLBuilder", debug)
-  def domainBuilderProcess = domainBuilder.inheritIO().directory(new File("../fusionauth-app/")).start()
+  def domainBuilderProcess = domainBuilder.inheritIO().directory(new File("../../")).start()
   domainBuilderProcess.consumeProcessOutput(System.out, System.err)
   domainBuilderProcess.waitFor()
   if (domainBuilderProcess.exitValue() != 0) {
@@ -195,11 +183,11 @@ target(name: "build-angular", description: "Build the Angular Client Library") {
 target(name: "build-java", description: "Build the Java Client Library") {
   // Build the FusionAuth client in fusionauth-app first. Then copy everything over to fusionauth-java-client and massage it.
   clientLibrary.buildClient(template: "src/main/client/java.client.ftl",
-                            outputFile: "../fusionauth-app/src/main/java/io/fusionauth/client/FusionAuthClient.java")
+                            outputFile: "../../src/main/java/io/fusionauth/client/FusionAuthClient.java")
 
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/domain") {
-    fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/domain", excludePatterns: ["internal/annotation/*"])
+    fileSet(dir: "../../src/main/java/io/fusionauth/domain", excludePatterns: ["internal/annotation/*"])
     filter(token: ", JSONColumnable", value: "")
     filter(token: "implements JSONColumnable, ", value: "")
     filter(token: "implements JSONColumnable", value: "")
@@ -224,7 +212,7 @@ target(name: "build-java", description: "Build the Java Client Library") {
   }
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/client")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/client") {
-    fileSet(dir: "../fusionauth-app/src/main/java/io/fusionauth/client", excludePatterns: ["json/internal/*"])
+    fileSet(dir: "../../src/main/java/io/fusionauth/client", excludePatterns: ["json/internal/*"])
   }
 }
 
