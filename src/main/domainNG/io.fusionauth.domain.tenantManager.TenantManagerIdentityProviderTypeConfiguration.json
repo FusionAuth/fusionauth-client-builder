@@ -1,0 +1,51 @@
+{
+  "className" : "io.fusionauth.domain.tenantManager.TenantManagerIdentityProviderTypeConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "defaultAttributeMappings" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "linkingStrategy" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderLinkingStrategy",
+      "type" : "IdentityProviderLinkingStrategy"
+    },
+    "type" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderType",
+      "type" : "IdentityProviderType"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "io.fusionauth.domain.provider.IdentityProviderLinkingStrategy", "io.fusionauth.domain.provider.IdentityProviderType" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.tenantManager.TenantManagerIdentityProviderTypeConfiguration",
+      "type" : "TenantManagerIdentityProviderTypeConfiguration"
+    } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.tenantManager",
+  "type" : "TenantManagerIdentityProviderTypeConfiguration"
+}
