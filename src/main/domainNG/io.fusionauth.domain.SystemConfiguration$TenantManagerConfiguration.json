@@ -12,9 +12,20 @@
     "brandName" : {
       "className" : "java.lang.String",
       "type" : "String"
+    },
+    "identityProviderTypeConfigurations" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.provider.IdentityProviderType",
+        "type" : "IdentityProviderType"
+      }, {
+        "className" : "io.fusionauth.domain.tenantManager.TenantManagerIdentityProviderTypeConfiguration",
+        "type" : "TenantManagerIdentityProviderTypeConfiguration"
+      } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "java.util.Map", "io.fusionauth.domain.provider.IdentityProviderType", "io.fusionauth.domain.tenantManager.TenantManagerIdentityProviderTypeConfiguration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",
