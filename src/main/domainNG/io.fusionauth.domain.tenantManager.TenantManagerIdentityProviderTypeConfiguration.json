@@ -5,6 +5,17 @@
     "type" : "Enableable"
   },
   "fields" : {
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
     "defaultAttributeMappings" : {
       "className" : "java.util.Map",
       "type" : "Map",
