@@ -17,7 +17,7 @@
     "identityProviderTypeConfigurations" : {
       "type" : "Map",
       "typeArguments" : [ {
-        "type" : "IdentityProviderType"
+        "type" : "String"
       }, {
         "type" : "TenantManagerIdentityProviderTypeConfiguration"
       } ]
