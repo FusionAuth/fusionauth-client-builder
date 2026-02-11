@@ -1,7 +1,7 @@
 {
   "packageName" : "io.fusionauth.domain.api.tenantManager",
   "type" : "TenantManagerIdentityProviderTypeConfigurationResponse",
-  "description" : "/**\n * The Tenant Manager IdP type configuration request object\n */\n",
+  "description" : "/**\n * The Tenant Manager IdP type configuration response object\n */\n",
   "fields" : {
     "typeConfiguration" : {
       "type" : "TenantManagerIdentityProviderTypeConfiguration"
