@@ -113,7 +113,14 @@ target(name: "clean", description: "Clean") {
   file.prune(dir: "build/zips")
 }
 
-target(name: "int", description: "Releases a local integration build of the project", dependsOn: ["generateDomain", "build-all"]) {
+target(name: "checkOperations", description: "Checks operations to ensure we are not missing anything") {
+  if (!cleanExecute(["bin/check-operations.sh"])) {
+    fail("Operations check failed, see above for details.")
+  }
+  output.infoln("Operations check passed.")
+}
+
+target(name: "int", description: "Releases a local integration build of the project", dependsOn: ["generateDomain", "build-all", "checkOperations"]) {
   file.zip(file: "build/zips/fusionauth-client-builder.zip") {
     fileSet(dir: "src/main")
   }
