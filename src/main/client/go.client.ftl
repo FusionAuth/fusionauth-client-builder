@@ -263,14 +263,16 @@ func (c *FusionAuthClient) ${api.methodName?cap_first}WithContext(ctx context.Co
              WithAuthorization(${api.authorization}).
   [/#if]
   [#list api.params![] as param]
+    [#if param.javaType??][#assign goType = global.convertType(param.javaType, "go")/][/#if]
     [#if param.type == "urlSegment"]
       [#if !param.constant?? && param.javaType == "Integer"]
         WithUriSegment(strconv.Itoa(${(param.constant?? && param.constant)?then(param.value, global.convertValue(param.name, "go"))})).
+      [#elseif !param.constant?? && goType != "string"]
+       WithUriSegment(string(${(param.constant?? && param.constant)?then(param.value,  global.convertValue(param.name, "go"))})).
       [#else]
        WithUriSegment(${(param.constant?? && param.constant)?then(param.value,  global.convertValue(param.name, "go"))}).
       [/#if]
     [#elseif param.type == "urlParameter"]
-      [#if param.javaType??][#assign goType = global.convertType(param.javaType, "go")/][/#if]
       [#if param.value?? && param.value == "true"]
         WithParameter("${param.parameterName}", strconv.FormatBool(true)).
       [#elseif param.value?? && param.value == "false"]

@@ -213,6 +213,8 @@ import io.fusionauth.domain.api.report.LoginReportResponse;
 import io.fusionauth.domain.api.report.MonthlyActiveUserReportResponse;
 import io.fusionauth.domain.api.report.RegistrationReportResponse;
 import io.fusionauth.domain.api.report.TotalsReportResponse;
+import io.fusionauth.domain.api.tenantManager.TenantManagerIdentityProviderTypeConfigurationRequest;
+import io.fusionauth.domain.api.tenantManager.TenantManagerIdentityProviderTypeConfigurationResponse;
 import io.fusionauth.domain.api.twoFactor.SecretResponse;
 import io.fusionauth.domain.api.twoFactor.TwoFactorLoginRequest;
 import io.fusionauth.domain.api.twoFactor.TwoFactorSendRequest;

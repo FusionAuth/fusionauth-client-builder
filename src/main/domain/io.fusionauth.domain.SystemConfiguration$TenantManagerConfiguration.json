@@ -13,6 +13,14 @@
     },
     "brandName" : {
       "type" : "String"
+    },
+    "identityProviderTypeConfigurations" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "TenantManagerIdentityProviderTypeConfiguration"
+      } ]
     }
   }
 }

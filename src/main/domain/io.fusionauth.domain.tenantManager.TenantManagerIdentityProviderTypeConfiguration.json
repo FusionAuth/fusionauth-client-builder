@@ -1,0 +1,38 @@
+{
+  "packageName" : "io.fusionauth.domain.tenantManager",
+  "type" : "TenantManagerIdentityProviderTypeConfiguration",
+  "description" : "/**\n * Configuration object for identity provider types allowed in Tenant Manager\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantManagerIdentityProviderTypeConfiguration"
+    } ]
+  }, {
+    "type" : "JSONColumnable"
+  } ],
+  "fields" : {
+    "defaultAttributeMappings" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "String"
+      } ]
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "linkingStrategy" : {
+      "type" : "IdentityProviderLinkingStrategy"
+    },
+    "type" : {
+      "type" : "IdentityProviderType"
+    }
+  }
+}
