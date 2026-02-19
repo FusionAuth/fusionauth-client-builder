@@ -1,7 +1,7 @@
 {
   "uri": "/api/identity-provider/lookup",
   "comments": [
-    "Retrieves the identity provider for the given domain. A 200 response code indicates the domain is managed",
+    "Retrieves any global identity providers for the given domain. A 200 response code indicates the domain is managed",
     "by a registered identity provider. A 404 indicates the domain is not managed."
   ],
   "method": "get",
