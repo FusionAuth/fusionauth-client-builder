@@ -18,6 +18,9 @@
         "type" : "AuthenticationThreats"
       } ]
     },
+    "authenticationType" : {
+      "type" : "String"
+    },
     "eventInfo" : {
       "type" : "EventInfo"
     },

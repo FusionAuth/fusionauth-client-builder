@@ -14,6 +14,10 @@
       "className" : "io.fusionauth.domain.Application",
       "type" : "Application"
     },
+    "authenticationType": {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "authenticationThreats" : {
       "className" : "java.util.Set",
       "type" : "Set",
