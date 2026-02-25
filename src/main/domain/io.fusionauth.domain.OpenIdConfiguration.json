@@ -24,6 +24,12 @@
     "device_authorization_endpoint" : {
       "type" : "String"
     },
+    "dpop_signing_alg_values_supported" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
     "end_session_endpoint" : {
       "type" : "String"
     },

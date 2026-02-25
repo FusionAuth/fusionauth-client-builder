@@ -1,6 +1,6 @@
 {
   "packageName" : "io.fusionauth.domain.oauth2",
   "type" : "TokenType",
-  "description" : "/**\n * <ul>\n * <li>Bearer Token type as defined by <a href=\"https://tools.ietf.org/html/rfc6750\">RFC 6750</a>.</li>\n * <li>MAC Token type as referenced by <a href=\"https://tools.ietf.org/html/rfc6749\">RFC 6749</a> and\n * <a href=\"https://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-05\">\n * Draft RFC on OAuth 2.0 Message Authentication Code (MAC) Tokens</a>\n * </li>\n * </ul>\n *\n * @author Daniel DeGroff\n */\n",
-  "enum" : [ "Bearer", "MAC" ]
+  "description" : "/**\n * <ul>\n * <li>Bearer Token type as defined by <a href=\"https://tools.ietf.org/html/rfc6750\">RFC 6750</a>.</li>\n * <li>MAC Token type as referenced by <a href=\"https://tools.ietf.org/html/rfc6749\">RFC 6749</a> and\n * <a href=\"https://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-05\">\n * Draft RFC on OAuth 2.0 Message Authentication Code (MAC) Tokens</a>\n * </li>\n * <li>DPoP Token type as defined by <a href=\"https://datatracker.ietf.org/doc/html/rfc9449\">RFC 9449</a></li>\n * </ul>\n *\n * @author Daniel DeGroff\n */\n",
+  "enum" : [ "Bearer", "MAC", "DPoP" ]
 }

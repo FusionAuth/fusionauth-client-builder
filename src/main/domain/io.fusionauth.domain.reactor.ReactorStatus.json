@@ -36,6 +36,9 @@
     "connectors" : {
       "type" : "ReactorFeatureStatus"
     },
+    "dPoP" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "entityManagement" : {
       "type" : "ReactorFeatureStatus"
     },
