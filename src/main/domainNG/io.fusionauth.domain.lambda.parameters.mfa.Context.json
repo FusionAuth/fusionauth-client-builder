@@ -26,6 +26,10 @@
         "type" : "AuthenticationThreats"
       } ]
     },
+    "authenticationType" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "eventInfo" : {
       "className" : "io.fusionauth.domain.EventInfo",
       "type" : "EventInfo"
