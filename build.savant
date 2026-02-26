@@ -49,6 +49,10 @@ release = loadPlugin(id: "org.savantbuild.plugin:release-git:2.0.0")
 clientLibrary.settings.debug = false
 //clientLibrary.settings.domainDirectory = Paths.get("src/main/domainNG")
 
+inMonoRepo = !Files.exists(project.directory.resolve("../fusionauth-ij"))
+fusionAuthAppDir = inMonoRepo ? project.directory.resolve("../../").normalize() : project.directory.resolve("../fusionauth-app").normalize()
+println("Derived fusionauth-app location of ${fusionAuthAppDir}")
+
 target(name: "extract-source-jars") {
   // Download the source JARs
   dependency.resolve() {
@@ -65,11 +69,6 @@ target(name: "extract-source-jars") {
   file.unzip(file: javaError.replace("${javaErrorVersion}.jar", "${javaErrorVersion}-src.jar"), to: "build/src/java-error/")
   file.unzip(file: fusionAuthJWT.replace("${fusionauthJWTVersion}.jar", "${fusionauthJWTVersion}-src.jar"), to: "build/src/fusionauth-jwt/")
 }
-
-inMonoRepo = !Files.exists(project.directory.resolve("../fusionauth-ij"))
-fusionAuthAppDir = inMonoRepo ? project.directory.resolve("../../").normalize() :
-    project.directory.resolve("../fusionauth-app").normalize()
-println("Derived fusionauth-app location of ${fusionAuthAppDir}")
 
 target(name: "generateDomain", description: "Generates all of the json files for the domain", dependsOn: ['extract-source-jars']) {
   file.delete {
@@ -173,7 +172,7 @@ void domainDSLBuilder() {
     fail("Unable to run `sb compile` for fusionauth-app")
   }
 
-  String classPath = "../fusionauth-app/build/classes/test:../fusionauth-app/build/classes/main:../fusionauth-app/build/domain-builder/lib/*"
+  String classPath = "${fusionAuthAppDir}/build/classes/test:${fusionAuthAppDir}/build/classes/main:${fusionAuthAppDir}/build/domain-builder/lib/*"
 
   var debug = switches.has("domain-debug") ? "debug" : ""
   var home = appPb.environment().get("HOME")
