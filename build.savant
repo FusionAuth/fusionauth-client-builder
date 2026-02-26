@@ -66,12 +66,17 @@ target(name: "extract-source-jars") {
   file.unzip(file: fusionAuthJWT.replace("${fusionauthJWTVersion}.jar", "${fusionauthJWTVersion}-src.jar"), to: "build/src/fusionauth-jwt/")
 }
 
+inMonoRepo = !Files.exists(project.directory.resolve("../fusionauth-ij"))
+fusionAuthAppDir = inMonoRepo ? project.directory.resolve("../../").normalize() :
+                                project.directory.resolve("../fusionauth-app").normalize()
+println("Derived fusionauth-app location of ${fusionAuthAppDir}")
+
 target(name: "generateDomain", description: "Generates all of the json files for the domain", dependsOn: ['extract-source-jars']) {
   file.delete {
     fileSet(dir: "src/main/domain")
   }
 
-  clientLibrary.generateDomainJson(srcDir: "../../src/main/java/io/fusionauth/domain", outDir: "src/main/domain")
+  clientLibrary.generateDomainJson(srcDir: "${fusionAuthAppDir}/src/main/java/io/fusionauth/domain", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/java-error/com/inversoft/error", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwt/domain/", outDir: "src/main/domain")
   clientLibrary.generateDomainJson(srcDir: "build/src/fusionauth-jwt/io/fusionauth/jwks/domain/", outDir: "src/main/domain")
@@ -161,7 +166,7 @@ void domainDSLBuilder() {
   }
 
   ProcessBuilder appPb = new ProcessBuilder("sb", "clean", "compile")
-  def appProcess = appPb.inheritIO().directory(new File("../../")).start()
+  def appProcess = appPb.inheritIO().directory(fusionAuthAppDir.toFile()).start()
   appProcess.consumeProcessOutput(System.out, System.err)
   appProcess.waitFor()
   if (appProcess.exitValue() != 0) {
@@ -174,7 +179,7 @@ void domainDSLBuilder() {
   var home = appPb.environment().get("HOME")
   ProcessBuilder domainBuilder = new ProcessBuilder("${home}/dev/java/current21/bin/java", "-cp", classPath,
                                                     "io.fusionauth.builders.DomainDSLBuilder", debug)
-  def domainBuilderProcess = domainBuilder.inheritIO().directory(new File("../../")).start()
+  def domainBuilderProcess = domainBuilder.inheritIO().directory(fusionAuthAppDir.toFile()).start()
   domainBuilderProcess.consumeProcessOutput(System.out, System.err)
   domainBuilderProcess.waitFor()
   if (domainBuilderProcess.exitValue() != 0) {
@@ -190,11 +195,11 @@ target(name: "build-angular", description: "Build the Angular Client Library") {
 target(name: "build-java", description: "Build the Java Client Library") {
   // Build the FusionAuth client in fusionauth-app first. Then copy everything over to fusionauth-java-client and massage it.
   clientLibrary.buildClient(template: "src/main/client/java.client.ftl",
-                            outputFile: "../../src/main/java/io/fusionauth/client/FusionAuthClient.java")
+                            outputFile: "${fusionAuthAppDir}/src/main/java/io/fusionauth/client/FusionAuthClient.java")
 
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/domain")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/domain") {
-    fileSet(dir: "../../src/main/java/io/fusionauth/domain", excludePatterns: ["internal/annotation/*"])
+    fileSet(dir: "${fusionAuthAppDir}/src/main/java/io/fusionauth/domain", excludePatterns: ["internal/annotation/*"])
     filter(token: ", JSONColumnable", value: "")
     filter(token: "implements JSONColumnable, ", value: "")
     filter(token: "implements JSONColumnable", value: "")
@@ -219,7 +224,7 @@ target(name: "build-java", description: "Build the Java Client Library") {
   }
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/client")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/client") {
-    fileSet(dir: "../../src/main/java/io/fusionauth/client", excludePatterns: ["json/internal/*"])
+    fileSet(dir: "${fusionAuthAppDir}/src/main/java/io/fusionauth/client", excludePatterns: ["json/internal/*"])
   }
 }
 
