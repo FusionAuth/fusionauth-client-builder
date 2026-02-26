@@ -177,7 +177,10 @@ void domainDSLBuilder() {
   var debug = switches.has("domain-debug") ? "debug" : ""
   var home = appPb.environment().get("HOME")
   ProcessBuilder domainBuilder = new ProcessBuilder("${home}/dev/java/current21/bin/java", "-cp", classPath,
-                                                    "io.fusionauth.builders.DomainDSLBuilder", debug)
+                                                    "io.fusionauth.builders.DomainDSLBuilder",
+                                                    fusionAuthAppDir.toString(),
+                                                    inMonoRepo.toString(),
+                                                    debug)
   def domainBuilderProcess = domainBuilder.inheritIO().directory(fusionAuthAppDir.toFile()).start()
   domainBuilderProcess.consumeProcessOutput(System.out, System.err)
   domainBuilderProcess.waitFor()
