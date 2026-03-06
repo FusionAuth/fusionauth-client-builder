@@ -95,6 +95,12 @@
       "typeArguments" : [ {
         "type" : "String"
       } ]
+    },
+    "code_challenge_methods_supported" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
     }
   }
 }

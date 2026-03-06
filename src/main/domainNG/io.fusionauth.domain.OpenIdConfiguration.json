@@ -20,6 +20,14 @@
         "type" : "String"
       } ]
     },
+    "code_challenge_methods_supported" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
     "device_authorization_endpoint" : {
       "className" : "java.lang.String",
       "type" : "String"
