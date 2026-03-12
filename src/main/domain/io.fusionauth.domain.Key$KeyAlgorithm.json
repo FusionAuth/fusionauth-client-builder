@@ -31,5 +31,8 @@
   }, {
     "name" : "Ed25519",
     "args" : [ "Ed25519" ]
+  }, {
+    "name" : "None",
+    "args" : [ "None" ]
   } ]
 }
