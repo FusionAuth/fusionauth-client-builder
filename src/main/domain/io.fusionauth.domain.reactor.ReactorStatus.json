@@ -45,6 +45,9 @@
     "expiration" : {
       "type" : "LocalDate"
     },
+    "ipGeoLocation" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "licenseAttributes" : {
       "type" : "Map",
       "typeArguments" : [ {

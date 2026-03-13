@@ -58,6 +58,10 @@
       "className" : "java.time.LocalDate",
       "type" : "LocalDate"
     },
+    "ipGeoLocation" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
     "licenseAttributes" : {
       "className" : "java.util.Map",
       "type" : "Map",
