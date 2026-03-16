@@ -1,6 +1,7 @@
 ## FusionAuth Client Builder ![semver 2.0.0 compliant](http://img.shields.io/badge/semver-2.0.0-brightgreen.svg?style=flat-square)
 
 
+
 ## Credits
 Thanks to the following folks for your most excellent contributions!
 * [@medhir](https://github.com/medhir) 
