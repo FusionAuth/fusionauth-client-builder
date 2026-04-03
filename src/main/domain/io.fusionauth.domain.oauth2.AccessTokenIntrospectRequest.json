@@ -11,6 +11,9 @@
     },
     "token" : {
       "type" : "String"
+    },
+    "token_type_hint" : {
+      "type" : "String"
     }
   }
 }

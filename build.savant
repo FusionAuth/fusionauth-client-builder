@@ -8,7 +8,7 @@ import java.nio.file.Paths
 fusionauthJWTVersion = "5.2.4"
 javaErrorVersion = "2.2.3"
 
-project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.64.0", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.65.0", licenses: ["ApacheV2_0"]) {
   workflow {
     fetch {
       cache()
@@ -223,10 +223,15 @@ target(name: "build-java", description: "Build the Java Client Library") {
     // don't want internal tickets and such in here
     filter(token: "// TODO : ENG.*", value: "")
     filter(token: "// INTERNAL.*", value: "")
+    // we don't need or want ZonedDateTimeWrapper in our client code
+    // code that calls ZonedDateTimeWrapper already imports ZonedDateTime, so no need to replace it with anything
+    filter(token: "import io.fusionauth.api.domain.ZonedDateTimeWrapper;\n", value: "")
+    filter(token: "ZonedDateTimeWrapper.now", value: "ZonedDateTime.now")
   }
   file.prune(dir: "../fusionauth-java-client/src/main/java/io/fusionauth/client")
   file.copy(to: "../fusionauth-java-client/src/main/java/io/fusionauth/client") {
-    fileSet(dir: "${fusionAuthAppDir}/src/main/java/io/fusionauth/client", excludePatterns: ["json/internal/*"])
+    fileSet(dir: "${fusionAuthAppDir}/src/main/java/io/fusionauth/client",
+            excludePatterns: ["json/internal/*"])
   }
 }
 

@@ -13,6 +13,10 @@
     "token" : {
       "className" : "java.lang.String",
       "type" : "String"
+    },
+    "token_type_hint" : {
+      "className" : "java.lang.String",
+      "type" : "String"
     }
   },
   "imports" : [ "java.lang.String" ],
