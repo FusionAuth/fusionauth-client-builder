@@ -18,6 +18,9 @@ project(group: "io.fusionauth", name: "fusionauth-client-builder", version: "1.6
     publish {
       cache()
     }
+    semanticVersions {
+      mapping(id: "com.google.guava:guava-parent:26.0-android", version: "26.0.0")
+    }
   }
 
   publishWorkflow {
