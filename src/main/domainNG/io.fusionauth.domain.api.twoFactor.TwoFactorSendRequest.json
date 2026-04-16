@@ -13,6 +13,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "messageType" : {
+      "className" : "io.fusionauth.domain.message.MessageType",
+      "type" : "MessageType"
+    },
     "method" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -30,7 +34,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.message.MessageType" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

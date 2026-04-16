@@ -20,6 +20,9 @@
     },
     "sms" : {
       "type" : "MultiFactorSMSMethod"
+    },
+    "voice" : {
+      "type" : "MultiFactorVoiceMethod"
     }
   }
 }

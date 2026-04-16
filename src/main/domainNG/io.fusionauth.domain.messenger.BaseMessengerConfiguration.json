@@ -28,6 +28,14 @@
       "className" : "java.time.ZonedDateTime",
       "type" : "ZonedDateTime"
     },
+    "messageTypes" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.message.MessageType",
+        "type" : "MessageType"
+      } ]
+    },
     "name" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -37,7 +45,7 @@
       "type" : "String"
     }
   },
-  "imports" : [ "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime" ],
+  "imports" : [ "java.util.Map", "java.lang.String", "java.util.UUID", "java.time.ZonedDateTime", "java.util.Set", "io.fusionauth.domain.message.MessageType" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.messenger",

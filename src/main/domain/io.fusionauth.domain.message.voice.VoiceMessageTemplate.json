@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.message.voice",
+  "type" : "VoiceMessageTemplate",
+  "description" : "/**\n * @author Daniel King\n */\n",
+  "extends" : [ {
+    "type" : "MessageTemplate"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "VoiceMessageTemplate"
+    } ]
+  } ],
+  "fields" : {
+    "defaultTemplate" : {
+      "type" : "String"
+    },
+    "localizedTemplates" : {
+      "type" : "LocalizedStrings"
+    }
+  }
+}

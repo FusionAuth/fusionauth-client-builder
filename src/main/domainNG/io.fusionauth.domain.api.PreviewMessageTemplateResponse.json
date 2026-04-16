@@ -9,9 +9,13 @@
     "message" : {
       "className" : "io.fusionauth.domain.message.sms.SMSMessage",
       "type" : "SMSMessage"
+    },
+    "previewMessage" : {
+      "className" : "io.fusionauth.domain.message.Message",
+      "type" : "Message"
     }
   },
-  "imports" : [ "com.inversoft.error.Errors", "io.fusionauth.domain.message.sms.SMSMessage" ],
+  "imports" : [ "com.inversoft.error.Errors", "io.fusionauth.domain.message.sms.SMSMessage", "io.fusionauth.domain.message.Message" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

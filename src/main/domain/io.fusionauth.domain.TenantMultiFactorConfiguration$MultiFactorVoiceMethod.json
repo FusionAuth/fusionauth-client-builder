@@ -1,0 +1,21 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "MultiFactorVoiceMethod",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "MultiFactorVoiceMethod"
+    } ]
+  } ],
+  "fields" : {
+    "messengerId" : {
+      "type" : "UUID"
+    },
+    "templateId" : {
+      "type" : "UUID"
+    }
+  }
+}

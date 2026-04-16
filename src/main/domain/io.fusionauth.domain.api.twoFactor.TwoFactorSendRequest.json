@@ -15,6 +15,9 @@
     "email" : {
       "type" : "String"
     },
+    "messageType" : {
+      "type" : "MessageType"
+    },
     "method" : {
       "type" : "String"
     },

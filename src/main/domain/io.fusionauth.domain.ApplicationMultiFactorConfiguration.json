@@ -14,6 +14,9 @@
     },
     "trustPolicy" : {
       "type" : "ApplicationMultiFactorTrustPolicy"
+    },
+    "voice" : {
+      "type" : "MultiFactorVoiceTemplate"
     }
   }
 }

@@ -8,6 +8,9 @@
     },
     "message" : {
       "type" : "SMSMessage"
+    },
+    "previewMessage" : {
+      "type" : "Message"
     }
   }
 }

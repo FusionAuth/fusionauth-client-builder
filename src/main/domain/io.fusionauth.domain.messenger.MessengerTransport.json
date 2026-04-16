@@ -1,6 +1,6 @@
 {
   "packageName" : "io.fusionauth.domain.messenger",
   "type" : "MessengerTransport",
-  "description" : "/**\n * @author Daniel DeGroff\n */\n",
+  "description" : "/**\n * @author Daniel DeGroff\n * @deprecated since 1.65.0,  use {@code MessageType} instead\n */\n",
   "fields" : { }
 }

@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.message.voice.VoiceMessage",
+  "extends" : { },
+  "fields" : {
+    "locale" : {
+      "className" : "java.util.Locale",
+      "type" : "Locale"
+    },
+    "message" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "phoneNumber" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.util.Locale", "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.message.voice",
+  "type" : "VoiceMessage"
+}

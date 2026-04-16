@@ -17,9 +17,13 @@
     "trustPolicy" : {
       "className" : "io.fusionauth.domain.ApplicationMultiFactorTrustPolicy",
       "type" : "ApplicationMultiFactorTrustPolicy"
+    },
+    "voice" : {
+      "className" : "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorVoiceTemplate",
+      "type" : "ApplicationMultiFactorConfiguration$MultiFactorVoiceTemplate"
     }
   },
-  "imports" : [ "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorEmailTemplate", "io.fusionauth.domain.MultiFactorLoginPolicy", "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorSMSTemplate", "io.fusionauth.domain.ApplicationMultiFactorTrustPolicy" ],
+  "imports" : [ "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorEmailTemplate", "io.fusionauth.domain.MultiFactorLoginPolicy", "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorSMSTemplate", "io.fusionauth.domain.ApplicationMultiFactorTrustPolicy", "io.fusionauth.domain.ApplicationMultiFactorConfiguration$MultiFactorVoiceTemplate" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

@@ -26,6 +26,12 @@
     "lastUpdateInstant" : {
       "type" : "ZonedDateTime"
     },
+    "messageTypes" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "MessageType"
+      } ]
+    },
     "name" : {
       "type" : "String"
     },
