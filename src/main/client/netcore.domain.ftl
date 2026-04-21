@@ -25,6 +25,29 @@
 [#macro printType type isDeclaration=false isTypeArgument=false]
   [#if type.type??]
     [#local convertedType = global.convertType(type.type, "csharp")/]
+    [#-- enums in C# are value types and are not nullable. In FusionAuth/Java land, they are. Therefore we need
+          to represent them as nullable in C#. The 'domain' top level Freemarker map value has all of our types in it
+          and we can lookup our field to determine whether it's an enum or not.
+
+          At this time, only doing ENUMs in API request/response classes because domain classes are used in responses, where
+          1) the value may be populated AND
+          2) a nullable change could be breaking to existing client code usage (prior to 1.65.0) and inaccurately reflect the API contract.
+
+          Other exception cases:
+          * KeyType - because it was already nullable. And removing nullability will break
+          object.HasValue checks in existing code.
+          * KeyAlgorithm - same reason as KeyType
+          * IdentityProviderType (we do NOT want this nullable) - it's only used in lookup response and should always be set
+          --]
+    [#if domain?filter(t -> t.type == type.type && t.enum?? &&
+                              type.type != "IdentityProviderType" &&
+                                (
+                                  ["KeyType", "KeyAlgorithm"]?seq_contains(type.type) ||
+                                  domain_item.packageName?starts_with("io.fusionauth.domain.api")
+                                )
+                      )?first??]
+      [#local convertedType = convertedType + "?"/]
+    [/#if]
     [#if isDeclaration]
       [#local convertedType = convertedType?replace("IDictionary", "Dictionary")/]
     [/#if]
