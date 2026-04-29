@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.api.identityProvider.IdentityProviderConnectionTestResponse",
+  "extends" : { },
+  "fields" : {
+    "connectionTestId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "result" : {
+      "className" : "io.fusionauth.domain.provider.IdentityProviderConnectionTestResult",
+      "type" : "IdentityProviderConnectionTestResult"
+    }
+  },
+  "imports" : [ "java.lang.String", "io.fusionauth.domain.provider.IdentityProviderConnectionTestResult" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.identityProvider",
+  "type" : "IdentityProviderConnectionTestResponse"
+}

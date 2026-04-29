@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.provider.IdentityProviderConnectionTestResult$IdentityProviderLoginStep",
+  "extends" : { },
+  "fields" : {
+    "detail" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "success" : {
+      "type" : "boolean"
+    },
+    "title" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderConnectionTestResult$IdentityProviderLoginStep"
+}

@@ -1,0 +1,21 @@
+{
+  "uri": "/api/identity-provider/test",
+  "comments": [
+    "Retrieves the results for an identity provider connection test."
+  ],
+  "method": "get",
+  "methodName": "retrieveIdentityProviderConnectionTestResults",
+  "successResponse": "IdentityProviderConnectionTestResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "connectionTestId",
+      "comments": [
+        "The connection test id to retrieve results for."
+      ],
+      "type": "urlParameter",
+      "parameterName": "connectionTestId",
+      "javaType": "String"
+    }
+  ]
+}

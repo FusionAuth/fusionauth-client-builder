@@ -12,6 +12,9 @@
     } ]
   } ],
   "fields" : {
+    "connectionTestId" : {
+      "type" : "String"
+    },
     "data" : {
       "type" : "Map",
       "typeArguments" : [ {

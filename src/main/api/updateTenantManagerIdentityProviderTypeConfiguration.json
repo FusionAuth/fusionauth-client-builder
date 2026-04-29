@@ -1,0 +1,28 @@
+{
+  "uri": "/api/tenant-manager/identity-provider",
+  "comments": [
+    "Updates the tenant manager identity provider type configuration for the given identity provider type."
+  ],
+  "method": "put",
+  "methodName": "updateTenantManagerIdentityProviderTypeConfiguration",
+  "successResponse": "TenantManagerIdentityProviderTypeConfigurationResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "type",
+      "comments": [
+        "The type of the identity provider."
+      ],
+      "type": "urlSegment",
+      "javaType": "IdentityProviderType"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains the updated tenant manager identity provider type configuration."
+      ],
+      "type": "body",
+      "javaType": "TenantManagerIdentityProviderTypeConfigurationRequest"
+    }
+  ]
+}

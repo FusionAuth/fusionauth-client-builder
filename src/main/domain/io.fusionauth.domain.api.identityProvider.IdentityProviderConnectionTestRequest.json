@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api.identityProvider",
+  "type" : "IdentityProviderConnectionTestRequest",
+  "description" : "/**\n * A request for interacting with the identity provider connection test API\n */\n",
+  "fields" : {
+    "identityProviderId" : {
+      "type" : "UUID"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    }
+  }
+}

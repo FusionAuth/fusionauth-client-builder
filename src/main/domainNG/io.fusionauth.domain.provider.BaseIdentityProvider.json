@@ -17,6 +17,17 @@
         "type" : "UUID"
       } ]
     },
+    "attributeMappings" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
     "data" : {
       "className" : "java.util.Map",
       "type" : "Map",
@@ -52,6 +63,10 @@
       "type" : "IdentityProviderLinkingStrategy"
     },
     "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "source" : {
       "className" : "java.lang.String",
       "type" : "String"
     },

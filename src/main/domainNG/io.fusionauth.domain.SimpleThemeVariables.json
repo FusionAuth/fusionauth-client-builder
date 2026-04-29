@@ -49,6 +49,14 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "favicons" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.html.Favicon",
+        "type" : "Favicon"
+      } ]
+    },
     "fontColor" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -133,7 +141,7 @@
       "type" : "String"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.net.URI" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "java.net.URI", "java.util.List", "io.fusionauth.domain.html.Favicon" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

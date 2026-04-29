@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api.tenantManager",
+  "type" : "TenantManagerConfigurationRequest",
+  "description" : "/**\n * The Tenant Manager configuration request object\n */\n",
+  "fields" : {
+    "tenantManagerConfiguration" : {
+      "type" : "TenantManagerConfiguration"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "className" : "io.fusionauth.domain.api.identityProvider.IdentityProviderConnectionTestRequest",
+  "extends" : { },
+  "fields" : {
+    "identityProviderId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "java.util.UUID" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.identityProvider",
+  "type" : "IdentityProviderConnectionTestRequest"
+}

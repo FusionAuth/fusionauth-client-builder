@@ -1,0 +1,20 @@
+{
+  "uri": "/api/identity-provider/test",
+  "comments": [
+    "Begins an identity provider connection test."
+  ],
+  "method": "post",
+  "methodName": "startIdentityProviderConnectionTest",
+  "successResponse": "IdentityProviderConnectionTestResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains information on the connection test."
+      ],
+      "type": "body",
+      "javaType": "IdentityProviderConnectionTestRequest"
+    }
+  ]
+}

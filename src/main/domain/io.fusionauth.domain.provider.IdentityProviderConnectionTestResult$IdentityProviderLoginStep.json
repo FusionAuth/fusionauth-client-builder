@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderLoginStep",
+  "fields" : {
+    "detail" : {
+      "type" : "String"
+    },
+    "success" : {
+      "type" : "boolean"
+    },
+    "title" : {
+      "type" : "String"
+    }
+  }
+}

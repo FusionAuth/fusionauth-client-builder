@@ -1,0 +1,20 @@
+{
+  "uri": "/api/tenant-manager",
+  "comments": [
+    "Updates the Tenant Manager configuration."
+  ],
+  "method": "put",
+  "methodName": "updateTenantManagerConfiguration",
+  "successResponse": "TenantManagerConfigurationResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains all the new Tenant Manager configuration information."
+      ],
+      "type": "body",
+      "javaType": "TenantManagerConfigurationRequest"
+    }
+  ]
+}

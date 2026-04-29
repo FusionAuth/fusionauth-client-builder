@@ -7,7 +7,7 @@ DIRECTORY="src/main/api/"
 OPERATIONS=("create" "update" "delete" "retrieve" "patch")
 
 # Entities/ops to exclude from validation
-EXCLUDE_ENTITIES_OPS=("UserConsent-delete" "ApplicationRole-retrieve" "Family-delete" "Family-patch" "Family-retrieve" "EntityTypePermission-retrieve" "ApplicationRole-retrieve" "GroupMembers-retrieve" "GroupMembers-patch" "UserLink-patch" "UserLink-update" "AuditLog-delete" "AuditLog-patch" "AuditLog-update") 
+EXCLUDE_ENTITIES_OPS=("UserConsent-delete" "ApplicationRole-retrieve" "Family-delete" "Family-patch" "Family-retrieve" "EntityTypePermission-retrieve" "ApplicationRole-retrieve" "GroupMembers-retrieve" "GroupMembers-patch" "UserLink-patch" "UserLink-update" "AuditLog-delete" "AuditLog-patch" "AuditLog-update" "TenantManagerIdentityProviderTypeConfiguration-retrieve")
 
 
 # Function to check if an entity is in the exclude list

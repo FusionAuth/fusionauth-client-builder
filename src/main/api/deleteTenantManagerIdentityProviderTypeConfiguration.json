@@ -1,0 +1,20 @@
+{
+  "uri": "/api/tenant-manager/identity-provider",
+  "comments": [
+    "Deletes the tenant manager identity provider type configuration for the given identity provider type."
+  ],
+  "method": "delete",
+  "methodName": "deleteTenantManagerIdentityProviderTypeConfiguration",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "type",
+      "comments": [
+        "The type of the identity provider."
+      ],
+      "type": "urlSegment",
+      "javaType": "IdentityProviderType"
+    }
+  ]
+}

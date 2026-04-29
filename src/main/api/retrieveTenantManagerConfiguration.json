@@ -1,0 +1,10 @@
+{
+  "uri": "/api/tenant-manager",
+  "comments": [
+    "Retrieves the Tenant Manager configuration."
+  ],
+  "method": "get",
+  "methodName": "retrieveTenantManagerConfiguration",
+  "successResponse": "TenantManagerConfigurationResponse",
+  "errorResponse": "Void"
+}

@@ -12,6 +12,9 @@
     "name" : {
       "type" : "String"
     },
+    "source" : {
+      "type" : "String"
+    },
     "tenantId" : {
       "type" : "UUID"
     },

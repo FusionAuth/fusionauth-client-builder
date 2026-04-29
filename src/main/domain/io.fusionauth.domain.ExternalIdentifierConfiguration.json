@@ -36,6 +36,9 @@
     "externalAuthenticationIdTimeToLiveInSeconds" : {
       "type" : "int"
     },
+    "identityProviderConnectionTestTimeToLiveInSeconds" : {
+      "type" : "int"
+    },
     "loginIntentTimeToLiveInSeconds" : {
       "type" : "int"
     },

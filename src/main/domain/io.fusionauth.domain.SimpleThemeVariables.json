@@ -42,6 +42,12 @@
     "errorIconColor" : {
       "type" : "String"
     },
+    "favicons" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "Favicon"
+      } ]
+    },
     "fontColor" : {
       "type" : "String"
     },

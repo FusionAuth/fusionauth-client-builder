@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.html",
+  "type" : "Favicon",
+  "description" : "/**\n * Components of a Favicon in an HTML {@code <head>} element.\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "Favicon"
+    } ]
+  } ],
+  "fields" : {
+    "href" : {
+      "type" : "URI"
+    },
+    "rel" : {
+      "type" : "String"
+    },
+    "sizes" : {
+      "type" : "String"
+    },
+    "type" : {
+      "type" : "String"
+    }
+  }
+}

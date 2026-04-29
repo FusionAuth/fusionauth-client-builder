@@ -1,0 +1,70 @@
+{
+  "className" : "io.fusionauth.domain.tenantManager.TenantManagerConfiguration",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "applicationConfigurations" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.tenantManager.TenantManagerApplicationConfiguration",
+        "type" : "TenantManagerApplicationConfiguration"
+      } ]
+    },
+    "attributeFormId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "brandName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "identityProviderTypeConfigurations" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "io.fusionauth.domain.tenantManager.TenantManagerIdentityProviderTypeConfiguration",
+        "type" : "TenantManagerIdentityProviderTypeConfiguration"
+      } ]
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "java.util.List", "io.fusionauth.domain.tenantManager.TenantManagerApplicationConfiguration", "java.util.UUID", "java.lang.String", "java.util.Map", "io.fusionauth.domain.tenantManager.TenantManagerIdentityProviderTypeConfiguration", "java.time.ZonedDateTime" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.tenantManager.TenantManagerConfiguration",
+      "type" : "TenantManagerConfiguration"
+    } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.tenantManager",
+  "type" : "TenantManagerConfiguration"
+}

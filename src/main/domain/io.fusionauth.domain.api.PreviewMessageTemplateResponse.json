@@ -2,6 +2,12 @@
   "packageName" : "io.fusionauth.domain.api",
   "type" : "PreviewMessageTemplateResponse",
   "description" : "/**\n * @author Michael Sleevi\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "PreviewMessageTemplateResponse"
+    } ]
+  } ],
   "fields" : {
     "errors" : {
       "type" : "Errors"
@@ -10,7 +16,7 @@
       "type" : "SMSMessage"
     },
     "previewMessage" : {
-      "type" : "Message"
+      "type" : "String"
     }
   }
 }

@@ -20,6 +20,9 @@
     },
     "tenantId" : {
       "type" : "UUID"
+    },
+    "universal" : {
+      "type" : "boolean"
     }
   }
 }

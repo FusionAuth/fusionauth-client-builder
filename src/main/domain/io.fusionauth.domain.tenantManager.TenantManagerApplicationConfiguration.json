@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.tenantManager",
+  "type" : "TenantManagerApplicationConfiguration",
+  "description" : "/**\n * Tenant Manager application configuration.\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantManagerApplicationConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    }
+  }
+}

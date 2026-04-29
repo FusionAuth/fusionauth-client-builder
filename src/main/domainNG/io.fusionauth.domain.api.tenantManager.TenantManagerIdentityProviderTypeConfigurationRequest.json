@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.tenantManager.TenantManagerIdentityProviderTypeConfigurationRequest",
+  "extends" : { },
+  "fields" : {
+    "typeConfiguration" : {
+      "className" : "io.fusionauth.domain.tenantManager.TenantManagerIdentityProviderTypeConfiguration",
+      "type" : "TenantManagerIdentityProviderTypeConfiguration"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.tenantManager.TenantManagerIdentityProviderTypeConfiguration" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.tenantManager",
+  "type" : "TenantManagerIdentityProviderTypeConfigurationRequest"
+}

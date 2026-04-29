@@ -75,11 +75,11 @@
 [/#macro]
 
 [#list packages as package]
-  [#if package != domain_item.packageName && (package != "io.fusionauth.domain.provider" || domain_item.type == "IdentityProviderDetails")]
+  [#if package != domain_item.packageName && (package != "io.fusionauth.domain.provider" || domain_item.type == "IdentityProviderDetails" || domain_item.type == "IdentityProviderConnectionTestResponse")]
 using ${replaceKeywords(package)};
   [/#if]
 [/#list]
-[#if ["DeviceUserCodeResponse", "IdentityProviderLink", "IdentityProviderPendingLinkResponse", "IdentityProviderSearchCriteria", "SAMLv2Configuration"]?seq_contains(domain_item.type)]
+[#if ["DeviceUserCodeResponse", "IdentityProviderLink", "IdentityProviderPendingLinkResponse", "IdentityProviderSearchCriteria", "SAMLv2Configuration", "TenantManagerIdentityProviderTypeConfiguration"]?seq_contains(domain_item.type)]
 using io.fusionauth.domain.provider;
 [/#if]
 [#if domain_item.enum?? && (global.needsConverter(domain_item) || global.needsConverterNoArgs(domain_item))]

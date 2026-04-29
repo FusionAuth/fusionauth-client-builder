@@ -1,0 +1,37 @@
+{
+  "packageName" : "io.fusionauth.domain.provider",
+  "type" : "IdentityProviderConnectionTestResult",
+  "description" : "/**\n * The results of an identity provider connection test.\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "IdentityProviderConnectionTestResult"
+    } ]
+  } ],
+  "fields" : {
+    "email" : {
+      "type" : "String"
+    },
+    "identityProviderId" : {
+      "type" : "UUID"
+    },
+    "identityProviderUserId" : {
+      "type" : "String"
+    },
+    "startInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "steps" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "IdentityProviderLoginStep"
+      } ]
+    },
+    "success" : {
+      "type" : "boolean"
+    },
+    "username" : {
+      "type" : "String"
+    }
+  }
+}

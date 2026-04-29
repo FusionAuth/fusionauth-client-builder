@@ -1,6 +1,9 @@
 {
   "className" : "io.fusionauth.domain.api.PreviewMessageTemplateResponse",
-  "extends" : { },
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
   "fields" : {
     "errors" : {
       "className" : "com.inversoft.error.Errors",
@@ -11,12 +14,19 @@
       "type" : "SMSMessage"
     },
     "previewMessage" : {
-      "className" : "io.fusionauth.domain.message.Message",
-      "type" : "Message"
+      "className" : "java.lang.String",
+      "type" : "String"
     }
   },
-  "imports" : [ "com.inversoft.error.Errors", "io.fusionauth.domain.message.sms.SMSMessage", "io.fusionauth.domain.message.Message" ],
-  "interfaces" : [ ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.error.Errors", "io.fusionauth.domain.message.sms.SMSMessage", "java.lang.String" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.PreviewMessageTemplateResponse",
+      "type" : "PreviewMessageTemplateResponse"
+    } ]
+  } ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",
   "type" : "PreviewMessageTemplateResponse"

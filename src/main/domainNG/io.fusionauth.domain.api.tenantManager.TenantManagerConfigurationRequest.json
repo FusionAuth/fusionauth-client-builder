@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.tenantManager.TenantManagerConfigurationRequest",
+  "extends" : { },
+  "fields" : {
+    "tenantManagerConfiguration" : {
+      "className" : "io.fusionauth.domain.tenantManager.TenantManagerConfiguration",
+      "type" : "TenantManagerConfiguration"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.tenantManager.TenantManagerConfiguration" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api.tenantManager",
+  "type" : "TenantManagerConfigurationRequest"
+}
