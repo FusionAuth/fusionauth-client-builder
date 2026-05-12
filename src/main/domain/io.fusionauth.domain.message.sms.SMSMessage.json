@@ -6,11 +6,17 @@
     "type" : "Message"
   } ],
   "fields" : {
+    "code" : {
+      "type" : "String"
+    },
     "phoneNumber" : {
       "type" : "String"
     },
     "textMessage" : {
       "type" : "String"
+    },
+    "userId" : {
+      "type" : "UUID"
     }
   }
 }

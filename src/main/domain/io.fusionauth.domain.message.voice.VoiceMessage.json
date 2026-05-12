@@ -6,6 +6,9 @@
     "type" : "Message"
   } ],
   "fields" : {
+    "code" : {
+      "type" : "String"
+    },
     "locale" : {
       "type" : "Locale"
     },
@@ -14,6 +17,9 @@
     },
     "phoneNumber" : {
       "type" : "String"
+    },
+    "userId" : {
+      "type" : "UUID"
     }
   }
 }

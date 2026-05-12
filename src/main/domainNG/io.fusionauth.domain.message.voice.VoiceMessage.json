@@ -2,6 +2,10 @@
   "className" : "io.fusionauth.domain.message.voice.VoiceMessage",
   "extends" : { },
   "fields" : {
+    "code" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "locale" : {
       "className" : "java.util.Locale",
       "type" : "Locale"
@@ -13,9 +17,13 @@
     "phoneNumber" : {
       "className" : "java.lang.String",
       "type" : "String"
+    },
+    "userId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
     }
   },
-  "imports" : [ "java.util.Locale", "java.lang.String" ],
+  "imports" : [ "java.lang.String", "java.util.Locale", "java.util.UUID" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.message.voice",
