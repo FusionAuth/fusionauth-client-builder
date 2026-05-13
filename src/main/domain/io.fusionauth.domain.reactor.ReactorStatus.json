@@ -42,6 +42,9 @@
     "entityManagement" : {
       "type" : "ReactorFeatureStatus"
     },
+    "legacyAdapter" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "expiration" : {
       "type" : "LocalDate"
     },

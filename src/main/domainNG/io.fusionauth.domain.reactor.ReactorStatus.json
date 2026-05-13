@@ -62,6 +62,10 @@
       "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
       "type" : "ReactorFeatureStatus"
     },
+    "legacyAdapter" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
     "licenseAttributes" : {
       "className" : "java.util.Map",
       "type" : "Map",

@@ -59,6 +59,10 @@
       "className" : "java.time.ZonedDateTime",
       "type" : "ZonedDateTime"
     },
+    "legacyIdentifier" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "middleName" : {
       "className" : "java.lang.String",
       "type" : "String"

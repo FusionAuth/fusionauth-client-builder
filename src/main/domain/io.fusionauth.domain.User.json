@@ -60,6 +60,9 @@
     "lastName" : {
       "type" : "String"
     },
+    "legacyIdentifier" : {
+      "type" : "String"
+    },
     "lastUpdateInstant" : {
       "type" : "ZonedDateTime"
     },
