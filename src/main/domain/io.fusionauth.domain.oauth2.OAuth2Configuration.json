@@ -21,6 +21,12 @@
         "type" : "URI"
       } ]
     },
+    "authorizedResourceUris" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "URI"
+      } ]
+    },
     "authorizedURLValidationPolicy" : {
       "type" : "Oauth2AuthorizedURLValidationPolicy"
     },

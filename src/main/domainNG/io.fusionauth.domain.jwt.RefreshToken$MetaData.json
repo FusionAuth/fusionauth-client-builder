@@ -20,6 +20,14 @@
       "className" : "io.fusionauth.domain.jwt.DeviceInfo",
       "type" : "DeviceInfo"
     },
+    "resources" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.net.URI",
+        "type" : "URI"
+      } ]
+    },
     "scopes" : {
       "className" : "java.util.Set",
       "type" : "Set",
@@ -29,7 +37,7 @@
       } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.jwt.DeviceInfo", "java.util.Set" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "io.fusionauth.domain.jwt.DeviceInfo", "java.util.List", "java.net.URI", "java.util.Set" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

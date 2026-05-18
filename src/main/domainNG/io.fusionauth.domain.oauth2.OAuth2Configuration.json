@@ -21,6 +21,14 @@
         "type" : "URI"
       } ]
     },
+    "authorizedResourceUris" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.net.URI",
+        "type" : "URI"
+      } ]
+    },
     "authorizedURLValidationPolicy" : {
       "className" : "io.fusionauth.domain.oauth2.Oauth2AuthorizedURLValidationPolicy",
       "type" : "Oauth2AuthorizedURLValidationPolicy"

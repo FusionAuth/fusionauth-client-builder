@@ -19,6 +19,12 @@
     "device" : {
       "type" : "DeviceInfo"
     },
+    "resources" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "URI"
+      } ]
+    },
     "scopes" : {
       "type" : "Set",
       "typeArguments" : [ {
