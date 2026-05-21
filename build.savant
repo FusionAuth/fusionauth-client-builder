@@ -157,16 +157,8 @@ void domainDSLBuilder() {
   // This isn't ideal, and ideally this and all of the client builders would build
   // after fusionauth-app. That would be correct I think, however since we are still building
   // the FusionAuth Client for fusionauth-app in this repo, it is a bit of a chicken and egg
-  // problem. So we can build fusionauth-plugin-api and fusionauth-app here first to be sure
+  // problem. So we can build fusionauth-app here first to be sure
   // we have the jars to build, or we could move all of this after.
-  ProcessBuilder pluginPb = new ProcessBuilder("sb", "int")
-  def pluginProcess = pluginPb.inheritIO().directory(new File("../fusionauth-plugin-api")).start()
-  pluginProcess.consumeProcessOutput(System.out, System.err)
-  pluginProcess.waitFor()
-  if (pluginProcess.exitValue() != 0) {
-    fail("Unable to run `sb int` for fusionauth-plugin-api")
-  }
-
   ProcessBuilder appPb = new ProcessBuilder("sb", "clean", "compile")
   def appProcess = appPb.inheritIO().directory(fusionAuthAppDir.toFile()).start()
   appProcess.consumeProcessOutput(System.out, System.err)
