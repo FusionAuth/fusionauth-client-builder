@@ -1,0 +1,28 @@
+{
+  "uri": "/api/user/two-factor",
+  "comments": [
+    "Updates the two-factor method for the given user using a JSON body."
+  ],
+  "method": "put",
+  "methodName": "updateTwoFactor",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "userId",
+      "comments": [
+        "The Id of the user to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request information that contains the name and methodId along with any event information."
+      ],
+      "type": "body",
+      "javaType": "TwoFactorUpdateRequest"
+    }
+  ]
+}

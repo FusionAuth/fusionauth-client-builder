@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TwoFactorUpdateRequest",
+  "description" : "/**\n * Request to update an existing two-factor method for a user.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEventRequest"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TwoFactorUpdateRequest"
+    } ]
+  } ],
+  "fields" : {
+    "methodId" : {
+      "type" : "String"
+    },
+    "name" : {
+      "type" : "String"
+    }
+  }
+}

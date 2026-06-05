@@ -145,6 +145,7 @@ import io.fusionauth.domain.api.ThemeResponse;
 import io.fusionauth.domain.api.ThemeSearchRequest;
 import io.fusionauth.domain.api.ThemeSearchResponse;
 import io.fusionauth.domain.api.TwoFactorDisableRequest;
+import io.fusionauth.domain.api.TwoFactorUpdateRequest;
 import io.fusionauth.domain.api.TwoFactorRecoveryCodeResponse;
 import io.fusionauth.domain.api.TwoFactorRequest;
 import io.fusionauth.domain.api.TwoFactorResponse;

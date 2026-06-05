@@ -30,6 +30,9 @@
     "mobilePhone" : {
       "type" : "String"
     },
+    "name" : {
+      "type" : "String"
+    },
     "secret" : {
       "type" : "String"
     },

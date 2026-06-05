@@ -29,6 +29,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "secret" : {
       "className" : "java.lang.String",
       "type" : "String"

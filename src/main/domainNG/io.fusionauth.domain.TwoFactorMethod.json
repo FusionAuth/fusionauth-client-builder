@@ -13,6 +13,9 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "MaximumNameLength" : {
+      "type" : "int"
+    },
     "SMS" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -38,6 +41,10 @@
       "type" : "String"
     },
     "mobilePhone" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "name" : {
       "className" : "java.lang.String",
       "type" : "String"
     },

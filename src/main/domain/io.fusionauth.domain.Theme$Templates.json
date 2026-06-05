@@ -17,6 +17,9 @@
     "accountTwoFactorDisable" : {
       "type" : "String"
     },
+    "accountTwoFactorEdit" : {
+      "type" : "String"
+    },
     "accountTwoFactorEnable" : {
       "type" : "String"
     },

@@ -25,6 +25,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "accountTwoFactorEdit" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "accountTwoFactorEnable" : {
       "className" : "java.lang.String",
       "type" : "String"

@@ -1,0 +1,29 @@
+{
+  "className" : "io.fusionauth.domain.api.TwoFactorUpdateRequest",
+  "extends" : {
+    "className" : "io.fusionauth.domain.api.BaseEventRequest",
+    "type" : "BaseEventRequest"
+  },
+  "fields" : {
+    "methodId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.lang.String" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.api.TwoFactorUpdateRequest",
+      "type" : "TwoFactorUpdateRequest"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TwoFactorUpdateRequest"
+}
