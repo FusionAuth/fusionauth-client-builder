@@ -13,6 +13,14 @@
         "type" : "TwoFactorMethod"
       } ]
     },
+    "recoveryCodeEncryptionScheme" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "recoveryCodeWorkFactor" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
     "recoveryCodes" : {
       "className" : "java.util.List",
       "type" : "List",
@@ -22,7 +30,7 @@
       } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "io.fusionauth.domain.TwoFactorMethod", "java.lang.String" ],
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.util.List", "io.fusionauth.domain.TwoFactorMethod", "java.lang.String", "java.lang.Integer" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

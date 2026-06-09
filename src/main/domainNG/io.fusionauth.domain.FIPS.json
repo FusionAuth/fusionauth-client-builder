@@ -5,7 +5,13 @@
     "FIPS_MIN_PASSWORD_LENGTH" : {
       "type" : "int"
     },
+    "FIPS_RECOVERY_CODE_LENGTH" : {
+      "type" : "int"
+    },
     "STANDARD_MIN_PASSWORD_LENGTH" : {
+      "type" : "int"
+    },
+    "STANDARD_RECOVERY_CODE_LENGTH" : {
       "type" : "int"
     }
   },
