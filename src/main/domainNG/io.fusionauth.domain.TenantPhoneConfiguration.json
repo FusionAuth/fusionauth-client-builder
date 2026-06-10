@@ -5,6 +5,10 @@
     "type" : "Object"
   },
   "fields" : {
+    "adminTwoFactorMethodRemoveTemplateId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "forgotPasswordTemplateId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"

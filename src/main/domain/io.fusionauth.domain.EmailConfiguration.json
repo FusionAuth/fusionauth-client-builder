@@ -15,6 +15,9 @@
         "type" : "EmailHeader"
       } ]
     },
+    "adminTwoFactorMethodRemoveEmailTemplateId" : {
+      "type" : "UUID"
+    },
     "debug" : {
       "type" : "boolean"
     },

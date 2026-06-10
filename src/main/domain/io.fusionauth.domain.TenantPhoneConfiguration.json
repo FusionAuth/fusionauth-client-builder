@@ -9,6 +9,9 @@
     } ]
   } ],
   "fields" : {
+    "adminTwoFactorMethodRemoveTemplateId" : {
+      "type" : "UUID"
+    },
     "forgotPasswordTemplateId" : {
       "type" : "UUID"
     },
