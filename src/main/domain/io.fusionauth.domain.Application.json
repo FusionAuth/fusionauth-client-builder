@@ -22,6 +22,9 @@
     "authenticationTokenConfiguration" : {
       "type" : "AuthenticationTokenConfiguration"
     },
+    "baseURL" : {
+      "type" : "URI"
+    },
     "cleanSpeakConfiguration" : {
       "type" : "CleanSpeakConfiguration"
     },
