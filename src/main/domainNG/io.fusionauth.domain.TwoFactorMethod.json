@@ -16,6 +16,10 @@
     "MaximumNameLength" : {
       "type" : "int"
     },
+    "RecoveryCode" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
     "SMS" : {
       "className" : "java.lang.String",
       "type" : "String"

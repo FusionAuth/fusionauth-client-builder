@@ -6,6 +6,10 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "botDetectionScore" : {
+      "className" : "java.lang.Double",
+      "type" : "Double"
+    },
     "ipAddress" : {
       "className" : "java.lang.String",
       "type" : "String"
@@ -21,7 +25,7 @@
       "type" : "boolean"
     }
   },
-  "imports" : [ "java.util.UUID", "java.lang.String", "io.fusionauth.domain.jwt.RefreshToken$MetaData" ],
+  "imports" : [ "java.util.UUID", "java.lang.Double", "java.lang.String", "io.fusionauth.domain.jwt.RefreshToken$MetaData" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.api",

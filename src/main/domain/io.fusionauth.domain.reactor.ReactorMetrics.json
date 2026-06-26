@@ -10,6 +10,14 @@
       }, {
         "type" : "BreachedPasswordTenantMetric"
       } ]
+    },
+    "mfaMetrics" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      }, {
+        "type" : "MFATenantMetric"
+      } ]
     }
   }
 }

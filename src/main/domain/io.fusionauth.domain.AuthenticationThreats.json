@@ -2,5 +2,5 @@
   "packageName" : "io.fusionauth.domain",
   "type" : "AuthenticationThreats",
   "description" : "/**\n * @author Brett Pontarelli\n */\n",
-  "enum" : [ "ImpossibleTravel" ]
+  "enum" : [ "BotDetected", "BlocklistedIp", "DormantAccount", "DormantPassword", "ImpossibleTravel", "RecentIdentityChange", "RecentPasswordChange", "SuspiciousUserAgent", "UnrecognizedDevice", "UntrustedDevice" ]
 }

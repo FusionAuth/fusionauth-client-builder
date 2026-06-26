@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.reactor",
+  "type" : "MFATenantMetric",
+  "description" : "/**\n * Reactor metric with counts of MFA challenges, successes, and failures for a tenant.\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "MFATenantMetric"
+    } ]
+  } ],
+  "fields" : {
+    "challengeCount" : {
+      "type" : "long"
+    },
+    "failedAttemptCount" : {
+      "type" : "long"
+    },
+    "successCount" : {
+      "type" : "long"
+    }
+  }
+}

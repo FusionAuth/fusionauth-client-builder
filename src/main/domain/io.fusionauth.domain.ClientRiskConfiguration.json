@@ -1,0 +1,46 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ClientRiskConfiguration",
+  "description" : "/**\n * Flags to enable or disable specific risk signals that contribute to the composite client risk calculation.\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "ClientRiskConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "blocklistedIp" : {
+      "type" : "boolean"
+    },
+    "botDetected" : {
+      "type" : "boolean"
+    },
+    "dormantAccount" : {
+      "type" : "boolean"
+    },
+    "dormantPassword" : {
+      "type" : "boolean"
+    },
+    "impossibleTravel" : {
+      "type" : "boolean"
+    },
+    "recentIdentityChange" : {
+      "type" : "boolean"
+    },
+    "recentPasswordChange" : {
+      "type" : "boolean"
+    },
+    "suspiciousUserAgent" : {
+      "type" : "boolean"
+    },
+    "unrecognizedDevice" : {
+      "type" : "boolean"
+    },
+    "untrustedDevice" : {
+      "type" : "boolean"
+    }
+  }
+}

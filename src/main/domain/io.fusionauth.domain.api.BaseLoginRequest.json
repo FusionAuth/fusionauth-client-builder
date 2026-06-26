@@ -9,6 +9,9 @@
     "applicationId" : {
       "type" : "UUID"
     },
+    "botDetectionScore" : {
+      "type" : "double"
+    },
     "ipAddress" : {
       "type" : "String"
     },

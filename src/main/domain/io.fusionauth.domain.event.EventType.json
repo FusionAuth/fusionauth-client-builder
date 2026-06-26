@@ -108,6 +108,9 @@
     "name" : "UserLoginSuspicious",
     "args" : [ "user.login.suspicious" ]
   }, {
+    "name" : "UserTwoFactorChallenge",
+    "args" : [ "user.two-factor.challenge" ]
+  }, {
     "name" : "UserPasswordBreach",
     "args" : [ "user.password.breach" ]
   }, {
@@ -167,5 +170,11 @@
   }, {
     "name" : "UserIdentityUpdate",
     "args" : [ "user.identity.update" ]
+  }, {
+    "name" : "UserTwoFactorFailedAttempt",
+    "args" : [ "user.two-factor.failed-attempt" ]
+  }, {
+    "name" : "UserTwoFactorSuccess",
+    "args" : [ "user.two-factor.success" ]
   } ]
 }

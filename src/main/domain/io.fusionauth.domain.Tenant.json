@@ -28,6 +28,9 @@
     "captchaConfiguration" : {
       "type" : "TenantCaptchaConfiguration"
     },
+    "clientRiskConfiguration" : {
+      "type" : "ClientRiskConfiguration"
+    },
     "configured" : {
       "type" : "boolean"
     },

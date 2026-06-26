@@ -12,6 +12,9 @@
     "authenticator" : {
       "type" : "MultiFactorAuthenticatorMethod"
     },
+    "debug" : {
+      "type" : "boolean"
+    },
     "email" : {
       "type" : "MultiFactorEmailMethod"
     },

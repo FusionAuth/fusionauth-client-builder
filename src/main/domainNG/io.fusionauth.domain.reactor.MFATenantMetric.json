@@ -1,0 +1,30 @@
+{
+  "className" : "io.fusionauth.domain.reactor.MFATenantMetric",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "challengeCount" : {
+      "type" : "long"
+    },
+    "failedAttemptCount" : {
+      "type" : "long"
+    },
+    "successCount" : {
+      "type" : "long"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.reactor.MFATenantMetric",
+      "type" : "MFATenantMetric"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.reactor",
+  "type" : "MFATenantMetric"
+}

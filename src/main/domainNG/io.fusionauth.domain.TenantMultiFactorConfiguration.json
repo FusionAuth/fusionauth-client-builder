@@ -9,6 +9,9 @@
       "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorAuthenticatorMethod",
       "type" : "TenantMultiFactorConfiguration$MultiFactorAuthenticatorMethod"
     },
+    "debug" : {
+      "type" : "boolean"
+    },
     "email" : {
       "className" : "io.fusionauth.domain.TenantMultiFactorConfiguration$MultiFactorEmailMethod",
       "type" : "TenantMultiFactorConfiguration$MultiFactorEmailMethod"

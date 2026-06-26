@@ -1,0 +1,30 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserTwoFactorSuccessEvent",
+  "description" : "/**\n * Models the User Two Factor Success Event. Fired when a user successfully completes a two-factor challenge.\n */\n",
+  "extends" : [ {
+    "type" : "BaseUserEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserTwoFactorSuccessEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "clientRisk" : {
+      "type" : "String"
+    },
+    "messageType" : {
+      "type" : "String"
+    },
+    "method" : {
+      "type" : "String"
+    }
+  }
+}

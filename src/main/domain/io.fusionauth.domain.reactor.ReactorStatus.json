@@ -33,6 +33,9 @@
     "breachedPasswordDetection" : {
       "type" : "ReactorFeatureStatus"
     },
+    "clientRiskConfiguration" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "connectors" : {
       "type" : "ReactorFeatureStatus"
     },
@@ -42,13 +45,22 @@
     "entityManagement" : {
       "type" : "ReactorFeatureStatus"
     },
-    "legacyAdapter" : {
-      "type" : "ReactorFeatureStatus"
-    },
     "expiration" : {
       "type" : "LocalDate"
     },
+    "imfaWebhooks" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "intelligentMFA" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "ipGeoLocation" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "ipReputation" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "legacyAdapter" : {
       "type" : "ReactorFeatureStatus"
     },
     "licenseAttributes" : {
@@ -75,6 +87,9 @@
       "type" : "ReactorFeatureStatus"
     },
     "universalApplication" : {
+      "type" : "ReactorFeatureStatus"
+    },
+    "userAgentReputation" : {
       "type" : "ReactorFeatureStatus"
     },
     "webAuthn" : {

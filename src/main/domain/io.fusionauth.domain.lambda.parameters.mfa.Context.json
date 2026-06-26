@@ -21,6 +21,9 @@
     "authenticationType" : {
       "type" : "String"
     },
+    "clientRisk" : {
+      "type" : "ClientRisk"
+    },
     "eventInfo" : {
       "type" : "EventInfo"
     },

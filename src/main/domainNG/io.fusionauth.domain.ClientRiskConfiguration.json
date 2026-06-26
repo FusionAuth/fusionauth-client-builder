@@ -1,0 +1,51 @@
+{
+  "className" : "io.fusionauth.domain.ClientRiskConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "blocklistedIp" : {
+      "type" : "boolean"
+    },
+    "botDetected" : {
+      "type" : "boolean"
+    },
+    "dormantAccount" : {
+      "type" : "boolean"
+    },
+    "dormantPassword" : {
+      "type" : "boolean"
+    },
+    "impossibleTravel" : {
+      "type" : "boolean"
+    },
+    "recentIdentityChange" : {
+      "type" : "boolean"
+    },
+    "recentPasswordChange" : {
+      "type" : "boolean"
+    },
+    "suspiciousUserAgent" : {
+      "type" : "boolean"
+    },
+    "unrecognizedDevice" : {
+      "type" : "boolean"
+    },
+    "untrustedDevice" : {
+      "type" : "boolean"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.ClientRiskConfiguration",
+      "type" : "ClientRiskConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "ClientRiskConfiguration"
+}

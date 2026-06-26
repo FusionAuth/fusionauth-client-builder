@@ -1,6 +1,6 @@
 {
   "className" : "io.fusionauth.domain.MultiFactorLoginPolicy",
-  "enum" : [ "Disabled", "Enabled", "Required" ],
+  "enum" : [ "ChallengeOnHighRisk", "ChallengeOnMediumRisk", "Disabled", "Enabled", "Required" ],
   "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",

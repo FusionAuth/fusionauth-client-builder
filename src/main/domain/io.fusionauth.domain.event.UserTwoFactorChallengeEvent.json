@@ -1,0 +1,24 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "UserTwoFactorChallengeEvent",
+  "description" : "/**\n * Models the User Two Factor Challenge Event. Fired when a two-factor challenge is started (before the user submits a code).\n */\n",
+  "extends" : [ {
+    "type" : "BaseUserEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "UserTwoFactorChallengeEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "applicationId" : {
+      "type" : "UUID"
+    },
+    "clientRisk" : {
+      "type" : "String"
+    }
+  }
+}

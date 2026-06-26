@@ -1,6 +1,6 @@
 {
   "className" : "io.fusionauth.domain.AuthenticationThreats",
-  "enum" : [ "ImpossibleTravel" ],
+  "enum" : [ "BotDetected", "BlocklistedIp", "DormantAccount", "DormantPassword", "ImpossibleTravel", "RecentIdentityChange", "RecentPasswordChange", "SuspiciousUserAgent", "UnrecognizedDevice", "UntrustedDevice" ],
   "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
