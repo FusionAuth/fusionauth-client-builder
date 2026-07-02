@@ -1,0 +1,66 @@
+{
+  "uri": "/api/key/search",
+  "comments": [
+    "Searches keys with the specified criteria and pagination."
+  ],
+  "method": "get",
+  "methodName": "searchKeysByParameters",
+  "successResponse": "KeySearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "algorithm",
+      "comments": [
+        "(Optional) The algorithm of the key to search for."
+      ],
+      "type": "urlParameter",
+      "javaType": "String",
+      "parameterName": "algorithm"
+    },
+    {
+      "name": "name",
+      "comments": [
+        "(Optional) The name of the key to search for. Supports wildcard search using *."
+      ],
+      "type": "urlParameter",
+      "javaType": "String",
+      "parameterName": "name"
+    },
+    {
+      "name": "numberOfResults",
+      "comments": [
+        "(Optional) The number of results to return. Defaults to 25."
+      ],
+      "type": "urlParameter",
+      "javaType": "Integer",
+      "parameterName": "numberOfResults"
+    },
+    {
+      "name": "orderBy",
+      "comments": [
+        "(Optional) The field to order the results by. Supported values: algorithm, expiration, id, insertInstant, name, type."
+      ],
+      "type": "urlParameter",
+      "javaType": "String",
+      "parameterName": "orderBy"
+    },
+    {
+      "name": "startRow",
+      "comments": [
+        "(Optional) The offset into the total results. Defaults to 0."
+      ],
+      "type": "urlParameter",
+      "javaType": "Integer",
+      "parameterName": "startRow"
+    },
+    {
+      "name": "type",
+      "comments": [
+        "(Optional) The type of key to search for. Supported values: EC, HMAC, OKP, RSA."
+      ],
+      "type": "urlParameter",
+      "javaType": "String",
+      "parameterName": "type"
+    }
+  ]
+}

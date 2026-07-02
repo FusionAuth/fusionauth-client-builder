@@ -1,0 +1,48 @@
+{
+  "uri": "/api/ip-acl/search",
+  "comments": [
+    "Searches IP access control lists with the specified criteria and pagination."
+  ],
+  "method": "get",
+  "methodName": "searchIPAccessControlListsByParameters",
+  "successResponse": "IPAccessControlListSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "name",
+      "comments": [
+        "(Optional) The name of the IP access control list to search for. Supports wildcard search using *."
+      ],
+      "type": "urlParameter",
+      "javaType": "String",
+      "parameterName": "name"
+    },
+    {
+      "name": "numberOfResults",
+      "comments": [
+        "(Optional) The number of results to return. Defaults to 25."
+      ],
+      "type": "urlParameter",
+      "javaType": "Integer",
+      "parameterName": "numberOfResults"
+    },
+    {
+      "name": "orderBy",
+      "comments": [
+        "(Optional) The field to order the results by. Supported values: id, insertInstant, lastUpdateInstant, name."
+      ],
+      "type": "urlParameter",
+      "javaType": "String",
+      "parameterName": "orderBy"
+    },
+    {
+      "name": "startRow",
+      "comments": [
+        "(Optional) The offset into the total results. Defaults to 0."
+      ],
+      "type": "urlParameter",
+      "javaType": "Integer",
+      "parameterName": "startRow"
+    }
+  ]
+}

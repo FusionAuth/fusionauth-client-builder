@@ -1,0 +1,66 @@
+{
+  "uri": "/api/entity/grant/search",
+  "comments": [
+    "Searches entity grants with the specified criteria and pagination."
+  ],
+  "method": "get",
+  "methodName": "searchEntityGrantsByParameters",
+  "successResponse": "EntityGrantSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "entityId",
+      "comments": [
+        "(Optional) The entity Id to search for grants on."
+      ],
+      "type": "urlParameter",
+      "parameterName": "entityId",
+      "javaType": "UUID"
+    },
+    {
+      "name": "name",
+      "comments": [
+        "(Optional) The name of the entity grant to search for. Supports wildcard search using *."
+      ],
+      "type": "urlParameter",
+      "parameterName": "name",
+      "javaType": "String"
+    },
+    {
+      "name": "userId",
+      "comments": [
+        "(Optional) The user Id to search for grants on."
+      ],
+      "type": "urlParameter",
+      "parameterName": "userId",
+      "javaType": "UUID"
+    },
+    {
+      "name": "numberOfResults",
+      "comments": [
+        "(Optional) The number of results to return. Defaults to 25."
+      ],
+      "type": "urlParameter",
+      "parameterName": "numberOfResults",
+      "javaType": "Integer"
+    },
+    {
+      "name": "orderBy",
+      "comments": [
+        "(Optional) The field to order the results by."
+      ],
+      "type": "urlParameter",
+      "parameterName": "orderBy",
+      "javaType": "String"
+    },
+    {
+      "name": "startRow",
+      "comments": [
+        "(Optional) The offset into the total results. Defaults to 0."
+      ],
+      "type": "urlParameter",
+      "parameterName": "startRow",
+      "javaType": "Integer"
+    }
+  ]
+}

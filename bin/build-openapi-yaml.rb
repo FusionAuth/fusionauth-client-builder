@@ -222,7 +222,7 @@ def process_domain_file(fn, schemas, options, identity_providers, domain_files)
               properties[k]["additionalProperties"] = convert_primitive(mapValueType)
             elsif mapValueType == "List"
               listElementType = fields[k]["typeArguments"][1]["typeArguments"][0]["type"]
-              addListValue(properties[k], k2, listElementType, identity_providers)
+              addListValue(properties[k]["additionalProperties"], k2, listElementType, identity_providers)
             elsif mapValueType == "D" && k == "applicationConfiguration" && objectname.match(/IdentityProvider$/)
               if objectname.match(/BaseIdentityProvider$/) or objectname.match(/BaseSAMLv2IdentityProvider$/)
                 # remove this one, we don't need to provide anything for the BaseIdentityProvider or BaseSAMLv2IdentityProvider application config.properties, I think
@@ -495,6 +495,7 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
     segmentparams = jsonparams.select { |p| p["type"] == "urlSegment" }
     queryparams = jsonparams.select { |p| p["type"] == "urlParameter" }
     bodyparams = jsonparams.select { |p| p["type"] == "body" }
+    formparams = jsonparams.select { |p| p["type"] == "form" }
 
     queryparams.each do |p|
       params << build_openapi_paramobj(p, "query")
@@ -522,6 +523,25 @@ def build_path(uri, json, paths, include_optional_segment_param, options)
       openapiobj["requestBody"]["content"]["application/json"] = {}
       openapiobj["requestBody"]["content"]["application/json"]["schema"] = {}
       openapiobj["requestBody"]["content"]["application/json"]["schema"]["$ref"] = make_ref(bodyparams[0]["javaType"])
+    end
+
+    if formparams && formparams.length > 0
+      request_body = openapiobj["requestBody"] = {}
+      request_body["required"] = true
+      request_body["content"] = {}
+      request_body["content"]["application/x-www-form-urlencoded"] = {}
+      schema = {}
+      request_body["content"]["application/x-www-form-urlencoded"]["schema"] = schema
+      schema["type"] = "object"
+      schema["properties"] = {}
+      formparams.each do |p|
+        param_name = p["parameterName"] || p["name"]
+        prop = { "type" => "string" }
+        if p["comments"] && p["comments"][0]
+          prop["description"] = p["comments"].join(" ").gsub('(Optional)', '').strip
+        end
+        schema["properties"][param_name] = prop
+      end
     end
   end
 
@@ -572,7 +592,7 @@ end
 
 def build_openapi_paramobj(jsonparamobj, paramtype)
   paramobj = {}
-  paramobj["name"] = jsonparamobj["name"]
+  paramobj["name"] = jsonparamobj["parameterName"] || jsonparamobj["name"]
   paramobj["in"] = paramtype
   # Cover Java generics here
   paramobj["schema"] = if %w[Collection<String> List<String> Set<String>].include? jsonparamobj['javaType']
@@ -721,8 +741,10 @@ end
 # 
 if deferred.length
   deferred.each do |uri, objects|
-    if not rawpaths.key?(uri)
-      objects.each do |json|
+    objects.each do |json|
+      method = json["method"]
+      if !rawpaths.key?(uri) || !rawpaths[uri].key?(method)
+        # The URI doesn't exist in rawpaths or the URI exists but the method doesn't exist.
         build_path(uri, json, rawpaths, true, options)
       end
     end

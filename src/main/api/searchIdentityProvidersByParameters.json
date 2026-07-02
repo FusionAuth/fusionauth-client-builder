@@ -1,0 +1,75 @@
+{
+  "uri": "/api/identity-provider/search",
+  "comments": [
+    "Searches identity providers with the specified criteria and pagination."
+  ],
+  "method": "get",
+  "methodName": "searchIdentityProvidersByParameters",
+  "successResponse": "IdentityProviderSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "applicationId",
+      "comments": [
+        "(Optional) The application Id to search for identity providers."
+      ],
+      "type": "urlParameter",
+      "javaType": "UUID",
+      "parameterName": "applicationId"
+    },
+    {
+      "name": "name",
+      "comments": [
+        "(Optional) The name of the identity provider to search for. Supports wildcard search using *."
+      ],
+      "type": "urlParameter",
+      "javaType": "String",
+      "parameterName": "name"
+    },
+    {
+      "name": "numberOfResults",
+      "comments": [
+        "(Optional) The number of results to return. Defaults to 25."
+      ],
+      "type": "urlParameter",
+      "javaType": "Integer",
+      "parameterName": "numberOfResults"
+    },
+    {
+      "name": "orderBy",
+      "comments": [
+        "(Optional) The field to order the results by. Supported values: enabled, id, insertInstant, name, type."
+      ],
+      "type": "urlParameter",
+      "javaType": "String",
+      "parameterName": "orderBy"
+    },
+    {
+      "name": "startRow",
+      "comments": [
+        "(Optional) The offset into the total results. Defaults to 0."
+      ],
+      "type": "urlParameter",
+      "javaType": "Integer",
+      "parameterName": "startRow"
+    },
+    {
+      "name": "tenantId",
+      "comments": [
+        "(Optional) The tenant Id to restrict the results to."
+      ],
+      "type": "urlParameter",
+      "javaType": "UUID",
+      "parameterName": "tenantId"
+    },
+    {
+      "name": "type",
+      "comments": [
+        "(Optional) The type of identity provider to search for."
+      ],
+      "type": "urlParameter",
+      "javaType": "String",
+      "parameterName": "type"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "uri": "/api/webhook/search",
+  "comments": [
+    "Searches webhooks with the specified criteria and pagination."
+  ],
+  "method": "get",
+  "methodName": "searchWebhooksByParameters",
+  "successResponse": "WebhookSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "description",
+      "comments": [
+        "(Optional) The description of the webhook to search for. Supports wildcard search using *."
+      ],
+      "type": "urlParameter",
+      "javaType": "String",
+      "parameterName": "description"
+    },
+    {
+      "name": "numberOfResults",
+      "comments": [
+        "(Optional) The number of results to return. Defaults to 25."
+      ],
+      "type": "urlParameter",
+      "javaType": "Integer",
+      "parameterName": "numberOfResults"
+    },
+    {
+      "name": "orderBy",
+      "comments": [
+        "(Optional) The field to order the results by. Supported values: description, id, insertInstant, url."
+      ],
+      "type": "urlParameter",
+      "javaType": "String",
+      "parameterName": "orderBy"
+    },
+    {
+      "name": "startRow",
+      "comments": [
+        "(Optional) The offset into the total results. Defaults to 0."
+      ],
+      "type": "urlParameter",
+      "javaType": "Integer",
+      "parameterName": "startRow"
+    },
+    {
+      "name": "tenantId",
+      "comments": [
+        "(Optional) The tenant Id to restrict the results to."
+      ],
+      "type": "urlParameter",
+      "javaType": "UUID",
+      "parameterName": "tenantId"
+    },
+    {
+      "name": "url",
+      "comments": [
+        "(Optional) The URL of the webhook to search for. Supports wildcard search using *."
+      ],
+      "type": "urlParameter",
+      "javaType": "String",
+      "parameterName": "url"
+    }
+  ]
+}
