@@ -171,7 +171,7 @@ void domainDSLBuilder() {
 
   var debug = switches.has("domain-debug") ? "debug" : ""
   var home = appPb.environment().get("HOME")
-  ProcessBuilder domainBuilder = new ProcessBuilder("${home}/dev/java/current21/bin/java", "-cp", classPath,
+  ProcessBuilder domainBuilder = new ProcessBuilder("${home}/dev/java/current25/bin/java", "-cp", classPath,
                                                     "io.fusionauth.builders.DomainDSLBuilder",
                                                     fusionAuthAppDir.toString(),
                                                     inMonoRepo.toString(),
