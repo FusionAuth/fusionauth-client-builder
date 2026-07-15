@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "EntityDeleteEvent",
+  "description" : "/**\n * Models the Entity Delete Event.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEntityEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EntityDeleteEvent"
+    } ]
+  } ],
+  "fields" : { }
+}

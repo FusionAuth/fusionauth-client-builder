@@ -176,5 +176,23 @@
   }, {
     "name" : "UserTwoFactorSuccess",
     "args" : [ "user.two-factor.success" ]
+  }, {
+    "name" : "EntityCreate",
+    "args" : [ "entity.create" ]
+  }, {
+    "name" : "EntityCreateComplete",
+    "args" : [ "entity.create.complete" ]
+  }, {
+    "name" : "EntityDelete",
+    "args" : [ "entity.delete" ]
+  }, {
+    "name" : "EntityDeleteComplete",
+    "args" : [ "entity.delete.complete" ]
+  }, {
+    "name" : "EntityUpdate",
+    "args" : [ "entity.update" ]
+  }, {
+    "name" : "EntityUpdateComplete",
+    "args" : [ "entity.update.complete" ]
   } ]
 }

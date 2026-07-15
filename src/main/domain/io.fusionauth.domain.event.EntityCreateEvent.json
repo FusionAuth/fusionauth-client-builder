@@ -1,0 +1,15 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "EntityCreateEvent",
+  "description" : "/**\n * Models the Entity Create Event.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEntityEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EntityCreateEvent"
+    } ]
+  } ],
+  "fields" : { }
+}

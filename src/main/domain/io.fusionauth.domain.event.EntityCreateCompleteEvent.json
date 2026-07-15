@@ -1,0 +1,17 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "EntityCreateCompleteEvent",
+  "description" : "/**\n * Models the Entity Create Complete Event.\n * <p>\n * This is different than the entity.create event in that it will be sent after the entity has been created. This event cannot be made\n * transactional.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEntityEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EntityCreateCompleteEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : { }
+}

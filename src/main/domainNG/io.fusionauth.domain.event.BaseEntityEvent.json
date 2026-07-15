@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.event.BaseEntityEvent",
+  "extends" : { },
+  "fields" : {
+    "entity" : {
+      "className" : "io.fusionauth.domain.Entity",
+      "type" : "Entity"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Entity" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "BaseEntityEvent"
+}

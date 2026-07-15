@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "BaseEntityEvent",
+  "description" : "/**\n * Base class for all {@link Entity}-related events.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "ObjectIdentifiable"
+  } ],
+  "fields" : {
+    "entity" : {
+      "type" : "Entity"
+    }
+  }
+}

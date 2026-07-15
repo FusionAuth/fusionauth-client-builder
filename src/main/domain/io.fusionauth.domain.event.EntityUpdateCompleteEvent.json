@@ -1,0 +1,21 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "EntityUpdateCompleteEvent",
+  "description" : "/**\n * Models the Entity Update Complete Event.\n * <p>\n * This is different than the entity.update event in that it will be sent after the entity has been updated. This event cannot be made\n * transactional.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEntityEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EntityUpdateCompleteEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "original" : {
+      "type" : "Entity"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "EntityDeleteCompleteEvent",
+  "description" : "/**\n * Models the Entity Delete Complete Event.\n * <p>\n * This is different than the entity.delete event in that it will be sent after the entity has been deleted. This event cannot be made\n * transactional.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEntityEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EntityDeleteCompleteEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : { }
+}

@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "EntityUpdateEvent",
+  "description" : "/**\n * Models the Entity Update Event.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEntityEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "EntityUpdateEvent"
+    } ]
+  } ],
+  "fields" : {
+    "original" : {
+      "type" : "Entity"
+    }
+  }
+}
