@@ -12,10 +12,19 @@
     "authorization_endpoint" : {
       "type" : "String"
     },
+    "authorization_response_iss_parameter_supported" : {
+      "type" : "boolean"
+    },
     "backchannel_logout_supported" : {
       "type" : "boolean"
     },
     "claims_supported" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "code_challenge_methods_supported" : {
       "type" : "List",
       "typeArguments" : [ {
         "type" : "String"
@@ -91,12 +100,6 @@
       "type" : "String"
     },
     "userinfo_signing_alg_values_supported" : {
-      "type" : "List",
-      "typeArguments" : [ {
-        "type" : "String"
-      } ]
-    },
-    "code_challenge_methods_supported" : {
       "type" : "List",
       "typeArguments" : [ {
         "type" : "String"

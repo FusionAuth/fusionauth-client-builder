@@ -9,6 +9,9 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "authorization_response_iss_parameter_supported" : {
+      "type" : "boolean"
+    },
     "backchannel_logout_supported" : {
       "type" : "boolean"
     },
