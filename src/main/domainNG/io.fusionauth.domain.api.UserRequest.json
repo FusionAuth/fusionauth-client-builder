@@ -16,6 +16,10 @@
     "disableDomainBlock" : {
       "type" : "boolean"
     },
+    "passwordFieldType" : {
+      "className" : "io.fusionauth.domain.PasswordType",
+      "type" : "PasswordType"
+    },
     "sendSetPasswordEmail" : {
       "type" : "boolean"
     },
@@ -39,7 +43,7 @@
       } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.SendSetPasswordIdentityType", "io.fusionauth.domain.User", "java.util.List" ],
+  "imports" : [ "io.fusionauth.domain.api.BaseEventRequest", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.lang.String", "io.fusionauth.domain.PasswordType", "io.fusionauth.domain.SendSetPasswordIdentityType", "io.fusionauth.domain.User", "java.util.List" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

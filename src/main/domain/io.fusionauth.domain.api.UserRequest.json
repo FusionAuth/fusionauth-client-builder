@@ -21,6 +21,9 @@
     "disableDomainBlock" : {
       "type" : "boolean"
     },
+    "passwordFieldType" : {
+      "type" : "PasswordType"
+    },
     "sendSetPasswordEmail" : {
       "type" : "boolean"
     },
