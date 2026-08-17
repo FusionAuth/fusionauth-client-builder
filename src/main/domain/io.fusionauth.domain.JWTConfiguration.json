@@ -15,8 +15,20 @@
     "accessTokenKeyId" : {
       "type" : "UUID"
     },
+    "accessTokenVerificationKeyIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
     "idTokenKeyId" : {
       "type" : "UUID"
+    },
+    "idTokenVerificationKeyIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
     },
     "refreshTokenExpirationPolicy" : {
       "type" : "RefreshTokenExpirationPolicy"

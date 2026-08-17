@@ -24,6 +24,12 @@
     "keyId" : {
       "type" : "UUID"
     },
+    "verificationKeyIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
     "uniqueIdClaim" : {
       "type" : "String"
     },

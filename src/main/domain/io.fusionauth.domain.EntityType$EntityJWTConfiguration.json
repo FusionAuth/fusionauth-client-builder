@@ -15,6 +15,12 @@
     "accessTokenKeyId" : {
       "type" : "UUID"
     },
+    "accessTokenVerificationKeyIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
     "timeToLiveInSeconds" : {
       "type" : "int"
     }

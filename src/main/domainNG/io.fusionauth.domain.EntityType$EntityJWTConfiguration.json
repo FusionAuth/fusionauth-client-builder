@@ -9,11 +9,19 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "accessTokenVerificationKeyIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    },
     "timeToLiveInSeconds" : {
       "type" : "int"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.util.List" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

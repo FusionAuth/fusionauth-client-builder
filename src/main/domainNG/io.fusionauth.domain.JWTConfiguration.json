@@ -9,9 +9,25 @@
       "className" : "java.util.UUID",
       "type" : "UUID"
     },
+    "accessTokenVerificationKeyIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    },
     "idTokenKeyId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"
+    },
+    "idTokenVerificationKeyIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
     },
     "refreshTokenExpirationPolicy" : {
       "className" : "io.fusionauth.domain.RefreshTokenExpirationPolicy",
@@ -40,7 +56,7 @@
       "type" : "int"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.util.UUID", "io.fusionauth.domain.RefreshTokenExpirationPolicy", "io.fusionauth.domain.RefreshTokenOneTimeUseConfiguration", "io.fusionauth.domain.RefreshTokenRevocationPolicy", "io.fusionauth.domain.RefreshTokenSlidingWindowConfiguration", "io.fusionauth.domain.RefreshTokenUsagePolicy" ],
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.util.UUID", "java.util.List", "io.fusionauth.domain.RefreshTokenExpirationPolicy", "io.fusionauth.domain.RefreshTokenOneTimeUseConfiguration", "io.fusionauth.domain.RefreshTokenRevocationPolicy", "io.fusionauth.domain.RefreshTokenSlidingWindowConfiguration", "io.fusionauth.domain.RefreshTokenUsagePolicy" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

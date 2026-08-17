@@ -34,6 +34,12 @@
     "defaultKeyId" : {
       "type" : "UUID"
     },
+    "verificationKeyIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
     "headerKeyParameter" : {
       "type" : "String"
     },

@@ -17,6 +17,12 @@
     "singleLogout" : {
       "type" : "SAMLv2SingleLogout"
     },
+    "verificationKeyIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
     "xmlSignatureC14nMethod" : {
       "type" : "CanonicalizationMethod"
     }

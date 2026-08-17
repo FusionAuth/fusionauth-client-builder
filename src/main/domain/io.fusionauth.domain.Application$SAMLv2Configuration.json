@@ -50,6 +50,12 @@
     "requireSignedRequests" : {
       "type" : "boolean"
     },
+    "verificationKeyIds" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "UUID"
+      } ]
+    },
     "xmlSignatureC14nMethod" : {
       "type" : "CanonicalizationMethod"
     },

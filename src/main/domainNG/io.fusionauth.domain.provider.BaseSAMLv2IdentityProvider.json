@@ -31,9 +31,17 @@
     "usernameClaim" : {
       "className" : "java.lang.String",
       "type" : "String"
+    },
+    "verificationKeyIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.provider.SAMLv2AssertionDecryptionConfiguration", "java.lang.String", "java.util.UUID" ],
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProviderApplicationConfiguration", "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.provider.SAMLv2AssertionDecryptionConfiguration", "java.lang.String", "java.util.UUID", "java.util.List" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain.provider",

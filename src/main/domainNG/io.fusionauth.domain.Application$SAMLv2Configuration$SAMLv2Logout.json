@@ -21,12 +21,20 @@
       "className" : "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2SingleLogout",
       "type" : "Application$SAMLv2Configuration$SAMLv2SingleLogout"
     },
+    "verificationKeyIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    },
     "xmlSignatureC14nMethod" : {
       "className" : "io.fusionauth.domain.CanonicalizationMethod",
       "type" : "CanonicalizationMethod"
     }
   },
-  "imports" : [ "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLLogoutBehavior", "java.util.UUID", "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2SingleLogout", "io.fusionauth.domain.CanonicalizationMethod" ],
+  "imports" : [ "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLLogoutBehavior", "java.util.UUID", "io.fusionauth.domain.Application$SAMLv2Configuration$SAMLv2SingleLogout", "java.util.List", "io.fusionauth.domain.CanonicalizationMethod" ],
   "interfaces" : [ ],
   "objectType" : "Object",
   "packageName" : "io.fusionauth.domain",

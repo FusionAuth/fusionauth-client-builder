@@ -43,9 +43,17 @@
     "uniqueIdentityClaim" : {
       "className" : "java.lang.String",
       "type" : "String"
+    },
+    "verificationKeyIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
     }
   },
-  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.DomainBasedIdentityProvider", "io.fusionauth.domain.provider.ExternalJWTApplicationConfiguration", "java.util.Map", "java.lang.String", "java.util.Set", "java.util.UUID", "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration" ],
+  "imports" : [ "io.fusionauth.domain.provider.BaseIdentityProvider", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.provider.DomainBasedIdentityProvider", "io.fusionauth.domain.provider.ExternalJWTApplicationConfiguration", "java.util.Map", "java.lang.String", "java.util.Set", "java.util.UUID", "java.util.List", "io.fusionauth.domain.provider.IdentityProviderOauth2Configuration" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

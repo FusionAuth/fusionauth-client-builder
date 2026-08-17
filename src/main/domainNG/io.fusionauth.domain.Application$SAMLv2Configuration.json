@@ -55,6 +55,14 @@
     "requireSignedRequests" : {
       "type" : "boolean"
     },
+    "verificationKeyIds" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.util.UUID",
+        "type" : "UUID"
+      } ]
+    },
     "xmlSignatureC14nMethod" : {
       "className" : "io.fusionauth.domain.CanonicalizationMethod",
       "type" : "CanonicalizationMethod"
