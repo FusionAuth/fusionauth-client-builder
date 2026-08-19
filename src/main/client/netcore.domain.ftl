@@ -29,9 +29,13 @@
           to represent them as nullable in C#. The 'domain' top level Freemarker map value has all of our types in it
           and we can lookup our field to determine whether it's an enum or not.
 
-          At this time, only doing ENUMs in API request/response classes because domain classes are used in responses, where
+          At this time, only doing ENUMs in API request/response classes and search classes, because domain
+          classes are used in responses, where
           1) the value may be populated AND
           2) a nullable change could be breaking to existing client code usage (prior to 1.65.0) and inaccurately reflect the API contract.
+
+          The io.fusionauth.domain.search package is included because its enum fields (search criteria filters and the
+          sort order) are optional and frequently left unset.
 
           Other exception cases:
           * KeyType - because it was already nullable. And removing nullability will break
@@ -43,7 +47,8 @@
                               type.type != "IdentityProviderType" &&
                                 (
                                   ["KeyType", "KeyAlgorithm"]?seq_contains(type.type) ||
-                                  domain_item.packageName?starts_with("io.fusionauth.domain.api")
+                                  domain_item.packageName?starts_with("io.fusionauth.domain.api") ||
+                                  domain_item.packageName?starts_with("io.fusionauth.domain.search")
                                 )
                       )?first??]
       [#local convertedType = convertedType + "?"/]
