@@ -86,6 +86,9 @@
     "threatDetection" : {
       "type" : "ReactorFeatureStatus"
     },
+    "tokenExchange" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "universalApplication" : {
       "type" : "ReactorFeatureStatus"
     },

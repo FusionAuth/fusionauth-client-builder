@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.TokenExchangePolicyEngine",
+  "enum" : [ "ENTITY", "LAMBDA" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TokenExchangePolicyEngine"
+}

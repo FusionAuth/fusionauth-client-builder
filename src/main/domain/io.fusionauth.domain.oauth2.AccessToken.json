@@ -17,6 +17,9 @@
     "id_token" : {
       "type" : "String"
     },
+    "issued_token_type" : {
+      "type" : "String"
+    },
     "refresh_token" : {
       "type" : "String"
     },

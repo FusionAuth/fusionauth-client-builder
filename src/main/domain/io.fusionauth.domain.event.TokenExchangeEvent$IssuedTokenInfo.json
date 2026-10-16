@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "IssuedTokenInfo",
+  "description" : "/**\n * Nested structure for issued token information in the webhook payload.\n */\n",
+  "fields" : {
+    "delegationSemantics" : {
+      "type" : "TokenExchangeDelegationSemantics"
+    },
+    "grantedAudience" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "grantedScope" : {
+      "type" : "String"
+    },
+    "jti" : {
+      "type" : "String"
+    }
+  }
+}

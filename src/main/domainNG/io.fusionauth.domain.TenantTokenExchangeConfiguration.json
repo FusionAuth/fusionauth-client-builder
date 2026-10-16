@@ -1,0 +1,47 @@
+{
+  "className" : "io.fusionauth.domain.TenantTokenExchangeConfiguration",
+  "extends" : {
+    "className" : "io.fusionauth.domain.Enableable",
+    "type" : "Enableable"
+  },
+  "fields" : {
+    "allowedIssuers" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "maxClaimDepth" : {
+      "type" : "int"
+    },
+    "policyEngine" : {
+      "className" : "io.fusionauth.domain.TokenExchangePolicyEngine",
+      "type" : "TokenExchangePolicyEngine"
+    },
+    "policyEngineLambdaId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "populateLambdaId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Enableable", "io.fusionauth.domain.Buildable", "java.util.List", "java.lang.String", "io.fusionauth.domain.TokenExchangePolicyEngine", "java.util.UUID" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TenantTokenExchangeConfiguration",
+      "type" : "TenantTokenExchangeConfiguration"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantTokenExchangeConfiguration"
+}

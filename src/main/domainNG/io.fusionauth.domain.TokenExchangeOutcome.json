@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.TokenExchangeOutcome",
+  "enum" : [ "CLIENT_AUTHENTICATION_FAILED", "CLIENT_DISALLOWED", "CLIENT_REQUEST_FAILURE", "DEPTH_EXCEEDED", "POLICY_DENIED", "POLICY_LAMBDA_ERROR", "POPULATE_LAMBDA_ERROR", "SUBJECT_TOKEN_INVALID", "SUCCESS", "TENANT_DISALLOWED", "WEBHOOK_FAILURE" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TokenExchangeOutcome"
+}

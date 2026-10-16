@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TokenExchangeAuditLogConfiguration",
+  "description" : "/**\n * The system configuration for token exchange audit log data.\n * <p>\n * Deleting these entries is mandatory, so this configuration intentionally has no enabled flag. Token exchange volume can be high enough\n * that retaining entries indefinitely would grow the database without bound. Longer retention is served by ingesting the token exchange\n * webhooks into external storage.\n */\n",
+  "fields" : {
+    "numberOfDaysToRetain" : {
+      "type" : "int"
+    }
+  }
+}

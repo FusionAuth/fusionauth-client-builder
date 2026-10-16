@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TokenExchangePolicyDecision",
+  "description" : "/**\n * The decision returned by the policy engine.\n */\n",
+  "enum" : [ "ALLOW", "DENY", "ERROR" ]
+}

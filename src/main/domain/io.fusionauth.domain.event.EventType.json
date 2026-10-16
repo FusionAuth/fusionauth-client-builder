@@ -194,5 +194,11 @@
   }, {
     "name" : "EntityUpdateComplete",
     "args" : [ "entity.update.complete" ]
+  }, {
+    "name" : "TokenExchange",
+    "args" : [ "token.exchange" ]
+  }, {
+    "name" : "TokenExchangeComplete",
+    "args" : [ "token.exchange.complete" ]
   } ]
 }

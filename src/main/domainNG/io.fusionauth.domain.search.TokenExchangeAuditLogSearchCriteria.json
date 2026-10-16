@@ -1,0 +1,52 @@
+{
+  "className" : "io.fusionauth.domain.search.TokenExchangeAuditLogSearchCriteria",
+  "extends" : {
+    "className" : "io.fusionauth.domain.search.BaseSearchCriteria",
+    "type" : "BaseSearchCriteria"
+  },
+  "fields" : {
+    "SortableFields" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "end" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "exchangerClientId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "outcome" : {
+      "className" : "io.fusionauth.domain.TokenExchangeOutcome",
+      "type" : "TokenExchangeOutcome"
+    },
+    "start" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.search.BaseSearchCriteria", "io.fusionauth.domain.Buildable", "java.util.Map", "java.lang.String", "java.time.ZonedDateTime", "java.util.UUID", "io.fusionauth.domain.TokenExchangeOutcome" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.search.TokenExchangeAuditLogSearchCriteria",
+      "type" : "TokenExchangeAuditLogSearchCriteria"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "TokenExchangeAuditLogSearchCriteria"
+}

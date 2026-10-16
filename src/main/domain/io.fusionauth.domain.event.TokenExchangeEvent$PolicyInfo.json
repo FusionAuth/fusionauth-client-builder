@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "PolicyInfo",
+  "description" : "/**\n * Nested structure for policy evaluation information in the webhook payload.\n */\n",
+  "fields" : {
+    "decision" : {
+      "type" : "TokenExchangePolicyDecision"
+    },
+    "decisionDurationMs" : {
+      "type" : "int"
+    },
+    "engine" : {
+      "type" : "TokenExchangePolicyEngine"
+    }
+  }
+}

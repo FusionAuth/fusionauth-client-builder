@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "SubjectTokenInfo",
+  "description" : "/**\n * Nested structure for subject token information in the webhook payload.\n */\n",
+  "fields" : {
+    "iss" : {
+      "type" : "String"
+    },
+    "jti" : {
+      "type" : "String"
+    },
+    "sub" : {
+      "type" : "String"
+    },
+    "type" : {
+      "type" : "String"
+    },
+    "validationStatus" : {
+      "type" : "SubjectTokenValidationStatus"
+    }
+  }
+}

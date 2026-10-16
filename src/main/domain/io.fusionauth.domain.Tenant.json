@@ -127,6 +127,9 @@
     "themeId" : {
       "type" : "UUID"
     },
+    "tokenExchangeConfiguration" : {
+      "type" : "TenantTokenExchangeConfiguration"
+    },
     "userDeletePolicy" : {
       "type" : "TenantUserDeletePolicy"
     },

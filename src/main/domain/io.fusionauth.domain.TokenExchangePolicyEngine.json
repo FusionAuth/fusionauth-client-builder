@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TokenExchangePolicyEngine",
+  "description" : "/**\n * The policy engine used to authorize an RFC 8693 token exchange request.\n */\n",
+  "enum" : [ "ENTITY", "LAMBDA" ]
+}

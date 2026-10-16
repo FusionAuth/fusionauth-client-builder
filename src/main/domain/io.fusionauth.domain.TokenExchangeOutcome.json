@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TokenExchangeOutcome",
+  "description" : "/**\n * The terminal outcome of a token exchange attempt. Every failure stage gets a distinct value so a denial can be attributed to the stage\n * that rejected it.\n */\n",
+  "enum" : [ "CLIENT_AUTHENTICATION_FAILED", "CLIENT_DISALLOWED", "CLIENT_REQUEST_FAILURE", "DEPTH_EXCEEDED", "POLICY_DENIED", "POLICY_LAMBDA_ERROR", "POPULATE_LAMBDA_ERROR", "SUBJECT_TOKEN_INVALID", "SUCCESS", "TENANT_DISALLOWED", "WEBHOOK_FAILURE" ]
+}

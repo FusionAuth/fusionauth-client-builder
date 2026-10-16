@@ -15,6 +15,9 @@
     "name" : "client_credentials",
     "args" : [ "client_credentials" ]
   }, {
+    "name" : "token_exchange",
+    "args" : [ "urn:ietf:params:oauth:grant-type:token-exchange" ]
+  }, {
     "name" : "refresh_token",
     "args" : [ "refresh_token" ]
   }, {

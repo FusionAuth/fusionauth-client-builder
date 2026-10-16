@@ -112,6 +112,10 @@
       "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
       "type" : "ReactorFeatureStatus"
     },
+    "tokenExchange" : {
+      "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
+      "type" : "ReactorFeatureStatus"
+    },
     "universalApplication" : {
       "className" : "io.fusionauth.domain.reactor.ReactorFeatureStatus",
       "type" : "ReactorFeatureStatus"

@@ -83,5 +83,11 @@
   }, {
     "name" : "MFARequirement",
     "args" : [ "checkRequired" ]
+  }, {
+    "name" : "TokenExchangePolicy",
+    "args" : [ "policy" ]
+  }, {
+    "name" : "TokenExchangePopulate",
+    "args" : [ "populate" ]
   } ]
 }

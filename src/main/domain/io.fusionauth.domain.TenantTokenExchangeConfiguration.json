@@ -1,0 +1,37 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TenantTokenExchangeConfiguration",
+  "description" : "/**\n * Tenant level configuration for RFC 8693 token exchange.\n */\n",
+  "extends" : [ {
+    "type" : "Enableable"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TenantTokenExchangeConfiguration"
+    } ]
+  } ],
+  "fields" : {
+    "allowedIssuers" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "maxClaimDepth" : {
+      "type" : "int"
+    },
+    "policyEngine" : {
+      "type" : "TokenExchangePolicyEngine"
+    },
+    "policyEngineLambdaId" : {
+      "type" : "UUID"
+    },
+    "populateLambdaId" : {
+      "type" : "UUID"
+    }
+  }
+}

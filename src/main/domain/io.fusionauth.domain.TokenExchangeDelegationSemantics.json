@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TokenExchangeDelegationSemantics",
+  "description" : "/**\n * The delegation semantics applied to the issued token. These are RFC 8693 terms.\n * FusionAuth does not support token exchange impersonation.\n */\n",
+  "enum" : [ "DELEGATION", "IMPERSONATION" ]
+}

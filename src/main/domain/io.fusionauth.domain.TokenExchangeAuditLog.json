@@ -1,0 +1,73 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TokenExchangeAuditLog",
+  "description" : "/**\n * An audit record for a single token exchange attempt. Exactly one of these is written for every attempt, whether it succeeded or failed,\n * so this is the authoritative record of who exchanged what for what.\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TokenExchangeAuditLog"
+    } ]
+  } ],
+  "fields" : {
+    "actChain" : {
+      "type" : "String"
+    },
+    "delegationSemantics" : {
+      "type" : "TokenExchangeDelegationSemantics"
+    },
+    "eventId" : {
+      "type" : "UUID"
+    },
+    "exchangerClientId" : {
+      "type" : "UUID"
+    },
+    "grantedAudience" : {
+      "type" : "String"
+    },
+    "grantedScope" : {
+      "type" : "String"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "intent" : {
+      "type" : "String"
+    },
+    "issuedTokenJti" : {
+      "type" : "String"
+    },
+    "outcome" : {
+      "type" : "TokenExchangeOutcome"
+    },
+    "policyDecision" : {
+      "type" : "TokenExchangePolicyDecision"
+    },
+    "policyDecisionDurationMs" : {
+      "type" : "int"
+    },
+    "policyEngine" : {
+      "type" : "TokenExchangePolicyEngine"
+    },
+    "requestedAudience" : {
+      "type" : "String"
+    },
+    "subjectTokenIss" : {
+      "type" : "String"
+    },
+    "subjectTokenJti" : {
+      "type" : "String"
+    },
+    "subjectTokenSub" : {
+      "type" : "String"
+    },
+    "subjectTokenType" : {
+      "type" : "String"
+    },
+    "subjectTokenValidationStatus" : {
+      "type" : "SubjectTokenValidationStatus"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    }
+  }
+}

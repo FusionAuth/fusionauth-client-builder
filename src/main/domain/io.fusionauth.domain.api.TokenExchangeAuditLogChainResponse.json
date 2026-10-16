@@ -1,0 +1,13 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TokenExchangeAuditLogChainResponse",
+  "description" : "/**\n * Token exchange audit log chain response.\n */\n",
+  "fields" : {
+    "tokenExchangeAuditLogs" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "TokenExchangeAuditLog"
+      } ]
+    }
+  }
+}

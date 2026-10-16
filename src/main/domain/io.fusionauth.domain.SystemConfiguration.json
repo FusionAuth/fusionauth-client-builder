@@ -40,6 +40,9 @@
     "reportTimezone" : {
       "type" : "ZoneId"
     },
+    "tokenExchangeAuditLogConfiguration" : {
+      "type" : "TokenExchangeAuditLogConfiguration"
+    },
     "trustedProxyConfiguration" : {
       "type" : "SystemTrustedProxyConfiguration"
     },

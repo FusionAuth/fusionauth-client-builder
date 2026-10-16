@@ -1,0 +1,43 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "TokenExchangeEvent",
+  "description" : "/**\n * Models the Token Exchange event. This event fires for every token exchange attempt (success and failure).\n *\n * @author FusionAuth\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "TokenExchangeEvent"
+    } ]
+  } ],
+  "fields" : {
+    "actChain" : {
+      "type" : "Object"
+    },
+    "exchangerClientId" : {
+      "type" : "UUID"
+    },
+    "intent" : {
+      "type" : "String"
+    },
+    "issuedToken" : {
+      "type" : "IssuedTokenInfo"
+    },
+    "outcome" : {
+      "type" : "TokenExchangeOutcome"
+    },
+    "policy" : {
+      "type" : "PolicyInfo"
+    },
+    "requestedAudience" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "subjectToken" : {
+      "type" : "SubjectTokenInfo"
+    }
+  }
+}

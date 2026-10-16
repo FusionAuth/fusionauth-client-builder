@@ -5,6 +5,9 @@
     "type" : "Object"
   },
   "fields" : {
+    "actAsTokenExchangeClient" : {
+      "type" : "boolean"
+    },
     "clientId" : {
       "className" : "java.lang.String",
       "type" : "String"

@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.event.TokenExchangeEvent$PolicyInfo",
+  "extends" : { },
+  "fields" : {
+    "decision" : {
+      "className" : "io.fusionauth.domain.TokenExchangePolicyDecision",
+      "type" : "TokenExchangePolicyDecision"
+    },
+    "decisionDurationMs" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
+    "engine" : {
+      "className" : "io.fusionauth.domain.TokenExchangePolicyEngine",
+      "type" : "TokenExchangePolicyEngine"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.TokenExchangePolicyDecision", "java.lang.Integer", "io.fusionauth.domain.TokenExchangePolicyEngine" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "TokenExchangeEvent$PolicyInfo"
+}

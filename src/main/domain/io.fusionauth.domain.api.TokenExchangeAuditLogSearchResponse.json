@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TokenExchangeAuditLogSearchResponse",
+  "description" : "/**\n * Token exchange audit log search response.\n */\n",
+  "fields" : {
+    "tokenExchangeAuditLogs" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "TokenExchangeAuditLog"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

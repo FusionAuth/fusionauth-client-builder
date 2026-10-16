@@ -1,0 +1,31 @@
+{
+  "className" : "io.fusionauth.domain.event.TokenExchangeEvent$IssuedTokenInfo",
+  "extends" : { },
+  "fields" : {
+    "delegationSemantics" : {
+      "className" : "io.fusionauth.domain.TokenExchangeDelegationSemantics",
+      "type" : "TokenExchangeDelegationSemantics"
+    },
+    "grantedAudience" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "grantedScope" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "jti" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.TokenExchangeDelegationSemantics", "java.util.List", "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "TokenExchangeEvent$IssuedTokenInfo"
+}

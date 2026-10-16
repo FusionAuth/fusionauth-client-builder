@@ -1,0 +1,12 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "TokenExchangeCompleteEvent",
+  "description" : "/**\n * Models the Token Exchange Complete event. This is a non-transactional variant of the token.exchange event.\n * Delivery failure does not block or fail the token exchange request.\n */\n",
+  "extends" : [ {
+    "type" : "TokenExchangeEvent"
+  } ],
+  "implements" : [ {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : { }
+}

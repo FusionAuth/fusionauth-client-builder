@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.TokenExchangeDelegationSemantics",
+  "enum" : [ "DELEGATION", "IMPERSONATION" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TokenExchangeDelegationSemantics"
+}

@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.TokenExchangeAuditLogSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "tokenExchangeAuditLogs" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.TokenExchangeAuditLog",
+        "type" : "TokenExchangeAuditLog"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.TokenExchangeAuditLog" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "TokenExchangeAuditLogSearchResponse"
+}

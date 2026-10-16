@@ -1,0 +1,101 @@
+{
+  "className" : "io.fusionauth.domain.TokenExchangeAuditLog",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "actChain" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "delegationSemantics" : {
+      "className" : "io.fusionauth.domain.TokenExchangeDelegationSemantics",
+      "type" : "TokenExchangeDelegationSemantics"
+    },
+    "eventId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "exchangerClientId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "grantedAudience" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "grantedScope" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "intent" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "issuedTokenJti" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "outcome" : {
+      "className" : "io.fusionauth.domain.TokenExchangeOutcome",
+      "type" : "TokenExchangeOutcome"
+    },
+    "policyDecision" : {
+      "className" : "io.fusionauth.domain.TokenExchangePolicyDecision",
+      "type" : "TokenExchangePolicyDecision"
+    },
+    "policyDecisionDurationMs" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    },
+    "policyEngine" : {
+      "className" : "io.fusionauth.domain.TokenExchangePolicyEngine",
+      "type" : "TokenExchangePolicyEngine"
+    },
+    "requestedAudience" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "subjectTokenIss" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "subjectTokenJti" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "subjectTokenSub" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "subjectTokenType" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "subjectTokenValidationStatus" : {
+      "className" : "io.fusionauth.domain.SubjectTokenValidationStatus",
+      "type" : "SubjectTokenValidationStatus"
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "java.lang.String", "io.fusionauth.domain.TokenExchangeDelegationSemantics", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.TokenExchangeOutcome", "io.fusionauth.domain.TokenExchangePolicyDecision", "java.lang.Integer", "io.fusionauth.domain.TokenExchangePolicyEngine", "io.fusionauth.domain.SubjectTokenValidationStatus" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.TokenExchangeAuditLog",
+      "type" : "TokenExchangeAuditLog"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "TokenExchangeAuditLog"
+}

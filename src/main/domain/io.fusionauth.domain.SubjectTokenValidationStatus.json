@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "SubjectTokenValidationStatus",
+  "description" : "/**\n * How much confidence we have in the validation of the subject token that was presented. These values are specified by the ARC and are\n * stored by name, so they may not be renamed without a migration.\n */\n",
+  "enum" : [ "AUTHORITATIVE", "BEST_EFFORT", "FAILED" ]
+}

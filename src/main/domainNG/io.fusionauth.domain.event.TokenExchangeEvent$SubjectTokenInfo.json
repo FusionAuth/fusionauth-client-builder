@@ -1,0 +1,31 @@
+{
+  "className" : "io.fusionauth.domain.event.TokenExchangeEvent$SubjectTokenInfo",
+  "extends" : { },
+  "fields" : {
+    "iss" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "jti" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "sub" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "type" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "validationStatus" : {
+      "className" : "io.fusionauth.domain.SubjectTokenValidationStatus",
+      "type" : "SubjectTokenValidationStatus"
+    }
+  },
+  "imports" : [ "java.lang.String", "io.fusionauth.domain.SubjectTokenValidationStatus" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "TokenExchangeEvent$SubjectTokenInfo"
+}
