@@ -33,6 +33,9 @@
     "breachedPasswordDetection" : {
       "type" : "ReactorFeatureStatus"
     },
+    "cimd" : {
+      "type" : "ReactorFeatureStatus"
+    },
     "clientRiskConfiguration" : {
       "type" : "ReactorFeatureStatus"
     },
