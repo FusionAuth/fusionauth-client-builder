@@ -1,0 +1,47 @@
+{
+  "className" : "io.fusionauth.domain.lambda.parameters.cimd.ClientMetadata",
+  "extends" : { },
+  "fields" : {
+    "clientId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "clientIdHost" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "clientIdPath" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "clientName" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "clientUri" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "clientUriHost" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "clientUriPath" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "redirectUris" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    }
+  },
+  "imports" : [ "java.lang.String", "java.util.List" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.lambda.parameters.cimd",
+  "type" : "ClientMetadata"
+}

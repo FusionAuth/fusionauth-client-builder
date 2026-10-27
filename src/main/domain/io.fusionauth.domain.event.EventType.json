@@ -200,5 +200,11 @@
   }, {
     "name" : "TokenExchangeComplete",
     "args" : [ "token.exchange.complete" ]
+  }, {
+    "name" : "CimdRegistrationSuccess",
+    "args" : [ "cimd.registration.success" ]
+  }, {
+    "name" : "CimdRegistrationFailed",
+    "args" : [ "cimd.registration.failed" ]
   } ]
 }

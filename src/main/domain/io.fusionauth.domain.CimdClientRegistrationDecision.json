@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CimdClientRegistrationDecision",
+  "description" : "/**\n * The decision returned by a CIMD Client Registration lambda.\n */\n",
+  "enum" : [ "ALLOW", "DENY", "REVOKE" ]
+}

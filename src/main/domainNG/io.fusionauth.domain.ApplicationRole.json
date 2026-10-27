@@ -5,10 +5,6 @@
     "type" : "Object"
   },
   "fields" : {
-    "applicationId" : {
-      "className" : "java.util.UUID",
-      "type" : "UUID"
-    },
     "description" : {
       "className" : "java.lang.String",
       "type" : "String"

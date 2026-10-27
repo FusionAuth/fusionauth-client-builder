@@ -1,0 +1,28 @@
+{
+  "uri": "/api/cimd/domain",
+  "comments": [
+    "Updates the CIMD domain with the given Id."
+  ],
+  "method": "put",
+  "methodName": "updateCimdDomain",
+  "successResponse": "CimdDomainResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "domainId",
+      "comments": [
+        "The Id of the CIMD domain to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains all the new CIMD domain information."
+      ],
+      "type": "body",
+      "javaType": "CimdDomainRequest"
+    }
+  ]
+}

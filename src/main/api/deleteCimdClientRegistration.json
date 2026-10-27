@@ -1,0 +1,20 @@
+{
+  "uri": "/api/cimd/registration",
+  "comments": [
+    "Deletes the CIMD client registration for the given Id, along with its refresh tokens."
+  ],
+  "method": "delete",
+  "methodName": "deleteCimdClientRegistration",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "registrationId",
+      "comments": [
+        "The Id of the CIMD client registration to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

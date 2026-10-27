@@ -5,6 +5,10 @@
     "type" : "Object"
   },
   "fields" : {
+    "cimdClientRegistration" : {
+      "className" : "io.fusionauth.domain.RateLimitedRequestConfiguration",
+      "type" : "RateLimitedRequestConfiguration"
+    },
     "failedLogin" : {
       "className" : "io.fusionauth.domain.RateLimitedRequestConfiguration",
       "type" : "RateLimitedRequestConfiguration"

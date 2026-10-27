@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.lambda.parameters.tokenExchange.PolicyLambdaResult",
+  "extends" : { },
+  "fields" : {
+    "decision" : {
+      "className" : "io.fusionauth.domain.TokenExchangePolicyDecision",
+      "type" : "TokenExchangePolicyDecision"
+    },
+    "denial" : {
+      "className" : "io.fusionauth.domain.lambda.parameters.tokenExchange.PolicyLambdaResult$Denial",
+      "type" : "PolicyLambdaResult$Denial"
+    },
+    "granted" : {
+      "className" : "io.fusionauth.domain.lambda.parameters.tokenExchange.PolicyLambdaResult$Granted",
+      "type" : "PolicyLambdaResult$Granted"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.TokenExchangePolicyDecision", "io.fusionauth.domain.lambda.parameters.tokenExchange.PolicyLambdaResult$Denial", "io.fusionauth.domain.lambda.parameters.tokenExchange.PolicyLambdaResult$Granted" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.lambda.parameters.tokenExchange",
+  "type" : "PolicyLambdaResult"
+}

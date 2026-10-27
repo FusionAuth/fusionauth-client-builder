@@ -1,0 +1,46 @@
+{
+  "className" : "io.fusionauth.domain.lambda.parameters.tokenExchange.PolicyLambdaExchange",
+  "extends" : { },
+  "fields" : {
+    "clientId" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "requestedAudiencesAndResources" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "requestedScopes" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
+    },
+    "subjectTokenClaims" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "subjectTokenValidationStatus" : {
+      "className" : "io.fusionauth.domain.SubjectTokenValidationStatus",
+      "type" : "SubjectTokenValidationStatus"
+    }
+  },
+  "imports" : [ "java.lang.String", "java.util.List", "java.util.Map", "io.fusionauth.domain.SubjectTokenValidationStatus" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.lambda.parameters.tokenExchange",
+  "type" : "PolicyLambdaExchange"
+}

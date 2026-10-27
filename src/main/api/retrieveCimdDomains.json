@@ -1,0 +1,10 @@
+{
+  "uri": "/api/cimd/domain",
+  "comments": [
+    "Retrieves all the CIMD domains for the tenant in context."
+  ],
+  "method": "get",
+  "methodName": "retrieveCimdDomains",
+  "successResponse": "CimdDomainResponse",
+  "errorResponse": "Errors"
+}

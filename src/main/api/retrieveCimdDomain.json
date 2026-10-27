@@ -1,0 +1,20 @@
+{
+  "uri": "/api/cimd/domain",
+  "comments": [
+    "Retrieves the CIMD domain for the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveCimdDomain",
+  "successResponse": "CimdDomainResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "domainId",
+      "comments": [
+        "The Id of the CIMD domain."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

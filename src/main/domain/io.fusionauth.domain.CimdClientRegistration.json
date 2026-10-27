@@ -1,0 +1,75 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CimdClientRegistration",
+  "description" : "/**\n * A CIMD (Client ID Metadata Document) client registration. Represents one concrete, fetched {@code client_id} URL registered against\n * a {@link CimdDomain}.\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "CimdClientRegistration"
+    } ]
+  }, {
+    "type" : "JSONColumnable"
+  }, {
+    "type" : "Tenantable"
+  } ],
+  "fields" : {
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "cacheExpirationInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "cimdDomainId" : {
+      "type" : "UUID"
+    },
+    "clientIdUrl" : {
+      "type" : "String"
+    },
+    "clientName" : {
+      "type" : "String"
+    },
+    "clientUri" : {
+      "type" : "String"
+    },
+    "graceExpirationInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "jwtPopulateLambdaId" : {
+      "type" : "UUID"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "overridesByResource" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "CimdClientRegistrationResourceOverride"
+      } ]
+    },
+    "redirectUris" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    },
+    "state" : {
+      "type" : "CimdClientRegistrationState"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "packageName" : "io.fusionauth.domain.lambda.parameters.tokenExchange",
+  "type" : "Granted",
+  "fields" : {
+    "aud" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
+    "expires_in" : {
+      "type" : "int"
+    },
+    "scope" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    }
+  }
+}

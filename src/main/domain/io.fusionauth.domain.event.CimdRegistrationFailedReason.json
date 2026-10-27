@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "CimdRegistrationFailedReason",
+  "description" : "/**\n * Information about why a CIMD client registration failed.\n */\n",
+  "fields" : {
+    "code" : {
+      "type" : "String"
+    }
+  }
+}

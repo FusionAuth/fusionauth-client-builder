@@ -1,0 +1,27 @@
+{
+  "className" : "io.fusionauth.domain.lambda.parameters.cimd.ClientRegistrationContext",
+  "extends" : { },
+  "fields" : {
+    "authenticationThreats" : {
+      "className" : "java.util.Set",
+      "type" : "Set",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.AuthenticationThreats",
+        "type" : "AuthenticationThreats"
+      } ]
+    },
+    "eventInfo" : {
+      "className" : "io.fusionauth.domain.EventInfo",
+      "type" : "EventInfo"
+    },
+    "resource" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.util.Set", "io.fusionauth.domain.AuthenticationThreats", "io.fusionauth.domain.EventInfo", "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.lambda.parameters.cimd",
+  "type" : "ClientRegistrationContext"
+}

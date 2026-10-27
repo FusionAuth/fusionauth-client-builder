@@ -9,9 +9,6 @@
     "total" : {
       "type" : "long"
     },
-    "totalEqualToActual" : {
-      "type" : "boolean"
-    },
     "users" : {
       "className" : "java.util.List",
       "type" : "List",

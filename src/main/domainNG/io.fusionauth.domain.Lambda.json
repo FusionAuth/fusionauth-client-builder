@@ -12,9 +12,6 @@
     "debug" : {
       "type" : "boolean"
     },
-    "enabled" : {
-      "type" : "boolean"
-    },
     "engineType" : {
       "className" : "io.fusionauth.domain.LambdaEngineType",
       "type" : "LambdaEngineType"

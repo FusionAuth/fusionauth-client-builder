@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.lambda.parameters.tokenExchange",
+  "type" : "PolicyLambdaResult",
+  "description" : "/**\n * Mutable decision written by a Token Exchange Policy Lambda.\n */\n",
+  "fields" : {
+    "decision" : {
+      "type" : "TokenExchangePolicyDecision"
+    },
+    "denial" : {
+      "type" : "Denial"
+    },
+    "granted" : {
+      "type" : "Granted"
+    }
+  }
+}

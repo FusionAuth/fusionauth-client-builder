@@ -21,17 +21,6 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
-    "data" : {
-      "className" : "java.util.Map",
-      "type" : "Map",
-      "typeArguments" : [ {
-        "className" : "java.lang.String",
-        "type" : "String"
-      }, {
-        "className" : "java.lang.Object",
-        "type" : "Object"
-      } ]
-    },
     "identityProviderTypeConfigurations" : {
       "className" : "java.util.Map",
       "type" : "Map",

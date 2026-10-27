@@ -1,0 +1,33 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "CimdRegistrationSuccessEvent",
+  "description" : "/**\n * Models the CIMD Registration Success Event.\n * <p>\n * This event is fired when a CIMD client registration succeeds. This event cannot be made transactional.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "CimdRegistrationSuccessEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "cimdClientRegistrationId" : {
+      "type" : "UUID"
+    },
+    "cimdDomainId" : {
+      "type" : "UUID"
+    },
+    "clientId" : {
+      "type" : "String"
+    },
+    "clientName" : {
+      "type" : "String"
+    },
+    "resource" : {
+      "type" : "String"
+    }
+  }
+}

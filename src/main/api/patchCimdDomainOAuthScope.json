@@ -1,0 +1,42 @@
+{
+  "uri": "/api/cimd/domain",
+  "comments": [
+    "Updates, via PATCH, the custom OAuth scope with the given Id for the CIMD domain."
+  ],
+  "method": "patch",
+  "methodName": "patchCimdDomainOAuthScope",
+  "successResponse": "CimdDomainOAuthScopeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "domainId",
+      "comments": [
+        "The Id of the CIMD domain that the OAuth scope belongs to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "constant": true,
+      "name": "scope",
+      "type": "urlSegment",
+      "value": "\"scope\""
+    },
+    {
+      "name": "scopeId",
+      "comments": [
+        "The Id of the OAuth scope to update."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request that contains just the new OAuth scope information."
+      ],
+      "type": "body",
+      "javaType": "CimdDomainOAuthScopeRequest"
+    }
+  ]
+}

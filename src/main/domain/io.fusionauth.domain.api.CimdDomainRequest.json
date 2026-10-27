@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "CimdDomainRequest",
+  "description" : "/**\n * CIMD domain API request object.\n */\n",
+  "fields" : {
+    "domain" : {
+      "type" : "CimdDomain"
+    }
+  }
+}

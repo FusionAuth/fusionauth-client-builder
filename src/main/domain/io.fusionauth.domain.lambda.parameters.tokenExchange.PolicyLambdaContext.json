@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.lambda.parameters.tokenExchange",
+  "type" : "PolicyLambdaContext",
+  "description" : "/**\n * Immutable context provided to a Token Exchange Policy Lambda.\n */\n",
+  "fields" : {
+    "tenantId" : {
+      "type" : "UUID"
+    }
+  }
+}

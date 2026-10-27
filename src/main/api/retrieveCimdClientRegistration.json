@@ -1,0 +1,20 @@
+{
+  "uri": "/api/cimd/registration",
+  "comments": [
+    "Retrieves the CIMD client registration for the given Id."
+  ],
+  "method": "get",
+  "methodName": "retrieveCimdClientRegistration",
+  "successResponse": "CimdClientRegistrationResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "registrationId",
+      "comments": [
+        "The Id of the CIMD client registration."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

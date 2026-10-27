@@ -1,0 +1,23 @@
+{
+  "className" : "io.fusionauth.domain.event.CimdRegistrationFailedReasonCode",
+  "extends" : { },
+  "fields" : {
+    "LambdaRejected" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "MetadataRetrievalFailed" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "RateLimited" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    }
+  },
+  "imports" : [ "java.lang.String" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "CimdRegistrationFailedReasonCode"
+}

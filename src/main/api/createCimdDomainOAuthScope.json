@@ -1,0 +1,43 @@
+{
+  "uri": "/api/cimd/domain",
+  "comments": [
+    "Creates a new custom OAuth scope for a CIMD Domain. You must specify the Id of the CIMD domain you are creating the scope for.",
+    "You can optionally specify an Id for the OAuth scope on the URL, if not provided one will be generated."
+  ],
+  "method": "post",
+  "methodName": "createCimdDomainOAuthScope",
+  "successResponse": "CimdDomainOAuthScopeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "domainId",
+      "comments": [
+        "The Id of the CIMD domain to create the OAuth scope on."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "constant": true,
+      "name": "scope",
+      "type": "urlSegment",
+      "value": "\"scope\""
+    },
+    {
+      "name": "scopeId",
+      "comments": [
+        "(Optional) The Id of the OAuth scope. If not provided a secure random UUID will be generated."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all the information used to create the OAuth scope."
+      ],
+      "type": "body",
+      "javaType": "CimdDomainOAuthScopeRequest"
+    }
+  ]
+}

@@ -20,10 +20,6 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
-    "entityTypeId" : {
-      "className" : "java.util.UUID",
-      "type" : "UUID"
-    },
     "id" : {
       "className" : "java.util.UUID",
       "type" : "UUID"

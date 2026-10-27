@@ -9,10 +9,6 @@
       "className" : "io.fusionauth.domain.SystemConfiguration$AuditLogConfiguration",
       "type" : "SystemConfiguration$AuditLogConfiguration"
     },
-    "cookieEncryptionKey" : {
-      "className" : "java.lang.String",
-      "type" : "String"
-    },
     "corsConfiguration" : {
       "className" : "io.fusionauth.domain.CORSConfiguration",
       "type" : "CORSConfiguration"

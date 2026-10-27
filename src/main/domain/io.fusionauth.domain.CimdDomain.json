@@ -1,0 +1,79 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CimdDomain",
+  "description" : "/**\n * A CIMD (Client ID Metadata Document) domain. Represents one trusted {@code client_id} domain (or the wildcard {@code *} for open mode)\n * within a tenant.\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "CimdDomain"
+    } ]
+  }, {
+    "type" : "JSONColumnable"
+  }, {
+    "type" : "Tenantable"
+  } ],
+  "fields" : {
+    "data" : {
+      "type" : "Map",
+      "typeArguments" : [ {
+        "type" : "String"
+      }, {
+        "type" : "Object"
+      } ]
+    },
+    "allowLocalhostRedirectUris" : {
+      "type" : "boolean"
+    },
+    "authorizedResourceUris" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "URI"
+      } ]
+    },
+    "consentMode" : {
+      "type" : "OAuthScopeConsentMode"
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "domain" : {
+      "type" : "String"
+    },
+    "gracePeriodInSeconds" : {
+      "type" : "int"
+    },
+    "id" : {
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "jwtPopulateLambdaId" : {
+      "type" : "UUID"
+    },
+    "lastUpdateInstant" : {
+      "type" : "ZonedDateTime"
+    },
+    "maxCacheTtlInSeconds" : {
+      "type" : "int"
+    },
+    "name" : {
+      "type" : "String"
+    },
+    "providedScopePolicy" : {
+      "type" : "ProvidedScopePolicy"
+    },
+    "registrationLambdaId" : {
+      "type" : "UUID"
+    },
+    "scopes" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "CimdDomainOAuthScope"
+      } ]
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    }
+  }
+}

@@ -5,22 +5,6 @@
     "type" : "Object"
   },
   "fields" : {
-    "EmailTemplateIdFieldNames" : {
-      "className" : "java.util.List",
-      "type" : "List",
-      "typeArguments" : [ {
-        "className" : "java.lang.String",
-        "type" : "String"
-      } ]
-    },
-    "EmailTemplateIdFields" : {
-      "className" : "java.util.List",
-      "type" : "List",
-      "typeArguments" : [ {
-        "className" : "java.lang.reflect.Field",
-        "type" : "Field"
-      } ]
-    },
     "emailUpdateEmailTemplateId" : {
       "className" : "java.util.UUID",
       "type" : "UUID"

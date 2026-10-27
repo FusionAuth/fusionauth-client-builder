@@ -34,7 +34,7 @@
     {
       "name": "request",
       "comments": [
-        "The request object that contains all the information used to create the OAuth OAuth scope."
+        "The request object that contains all the information used to create the OAuth scope."
       ],
       "type": "body",
       "javaType": "ApplicationOAuthScopeRequest"

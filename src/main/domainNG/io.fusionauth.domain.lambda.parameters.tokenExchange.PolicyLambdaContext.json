@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.lambda.parameters.tokenExchange.PolicyLambdaContext",
+  "extends" : { },
+  "fields" : {
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "java.util.UUID" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.lambda.parameters.tokenExchange",
+  "type" : "PolicyLambdaContext"
+}

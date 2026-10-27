@@ -89,5 +89,8 @@
   }, {
     "name" : "TokenExchangePopulate",
     "args" : [ "populate" ]
+  }, {
+    "name" : "CimdClientRegistration",
+    "args" : [ "evaluate" ]
   } ]
 }

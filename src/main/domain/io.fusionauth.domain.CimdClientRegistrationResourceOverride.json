@@ -1,0 +1,22 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CimdClientRegistrationResourceOverride",
+  "description" : "/**\n * Application configuration overrides for one OAuth resource requested by a CIMD client registration.\n */\n",
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "CimdClientRegistrationResourceOverride"
+    } ]
+  } ],
+  "fields" : {
+    "providedScopePolicy" : {
+      "type" : "ProvidedScopePolicy"
+    },
+    "scopes" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "ApplicationOAuthScope"
+      } ]
+    }
+  }
+}

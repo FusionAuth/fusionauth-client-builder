@@ -9,10 +9,6 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
-    "id" : {
-      "className" : "java.lang.Long",
-      "type" : "Long"
-    },
     "insertInstant" : {
       "className" : "java.time.ZonedDateTime",
       "type" : "ZonedDateTime"
@@ -32,17 +28,9 @@
     "primary" : {
       "type" : "boolean"
     },
-    "tenantId" : {
-      "className" : "java.util.UUID",
-      "type" : "UUID"
-    },
     "type" : {
       "className" : "io.fusionauth.domain.IdentityType",
       "type" : "IdentityType"
-    },
-    "userId" : {
-      "className" : "java.util.UUID",
-      "type" : "UUID"
     },
     "value" : {
       "className" : "java.lang.String",

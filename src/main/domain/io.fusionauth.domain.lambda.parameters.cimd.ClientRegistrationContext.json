@@ -1,0 +1,19 @@
+{
+  "packageName" : "io.fusionauth.domain.lambda.parameters.cimd",
+  "type" : "ClientRegistrationContext",
+  "description" : "/**\n * Represents the inbound lambda parameter 'context' for CIMD Client Registration lambdas.\n */\n",
+  "fields" : {
+    "authenticationThreats" : {
+      "type" : "Set",
+      "typeArguments" : [ {
+        "type" : "AuthenticationThreats"
+      } ]
+    },
+    "eventInfo" : {
+      "type" : "EventInfo"
+    },
+    "resource" : {
+      "type" : "String"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.search",
+  "type" : "CimdClientRegistrationSearchCriteria",
+  "description" : "/**\n * Search criteria for CIMD client registrations.\n */\n",
+  "extends" : [ {
+    "type" : "BaseSearchCriteria"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "CimdClientRegistrationSearchCriteria"
+    } ]
+  } ],
+  "fields" : {
+    "cimdDomainId" : {
+      "type" : "UUID"
+    },
+    "clientId" : {
+      "type" : "String"
+    },
+    "tenantId" : {
+      "type" : "UUID"
+    }
+  }
+}

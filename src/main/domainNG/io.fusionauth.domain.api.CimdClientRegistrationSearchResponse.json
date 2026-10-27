@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.CimdClientRegistrationSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "registrations" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.CimdClientRegistration",
+        "type" : "CimdClientRegistration"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.CimdClientRegistration" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "CimdClientRegistrationSearchResponse"
+}

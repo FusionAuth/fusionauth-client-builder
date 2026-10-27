@@ -18,6 +18,9 @@
     "authenticationType" : {
       "type" : "String"
     },
+    "cimdDomainId" : {
+      "type" : "UUID"
+    },
     "connectorId" : {
       "type" : "UUID"
     },

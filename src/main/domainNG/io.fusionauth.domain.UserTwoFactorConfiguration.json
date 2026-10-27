@@ -13,14 +13,6 @@
         "type" : "TwoFactorMethod"
       } ]
     },
-    "recoveryCodeEncryptionScheme" : {
-      "className" : "java.lang.String",
-      "type" : "String"
-    },
-    "recoveryCodeWorkFactor" : {
-      "className" : "java.lang.Integer",
-      "type" : "Integer"
-    },
     "recoveryCodes" : {
       "className" : "java.util.List",
       "type" : "List",

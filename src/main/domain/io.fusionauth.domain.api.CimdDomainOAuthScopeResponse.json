@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "CimdDomainOAuthScopeResponse",
+  "description" : "/**\n * The CIMD domain OAuth scope API response object.\n */\n",
+  "fields" : {
+    "scope" : {
+      "type" : "CimdDomainOAuthScope"
+    }
+  }
+}

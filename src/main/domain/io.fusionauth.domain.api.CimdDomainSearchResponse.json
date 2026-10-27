@@ -1,0 +1,16 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "CimdDomainSearchResponse",
+  "description" : "/**\n * CIMD domain search response.\n */\n",
+  "fields" : {
+    "domains" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "CimdDomain"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  }
+}

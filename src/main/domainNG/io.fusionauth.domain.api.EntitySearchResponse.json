@@ -16,9 +16,6 @@
     },
     "total" : {
       "type" : "long"
-    },
-    "totalEqualToActual" : {
-      "type" : "boolean"
     }
   },
   "imports" : [ "java.util.List", "io.fusionauth.domain.Entity", "java.lang.String" ],

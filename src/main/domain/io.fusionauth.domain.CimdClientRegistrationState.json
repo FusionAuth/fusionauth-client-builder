@@ -1,0 +1,6 @@
+{
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CimdClientRegistrationState",
+  "description" : "/**\n * The computed lifecycle state of a {@link CimdClientRegistration}. Never persisted; derived at read time from\n * {@code cacheExpirationInstant} and {@code graceExpirationInstant}.\n */\n",
+  "enum" : [ "Active", "Grace", "Expired" ]
+}

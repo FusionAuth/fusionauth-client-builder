@@ -1,0 +1,28 @@
+{
+  "uri": "/api/cimd/domain",
+  "comments": [
+    "Creates a CIMD domain. You can optionally provide an Id for the CIMD domain, if not provided one will be generated."
+  ],
+  "method": "post",
+  "methodName": "createCimdDomain",
+  "successResponse": "CimdDomainResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "domainId",
+      "comments": [
+        "(Optional) The Id to use for the CIMD domain. If not provided a secure random UUID will be generated."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "name": "request",
+      "comments": [
+        "The request object that contains all the information used to create the CIMD domain."
+      ],
+      "type": "body",
+      "javaType": "CimdDomainRequest"
+    }
+  ]
+}

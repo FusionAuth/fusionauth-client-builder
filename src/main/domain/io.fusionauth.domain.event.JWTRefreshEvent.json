@@ -17,11 +17,20 @@
     "applicationId" : {
       "type" : "UUID"
     },
+    "cimdDomainId" : {
+      "type" : "UUID"
+    },
     "original" : {
       "type" : "String"
     },
     "refreshToken" : {
       "type" : "String"
+    },
+    "resources" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
     },
     "token" : {
       "type" : "String"

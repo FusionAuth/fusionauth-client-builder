@@ -5,10 +5,6 @@
     "type" : "Object"
   },
   "fields" : {
-    "clientId" : {
-      "className" : "java.lang.String",
-      "type" : "String"
-    },
     "expiresIn" : {
       "className" : "java.lang.Integer",
       "type" : "Integer"
@@ -20,10 +16,6 @@
     "issuedTokenType" : {
       "className" : "java.lang.String",
       "type" : "String"
-    },
-    "redirectURI" : {
-      "className" : "java.net.URI",
-      "type" : "URI"
     },
     "refreshToken" : {
       "className" : "java.lang.String",

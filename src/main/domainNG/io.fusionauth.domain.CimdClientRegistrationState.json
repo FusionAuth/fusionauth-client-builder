@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.CimdClientRegistrationState",
+  "enum" : [ "Active", "Grace", "Expired" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CimdClientRegistrationState"
+}

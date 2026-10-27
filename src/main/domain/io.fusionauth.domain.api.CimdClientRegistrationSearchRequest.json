@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "CimdClientRegistrationSearchRequest",
+  "description" : "/**\n * Search request for CIMD client registrations.\n */\n",
+  "fields" : {
+    "search" : {
+      "type" : "CimdClientRegistrationSearchCriteria"
+    }
+  }
+}

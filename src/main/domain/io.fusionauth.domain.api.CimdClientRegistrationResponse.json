@@ -1,0 +1,10 @@
+{
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "CimdClientRegistrationResponse",
+  "description" : "/**\n * CIMD client registration API response object.\n */\n",
+  "fields" : {
+    "registration" : {
+      "type" : "CimdClientRegistration"
+    }
+  }
+}

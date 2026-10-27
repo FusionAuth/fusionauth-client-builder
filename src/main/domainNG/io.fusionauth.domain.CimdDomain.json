@@ -1,0 +1,107 @@
+{
+  "className" : "io.fusionauth.domain.CimdDomain",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "allowLocalhostRedirectUris" : {
+      "className" : "java.lang.Boolean",
+      "type" : "Boolean"
+    },
+    "authorizedResourceUris" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.net.URI",
+        "type" : "URI"
+      } ]
+    },
+    "consentMode" : {
+      "className" : "io.fusionauth.domain.oauth2.OAuthScopeConsentMode",
+      "type" : "OAuthScopeConsentMode"
+    },
+    "data" : {
+      "className" : "java.util.Map",
+      "type" : "Map",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      }, {
+        "className" : "java.lang.Object",
+        "type" : "Object"
+      } ]
+    },
+    "debug" : {
+      "type" : "boolean"
+    },
+    "domain" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "gracePeriodInSeconds" : {
+      "type" : "int"
+    },
+    "id" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "insertInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "jwtPopulateLambdaId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "lastUpdateInstant" : {
+      "className" : "java.time.ZonedDateTime",
+      "type" : "ZonedDateTime"
+    },
+    "maxCacheTtlInSeconds" : {
+      "type" : "int"
+    },
+    "name" : {
+      "className" : "java.lang.String",
+      "type" : "String"
+    },
+    "providedScopePolicy" : {
+      "className" : "io.fusionauth.domain.oauth2.ProvidedScopePolicy",
+      "type" : "ProvidedScopePolicy"
+    },
+    "registrationLambdaId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "scopes" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.CimdDomainOAuthScope",
+        "type" : "CimdDomainOAuthScope"
+      } ]
+    },
+    "tenantId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "com.inversoft.mybatis.JSONColumnable", "io.fusionauth.domain.Tenantable", "java.util.Map", "java.lang.String", "java.lang.Boolean", "java.util.List", "java.net.URI", "io.fusionauth.domain.oauth2.OAuthScopeConsentMode", "java.util.UUID", "java.time.ZonedDateTime", "io.fusionauth.domain.oauth2.ProvidedScopePolicy", "io.fusionauth.domain.CimdDomainOAuthScope" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.CimdDomain",
+      "type" : "CimdDomain"
+    } ]
+  }, {
+    "className" : "com.inversoft.mybatis.JSONColumnable",
+    "type" : "JSONColumnable"
+  }, {
+    "className" : "io.fusionauth.domain.Tenantable",
+    "type" : "Tenantable"
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CimdDomain"
+}

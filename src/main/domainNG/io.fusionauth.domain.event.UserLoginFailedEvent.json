@@ -13,6 +13,10 @@
       "className" : "java.lang.String",
       "type" : "String"
     },
+    "cimdDomainId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "ipAddress" : {
       "className" : "java.lang.String",
       "type" : "String"

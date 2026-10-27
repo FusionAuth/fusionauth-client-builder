@@ -1,0 +1,33 @@
+{
+  "className" : "io.fusionauth.domain.CimdClientRegistrationResourceOverride",
+  "extends" : {
+    "className" : "java.lang.Object",
+    "type" : "Object"
+  },
+  "fields" : {
+    "providedScopePolicy" : {
+      "className" : "io.fusionauth.domain.oauth2.ProvidedScopePolicy",
+      "type" : "ProvidedScopePolicy"
+    },
+    "scopes" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.ApplicationOAuthScope",
+        "type" : "ApplicationOAuthScope"
+      } ]
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.Buildable", "io.fusionauth.domain.oauth2.ProvidedScopePolicy", "java.util.List", "io.fusionauth.domain.ApplicationOAuthScope" ],
+  "interfaces" : [ {
+    "className" : "io.fusionauth.domain.Buildable",
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "className" : "io.fusionauth.domain.CimdClientRegistrationResourceOverride",
+      "type" : "CimdClientRegistrationResourceOverride"
+    } ]
+  } ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CimdClientRegistrationResourceOverride"
+}

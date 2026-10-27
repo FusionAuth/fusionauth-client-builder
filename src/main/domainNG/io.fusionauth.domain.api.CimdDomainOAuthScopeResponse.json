@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.CimdDomainOAuthScopeResponse",
+  "extends" : { },
+  "fields" : {
+    "scope" : {
+      "className" : "io.fusionauth.domain.CimdDomainOAuthScope",
+      "type" : "CimdDomainOAuthScope"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.CimdDomainOAuthScope" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "CimdDomainOAuthScopeResponse"
+}

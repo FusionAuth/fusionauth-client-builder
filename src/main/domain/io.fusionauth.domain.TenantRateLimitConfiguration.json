@@ -9,6 +9,9 @@
     } ]
   } ],
   "fields" : {
+    "cimdClientRegistration" : {
+      "type" : "RateLimitedRequestConfiguration"
+    },
     "failedLogin" : {
       "type" : "RateLimitedRequestConfiguration"
     },

@@ -1,0 +1,20 @@
+{
+  "uri": "/api/cimd/domain/search",
+  "comments": [
+    "Searches the CIMD domains with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchCimdDomains",
+  "successResponse": "CimdDomainSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "CimdDomainSearchRequest"
+    }
+  ]
+}

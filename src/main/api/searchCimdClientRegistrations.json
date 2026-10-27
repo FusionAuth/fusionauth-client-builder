@@ -1,0 +1,20 @@
+{
+  "uri": "/api/cimd/registration/search",
+  "comments": [
+    "Searches the CIMD client registrations with the specified criteria and pagination."
+  ],
+  "method": "post",
+  "methodName": "searchCimdClientRegistrations",
+  "successResponse": "CimdClientRegistrationSearchResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "request",
+      "comments": [
+        "The search criteria and pagination information."
+      ],
+      "type": "body",
+      "javaType": "CimdClientRegistrationSearchRequest"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "packageName" : "io.fusionauth.domain.event",
+  "type" : "CimdRegistrationFailedEvent",
+  "description" : "/**\n * Models the CIMD Registration Failed Event.\n * <p>\n * This event is fired when a CIMD client registration fails. This event cannot be made transactional.\n */\n",
+  "extends" : [ {
+    "type" : "BaseEvent"
+  } ],
+  "implements" : [ {
+    "type" : "Buildable",
+    "typeArguments" : [ {
+      "type" : "CimdRegistrationFailedEvent"
+    } ]
+  }, {
+    "type" : "NonTransactionalEvent"
+  } ],
+  "fields" : {
+    "cimdDomainId" : {
+      "type" : "UUID"
+    },
+    "clientId" : {
+      "type" : "String"
+    },
+    "reason" : {
+      "type" : "CimdRegistrationFailedReason"
+    },
+    "resource" : {
+      "type" : "String"
+    }
+  }
+}

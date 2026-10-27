@@ -20,9 +20,21 @@
         "type" : "Integer"
       } ]
     },
+    "cimdDomainId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
     "refreshToken" : {
       "className" : "io.fusionauth.domain.jwt.RefreshToken",
       "type" : "RefreshToken"
+    },
+    "resources" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "java.lang.String",
+        "type" : "String"
+      } ]
     },
     "user" : {
       "className" : "io.fusionauth.domain.User",
@@ -33,7 +45,7 @@
       "type" : "UUID"
     }
   },
-  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.ObjectIdentifiable", "io.fusionauth.domain.User", "java.util.UUID", "java.util.Map", "java.lang.Integer", "io.fusionauth.domain.jwt.RefreshToken" ],
+  "imports" : [ "io.fusionauth.domain.event.BaseEvent", "io.fusionauth.domain.Buildable", "io.fusionauth.domain.event.ObjectIdentifiable", "io.fusionauth.domain.User", "java.util.UUID", "java.util.Map", "java.lang.Integer", "io.fusionauth.domain.jwt.RefreshToken", "java.util.List", "java.lang.String" ],
   "interfaces" : [ {
     "className" : "io.fusionauth.domain.Buildable",
     "type" : "Buildable",

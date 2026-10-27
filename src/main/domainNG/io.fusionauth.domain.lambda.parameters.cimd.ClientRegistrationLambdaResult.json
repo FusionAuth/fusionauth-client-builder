@@ -1,0 +1,35 @@
+{
+  "className" : "io.fusionauth.domain.lambda.parameters.cimd.ClientRegistrationLambdaResult",
+  "extends" : { },
+  "fields" : {
+    "decision" : {
+      "className" : "io.fusionauth.domain.CimdClientRegistrationDecision",
+      "type" : "CimdClientRegistrationDecision"
+    },
+    "jwtPopulateLambdaId" : {
+      "className" : "java.util.UUID",
+      "type" : "UUID"
+    },
+    "providedScopePolicy" : {
+      "className" : "io.fusionauth.domain.oauth2.ProvidedScopePolicy",
+      "type" : "ProvidedScopePolicy"
+    },
+    "scopes" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.CimdDomainOAuthScope",
+        "type" : "CimdDomainOAuthScope"
+      } ]
+    },
+    "ttlInSeconds" : {
+      "className" : "java.lang.Integer",
+      "type" : "Integer"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.CimdClientRegistrationDecision", "java.util.UUID", "io.fusionauth.domain.oauth2.ProvidedScopePolicy", "java.util.List", "io.fusionauth.domain.CimdDomainOAuthScope", "java.lang.Integer" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.lambda.parameters.cimd",
+  "type" : "ClientRegistrationLambdaResult"
+}

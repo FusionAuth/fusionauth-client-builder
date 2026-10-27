@@ -1,0 +1,34 @@
+{
+  "packageName" : "io.fusionauth.domain.lambda.parameters.cimd",
+  "type" : "ClientMetadata",
+  "description" : "/**\n * Represents the inbound lambda parameter 'clientMetadata' for CIMD Client Registration lambdas.\n */\n",
+  "fields" : {
+    "clientId" : {
+      "type" : "String"
+    },
+    "clientIdHost" : {
+      "type" : "String"
+    },
+    "clientIdPath" : {
+      "type" : "String"
+    },
+    "clientName" : {
+      "type" : "String"
+    },
+    "clientUri" : {
+      "type" : "String"
+    },
+    "clientUriHost" : {
+      "type" : "String"
+    },
+    "clientUriPath" : {
+      "type" : "String"
+    },
+    "redirectUris" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    }
+  }
+}

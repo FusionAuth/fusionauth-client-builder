@@ -23,6 +23,9 @@
         "type" : "String"
       } ]
     },
+    "client_id_metadata_document_supported" : {
+      "type" : "boolean"
+    },
     "code_challenge_methods_supported" : {
       "className" : "java.util.List",
       "type" : "List",

@@ -1,0 +1,8 @@
+{
+  "className" : "io.fusionauth.domain.CimdClientRegistrationDecision",
+  "enum" : [ "ALLOW", "DENY", "REVOKE" ],
+  "imports" : [ ],
+  "objectType" : "Enum",
+  "packageName" : "io.fusionauth.domain",
+  "type" : "CimdClientRegistrationDecision"
+}

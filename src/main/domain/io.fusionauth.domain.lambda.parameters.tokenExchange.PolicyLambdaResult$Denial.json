@@ -1,0 +1,12 @@
+{
+  "packageName" : "io.fusionauth.domain.lambda.parameters.tokenExchange",
+  "type" : "Denial",
+  "fields" : {
+    "error_code" : {
+      "type" : "String"
+    },
+    "error_description" : {
+      "type" : "String"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.CimdClientRegistrationResponse",
+  "extends" : { },
+  "fields" : {
+    "registration" : {
+      "className" : "io.fusionauth.domain.CimdClientRegistration",
+      "type" : "CimdClientRegistration"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.CimdClientRegistration" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "CimdClientRegistrationResponse"
+}

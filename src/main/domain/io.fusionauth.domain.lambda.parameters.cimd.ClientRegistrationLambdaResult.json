@@ -1,0 +1,25 @@
+{
+  "packageName" : "io.fusionauth.domain.lambda.parameters.cimd",
+  "type" : "ClientRegistrationLambdaResult",
+  "description" : "/**\n * Represents the outbound parameter 'result' for CIMD Client Registration lambdas. The parameter is pre-populated with defaults from the CIMD Domain\n * configuration\n */\n",
+  "fields" : {
+    "decision" : {
+      "type" : "CimdClientRegistrationDecision"
+    },
+    "jwtPopulateLambdaId" : {
+      "type" : "UUID"
+    },
+    "providedScopePolicy" : {
+      "type" : "ProvidedScopePolicy"
+    },
+    "scopes" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "CimdDomainOAuthScope"
+      } ]
+    },
+    "ttlInSeconds" : {
+      "type" : "int"
+    }
+  }
+}

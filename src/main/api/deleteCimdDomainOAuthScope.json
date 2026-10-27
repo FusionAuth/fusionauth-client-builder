@@ -1,0 +1,35 @@
+{
+  "uri": "/api/cimd/domain",
+  "comments": [
+    "Hard deletes a custom OAuth scope for a CIMD Domain.",
+    "OAuth workflows that are still requesting the deleted OAuth scope may fail depending on the CIMD domain's unknown scope policy."
+  ],
+  "method": "delete",
+  "methodName": "deleteCimdDomainOAuthScope",
+  "successResponse": "Void",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "domainId",
+      "comments": [
+        "The Id of the CIMD domain that the OAuth scope belongs to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "constant": true,
+      "name": "scope",
+      "type": "urlSegment",
+      "value": "\"scope\""
+    },
+    {
+      "name": "scopeId",
+      "comments": [
+        "The Id of the OAuth scope to delete."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

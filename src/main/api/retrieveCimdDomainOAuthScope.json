@@ -1,0 +1,34 @@
+{
+  "uri": "/api/cimd/domain",
+  "comments": [
+    "Retrieves a custom OAuth scope for a CIMD Domain."
+  ],
+  "method": "get",
+  "methodName": "retrieveCimdDomainOAuthScope",
+  "successResponse": "CimdDomainOAuthScopeResponse",
+  "errorResponse": "Errors",
+  "params": [
+    {
+      "name": "domainId",
+      "comments": [
+        "The Id of the CIMD domain that the OAuth scope belongs to."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    },
+    {
+      "constant": true,
+      "name": "scope",
+      "type": "urlSegment",
+      "value": "\"scope\""
+    },
+    {
+      "name": "scopeId",
+      "comments": [
+        "The Id of the OAuth scope to retrieve."
+      ],
+      "type": "urlSegment",
+      "javaType": "UUID"
+    }
+  ]
+}

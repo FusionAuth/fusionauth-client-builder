@@ -28,8 +28,17 @@
         "type" : "int"
       } ]
     },
+    "cimdDomainId" : {
+      "type" : "UUID"
+    },
     "refreshToken" : {
       "type" : "RefreshToken"
+    },
+    "resources" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
     },
     "userId" : {
       "type" : "UUID"

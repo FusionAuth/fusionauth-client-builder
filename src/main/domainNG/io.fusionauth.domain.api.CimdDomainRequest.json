@@ -1,0 +1,15 @@
+{
+  "className" : "io.fusionauth.domain.api.CimdDomainRequest",
+  "extends" : { },
+  "fields" : {
+    "domain" : {
+      "className" : "io.fusionauth.domain.CimdDomain",
+      "type" : "CimdDomain"
+    }
+  },
+  "imports" : [ "io.fusionauth.domain.CimdDomain" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "CimdDomainRequest"
+}

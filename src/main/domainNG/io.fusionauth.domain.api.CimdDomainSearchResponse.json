@@ -1,0 +1,22 @@
+{
+  "className" : "io.fusionauth.domain.api.CimdDomainSearchResponse",
+  "extends" : { },
+  "fields" : {
+    "domains" : {
+      "className" : "java.util.List",
+      "type" : "List",
+      "typeArguments" : [ {
+        "className" : "io.fusionauth.domain.CimdDomain",
+        "type" : "CimdDomain"
+      } ]
+    },
+    "total" : {
+      "type" : "long"
+    }
+  },
+  "imports" : [ "java.util.List", "io.fusionauth.domain.CimdDomain" ],
+  "interfaces" : [ ],
+  "objectType" : "Object",
+  "packageName" : "io.fusionauth.domain.api",
+  "type" : "CimdDomainSearchResponse"
+}
