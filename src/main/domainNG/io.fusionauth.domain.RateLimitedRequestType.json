@@ -1,6 +1,6 @@
 {
   "className" : "io.fusionauth.domain.RateLimitedRequestType",
-  "enum" : [ "FailedLogin", "ForgotPassword", "SendEmailVerification", "SendPasswordless", "SendRegistrationVerification", "SendTwoFactor", "SendPhoneVerification", "SendPhonePasswordless", "CimdClientRegistration" ],
+  "enum" : [ "FailedLogin", "ForgotPassword", "SendEmailVerification", "SendPasswordless", "SendRegistrationVerification", "SendTwoFactor", "SendPhoneVerification", "SendPhonePasswordless", "CimdClientRegistration", "ScimGroups" ],
   "imports" : [ ],
   "objectType" : "Enum",
   "packageName" : "io.fusionauth.domain",
