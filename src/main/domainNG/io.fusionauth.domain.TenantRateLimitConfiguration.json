@@ -17,6 +17,10 @@
       "className" : "io.fusionauth.domain.RateLimitedRequestConfiguration",
       "type" : "RateLimitedRequestConfiguration"
     },
+    "passwordlessLogin" : {
+      "className" : "io.fusionauth.domain.RateLimitedRequestConfiguration",
+      "type" : "RateLimitedRequestConfiguration"
+    },
     "sendEmailVerification" : {
       "className" : "io.fusionauth.domain.RateLimitedRequestConfiguration",
       "type" : "RateLimitedRequestConfiguration"

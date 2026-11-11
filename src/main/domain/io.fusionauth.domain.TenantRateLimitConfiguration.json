@@ -18,6 +18,9 @@
     "forgotPassword" : {
       "type" : "RateLimitedRequestConfiguration"
     },
+    "passwordlessLogin" : {
+      "type" : "RateLimitedRequestConfiguration"
+    },
     "sendEmailVerification" : {
       "type" : "RateLimitedRequestConfiguration"
     },
