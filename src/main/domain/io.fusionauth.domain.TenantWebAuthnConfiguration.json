@@ -12,6 +12,12 @@
     } ]
   } ],
   "fields" : {
+    "allowedOrigins" : {
+      "type" : "List",
+      "typeArguments" : [ {
+        "type" : "String"
+      } ]
+    },
     "bootstrapWorkflow" : {
       "type" : "TenantWebAuthnWorkflowConfiguration"
     },
